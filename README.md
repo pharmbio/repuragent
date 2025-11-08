@@ -1,4 +1,17 @@
-# Repuragent - AI-Powered Drug Repurposing Platform
+# Repuragent - Multi-agentic AI system for Drug Repurposing
+
+
+## Overview
+Repuragent is an advanced AI agent for drug repurposing that combines machine learning, conformal prediction, knowledge graphs, and SOPs to accelerate the discovery of new therapeutic applications for existing drugs.
+
+## Features
+
+- **Multi-Agent AI System**: Leverages specialized AI agents for planning, research, prediction, analysing, and reporting
+- **Conformal Prediction**: Uses CPSign for reliable molecular property predictions
+- **Knowledge Graph Integration**: Incorporates biological and chemical knowledge networks
+- **Interactive Web Interface**: Streamlit-based user interface for easy interaction
+- **Molecular Property Prediction**: Predicts ADMET properties, toxicity, and bioactivity
+- **Literature Integration**: Automated research and protocol retrieval
 
 ## Prerequisites
 
@@ -26,23 +39,11 @@ Before getting started, ensure you have:
 
 ---
 
-Repuragent is an advanced AI-powered platform for drug repurposing that combines machine learning, conformal prediction, and knowledge graphs to accelerate the discovery of new therapeutic applications for existing drugs.
-
-## Features
-
-- **Multi-Agent AI System**: Leverages specialized AI agents for planning, research, prediction, and reporting
-- **Conformal Prediction**: Uses CPSign for reliable molecular property predictions
-- **Knowledge Graph Integration**: Incorporates biological and chemical knowledge networks
-- **Interactive Web Interface**: Streamlit-based user interface for easy interaction
-- **Molecular Property Prediction**: Predicts ADMET properties, toxicity, and bioactivity
-- **Literature Integration**: Automated research and protocol retrieval
-
 ## System Requirements
 
 **For Docker Installation (Recommended):**
 - Docker Desktop (includes Docker Compose)
 - OpenAI API key
-- **No Java or Python installation required** - everything is handled by Docker
 
 **For Manual Installation (Advanced Users):**
 - Python 3.11+ 
@@ -50,10 +51,6 @@ Repuragent is an advanced AI-powered platform for drug repurposing that combines
 - Git
 
 ## Quick Start with Docker (Recommended)
-
-### Prerequisites
-- Docker Desktop installed on your system
-- OpenAI API key
 
 ### 1. Clone the Repository
 ```bash

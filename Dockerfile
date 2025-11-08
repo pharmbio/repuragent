@@ -32,7 +32,7 @@ RUN java -version
 WORKDIR /app
 
 # Create necessary directories
-RUN mkdir -p /app/data /app/results /app/models /app/CPSign
+RUN mkdir -p /app/data /app/results /app/models
 
 # Copy requirements first for better caching
 COPY requirements.txt ./
@@ -42,7 +42,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Set proper permissions
-RUN chmod +x CPSign/cpsign-2.0.0-fatjar.jar 2>/dev/null || true
+RUN chmod +x models/CPSign/cpsign-2.0.0-fatjar.jar 2>/dev/null || true
 RUN chmod -R 755 /app
 
 # Create a volume for persistent data
@@ -81,10 +81,10 @@ echo "Java version:"
 java -version
 
 # Check CPSign jar file
-if [ -f "/app/CPSign/cpsign-2.0.0-fatjar.jar" ]; then
+if [ -f "/app/models/CPSign/cpsign-2.0.0-fatjar.jar" ]; then
     echo "CPSign jar file found"
 else
-    echo "Warning: CPSign jar file not found at /app/CPSign/cpsign-2.0.0-fatjar.jar"
+    echo "Warning: CPSign jar file not found at /app/models/CPSign/cpsign-2.0.0-fatjar.jar"
 fi
 
 # Check if models directory has the required model files

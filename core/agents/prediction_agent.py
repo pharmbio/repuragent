@@ -96,7 +96,7 @@ def CYP3A4_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/CYP3A4_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP3A4_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.79 \
@@ -127,7 +127,7 @@ def hERG_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/hERG_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/hERG_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.78 \
@@ -158,7 +158,7 @@ def AMES_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/AMES_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/AMES_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.81 \
@@ -189,7 +189,7 @@ def PGP_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/PGP_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/PGP_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.83 \
@@ -221,7 +221,7 @@ def Solubility_regressor(smiles_input: Union[str, List[str]]):
         os.remove('./results/Solubility_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/Solubility_rgs_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.71 \
@@ -281,7 +281,7 @@ def PAMPA_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/PAMPA_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/PAMPA_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.75 \
@@ -312,7 +312,7 @@ def BBB_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/BBB_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/BBB_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.80 \
@@ -343,7 +343,7 @@ def CYP2C19_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/CYP2C19_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP2C19_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.80 \
@@ -374,7 +374,7 @@ def CYP2D6_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/CYP2D6_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP2D6_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.80 \
@@ -405,7 +405,7 @@ def CYP1A2_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/CYP1A2_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP1A2_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.84 \
@@ -436,7 +436,7 @@ def CYP2C9_classifier(smiles_input: Union[str, List[str]]):
         os.remove('./results/CYP2C9_results.csv')
 
     data_path = smiles_csv(smiles_input)
-    cmd = f'java -jar CPSign/cpsign-2.0.0-fatjar.jar predict \
+    cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP2C9_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.80 \

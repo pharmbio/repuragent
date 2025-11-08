@@ -36,7 +36,8 @@ repuragent/
 ├── app/           # Streamlit interface
 ├── core/          # AI agents and logic
 ├── backend/       # Memory and RAG systems
-├── CPSign/        # Molecular prediction models
+├── models/        # Machine learning models
+│   └── CPSign/    # Molecular prediction models
 ├── data/          # Input data
 ├── results/       # Output files
 └── main.py        # Entry point

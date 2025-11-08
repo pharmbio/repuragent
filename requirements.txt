@@ -1,0 +1,50 @@
+# Core dependencies for Repuragent - exact versions from conda environment
+streamlit==1.45.0
+langchain==0.3.24
+langchain-openai==0.3.33
+langchain-core==0.3.76
+langchain-community==0.3.23
+langgraph==0.6.3
+langgraph-checkpoint==2.1.0
+langgraph-checkpoint-sqlite==2.0.11
+langgraph-prebuilt==0.6.3
+langgraph-sdk==0.2.0
+langgraph-supervisor==0.0.29
+langmem==0.0.29
+pandas==2.2.3
+numpy==2.2.6
+requests==2.32.3
+python-dotenv==1.1.1
+pydantic==2.11.4
+tqdm==4.67.1
+rapidfuzz==3.13.0
+fuzzywuzzy==0.18.0
+
+# Chemistry and bioinformatics - exact versions
+chembl-webresource-client==0.10.9
+pybel==0.15.5
+pandasgwas==1.2.2
+networkx==3.4.2
+
+# Document processing - exact versions
+unstructured==0.18.14
+
+# AI and vector database - exact versions
+chromadb==0.6.3
+anthropic==0.58.2
+langchain-anthropic==0.3.16
+langchain-neo4j==0.4.0
+langchain-tavily==0.2.5
+tavily-python==0.7.8
+
+# Machine learning and visualization - exact versions
+scikit-learn==1.6.1
+plotly==6.0.1
+matplotlib==3.10.3
+seaborn==0.13.2
+
+# Additional utilities - exact versions
+scipy==1.15.3
+PyYAML==6.0.2
+click==8.2.0
+typing-extensions==4.13.2

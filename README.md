@@ -30,12 +30,6 @@ Open [http://localhost:8501](http://localhost:8501)
 - Molecular property prediction (ADMET, toxicity, bioactivity)
 - Interactive web interface
 
-## Usage
-1. Start the application at http://localhost:8501
-2. Upload molecular data (SMILES strings)
-3. Configure analysis parameters
-4. Review AI-generated predictions and reports
-
 ## Project Structure
 ```
 repuragent/

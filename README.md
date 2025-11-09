@@ -5,10 +5,7 @@
 Repuragent is a multi-agentic AI system designed for drug repurposing sector. The system orchestrates five specialized AI agents through a sophisticated supervisor architecture to tackle complex data gathering and integration in pharmaceutical sector.
 
 <div align="center">
-  <figure>
-    <img src="images/agent_architecture.png" width="500">
-    <figcaption><b>Figure 1:</b> Core architecture of the Repuragent multi-agent AI system.</figcaption>
-  </figure>
+  <img src="images/agent_architecture.png" width="500">
 </div>
 
 
@@ -41,10 +38,10 @@ git clone https://github.com/your-username/repuragent.git
 cd repuragent
 
 # 2. Create .env file with required API keys
-# Mandatory API key
+## Mandatory API key
 echo "OPENAI_API_KEY=your-openai-api-key-here" > .env   
 
-# Optional set-up
+## Optional set-up
 echo "LANGCHAIN_TRACING_V2=true" >> .env
 echo "LANGCHAIN_ENDPOINT=https://api.smith.langchain.com" >> .env
 echo "LANGCHAIN_API_KEY=your-langsmith-api-key-here" >> .env

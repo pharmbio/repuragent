@@ -11,7 +11,7 @@ Repuragent is a multi-agentic AI system designed for drug repurposing sector. Th
 ### Core Agent Architecture
 
 - **Planning Agent**: Decomposes complex tasks using episodic memory learning, Standard Operating Procedures (SOPs), and academic publications.
-- **Supervisor Agent**: Coordinates workflow and agent interactions.
+- **Supervisor Agent**: Delegate tasks to specialized agents and track the complete status of the whole task sequence.
 - **Research Agent**: Performs literature mining via PubMed, accesses knowledge graphs, and integrates biomedical databases.
 - **Prediction Agent**: Executes molecular property predictions using pre-trained ML models for ADMET properties
 - **Data Agent**: Manages multi-format data processing, SMILES standardization, and visualization

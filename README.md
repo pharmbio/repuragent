@@ -4,10 +4,13 @@
 
 Repuragent is a multi-agentic AI system designed for drug repurposing sector. The system orchestrates five specialized AI agents through a sophisticated supervisor architecture to tackle complex data gathering and integration in pharmaceutical sector.
 
-<figure style="text-align: center;">
-  <img src="images/agent_architecture.png" width="500">
-  <figcaption> Core architecture of the Repuragent multi-agent AI system.</figcaption>
-</figure>
+<div align="center">
+  <figure>
+    <img src="images/agent_architecture.png" width="500">
+    <figcaption><b>Figure 1:</b> Core architecture of the Repuragent multi-agent AI system.</figcaption>
+  </figure>
+</div>
+
 
 ### Core Agent Architecture
 
@@ -38,7 +41,10 @@ git clone https://github.com/your-username/repuragent.git
 cd repuragent
 
 # 2. Create .env file with required API keys
-echo "OPENAI_API_KEY=your-openai-api-key-here" > .env
+# Mandatory API key
+echo "OPENAI_API_KEY=your-openai-api-key-here" > .env   
+
+# Optional set-up
 echo "LANGCHAIN_TRACING_V2=true" >> .env
 echo "LANGCHAIN_ENDPOINT=https://api.smith.langchain.com" >> .env
 echo "LANGCHAIN_API_KEY=your-langsmith-api-key-here" >> .env
@@ -68,41 +74,16 @@ docker-compose logs -f
 3. Add the LangSmith variables to your `.env` file as shown above
 4. Restart Docker containers to apply changes
 
-## Features
-- Multi-agent AI system for drug discovery
-- Conformal prediction with CPSign
-- Knowledge graph integration
-- Molecular property prediction (ADMET, toxicity, bioactivity)
-- Interactive web interface
 
 ## Project Structure
 ```
 repuragent/
-├── app/           # Streamlit interface
+├── app/           # Streamlit UI interface
 ├── core/          # AI agents and logic
 ├── backend/       # Memory and RAG systems
 ├── models/        # Machine learning models
-│   └── CPSign/    # Molecular prediction models
-├── data/          # Input data
-├── results/       # Output files
+├── data/          # Input data will be stored here
+├── results/       # Output files will be stored here
 └── main.py        # Entry point
 ```
-
-## Manual Installation
-For advanced users who prefer not to use Docker:
-```bash
-# Requires Python 3.11+ and Java 11+
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# venv\Scripts\activate   # Windows
-pip install -r requirements.txt
-streamlit run main.py
-```
-
-## Common Issues
-- **Port 8501 in use**: Run `docker-compose down` first
-- **API key errors**: Verify your OpenAI key is valid
-- **Module errors**: Rebuild with `docker-compose up --build`
-
-View logs: `docker-compose logs -f`
 

@@ -2,16 +2,24 @@
 
 ## Overview
 
-Repuragent is a multi-agentic AI system designed to tackle drug repurposing challenges. The system features a supervisor agent that coordinates four specialized sub-agents for targeted tasks:
+Repuragent is a multi-agentic AI system designed for drug repurposing sector. The system orchestrates five specialized AI agents through a sophisticated supervisor architecture to tackle complex data gathering and integration in pharmaceutical sector.
 
-- **Research Agent**: Conducts literature reviews and gathers scientific evidence from biomedical databases and publications
-- **Prediction Agent**: Performs molecular property predictions using pre-trained machine learning models
-- **Data Agent**: Manages data processing, visualising and integration.
-- **Report Agent**: Generates comprehensive reports
+<img src="images/agent_architecture.png" width="800">
 
-Additionally, the system includes a dedicated planning agent responsible for decomposing complex high-level tasks into manageable subtasks. This agent leverages professional Standard Operating Procedures (SOPs) and academic publications to inform strategic planning decisions.
+### Core Agent Architecture
 
-The system incorporates episodic memory capabilities that extract patterns from previous successful executions and apply these learned patterns to enhance planning and decision-making for future actions.
+- **Planning Agent**: Decomposes complex tasks using episodic memory learning, Standard Operating Procedures (SOPs), and academic publications.
+- **Supervisor Agent**: Coordinates workflow and agent interactions.
+- **Research Agent**: Performs literature mining via PubMed, accesses knowledge graphs, and integrates biomedical databases.
+- **Prediction Agent**: Executes molecular property predictions using pre-trained ML models for ADMET properties
+- **Data Agent**: Manages multi-format data processing, SMILES standardization, and visualization
+- **Report Agent**: Generates comprehensive analytical reports and visualizations
+
+### Advanced Memory Systems
+
+- **Episodic Memory**: Pattern extraction from successful executions to improve future planning
+- **Short-term Memory**: SQLite-based conversation persistence with thread management
+- **SOP RAG System**: Retrieval-augmented generation using professional Standard Operating Procedures
 
 ## Quick Start
 

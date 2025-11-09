@@ -12,7 +12,6 @@ from rapidfuzz import process
 from app.config import logger
 from core.prompts.prompts import PREDICTION_SYSTEM_PROMPT_ver3
 from backend.utils.fuzzy_path import prompt_with_file_path
-#from backend.utils.knowledge_graph import drug_fit_disease
 
 
 
@@ -451,30 +450,6 @@ def CYP2C9_classifier(smiles_input: Union[str, List[str]]):
     df.to_csv('./results/CYP2C9_results.csv', index=False)
 
     return './results/CYP2C9_results.csv'
-
-#@tool
-#def drug_repurposing_score(disease_name: str, topk: int = 10):
-#    """Rank all recent approved drug against disease using knowledge graph embedding
-#    Args:
-#        disease_name: Name of disease for investigating.
-#        topk: Number of top compound return in results
-#    Returns:
-#        The output is csv file path results/repurposing_results.csv'
-#    """
-
-    # Load disease name dict
-#    with open('./data/knowledge_graph/disease_name_map.json','r') as file:
-#        disease_dict = json.load(file)
-
- #   # Map input to actual disease name
-#    disease_list = list(disease_dict.keys())
- #   matches = process.extract(disease_name, disease_list, limit=1)
- #   match_name = matches[0][0]
-
- #   output_path = './results/repurposing_results.csv'
- #   drugs, scores = drug_fit_disease(diseas_name=match_name,topk=topk, output_path=output_path) #Will handle disease name later
- #   return output_path
-
 
 def build_prediction_agent(llm):
     prediction_agent = create_react_agent(

@@ -4,7 +4,7 @@
 
 Repuragent is a multi-agentic AI system designed for drug repurposing sector. The system orchestrates five specialized AI agents through a sophisticated supervisor architecture to tackle complex data gathering and integration in pharmaceutical sector.
 
-<img src="images/agent_architecture.png" width="800">
+<img src="images/agent_architecture.png" width="500">
 
 ### Core Agent Architecture
 

@@ -4,9 +4,10 @@
 
 Repuragent is a multi-agentic AI system designed for drug repurposing sector. The system orchestrates five specialized AI agents through a sophisticated supervisor architecture to tackle complex data gathering and integration in pharmaceutical sector.
 
-<div align="center">
+<figure style="text-align: center;">
   <img src="images/agent_architecture.png" width="500">
-</div>
+  <figcaption> Core architecture of the Repuragent multi-agent AI system.</figcaption>
+</figure>
 
 ### Core Agent Architecture
 
@@ -28,21 +29,44 @@ Repuragent is a multi-agentic AI system designed for drug repurposing sector. Th
 ### Prerequisites
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - OpenAI API key from [platform.openai.com](https://platform.openai.com/)
+- (Optional) LangSmith account for tracing from [smith.langchain.com](https://smith.langchain.com/)
 
-### Setup
+### Initial Setup
 ```bash
 # 1. Clone repository
-git clone <repository-url>
+git clone https://github.com/your-username/repuragent.git
 cd repuragent
 
-# 2. Create .env file
-echo "OPENAI_API_KEY=your-api-key-here" > .env
+# 2. Create .env file with required API keys
+echo "OPENAI_API_KEY=your-openai-api-key-here" > .env
+echo "LANGCHAIN_TRACING_V2=true" >> .env
+echo "LANGCHAIN_ENDPOINT=https://api.smith.langchain.com" >> .env
+echo "LANGCHAIN_API_KEY=your-langsmith-api-key-here" >> .env
+echo "LANGCHAIN_PROJECT=repuragent" >> .env
 
-# 3. Run application
+# 3. Build and run Docker containers
 docker-compose up --build
 ```
 
-Open [http://localhost:8501](http://localhost:8501)
+Open [http://localhost:8501](http://localhost:8501) to access the application.
+
+### Daily Usage
+```bash
+# Start the application (after initial setup)
+docker-compose up
+
+# Stop the application
+docker-compose down
+
+# View logs
+docker-compose logs -f
+```
+
+### LangSmith Setup (Optional)
+1. Create account at [smith.langchain.com](https://smith.langchain.com/)
+2. Get your API key from the settings page
+3. Add the LangSmith variables to your `.env` file as shown above
+4. Restart Docker containers to apply changes
 
 ## Features
 - Multi-agent AI system for drug discovery

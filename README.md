@@ -2,7 +2,7 @@
 
 ## Overview
 
-Repuragent is a multi-agentic AI system designed for drug repurposing sector. The system orchestrates five specialized AI agents through a sophisticated supervisor architecture to tackle complex data gathering and integration in pharmaceutical sector.
+Drug repurposing offers an efficient strategy to accelerate therapeutic discovery by identifying new indications for existing drugs. However, the process remains hindered by the heterogeneity of biological and chemical data and the difficulty of forming early, evidence-based hypotheses about candidate drugs, targets, and clinical endpoints. We introduce Repuragent (Drug Repurposing Agentic System), a proof-of-concept multi-agent framework designed to autonomously plan, execute, and refine data-driven repurposing workflows under human-in-the-loop supervision. The system integrates autonomous research, data extraction, knowledge graph (KG) construction, and analytical reasoning with an adaptive long-term memory mechanism that improves the system over time.
 
 <div align="center">
   <img src="images/agent_architecture.png" width="500">

@@ -1,4 +1,4 @@
-# Repuragent
+# Repuragent - An AI Scientist for Drug Repurposing
 
 ## Overview
 

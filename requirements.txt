@@ -25,6 +25,7 @@ chembl-webresource-client==0.10.9
 pybel==0.15.5
 pandasgwas==1.2.2
 networkx==3.4.2
+rdkit==2025.9.1
 
 # Document processing - exact versions
 unstructured==0.18.14

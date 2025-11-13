@@ -9,6 +9,10 @@ Drug repurposing offers an efficient strategy to accelerate therapeutic discover
 </div>
 
 
+
+### Demo Page:
+[RepurAgent Demo Page](https://repuragent.streamlit.app)
+
 ### Core Agent Architecture
 
 - **Planning Agent**: Decomposes complex tasks using episodic memory learning, Standard Operating Procedures (SOPs), and academic publications.

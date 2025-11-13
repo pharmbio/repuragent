@@ -17,6 +17,7 @@ from app.ui.components import display_header, display_sidebar, display_chat_mess
 from app.ui.formatters import separate_agent_outputs
 
 
+
 def get_thread_files(thread_id: str) -> list:
     """Get uploaded files for a specific thread."""
     return st.session_state.thread_files.get(thread_id, [])

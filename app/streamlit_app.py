@@ -15,7 +15,7 @@ from backend.memory.episodic_memory.conversation import (
 )
 from app.ui.components import display_header, display_sidebar, display_chat_messages, add_episodic_controls
 from app.ui.formatters import separate_agent_outputs
-
+import streamlit_nested_layout
 
 
 def get_thread_files(thread_id: str) -> list:
@@ -261,7 +261,7 @@ def create_persistent_dual_display(is_processing=True):
     if progress_has_content or is_processing:
         # Dynamic title based on processing state
         title = "🔄 Processing Progress" if is_processing else "🔄 Agent Activity Log"
-        with st.expander(title, expanded=expander_expanded):
+        with st.expander(title, expanded=False):
             progress_container = st.empty()
     else:
         progress_container = None

@@ -1,9 +1,10 @@
 import base64
 import streamlit as st
-from typing import List, Dict
+from typing import List, Dict, Optional
 from app.config import APP_TITLE, LOGO_PATH, SQLITE_DB_PATH
 from backend.memory.episodic_memory.thread_manager import load_thread_ids, remove_thread_id
 from backend.memory.episodic_memory.conversation import create_new_conversation
+from app.ui.formatters import split_content_with_tool_blocks
 
 
 def get_image_base64(file_path: str) -> str:
@@ -202,6 +203,51 @@ def _display_database_info() -> None:
         st.caption(f"📊 Size: {size_mb:.2f} MB")
 
 
+def render_tool_call_block(
+    block: str,
+    *,
+    kind: str = "call",
+    source: Optional[str] = None,
+    label: str = "🛠️ Tools Calling",
+    expanded: bool = False
+) -> None:
+    """Render a single tool call block inside an expander."""
+    if not block or not block.strip():
+        return
+
+    block_content = block.strip()
+    if kind == "result":
+        effective_label = "🧾 Tool Results"
+    else:
+        effective_label = label
+
+    if source:
+        effective_label = f"{effective_label} • {source}"
+
+    with st.expander(effective_label, expanded=expanded):
+        st.markdown(block_content)
+
+
+def render_markdown_with_tool_blocks(markdown: str, *, label: str = "🛠️ Tools Calling", expanded: bool = False) -> None:
+    """Render markdown interleaving tool call expanders in chronological order."""
+    segments = split_content_with_tool_blocks(markdown)
+    for segment in segments:
+        segment_type = segment.get("type")
+        content = segment.get("content", "")
+        if segment_type == "text":
+            text = content.strip()
+            if text:
+                st.markdown(text)
+        elif segment_type == "tool":
+            render_tool_call_block(
+                content,
+                kind=segment.get("kind", "call"),
+                source=segment.get("source"),
+                label=label,
+                expanded=expanded
+            )
+
+
 def display_chat_messages(messages: List[Dict[str, str]]) -> None:
     """Display chat messages in the main area with enhanced formatting for agent outputs."""
     for message in messages:
@@ -236,13 +282,17 @@ def display_chat_messages(messages: List[Dict[str, str]]) -> None:
                 
                 # Display final content first (Planning and Report agents)
                 if final_content.strip():
-                    st.markdown(final_content.strip())
+                    render_markdown_with_tool_blocks(final_content, label="🛠️ Tools Calling")
                 
                 # Display progress content in expander if it exists
                 if progress_content.strip():
                     # For historical messages, always show expander if there's content
-                    with st.expander("🔄 Processing Progress", expanded=st.session_state.get('expander_states', {}).get('progress_expander', True)):
-                        st.markdown(progress_content.strip())
+                    with st.expander("🔄 Processing Progress", expanded=False):
+                        render_markdown_with_tool_blocks(
+                            progress_content,
+                            label="🛠️ Tools Calling",
+                            expanded=False
+                        )
             else:
                 # Regular display for user messages or simple assistant messages
                 st.markdown(content)

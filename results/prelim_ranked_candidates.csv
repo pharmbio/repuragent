@@ -1,0 +1,1277 @@
+chembl_id,compound_name,SMILES,prelim_mechanistic_score,num_linked_proteins,num_key_pathways,approval_phase_max,in_known_drugs,source_files
+CHEMBL2105759,BARICITINIB,CCS(=O)(=O)N1CC(CC#N)(n2cc(-c3ncnc4[nH]ccc34)cn2)C1,19.5,2,13,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1200699,DOXYCYCLINE,C[C@H]1c2cccc(O)c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@@H]21.O,15.5,4,1,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL112,ACETAMINOPHEN,CC(=O)Nc1ccc(O)cc1,15.5,3,2,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1201834,CANAKINUMAB,,15.5,1,4,4.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1789941,RUXOLITINIB,N#CC[C@H](C1CCCC1)n1cc(-c2ncnc3[nH]ccc23)cn1,15.5,0,13,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL1200694,SEVOFLURANE,FCOC(C(F)(F)F)C(F)(F)F,14.5,5,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1256,ISOFLURANE,FC(F)OC(Cl)C(F)(F)F,14.5,5,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL221959,TOFACITINIB,C[C@@H]1CCN(C(=O)CC#N)C[C@@H]1N(C)c1ncnc2[nH]ccc12,14.5,0,13,3.0,1,known_drugs;pathway_drug_candidates
+CHEMBL1795071,RUXOLITINIB PHOSPHATE,N#CC[C@H](C1CCCC1)n1cc(-c2ncnc3[nH]ccc23)cn1.O=P(O)(O)O,14.0,0,13,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2103743,TOFACITINIB CITRATE,C[C@@H]1CCN(C(=O)CC#N)C[C@@H]1N(C)c1ncnc2[nH]ccc12.O=C(O)CC(O)(CC(=O)O)C(=O)O,14.0,0,13,4.0,0,pathway_drug_candidates
+CHEMBL3301607,FILGOTINIB,O=C(Nc1nc2cccc(-c3ccc(CN4CCS(=O)(=O)CC4)cc3)n2n1)C1CC1,14.0,0,13,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4298167,FILGOTINIB MALEATE,O=C(Nc1nc2cccc(-c3ccc(CN4CCS(=O)(=O)CC4)cc3)n2n1)C1CC1.O=C(O)/C=C\C(=O)O,14.0,0,13,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL5315119,UPADACITINIB HEMIHYDRATE,CC[C@@H]1CN(C(=O)NCC(F)(F)F)C[C@@H]1c1cnc2cnc3[nH]ccc3n12.CC[C@@H]1CN(C(=O)NCC(F)(F)F)C[C@@H]1c1cnc2cnc3[nH]ccc3n12.O,14.0,0,13,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4435170,DEUCRAVACITINIB,[2H]C([2H])([2H])NC(=O)c1nnc(NC(=O)C2CC2)cc1Nc1cccc(-c2ncn(C)n2)c1OC,14.0,0,12,4.0,0,pathway_drug_candidates
+CHEMBL3655081,ABROCITINIB,CCCS(=O)(=O)N[C@H]1C[C@@H](N(C)c2ncnc3[nH]ccc23)C1,14.0,0,11,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1287853,FEDRATINIB,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1,14.0,0,9,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2035187,PACRITINIB,C1=N/C2=N/c3ccc(OCCN4CCCC4)c(c3)COC/C=C/COCc3cccc(c3)C(=C1)N2,14.0,0,9,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4297216,FEDRATINIB HYDROCHLORIDE,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1.Cl.Cl.O,14.0,0,9,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL5095049,PACRITINIB CITRATE,C1=C/COCc2cc(ccc2OCCN2CCCC2)Nc2nccc(n2)-c2cccc(c2)COC/1.O=C(O)CC(O)(CC(=O)O)C(=O)O,14.0,0,9,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1743070,SILTUXIMAB,,13.5,1,3,4.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1078178,MOMELOTINIB,N#CCNC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4)cc3)n2)cc1,13.0,0,13,3.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3137308,PEFICITINIB,NC(=O)c1cnc2[nH]ccc2c1N[C@@H]1[C@@H]2CC3C[C@H]1C[C@@](O)(C3)C2,13.0,0,13,3.0,0,pathway_drug_candidates
+CHEMBL3622821,UPADACITINIB,CC[C@@H]1CN(C(=O)NCC(F)(F)F)C[C@@H]1c1cnc2cnc3[nH]ccc3n12,13.0,0,13,3.0,0,pathway_drug_candidates
+CHEMBL4297507,DELGOCITINIB,C[C@H]1CN(C(=O)CC#N)[C@]12CCN(c1ncnc3[nH]ccc13)C2,13.0,0,13,3.0,0,pathway_drug_candidates
+CHEMBL4297477,BREPOCITINIB,Cn1cc(Nc2nccc(N3C[C@H]4CC[C@@H](C3)N4C(=O)[C@@H]3CC3(F)F)n2)cn1,13.0,0,12,3.0,0,pathway_drug_candidates
+CHEMBL4596392,CRAVACITINIB,CNC(=O)c1nnc(NC(=O)C2CC2)cc1Nc1cccc(-c2ncn(C)n2)c1OC,13.0,0,12,3.0,0,pathway_drug_candidates
+CHEMBL3622820,ITACITINIB,N#CCC1(n2cc(-c3ncnc4[nH]ccc34)cn2)CN(C2CCN(C(=O)c3ccnc(C(F)(F)F)c3F)CC2)C1,13.0,0,11,3.0,0,pathway_drug_candidates
+CHEMBL603469,LESTAURTINIB,C[C@]12O[C@H](C[C@]1(O)CO)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)CNC4=O,13.0,0,9,3.0,0,pathway_drug_candidates
+CHEMBL1762621,BARDOXOLONE METHYL,COC(=O)[C@]12CCC(C)(C)C[C@H]1[C@H]1C(=O)C=C3[C@@]4(C)C=C(C#N)C(=O)C(C)(C)[C@@H]4CC[C@@]3(C)[C@]1(C)CC2,13.0,0,5,3.0,0,pathway_drug_candidates
+CHEMBL2110727,CENICRIVIROC,CCCCOCCOc1ccc(-c2ccc3c(c2)/C=C(/C(=O)Nc2ccc([S@@+]([O-])Cc4cncn4CCC)cc2)CCCN3CC(C)C)cc1,12.5,2,2,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1743050,OLOKIZUMAB,,12.5,1,3,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL2108723,PEGINTERFERON LAMBDA-1A,,12.5,1,3,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL4594275,GUSACITINIB,N#CCC1CCN(c2nc(Nc3ccc(N4CCC(O)CC4)cc3)c3c(=O)[nH]ncc3n2)CC1,12.0,0,13,2.0,0,pathway_drug_candidates
+CHEMBL4650343,IZENCITINIB,Cc1cc(Nc2cc3ncccc3c(N[C@@H]3C[C@H]4CC[C@@H](C3)N4CCC#N)n2)n[nH]1,12.0,0,13,2.0,0,pathway_drug_candidates
+CHEMBL4116008,CERDULATINIB,CCS(=O)(=O)N1CCN(c2ccc(Nc3ncc(C(N)=O)c(NC4CC4)n3)cc2)CC1,12.0,0,12,2.0,0,pathway_drug_candidates
+CHEMBL4459585,ROPSACITINIB,Cn1cc(-c2cn3nccc3c(-c3cnn([C@]4(CC#N)C[C@@H](C#N)C4)c3)n2)cn1,12.0,0,12,2.0,0,pathway_drug_candidates
+CHEMBL3301606,SOLCITINIB,CC1(C)CN(C(=O)c2ccc(-c3cccc4nc(NC(=O)C5CC5)nn34)cc2)C1,12.0,0,11,2.0,0,pathway_drug_candidates
+CHEMBL3545225,INCB-047986,,12.0,0,11,2.0,0,pathway_drug_candidates
+CHEMBL4577523,GOLIDOCITINIB,COc1nn(C)cc1Nc1nccc(-c2c[nH]c3c(NC(=O)[C@@H](C)N4CCN(C)CC4)cccc23)n1,12.0,0,11,2.0,0,pathway_drug_candidates
+CHEMBL2107823,GANDOTINIB,Cc1cc(Nc2cc(CN3CCOCC3)c3nc(C)c(Cc4ccc(Cl)cc4F)n3n2)n[nH]1,12.0,0,9,2.0,0,pathway_drug_candidates
+CHEMBL495727,AT-9283,O=C(Nc1c[nH]nc1-c1nc2ccc(CN3CCOCC3)cc2[nH]1)NC1CC1,12.0,0,9,2.0,0,pathway_drug_candidates
+CHEMBL3544945,SAR-113945,,12.0,0,5,2.0,0,pathway_drug_candidates
+CHEMBL3545168,IMD-1041,,12.0,0,5,2.0,0,pathway_drug_candidates
+CHEMBL1201830,RILONACEPT,,12.0,0,4,4.0,0,pathway_drug_candidates
+CHEMBL1201562,INTERFERON BETA-1A,,11.5,1,2,4.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1201570,ANAKINRA,,11.5,1,2,4.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1201580,ADALIMUMAB,,11.5,1,2,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1201581,INFLIXIMAB,,11.5,1,2,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1201583,BEVACIZUMAB,,11.5,1,2,4.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1237022,TOCILIZUMAB,,11.5,1,2,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_of_actions
+CHEMBL154,NAPROXEN,COc1ccc2cc([C@H](C)C(=O)O)ccc2c1,11.5,1,2,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1743034,IXEKIZUMAB,,11.5,1,2,4.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL2108730,SARILUMAB,,11.5,1,2,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_of_actions
+CHEMBL25,ASPIRIN,CC(=O)Oc1ccccc1C(=O)O,11.5,1,2,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL6,INDOMETHACIN,COc1ccc2c(c1)c(CC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,11.5,1,2,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL4802163,NEZULCITINIB,CCc1cc(O)ccc1-c1ccc2c(-c3nc4c([nH]3)C[C@@H](C(=O)N3CC(N(C)C)C3)N(C(C)C)C4)n[nH]c2c1,11.0,0,13,1.0,0,pathway_drug_candidates
+CHEMBL1231124,AZD-1480,Cc1cc(Nc2nc(N[C@@H](C)c3ncc(F)cn3)ncc2Cl)[nH]n1,11.0,0,9,1.0,0,pathway_drug_candidates
+CHEMBL1944698,ZOTIRACICLIB,CN1C/C=C/CCOc2cccc(c2)-c2ccnc(n2)Nc2cccc(c2)C1,11.0,0,9,1.0,0,pathway_drug_candidates
+CHEMBL3545215,BMS-911543,CCn1c(C(=O)N(C2CC2)C2CC2)cc2c3c(ncn3C)c(Nc3cc(C)n(C)n3)nc21,11.0,0,9,1.0,0,pathway_drug_candidates
+CHEMBL3545241,AC-430,Cc1cc(Nc2nc(C(O)c3ccc(F)cc3)nc3ccccc23)n[nH]1,11.0,0,9,1.0,0,pathway_drug_candidates
+CHEMBL3545328,XL-019,O=C(Nc1ccc(-c2ccnc(Nc3ccc(N4CCOCC4)cc3)n2)cc1)C1CCCN1,11.0,0,9,1.0,0,pathway_drug_candidates
+CHEMBL4303389,NS-018,C[C@H](Nc1cc(-c2cnn(C)c2)cc(Nc2cnccn2)n1)c1ccc(F)cc1,11.0,0,9,1.0,0,pathway_drug_candidates
+CHEMBL1743026,GEVOKIZUMAB,,11.0,0,4,3.0,0,pathway_drug_candidates
+CHEMBL4594518,LUTIKIZUMAB,,11.0,0,4,3.0,0,pathway_drug_candidates
+CHEMBL2109343,LERONLIMAB,,10.5,1,2,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL3707325,LENZILUMAB,,10.5,1,2,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL4298207,ZILUCOPLAN,,10.5,1,2,3.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_of_actions
+CHEMBL4650406,LEVILIMAB,,10.5,1,2,3.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_of_actions
+CHEMBL4297572,ABBV-3373,,10.0,2,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4297863,REMTOLUMAB,,10.0,1,3,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL101,PHENYLBUTAZONE,CCCCC1C(=O)N(c2ccccc2)N(c2ccccc2)C1=O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1020,TOLMETIN,Cc1ccc(C(=O)c2ccc(CC(=O)O)n2C)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1021,NEPAFENAC,NC(=O)Cc1cccc(C(=O)c2ccccc2)c1N,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1034,DICLOFENAC SODIUM,O=C([O-])Cc1ccccc1Nc1c(Cl)cccc1Cl.[Na+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1070,NABUMETONE,COc1ccc2cc(CCC(C)=O)ccc2c1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1071,OXAPROZIN,O=C(O)CCc1nc(-c2ccccc2)c(-c2ccccc2)o1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1077,BROMFENAC,Nc1c(CC(=O)O)cccc1C(=O)c1ccc(Br)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1120,BISMUTH SUBSALICYLATE,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL118,CELECOXIB,Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1200613,TOLMETIN SODIUM,Cc1ccc(C(=O)c2ccc(CC(=O)[O-])n2C)cc1.[Na+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200760,BALSALAZIDE DISODIUM,O=C([O-])CCNC(=O)c1ccc(/N=N/c2ccc(O)c(C(=O)[O-])c2)cc1.[Na+].[Na+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200804,DICLOFENAC POTASSIUM,O=C([O-])Cc1ccccc1Nc1c(Cl)cccc1Cl.[K+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200806,NAPROXEN SODIUM,COc1ccc2cc([C@H](C)C(=O)[O-])ccc2c1.[Na+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201013,OLSALAZINE SODIUM,O=C([O-])c1cc(/N=N/c2ccc(O)c(C(=O)[O-])c2)ccc1O.[Na+].[Na+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201124,KETOROLAC TROMETHAMINE,NC(CO)(CO)CO.O=C(c1ccccc1)c1ccc2n1CCC2C(=O)O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201141,IBUPROFEN LYSINE,CC(C)Cc1ccc(C(C)C(=O)O)cc1.NCCCC[C@H](N)C(=O)O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201180,DICLOFENAC EPOLAMINE,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl.OCCN1CCCC1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201572,ETANERCEPT,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1201828,ECULIZUMAB,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1201831,CERTOLIZUMAB PEGOL,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1201833,GOLIMUMAB,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1206690,PARECOXIB,CCC(=O)NS(=O)(=O)c1ccc(-c2c(-c3ccccc3)noc2C)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL122,ROFECOXIB,CS(=O)(=O)c1ccc(C2=C(c3ccccc3)C(=O)OC2)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL12610,BENZYDAMINE,CN(C)CCCOc1nn(Cc2ccccc2)c2ccccc12,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1297,FENOPROFEN,CC(C(=O)O)c1cccc(Oc2ccccc2)c1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL139,DICLOFENAC,O=C(O)Cc1ccccc1Nc1c(Cl)cccc1Cl,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL146095,GLAFENINE,O=C(OCC(O)CO)c1ccccc1Nc1ccnc2cc(Cl)ccc12,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1562610,MECLOFENAMATE SODIUM,Cc1ccc(Cl)c(Nc2ccccc2C(=O)[O-])c1Cl.O.[Na+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1565476,APAZONE,CCCC1C(=O)N2C(N(C)C)=Nc3ccc(C)cc3N2C1=O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1569487,LORNOXICAM,CN1C(C(=O)Nc2ccccn2)=C(O)c2sc(Cl)cc2S1(=O)=O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL15770,SULINDAC,CC1=C(CC(=O)O)c2cc(F)ccc2/C1=C\c1ccc([S+](C)[O-])cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL15870,INDOPROFEN,CC(C(=O)O)c1ccc(N2Cc3ccccc3C2=O)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL175,DEXIBUPROFEN,CC(C)Cc1ccc([C@H](C)C(=O)O)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL188952,PIRPROFEN,CC(C(=O)O)c1ccc(N2CC=CC2)c(Cl)c1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL189171,ACEMETACIN,COc1ccc2c(c1)c(CC(=O)OCC(=O)O)c(C)n2C(=O)c1ccc(Cl)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2103736,FENOPROFEN CALCIUM,CC(C(=O)[O-])c1cccc(Oc2ccccc2)c1.CC(C(=O)[O-])c1cccc(Oc2ccccc2)c1.O.O.[Ca+2],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2108222,ALOXIPRIN,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL296913,PARECOXIB SODIUM,CCC(=O)[N-]S(=O)(=O)c1ccc(-c2c(-c3ccccc3)noc2C)cc1.[Na+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3181947,BROMFENAC SODIUM,Nc1c(CC(=O)[O-])cccc1C(=O)c1ccc(Br)cc1.Nc1c(CC(=O)[O-])cccc1C(=O)c1ccc(Br)cc1.O.O.O.[Na+].[Na+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3833307,SATRALIZUMAB,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3989676,OXYPHENBUTAZONE,CCCCC1C(=O)N(c2ccccc2)N(c2ccc(O)cc2)C1=O.O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3989803,DIPYRONE,Cc1c(N(C)CS(=O)(=O)[O-])c(=O)n(-c2ccccc2)n1C.O.[Na+],10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3989986,RAVULIZUMAB,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL404108,LUMIRACOXIB,Cc1ccc(Nc2c(F)cccc2Cl)c(CC(=O)O)c1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL416146,ETORICOXIB,Cc1ccc(-c2ncc(Cl)cc2-c2ccc(S(C)(=O)=O)cc2)cn1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL421,SULFASALAZINE,O=C(O)c1cc(/N=N/c2ccc(S(=O)(=O)Nc3ccccn3)cc2)ccc1O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4298086,POZELIMAB,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL469,KETOROLAC,O=C(c1ccccc1)c1ccc2n1CCC2C(=O)O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL509,MECLOFENAMIC ACID,Cc1ccc(Cl)c(Nc2ccccc2C(=O)O)c1Cl,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL521,IBUPROFEN,CC(C)Cc1ccc(C(C)C(=O)O)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL527,PIROXICAM,CN1C(C(=O)Nc2ccccn2)=C(O)c2ccccc2S1(=O)=O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL5315048,ZILUCOPLAN SODIUM,,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL563,FLURBIPROFEN,CC(C(=O)O)c1ccc(-c2ccccc2)c(F)c1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL571,KETOPROFEN,CC(C(=O)O)c1cccc(C(=O)c2ccccc2)c1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL599,MELOXICAM,Cc1cnc(NC(=O)C2=C(O)c3ccccc3S(=O)(=O)N2C)s1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL622,ETODOLAC,CCc1cccc2c3c([nH]c12)C(CC)(CC(=O)O)OCC3,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL686,MEFENAMIC ACID,Cc1cccc(Nc2ccccc2C(=O)O)c1C,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL704,MESALAMINE,Nc1ccc(O)c(C(=O)O)c1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL75435,DEXKETOPROFEN,C[C@H](C(=O)O)c1cccc(C(=O)c2ccccc2)c1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL865,VALDECOXIB,Cc1onc(-c2ccccc2)c1-c1ccc(S(N)(=O)=O)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL898,DIFLUNISAL,O=C(O)c1cc(-c2ccc(F)cc2F)ccc1O,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL93645,ACECLOFENAC,O=C(O)COC(=O)Cc1ccccc1Nc1c(Cl)cccc1Cl,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL956,SUPROFEN,CC(C(=O)O)c1ccc(C(=O)c2cccs2)cc1,10.0,1,2,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1690,HYDROXYCHLOROQUINE SULFATE,CCN(CCO)CCCC(C)Nc1ccnc2cc(Cl)ccc12.O=S(=O)(O)O,9.5,2,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL107,COLCHICINE,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1[C@@H](NC(C)=O)CC2,9.5,1,1,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1560,CAPTOPRIL,C[C@H](CS)C(=O)N1CCC[C@H]1C(=O)O,9.5,1,1,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL596,FENTANYL,CCC(=O)N(c1ccccc1)C1CCN(CCc2ccccc2)CC1,9.5,1,1,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL877,TRANEXAMIC ACID,NC[C@H]1CC[C@H](C(=O)O)CC1,9.5,1,1,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL4297819,ROPEGINTERFERON ALFA-2B,,9.5,0,2,4.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1201346,BALSALAZIDE,O=C(O)CCNC(=O)c1ccc(/N=N/c2ccc(O)c(C(=O)O)c2)cc1,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1528134,BENZYDAMINE HYDROCHLORIDE,CN(C)CCCOc1nn(Cc2ccccc2)c2ccccc12.Cl,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL166863,POLMACOXIB,CC1(C)OC(c2ccc(S(N)(=O)=O)cc2)=C(c2cccc(F)c2)C1=O,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL19299,LOXOPROFEN,CC(C(=O)O)c1ccc(CC2CCCC2=O)cc1,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2103831,NAPROXCINOD,COc1ccc2cc([C@H](C)C(=O)OCCCCO[N+](=O)[O-])ccc2c1,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2107455,IGURATIMOD,CS(=O)(=O)Nc1cc2occ(NC=O)c(=O)c2cc1Oc1ccccc1,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2107911,ONERCEPT,,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2107979,PEXELIZUMAB,,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2109636,VILOBELIMAB,,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL364804,GW-406381,CCOc1ccc(-c2nn3ncccc3c2-c2ccc(S(C)(=O)=O)cc2)cc1,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3989408,IBUPROFEN SODIUM,CC(C)Cc1ccc(C(C)C(=O)[O-])cc1.O.O.[Na+],9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4297722,CEMDISIRAN,,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4297928,NOMACOPAN,,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL435298,ESFLURBIPROFEN,C[C@H](C(=O)O)c1ccc(-c2ccccc2)c(F)c1,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4594316,CROVALIMAB,,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL461522,METAMIZOLE,Cc1c(N(C)CS(=O)(=O)O)c(=O)n(-c2ccccc2)n1C,9.0,1,2,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1743071,SIRUKUMAB,,9.0,0,3,3.0,0,pathway_drug_candidates
+CHEMBL3989992,PEGILODECAKIN,,9.0,0,3,3.0,0,pathway_drug_candidates
+CHEMBL1743054,OZORALIZUMAB,,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1743057,PEGSUNERCEPT,,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1835207,APRICOXIB,CCOc1ccc(-c2cc(C)cn2-c2ccc(S(N)(=O)=O)cc2)cc1,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2105683,NAPROXEN ETEMESIL,COc1ccc2cc([C@H](C)C(=O)OCCS(C)(=O)=O)ccc2c1,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2108739,PLACULUMAB,,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2108887,AFELIMOMAB,,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3833343,VOBARILIZUMAB,,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3990025,OLENDALIZUMAB,,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL425,OLSALAZINE,O=C(O)c1cc(/N=N/c2ccc(O)c(C(=O)O)c2)ccc1O,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4298012,TESIDOLUMAB,,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL435381,CIMICOXIB,COc1ccc(-c2c(Cl)ncn2-c2ccc(S(N)(=O)=O)cc2)cc1F,8.0,1,2,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2108589,CLAZAKIZUMAB,,8.0,0,3,2.0,0,pathway_drug_candidates
+CHEMBL2109613,PF-04236921,,8.0,0,3,2.0,0,pathway_drug_candidates
+CHEMBL4594542,EFLEPEDOCOKIN ALFA,,8.0,0,3,2.0,0,pathway_drug_candidates
+CHEMBL1201187,MARAVIROC,Cc1nnc(C(C)C)n1[C@@H]1C[C@H]2CC[C@@H](C1)N2CC[C@H](NC(=O)C1CCC(F)(F)CC1)c1ccccc1,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1201421,PEGAPTANIB SODIUM,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1201557,INTERFERON ALFACON-1,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1201558,INTERFERON ALFA-2B,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1201560,PEGINTERFERON ALFA-2A,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1201561,PEGINTERFERON ALFA-2B,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1201563,INTERFERON BETA-1B,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1201825,RANIBIZUMAB,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1742982,AFLIBERCEPT,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1743068,SECUKINUMAB,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL2108508,INTERFERON ALFA-2A,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL2108677,PEGINTERFERON BETA-1A,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL2364653,ANIFROLUMAB,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL3707357,BROLUCIZUMAB,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL4297700,BIMEKIZUMAB,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL4297750,FARICIMAB,,8.0,0,2,4.0,0,pathway_drug_candidates
+CHEMBL1017,TELMISARTAN,CCCc1nc2c(C)cc(-c3nc4ccccc4n3C)cc2n1Cc1ccc(-c2ccccc2C(=O)O)cc1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1042,CHOLECALCIFEROL,C=C1CC[C@H](O)C/C1=C/C=C1\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]12,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1064,SIMVASTATIN,CCC(C)(C)C(=O)O[C@H]1C[C@@H](C)C=C2C=C[C@H](C)[C@H](CC[C@@H]3C[C@@H](O)CC(=O)O3)[C@H]21,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1069,VALSARTAN,CCCCC(=O)N(Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1)[C@H](C(=O)O)C(C)C,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1082407,ENZALUTAMIDE,CNC(=O)c1ccc(N2C(=S)N(c3ccc(C#N)c(C(F)(F)F)c3)C(=O)C2(C)C)cc1F,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1161,MOMETASONE FUROATE,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(Cl)[C@@H](O)C[C@]2(C)[C@@]1(OC(=O)c1ccco1)C(=O)CCl,7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1200689,NITRIC OXIDE,[N]=O,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1201081,METHYLPREDNISOLONE SODIUM SUCCINATE,C[C@H]1C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2CC[C@]3(O)C(=O)COC(=O)CCC(=O)[O-])[C@@]2(C)C=CC(=O)C=C12.[Na+],7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL131,PREDNISOLONE,C[C@]12C=CC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO,7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1370,BUDESONIDE,CCCC1O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1,7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1513,IRBESARTAN,CCCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1536,ERGOCALCIFEROL,C=C1CC[C@H](O)C/C1=C/C=C1\CCC[C@]2(C)[C@@H]([C@H](C)/C=C/[C@H](C)C(C)C)CC[C@@H]12,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1569,AMANTADINE HYDROCHLORIDE,Cl.NC12CC3CC(CC(C3)C1)C2,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL163,RITONAVIR,CC(C)c1nc(CN(C)C(=O)N[C@H](C(=O)N[C@@H](Cc2ccccc2)C[C@H](O)[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)C(C)C)cs1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1737,SILDENAFIL CITRATE,CCCc1nn(C)c2c(=O)[nH]c(-c3cc(S(=O)(=O)N4CCN(C)CC4)ccc3OCC)nc12.O=C(O)CC(O)(CC(=O)O)C(=O)O,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL198362,RIVAROXABAN,O=C(NC[C@H]1CN(c2ccc(N3CCOCC3=O)cc2)C(=O)O1)c1ccc(Cl)s1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL2040682,CICLESONIDE,CC(C)C(=O)OCC(=O)[C@@]12O[C@H](C3CCCCC3)O[C@@H]1C[C@H]1[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]12C,7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL2095208,COBICISTAT,CC(C)c1nc(CN(C)C(=O)N[C@@H](CCN2CCOCC2)C(=O)N[C@H](CC[C@H](Cc2ccccc2)NC(=O)OCc2cncs2)Cc2ccccc2)cs1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL231779,APIXABAN,COc1ccc(-n2nc(C(N)=O)c3c2C(=O)N(c2ccc(N4CCCCC4=O)cc2)CC3)cc1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL3,NICOTINE,CN1CCC[C@H]1c1cccnc1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL3707348,ACALABRUTINIB,CC#CC(=O)N1CCC[C@H]1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12,7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL384467,DEXAMETHASONE,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)CO,7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL389621,HYDROCORTISONE,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO,7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL398435,TICAGRELOR,CCCSc1nc(N[C@@H]2C[C@H]2c2ccc(F)c(F)c2)c2nnn([C@@H]3C[C@H](OCCO)[C@@H](O)[C@H]3O)c2n1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL409,BICALUTAMIDE,CC(O)(CS(=O)(=O)c1ccc(F)cc1)C(=O)Nc1ccc(C#N)c(C(F)(F)F)c1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL514800,APREMILAST,CCOc1cc([C@@H](CS(C)(=O)=O)N2C(=O)c3cccc(NC(C)=O)c3C2=O)ccc1OC,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL547,ISOTRETINOIN,CC1=C(/C=C/C(C)=C/C=C/C(C)=C\C(=O)O)C(C)(C)CCC1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL635,PREDNISONE,C[C@]12C=CC(=O)C=C1CC[C@@H]1[C@@H]2C(=O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO,7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL650,METHYLPREDNISOLONE,C[C@H]1C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2CC[C@]3(O)C(=O)CO)[C@@]2(C)C=CC(=O)C=C12,7.5,1,0,4.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL902,FAMOTIDINE,NC(N)=Nc1nc(CSCC/C(N)=N/S(N)(=O)=O)cs1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL932,DIPYRIDAMOLE,OCCN(CCO)c1nc(N2CCCCC2)c2nc(N(CCO)CCO)nc(N3CCCCC3)c2n1,7.5,1,0,4.0,1,known_drugs;pathway_drug_candidates;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL578,ENALAPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1CCC[C@H]1C(=O)O,7.5,0,1,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL3989410,INDOMETHACIN SODIUM,COc1ccc2c(c1)c(CC(=O)[O-])c(C)n2C(=O)c1ccc(Cl)cc1.O.O.O.[Na+],7.0,1,2,1.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2109614,MEDI-5117,,7.0,0,3,1.0,0,pathway_drug_candidates
+CHEMBL2109615,MRA 003 US,,7.0,0,3,1.0,0,pathway_drug_candidates
+CHEMBL4297732,ZILTIVEKIMAB,,7.0,0,3,1.0,0,pathway_drug_candidates
+CHEMBL1255794,APLAVIROC,CCCCN1C(=O)[C@@H]([C@H](O)C2CCCCC2)NC(=O)C12CCN(Cc1ccc(Oc3ccc(C(=O)O)cc3)cc1)CC2,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL1668019,APLAVIROC HYDROCHLORIDE,CCCCN1C(=O)[C@@H]([C@H](O)C2CCCCC2)NC(=O)C12CCN(Cc1ccc(Oc3ccc(C(=O)O)cc3)cc1)CC2.Cl,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL2107842,ALBINTERFERON ALFA-2B,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL2108313,CONBERCEPT,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL2108752,PEGAPTANIB OCTASODIUM,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL2109433,OTILIMAB,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL2110581,BEVASIRANIB,Cc1cn([C@H]2C[C@H](OP(=O)(O)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3O)[C@@H](COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(=O)[nH]c(N)nc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(=O)[nH]c4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4ccc(N)nc4=O)O[C@@H]3COP(=O)(O)O[C@H]3[C@@H](O)[C@H](n4cnc5c(N)ncnc54)O[C@@H]3CO)O2)c(=O)[nH]c1=O,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL3039547,PEXASTIMOGENE DEVACIREPVEC,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL4297163,MUPARFOSTAT,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL4297684,ABICIPAR PEGOL,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL4297686,IZOKIBEP,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL4298023,M-1095,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL4298102,VUNAKIZUMAB,,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL82301,VICRIVIROC,COC[C@@H](c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)C[C@@H]1C,7.0,0,2,3.0,0,pathway_drug_candidates
+CHEMBL1016,CANDESARTAN,CCOc1nc2cccc(C(=O)O)c2n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,6.5,1,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1201265,METHYLPREDNISOLONE HEMISUCCINATE,C[C@H]1C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2CC[C@]3(O)C(=O)COC(=O)CCC(=O)O)[C@@]2(C)C=CC(=O)C=C12,6.5,1,0,3.0,1,known_drugs;protein_drug_candidates;pathway_drug_candidates
+CHEMBL1516,OLMESARTAN,CCCc1nc(C(C)(C)O)c(C(=O)O)n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,6.5,1,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1981592,AVIPTADIL,CC[C@H](C)[C@H](NC(=O)[C@H](CO)NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CCCCN)NC(=O)[C@@H](NC(=O)[C@H](C)NC(=O)[C@H](CCSC)NC(=O)[C@H](CCC(N)=O)NC(=O)[C@H](CCCCN)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@H](CC(N)=O)NC(=O)[C@H](CC(=O)O)NC(=O)[C@@H](NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@@H](NC(=O)[C@H](C)NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@@H](N)Cc1cnc[nH]1)C(C)C)[C@@H](C)O)[C@@H](C)O)C(C)C)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](CC(N)=O)C(=O)O,6.5,1,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL2108806,BEMIPARIN SODIUM,,6.5,1,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL4297680,1018 ISS,,6.5,1,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL4594417,PRUXELUTAMIDE,CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2F)C(=S)N1c1ccc(CCCc2ncco2)nc1,6.5,1,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL4650299,HEPARIN,,6.5,1,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL57242,AZILSARTAN,CCOc1nc2cccc(C(=O)O)c2n1Cc1ccc(-c2ccccc2-c2noc(=O)[nH]2)cc1,6.5,1,0,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1433,DOXYCYCLINE ANHYDROUS,C[C@H]1c2cccc(O)c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@@H]21,6.5,0,1,3.0,1,known_drugs;pathway_drug_candidates
+CHEMBL4297886,ASUNERCEPT,,6.5,0,1,3.0,1,known_drugs;pathway_drug_candidates;mechanism_of_actions
+CHEMBL1091,HYDROCORTISONE ACETATE,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1152,PREDNISOLONE ACETATE,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1159650,CLOBETASOL PROPIONATE,CCC(=O)O[C@]1(C(=O)CCl)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200384,BETAMETHASONE DIPROPIONATE,CCC(=O)OCC(=O)[C@@]1(OC(=O)CC)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200386,PREDNICARBATE,CCOC(=O)O[C@]1(C(=O)COC(=O)CC)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200495,HYDROCORTISONE SODIUM SUCCINATE,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COC(=O)CCC(=O)[O-].[Na+],6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200500,BECLOMETHASONE DIPROPIONATE,CCC(=O)OCC(=O)[C@@]1(OC(=O)CC)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(Cl)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200538,BETAMETHASONE ACETATE,CC(=O)OCC(=O)[C@@]1(O)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200545,DIFLORASONE DIACETATE,CC(=O)OCC(=O)[C@@]1(OC(C)=O)[C@@H](C)C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200600,FLUOROMETHOLONE,CC(=O)[C@@]1(O)CC[C@H]2[C@@H]3C[C@H](C)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200617,RIMEXOLONE,CCC(=O)[C@@]1(C)[C@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200762,BETAMETHASONE SODIUM PHOSPHATE,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)COP(=O)([O-])[O-].[Na+].[Na+],6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200845,HALCINONIDE,CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)CC[C@]5(C)[C@@]4(F)[C@@H](O)C[C@]3(C)[C@]2(C(=O)CCl)O1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200865,LOTEPREDNOL ETABONATE,CCOC(=O)O[C@]1(C(=O)OCCl)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200878,TRIAMCINOLONE HEXACETONIDE,CC(C)(C)CC(=O)OCC(=O)[C@@]12OC(C)(C)O[C@@H]1C[C@H]1[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]12C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200908,HALOBETASOL PROPIONATE,CCC(=O)O[C@]1(C(=O)CCl)[C@@H](C)C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200953,HYDROCORTISONE PROBUTATE,CCCC(=O)O[C@]1(C(=O)COC(=O)CC)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200989,ALCLOMETASONE DIPROPIONATE,CCC(=O)OCC(=O)[C@@]1(OC(=O)CC)[C@H](C)C[C@H]2[C@H]3[C@H]([C@@H](O)C[C@@]21C)[C@@]1(C)C=CC(=O)C=C1C[C@H]3Cl,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201012,FLURANDRENOLIDE,CC1(C)O[C@@H]2C[C@H]3[C@@H]4C[C@H](F)C5=CC(=O)CC[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201014,PREDNISOLONE SODIUM PHOSPHATE,C[C@]12C=CC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COP(=O)([O-])[O-].[Na+].[Na+],6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201109,DESONIDE,CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201173,MEDRYSONE,CC(=O)[C@H]1CC[C@H]2[C@@H]3C[C@H](C)C4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@]12C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201749,DIFLUPREDNATE,CCCC(=O)O[C@]1(C(=O)COC(C)=O)CC[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201891,DEFLAZACORT,CC(=O)OCC(=O)[C@@]12N=C(C)O[C@@H]1C[C@H]1[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]12C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1276308,MIFEPRISTONE,CC#C[C@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CCC4=C3[C@@H](c3ccc(N(C)C)cc3)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1364144,METHYLPREDNISOLONE ACETATE,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3C[C@H](C)C4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1451,TRIAMCINOLONE,C[C@]12C=CC(=O)C=C1CC[C@H]1[C@@H]3C[C@@H](O)[C@](O)(C(=O)CO)[C@@]3(C)C[C@H](O)[C@@]12F,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1473,FLUTICASONE PROPIONATE,CCC(=O)O[C@]1(C(=O)SCF)[C@H](C)C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1497,BETAMETHASONE VALERATE,CCCCC(=O)O[C@]1(C(=O)CO)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1501,FLUOCINONIDE,CC(=O)OCC(=O)[C@@]12OC(C)(C)O[C@@H]1C[C@H]1[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]12C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1504,TRIAMCINOLONE ACETONIDE,CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@@]4(F)[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1512,FLUNISOLIDE,CC1(C)O[C@@H]2C[C@H]3[C@@H]4C[C@H](F)C5=CC(=O)C=C[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1650,CORTISONE ACETATE,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3C(=O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1676,FLUTICASONE FUROATE,C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(OC(=O)c1ccco1)C(=O)SCF,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1683,HYDROCORTISONE BUTYRATE,CCCC(=O)O[C@]1(C(=O)CO)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1766,DESOXIMETASONE,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@H]1C(=O)CO,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1873475,IBRUTINIB,C=CC(=O)N1CCC[C@@H](n2nc(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2021430,DEXAMETHASONE SODIUM PHOSPHATE,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)COP(=O)([O-])[O-].[Na+].[Na+],6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3707311,VAMOROLONE,,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3936761,ZANUBRUTINIB,C=CC(=O)N1CCC([C@@H]2CCNc3c(C(N)=O)c(-c4ccc(Oc5ccccc5)cc4)nn32)CC1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4594293,ACALABRUTINIB MALEATE,CC#CC(=O)N1CCC[C@H]1c1nc(-c2ccc(C(=O)Nc3ccccn3)cc2)c2c(N)nccn12.O=C(O)/C=C\C(=O)O,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4650485,PIRTOBRUTINIB,COc1ccc(F)cc1C(=O)NCc1ccc(-c2nn([C@@H](C)C(F)(F)F)c(N)c2C(N)=O)cc1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL5314649,RITLECITINIB TOSYLATE,C=CC(=O)N1C[C@H](Nc2ncnc3[nH]ccc23)CC[C@@H]1C.Cc1ccc(S(=O)(=O)O)cc1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL632,BETAMETHASONE,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)CO,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL989,FLUOCINOLONE ACETONIDE,CC1(C)O[C@@H]2C[C@H]3[C@@H]4C[C@H](F)C5=CC(=O)C=C[C@]5(C)[C@@]4(F)[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1,6.0,1,0,4.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1649931,PF-232798,CC(=O)N[C@@H](CCN1[C@@H]2CC[C@H]1C[C@@H](n1c(C)nc3c1CCN(C(=O)C(C)C)C3)C2)c1cccc(F)c1,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL1688243,INCB-9471,CCO[C@@H]1Cc2cc(C(F)(F)F)ccc2[C@H]1N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)C[C@@H]1C,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL1743044,NAMILUMAB,,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL1951914,AZD5672,CCN(C(=O)Cc1ccc(S(C)(=O)=O)cc1)C1CCN(CC[C@@H](c2cc(F)cc(F)c2)C2CCN(S(C)(=O)=O)CC2)CC1,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL2107384,VICRIVIROC MALEATE,COC[C@@H](c1ccc(C(F)(F)F)cc1)N1CCN(C2(C)CCN(C(=O)c3c(C)ncnc3C)CC2)C[C@@H]1C.O=C(O)/C=C\C(=O)O,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL2109047,INTERFERON ALFA-N3,,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL2109430,GIMSILUMAB,,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL2109458,AMG-108,,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL2109607,MEDI-8968,,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL3545259,VANUCIZUMAB,,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL3990000,TIBULIZUMAB,,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL4297926,CJM-112,,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL4594419,BMS-813160,CC(=O)N[C@@H]1C[C@H](NC(C)(C)C)CC[C@@H]1N1CC[C@H](Nc2ncnc3cc(C(C)(C)C)nn23)C1=O,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL4650518,PLONMARLIMAB,,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL5095029,PF-04634817,CO[C@@H]1COCC[C@@H]1N[C@@H]1CC[C@@](C(=O)N2C[C@@H]3C[C@H]2CN3c2cc(C(F)(F)F)ncn2)(C(C)C)C1,6.0,0,2,2.0,0,pathway_drug_candidates
+CHEMBL1046,AMINOCAPROIC ACID,NCCCCCC(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1165,MOEXIPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1Cc2cc(OC)c(OC)cc2C[C@H]1C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1168,RAMIPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1[C@H](C(=O)O)C[C@@H]2CCC[C@@H]21,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200343,PERINDOPRIL ERBUMINE,CC(C)(C)N.CCC[C@H](N[C@@H](C)C(=O)N1[C@H](C(=O)O)C[C@@H]2CCCC[C@@H]21)C(=O)OCC,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200534,MOEXIPRIL HYDROCHLORIDE,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1Cc2cc(OC)c(OC)cc2C[C@H]1C(=O)O.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200659,ENALAPRIL MALEATE,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1CCC[C@H]1C(=O)O.O=C(O)/C=C\C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200794,OXYMORPHONE HYDROCHLORIDE,CN1CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@@]3(O)[C@H]1C5.Cl,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1200825,METHADONE HYDROCHLORIDE,CCC(=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200890,OXYCODONE HYDROCHLORIDE,COc1ccc2c3c1O[C@H]1C(=O)CC[C@@]4(O)[C@@H](C2)N(C)CC[C@]314.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201011,QUINAPRIL HYDROCHLORIDE,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1Cc2ccccc2C[C@H]1C(=O)O.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201099,CODEINE PHOSPHATE,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1201132,NALBUPHINE HYDROCHLORIDE,Cl.Oc1ccc2c3c1O[C@H]1[C@@H](O)CC[C@@]4(O)[C@@H](C2)N(CC2CCC2)CC[C@]314,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1201149,NALTREXONE HYDROCHLORIDE,Cl.O=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1201163,SUFENTANIL CITRATE,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCc2cccs2)CC1.O=C(O)CC(O)(CC(=O)O)C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201619,APROTININ,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1201748,CABAZITAXEL,CO[C@H]1C(=O)[C@]2(C)[C@@H](OC)C[C@H]3OC[C@@]3(OC(C)=O)[C@H]2[C@H](OC(=O)c2ccccc2)[C@]2(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)c3ccccc3)C(C)=C1C2(C)C,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201752,IXABEPILONE,C/C(=C\c1csc(C)n1)[C@@H]1C[C@@H]2O[C@]2(C)CCC[C@H](C)[C@H](O)[C@@H](C)C(=O)C(C)(C)[C@@H](O)CC(=O)N1,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201770,METHYLNALTREXONE BROMIDE,C[N+]1(CC2CC2)CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@@]3(O)[C@H]1C5.[Br-],6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1201776,TAPENTADOL,CC[C@@H](c1cccc(O)c1)[C@@H](C)CN(C)C,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1201777,TAPENTADOL HYDROCHLORIDE,CC[C@@H](c1cccc(O)c1)[C@@H](C)CN(C)C.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1213351,PROPOXYPHENE,CCC(=O)O[C@](Cc1ccccc1)(c1ccccc1)[C@H](C)CN(C)C,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1237044,TRAMADOL,COc1cccc(C2(O)CCCCC2CN(C)C)c1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1237055,HYDROMORPHONE HYDROCHLORIDE,CN1CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@H]3[C@H]1C5.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1237065,TRAMADOL HYDROCHLORIDE,COc1cccc(C2(O)CCCCC2CN(C)C)c1.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1237104,PROPOXYPHENE HYDROCHLORIDE,CCC(=O)O[C@](Cc1ccccc1)(c1ccccc1)[C@H](C)CN(C)C.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1457,HYDROCODONE,COc1ccc2c3c1O[C@H]1C(=O)CC[C@H]4[C@@H](C2)N(C)CC[C@]314,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1514,LEVOMETHADYL ACETATE,CC[C@H](OC(C)=O)C(C[C@H](C)N(C)C)(c1ccccc1)c1ccccc1,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1519,TRANDOLAPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1[C@H](C(=O)O)C[C@H]2CCCC[C@@H]21,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1581,PERINDOPRIL,CCC[C@H](N[C@@H](C)C(=O)N1[C@H](C(=O)O)C[C@@H]2CCCC[C@@H]21)C(=O)OCC,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL159,VINBLASTINE,CC[C@]1(O)C[C@@H]2CN(CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C)[C@H]3[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1592,QUINAPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1Cc2ccccc2C[C@H]1C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1595,DIHYDROCODEINE,COc1ccc2c3c1O[C@H]1[C@@H](O)CC[C@H]4[C@@H](C2)N(C)CC[C@@]341,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1683544,ERIBULIN MESYLATE,C=C1C[C@@H]2CC[C@@]34C[C@H]5O[C@H]6[C@@H](O3)[C@H]3O[C@H](CC[C@@H]3O[C@H]6[C@H]5O4)CC(=O)C[C@@H]3[C@@H](OC)[C@@H](C[C@H](O)CN)O[C@H]3C[C@H]3O[C@@H](CC[C@@H]1O2)C[C@@H](C)C3=C.CS(=O)(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1683590,ERIBULIN,C=C1C[C@@H]2CC[C@@]34C[C@H]5O[C@H]6[C@@H](O3)[C@H]3O[C@H](CC[C@@H]3O[C@H]6[C@H]5O4)CC(=O)C[C@@H]3[C@@H](OC)[C@@H](C[C@H](O)CN)O[C@H]3C[C@H]3O[C@@H](CC[C@@H]1O2)C[C@@H](C)C3=C,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1685,DEZOCINE,C[C@@]12CCCCC[C@@H](Cc3ccc(O)cc31)[C@@H]2N,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1694,BENAZEPRIL HYDROCHLORIDE,CCOC(=O)[C@H](CCc1ccccc1)N[C@H]1CCc2ccccc2N(CC(=O)O)C1=O.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1701,MEPERIDINE HYDROCHLORIDE,CCOC(=O)C1(c2ccccc2)CCN(C)CC1.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1707,LOPERAMIDE HYDROCHLORIDE,CN(C)C(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1718,NALOXONE HYDROCHLORIDE,C=CCN1CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@@]3(O)[C@H]1C5.Cl,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1742994,BRENTUXIMAB VEDOTIN,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1743082,TRASTUZUMAB EMTANSINE,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL19019,NALTREXONE,O=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL2062266,DIHYDROCODEINE BITARTRATE,COc1ccc2c3c1O[C@H]1[C@@H](O)CC[C@H]4[C@@H](C2)N(C)CC[C@@]341.O=C(O)C(O)C(O)C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2103744,MORPHINE SULFATE,CN1CC[C@]23c4c5ccc(O)c4O[C@H]2[C@@H](O)C=C[C@H]3[C@H]1C5.CN1CC[C@]23c4c5ccc(O)c4O[C@H]2[C@@H](O)C=C[C@H]3[C@H]1C5.O.O.O.O.O.O=S(=O)(O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2105749,SAMIDORPHAN L-MALATE,NC(=O)c1ccc2c(c1O)[C@]13CCN(CC4CC4)[C@H](C2)[C@]1(O)CCC(=O)C3.O=C(O)C[C@H](O)C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL2105755,NALDEMEDINE,CC(C)(NC(=O)C1=C(O)[C@@H]2Oc3c(O)ccc4c3[C@@]23CCN(CC2CC2)[C@H](C4)[C@]3(O)C1)c1nc(-c2ccccc2)no1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL2108147,STREPTOKINASE,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL2108250,ANISTREPLASE,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL2159122,ELUXADOLINE,COc1ccc(CN(C(=O)[C@@H](N)Cc2c(C)cc(C(N)=O)cc2C)[C@@H](C)c2ncc(-c3ccccc3)[nH]2)cc1C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2219416,NALOXEGOL OXALATE,C=CCN1CC[C@]23c4c5ccc(O)c4O[C@H]2[C@@H](OCCOCCOCCOCCOCCOCCOCCOC)CC[C@@]3(O)[C@H]1C5.O=C(O)C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL2219418,NALOXEGOL,C=CCN1CC[C@]23c4c5ccc(O)c4O[C@H]2[C@@H](OCCOCCOCCOCCOCCOCCOCCOC)CC[C@@]3(O)[C@H]1C5,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL2368861,BUPRENORPHINE HYDROCHLORIDE,CO[C@@]12CC[C@@]3(C[C@@H]1[C@](C)(O)C(C)(C)C)[C@H]1Cc4ccc(O)c5c4[C@@]3(CCN1CC1CC1)[C@H]2O5.Cl,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2443262,OLICERIDINE,COc1ccsc1CNCC[C@@]1(c2ccccn2)CCOC2(CCCC2)C1,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL270190,ALVIMOPAN,C[C@H]1CN(C[C@H](Cc2ccccc2)C(=O)NCC(=O)O)CC[C@@]1(C)c1cccc(O)c1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL299400,BUTORPHANOL TARTRATE,O=C(O)C(O)C(O)C(=O)O.Oc1ccc2c(c1)[C@@]13CCCC[C@@]1(O)[C@@H](C2)N(CC1CCC1)CC3,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL3039508,NALDEMEDINE TOSYLATE,CC(C)(NC(=O)C1=C(O)[C@@H]2Oc3c(O)ccc4c3[C@@]23CCN(CC2CC2)[C@H](C4)[C@]3(O)C1)c1nc(-c2ccccc2)no1.Cc1ccc(S(=O)(=O)O)cc1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL3039596,FOSINOPRIL SODIUM,CCC(=O)O[C@@H](O[P@](=O)(CCCCc1ccccc1)CC(=O)N1C[C@H](C2CCCCC2)C[C@H]1C(=O)[O-])C(C)C.[Na+],6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3039598,FOSINOPRIL,CCC(=O)O[C@@H](O[P@](=O)(CCCCc1ccccc1)CC(=O)N1C[C@H](C2CCCCC2)C[C@H]1C(=O)O)C(C)C,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL3137310,BENZHYDROCODONE HYDROCHLORIDE,COc1ccc2c3c1O[C@H]1C(OC(=O)c4ccccc4)=CC[C@@H]4[C@@H](C2)N(C)CC[C@@]341.Cl,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL314437,MEPTAZINOL,CCC1(c2cccc(O)c2)CCCCN(C)C1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL317094,IMIDAPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1C(=O)N(C)C[C@H]1C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3301582,POLATUZUMAB VEDOTIN,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL3301589,ENFORTUMAB VEDOTIN,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL33986,BUTORPHANOL,Oc1ccc2c(c1)[C@@]13CCCC[C@@]1(O)[C@@H](C2)N(CC1CCC1)CC3,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL3544986,PERINDOPRIL ARGININE,CCC[C@H](N[C@@H](C)C(=O)N1[C@H](C(=O)O)C[C@@H]2CCCC[C@@H]21)C(=O)OCC.N=C(N)NCCC[C@H](N)C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3545132,MIRVETUXIMAB SORAVTANSINE,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL3545252,DOCETAXEL,CC(=O)O[C@@]12CO[C@@H]1C[C@H](O)[C@@]1(C)C(=O)[C@H](O)C3=C(C)[C@@H](OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)c4ccccc4)C[C@@](O)([C@@H](OC(=O)c4ccccc4)[C@H]21)C3(C)C.O.O.O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3707226,DEFIBROTIDE SODIUM,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL378544,VINBLASTINE SULFATE,CC[C@]1(O)C[C@@H]2CN(CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C)[C@H]3[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1.O=S(=O)(O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3833389,DEXTROMORAMIDE,C[C@@H](CC(C(=O)N1CCCC1)(c1ccccc1)c1ccccc1)N1CCOCC1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL398707,HYDROMORPHONE,CN1CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@H]3[C@H]1C5,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL3989677,HYDROCODONE BITARTRATE,COc1ccc2c3c1O[C@H]1C(=O)CC[C@H]4[C@@H](C2)N(C)CC[C@]314.O.O.O=C(O)C(O)C(O)C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL3989716,PROPOXYPHENE NAPSYLATE,CCC(=O)O[C@](Cc1ccccc1)(c1ccccc1)[C@H](C)CN(C)C.O.O=S(=O)(O)c1ccc2ccccc2c1,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3989740,DOXYCYCLINE HYCLATE,CCO.C[C@H]1c2cccc(O)c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@@H]21.C[C@H]1c2cccc(O)c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@@H]21.Cl.Cl.O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3989826,OXYCODONE TEREPHTHALATE,COc1ccc2c3c1O[C@H]1C(=O)CC[C@@]4(O)[C@@H](C2)N(C)CC[C@]314.COc1ccc2c3c1O[C@H]1C(=O)CC[C@@]4(O)[C@@H](C2)N(C)CC[C@]314.O=C(O)c1ccc(C(=O)O)cc1,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL419213,LISINOPRIL,NCCCC[C@H](N[C@@H](CCc1ccccc1)C(=O)O)C(=O)N1CCC[C@H]1C(=O)O.O.O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL428647,PACLITAXEL,CC(=O)O[C@H]1C(=O)[C@@]2(C)[C@H]([C@H](OC(=O)c3ccccc3)[C@]3(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)c4ccccc4)c4ccccc4)C(C)=C1C3(C)C)[C@]1(OC(C)=O)CO[C@@H]1C[C@@H]2O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4297091,CODEINE SULFATE,COc1ccc2c3c1O[C@H]1[C@@H](O)C=C[C@H]4[C@@H](C2)N(C)CC[C@@]341.COc1ccc2c3c1O[C@H]1[C@@H](O)C=C[C@H]4[C@@H](C2)N(C)CC[C@@]341.O.O.O.O=S(=O)(O)O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL4297841,TISOTUMAB VEDOTIN,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL4298209,BELANTAMAB MAFODOTIN,,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL431,SPIRAPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1CC2(C[C@H]1C(=O)O)SCCS2,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL485,CODEINE,COc1ccc2c3c1O[C@H]1[C@@H](O)C=C[C@H]4[C@@H](C2)N(C)CC[C@@]341,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL511142,BUPRENORPHINE,CO[C@@]12CC[C@@]3(C[C@@H]1[C@](C)(O)C(C)(C)C)[C@H]1Cc4ccc(O)c5c4[C@@]3(CCN1CC1CC1)[C@H]2O5,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL515606,CILAZAPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@H]1CCCN2CCC[C@@H](C(=O)O)N2C1=O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL5315055,NALMEFENE HYDROCHLORIDE DIHYDRATE,C=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5.Cl.O.O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL5315056,NALOXONE HYDROCHLORIDE DIHYDRATE,C=CCN1CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@@]3(O)[C@H]1C5.Cl.O.O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL553025,VINORELBINE,CCC1=C[C@@H]2CN(C1)Cc1c([nH]c3ccccc13)[C@@](C(=O)OC)(c1cc3c(cc1OC)N(C)[C@H]1[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]4(CC)C=CCN5CC[C@]31[C@@H]54)C2,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL607,MEPERIDINE,CCOC(=O)C1(c2ccccc2)CCN(C)CC1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL651,METHADONE,CCC(=O)C(CC(C)N(C)C)(c1ccccc1)c1ccccc1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL656,OXYCODONE,COc1ccc2c3c1O[C@H]1C(=O)CC[C@@]4(O)[C@@H](C2)N(C)CC[C@]314,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL688,FENTANYL CITRATE,CCC(=O)N(c1ccccc1)C1CCN(CCc2ccccc2)CC1.O=C(O)CC(O)(CC(=O)O)C(=O)O,6.0,0,1,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL70,MORPHINE,CN1CC[C@]23c4c5ccc(O)c4O[C@H]2[C@@H](O)C=C[C@H]3[C@H]1C5,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL80,NALOXONE,C=CCN1CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@@]3(O)[C@H]1C5,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL838,BENAZEPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@H]1CCc2ccccc2N(CC(=O)O)C1=O,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL895,NALBUPHINE,Oc1ccc2c3c1O[C@H]1[C@@H](O)CC[C@@]4(O)[C@@H](C2)N(CC2CCC2)CC[C@]314,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL90555,VINCRISTINE,CC[C@]1(O)C[C@H]2CN(CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C=O)[C@H]3[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL963,OXYMORPHONE,CN1CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@@]3(O)[C@H]1C5,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL982,NALMEFENE,C=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,6.0,0,1,4.0,0,pathway_drug_candidates
+CHEMBL1000,CETIRIZINE,O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL1269025,EDOXABAN,CN1CCc2nc(C(=O)N[C@@H]3C[C@@H](C(=O)N(C)C)CC[C@@H]3NC(=O)C(=O)Nc3ccc(Cl)cn3)sc2C1,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL1487,ATORVASTATIN,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CC[C@@H](O)C[C@@H](O)CC(=O)O,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL1496,ROSUVASTATIN,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1/C=C/[C@@H](O)C[C@@H](O)CC(=O)O,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL1535,HYDROXYCHLOROQUINE,CCN(CCO)CCCC(C)Nc1ccnc2cc(Cl)ccc12,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL1771,CLOPIDOGREL,COC(=O)[C@H](c1ccccc1Cl)N1CCc2sccc2C1,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL191,LOSARTAN,CCCCc1nc(Cl)c(CO)n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL192,SILDENAFIL,CCCc1nn(C)c2c(=O)[nH]c(-c3cc(S(=O)(=O)N4CCN(C)CC4)ccc3OCC)nc12,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL516,CYPROHEPTADINE,CN1CCC(=C2c3ccccc3C=Cc3ccccc32)CC1,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL534,KETOTIFEN,CN1CCC(=C2c3ccccc3CC(=O)c3sccc32)CC1,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL660,AMANTADINE,NC12CC3CC(CC(C3)C1)C2,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL787,MONTELUKAST,CC(C)(O)c1ccccc1CC[C@@H](SCC1(CC(=O)O)CC1)c1cccc(/C=C/c2ccc3ccc(Cl)cc3n2)c1,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL813,EPROSARTAN,CCCCc1ncc(/C=C(\Cc2cccs2)C(=O)O)n1Cc1ccc(C(=O)O)cc1,5.5,0,0,4.0,1,known_drugs;pathway_drug_candidates
+CHEMBL1201207,BETAMETHASONE PHOSPHORIC ACID,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)COP(=O)(O)O,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1201231,PREDNISOLONE PHOSPHORIC ACID,C[C@]12C=CC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COP(=O)(O)O,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1201302,DEXAMETHASONE PHOSPHORIC ACID,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)COP(=O)(O)O,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL139835,CYPROTERONE ACETATE,CC(=O)O[C@]1(C(C)=O)CC[C@H]2[C@@H]3C=C(Cl)C4=CC(=O)[C@@H]5C[C@@H]5[C@]4(C)[C@H]3CC[C@@]21C,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1530428,DEXAMETHASONE ACETATE,CC(=O)OCC(=O)[C@@]1(O)[C@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2103876,MAPRACORAT,Cc1ccc2c(NC[C@](O)(CC(C)(C)c3cc(F)cc4c3OCC4)C(F)(F)F)cccc2n1,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3702854,RILZABRUTINIB,CC(C)(/C=C(\C#N)C(=O)N1CCC[C@@H](n2nc(-c3ccc(Oc4ccccc4)cc3F)c3c(N)ncnc32)C1)N1CCN(C2COC2)CC1,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4065122,FENEBRUTINIB,C[C@H]1CN(C2COC2)CCN1c1ccc(Nc2cc(-c3ccnc(N4CCn5c(cc6c5CC(C)(C)C6)C4=O)c3CO)cn(C)c2=O)nc1,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4068611,RELACORILANT,Cn1cc(S(=O)(=O)N2CCC3=Cc4c(cnn4-c4ccc(F)cc4)C[C@]3(C(=O)c3cc(C(F)(F)F)ccn3)C2)cn1,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4072833,EVOBRUTINIB,C=CC(=O)N1CCC(CNc2ncnc(N)c2-c2ccc(Oc3ccccc3)cc2)CC1,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4085457,RITLECITINIB,C=CC(=O)N1C[C@H](Nc2ncnc3[nH]ccc23)CC[C@@H]1C,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4297865,ABIVERTINIB,C=CC(=O)Nc1cccc(Oc2nc(Nc3ccc(N4CCN(C)CC4)c(F)c3)nc3[nH]ccc23)c1,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4297866,ABIVERTINIB MALEATE,C=CC(=O)Nc1cccc(Oc2nc(Nc3ccc(N4CCN(C)CC4)c(F)c3)nc3[nH]ccc23)c1.O.O.O=C(O)/C=C\C(=O)O,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4650321,ORELABRUTINIB,C=CC(=O)N1CCC(c2ccc(C(N)=O)c(-c3ccc(Oc4ccccc4)cc3)n2)CC1,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4650323,TOLEBRUTINIB,C=CC(=O)N1CCC[C@@H](n2c(=O)n(-c3ccc(Oc4ccccc4)cc3)c3c(N)nccc32)C1,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL977,HYDROCORTISONE HEMISUCCINATE ANHYDROUS,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COC(=O)CCC(=O)O,5.0,1,0,3.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2109341,CCR5MAB004,,5.0,0,2,1.0,0,pathway_drug_candidates
+CHEMBL2109342,HGS-1025,,5.0,0,2,1.0,0,pathway_drug_candidates
+CHEMBL2109470,PERAKIZUMAB,,5.0,0,2,1.0,0,pathway_drug_candidates
+CHEMBL1005,REMIFENTANIL,CCC(=O)N(c1ccccc1)C1(C(=O)OC)CCN(CCC(=O)OC)CC1,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL1096380,PLINABULIN,CC(C)(C)c1[nH]cnc1/C=c1\[nH]c(=O)/c(=C/c2ccccc2)[nH]c1=O,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL1186579,METHYLNALTREXONE,C[N+]1(CC2CC2)CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@@]3(O)[C@H]1C5,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL1201159,FENTANYL HYDROCHLORIDE,CCC(=O)N(c1ccccc1)C1CCN(CCc2ccccc2)CC1.Cl,5.0,0,1,3.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1206232,FOSBRETABULIN,COc1ccc(/C=C\c2cc(OC)c(OC)c(OC)c2)cc1OP(=O)(O)O,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL1237,LISINOPRIL ANHYDROUS,NCCCC[C@H](N[C@@H](CCc1ccccc1)C(=O)O)C(=O)N1CCC[C@H]1C(=O)O,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL2108628,PACLITAXEL POLIGLUMEX,,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL2109084,DESMOTEPLASE,,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL2110725,VINFLUNINE,CC[C@]12C=CCN3CC[C@@]4(c5cc([C@@]6(C(=O)OC)C[C@@H]7C[C@@H](C(C)(F)F)CN(Cc8c6[nH]c6ccccc86)C7)c(OC)cc5N(C)[C@H]4[C@@](O)(C(=O)OC)[C@@H]1OC(C)=O)[C@@H]32,5.0,0,1,3.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2364605,CEBRANOPADOL,CN(C)[C@]1(c2ccccc2)CC[C@]2(CC1)OCCc1c3cc(F)ccc3[nH]c12,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL279785,MARIMASTAT,CNC(=O)[C@@H](NC(=O)[C@H](CC(C)C)[C@H](O)C(=O)NO)C(C)(C)C,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL3039511,BEVENOPRAN,COc1cc(CNCCC2CCOCC2)ccc1Oc1cnc(C(N)=O)cn1,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL3989406,ENALAPRILAT,C[C@H](N[C@@H](CCc1ccccc1)C(=O)O)C(=O)N1CCC[C@H]1C(=O)O.O.O,5.0,0,1,3.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3990032,TELISOTUZUMAB VEDOTIN,,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL4279455,LAROTAXEL,CC(=O)O[C@H]1C(=O)[C@]23C[C@H]2C[C@H]2OC[C@@]2(OC(C)=O)[C@H]3[C@H](OC(=O)c2ccccc2)[C@]2(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)c3ccccc3)C(C)=C1C2(C)C,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL4297441,PACLITAXEL DOCOSAHEXAENOIC ACID,CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCC(=O)O[C@@H](C(=O)O[C@H]1C[C@@]2(O)[C@@H](OC(=O)c3ccccc3)[C@@H]3[C@]4(OC(C)=O)CO[C@@H]4C[C@H](O)[C@@]3(C)C(=O)[C@H](OC(C)=O)C(=C1C)C2(C)C)[C@@H](NC(=O)c1ccccc1)c1ccccc1,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL4297632,OXYCODEGOL,COCCOCCOCCOCCOCCOCCO[C@H]1CCC2(O)[C@H]3Cc4ccc(OC)c5c4[C@@]2(CCN3C)[C@H]1O5,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL4298098,TUSAMITAMAB RAVTANSINE,,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL459324,DIACETYLMORPHINE,CC(=O)Oc1ccc2c3c1O[C@H]1[C@@H](OC(C)=O)C=C[C@H]4[C@@H](C2)N(C)CC[C@@]341,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL501867,VINCRISTINE SULFATE,CC[C@]1(O)C[C@H]2CN(CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C=O)[C@H]3[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1.O=S(=O)(O)O,5.0,0,1,3.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL538943,VINORELBINE TARTRATE,CCC1=C[C@@H]2CN(C1)Cc1c([nH]c3ccccc13)[C@@](C(=O)OC)(c1cc3c(cc1OC)N(C)[C@H]1[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]4(CC)C=CCN5CC[C@]31[C@@H]54)C2.O=C(O)C(O)C(O)C(=O)O.O=C(O)C(O)C(O)C(=O)O,5.0,0,1,3.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL572284,OMBRABULIN,COc1ccc(/C=C\c2cc(OC)c(OC)c(OC)c2)cc1NC(=O)[C@@H](N)CO,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL577,ENALAPRILAT ANHYDROUS,C[C@H](N[C@@H](CCc1ccccc1)C(=O)O)C(=O)N1CCC[C@H]1C(=O)O,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL589583,DELAPRIL,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N(CC(=O)O)C1Cc2ccccc2C1,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL658,SUFENTANIL,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCc2cccs2)CC1,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL841,LOPERAMIDE,CN(C)C(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL92,DOCETAXEL ANHYDROUS,CC(=O)O[C@@]12CO[C@@H]1C[C@H](O)[C@@]1(C)C(=O)[C@H](O)C3=C(C)[C@@H](OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)c4ccccc4)C[C@@](O)([C@@H](OC(=O)c4ccccc4)[C@H]21)C3(C)C,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL94657,PATUPILONE,C/C(=C\c1csc(C)n1)[C@@H]1C[C@@H]2O[C@]2(C)CCC[C@H](C)[C@H](O)[C@@H](C)C(=O)C(C)(C)[C@@H](O)CC(=O)O1,5.0,0,1,3.0,0,pathway_drug_candidates
+CHEMBL1201772,PRASUGREL,CC(=O)Oc1cc2c(s1)CCN(C(C(=O)C1CC1)c1ccccc1F)C2,4.5,0,0,3.0,1,known_drugs;pathway_drug_candidates
+CHEMBL502835,NINTEDANIB,COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1,4.5,0,0,3.0,1,known_drugs;pathway_drug_candidates
+CHEMBL941,IMATINIB,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,4.5,0,0,3.0,1,known_drugs;pathway_drug_candidates
+CHEMBL1201148,MEPREDNISONE,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3C(=O)C[C@]2(C)[C@@]1(O)C(=O)CO,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1549,HYDROCORTISONE CYPIONATE,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COC(=O)CCC1CCCC1,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2105842,CORTIVAZOL,CC(=O)OCC(=O)[C@@]1(O)[C@H](C)C[C@H]2[C@@H]3C=C(C)C4=Cc5c(cnn5-c5ccccc5)C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3137316,FOSDAGROCORAT,Cc1ncccc1NC(=O)c1ccc2c(c1)CC[C@@H]1C[C@@](OP(=O)(O)O)(C(F)(F)F)CC[C@@]21Cc1ccccc1,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3301600,SPEBRUTINIB BESYLATE,C=CC(=O)Nc1cccc(Nc2nc(Nc3ccc(OCCOC)cc3)ncc2F)c1.O=S(=O)(O)c1ccccc1,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3301625,SPEBRUTINIB,C=CC(=O)Nc1cccc(Nc2nc(Nc3ccc(OCCOC)cc3)ncc2F)c1,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3545391,ORG-34517,CC#C[C@]1(O)CCC2C3CCC4=CC(=O)CCC4=C3[C@@H](c3ccc4c(c3)OCO4)C[C@@]21C,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3666807,VELSECORAT,C[C@H](NC(=O)C(C)(F)F)[C@H](Oc1ccc2c(cnn2-c2cccc(C(=O)N[C@@H]3CCOC3)c2)c1)c1ccc2c(c1)OCCO2,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL3900554,BMS-986142,Cc1c(-c2c(F)cc(C(N)=O)c3[nH]c4c(c23)CC[C@H](C(C)(C)O)C4)cccc1-n1c(=O)c2cccc(F)c2n(C)c1=O,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4071161,TIRABRUTINIB,CC#CC(=O)N1CC[C@@H](n2c(=O)n(-c3ccc(Oc4ccccc4)cc3)c3c(N)ncnc32)C1,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4072756,AZD-5423,COc1cccc([C@@H](Oc2ccc3c(cnn3-c3ccc(F)cc3)c2)[C@H](C)NC(=O)C(F)(F)F)c1,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4163691,POSELTINIB,C=CC(=O)Nc1cccc(Oc2nc(Nc3ccc(N4CCN(C)CC4)cc3)nc3ccoc23)c1,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4594348,ELSUBRUTINIB,C=CC(=O)N1CCC[C@@H](c2ccc(C(N)=O)c3[nH]ccc23)C1,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4650338,EDRALBRUTINIB,CC#CC(=O)N1CC[C@@H](n2cc(-c3ccc(Oc4c(F)cccc4F)cc3)c3c(N)n[nH]c(=O)c32)C1,4.0,1,0,2.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL1089636,ANG1005,CC(=O)O[C@H]1C(=O)[C@@]2(C)[C@H]([C@H](OC(=O)c3ccccc3)[C@]3(O)C[C@H](OC(=O)[C@H](OC(=O)CCC(=O)NCCCC[C@H](NC(=O)CNC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@H](CO)NC(=O)CNC(=O)CNC(=O)[C@H](Cc4ccc(O)cc4)NC(=O)[C@H](Cc4ccccc4)NC(=O)[C@H](Cc4ccccc4)NC(=O)[C@@H](NC(=O)CCC(=O)O[C@@H](C(=O)O[C@H]4C[C@@]5(O)[C@@H](OC(=O)c6ccccc6)[C@@H]6[C@]7(OC(C)=O)CO[C@@H]7C[C@H](O)[C@@]6(C)C(=O)[C@H](OC(C)=O)C(=C4C)C5(C)C)[C@@H](NC(=O)c4ccccc4)c4ccccc4)C(C)O)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@@H](CC(N)=O)C(=O)N[C@@H](Cc4ccccc4)C(=O)N[C@@H](CCCCNC(=O)CCC(=O)O[C@@H](C(=O)O[C@H]4C[C@@]5(O)[C@@H](OC(=O)c6ccccc6)[C@@H]6[C@]7(OC(C)=O)CO[C@@H]7C[C@H](O)[C@@]6(C)C(=O)[C@H](OC(C)=O)C(=C4C)C5(C)C)[C@@H](NC(=O)c4ccccc4)c4ccccc4)C(=O)N[C@H](C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](Cc4ccc(O)cc4)C(=O)O)[C@@H](C)O)[C@@H](NC(=O)c4ccccc4)c4ccccc4)C(C)=C1C3(C)C)[C@]1(OC(C)=O)CO[C@@H]1C[C@@H]2O,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL1200665,DIPHENOXYLATE HYDROCHLORIDE,CCOC(=O)C1(c2ccccc2)CCN(CCC(C#N)(c2ccccc2)c2ccccc2)CC1.Cl,4.0,0,1,2.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201294,DIPHENOXYLATE,CCOC(=O)C1(c2ccccc2)CCN(CCC(C#N)(c2ccccc2)c2ccccc2)CC1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL1743028,GLEMBATUMUMAB VEDOTIN,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL1743037,LORVOTUZUMAB MERTANSINE,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL20684,ABT-751,COc1ccc(S(=O)(=O)Nc2cccnc2Nc2ccc(O)cc2)cc1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL2103826,DAVUNETIDE,CC[C@H](C)[C@H](NC(=O)[C@H](CO)NC(=O)[C@@H](NC(=O)[C@@H]1CCCN1C(=O)[C@H](C)NC(=O)[C@@H](N)CC(N)=O)C(C)C)C(=O)N1CCC[C@H]1C(=O)N[C@@H](CCC(N)=O)C(=O)O,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL2103829,FAXELADOL,CN(C)C[C@@H]1CCCC[C@H]1c1cccc(O)c1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL2103878,ODELEPRAN,NC(=O)c1ccc(Oc2ccc(CNCCC3CCOCC3)cc2F)nc1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL2105643,FOSBRETABULIN TROMETHAMINE,COc1ccc(/C=C\c2cc(OC)c(OC)c(OC)c2)cc1OP(=O)(O)O.NC(CO)(CO)CO,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL2107759,MILATAXEL,CCC(=O)O[C@H]1C[C@H]2OC[C@@]2(OC(C)=O)C2[C@H](OC(=O)c3ccccc3)[C@]3(O)C[C@H](OC(=O)[C@H](O)[C@@H](CC(=O)OC(C)(C)C)c4ccco4)C(C)=C([C@@H](O)C(=O)[C@@]21C)C3(C)C,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL2178573,ILACIRNON,Cc1cnc(C(=O)c2ncnc3[nH]ccc23)c(NS(=O)(=O)c2ccc(Cl)c(C(F)(F)F)c2)c1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL2204263,JNJ-41443532,O=C(CNC(=O)c1cccc(C(F)(F)F)c1)NC1CN([C@H]2CC[C@@](O)(c3cncs3)CC2)C1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL2304041,SAGOPILONE,C=CC[C@H]1C(=O)C(C)(C)[C@@H](O)CC(=O)O[C@H](c2ccc3sc(C)nc3c2)C[C@@H]2O[C@]2(C)CCC[C@H](C)[C@@H]1O,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL2364619,METHYLSAMIDORPHAN,C[N@+]1(CC2CC2)CC[C@]23CC(=O)CC[C@@]2(O)[C@H]1Cc1ccc(C(N)=O)c(O)c13,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL289351,FOSBRETABULIN DISODIUM,COc1ccc(/C=C\c2cc(OC)c(OC)c(OC)c2)cc1OP(=O)([O-])[O-].[Na+].[Na+],4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL3137313,AXELOPRAN,NC(=O)c1cccc([C@H]2C[C@H]3CC[C@@H](C2)N3CCN(CC2CCCCC2)C(=O)[C@@H](O)CO)c1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL3187812,ILEPATRIL,CC(=O)S[C@H](C(=O)N[C@H]1Cc2ccccc2[C@H]2CCC[C@@H](C(=O)O)N2C1=O)C(C)C,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL3219616,CP-866087,CC[C@]1(c2cccc(NS(C)(=O)=O)c2)[C@@H]2CN(CC3(O)Cc4ccccc4C3)C[C@@H]21,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL3545221,AZD2423,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL3707228,PLOZALIZUMAB,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL39541,DOLASTATIN-10,CC[C@H](C)[C@@H]([C@@H](CC(=O)N1CCC[C@H]1[C@H](OC)[C@@H](C)C(=O)N[C@@H](Cc1ccccc1)c1nccs1)OC)N(C)C(=O)[C@@H](NC(=O)[C@H](C(C)C)N(C)C)C(C)C,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL3989512,SOBLIDOTIN,CC[C@H](C)[C@@H]([C@@H](CC(=O)N1CCC[C@H]1[C@H](OC)[C@@H](C)C(=O)NCCc1ccccc1)OC)N(C)C(=O)[C@@H](NC(=O)[C@H](C(C)C)N(C)C)C(C)C,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL3989680,AXOMADOL,COc1cccc(C2(O)CC(O)CCC2CN(C)C)c1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL426084,SAMIDORPHAN,NC(=O)c1ccc2c(c1O)[C@]13CCN(CC4CC4)[C@H](C2)[C@]1(O)CCC(=O)C3,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4297268,BMS-275183,COC(=O)O[C@@]12CO[C@@H]1C[C@H](O)[C@@]1(C)C(=O)[C@H](OC(C)=O)C3=C(C)[C@@H](OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)C(C)(C)C)C[C@@](O)([C@@H](OC(=O)c4ccccc4)[C@H]21)C3(C)C,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4297296,KOS-1584,C/C1=C/C[C@@H](/C(C)=C/c2csc(C)n2)OC(=O)C[C@H](O)C(C)(C)C(=O)[C@H](C)[C@@H](O)[C@@H](C)/C=C/C1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4297383,GSK-1521498,Fc1cc(-c2cccc(-c3nc[nH]n3)c2)cc(F)c1CNC1Cc2ccccc2C1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4297440,T-900607,COc1ccc(NS(=O)(=O)c2c(F)c(F)c(F)c(F)c2F)cc1NC(N)=O,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4297538,MK-0812,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4297636,PLOCABULIN,C/C=C\C[C@@H](C/C=C\NC(=O)[C@@H](NC(=O)/C=C\C=C/C(C)=C/[C@H](C)[C@@H]1CC=C(OC)C(=O)O1)C(C)(C)C)OC(N)=O,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4297736,PRALUZATAMAB RAVTANSINE,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4297892,ANVATABART OPADOTIN,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4297938,LIFASTUZUMAB VEDOTIN,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4298045,INDUSATUMAB VEDOTIN,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4298101,LADIRATUZUMAB VEDOTIN,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4457723,BMS-741672,CC(C)N(C)[C@@H]1CC[C@H](N2CC[C@H](Nc3ncnc4ccc(C(F)(F)F)cc34)C2=O)[C@H](NS(C)(=O)=O)C1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4594402,ORP-101,CO[C@]12CC[C@@]3(C[C@@H]1[C@](C)(O)C(C)(C)C)[C@H]1Cc4ccc(OCCOc5ccc6c7c5O[C@H]5[C@@]8(OC)CC[C@@]9(C[C@@H]8[C@](C)(O)C(C)(C)C)[C@@H](C6)N(CC6CC6)CC[C@]759)c5c4[C@@]3(CCN1CC1CC1)[C@H]2O5,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4594455,AGS-16C3F,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL4650501,PF-4136309,,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL492399,VERUBULIN,COc1ccc(N(C)c2nc(C)nc3ccccc23)cc1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL552212,LEXIBULIN,CCC[C@H](Nc1nc(-c2ccc(NC(=O)NCC)c(OC)c2)ncc1C)c1cccnc1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL76222,REBIMASTAT,CNC(=O)[C@@H](NC(=O)[C@H](CC(C)C)NC(=O)[C@@H](S)CCN1C(=O)N(C)C(C)(C)C1=O)C(C)(C)C,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL96172,EPOTHILONE D,C/C1=C/C[C@@H](/C(C)=C/c2csc(C)n2)OC(=O)C[C@H](O)C(C)(C)C(=O)[C@H](C)[C@@H](O)[C@@H](C)CCC1,4.0,0,1,2.0,0,pathway_drug_candidates
+CHEMBL1014,CANDESARTAN CILEXETIL,CCOc1nc2cccc(C(=O)OC(C)OC(=O)OC3CCCCC3)c2n1Cc1ccc(-c2ccccc2-c2nn[nH]n2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1076903,VARENICLINE,c1cnc2cc3c(cc2n1)[C@@H]1CNC[C@H]3C1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1083385,CLOPIDOGREL BISULFATE,COC(=O)[C@H](c1ccccc1Cl)N1CCc2sccc2C1.O=S(=O)(O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1094,FELBAMATE,NC(=O)OCC(COC(N)=O)c1ccccc1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1096,AMLEXANOX,CC(C)c1ccc2oc3nc(N)c(C(=O)O)cc3c(=O)c2c1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1097279,CANGRELOR TETRASODIUM,CSCCNc1nc(SCCC(F)(F)F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)([O-])OP(=O)([O-])C(Cl)(Cl)P(=O)([O-])[O-])[C@@H](O)[C@H]1O.[Na+].[Na+].[Na+].[Na+],4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1106,EPINASTINE,NC1=NCC2c3ccccc3Cc3ccccc3N12,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1131,ACITRETIN,COc1cc(C)c(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)c(C)c1C,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1144,PRAVASTATIN,CC[C@H](C)C(=O)O[C@H]1C[C@H](O)C=C2C=C[C@H](C)[C@H](CC[C@@H](O)C[C@@H](O)CC(=O)O)[C@H]21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1172,DESLORATADINE,Clc1ccc2c(c1)CCc1cccnc1C2=C1CCNCC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1189432,OLOPATADINE,CN(C)CC/C=C1/c2ccccc2COc2ccc(CC(=O)O)cc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1193,PHENIRAMINE,CN(C)CCC(c1ccccc1)c1ccccn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200323,LABETALOL HYDROCHLORIDE,CC(CCc1ccccc1)NCC(O)c1ccc(O)c(C(N)=O)c1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200329,TIZANIDINE HYDROCHLORIDE,Cl.Clc1ccc2nsnc2c1NC1=NCCN1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200335,TESTOSTERONE ENANTHATE,CCCCCCC(=O)O[C@H]1CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3CC[C@]12C,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200339,PHENYLEPHRINE HYDROCHLORIDE,CNC[C@H](O)c1cccc(O)c1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200395,ORPHENADRINE CITRATE,Cc1ccccc1C(OCCN(C)C)c1ccccc1.O=C(O)CC(O)(CC(=O)O)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200406,DIMENHYDRINATE,CN(C)CCOC(c1ccccc1)c1ccccc1.Cn1c(=O)c2[nH]c(Cl)nc2n(C)c1=O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200434,OXTRIPHYLLINE,C[N+](C)(C)CCO.Cn1c(=O)c2[n-]cnc2n(C)c1=O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200467,HYDROXYZINE PAMOATE,O=C(O)c1cc2ccccc2c(Cc2c(O)c(C(=O)O)cc3ccccc23)c1O.OCCOCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200485,SORAFENIB TOSYLATE,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200491,EPINASTINE HYDROCHLORIDE,Cl.NC1=NCC2c3ccccc3Cc3ccccc3N12,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200494,GUANFACINE HYDROCHLORIDE,Cl.N=C(N)NC(=O)Cc1c(Cl)cccc1Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200561,DOXAZOSIN MESYLATE,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC.CS(=O)(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200618,FEXOFENADINE HYDROCHLORIDE,CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200622,PARICALCITOL,C[C@H](/C=C/[C@H](C)C(C)(C)O)[C@H]1CC[C@H]2/C(=C/C=C3C[C@@H](O)C[C@H](O)C3)CCC[C@]12C,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200638,DEXBROMPHENIRAMINE MALEATE,CN(C)CC[C@@H](c1ccc(Br)cc1)c1ccccn1.O=C(O)/C=C\C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200644,FONDAPARINUX SODIUM,CO[C@H]1O[C@H](COS(=O)(=O)[O-])[C@@H](O[C@@H]2O[C@@H](C(=O)[O-])[C@@H](O[C@H]3O[C@H](COS(=O)(=O)[O-])[C@@H](O[C@@H]4O[C@H](C(=O)[O-])[C@@H](O[C@H]5O[C@H](COS(=O)(=O)[O-])[C@@H](O)[C@H](O)[C@H]5NS(=O)(=O)[O-])[C@H](O)[C@H]4O)[C@H](OS(=O)(=O)[O-])[C@H]3NS(=O)(=O)[O-])[C@H](O)[C@H]2OS(=O)(=O)[O-])[C@H](O)[C@H]1NS(=O)(=O)[O-].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+],4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200666,CALCIPOTRIENE,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)/C=C/[C@@H](O)C4CC4)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200681,MONTELUKAST SODIUM,CC(C)(O)c1ccccc1CC[C@@H](SCC1(CC(=O)[O-])CC1)c1cccc(/C=C/c2ccc3ccc(Cl)cc3n2)c1.[Na+],4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200692,OLMESARTAN MEDOXOMIL,CCCc1nc(C(C)(C)O)c(C(=O)OCc2oc(=O)oc2C)n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200750,PROMETHAZINE HYDROCHLORIDE,CC(CN1c2ccccc2Sc2ccccc21)N(C)C.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200787,PHENOXYBENZAMINE HYDROCHLORIDE,CC(COc1ccccc1)N(CCCl)Cc1ccccc1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200791,OXYMETAZOLINE HYDROCHLORIDE,Cc1cc(C(C)(C)C)c(O)c(C)c1CC1=NCCN1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200795,CLEMASTINE FUMARATE,CN1CCC[C@@H]1CCO[C@](C)(c1ccccc1)c1ccc(Cl)cc1.O=C(O)/C=C/C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200809,AZELASTINE HYDROCHLORIDE,CN1CCCC(n2nc(Cc3ccc(Cl)cc3)c3ccccc3c2=O)CC1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200810,DOXERCALCIFEROL,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)/C=C/[C@H](C)C(C)C)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200826,LITHIUM CARBONATE,O=C([O-])[O-].[Li+].[Li+],4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200873,PHENTOLAMINE MESYLATE,CS(=O)(=O)O.Cc1ccc(N(CC2=NCCN2)c2cccc(O)c2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200875,FLAVOXATE HYDROCHLORIDE,Cc1c(-c2ccccc2)oc2c(C(=O)OCCN3CCCCC3)cccc2c1=O.Cl,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200914,TAMSULOSIN HYDROCHLORIDE,CCOc1ccccc1OCCN[C@H](C)Cc1ccc(OC)c(S(N)(=O)=O)c1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200927,DEXCHLORPHENIRAMINE MALEATE,CN(C)CC[C@@H](c1ccc(Cl)cc1)c1ccccn1.O=C(O)/C=C\C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200959,METHDILAZINE,CN1CCC(CN2c3ccccc3Sc3ccccc32)C1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200961,BROMPHENIRAMINE MALEATE,CN(C)CCC(c1ccc(Br)cc1)c1ccccn1.O=C(O)/C=C\C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200974,CARBINOXAMINE MALEATE,CN(C)CCOC(c1ccc(Cl)cc1)c1ccccn1.O=C(O)/C=C\C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1200987,EPROSARTAN MESYLATE,CCCCc1ncc(/C=C(\Cc2cccs2)C(=O)O)n1Cc1ccc(C(=O)O)cc1.CS(=O)(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201006,PYRILAMINE MALEATE,COc1ccc(CN(CCN(C)C)c2ccccn2)cc1.O=C(O)/C=C\C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201023,ORPHENADRINE HYDROCHLORIDE,Cc1ccccc1C(OCCN(C)C)c1ccccc1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1201044,DAPIPRAZOLE HYDROCHLORIDE,Cc1ccccc1N1CCN(CCc2nnc3n2CCCC3)CC1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201101,TESTOSTERONE CYPIONATE,C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@]43C)[C@@H]1CC[C@@H]2OC(=O)CCC1CCCC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201167,CARVEDILOL PHOSPHATE,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12.O=P(O)(O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201190,LEVOCETIRIZINE DIHYDROCHLORIDE,Cl.Cl.O=C(O)COCCN1CCN([C@H](c2ccccc2)c2ccc(Cl)cc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201191,LEVOCETIRIZINE,O=C(O)COCCN1CCN([C@H](c2ccccc2)c2ccc(Cl)cc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201202,FONDAPARINUX,CO[C@H]1O[C@H](COS(=O)(=O)O)[C@@H](O[C@@H]2O[C@@H](C(=O)O)[C@@H](O[C@H]3O[C@H](COS(=O)(=O)O)[C@@H](O[C@@H]4O[C@H](C(=O)O)[C@@H](O[C@H]5O[C@H](COS(=O)(=O)O)[C@@H](O)[C@H](O)[C@H]5NS(=O)(=O)O)[C@H](O)[C@H]4O)[C@H](OS(=O)(=O)O)[C@H]3NS(=O)(=O)O)[C@H](O)[C@H]2OS(=O)(=O)O)[C@H](O)[C@H]1NS(=O)(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201212,MIDODRINE,COc1ccc(OC)c(C(O)CNC(=O)CN)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201216,DAPIPRAZOLE,Cc1ccccc1N1CCN(CCc2nnc3n2CCCC3)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201234,MEPHENTERMINE,CNC(C)(C)Cc1ccccc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201245,BROMODIPHENHYDRAMINE,CN(C)CCOC(c1ccccc1)c1ccc(Br)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201262,DIPIVEFRIN,CNCC(O)c1ccc(OC(=O)C(C)(C)C)c(OC(=O)C(C)(C)C)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201264,METHANTHELINE,CC[N+](C)(CC)CCOC(=O)C1c2ccccc2Oc2ccccc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201271,BUCLIZINE,CC(C)(C)c1ccc(CN2CCN(C(c3ccccc3)c3ccc(Cl)cc3)CC2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201287,DEXBROMPHENIRAMINE,CN(C)CC[C@@H](c1ccc(Br)cc1)c1ccccn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201293,ACAMPROSATE,CC(=O)NCCCS(=O)(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201319,METARAMINOL,C[C@H](N)[C@H](O)c1cccc(O)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201414,TINZAPARIN SODIUM,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201460,DALTEPARIN SODIUM,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201476,ENOXAPARIN SODIUM,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201534,DANAPAROID SODIUM,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201554,ANTITHROMBIN ALFA,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201556,BECAPLERMIN,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201657,HEPARIN SODIUM,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201733,PAZOPANIB HYDROCHLORIDE,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201740,NILOTINIB HYDROCHLORIDE MONOHYDRATE,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1.Cl.O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201747,ALCAFTADINE,CN1CCC(=C2c3ccccc3CCn3c(C=O)cnc32)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201753,PITAVASTATIN,O=C(O)C[C@H](O)C[C@H](O)/C=C/c1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201759,BEPOTASTINE BESYLATE,O=C(O)CCCN1CCC(O[C@@H](c2ccc(Cl)cc2)c2ccccn2)CC1.O=S(=O)(O)c1ccccc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1201773,PRASUGREL HYDROCHLORIDE,CC(=O)Oc1cc2c(s1)CCN(C(C(=O)C1CC1)c1ccccc1F)C2.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1215,PHENYLEPHRINE,CNC[C@H](O)c1cccc(O)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1224,ACRIVASTINE,Cc1ccc(/C(=C\CN2CCCC2)c2cccc(/C=C/C(=O)O)n2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1237061,PITAVASTATIN CALCIUM,O=C([O-])C[C@H](O)C[C@H](O)/C=C/c1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1.O=C([O-])C[C@H](O)C[C@H](O)/C=C/c1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1.[Ca+2],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1241,TRIPELENNAMINE,CN(C)CCN(Cc1ccccc1)c1ccccn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1256958,EPINEPHRINE BITARTRATE,CNC[C@H](O)c1ccc(O)c(O)c1.O=C(O)C(O)C(O)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1265,ADAPALENE,COc1ccc(-c2ccc3cc(C(=O)O)ccc3c2)cc1C12CC3CC(CC(C3)C1)C2,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1266,TETRAHYDROZOLINE,c1ccc2c(c1)CCCC2C1=NCCN1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL12713,SERTINDOLE,O=C1NCCN1CCN1CCC(c2cn(-c3ccc(F)cc3)c3ccc(Cl)cc23)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1274,NILUTAMIDE,CC1(C)NC(=O)N(c2ccc([N+](=O)[O-])c(C(F)(F)F)c2)C1=O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1282,IMIQUIMOD,CC(C)Cn1cnc2c(N)nc3ccccc3c21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1311,ISOSORBIDE MONONITRATE,O=[N+]([O-])O[C@@H]1CO[C@H]2[C@@H]1OC[C@@H]2O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1339,VARDENAFIL HYDROCHLORIDE,CCCc1nc(C)c2c(O)nc(-c3cc(S(=O)(=O)N4CCN(CC)CC4)ccc3OCC)nn12.Cl,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL134,CLONIDINE,Clc1cccc(Cl)c1NC1=NCCN1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1341,METHOXYFLURANE,COC(F)(F)C(Cl)Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL136478,SODIUM NITROPRUSSIDE,,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1370561,AMINOPHYLLINE,Cn1c(=O)c2[nH]cnc2n(C)c1=O.Cn1c(=O)c2[nH]cnc2n(C)c1=O.NCCN,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL13828,OXATOMIDE,O=c1[nH]c2ccccc2n1CCCN1CCN(C(c2ccccc2)c2ccccc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1395,METHYLTESTOSTERONE,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2CC[C@@]2(C)[C@H]1CC[C@]2(C)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1411979,METHAPYRILENE,CN(C)CCN(Cc1cccs1)c1ccccn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1421,DASATINIB,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1434513,NOREPINEPHRINE BITARTRATE,NC[C@H](O)c1ccc(O)c(O)c1.O.O=C(O)C(O)C(O)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1437,NOREPINEPHRINE,NC[C@H](O)c1ccc(O)c(O)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1442422,DIBENZEPIN,CN(C)CCN1C(=O)c2ccccc2N(C)c2ccccc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1445,FLUOXYMESTERONE,C[C@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1477,CERIVASTATIN,COCc1c(C(C)C)nc(C(C)C)c(/C=C/[C@@H](O)C[C@@H](O)CC(=O)O)c1-c1ccc(F)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1479,DANAZOL,C#C[C@]1(O)CC[C@H]2[C@@H]3CCC4=Cc5oncc5C[C@]4(C)[C@H]3CC[C@@]21C,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1492,DIPHENYLPYRALINE,CN1CCC(OC(c2ccccc2)c2ccccc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1520,VARDENAFIL,CCCc1nc(C)c2c(=O)nc(-c3cc(S(=O)(=O)N4CCN(CC)CC4)ccc3OCC)[nH]n12,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1523964,EPHEDRINE SULFATE,CN[C@@H](C)[C@H](O)c1ccccc1.CN[C@@H](C)[C@H](O)c1ccccc1.O=S(=O)(O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1558,PRAZOSIN HYDROCHLORIDE,COc1cc2nc(N3CCN(C(=O)c4ccco4)CC3)nc(N)c2cc1OC.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1567,SUNITINIB MALATE,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C.O=C(O)C[C@H](O)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL159226,MOXISYLYTE,CC(=O)Oc1cc(C(C)C)c(OCCN(C)C)cc1C,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1607273,CETIRIZINE HYDROCHLORIDE,Cl.Cl.O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1615438,LEVOCABASTINE,C[C@@H]1CN([C@H]2CC[C@](C#N)(c3ccc(F)cc3)CC2)CC[C@]1(C(=O)O)c1ccccc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1620,DIPHENHYDRAMINE HYDROCHLORIDE,CN(C)CCOC(c1ccccc1)c1ccccc1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1623,MECLIZINE,Cc1cccc(CN2CCN(C(c3ccccc3)c3ccc(Cl)cc3)CC2)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1626,CLEMASTINE,CN1CCC[C@@H]1CCO[C@](C)(c1ccccc1)c1ccc(Cl)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1642,IMATINIB MESYLATE,CS(=O)(=O)O.Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1657,TAZAROTENE,CCOC(=O)c1ccc(C#Cc2ccc3c(c2)C(C)(C)CCS3)nc1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1659,CHLORPHENIRAMINE MALEATE,CN(C)CCC(c1ccc(Cl)cc1)c1ccccn1.O=C(O)/C=C\C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1699,MEMANTINE HYDROCHLORIDE,CC12CC3CC(C)(C1)CC(N)(C3)C2.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1705,CLONIDINE HYDROCHLORIDE,Cl.Clc1cccc(Cl)c1NC1=NCCN1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1706,NAPHAZOLINE HYDROCHLORIDE,Cl.c1ccc2c(CC3=NCCN3)cccc2c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL17157,TERFENADINE,CC(C)(C)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1716,CYPROHEPTADINE HYDROCHLORIDE,CN1CCC(=C2c3ccccc3C=Cc3ccccc32)CC1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1717,TICLOPIDINE HYDROCHLORIDE,Cl.Clc1ccccc1CN1CCc2sccc2C1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1719,OLOPATADINE HYDROCHLORIDE,CN(C)CC/C=C1/c2ccccc2COc2ccc(CC(=O)O)cc21.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1723,ALFUZOSIN HYDROCHLORIDE,COc1cc2nc(N(C)CCCNC(=O)C3CCCO3)nc(N)c2cc1OC.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1742423,BILASTINE,CCOCCn1c(C2CCN(CCc3ccc(C(C)(C)C(=O)O)cc3)CC2)nc2ccccc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1744447,ROSUVASTATIN CALCIUM,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1/C=C/[C@@H](O)C[C@@H](O)CC(=O)[O-].CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1/C=C/[C@@H](O)C[C@@H](O)CC(=O)[O-].[Ca+2],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1752,DYPHYLLINE,Cn1c(=O)c2c(ncn2CC(O)CO)n(C)c1=O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1754,DOXAPRAM,CCN1CC(CCN2CCOCC2)C(c2ccccc2)(c2ccccc2)C1=O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL17860,LOFEXIDINE,CC(Oc1c(Cl)cccc1Cl)C1=NCCN1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1788132,LOFEXIDINE HYDROCHLORIDE,CC(Oc1c(Cl)cccc1Cl)C1=NCCN1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1790041,RANITIDINE,CNC(=C[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL190,THEOPHYLLINE,Cn1c(=O)c2[nH]cnc2n(C)c1=O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL1908391,MASITINIB,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL193240,ROFLUMILAST,O=C(Nc1c(Cl)cncc1Cl)c1ccc(OC(F)F)c(OCC2CC2)c1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1946170,REGORAFENIB,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1963681,AVANAFIL,COc1ccc(CNc2nc(N3CCC[C@H]3CO)ncc2C(=O)NCc2ncccn2)cc1Cl,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2,PRAZOSIN,COc1cc2nc(N3CCN(C(=O)c4ccco4)CC3)nc(N)c2cc1OC,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2062257,BRIMONIDINE TARTRATE,Brc1c(NC2=NCCN2)ccc2nccnc12.O=C(O)C(O)C(O)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2062264,PHENYLEPHRINE BITARTRATE,CNC[C@H](O)c1cccc(O)c1.O=C(O)C(O)C(O)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2068724,ACAMPROSATE CALCIUM,CC(=O)NCCCS(=O)(=O)[O-].CC(=O)NCCCS(=O)(=O)[O-].[Ca+2],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2095206,BOSUTINIB MONOHYDRATE,COc1cc(Nc2c(C#N)cnc3cc(OCCCN4CCN(C)CC4)c(OC)cc23)c(Cl)cc1Cl.O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2097081,NITROPRUSSIDE,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2103738,LITHIUM CITRATE,O.O.O.O.O=C([O-])CC(O)(CC(=O)[O-])C(=O)[O-].[Li+].[Li+].[Li+],4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2103739,EMEDASTINE DIFUMARATE,CCOCCn1c(N2CCCN(C)CC2)nc2ccccc21.O=C(O)/C=C/C(=O)O.O=C(O)/C=C/C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2103795,AZILSARTAN KAMEDOXOMIL,CCOc1nc2cccc(C(=O)OCc3oc(=O)oc3C)c2n1Cc1ccc(-c2ccccc2-c2noc(=O)[n-]2)cc1.[K+],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2103827,DROXIDOPA,N[C@H](C(=O)O)[C@H](O)c1ccc(O)c(O)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2105458,THENALIDINE,CN1CCC(N(Cc2cccs2)c2ccccc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2105648,PALOVAROTENE,CC1(C)CCC(C)(C)c2cc(Cn3cccn3)c(/C=C/c3ccc(C(=O)O)cc3)cc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2105682,EDOXABAN TOSYLATE,CN1CCc2nc(C(=O)N[C@@H]3C[C@@H](C(=O)N(C)C)CC[C@@H]3NC(=O)C(=O)Nc3ccc(Cl)cn3)sc2C1.Cc1ccc(S(=O)(=O)O)cc1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2105708,PONATINIB HYDROCHLORIDE,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2cccnn12.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2105756,TIVOZANIB HYDROCHLORIDE,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC.Cl.O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2107067,TESTOSTERONE UNDECANOATE,CCCCCCCCCCC(=O)O[C@H]1CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3CC[C@]12C,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2107834,RIOCIGUAT,COC(=O)N(C)c1c(N)nc(-c2nn(Cc3ccccc3F)c3ncccc23)nc1N,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2110372,RANITIDINE HYDROCHLORIDE,CNC(=C[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2110774,CHLORPHENOXAMINE,CN(C)CCOC(C)(c1ccccc1)c1ccc(Cl)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2111286,RANITIDINE BISMUTH CITRATE,CNC(=C[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1.O=C([O-])CC(O)(CC(=O)[O-])C(=O)[O-].[Bi+3],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL211456,EPHEDRINE,CN[C@@H](C)[C@H](O)c1ccccc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2146102,EPHEDRINE HYDROCHLORIDE,CN[C@@H](C)[C@H](O)c1ccccc1.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2218894,FLUVASTATIN SODIUM,CC(C)n1c(/C=C/C(O)CC(O)CC(=O)[O-])c(-c2ccc(F)cc2)c2ccccc21.[Na+],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL2220442,FLUVASTATIN,CC(C)n1c(/C=C/C(O)CC(O)CC(=O)O)c(-c2ccc(F)cc2)c2ccccc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2311030,ERGOLOID MESYLATES,CC(C)C[C@H]1C(=O)N2CCC[C@H]2[C@]2(O)O[C@](NC(=O)[C@@H]3C[C@@H]4c5cccc6[nH]cc(c56)C[C@H]4N(C)C3)(C(C)C)C(=O)N12.CC(C)[C@@]1(NC(=O)[C@@H]2C[C@@H]3c4cccc5[nH]cc(c45)C[C@H]3N(C)C2)O[C@@]2(O)[C@@H]3CCCN3C(=O)[C@H](Cc3ccccc3)N2C1=O.CC(C)[C@H]1C(=O)N2CCC[C@H]2[C@]2(O)O[C@](NC(=O)[C@@H]3C[C@@H]4c5cccc6[nH]cc(c56)C[C@H]4N(C)C3)(C(C)C)C(=O)N12.CCC(C)[C@H]1C(=O)N2CCC[C@H]2[C@]2(O)O[C@](NC(=O)[C@@H]3C[C@@H]4c5cccc6[nH]cc(c56)C[C@H]4N(C)C3)(C(C)C)C(=O)N12.CS(=O)(=O)O.CS(=O)(=O)O.CS(=O)(=O)O.CS(=O)(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2364609,ESKETAMINE HYDROCHLORIDE,CN[C@]1(c2ccccc2Cl)CCCCC1=O.Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL24441,BETAHISTINE,CNCCc1ccccn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL2448612,ERGOTAMINE TARTRATE,CN1C[C@H](C(=O)N[C@]2(C)O[C@@]3(O)[C@@H]4CCCN4C(=O)[C@H](Cc4ccccc4)N3C2=O)C=C2c3cccc4[nH]cc(c34)C[C@H]21.CN1C[C@H](C(=O)N[C@]2(C)O[C@@]3(O)[C@@H]4CCCN4C(=O)[C@H](Cc4ccccc4)N3C2=O)C=C2c3cccc4[nH]cc(c34)C[C@H]21.O=C(O)C(O)C(O)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL24778,SILODOSIN,C[C@H](Cc1cc2c(c(C(N)=O)c1)N(CCCO)CC2)NCCOc1ccccc1OCC(F)(F)F,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL254328,ABIRATERONE,C[C@]12CC[C@H](O)CC1=CC[C@@H]1[C@@H]2CC[C@]2(C)C(c3cccnc3)=CC[C@@H]12,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL277474,ANTIPYRINE,Cc1cc(=O)n(-c2ccccc2)n1C,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL27810,CELIPROLOL,CCN(CC)C(=O)Nc1ccc(OCC(O)CNC(C)(C)C)c(C(C)=O)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL278398,PHENINDAMINE,CN1CCC2=C(C1)C(c1ccccc1)c1ccccc12,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL294199,CAPSAICIN,COc1cc(CNC(=O)CCCC/C=C/C(C)C)ccc1O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL296419,ASTEMIZOLE,COc1ccc(CCN2CCC(Nc3nc4ccccc4n3Cc3ccc(F)cc3)CC2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL30,CIMETIDINE,CN/C(=N\CCSCc1nc[nH]c1C)NC#N,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3039504,NINTEDANIB ESYLATE,CCS(=O)(=O)O.COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL312448,XYLOMETAZOLINE,Cc1cc(C(C)(C)C)cc(C)c1CC1=NCCN1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3183075,NIZATIDINE,CNC(=C[N+](=O)[O-])NCCSCc1csc(CN(C)C)n1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3183409,APALUTAMIDE,CNC(=O)c1ccc(N2C(=S)N(c3cnc(C#N)c(C(F)(F)F)c3)C(=O)C23CCC3)cc1F,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3188034,TRIPROLIDINE HYDROCHLORIDE,Cc1ccc(/C(=C\CN2CCCC2)c2ccccn2)cc1.Cl.O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3544909,CALCIFEDIOL,C=C1CC[C@H](O)C/C1=C/C=C1\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]12.O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3559672,RAUWOLFIA SERPENTINA,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3590187,CLASCOTERONE,CCC(=O)O[C@]1(C(=O)CO)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3CC[C@@]21C,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3707313,TRIFAROTENE,CC(C)(C)c1cc(-c2cc(-c3ccc(C(=O)O)cc3)ccc2OCCO)ccc1N1CCCC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL38,TRETINOIN,CC1=C(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)C(C)(C)CCC1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3813873,PEXIDARTINIB,FC(F)(F)c1ccc(CNc2ccc(Cc3c[nH]c4ncc(Cl)cc34)cn2)cn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3833393,EMICIZUMAB,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL386630,TESTOSTERONE,C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@]43C)[C@@H]1CC[C@@H]2O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL393220,ATORVASTATIN CALCIUM,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CC[C@@H](O)C[C@@H](O)CC(=O)[O-].CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CC[C@@H](O)C[C@@H](O)CC(=O)[O-].[Ca+2],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3948730,UMBRALISIB,CC(C)Oc1ccc(-c2nn([C@@H](C)c3oc4ccc(F)cc4c(=O)c3-c3cccc(F)c3)c3ncnc(N)c23)cc1F,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL395091,ESKETAMINE,CN[C@]1(c2ccccc2Cl)CCCCC1=O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3989519,DOXAPRAM HYDROCHLORIDE,CCN1CC(CCN2CCOCC2)C(c2ccccc2)(c2ccccc2)C1=O.Cl.O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3989555,MECLIZINE HYDROCHLORIDE,Cc1cccc(CN2CCN(C(c3ccccc3)c3ccc(Cl)cc3)CC2)c1.Cl.Cl.O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3989562,TERAZOSIN HYDROCHLORIDE,COc1cc2nc(N3CCN(C(=O)C4CCCO4)CC3)nc(N)c2cc1OC.Cl.O.O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3989869,UMBRALISIB TOSYLATE,CC(C)Oc1ccc(-c2nn([C@@H](C)c3oc4ccc(F)cc4c(=O)c3-c3cccc(F)c3)c3ncnc(N)c23)cc1F.Cc1ccc(S(=O)(=O)O)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3989920,PITAVASTATIN SODIUM,O=C([O-])C[C@H](O)C[C@H](O)/C=C/c1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1.[Na+],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3989923,PITAVASTATIN MAGNESIUM,O=C([O-])C[C@H](O)C[C@H](O)/C=C/c1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1.O=C([O-])C[C@H](O)C[C@H](O)/C=C/c1c(C2CC2)nc2ccccc2c1-c1ccc(F)cc1.[Mg+2],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL3989932,ANGIOTENSIN II ACETATE,CC(=O)O.CC[C@H](C)[C@H](NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@@H](NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](N)CC(=O)O)C(C)C)C(=O)N[C@@H](Cc1cnc[nH]1)C(=O)N1CCC[C@H]1C(=O)N[C@@H](Cc1ccccc1)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL3989973,PEXIDARTINIB HYDROCHLORIDE,Cl.FC(F)(F)c1ccc(CNc2ccc(Cc3c[nH]c4ncc(Cl)cc34)cn2)cn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL4066936,VERICIGUAT,COC(=O)Nc1c(N)nc(-c2nn(Cc3ccccc3F)c3ncc(F)cc23)nc1N,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL408403,ANGIOTENSIN II,CC[C@H](C)[C@H](NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@@H](NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](N)CC(=O)O)C(C)C)C(=O)N[C@@H](Cc1cnc[nH]1)C(=O)N1CCC[C@H]1C(=O)N[C@@H](Cc1ccccc1)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL4204794,AVAPRITINIB,Cn1cc(-c2cc3c(N4CCN(c5ncc([C@@](C)(N)c6ccc(F)cc6)cn5)CC4)ncnn3c2)cn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL4208229,ASCIMINIB,O=C(Nc1ccc(OC(F)(F)Cl)cc1)c1cnc(N2CC[C@@H](O)C2)c(-c2cc[nH]n2)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL4216467,RIPRETINIB,CCn1c(=O)c(-c2cc(NC(=O)Nc3ccccc3)c(F)cc2Br)cc2cnc(NC)cc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL429,LABETALOL,CC(CCc1ccccc1)NCC(O)c1ccc(O)c(C(N)=O)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL4297185,DAROLUTAMIDE,CC(O)c1cc(C(=O)N[C@@H](C)Cn2ccc(-c3ccc(C#N)c(Cl)c3)n2)n[nH]1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4297220,ASCIMINIB HYDROCHLORIDE,Cl.O=C(Nc1ccc(OC(F)(F)Cl)cc1)c1cnc(N2CC[C@@H](O)C2)c(-c2cc[nH]n2)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL4297951,COAGULATION FACTOR X HUMAN,,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL43064,CINNARIZINE,C(=C/c1ccccc1)\CN1CCN(C(c2ccccc2)c2ccccc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL442,ERGOTAMINE,CN1C[C@H](C(=O)N[C@]2(C)O[C@@]3(O)[C@@H]4CCCN4C(=O)[C@H](Cc4ccccc4)N3C2=O)C=C2c3cccc4[nH]cc(c34)C[C@H]21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL459,METHYLDOPA,C[C@](N)(Cc1ccc(O)c(O)c1)C(=O)O,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL464,ETRETINATE,CCOC(=O)/C=C(C)/C=C/C=C(C)/C=C/c1c(C)cc(OC)c(C)c1C,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL466659,PENTAERYTHRITOL TETRANITRATE,O=[N+]([O-])OCC(CO[N+](=O)[O-])(CO[N+](=O)[O-])CO[N+](=O)[O-],4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL484785,CRISABOROLE,N#Cc1ccc(Oc2ccc3c(c2)COB3O)cc1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL503,LOVASTATIN,CC[C@H](C)C(=O)O[C@H]1C[C@@H](C)C=C2C=C[C@H](C)[C@H](CC[C@@H]3C[C@@H](O)CC(=O)O3)[C@H]21,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL505,CHLORPHENIRAMINE,CN(C)CCC(c1ccc(Cl)cc1)c1ccccn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL511,PYRILAMINE,COc1ccc(CN(CCN(C)C)c2ccccn2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL512351,BETRIXABAN,COc1ccc(NC(=O)c2ccc(C(=N)N(C)C)cc2)c(C(=O)Nc2ccc(Cl)cn2)c1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL524,METHOXAMINE,COc1ccc(OC)c(C(O)C(C)N)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL535,SUNITINIB,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL539423,SPARSENTAN,CCCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2S(=O)(=O)Nc2noc(C)c2C)c(COCC)c1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL594,EMEDASTINE,CCOCCn1c(N2CCCN(C)CC2)nc2ccccc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL597,PHENTOLAMINE,Cc1ccc(N(CC2=NCCN2)c2cccc(O)c2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL603,ZAFIRLUKAST,COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(=O)OC3CCCC3)cc12,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL608533,MIDOSTAURIN,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL61006,PHENYLPROPANOLAMINE,CC(N)C(O)c1ccccc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL611,TERAZOSIN,COc1cc2nc(N3CCN(C(=O)C4CCCO4)CC3)nc(N)c2cc1OC,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL628,PENTOXIFYLLINE,CC(=O)CCCCn1c(=O)c2c(ncn2C)n(C)c1=O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL639,AZELASTINE,CN1CCCC(n2nc(Cc3ccc(Cl)cc3)c3ccccc3c2=O)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL643,PROMETHAZINE,CC(CN1c2ccccc2Sc2ccccc21)N(C)C,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL644,TRIMIPRAMINE,CC(CN(C)C)CN1c2ccccc2CCc2ccccc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL647,APRACLONIDINE,Nc1cc(Cl)c(N=C2NCCN2)c(Cl)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL648,CYCLIZINE,CN1CCN(C(c2ccccc2)c2ccccc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL654,MIRTAZAPINE,CN1CCN2c3ncccc3Cc3ccccc3C2C1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL657,DIPHENHYDRAMINE,CN(C)CCOC(c1ccccc1)c1ccccc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL6622,ISOSORBIDE DINITRATE,O=[N+]([O-])O[C@H]1CO[C@H]2[C@@H]1OC[C@H]2O[N+](=O)[O-],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL679,EPINEPHRINE,CNC[C@H](O)c1ccc(O)c(O)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL690,PRAVASTATIN SODIUM,CC[C@H](C)C(=O)O[C@H]1C[C@H](O)C=C2C=C[C@H](C)[C@H](CC[C@@H](O)C[C@@H](O)CC(=O)[O-])[C@H]21.[Na+],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL705,ALITRETINOIN,CC1=C(/C=C/C(C)=C\C=C\C(C)=C\C(=O)O)C(C)(C)CCC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL707,DOXAZOSIN,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL709,ALFUZOSIN,COc1cc2nc(N(C)CCCNC(=O)C3CCCO3)nc(N)c2cc1OC,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL723,CARVEDILOL,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL730,NITROGLYCERIN,O=[N+]([O-])OCC(CO[N+](=O)[O-])O[N+](=O)[O-],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL73451,MEQUITAZINE,c1ccc2c(c1)Sc1ccccc1N2CC1CN2CCC1CC2,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL753,PHENOXYBENZAMINE,CC(COc1ccccc1)N(CCCl)Cc1ccccc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL761,NAPHAZOLINE,c1ccc2c(CC3=NCCN3)cccc2c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL762,OXYMETAZOLINE,Cc1cc(C(C)(C)C)c(O)c(C)c1CC1=NCCN1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL770,TOLAZOLINE,c1ccc(CC2=NCCN2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL779,TADALAFIL,CN1CC(=O)N2[C@H](c3ccc4c(c3)OCO4)c3[nH]c4ccccc4c3C[C@@H]2C1=O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL806,FLUTAMIDE,CC(C)C(=O)Nc1ccc([N+](=O)[O-])c(C(F)(F)F)c1,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL807,MEMANTINE,CC12CC3CC(C)(C1)CC(N)(C3)C2,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL811,BROMPHENIRAMINE,CN(C)CCC(c1ccc(Br)cc1)c1ccccn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL829,METHYLPROMAZINE,CC(CN(C)C)CN1c2ccccc2Sc2ccccc21,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL833,TICLOPIDINE,Clc1ccccc1CN1CCc2sccc2C1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL836,TAMSULOSIN,CCOc1ccccc1OCCN[C@H](C)Cc1ccc(OC)c(S(N)(=O)=O)c1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL844,BRIMONIDINE,Brc1c(NC2=NCCN2)ccc2nccnc12,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL846,CALCITRIOL,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL855,TRIPROLIDINE,Cc1ccc(/C(=C\CN2CCCC2)c2ccccn2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL862,GUANFACINE,N=C(N)NC(=O)Cc1c(Cl)cccc1Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL864,CARBINOXAMINE,CN(C)CCOC(c1ccc(Cl)cc1)c1ccccn1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL896,HYDROXYZINE,OCCOCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL914,FEXOFENADINE,CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL94081,ALCLOFENAC,C=CCOc1ccc(CC(=O)O)cc1Cl,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL94454,MIZOLASTINE,CN(c1nccc(=O)[nH]1)C1CCN(c2nc3ccccc3n2Cc2ccc(F)cc2)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL946,AZATADINE,CN1CCC(=C2c3ccccc3CCc3cccnc32)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL995,LOSARTAN POTASSIUM,CCCCc1nc(Cl)c(CO)n1Cc1ccc(-c2ccccc2-c2nnn[n-]2)cc1.[K+],4.0,0,0,4.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL998,LORATADINE,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,4.0,0,0,4.0,0,pathway_drug_candidates
+CHEMBL237500,LINAGLIPTIN,CC#CCn1c(N2CCC[C@@H](N)C2)nc2c1c(=O)n(Cc1nc(C)c3ccccc3n1)c(=O)n2C,3.5,1,0,,1,known_drugs;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL3545193,MSC-2364447,,3.0,1,0,1.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL4297674,BRANEBRUTINIB,CC#CC(=O)N[C@H]1CCCN(c2c(F)cc(C(N)=O)c3[nH]c(C)c(C)c23)C1,3.0,1,0,1.0,0,protein_drug_candidates;pathway_drug_candidates
+CHEMBL2103852,CROLIBULIN,COc1cc([C@H]2C(C#N)=C(N)Oc3c2ccc(N)c3N)cc(Br)c1OC,3.0,0,1,1.0,0,pathway_drug_candidates
+CHEMBL2109574,ASG-5ME,,3.0,0,1,1.0,0,pathway_drug_candidates
+CHEMBL3301585,PINATUZUMAB VEDOTIN,,3.0,0,1,1.0,0,pathway_drug_candidates
+CHEMBL3545372,SOFITUZUMAB VEDOTIN,,3.0,0,1,1.0,0,pathway_drug_candidates
+CHEMBL3833306,VANDORTUZUMAB VEDOTIN,,3.0,0,1,1.0,0,pathway_drug_candidates
+CHEMBL4297859,AZINTUXIZUMAB VEDOTIN,,3.0,0,1,1.0,0,pathway_drug_candidates
+CHEMBL4297935,RG-7841,,3.0,0,1,1.0,0,pathway_drug_candidates
+CHEMBL4650293,APRUTUMAB IXADOTIN,,3.0,0,1,1.0,0,pathway_drug_candidates
+CHEMBL49642,INDIBULIN,O=C(Nc1ccncc1)C(=O)c1cn(Cc2ccc(Cl)cc2)c2ccccc12,3.0,0,1,1.0,0,pathway_drug_candidates
+CHEMBL1004,DOXYLAMINE,CN(C)CCOC(C)(c1ccccc1)c1ccccn1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL101253,VATALANIB,Clc1ccc(Nc2nnc(Cc3ccncc3)c3ccccc23)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL10316,IDAZOXAN,c1ccc2c(c1)OCC(C1=NCCN1)O2,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1040,CALCIFEDIOL ANHYDROUS,C=C1CC[C@H](O)C/C1=C/C=C1\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]12,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1079,TIZANIDINE,Clc1ccc2nsnc2c1NC1=NCCN1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1171837,PONATINIB,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2cccnn12,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1200392,DOXYLAMINE SUCCINATE,CN(C)CCOC(C)(c1ccccc1)c1ccccn1.O=C(O)CCC(=O)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1200413,TETRAHYDROZOLINE HYDROCHLORIDE,Cl.c1ccc2c(c1)CCCC2C1=NCCN1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1200436,OXANDROLONE,C[C@]12COC(=O)C[C@@H]1CC[C@@H]1[C@@H]2CC[C@@]2(C)[C@H]1CC[C@]2(C)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1200461,MIDODRINE HYDROCHLORIDE,COc1ccc(OC)c(C(O)CNC(=O)CN)c1.Cl,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1201089,DIPHENHYDRAMINE CITRATE,CN(C)CCOC(c1ccccc1)c1ccccc1.O=C(O)CC(O)(CC(=O)O)C(=O)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1201353,DEXCHLORPHENIRAMINE,CN(C)CC[C@@H](c1ccc(Cl)cc1)c1ccccn1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1201536,NICOTINE POLACRILEX,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1201758,BEPOTASTINE,O=C(O)CCCN1CCC(O[C@@H](c2ccc(Cl)cc2)c2ccccn2)CC1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1237102,LEVOCABASTINE HYDROCHLORIDE,C[C@@H]1CN([C@H]2CC[C@](C#N)(c3ccc(F)cc3)CC2)CC[C@]1(C(=O)O)c1ccccc1.Cl,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1278146,FAMITINIB,CCN(CC)CCN1CCc2[nH]c(/C=C3\C(=O)Nc4ccc(F)cc43)c(C)c2C1=O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1289494,TIVOZANIB,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1305,ANTAZOLINE,c1ccc(CN(CC2=NCCN2)c2ccccc2)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1336,SORAFENIB,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1366933,ESMIRTAZAPINE,CN1CCN2c3ncccc3Cc3ccccc3[C@H]2C1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1601669,ALFACALCIDOL,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1633,KETOTIFEN FUMARATE,CN1CCC(=C2c3ccccc3CC(=O)c3sccc32)CC1.O=C(O)/C=C/C(=O)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1653,PHENIRAMINE MALEATE,CN(C)CCC(c1ccccc1)c1ccccn1.O=C(O)/C=C\C(=O)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1714,KETAMINE HYDROCHLORIDE,CNC1(c2ccccc2Cl)CCCCC1=O.Cl,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1738889,ENOBOSARM,C[C@](O)(COc1ccc(C#N)cc1)C(=O)Nc1ccc(C#N)c(C(F)(F)F)c1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1742461,LAFUTIDINE,O=C(C[S+]([O-])Cc1ccco1)NC/C=C\COc1cc(CN2CCCCC2)ccn1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL187927,DIANICLINE,c1cnc2c(c1)O[C@H]1CCN3CC[C@@]1(C2)C3,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1908376,SEOCALCITOL,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)/C=C/C=C/C(O)(CC)CC)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL1922235,DAREXABAN,COc1ccc(C(=O)Nc2cccc(O)c2NC(=O)c2ccc(N3CCCN(C)CC3)cc2)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL19449,IBUDILAST,CC(C)C(=O)c1c(C(C)C)nn2ccccc12,3.0,0,0,3.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1951143,FIMASARTAN,CCCCc1nc(C)c(CC(=S)N(C)C)c(=O)n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2028661,AZILSARTAN MEDOXOMIL,CCOc1nc2cccc(C(=O)OCc3oc(=O)oc3C)c2n1Cc1ccc(-c2ccccc2-c2noc(=O)[nH]2)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2103792,AGATOLIMOD,Cc1cn([C@H]2C[C@H](OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)C[C@@H]3OP(O)(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3O)[C@@H](CO)O2)c(=O)[nH]c1=O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2103793,AGATOLIMOD SODIUM,Cc1cn([C@H]2C[C@H](OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cnc5c(=O)[nH]c(N)nc54)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4ccc(N)nc4=O)C[C@@H]3OP([O-])(=S)OC[C@H]3O[C@@H](n4cc(C)c(=O)[nH]c4=O)C[C@@H]3O)[C@@H](CO)O2)c(=O)[nH]c1=O.[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+],3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2103849,UDENAFIL,CCCOc1ccc(S(=O)(=O)NCCC2CCCN2C)cc1-c1nc2c(CCC)nn(C)c2c(=O)[nH]1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2103881,DEXMECAMYLAMINE,CN[C@@]1(C)[C@@H]2CC[C@@H](C2)C1(C)C,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2105728,CRENOLANIB,CC1(COc2ccc3c(c2)ncn3-c2ccc3cccc(N4CCC(N)CC4)c3n2)COC1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2105738,GALETERONE,C[C@]12CC[C@H](O)CC1=CC[C@@H]1[C@@H]2CC[C@]2(C)C(n3cnc4ccccc43)=CC[C@@H]12,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2106195,DEXMEDETOMIDINE HYDROCHLORIDE,Cc1cccc([C@H](C)c2c[nH]cn2)c1C.Cl,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2106798,NERAMEXANE MESYLATE,CC1(C)CC(C)(C)CC(C)(N)C1.CS(=O)(=O)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2107339,ESMIRTAZAPINE MALEATE,CN1CCN2c3ncccc3Cc3ccccc3[C@H]2C1.O=C(O)/C=C\C(=O)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2107771,RALFINAMIDE,C[C@H](NCc1ccc(OCc2ccccc2F)cc1)C(N)=O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2108080,PARNAPARIN SODIUM,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2108718,SEMULOPARIN SODIUM,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2109204,NADROPARIN CALCIUM,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2110954,NERAMEXANE,CC1(C)CC(C)(C)CC(C)(N)C1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL21333,PRANLUKAST,O=C(Nc1cccc2c(=O)cc(-c3nnn[nH]3)oc12)c1ccc(OCCCCc2ccccc2)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL223360,LINIFANIB,Cc1ccc(F)c(NC(=O)Nc2ccc(-c3cccc4[nH]nc(N)c34)cc2)c1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2316582,OLVEREMBATINIB,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2[nH]ncc2c1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL255863,NILOTINIB,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL274654,ORANTINIB,Cc1[nH]c(/C=C2\C(=O)Nc3ccccc32)c(C)c1CCC(=O)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL276711,SEMAXANIB,Cc1cc(C)c(/C=C2\C(=O)Nc3ccccc32)[nH]1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL288441,BOSUTINIB,COc1cc(Nc2c(C#N)cnc3cc(OCCCN4CCN(C)CC4)c(OC)cc23)c(Cl)cc1Cl,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL305660,EBASTINE,CC(C)(C)c1ccc(C(=O)CCCN2CCC(OC(c3ccccc3)c3ccccc3)CC2)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3113974,TRANIMILAST,CS(=O)(=O)Nc1ccc(C(=O)O[C@@H](Cc2c(Cl)c[n+]([O-])cc2Cl)c2ccc(OC(F)F)c(OCC3CC3)c2)cc1OCC1CC1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL313971,ZUCAPSAICIN,COc1cc(CNC(=O)CCCC/C=C\C(C)C)ccc1O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL332750,TETOMILAST,CCOc1ccc(-c2nc(-c3cccc(C(=O)O)n3)cs2)cc1OCC,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL334966,CANGRELOR,CSCCNc1nc(SCCC(F)(F)F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)OP(=O)(O)C(Cl)(Cl)P(=O)(O)O)[C@@H](O)[C@H]1O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3544917,RAPASTINEL,C[C@@H](O)[C@H](N)C(=O)N1CCC[C@H]1C(=O)N1CCC[C@H]1C(=O)N[C@H](C(N)=O)[C@@H](C)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3545351,AV-101,Nc1cc(Cl)ccc1C(=O)CC(N)C(=O)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3545413,FLUMATINIB,Cc1ncc(NC(=O)c2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1Nc1nccc(-c2cccnc2)n1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3545427,CM-082,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3678958,RUSERONTINIB,CC(C)n1c(Nc2cccnc2)nc2cnc(Nc3ccc(N4CCN(C)CC4)cc3)nc21,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3707356,TIVANISIRAN,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3707365,BEMIPARIN,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3707398,PAC-14028,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3989862,PEFCALCITOL,C=C1/C(=C\C=C2/CCC[C@]3(C)C([C@H](C)OCC(=O)NCC(F)(F)C(F)(F)F)=CC[C@@H]23)C[C@@H](O)C[C@@H]1O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL3989968,DIFAMILAST,CCOc1ccccc1C(=O)NCc1coc(-c2ccc(OC(F)F)c(OC(C)C)c2)n1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4297524,RADOTINIB,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cnccn5)n4)c3)cc(C(F)(F)F)c2)cn1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4297564,COBITOLIMOD,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4297589,SELATOGREL,CCCCOC(=O)N1CCN(C(=O)[C@H](CP(=O)(O)O)NC(=O)c2cc(N3CC[C@H](OC)C3)nc(-c3ccccc3)n2)CC1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4297608,ELDECALCITOL,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)[C@@H](OCCCO)[C@@H]1O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4297754,FITUSIRAN,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4297768,IDRABIOTAPARINUX SODIUM,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4297838,TILSOTOLIMOD,,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4303201,CATEQUENTINIB,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ccnc2cc1OCC1(N)CC1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4541964,ZATOLMILAST,O=C(O)Cc1ccc(Cc2cc(-c3cccc(Cl)c3)nc(C(F)(F)F)c2)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4594287,ENSIFENTRINE,COc1cc2c(cc1OC)-c1c/c(=N\c3c(C)cc(C)cc3C)n(CCNC(N)=O)c(=O)n1CC2,3.0,0,0,3.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL4650276,SHR3680,CC1(C)C(=O)N(c2ccc(C#N)c(C(F)(F)F)c2)C(=S)N1c1ccc(OC[C@@H](O)CO)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL4650333,SERALUTINIB,COc1ccc(-c2cncc(N[C@@H](C)c3cccc(NC(=O)c4cncc(C)c4)c3)n2)cc1OC,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL46618,OTAMIXABAN,COC(=O)[C@H](Cc1cccc(C(=N)N)c1)[C@@H](C)NC(=O)c1ccc(-c2cc[n+]([O-])cc2)cc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL477772,PAZOPANIB,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL491473,CEDIRANIB,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ncnc2cc1OCCCN1CCCC1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL497939,CYTISINICLINE,O=c1cccc2n1C[C@@H]1CNC[C@H]2C1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL511115,CILOMILAST,COc1ccc([C@]2(C#N)CC[C@@H](C(=O)O)CC2)cc1OC1CCCC1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL522892,DOVITINIB,CN1CCN(c2ccc3nc(-c4c(N)c5c(F)cccc5[nH]c4=O)[nH]c3c2)CC1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL5303393,VARENICLINE TARTRATE,O=C(O)C(O)C(O)C(=O)O.c1cnc2cc3c(cc2n1)[C@@H]1CNC[C@H]3C1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL5314374,IDRAPARINUX SODIUM,CO[C@H]1O[C@H](COS(=O)(=O)[O-])[C@@H](O[C@@H]2O[C@@H](C(=O)[O-])[C@@H](O[C@H]3O[C@H](COS(=O)(=O)[O-])[C@@H](O[C@@H]4O[C@H](C(=O)[O-])[C@@H](O[C@H]5O[C@H](COS(=O)(=O)[O-])[C@@H](OC)[C@H](OC)[C@H]5OC)[C@H](OC)[C@H]4OC)[C@H](OS(=O)(=O)[O-])[C@H]3OS(=O)(=O)[O-])[C@H](OC)[C@H]2OC)[C@H](OS(=O)(=O)[O-])[C@H]1OS(=O)(=O)[O-].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+].[Na+],3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL5314801,IDRAPARINUX,CO[C@H]1O[C@H](COS(=O)(=O)O)[C@@H](O[C@@H]2O[C@@H](C(=O)O)[C@@H](O[C@H]3O[C@H](COS(=O)(=O)O)[C@@H](O[C@@H]4O[C@H](C(=O)O)[C@@H](O[C@H]5O[C@H](COS(=O)(=O)O)[C@@H](OC)[C@H](OC)[C@H]5OC)[C@H](OC)[C@H]4OC)[C@H](OS(=O)(=O)O)[C@H]3OS(=O)(=O)O)[C@H](OC)[C@H]2OC)[C@H](OS(=O)(=O)O)[C@H]1OS(=O)(=O)O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL551978,DROTAVERINE,CCOc1ccc(/C=C2\NCCc3cc(OCC)c(OCC)cc32)cc1OCC,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL572881,MOTESANIB,CC1(C)CNc2cc(NC(=O)c3cccnc3NCc3ccncc3)ccc21,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL576982,QUIZARTINIB,CC(C)(C)c1cc(NC(=O)Nc2ccc(-c3cn4c(n3)sc3cc(OCCN5CCOCC5)ccc34)cc2)no1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL742,KETAMINE,CNC1(c2ccccc2Cl)CCCCC1=O,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL778,DEXMEDETOMIDINE,Cc1cccc([C@H](C)c2c[nH]cn2)c1C,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL90,HISTAMINE,NCCc1c[nH]cn1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL900,ORPHENADRINE,Cc1ccccc1C(OCCN(C)C)c1ccccc1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL91397,RUPATADINE,Cc1cncc(CN2CCC(=C3c4ccc(Cl)cc4CCc4cccnc43)CC2)c1,3.0,0,0,3.0,0,pathway_drug_candidates
+CHEMBL2364574,DOXYCYCLINE CALCIUM,C[C@H]1c2cccc([O-])c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@@H]21.C[C@H]1c2cccc([O-])c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@@H]21.[Ca+2],2.0,0,1,0.5,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL592,LEVORPHANOL,CN1CC[C@]23CCCC[C@H]2[C@H]1Cc1ccc(O)cc13,2.0,0,1,0.5,0,pathway_drug_candidates
+CHEMBL1095032,LETAXABAN,O=C([C@H](O)CS(=O)(=O)c1ccc2cc(Cl)ccc2c1)N1CCC(N2CCCNC2=O)CC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1162175,REGRELOR,CCNC(=O)Nc1ncnc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@H]2O[C@H](/C=C/c3ccccc3)O[C@H]21,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1197051,ISOXSUPRINE,CC(COc1ccccc1)NC(C)C(O)c1ccc(O)cc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1200733,DESFLURANE,FC(F)OC(F)C(F)(F)F,2.0,0,0,2.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1200946,NANDROLONE DECANOATE,CCCCCCCCCC(=O)O[C@H]1CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@@H]4[C@H]3CC[C@]12C,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1201103,METHOXAMINE HYDROCHLORIDE,COc1ccc(OC)c(C(O)C(C)N)c1.Cl,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1201513,HEPARIN CALCIUM,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1207366,GW468816,O=C(O)C1C/C(=C2/CCN(c3ccccc3)C2=O)c2ccc(Cl)cc2N1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1230609,FORETINIB,COc1cc2c(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3F)ccnc2cc1OCCCN1CCOCC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1236936,CINACIGUAT,O=C(O)CCCCN(CCc1ccccc1OCc1ccc(CCc2ccccc2)cc1)Cc1ccc(C(=O)O)cc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL124660,TANDUTINIB,COc1cc2c(N3CCN(C(=O)Nc4ccc(OC(C)C)cc4)CC3)ncnc2cc1OCCCN1CCCCC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1255582,FIPAMEZOLE,CCC1(c2c[nH]cn2)Cc2ccc(F)cc2C1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL127071,POZANICLINE,Cc1ncccc1OC[C@@H]1CCCN1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL128748,DIMETHYLCURCUMIN,COc1ccc(/C=C/C(=O)/C=C(O)/C=C/c2ccc(OC)c(OC)c2)cc1OC,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1493,FLAVOXATE,Cc1c(-c2ccccc2)oc2c(C(=O)OCCN3CCCCC3)cccc2c1=O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1721885,SU-014813,Cc1[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c(C)c1C(=O)NC[C@H](O)CN1CCOCC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL17350,TRAXOPRODIL,C[C@@H]([C@@H](O)c1ccc(O)cc1)N1CCC(O)(c2ccccc2)CC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1767164,GSK-1004723,O=c1c2ccccc2c(Cc2ccc(Cl)cc2)nn1C[C@H]1CCCN1CCCCc1ccc(OCCCN2CCCCCC2)cc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL182066,RADIPRODIL,O=C(Nc1ccc2nc(O)oc2c1)C(=O)N1CCC(Cc2ccc(F)cc2)CC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL188462,ISPRONICLINE,CN[C@@H](C)C/C=C/c1cncc(OC(C)C)c1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1928262,GISADENAFIL,CCOc1ncc(S(=O)(=O)N2CCN(CC)CC2)cc1-c1nc2c(CC)n(CCOC)nc2c(=O)[nH]1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1980297,ILORASERTIB,Nc1ncc(-c2cnn(CCO)c2)c2scc(-c3ccc(NC(=O)Nc4cccc(F)c4)cc3)c12,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL206815,APRATASTAT,CC1(C)SCCN(S(=O)(=O)c2ccc(OCC#CCO)cc2)[C@H]1C(=O)NO,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL206834,BAFETINIB,Cc1ccc(NC(=O)c2ccc(CN3CC[C@H](N(C)C)C3)c(C(F)(F)F)c2)cc1Nc1nccc(-c2cncnc2)n1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2068839,RISLENEMDAZ,Cc1ccc(COC(=O)N2CC[C@H](CNc3ncccn3)[C@H](F)C2)cc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL207433,SB-705498,O=C(Nc1ccccc1Br)N[C@@H]1CCN(c2ccc(C(F)(F)F)cn2)C1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2079587,STANOZOLOL,C[C@]12Cc3c[nH]nc3C[C@@H]1CC[C@@H]1[C@@H]2CC[C@@]2(C)[C@H]1CC[C@]2(C)O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2079588,TELATINIB,CNC(=O)c1cc(COc2nnc(Nc3ccc(Cl)cc3)c3ccoc23)ccn1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2103828,ELINOGREL,CNc1cc2[nH]c(=O)n(-c3ccc(NC(=O)NS(=O)(=O)c4ccc(Cl)s4)cc3)c(=O)c2cc1F,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2103851,AMUVATINIB,S=C(NCc1ccc2c(c1)OCO2)N1CCN(c2ncnc3c2oc2ccccc23)CC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2104955,BECOCALCIDIOL,C=C1[C@H](O)CC(=C/C=C2\CCC[C@]3(C)[C@@H]([C@@H](C)CC)CC[C@@H]23)C[C@H]1O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2104986,TEDATIOXETINE,Cc1ccc(Sc2ccccc2C2CCNCC2)cc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2105107,INECALCITOL,C[C@H](CC#CC(C)(C)O)[C@H]1CC[C@@H]2/C(=C/C=C3C[C@@H](O)C[C@H](O)C3)CCC[C@@]21C,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2105705,LUNACALCIPOL,C=C1/C(=C\C=C2/CCC[C@]3(C)C([C@H](C)C/C=C/S(=O)(=O)C(C)(C)C)=CC[C@@H]23)C[C@@H](O)C[C@@H]1O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2107546,BUCINDOLOL HYDROCHLORIDE,CC(C)(Cc1c[nH]c2ccccc12)NCC(O)COc1ccccc1C#N.Cl,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2107729,ATACIGUAT,O=C(Nc1ccc(S(=O)(=O)N2CCOCC2)cc1)c1cc(Cl)ccc1NS(=O)(=O)c1ccc(Cl)s1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL214796,NGD-8243,FC(F)(F)c1ccc(Nc2ncnc3cc(-c4ncccc4C(F)(F)F)ccc23)cc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL217092,SARACATINIB,CN1CCN(CCOc2cc(OC3CCOCC3)c3c(Nc4c(Cl)ccc5c4OCO5)ncnc3c2)CC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL217899,TOFIMILAST,CCc1nn(C2CCCC2)c2c1CCn1c(-c3cccs3)nnc1-2,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2179529,AZD1446,O=C(c1ccc(Cl)o1)N1CC2CNCC2C1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL22108,DIMETHINDENE,CC(C1=C(CCN(C)C)Cc2ccccc21)c1ccccn1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2364968,ERGOLOID,CC(C)C[C@H]1C(=O)N2CCC[C@H]2[C@]2(O)O[C@](NC(=O)[C@@H]3C[C@@H]4c5cccc6[nH]cc(c56)C[C@H]4N(C)C3)(C(C)C)C(=O)N12.CC(C)[C@@]1(NC(=O)[C@@H]2C[C@@H]3c4cccc5[nH]cc(c45)C[C@H]3N(C)C2)O[C@@]2(O)[C@@H]3CCCN3C(=O)[C@H](Cc3ccccc3)N2C1=O.CC(C)[C@H]1C(=O)N2CCC[C@H]2[C@]2(O)O[C@](NC(=O)[C@@H]3C[C@@H]4c5cccc6[nH]cc(c56)C[C@H]4N(C)C3)(C(C)C)C(=O)N12.CCC(C)[C@H]1C(=O)N2CCC[C@H]2[C@]2(O)O[C@](NC(=O)[C@@H]3C[C@@H]4c5cccc6[nH]cc(c56)C[C@H]4N(C)C3)(C(C)C)C(=O)N12,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL238465,SOFINICLINE,Clc1cc(N2C[C@@H]3CN[C@@H]3C2)cnc1Cl,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL2424780,VESATOLIMOD,CCCCOc1nc(N)c2c(n1)N(Cc1cccc(CN3CCCC3)c1)CC(=O)N2,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL261244,REGRELOR DISODIUM,CCNC(=O)Nc1ncnc2c1ncn2[C@@H]1O[C@H](COP(=O)([O-])[O-])[C@H]2O[C@H](/C=C/c3ccccc3)O[C@H]21.[Na+].[Na+],2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL321582,BUCINDOLOL,CC(C)(Cc1c[nH]c2ccccc12)NCC(O)COc1ccccc1C#N,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3264610,SEVITERONEL,CC(C)[C@](O)(c1ccc2cc(OC(F)F)c(OC(F)F)cc2c1)c1c[nH]nn1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3542265,LY2452473,CC(C)OC(=O)N[C@H]1Cc2c(n(Cc3ccccn3)c3ccc(C#N)cc23)C1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3544953,SAF312,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3545039,AZD1386,Cc1cc(Cl)cc2c1N(Cc1cccc(C(F)(F)F)c1)C(=O)C21NC(=O)NC1=O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3545092,CR 1447,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3545157,TIDEGLUSIB,O=c1sn(-c2cccc3ccccc23)c(=O)n1Cc1ccccc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3545174,GSK2881078,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3545316,RINUCUMAB,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3545333,MK-0773,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3545350,EVT-101,Cc1nccn1Cc1cc(-c2ccc(F)c(C(F)F)c2)cnn1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3545401,X-82,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3545402,XL-820,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL362558,LY-2090314,O=C1NC(=O)C(c2cnc3ccccn23)=C1c1cn2c3c(cc(F)cc13)CN(C(=O)N1CCCCC1)CC2,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3707250,CP-601927,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3707293,XEN-D0501,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3707400,INDANTADOL,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL383322,RESIQUIMOD,CCOCc1nc2c(N)nc3ccccc3c2n1CC(C)(C)O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3989872,APIMOSTINEL,C[C@@H](O)[C@H](N)C(=O)N1CCC[C@H]1C(=O)N1CCC[C@@]1(Cc1ccccc1)C(=O)N[C@H](C(N)=O)[C@@H](C)O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL3989967,LOTAMILAST,CNc1nc(-c2cccc(NC(=O)c3ccc(C(=O)OC)cc3)c2)c2cc(OC)c(OC)cc2n1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL403989,TG100-801,Cc1cc(-c2cc(OC(=O)c3ccccc3)ccc2Cl)cc2nnc(Nc3ccc(OCCN4CCCC4)cc3)nc12,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4130229,VODOBATINIB,Cc1ccc(C(=O)NNC(=O)c2c(C)cccc2Cl)cc1C#Cc1cnc2ccccc2c1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4210847,PF-00489791,CCOCCn1nc(C(=O)NS(C)(=O)=O)c2nc(N(C)CC)nc(Nc3cc(C)ccn3)c21,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297214,PRALICIGUAT,OC(CNc1nc(-c2cc(-c3ccon3)n(Cc3ccccc3F)n2)ncc1F)(C(F)(F)F)C(F)(F)F,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297287,HT-0712,COc1ccc([C@H]2CNC(=O)[C@H](Cc3cccc(C)c3)C2)cc1OC1CCCC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297356,AZD-8848,CCCCOc1nc(N)c2[nH]c(=O)n(CCCN(CCCN3CCOCC3)Cc3cccc(CC(=O)OC)c3)c2n1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297447,TRV-120027,CC[C@H](C)[C@H](NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@@H](NC(=O)[C@H](CCCNC(=N)N)NC(=O)CNC)C(C)C)C(=O)N[C@@H](Cc1cnc[nH]1)C(=O)N1CCC[C@H]1C(=O)N[C@H](C)C(=O)O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297460,DOVRAMILAST,CCOc1cc([C@@H](CS(C)(=O)=O)N2Cc3cccc(NC(=O)C4CC4)c3C2=O)ccc1OC,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297492,GSK-2245035,CCC[C@H](C)Oc1nc(N)c2[nH]c(=O)n(CCCCCN3CCCCC3)c2n1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297520,OGLEMILAST,CS(=O)(=O)Nc1ccc2oc3c(OC(F)F)ccc(C(=O)Nc4c(Cl)cncc4Cl)c3c2c1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297527,REVAMILAST,O=C(Nc1c(Cl)c[n+]([O-])cc1Cl)c1ccc(OC(F)F)c2oc3ccncc3c12,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297616,OLINCIGUAT,NC(=O)[C@](O)(CNc1nc(-c2cc(-c3ccon3)n(Cc3ccccc3F)n2)ncc1F)C(F)(F)F,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297776,LEFITOLIMOD,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297993,EMD-1201081,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297994,TILSOTOLIMOD SODIUM,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4297995,BAZLITORAN,,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL432162,TASOSARTAN,Cc1nc(C)c2c(n1)N(Cc1ccc(-c3ccccc3-c3nnn[nH]3)cc1)C(=O)CC2,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL440498,CTS-1027,O=C(NO)C1(CS(=O)(=O)c2ccc(Oc3ccc(Cl)cc3)cc2)CCOCC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4594254,SIMPINICLINE,C(=C/[C@H]1CCNC1)\c1cncnc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4650322,RUNCACIGUAT,C[C@H]([C@H](C(=O)Nc1cc([C@@H](CC(=O)O)C2CC2)ccc1Cl)c1ccc(Cl)cc1)C(F)(F)F,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL467084,LANICEMINE,N[C@@H](Cc1ccccn1)c1ccccc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL4802159,ENPATORAN,N#Cc1ccc(N2C[C@H](N)C[C@H](C(F)(F)F)C2)c2cccnc12,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL482968,ENMD-2076,Cc1cc(Nc2cc(N3CCN(C)CC3)nc(/C=C/c3ccccc3)n2)n[nH]1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL483465,ELRAGLUSIB,Cn1cc(C2=C(c3coc4ccc(F)cc34)C(=O)NC2=O)c2cc3c(cc21)OCO3,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL485629,MK-0873,O=C(NC1CC1)c1cn(-c2cccc(C#Cc3ccc[n+]([O-])c3)c2)c2ncccc2c1=O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL5170587,VK5211,N#Cc1ccc(N2CCC[C@@H]2[C@@H](O)C(F)(F)F)cc1C(F)(F)F,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL52885,ENMD-981693,Cn1cc(C2=C(c3cn(C)c4cc([N+](=O)[O-])ccc34)C(=O)NC2=O)c2ccccc21,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL5314391,XL-999,CCN1CCC(Nc2ccc3c(c2)/C(=C(\c2cccc(F)c2)c2nc(C)c[nH]2)C(=O)N3)CC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL5314393,LY2624803,CC(C)(CN1CCN(C2=Nc3ccccc3Oc3ccccc32)CC1)C(=O)O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL5314400,DWP05195,FC(F)(F)c1cccnc1-c1ccc(-c2nc3ccc(Br)cc3[nH]2)nc1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL549344,CPG-52852,CCc1nc2c(N)nc3ccccc3c2n1CCCCNS(C)(=O)=O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL570015,GSK-256066,COc1cccc(Nc2c(C(N)=O)cnc3c(C)cc(S(=O)(=O)c4cccc(C(=O)N(C)C)c4)cc23)c1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL591501,PF-03049423,CCCOCCn1c(=O)c(N2CCN(CCO)CC2)nc2cnc(-c3ccc(OC)nc3)cc21,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL605525,DP001,C=C1[C@H](O)CC(=C/C=C2\CCC[C@]3(C)[C@@H]([C@@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@H]1O,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL63,ROLIPRAM,COc1ccc(C2CNC(=O)C2)cc1OC1CCCC1,2.0,0,0,2.0,0,pathway_drug_candidates
+CHEMBL1088752,LOSMAPIMOD,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL1201010,FLUDROCORTISONE ACETATE,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,1.5,0,0,,1,known_drugs;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1201438,ALDESLEUKIN,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL1201823,ABATACEPT,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL1422,SITAGLIPTIN,,1.5,0,0,,1,known_drugs
+CHEMBL1431,METFORMIN,,1.5,0,0,,1,known_drugs
+CHEMBL1643,RIBAVIRIN,NC(=O)c1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)n1,1.5,0,0,,1,known_drugs;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1743033,ITOLIZUMAB,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL191413,REPARIXIN,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL23,DILTIAZEM,,1.5,0,0,,1,known_drugs
+CHEMBL2364655,EVOLOCUMAB,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL269732,TACROLIMUS ANHYDROUS,,1.5,0,0,,1,known_drugs
+CHEMBL3544984,TRADIPITANT,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL3545189,LANADELUMAB,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL3900409,BRENSOCATIB,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL41,FLUOXETINE,,1.5,0,0,,1,known_drugs
+CHEMBL4297717,CD24FC,,1.5,0,0,,1,known_drugs;mechanism_of_actions
+CHEMBL429910,DAPAGLIFLOZIN,CCOc1ccc(Cc2cc([C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)ccc2Cl)cc1,1.5,0,0,,1,known_drugs;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL434394,NEBIVOLOL,,1.5,0,0,,1,known_drugs
+CHEMBL451930,PLITIDEPSIN,CC[C@H](C)[C@H]1NC(=O)[C@@H](NC(=O)[C@@H](CC(C)C)N(C)C(=O)[C@@H]2CCCN2C(=O)C(C)=O)[C@@H](C)OC(=O)[C@H](Cc2ccc(OC)cc2)N(C)C(=O)[C@@H]2CCCN2C(=O)[C@H](CC(C)C)NC(=O)[C@@H](C)C(=O)[C@H](C(C)C)OC(=O)C[C@@H]1O,1.5,0,0,,1,known_drugs;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL71,CHLORPROMAZINE,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21,1.5,0,0,,1,known_drugs;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL814,FLUVOXAMINE,,1.5,0,0,,1,known_drugs
+CHEMBL960,LEFLUNOMIDE,Cc1oncc1C(=O)Nc1ccc(C(F)(F)F)cc1,1.5,0,0,,1,known_drugs;mechanism_drug_candidate;mechanism_of_actions
+CHEMBL1170,TESTOSTERONE PROPIONATE,CCC(=O)O[C@H]1CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3CC[C@]12C,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL1200988,METHANTHELINE BROMIDE,CC[N+](C)(CC)CCOC(=O)C1c2ccccc2Oc2ccccc21.[Br-],1.0,0,0,1.0,0,pathway_drug_candidates;mechanism_drug_candidate
+CHEMBL1614710,OSI-930,O=C(Nc1ccc(OC(F)(F)F)cc1)c1sccc1NCc1ccnc2ccccc12,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL1738757,REBASTINIB,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3cc(C(C)(C)C)nn3-c3ccc4ncccc4c3)c(F)c2)ccn1,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL17976,RESINIFERATOXIN,C=C(C)[C@]12C[C@@H](C)[C@@]34O[C@](Cc5ccccc5)(O[C@@H]1[C@@H]3C=C(COC(=O)Cc1ccc(O)c(OC)c1)C[C@]1(O)C(=O)C(C)=C[C@@H]41)O2,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL1908397,KW-2449,O=C(c1ccc(/C=C/c2n[nH]c3ccccc23)cc1)N1CCNCC1,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL1980391,RG-1530,COc1cc2c(cc1F)C(c1ccccc1Cl)=Nc1c(n[nH]c1C)N2,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL2109325,AMG-191,,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL2180604,TAK-593,Cc1cc(C(=O)Nc2cc(Oc3ccc4nc(NC(=O)C5CC5)cn4n3)ccc2C)n(C)n1,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL2346976,AZD3514,CC(=O)N1CCN(CCOc2ccc(C3CCN(C4=Nn5c(nnc5C(F)(F)F)CC4)CC3)cc2)CC1,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL2364618,MAVATREP,CC(C)(O)c1ccccc1-c1ccc2[nH]c(/C=C/c3ccc(C(F)(F)F)cc3)nc2c1,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL284121,ILX23-7553,C=C1/C(=C\C=C2/CCC[C@]3(C)C([C@H](C)CC#CC(C)(C)O)=CC[C@@H]23)C[C@@H](O)C[C@@H]1O,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL3545046,GSK2849466,,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL3545085,XL-228,CC(C)c1cc(CNc2nc(Nc3cc(C4CC4)[nH]n3)cc(N3CCN(C)CC3)n2)on1,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL3545155,JI-101,COc1ccc(Br)cc1NC(=O)Nc1cccc2c1ccn2Cc1ccnc(N)c1,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL3545237,HE3235,C#C[C@]1(O)CCC2C3CCC4CC(O)CC[C@]4(C)C3CC[C@@]21C,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL37676,APC-100,Cc1c(C)c2c(c(C)c1O)CCC(C)(C)O2,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL420,GUANABENZ,N=C(N)N/N=C/c1c(Cl)cccc1Cl,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL4297631,TELRATOLIMOD,CCCCCCCCCCCCCCCCCC(=O)NCCCCOn1c(CCCC)nc2c(N)nc3ccccc3c21,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL504652,TC-2216,c1cncc(N2CCC3(CCCN3)C2)c1,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL5314408,AZD-0424,CC(=O)N1CCN(CCOc2cc(OC(C)C)c3c(Nc4c(Cl)cnc5c4OCO5)ncnc3c2)CC1,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL559180,ISOXSUPRINE HYDROCHLORIDE,CC(COc1ccccc1)NC(C)C(O)c1ccc(O)cc1.Cl,1.0,0,0,1.0,0,pathway_drug_candidates
+CHEMBL1108,DROPERIDOL,O=C(CCCN1CC=C(n2c(=O)[nH]c3ccccc32)CC1)c1ccc(F)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1112,ARIPIPRAZOLE,O=C1CCc2ccc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)cc2N1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1136,TELITHROMYCIN,CC[C@H]1OC(=O)[C@H](C)C(=O)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(OC)C[C@@H](C)C(=O)[C@H](C)[C@H]2N(CCCCn3cnc(-c4cccnc4)c3)C(=O)O[C@]12C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL114,SAQUINAVIR,CC(C)(C)NC(=O)[C@@H]1C[C@@H]2CCCC[C@@H]2CN1C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)[C@H](CC(N)=O)NC(=O)c1ccc2ccccc2n1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL116,AMPRENAVIR,CC(C)CN(C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)O[C@H]1CCOC1)S(=O)(=O)c1ccc(N)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL12,DIAZEPAM,CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200342,PARAMETHASONE ACETATE,CC(=O)OCC(=O)[C@@]1(O)[C@H](C)C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200376,BETAMETHASONE BENZOATE,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(OC(=O)c1ccccc1)C(=O)CO,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200419,MOLINDONE HYDROCHLORIDE,CCc1c(C)[nH]c2c1C(=O)C(CN1CCOCC1)CC2.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200420,MIDAZOLAM HYDROCHLORIDE,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200449,TRIAMCINOLONE DIACETATE,CC(=O)OCC(=O)[C@@]1(O)[C@H](OC(C)=O)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200463,OXAPROZIN POTASSIUM,O=C([O-])CCc1nc(-c2ccccc2)c(-c2ccccc2)o1.[K+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200469,PROMAZINE HYDROCHLORIDE,CN(C)CCCN1c2ccccc2Sc2ccccc21.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200472,QUAZEPAM,Fc1ccccc1C1=NCC(=S)N(CC(F)(F)F)c2ccc(Cl)cc21,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200474,DEMECLOCYCLINE HYDROCHLORIDE,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)ccc(Cl)c4[C@@H](O)[C@H]3C[C@@H]12.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200492,NEFAZODONE HYDROCHLORIDE,CCc1nn(CCCN2CCN(c3cccc(Cl)c3)CC2)c(=O)n1CCOc1ccccc1.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200506,ERYTHROMYCIN LACTOBIONATE,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O.O=C(O)[C@H](O)[C@@H](O)[C@H](O[C@@H]1O[C@H](CO)[C@H](O)[C@H](O)[C@H]1O)[C@H](O)CO,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200510,ERYTHROMYCIN STEARATE,CCCCCCCCCCCCCCCCCC(=O)O.CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200531,ALFENTANIL HYDROCHLORIDE,CCC(=O)N(c1ccccc1)C1(COC)CCN(CCn2nnn(CC)c2=O)CC1.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200542,DESOXYCORTICOSTERONE ACETATE,CC(=O)OCC(=O)[C@H]1CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3CC[C@]12C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200543,ANILERIDINE PHOSPHATE,CCOC(=O)C1(c2ccccc2)CCN(CCc2ccc(N)cc2)CC1.O=P(O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200562,HYDROCORTISONE VALERATE,CCCCC(=O)O[C@]1(C(=O)CO)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200563,CERIVASTATIN SODIUM,COCc1c(C(C)C)nc(C(C)C)c(/C=C/[C@@H](O)C[C@@H](O)CC(=O)[O-])c1-c1ccc(F)cc1.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200578,THEOPHYLLINE SODIUM GLYCINATE,Cn1c(=O)c2[nH]cnc2n(C)c1=O.NCC(=O)[O-].[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200588,CLINDAMYCIN HYDROCHLORIDE,CCC[C@@H]1C[C@@H](C(=O)N[C@@H]([C@H]2O[C@H](SC)[C@H](O)[C@@H](O)[C@H]2O)[C@H](C)Cl)N(C)C1.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200592,DESOXYCORTICOSTERONE PIVALATE,CC(C)(C)C(=O)OCC(=O)[C@H]1CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3CC[C@]12C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200599,DIFENOXIN HYDROCHLORIDE,Cl.N#CC(CCN1CCC(C(=O)O)(c2ccccc2)CC1)(c1ccccc1)c1ccccc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200632,CLINDAMYCIN PALMITATE HYDROCHLORIDE,CCCCCCCCCCCCCCCC(=O)O[C@@H]1[C@@H](O)[C@@H](O)[C@@H]([C@H](NC(=O)[C@@H]2C[C@@H](CCC)CN2C)[C@H](C)Cl)O[C@@H]1SC.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200635,HYDROCORTAMATE HYDROCHLORIDE,CCN(CC)CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200636,CYCLOBENZAPRINE HYDROCHLORIDE,CN(C)CCC=C1c2ccccc2C=Cc2ccccc21.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200649,QUINUPRISTIN,CC[C@H]1NC(=O)[C@@H](NC(=O)c2ncccc2O)[C@@H](C)OC(=O)[C@H](c2ccccc2)NC(=O)[C@@H]2CC(=O)[C@H](CS[C@@H]3CN4CCC3CC4)CN2C(=O)[C@H](Cc2ccc(N(C)C)cc2)N(C)C(=O)[C@@H]2CCCN2C1=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200678,ATAZANAVIR SULFATE,COC(=O)N[C@H](C(=O)N[C@@H](Cc1ccccc1)[C@@H](O)CN(Cc1ccc(-c2ccccn2)cc1)NC(=O)[C@@H](NC(=O)OC)C(C)(C)C)C(C)(C)C.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200688,ERYTHROMYCIN ETHYLSUCCINATE,CCOC(=O)CCC(=O)O[C@H]1[C@H](O[C@@H]2[C@@H](C)[C@H](O[C@H]3C[C@@](C)(OC)[C@@H](O)[C@H](C)O3)[C@@H](C)C(=O)O[C@H](CC)[C@@](C)(O)[C@H](O)[C@@H](C)C(=O)[C@H](C)C[C@@]2(C)O)O[C@H](C)C[C@@H]1N(C)C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200703,CHLORDIAZEPOXIDE HYDROCHLORIDE,CNC1=Nc2ccc(Cl)cc2C(c2ccccc2)=[N+]([O-])C1.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200729,CHLORAMPHENICOL SODIUM SUCCINATE,O=C([O-])CCC(=O)OC[C@@H](NC(=O)C(Cl)Cl)[C@H](O)c1ccc([N+](=O)[O-])cc1.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200732,AMCINONIDE,CC(=O)OCC(=O)[C@@]12OC3(CCCC3)O[C@@H]1C[C@H]1[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]12C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200734,FOSAMPRENAVIR CALCIUM,CC(C)CN(C[C@@H](OP(=O)([O-])[O-])[C@H](Cc1ccccc1)NC(=O)O[C@H]1CCOC1)S(=O)(=O)c1ccc(N)cc1.[Ca+2],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200774,FLUPREDNISOLONE,C[C@]12C=CC(=O)C=C1[C@@H](F)C[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200790,METHYPRYLON,CCC1(CC)C(=O)NCC(C)C1=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200798,TRAZODONE HYDROCHLORIDE,Cl.O=c1n(CCCN2CCN(c3cccc(Cl)c3)CC2)nc2ccccn12,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200802,TALBUTAL,C=CCC1(C(C)CC)C(=O)NC(=O)NC1=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200817,LEVOMETHADYL ACETATE HYDROCHLORIDE,CC[C@H](OC(C)=O)C(C[C@H](C)N(C)C)(c1ccccc1)c1ccccc1.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200831,SPIRAPRIL HYDROCHLORIDE,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1CC2(C[C@H]1C(=O)O)SCCS2.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200877,FLUMETHASONE PIVALATE,C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)COC(=O)C(C)(C)C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200881,MINOCYCLINE HYDROCHLORIDE,CN(C)c1ccc(O)c2c1C[C@H]1C[C@H]3[C@H](N(C)C)C(O)=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C2=O.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200901,HALOFANTRINE HYDROCHLORIDE,CCCCN(CCCC)CCC(O)c1cc2c(Cl)cc(Cl)cc2c2cc(C(F)(F)F)ccc12.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200903,SECOBARBITAL SODIUM,C=CCC1(C(C)CCC)C(=O)[N-]C(=O)NC1=O.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200909,PREDNISOLONE TEBUTATE,CC(C)(C)CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200916,THIORIDAZINE HYDROCHLORIDE,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1S2.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200937,DALFOPRISTIN,CCN(CC)CCS(=O)(=O)[C@@H]1CCN2C(=O)c3coc(n3)CC(=O)C[C@H](O)/C=C(C)/C=C/CNC(=O)/C=C/[C@@H](C)[C@@H](C(C)C)OC(=O)[C@@H]12,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200948,TRIMIPRAMINE MALEATE,CC(CN(C)C)CN1c2ccccc2CCc2ccccc21.O=C(O)/C=C\C(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200968,HYDROCORTISONE SODIUM PHOSPHATE,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COP(=O)([O-])[O-].[Na+].[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200975,CLOCORTOLONE PIVALATE,C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(Cl)[C@@H](O)C[C@]2(C)[C@H]1C(=O)COC(=O)C(C)(C)C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200982,BUTABARBITAL SODIUM,CCC(C)C1(CC)C(=O)[N-]C(=O)NC1=O.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1200986,HALOPERIDOL DECANOATE,CCCCCCCCCC(=O)OC1(c2ccc(Cl)cc2)CCN(CCCC(=O)c2ccc(F)cc2)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201,THIOTHIXENE,CN1CCN(CC/C=C2/c3ccccc3Sc3ccc(S(=O)(=O)N(C)C)cc32)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201047,ANILERIDINE HYDROCHLORIDE,CCOC(=O)C1(c2ccccc2)CCN(CCc2ccc(N)cc2)CC1.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201051,CIMETIDINE HYDROCHLORIDE,CN/C(=N\CCSCc1nc[nH]c1C)NC#N.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201052,MESORIDAZINE BESYLATE,CN1CCCCC1CCN1c2ccccc2Sc2ccc([S+](C)[O-])cc21.O=S(=O)(O)c1ccccc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201060,LOXAPINE HYDROCHLORIDE,CN1CCN(C2=Nc3ccccc3Oc3ccc(Cl)cc32)CC1.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201064,FLUOROMETHOLONE ACETATE,CC(=O)O[C@]1(C(C)=O)CC[C@H]2[C@@H]3C[C@H](C)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201065,THIAMYLAL SODIUM,C=CCC1(C(C)CCC)C(=O)[N-]C(=S)NC1=O.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201071,TETRACYCLINE PHOSPHATE COMPLEX,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3C[C@@H]12.O=P(O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201120,REMIFENTANIL HYDROCHLORIDE,CCC(=O)N(c1ccccc1)C1(C(=O)OC)CCN(CCC(=O)OC)CC1.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201127,DARUNAVIR ETHANOLATE,CC(C)CN(C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)O[C@H]1CO[C@H]2OCC[C@H]21)S(=O)(=O)c1ccc(N)cc1.CCO,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201155,LOXAPINE SUCCINATE,CN1CCN(C2=Nc3ccccc3Oc3ccc(Cl)cc32)CC1.O=C(O)CCC(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201174,SITAGLIPTIN PHOSPHATE,N[C@@H](CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F.O.O=P(O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201743,SAXAGLIPTIN HYDROCHLORIDE,Cl.N#C[C@@H]1C[C@@H]2C[C@@H]2N1C(=O)[C@@H](N)C12CC3CC(CC(O)(C3)C1)C2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1201782,FOSAPREPITANT DIMEGLUMINE,CNC[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.CNC[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO.C[C@@H](O[C@H]1OCCN(Cc2nn(P(=O)(O)O)c(=O)[nH]2)[C@H]1c1ccc(F)cc1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1205,NELFINAVIR MESYLATE,CS(=O)(=O)O.Cc1c(O)cccc1C(=O)N[C@@H](CSc1ccccc1)[C@H](O)CN1C[C@H]2CCCC[C@H]2C[C@H]1C(=O)NC(C)(C)C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1237072,DIRITHROMYCIN,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)[C@@H]2N[C@@H](COCCOC)O[C@H]([C@H]2C)[C@]1(C)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1257,ENFLURANE,FC(F)OC(F)(F)C(F)Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1257040,TRIFLUOPERAZINE HYDROCHLORIDE,CN1CCN(CCCN2c3ccccc3Sc3ccc(C(F)(F)F)cc32)CC1.Cl.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1259059,SOFOSBUVIR,CC(C)OC(=O)[C@H](C)N[P@](=O)(OC[C@H]1O[C@@H](n2ccc(=O)[nH]c2=O)[C@](C)(F)[C@@H]1O)Oc1ccccc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL126,LINEZOLID,CC(=O)NC[C@H]1CN(c2ccc(N3CCOCC3)c(F)c2)C(=O)O1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL130,CHLORAMPHENICOL,O=C(N[C@H](CO)[C@H](O)c1ccc([N+](=O)[O-])cc1)C(Cl)Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1323,DARUNAVIR,CC(C)CN(C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)O[C@H]1CO[C@H]2OCC[C@H]21)S(=O)(=O)c1ccc(N)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL13280,FLUNITRAZEPAM,CN1C(=O)CN=C(c2ccccc2F)c2cc([N+](=O)[O-])ccc21,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL13376,CLOMETACIN,COc1ccc2c(C(=O)c3ccc(Cl)cc3)c(C)n(CC(=O)O)c2c1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1357648,AMODIAQUINE HYDROCHLORIDE,CCN(CC)Cc1cc(Nc2ccnc3cc(Cl)ccc23)ccc1O.Cl.Cl.O.O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1375743,ZIPRASIDONE HYDROCHLORIDE,Cl.O.O=C1Cc2cc(CCN3CCN(c4nsc5ccccc45)CC3)c(Cl)cc2N1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1423,PIMOZIDE,O=c1[nH]c2ccccc2n1C1CCN(CCCC(c2ccc(F)cc2)c2ccc(F)cc2)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL142703,VILDAGLIPTIN,N#C[C@@H]1CCCN1C(=O)CNC12CC3CC(CC(O)(C3)C1)C2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL14376,ILOPERIDONE,COc1cc(C(C)=O)ccc1OCCCN1CCC(c2noc3cc(F)ccc23)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1440,TETRACYCLINE,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3C[C@@H]12,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1446,KANAMYCIN SULFATE,NC[C@H]1O[C@H](O[C@H]2[C@H](O)[C@@H](O[C@H]3O[C@H](CO)[C@@H](O)[C@H](N)[C@H]3O)[C@H](N)C[C@@H]2N)[C@H](O)[C@@H](O)[C@@H]1O.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1447,LINCOMYCIN,CCC[C@@H]1C[C@@H](C(=O)N[C@@H]([C@H]2O[C@H](SC)[C@H](O)[C@@H](O)[C@H]2O)[C@@H](C)O)N(C)C1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1471,APREPITANT,C[C@@H](O[C@H]1OCCN(Cc2n[nH]c(=O)[nH]2)[C@H]1c1ccc(F)cc1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1483,ALBENDAZOLE,CCCSc1ccc2[nH]c(NC(=O)OC)nc2c1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1489,AZACITIDINE,Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c(=O)n1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1517,OXYTETRACYCLINE,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3[C@H](O)[C@@H]12,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1522,ESZOPICLONE,CN1CCN(C(=O)O[C@H]2c3nccnc3C(=O)N2c2ccc(Cl)cn2)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL15677,FENCLOFENAC,O=C(O)Cc1ccccc1Oc1ccc(Cl)cc1Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1568698,GANAXOLONE,CC(=O)[C@H]1CC[C@H]2[C@@H]3CC[C@H]4C[C@](C)(O)CC[C@]4(C)[C@H]3CC[C@]12C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1607480,OXYTETRACYCLINE HYDROCHLORIDE,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3[C@H](O)[C@@H]12.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1615372,LURASIDONE HYDROCHLORIDE,Cl.O=C1[C@@H]2[C@H]3CC[C@H](C3)[C@@H]2C(=O)N1C[C@@H]1CCCC[C@H]1CN1CCN(c2nsc3ccccc23)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1621,PALIPERIDONE,Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1689,TOLAZOLINE HYDROCHLORIDE,Cl.c1ccc(CC2=NCCN2)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1713,CHLORPROMAZINE HYDROCHLORIDE,CN(C)CCCN1c2ccccc2Sc2ccc(Cl)cc21.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1735,INDINAVIR SULFATE,CC(C)(C)NC(=O)[C@@H]1CN(Cc2cccnc2)CCN1C[C@@H](O)C[C@@H](Cc1ccccc1)C(=O)N[C@H]1c2ccccc2C[C@H]1O.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1741,CLARITHROMYCIN,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(OC)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1742471,EBROTIDINE,NC(N)=Nc1nc(CSCCN/C=N/S(=O)(=O)c2ccc(Br)cc2)cs1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1764,LEVOMEPROMAZINE,COc1ccc2c(c1)N(C[C@H](C)CN(C)C)c1ccccc1S2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1770248,ERTUGLIFLOZIN,CCOc1ccc(Cc2cc([C@]34OC[C@](CO)(O3)[C@@H](O)[C@H](O)[C@H]4O)ccc2Cl)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1773,CAPECITABINE,CCCCCOC(=O)Nc1nc(=O)n([C@@H]2O[C@H](C)[C@@H](O)[C@H]2O)cc1F,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1779710,EVOGLIPTIN,CC(C)(C)OC[C@@H]1C(=O)NCCN1C(=O)C[C@H](N)Cc1cc(F)c(F)cc1F,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL178803,BLONANSERIN,CCN1CCN(c2cc(-c3ccc(F)cc3)c3c(n2)CCCCCC3)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1808388,BEXAGLIFLOZIN,OC[C@H]1O[C@@H](c2ccc(Cl)c(Cc3ccc(OCCOC4CC4)cc3)c2)[C@H](O)[C@@H](O)[C@@H]1O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL185,FLUOROURACIL,O=c1[nH]cc(F)c(=O)[nH]1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1929396,ANAGLIPTIN,Cc1cc2ncc(C(=O)NCC(C)(C)NCC(=O)N3CCC[C@H]3C#N)cn2n1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL1951095,ERAVACYCLINE,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)c(NC(=O)CN5CCCC5)cc(F)c4C[C@H]3C[C@@H]12,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2018096,IPRAGLIFLOZIN,OC[C@H]1O[C@@H](c2ccc(F)c(Cc3cc4ccccc4s3)c2)[C@H](O)[C@@H](O)[C@@H]1O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2023895,HYDROXYSTILBAMIDINE ISETHIONATE,N=C(N)c1ccc(/C=C/c2ccc(C(=N)N)cc2O)cc1.O=S(=O)(O)CCO.O=S(=O)(O)CCO,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL206253,NETUPITANT,Cc1ccccc1-c1cc(N2CCN(C)CC2)ncc1N(C)C(=O)C(C)(C)c1cc(C(F)(F)F)cc(C(F)(F)F)c1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL207538,BREXANOLONE,CC(=O)[C@H]1CC[C@H]2[C@@H]3CC[C@H]4C[C@H](O)CC[C@]4(C)[C@H]3CC[C@]12C,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2096631,CLORAZEPATE DIPOTASSIUM,O=C([O-])C1N=C(c2ccccc2)c2cc(Cl)ccc2NC1=O.[K+].[K+].[OH-],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2103802,DAPAGLIFLOZIN PROPANEDIOL,CCOc1ccc(Cc2cc([C@@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3O)ccc2Cl)cc1.C[C@H](O)CO.O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2103854,OMADACYCLINE TOSYLATE,CN(C)c1cc(CNCC(C)(C)C)c(O)c2c1C[C@H]1C[C@H]3[C@H](N(C)C)C(O)=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C2=O.Cc1ccc(S(=O)(=O)O)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2105527,TETRAZEPAM,CN1C(=O)CN=C(C2=CCCCC2)c2cc(Cl)ccc21,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2105629,VINFLUNINE DITARTRATE,CC[C@]12C=CCN3CC[C@@]4(c5cc([C@@]6(C(=O)OC)C[C@@H]7C[C@@H](C(C)(F)F)CN(Cc8c6[nH]c6ccccc86)C7)c(OC)cc5N(C)[C@H]4[C@@](O)(C(=O)OC)[C@@H]1OC(C)=O)[C@@H]32.O=C(O)C(O)C(O)C(=O)O.O=C(O)C(O)C(O)C(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2105669,TEDIZOLID PHOSPHATE,Cn1nnc(-c2ccc(-c3ccc(N4C[C@H](COP(=O)(O)O)OC4=O)cc3F)cn2)n1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2105711,TOFOGLIFLOZIN,CCc1ccc(Cc2ccc3c(c2)[C@]2(OC3)O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)cc1.O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2105754,TRELAGLIPTIN SUCCINATE,Cn1c(=O)cc(N2CCC[C@@H](N)C2)n(Cc2cc(F)ccc2C#N)c1=O.O=C(O)CCC(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2105760,BREXPIPRAZOLE,O=c1ccc2ccc(OCCCCN3CCN(c4cccc5sccc45)CC3)cc2[nH]1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2105762,OMARIGLIPTIN,CS(=O)(=O)n1cc2c(n1)CN([C@H]1CO[C@H](c3cc(F)ccc3F)[C@@H](N)C1)C2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2106829,METHAQUALONE HYDROCHLORIDE,Cc1ccccc1-n1c(C)nc2ccccc2c1=O.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2107360,PALIPERIDONE PALMITATE,CCCCCCCCCCCCCCCC(=O)OC1CCCn2c1nc(C)c(CCN1CCC(c3noc4cc(F)ccc34)CC1)c2=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2107830,EMPAGLIFLOZIN,OC[C@H]1O[C@@H](c2ccc(Cl)c(Cc3ccc(O[C@H]4CCOC4)cc3)c2)[C@H](O)[C@@H](O)[C@@H]1O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2146063,CHLORTETRACYCLINE HYDROCHLORIDE,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)ccc(Cl)c4[C@@](C)(O)[C@H]3C[C@@H]12.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2146123,METHACYCLINE HYDROCHLORIDE,C=C1c2cccc(O)c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@H]12.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2147777,TENELIGLIPTIN,Cc1cc(N2CCN([C@@H]3CN[C@H](C(=O)N4CCSC4)C3)CC2)n(-c2ccccc2)n1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2206196,PAROMOMYCIN SULFATE,NC[C@@H]1O[C@H](O[C@H]2[C@@H](O)[C@H](O[C@@H]3[C@@H](O)[C@H](N)C[C@H](N)[C@H]3O[C@H]3O[C@H](CO)[C@@H](O)[C@H](O)[C@H]3N)O[C@@H]2CO)[C@H](N)[C@@H](O)[C@@H]1O.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL221722,FAVIPIRAVIR,NC(=O)c1nc(F)cnc1O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2218877,ERYTHROMYCIN ESTOLATE,CCC(=O)O[C@H]1[C@H](O[C@@H]2[C@@H](C)[C@H](O[C@H]3C[C@@](C)(OC)[C@@H](O)[C@H](C)O3)[C@@H](C)C(=O)O[C@H](CC)[C@@](C)(O)[C@H](O)[C@@H](C)C(=O)[C@H](C)C[C@@]2(C)O)O[C@H](C)C[C@@H]1N(C)C.CCCCCCCCCCCCOS(=O)(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2219414,ERAVACYCLINE DIHYDROCHLORIDE,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)c(NC(=O)CN5CCCC5)cc(F)c4C[C@H]3C[C@@H]12.Cl.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2219425,ARIPIPRAZOLE LAUROXIL,CCCCCCCCCCCC(=O)OCN1C(=O)CCc2ccc(OCCCCN3CCN(c4cccc(Cl)c4Cl)CC3)cc21,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL222559,TIPRANAVIR,CCC[C@@]1(CCc2ccccc2)CC(O)=C([C@H](CC)c2cccc(NS(=O)(=O)c3ccc(C(F)(F)F)cn3)c2)C(=O)O1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL227529,ALOGLIPTIN BENZOATE,Cn1c(=O)cc(N2CCC[C@@H](N)C2)n(Cc2ccccc2C#N)c1=O.O=C(O)c1ccccc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2348780,VAMOROLONE,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)C3=CC[C@]2(C)[C@@]1(O)C(=O)CO,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2358147,CARPHENAZINE MALEATE,CCC(=O)c1ccc2c(c1)N(CCCN1CCN(CCO)CC1)c1ccccc1S2.O=C(O)/C=C\C(=O)O.O=C(O)/C=C\C(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2359966,QUININE SULFATE,C=C[C@H]1CN2CC[C@H]1C[C@H]2[C@H](O)c1ccnc2ccc(OC)cc12.C=C[C@H]1CN2CC[C@H]1C[C@H]2[C@H](O)c1ccnc2ccc(OC)cc12.O.O.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL2364623,PLAZOMICIN SULFATE,CN[C@@H]1[C@@H](O)[C@@H](O[C@@H]2[C@@H](O)[C@H](O[C@H]3OC(CNCCO)=CC[C@H]3N)[C@@H](N)C[C@H]2NC(=O)[C@@H](O)CCN)OC[C@]1(C)O.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL256907,MARAVIROC,Cc1nnc(C(C)C)n1[C@H]1C[C@H]2CC[C@@H](C1)N2CC[C@H](NC(=O)C1CCC(F)(F)CC1)c1ccccc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL261772,MECLOCYCLINE SULFOSALICYLATE,C=C1c2c(Cl)ccc(O)c2C(=O)C2=C(O)[C@]3(O)C(=O)C(C(N)=O)=C(O)[C@@H](N(C)C)[C@@H]3[C@@H](O)[C@H]12.O=C(O)c1cc(S(=O)(=O)O)ccc1O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL282042,SAQUINAVIR MESYLATE,CC(C)(C)NC(=O)[C@@H]1C[C@@H]2CCCC[C@@H]2CN1C[C@@H](O)[C@H](Cc1ccccc1)NC(=O)[C@H](CC(N)=O)NC(=O)c1ccc2ccccc2n1.CS(=O)(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL282052,METHAQUALONE,Cc1ccccc1-n1c(C)nc2ccccc2c1=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL285674,ESTAZOLAM,Clc1ccc2c(c1)C(c1ccccc1)=NCc1nncn1-2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL30219,METHOHEXITAL SODIUM,C=CCC1(C(C)C#CCC)C(=O)N=C([O-])N(C)C1=O.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3039507,SOTAGLIFLOZIN,CCOc1ccc(Cc2cc([C@@H]3O[C@H](SC)[C@@H](O)[C@H](O)[C@H]3O)ccc2Cl)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3184512,CLINDAMYCIN PHOSPHATE,CCC[C@@H]1C[C@@H](C(=O)N[C@@H]([C@H]2O[C@H](SC)[C@H](OP(=O)(O)O)[C@@H](O)[C@H]2O)[C@H](C)Cl)N(C)C1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3184791,STREPTOMYCIN SULFATE,CN[C@@H]1[C@H](O[C@H]2[C@H](O[C@H]3[C@H](O)[C@@H](O)[C@H](N=C(N)N)[C@@H](O)[C@@H]3N=C(N)N)O[C@@H](C)[C@]2(O)C=O)O[C@@H](CO)[C@H](O)[C@H]1O.CN[C@@H]1[C@H](O[C@H]2[C@H](O[C@H]3[C@H](O)[C@@H](O)[C@H](N=C(N)N)[C@@H](O)[C@@H]3N=C(N)N)O[C@@H](C)[C@]2(O)C=O)O[C@@H](CO)[C@H](O)[C@H]1O.O=S(=O)(O)O.O=S(=O)(O)O.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3188576,DIHYDROSTREPTOMYCIN SULFATE,CN[C@@H]1[C@H](O[C@H]2[C@H](O[C@H]3[C@H](O)[C@@H](O)[C@H](NC(=N)N)[C@@H](O)[C@@H]3NC(=N)N)O[C@@H](C)[C@]2(O)CO)O[C@@H](CO)[C@H](O)[C@H]1O.CN[C@@H]1[C@H](O[C@H]2[C@H](O[C@H]3[C@H](O)[C@@H](O)[C@H](NC(=N)N)[C@@H](O)[C@@H]3NC(=N)N)O[C@@H](C)[C@]2(O)CO)O[C@@H](CO)[C@H](O)[C@H]1O.O=S(=O)(O)O.O=S(=O)(O)O.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3188993,QUETIAPINE FUMARATE,O=C(O)/C=C/C(=O)O.OCCOCCN1CCN(C2=Nc3ccccc3Sc3ccccc32)CC1.OCCOCCN1CCN(C2=Nc3ccccc3Sc3ccccc32)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3306803,LUMATEPERONE,CN1CCN2c3c(cccc31)[C@@H]1CN(CCCC(=O)c3ccc(F)cc3)CC[C@@H]12,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL341812,IBUFENAC,CC(C)Cc1ccc(CC(=O)O)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3544974,ASENAPINE MALEATE,CN1CC2c3ccccc3Oc3ccc(Cl)cc3C2C1.O=C(O)/C=C\C(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3544985,DASABUVIR SODIUM MONOHYDRATE,COc1c(-c2ccc3cc(NS(C)(=O)=O)ccc3c2)cc(-n2ccc(=O)[n-]c2=O)cc1C(C)(C)C.O.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3545060,ERYTHROMYCIN GLUCEPTATE,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O.O=C(O)[C@H](O)[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3545309,LEFAMULIN ACETATE,C=C[C@]1(C)C[C@@H](OC(=O)CS[C@@H]2CC[C@@H](N)C[C@H]2O)[C@]2(C)[C@H](C)CC[C@]3(CCC(=O)[C@H]32)[C@@H](C)[C@@H]1O.CC(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3707330,ROLAPITANT HYDROCHLORIDE,C[C@@H](OC[C@@]1(c2ccccc2)CC[C@]2(CCC(=O)N2)CN1)c1cc(C(F)(F)F)cc(C(F)(F)F)c1.Cl.O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL376140,TIGECYCLINE,CN(C)c1cc(NC(=O)CNC(C)(C)C)c(O)c2c1C[C@H]1C[C@H]3[C@H](N(C)C)C(O)=C(C(N)=O)C(=O)[C@@]3(O)C(O)=C1C2=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL38827,LUMEFANTRINE,CCCCN(CCCC)CC(O)c1cc(Cl)cc2c1-c1ccc(Cl)cc1/C2=C/c1ccc(Cl)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989568,OXYTETRACYCLINE CALCIUM,CN(C)[C@@H]1C([O-])=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3[C@H](O)[C@@H]12.CN(C)[C@@H]1C([O-])=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3[C@H](O)[C@@H]12.[Ca+2],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989571,SPECTINOMYCIN HYDROCHLORIDE,CN[C@@H]1[C@H](O)[C@H](NC)[C@H]2O[C@@]3(O)C(=O)C[C@@H](C)O[C@H]3O[C@@H]2[C@H]1O.Cl.Cl.O.O.O.O.O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989694,OLANZAPINE PAMOATE,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCN(C)CC1.O.O=C(O)c1cc2ccccc2c(Cc2c(O)c(C(=O)O)cc3ccccc23)c1O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989724,FLURAZEPAM HYDROCHLORIDE,CCN(CC)CCN1C(=O)CN=C(c2ccccc2F)c2cc(Cl)ccc21.Cl.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989754,FLURBIPROFEN SODIUM,CC(C(=O)[O-])c1ccc(-c2ccccc2)c(F)c1.O.O.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989768,LEVORPHANOL TARTRATE,CN1CC[C@]23CCCC[C@H]2[C@H]1Cc1ccc(O)cc13.O.O.O=C(O)C(O)C(O)C(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989824,THIOTHIXENE HYDROCHLORIDE,CN1CCN(CC/C=C2/c3ccccc3Sc3ccc(S(=O)(=O)N(C)C)cc32)CC1.Cl.Cl.O.O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989829,NETILMICIN SULFATE,CCN[C@@H]1C[C@H](N)[C@@H](O[C@H]2OC(CN)=CC[C@H]2N)[C@H](O)[C@H]1O[C@H]1OC[C@](C)(O)[C@H](NC)[C@H]1O.CCN[C@@H]1C[C@H](N)[C@@H](O[C@H]2OC(CN)=CC[C@H]2N)[C@H](O)[C@H]1O[C@H]1OC[C@](C)(O)[C@H](NC)[C@H]1O.O=S(=O)(O)O.O=S(=O)(O)O.O=S(=O)(O)O.O=S(=O)(O)O.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989833,ZIPRASIDONE MESYLATE,CS(=O)(=O)O.O.O.O.O=C1Cc2cc(CCN3CCN(c4nsc5ccccc45)CC3)c(Cl)cc2N1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989919,FOSNETUPITANT CHLORIDE HYDROCHLORIDE,Cc1ccccc1-c1cc(N2CC[N+](C)(COP(=O)(O)O)CC2)ncc1N(C)C(=O)C(C)(C)c1cc(C(F)(F)F)cc(C(F)(F)F)c1.Cl.[Cl-],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL3989949,CENOBAMATE,NC(=O)O[C@@H](Cn1ncnn1)c1ccccc1Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL4105630,ZURANOLONE,C[C@@]1(O)CC[C@H]2[C@H](CC[C@@H]3[C@@H]2CC[C@]2(C)[C@@H](C(=O)Cn4cc(C#N)cn4)CC[C@@H]32)C1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL42,CLOZAPINE,CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL4208954,AMIKACIN SULFATE,NCC[C@H](O)C(=O)N[C@@H]1C[C@H](N)[C@@H](O[C@H]2O[C@H](CN)[C@@H](O)[C@H](O)[C@H]2O)[C@H](O)[C@H]1O[C@H]1O[C@H](CO)[C@@H](O)[C@H](N)[C@H]1O.O=S(=O)(O)O.O=S(=O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL4297147,HALOPERIDOL LACTATE,CC(O)C(=O)O.O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL448,PENTOBARBITAL,CCCC(C)C1(CC)C(=O)NC(=O)NC1=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL450,METHARBITAL,CCC1(CC)C(=O)NC(=O)N(C)C1=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL451,CHLORDIAZEPOXIDE,CNC1=Nc2ccc(Cl)cc2C(c2ccccc2)=[N+]([O-])C1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL452,CLONAZEPAM,O=C1CN=C(c2ccccc2Cl)c2cc([N+](=O)[O-])ccc2N1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL454,BUTALBITAL,C=CCC1(CC(C)C)C(=O)NC(=O)NC1=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL454950,TETRACYCLINE HYDROCHLORIDE,CN(C)[C@@H]1C(O)=C(C(N)=O)C(=O)[C@@]2(O)C(O)=C3C(=O)c4c(O)cccc4[C@@](C)(O)[C@H]3C[C@@H]12.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL4594217,CANAGLIFLOZIN,Cc1ccc([C@@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)cc1Cc1ccc(-c2ccc(F)cc2)s1.O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL4594301,REMIMAZOLAM BESYLATE,COC(=O)CC[C@@H]1N=C(c2ccccn2)c2cc(Br)ccc2-n2c(C)cnc21.O=S(=O)(O)c1ccccc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL4594382,DEURUXOLITINIB PHOSPHATE,O=P(O)(O)O.[2H]C1([2H])C([C@@H](CC#N)n2cc(-c3ncnc4[nH]ccc34)cn2)C([2H])([2H])C([2H])([2H])C1([2H])[2H],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL479,THIORIDAZINE,CSc1ccc2c(c1)N(CCC1CCCCN1C)c1ccccc1S2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL513,CARMUSTINE,O=NN(CCCl)C(=O)NCCCl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL515387,GOSOGLIPTIN,O=C([C@@H]1C[C@H](N2CCN(c3ncccn3)CC2)CN1)N1CCC(F)(F)C1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL526,PROPOFOL,CC(C)c1cccc(C(C)C)c1O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL529,AZITHROMYCIN,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)CN(C)[C@H](C)[C@@H](O)[C@]1(C)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL5315049,SITAGLIPTIN FUMARATE,N[C@@H](CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F.O=C(O)/C=C\C(=O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL5315054,ERTUGLIFLOZIN PIDOLATE,CCOc1ccc(Cc2cc([C@]34OC[C@](CO)(O3)[C@@H](O)[C@H](O)[C@H]4O)ccc2Cl)cc1.O=C1CC[C@@H](C(=O)O)N1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL532,ERYTHROMYCIN,CC[C@H]1OC(=O)[C@H](C)[C@@H](O[C@H]2C[C@@](C)(OC)[C@@H](O)[C@H](C)O2)[C@H](C)[C@@H](O[C@@H]2O[C@H](C)C[C@H](N(C)C)[C@H]2O)[C@](C)(O)C[C@@H](C)C(=O)[C@H](C)[C@@H](O)[C@]1(C)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL53292,ISOXICAM,Cc1cc(NC(=O)C2=C(O)c3ccccc3S(=O)(=O)N2C)no1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL535650,MEFLOQUINE HYDROCHLORIDE,Cl.OC(c1cc(C(F)(F)F)nc2c(C(F)(F)F)cccc12)C1CCCCN1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL54,HALOPERIDOL,O=C(CCCN1CCC(O)(c2ccc(Cl)cc2)CC1)c1ccc(F)cc1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL562,GRISEOFULVIN,COC1=CC(=O)C[C@@H](C)[C@]12Oc1c(Cl)c(OC)cc(OC)c1C2=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL566534,ARTEMETHER,CO[C@H]1O[C@@H]2O[C@@]3(C)CC[C@H]4[C@H](C)CC[C@@H]([C@H]1C)[C@@]24OO3,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL568,OXAZEPAM,O=C1Nc2ccc(Cl)cc2C(c2ccccc2)=NC1O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL580,LORAZEPAM,O=C1Nc2ccc(Cl)cc2C(c2ccccc2Cl)=NC1O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL58510,CHLOROQUINE PHOSPHATE,CCN(CC)CCCC(C)Nc1ccnc2cc(Cl)ccc12.O=P(O)(O)O.O=P(O)(O)O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL6067484,GENTAMICIN SULFATE,,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL6067972,VARENICLINE TARTRATE,O=C(O)[C@H](O)[C@@H](O)C(=O)O.c1cnc2cc3c(cc2n1)[C@@H]1CNC[C@H]3C1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL6067995,BEROTRALSTAT HYDROCHLORIDE,Cl.Cl.N#Cc1cccc([C@@H](NCC2CC2)c2ccc(F)c(NC(=O)c3cc(C(F)(F)F)nn3-c3cccc(CN)c3)c2)c1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL6068334,SITAGLIPTIN HYDROCHLORIDE MONOHYDRATE,Cl.N[C@@H](CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F.O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL6068336,MOMELOTINIB DIHYDROCHLORIDE MONOHYDRATE,Cl.Cl.N#CCNC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4)cc3)n2)cc1.O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL6068339,IRBESARTAN HYDROCHLORIDE,CCCCC1=NC2(CCCC2)C(=O)N1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1.Cl,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL625,THIABENDAZOLE,c1ccc2[nH]c(-c3cscn3)nc2c1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL646,TRIAZOLAM,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL655,MIDAZOLAM,Cc1ncc2n1-c1ccc(Cl)cc1C(c1ccccc1F)=NC2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL661,ALPRAZOLAM,Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL685,MEBENDAZOLE,COC(=O)Nc1nc2cc(C(=O)c3ccccc3)ccc2[nH]1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL70418,CLOBAZAM,CN1C(=O)CC(=O)N(c2ccccc2)c2cc(Cl)ccc21,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL715,OLANZAPINE,Cc1cc2c(s1)Nc1ccccc1N=C2N1CCN(C)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL729,LOPINAVIR,Cc1cccc(C)c1OCC(=O)N[C@@H](Cc1ccccc1)[C@@H](O)C[C@H](Cc1ccccc1)NC(=O)[C@H](C(C)C)N1CCCNC1=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL738,THIOPENTAL SODIUM,CCCC(C)C1(CC)C(=O)[N-]C(=S)NC1=O.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL803,CYTARABINE,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL831,LOXAPINE,CN1CCN(C2=Nc3ccccc3Oc3ccc(Cl)cc32)CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL85,RISPERIDONE,Cc1nc2n(c(=O)c1CCN1CCC(c3noc4cc(F)ccc34)CC1)CCCC2,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL856,PRIMIDONE,CCC1(c2ccccc2)C(=O)NCNC1=O,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL908,CHLORPROTHIXENE,CN(C)CC/C=C1/c2ccccc2Sc2ccc(Cl)cc21,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL931,HALOTHANE,FC(F)(F)C(Cl)Br,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL967,TEMAZEPAM,CN1C(=O)C(O)N=C(c2ccccc2)c2cc(Cl)ccc21,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL969,PRAZEPAM,O=C1CN=C(c2ccccc2)c2cc(Cl)ccc2N1CC1CC1,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL970,HALAZEPAM,O=C1CN=C(c2ccccc2)c2cc(Cl)ccc2N1CC(F)(F)F,0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL971,PENTOBARBITAL SODIUM,CCCC(C)C1(CC)C(=O)N=C([O-])NC1=O.[Na+],0.0,0,0,,0,mechanism_drug_candidate
+CHEMBL973,TERIFLUNOMIDE,C/C(O)=C(\C#N)C(=O)Nc1ccc(C(F)(F)F)cc1,0.0,0,0,,0,mechanism_drug_candidate

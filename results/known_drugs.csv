@@ -1,0 +1,2 @@
+chembl_id,preferred_name,trade_names,url,targets,mechanisms
+CHEMBL635,PREDNISONE,Cortan; Cortancyl; Decortisyl; Delta-dome; Deltasone; Fernisone; Liquid pred; Lodotra; Meticorten; Orasone; Paracort; Prednicen-m; Prednisone; Prednisone intensol; Rayos; Servisone; Sterapred,https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL635,p(HGNC:NR3C1),"bp(MOA:""Glucocorticoid receptor agonist"")"

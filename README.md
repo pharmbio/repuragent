@@ -10,8 +10,8 @@ Drug repurposing offers an efficient strategy to accelerate therapeutic discover
 
 
 
-### Demo Page:
-[RepurAgent Demo Page](https://repuragent.streamlit.app)
+### Demo Page with example output:
+[RepurAgent Demo Page](https://repuragent.streamlit.app) with example output for a COVID-19 repurposing.
 
 ### Core Agent Architecture
 

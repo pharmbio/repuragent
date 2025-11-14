@@ -45,8 +45,8 @@ COPY . .
 RUN chmod +x models/CPSign/cpsign-2.0.0-fatjar.jar 2>/dev/null || true
 RUN chmod -R 755 /app
 
-# Create a volume for persistent data
-VOLUME ["/app/data", "/app/results"]
+# Create volumes for persistent data and memory stores
+VOLUME ["/app/data", "/app/results", "/app/backend/memory"]
 
 # Expose Streamlit port
 EXPOSE 8501

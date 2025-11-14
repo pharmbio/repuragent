@@ -11,6 +11,7 @@ services:
       - ./data:/app/data
       - ./results:/app/results
       - ./.env:/app/.env
+      - ./backend/memory:/app/backend/memory
     environment:
       - PYTHONPATH=/app
     restart: unless-stopped

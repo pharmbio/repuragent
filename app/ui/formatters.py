@@ -178,6 +178,10 @@ def separate_agent_outputs(chunk, processed_message_ids, processed_content_hashe
                 processed_message_ids.add(msg_id)
                 continue
             
+            msg_role = getattr(msg, "role", None)
+            msg_type = getattr(msg, "type", None)
+            is_tool_result = (msg_role == "function") or (msg_type == "tool")
+
             # Content-based deduplication - check if we've seen similar content before
             content_to_check = ""
             
@@ -201,8 +205,9 @@ def separate_agent_outputs(chunk, processed_message_ids, processed_content_hashe
                         content_to_check += f"TOOL:{name}:{str(args)[:200]}"
             
             # Include function/tool response content
-            if getattr(msg, "role", None) == "function":
-                content_to_check += f"FUNC_RESULT:{msg.name}:{str(msg.content)[:200]}"
+            if is_tool_result:
+                result_label = "FUNC_RESULT" if msg_role == "function" else "TOOL_RESULT"
+                content_to_check += f"{result_label}:{getattr(msg, 'name', '')}:{str(getattr(msg, 'content', ''))[:200]}"
                 
             # Create content hash for deduplication 
             if content_to_check.strip():
@@ -233,7 +238,7 @@ def separate_agent_outputs(chunk, processed_message_ids, processed_content_hashe
                     processed_content_hashes.add(tool_only_hash)
 
             # Print AI and Tool messages content
-            if hasattr(msg, 'content') and msg.content:
+            if hasattr(msg, 'content') and msg.content and not is_tool_result:
                 if isinstance(msg.content, list):
                     for c in msg.content:
                         if isinstance(c, dict) and c.get("type") == "text":
@@ -251,8 +256,13 @@ def separate_agent_outputs(chunk, processed_message_ids, processed_content_hashe
                         agent_output += pretty_print_tool_call(name, args)
 
             # Tool response message (optional)
-            if getattr(msg, "role", None) == "function":
-                result_block = f"{msg.content}\n\n"
+            if is_tool_result:
+                raw_content = getattr(msg, "content", "")
+                if isinstance(raw_content, (dict, list)):
+                    formatted = json.dumps(raw_content, indent=2)
+                    result_block = f"```json\n{formatted}\n```\n\n"
+                else:
+                    result_block = f"{raw_content}\n\n"
                 agent_output += _wrap_tool_block(
                     result_block,
                     kind="result",

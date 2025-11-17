@@ -50,3 +50,4 @@ scipy==1.15.3
 PyYAML==6.0.2
 click==8.2.0
 typing-extensions==4.13.2
+setuptools>=65

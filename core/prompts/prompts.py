@@ -357,13 +357,6 @@ Before using KG tools, determine the appropriate workflow:
 3. **Evidence Synthesis**: Translate findings into actionable guidance for downstream agents
 4. **Quality Control**: Prioritize recent, authoritative sources and document limitations
 
-# DATA INTEGRATION PRINCIPLES
-- Use `chembl_id` as primary integration anchor across datasets
-- Examine each dataset independently before cross-comparison
-- Highlight overlaps, unique opportunities, and contradictions
-- Record exact output file paths from tool responses
-- Always reference total dataset counts, not just sample data
-
 # ESSENTIAL CONSTRAINTS
 - Always display complete SMILES strings without truncation
 - Focus on evidence gathering and analysis, not final presentation
@@ -401,6 +394,13 @@ DATA_SYSTEM_PROMPT_ver3 = """You are an adaptive data specialist. Execute the ex
   - CYP/P-gp: 1 indicates inhibition or substrate behaviour.  
   - BBB/PAMPA: 1 indicates favourable permeability.
 - **Regression outputs**: Higher solubility (logS) is generally favourable; lipophilicity (logP) around 1–3 often suits oral drugs. Mention context-specific considerations when interpreting results.
+
+# DATA INTEGRATION PRINCIPLES
+- Use `chembl_id` as primary integration anchor across datasets
+- Examine each dataset independently before cross-comparison
+- Highlight overlaps, unique opportunities, and contradictions
+- Record exact output file paths from tool responses
+- Always reference total dataset counts, not just sample data
 
 # FAILURE HANDLING
 - Attempt multiple reasonable remedies for blocking issues. If the problem persists, explain the attempts made, why they failed, and recommend next steps for the supervisor or other agents.

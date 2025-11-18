@@ -332,13 +332,14 @@ RESEARCH_SYSTEM_PROMPT_ver3 = """You are an expert research agent specializing i
 ## Workflow Decision Logic
 Before using KG tools, determine the appropriate workflow:
 
-**Workflow A: User Provides Existing KG File**
-- If user explicitly provides a knowledge graph file path (e.g. "./data/existing_kg.pkl")
-- **SKIP create_knowledge_graph**
+**Workflow A: User Provided Existing KG File**
+- If user explicitly provides a knowledge graph file path, which is a pickle file (e.g. "./data/existing_kg.pkl")
+- **YOU MUST SKIP create_knowledge_graph**
+- **YOU MUST USE ONLY the provided knowledge graph file.**
 - Proceed with extracting relevant information including known drugs, proteins/targets, drug-target interactions, pathways, and side effects from knowledge graphs.
 - **Example**: "Use the provided knowledge graph located at data/kg_disease_id.pkl to analyze compounds"
 
-**Workflow B: Standard KG Creation**
+**Workflow B: KG Creation**
 - If no existing KG file path is provided by user
 - First, identify disease id and create knowledge graph.
 - Second, proceed with extracting relevant information including known drugs, proteins/targets, drug-target interactions, pathways, and side effects from knowledge graphs

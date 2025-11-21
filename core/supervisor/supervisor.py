@@ -1,8 +1,8 @@
-import sqlite3
-from typing import Optional, Literal
+from typing import Optional, Literal, Tuple
+import aiosqlite
 from langchain.chat_models import init_chat_model
-from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.checkpoint.memory import MemorySaver
+from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
 from langgraph_supervisor import create_supervisor
 from langgraph.graph import START, END
 from langchain_core.messages import HumanMessage
@@ -34,19 +34,19 @@ def initialize_agents(llm, user_request: Optional[str] = None, use_episodic_lear
     return research_agent, data_agent, prediction_agent, planning_agent, report_agent
 
 
-def initialize_memory():
-    """Initialize memory/checkpointer."""
+async def initialize_memory() -> Tuple[AsyncSqliteSaver | MemorySaver, Optional[aiosqlite.Connection]]:
+    """Initialize memory/checkpointer (async-aware)."""
     try:
-        connection = sqlite3.connect(str(SQLITE_DB_PATH), check_same_thread=False)
-        memory = SqliteSaver(connection)
-        logger.info(f"SqliteSaver initialized with database: {SQLITE_DB_PATH}")
-        return memory
+        connection = await aiosqlite.connect(str(SQLITE_DB_PATH))
+        memory = AsyncSqliteSaver(connection)
+        logger.info(f"AsyncSqliteSaver initialized with database: {SQLITE_DB_PATH}")
+        return memory, connection
     except Exception as e:
-        logger.error(f"Error initializing SqliteSaver: {e}")
+        logger.error(f"Error initializing AsyncSqliteSaver: {e}")
         # Fallback to in-memory for development
         memory = MemorySaver()
         logger.warning("Falling back to MemorySaver")
-        return memory
+        return memory, None
 
 
 def _latest_user_text(state) -> str:
@@ -174,7 +174,7 @@ def human_chat_node(state):
 
 
 
-def create_app(user_request: Optional[str] = None, use_episodic_learning: bool = True):
+async def create_app(user_request: Optional[str] = None, use_episodic_learning: bool = True):
     """
     Initialize the LangGraph application with episodic learning for planning agent.
     
@@ -190,7 +190,7 @@ def create_app(user_request: Optional[str] = None, use_episodic_learning: bool =
     )
     
     # Initialize memory
-    memory = initialize_memory()
+    memory, connection = await initialize_memory()
     
     # Create supervisor with execution agents (planning agent added separately, report agent included but routed to END)
     supervisor_agent = create_supervisor(
@@ -242,4 +242,4 @@ def create_app(user_request: Optional[str] = None, use_episodic_learning: bool =
     else:
         logger.info("Created app with standard agents and separate planning node")
     
-    return app
+    return app, memory, connection

@@ -1,6 +1,4 @@
 # Core dependencies for Repuragent - exact versions from conda environment
-streamlit==1.45.0
-streamlit-nested-layout==0.1.4
 langchain==0.3.24
 langchain-openai==0.3.33
 langchain-core==0.3.76
@@ -20,6 +18,8 @@ pydantic==2.11.4
 tqdm==4.67.1
 rapidfuzz==3.13.0
 fuzzywuzzy==0.18.0
+gradio==5.49.1
+aiosqlite==0.20.0
 
 # Chemistry and bioinformatics - exact versions
 chembl-webresource-client==0.10.9
@@ -50,4 +50,5 @@ scipy==1.15.3
 PyYAML==6.0.2
 click==8.2.0
 typing-extensions==4.13.2
+huggingface-hub==0.34.3
 setuptools>=65

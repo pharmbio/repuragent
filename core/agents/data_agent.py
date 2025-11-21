@@ -21,7 +21,7 @@ from backend.utils.local_python_executor import local_python_executor, reset_exe
 from backend.utils.fuzzy_path import prompt_with_file_path
 from core.prompts.prompts import DATA_SYSTEM_PROMPT_ver3
 
-DEFAULT_AUTHORIZED_IMPORTS = ['json','pathlib', 'sqlalchemy', 'dotenv', 'os', 'sys', 'pandas','rdkit', 'numpy', 'matplotlib', 'rdkit', 'seaborn', 'scipy', 'sklearn', 'fuzzywuzzy', "Bio", 'streamlit']
+DEFAULT_AUTHORIZED_IMPORTS = ['json','pathlib', 'sqlalchemy', 'dotenv', 'os', 'sys', 'pandas','rdkit', 'numpy', 'matplotlib', 'rdkit', 'seaborn', 'scipy', 'sklearn', 'fuzzywuzzy', "Bio"]
 authorized_imports = sorted(set(BASE_BUILTIN_MODULES) | set(DEFAULT_AUTHORIZED_IMPORTS))
 
 @tool

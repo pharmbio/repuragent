@@ -9,9 +9,9 @@ Drug repurposing offers an efficient strategy to accelerate therapeutic discover
 </div>
 
 
-
 ### Demo Page with example output:
 [RepurAgent Demo Page](https://repuragent.streamlit.app) with example output for a COVID-19 repurposing.
+
 
 ### Core Agent Architecture
 
@@ -55,7 +55,7 @@ echo "LANGCHAIN_PROJECT=repuragent" >> .env
 docker-compose up --build
 ```
 
-Open [http://localhost:8501](http://localhost:8501) to access the application.
+Open [http://localhost:8501](http://localhost:8501) to access the Gradio application.
 
 ### Daily Usage
 ```bash
@@ -79,7 +79,7 @@ docker-compose logs -f
 ## Project Structure
 ```
 repuragent/
-├── app/           # Streamlit UI interface
+├── app/           # Gradio UI interface
 ├── core/          # AI agents and logic
 ├── backend/       # Memory and RAG systems
 ├── models/        # Machine learning models
@@ -87,4 +87,3 @@ repuragent/
 ├── results/       # Output files will be stored here
 └── main.py        # Entry point
 ```
-

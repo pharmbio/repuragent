@@ -131,21 +131,12 @@ def _derive_message_id(msg) -> Optional[str]:
 
 
 def separate_agent_outputs(chunk, processed_message_ids, processed_content_hashes: Optional[Set[int]] = None):
-    """Separate agent outputs into progress (supervisor/sub-agents) vs final (planning/report).
-    
-    Args:
-        chunk: The message chunk to process
-        processed_message_ids: Set of already processed message IDs
-        processed_content_hashes: Set of content hashes to prevent duplicate content display
-        
-    Returns:
-        tuple: (progress_output, final_output) - strings for progress expander and main display
-    """
+    """Split agent outputs into (non-planning) progress sections and planning sections."""
     if processed_content_hashes is None:
         processed_content_hashes = set()
-        
-    progress_output = ""
-    final_output = ""
+
+    progress_sections: List[Tuple[str, str]] = []
+    final_sections: List[Tuple[str, str]] = []
 
     # Handle different chunk formats
     if isinstance(chunk, tuple):
@@ -283,20 +274,15 @@ def separate_agent_outputs(chunk, processed_message_ids, processed_content_hashe
                 from app.config import logger
                 logger.info(f"Supervisor content pattern detected, forcing agent_name to 'supervisor'")
             
-            formatted_agent_output = f"\n\n**{agent_name.upper()}**\n"
-            formatted_agent_output += "-" * 40 + "\n\n"
-            formatted_agent_output += agent_output
-            
-            # Determine if this goes to progress expander or final output
-            # Planning agent and Report agent go to final output (outside expanders)
-            # Supervisor and other sub-agents go to progress expander
-            if agent_name.lower() in ["planning_agent", "report_agent"]:
-                final_output += formatted_agent_output
-            else:
-                # supervisor, research_agent, data_agent, prediction_agent go to expander
-                progress_output += formatted_agent_output
+            title = agent_name.replace("_", " ").title()
+            formatted_agent_output = f"**{title.upper()}**\n{'-' * 40}\n\n{agent_output}"
 
-    return progress_output, final_output
+            if agent_name.lower() == "planning_agent":
+                final_sections.append((agent_name.lower(), formatted_agent_output))
+            else:
+                progress_sections.append((agent_name.lower(), formatted_agent_output))
+
+    return progress_sections, final_sections
 
 
 def reconstruct_assistant_response(ai_messages):

@@ -48,12 +48,12 @@ RUN chmod -R 755 /app
 # Create volumes for persistent data and memory stores
 VOLUME ["/app/data", "/app/results", "/app/backend/memory"]
 
-# Expose Streamlit port
+# Expose Gradio port
 EXPOSE 8501
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-    CMD curl -f http://localhost:8501/_stcore/health || exit 1
+    CMD curl -f http://localhost:8501/ || exit 1
 
 # Create entrypoint script
 COPY <<EOF /app/entrypoint.sh
@@ -97,7 +97,9 @@ fi
 # Start the application
 echo "Starting Repuragent application..."
 cd /app
-streamlit run main.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true
+export GRADIO_SERVER_NAME="0.0.0.0"
+export GRADIO_SERVER_PORT="${PORT:-8501}"
+python main.py
 EOF
 
 RUN chmod +x /app/entrypoint.sh

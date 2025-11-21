@@ -545,19 +545,41 @@ def build_demo():
                 background: transparent;
                 white-space: pre;
             }
-            #conversation-table table,
-            #conversation-table table td,
-            #conversation-table table th {
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                font-size: 0.9rem;
-            }
-            #conversation-table table td:last-child {
-                text-align: center;
-                width: 48px;
-            }
-            </style>
-            """
-        )
+    #conversation-table table,
+    #conversation-table table td,
+    #conversation-table table th {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 0.9rem;
+        table-layout: fixed;
+    }
+    #conversation-table .wrap {
+        overflow-x: hidden !important;
+    }
+    #conversation-table table {
+        width: 100%;
+    }
+    #conversation-table table td:first-child {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    #conversation-table table thead th:first-child {
+        border-right: none !important;
+    }
+    #conversation-table table thead th:last-child {
+        display: none;
+    }
+    #conversation-table table td:last-child {
+        text-align: center;
+        width: 35px !important;
+        min-width: 35px !important;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.8rem;
+    }
+    </style>
+    """
+)
 
         with gr.Row(elem_id="layout-row"):
             with gr.Column(scale=1, min_width=240):
@@ -573,6 +595,8 @@ def build_demo():
                     row_count=(0, "dynamic"),
                     col_count=(2, "fixed"),
                     elem_id="conversation-table",
+                    column_widths=["auto", "32px"],
+                    wrap=True,
                 )
                 new_task_btn = gr.Button("New Task")
 

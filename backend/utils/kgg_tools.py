@@ -21,7 +21,18 @@ from tqdm import tqdm
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 from app.config import logger  # noqa E402
+from backend.utils.output_paths import resolve_output_folder, task_file_path  # noqa E402
 from kgg.kgg_apiutils import createKG, searchDisease  # noqa E402
+
+
+def _output_dir(output_folder: Optional[str] = None):
+    """Resolve the writable directory for KGG artifacts."""
+    return resolve_output_folder(output_folder)
+
+
+def _output_file(filename: str, output_folder: Optional[str] = None):
+    """Build a file path scoped to the active task directory."""
+    return task_file_path(filename, output_folder=output_folder)
 
 
 # ========== Tool 1: Disease Search ==========
@@ -86,9 +97,12 @@ def search_disease_id(disease_name: str) -> Dict[str, Any]:
 # ========== Tool 2: Create Knowledge Graph ==========
 
 @tool 
-def create_knowledge_graph(disease_id: str, 
-                          clinical_trial_phase: int = 1,
-                          protein_threshold: float = 0.5) -> Dict[str, Any]:
+def create_knowledge_graph(
+    disease_id: str, 
+    clinical_trial_phase: int = 1,
+    protein_threshold: float = 0.5,
+    output_folder: Optional[str] = None,
+) -> Dict[str, Any]:
     """
     Create a disease-specific knowledge graph using KGG.
     This is the FIRST step - create the graph before extracting information.
@@ -132,13 +146,9 @@ def create_knowledge_graph(disease_id: str,
                 }
             }
         
-        # Store KG in a temporary location for subsequent tools to access
-        # In a real system, this could be stored in agent's context/state
         import pickle
-        kg_path = f"./results/kg_{disease_id.replace(':', '_')}.pkl"
-        
-        # Ensure results directory exists
-        os.makedirs('results', exist_ok=True)
+        output_dir = _output_dir(output_folder)
+        kg_path = output_dir / f"kg_{disease_id.replace(':', '_')}.pkl"
         
         with open(kg_path, 'wb') as f:
             pickle.dump(kg, f)
@@ -156,13 +166,13 @@ def create_knowledge_graph(disease_id: str,
                     "edges": num_edges,
                 }
             },
-            "output_file": kg_path,
+            "output_file": str(kg_path),
             "message": f"Knowledge graph created successfully for '{disease_id}' with {num_nodes} nodes and {num_edges} edges",
             "metadata": {
                 "disease_id": disease_id,
                 "clinical_trial_phase": clinical_trial_phase,
                 "protein_threshold": protein_threshold,
-                "file_path": kg_path,
+                "file_path": str(kg_path),
             }
         }
         
@@ -185,7 +195,7 @@ def create_knowledge_graph(disease_id: str,
 # ========== Tool 3: Extract Drugs from KG ==========
 
 @tool
-def extract_drugs_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
+def extract_drugs_from_kg(kg_path: str, limit: int = 20, output_folder: Optional[str] = None) -> Dict[str, Any]:
     """
     Extract drug information from a previously created knowledge graph.
     
@@ -251,12 +261,10 @@ def extract_drugs_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
             if 'mechanisms' in df.columns:
                 df['mechanisms'] = df['mechanisms'].apply(lambda x: '; '.join(x) if isinstance(x, list) else x)
             
-            # Ensure results directory exists
-            os.makedirs('results', exist_ok=True)
-            
-            # Export to CSV in results folder
-            csv_path = "results/known_drugs.csv"
+            output_dir = _output_dir(output_folder)
+            csv_path = output_dir / "known_drugs.csv"
             df.to_csv(csv_path, index=False)
+            csv_str = str(csv_path)
             
             return {
                 "success": True,
@@ -265,18 +273,18 @@ def extract_drugs_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
                         "total_drugs": len(drugs),
                         "showing_in_data": min(len(drugs), 10),
                         "data_truncated": len(drugs) > 10,
-                        "complete_data_location": csv_path
+                        "complete_data_location": csv_str
                     },
                     "sample_drugs": [d['chembl_id'] for d in drugs[:10]] if drugs else [],
-                    "analysis_recommendation": f"For complete analysis, use the full dataset at {csv_path} which contains all {len(drugs)} drugs"
+                    "analysis_recommendation": f"For complete analysis, use the full dataset at {csv_str} which contains all {len(drugs)} drugs"
                 },
-                "output_file": csv_path,
-                "message": f"Successfully extracted {len(drugs)} known drugs. Showing 10 sample records in response data, complete dataset saved to {csv_path}",
+                "output_file": csv_str,
+                "message": f"Successfully extracted {len(drugs)} known drugs. Showing 10 sample records in response data, complete dataset saved to {csv_str}",
                 "metadata": {
                     "kg_path": kg_path,
                     "limit_requested": limit,
                     "drugs_found": len(drugs),
-                    "csv_exported": csv_path,
+                    "csv_exported": csv_str,
                     "data_completeness": "sample_only_use_csv_for_full_analysis"
                 }
             }
@@ -329,7 +337,7 @@ def extract_drugs_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
 
 # ========== Tool 3: Extract Mechanism of Action from KG ==========
 @tool
-def extract_mechanism_of_actions_from_kg(kg_path: str) -> pd.DataFrame:
+def extract_mechanism_of_actions_from_kg(kg_path: str, output_folder: Optional[str] = None) -> Dict[str, Any]:
     """
     Extract mechanism of actions from a knowledge graph.
     
@@ -369,33 +377,36 @@ def extract_mechanism_of_actions_from_kg(kg_path: str) -> pd.DataFrame:
 
     df = pd.DataFrame(rows).drop_duplicates().sort_values(["chembl_id", "mechanism_of_action"]).reset_index(drop=True)
     
-    csv_path = "results/mechanism_of_actions.csv"
+    csv_path = _output_file("mechanism_of_actions.csv", output_folder)
     df.to_csv(csv_path, index=False)
+    csv_str = str(csv_path)
     
     return {
         "success": True,
         "data": {
             "summary": {
                 "total_mechanism_of_actions": len(df['mechanism_of_action'].value_counts()),
-                "complete_data_location": csv_path
+                "complete_data_location": csv_str
             },
-            "analysis_recommendation": f"For complete analysis, use the full dataset at {csv_path} which contains all {len(df['mechanism_of_action'].value_counts())} mechanism of actions"
+            "analysis_recommendation": f"For complete analysis, use the full dataset at {csv_str} which contains all {len(df['mechanism_of_action'].value_counts())} mechanism of actions"
         },
-        "output_file": csv_path,
+        "output_file": csv_str,
         "message": f"Successfully extracted {len(df['mechanism_of_action'].value_counts())} side effects.",
         "metadata": {
             "kg_path": kg_path,
             "mechanism_of_actions_found": len(df['mechanism_of_action'].value_counts()),
-            "csv_exported": csv_path
+            "csv_exported": csv_str
                 }
             }
 
 # ========== Tool 4: Extract Proteins from KG ==========
 
 @tool
-def extract_proteins_from_kg(kg_path: str, 
-                            druggable_only: bool = False,
-                            ) -> Dict[str, Any]:
+def extract_proteins_from_kg(
+    kg_path: str,
+    druggable_only: bool = False,
+    output_folder: Optional[str] = None,
+) -> Dict[str, Any]:
     """
     Extract protein/target information from a previously created knowledge graph.
     
@@ -449,12 +460,9 @@ def extract_proteins_from_kg(kg_path: str,
         # Create pandas DataFrame
         df = pd.DataFrame(protein_info)
         
-        # Ensure results directory exists
-        os.makedirs('results', exist_ok=True)
-        
-        # Export to CSV
-        output_path = 'results/associated_genes.csv'
+        output_path = _output_file('associated_genes.csv', output_folder)
         df.to_csv(output_path, index=False)
+        output_str = str(output_path)
         
         return {
             "success": True,
@@ -463,19 +471,19 @@ def extract_proteins_from_kg(kg_path: str,
                     "total_proteins": len(df),
                     "showing_in_data": min(len(df), 10),
                     "data_truncated": len(df) > 10,
-                    "complete_data_location": output_path,
+                    "complete_data_location": output_str,
                     "druggable_filter_applied": druggable_only
                 },
                 "sample_proteins": protein_info['gene_symbol'][:10] if 'gene_symbol' in protein_info else [],
-                "analysis_recommendation": f"For complete analysis, use the full dataset at {output_path} which contains all {len(df)} proteins"
+                "analysis_recommendation": f"For complete analysis, use the full dataset at {output_str} which contains all {len(df)} proteins"
             },
-            "output_file": output_path,
-            "message": f"Successfully extracted {len(df)} proteins. Showing {min(len(df), 10)} sample records in response data, complete dataset saved to {output_path}",
+            "output_file": output_str,
+            "message": f"Successfully extracted {len(df)} proteins. Showing {min(len(df), 10)} sample records in response data, complete dataset saved to {output_str}",
             "metadata": {
                 "kg_path": kg_path,
                 "druggable_only": druggable_only,
                 "total_proteins": len(df),
-                "csv_exported": output_path,
+                "csv_exported": output_str,
             }
         }
         
@@ -507,7 +515,7 @@ def extract_proteins_from_kg(kg_path: str,
 # ========== Tool 6: Extract Pathways from KG ==========
 
 @tool
-def extract_pathways_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
+def extract_pathways_from_kg(kg_path: str, limit: int = 20, output_folder: Optional[str] = None) -> Dict[str, Any]:
     """
     Extract pathway information from a knowledge graph.
     
@@ -561,9 +569,9 @@ def extract_pathways_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
             if 'associated_drugs' in df.columns:
                 df['associated_drugs'] = df['associated_drugs'].apply(lambda x: '; '.join(x) if isinstance(x, list) else x)
             
-            # Export to CSV in results folder
-            csv_path = "results/pathways.csv"
+            csv_path = _output_file("pathways.csv", output_folder)
             df.to_csv(csv_path, index=False)
+            csv_str = str(csv_path)
             
             return {
                 "success": True,
@@ -572,18 +580,18 @@ def extract_pathways_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
                         "total_pathways": len(pathways),
                         "showing_in_data": min(len(pathways), 10),
                         "data_truncated": len(pathways) > 10,
-                        "complete_data_location": csv_path
+                        "complete_data_location": csv_str
                     },
                     "sample_pathways": [p['name'] for p in pathways[:10]] if pathways else [],
-                    "analysis_recommendation": f"For complete analysis, use the full dataset at {csv_path} which contains all {len(pathways)} pathways"
+                    "analysis_recommendation": f"For complete analysis, use the full dataset at {csv_str} which contains all {len(pathways)} pathways"
                 },
-                "output_file": csv_path,
-                "message": f"Successfully extracted {len(pathways)} pathways. Showing {min(len(pathways), 10)} sample records in response data, complete dataset saved to {csv_path}",
+                "output_file": csv_str,
+                "message": f"Successfully extracted {len(pathways)} pathways. Showing {min(len(pathways), 10)} sample records in response data, complete dataset saved to {csv_str}",
                 "metadata": {
                     "kg_path": kg_path,
                     "limit_requested": limit,
                     "pathways_found": len(pathways),
-                    "csv_exported": csv_path,
+                    "csv_exported": csv_str,
                 }
             }
         else:
@@ -638,8 +646,11 @@ def extract_pathways_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
 # ========== Tool 7: Extract Side Effects from KG ==========
 
 @tool
-def extract_side_effects_from_kg(kg_path: str, 
-                                drug_id: Optional[str] = None) -> Dict[str, Any]:
+def extract_side_effects_from_kg(
+    kg_path: str,
+    drug_id: Optional[str] = None,
+    output_folder: Optional[str] = None,
+) -> Dict[str, Any]:
     """
     Extract side effect information from a knowledge graph.
     
@@ -680,9 +691,9 @@ def extract_side_effects_from_kg(kg_path: str,
             # Create DataFrame from side_effects list
             df = pd.DataFrame(side_effects)
             
-            # Export to CSV in results folder
-            csv_path = "results/side_effects.csv"
+            csv_path = _output_file("side_effects.csv", output_folder)
             df.to_csv(csv_path, index=False)
+            csv_str = str(csv_path)
             
             return {
                 "success": True,
@@ -691,19 +702,19 @@ def extract_side_effects_from_kg(kg_path: str,
                         "total_side_effects": len(side_effects),
                         "showing_in_data": min(len(side_effects), 10),
                         "data_truncated": len(side_effects) > 10,
-                        "complete_data_location": csv_path,
+                        "complete_data_location": csv_str,
                         "drug_filter_applied": drug_id is not None
                     },
                     "sample_side_effects": side_effects[:10],
-                    "analysis_recommendation": f"For complete analysis, use the full dataset at {csv_path} which contains all {len(side_effects)} side effects"
+                    "analysis_recommendation": f"For complete analysis, use the full dataset at {csv_str} which contains all {len(side_effects)} side effects"
                 },
-                "output_file": csv_path,
-                "message": f"Successfully extracted {len(side_effects)} side effects. Showing {min(len(side_effects), 10)} sample records in response data, complete dataset saved to {csv_path}",
+                "output_file": csv_str,
+                "message": f"Successfully extracted {len(side_effects)} side effects. Showing {min(len(side_effects), 10)} sample records in response data, complete dataset saved to {csv_str}",
                 "metadata": {
                     "kg_path": kg_path,
                     "filter_drug": drug_id,
                     "side_effects_found": len(side_effects),
-                    "csv_exported": csv_path,
+                    "csv_exported": csv_str,
                     "extraction_time": datetime.now().isoformat()
                 }
             }
@@ -1201,10 +1212,6 @@ def _resolve_reactome_pathway_id(pathway_name: str) -> Optional[str]:
     return None
 
 
-def _ensure_results_dir() -> None:
-    os.makedirs("results", exist_ok=True)
-
-
 def getDrugsforProteins_count(ensg):
     query_string = """
         query KnownDrugsQuery(
@@ -1228,16 +1235,19 @@ def getDrugsforProteins_count(ensg):
     return api_response['data']['target']['knownDrugs']['count']
 
 @tool
-def getDrugsforProteins(proteins: Union[str, List[str]]) -> Dict[str, Any]:
+def getDrugsforProteins(
+    proteins: Union[str, List[str]],
+    output_folder: Optional[str] = None,
+) -> Dict[str, Any]:
     """Get known drugs that are associated with given proteins.
     
     Smart Usage:
-    - If results/associated_genes.csv exists (from extract_proteins_from_kg), use it directly
-    - Otherwise, provide manual protein lists or other CSV files with gene_symbol column
+    - If the `extract_proteins_from_kg` tool has already produced an `output_file`, feed that path here directly.
+    - Otherwise, provide manual protein lists or other CSV files with a `gene_symbol` column.
     
     Args:
         proteins: Can be:
-            - File path (e.g., 'results/associated_genes.csv') - PREFERRED when available
+            - File path returned by previous tools (preferred when available)
             - Comma-separated string (e.g., 'TP53,BRCA1,EGFR')  
             - List of gene symbols
             
@@ -1324,10 +1334,9 @@ def getDrugsforProteins(proteins: Union[str, List[str]]) -> Dict[str, Any]:
 
     api_response.columns = ['phase','status','disease_id','disease_name', 'chembl_id','drug_name','gene_symbol','smiles']
     
-    # Ensure results directory exists
-    os.makedirs('results', exist_ok=True)
-    output_file = 'results/protein_drug_candidates.csv'
+    output_file = _output_file('protein_drug_candidates.csv', output_folder)
     api_response.to_csv(output_file, index=False)
+    output_str = str(output_file)
 
     return {
         "success": True,
@@ -1336,20 +1345,20 @@ def getDrugsforProteins(proteins: Union[str, List[str]]) -> Dict[str, Any]:
                 "total_candidates": len(api_response),
                 "showing_in_data": min(len(api_response), 10),
                 "data_truncated": len(api_response) > 10,
-                "complete_data_location": output_file,
+                "complete_data_location": output_str,
                 "unique_drugs": len(api_response['chembl_id'].unique()),
                 "unique_proteins": len(api_response['gene_symbol'].unique())
             },
             "sample_drug_protein_pairs": api_response[['gene_symbol','chembl_id']].head(10).to_dict('records'),
-            "analysis_recommendation": f"For complete analysis, use the full dataset at {output_file} which contains all {len(api_response)} drug-protein pairs"
+            "analysis_recommendation": f"For complete analysis, use the full dataset at {output_str} which contains all {len(api_response)} drug-protein pairs"
         },
-        "output_file": output_file,
-        "message": f"Successfully found {len(api_response)} drug-protein pairs. Showing 10 sample records in response data, complete dataset saved to {output_file}",
+        "output_file": output_str,
+        "message": f"Successfully found {len(api_response)} drug-protein pairs. Showing 10 sample records in response data, complete dataset saved to {output_str}",
         "metadata": {
             "total_input_proteins": len(prot_list),
             "total_drug_protein_pairs": len(api_response),
             "unique_drugs_found": len(api_response['chembl_id'].unique()),
-            "csv_exported": output_file,
+            "csv_exported": output_str,
             "usage_note": "This filtered dataset should be used for subsequent ADMET predictions instead of the original drug database"
         }
     }
@@ -1372,9 +1381,9 @@ def getDrugsforMechanisms(
     moas: Union[List[str], str],
     batch_size: int = 10,
     only_small_molecule: bool = True,   # set False to include biologics too
-    min_phase: int = 4               # use 4 for approved drugs only
-
-) -> pd.DataFrame:
+    min_phase: int = 4,              # use 4 for approved drugs only
+    output_folder: Optional[str] = None,
+) -> Dict[str, Any]:
     """
     Retrieve drugs associated with mechanism of action.
 
@@ -1494,8 +1503,9 @@ def getDrugsforMechanisms(
         columns=["drug_name", "chembl_id", "mechanism_of_actions", "smiles"],
     ).reset_index(drop=True)
 
-    output_path = 'results/mechanism_drug_candidate.csv'
+    output_path = _output_file('mechanism_drug_candidate.csv', output_folder)
     df.to_csv(output_path, index=False)
+    output_str = str(output_path)
 
     return {
             "success": True,
@@ -1503,17 +1513,20 @@ def getDrugsforMechanisms(
                 "summary": {
                     "total_mechanism_of_actions": len(moa_list),
                     "total_MoA_drug_pairs": len(df),
-                    "complete_data_location": output_path,
+                    "complete_data_location": output_str,
                 },
-                "analysis_recommendation": f"For complete analysis, use the full dataset at {output_path} which contains all {len(df)} MoA-drug pairs"
+                "analysis_recommendation": f"For complete analysis, use the full dataset at {output_str} which contains all {len(df)} MoA-drug pairs"
             },
-            "output_file": output_path,
-            "message": f"Successfully query {len(df)} MoA - Drug pairs. Complete dataset saved to {output_path}",
+            "output_file": output_str,
+            "message": f"Successfully query {len(df)} MoA - Drug pairs. Complete dataset saved to {output_str}",
         }
 
 
 @tool
-def getDrugsforPathways(pathways: Union[str, List[str]]) -> Dict[str, Any]:
+def getDrugsforPathways(
+    pathways: Union[str, List[str]],
+    output_folder: Optional[str] = None,
+) -> Dict[str, Any]:
     """
     Retrieve drugs associated with biological pathways.
 
@@ -1872,9 +1885,9 @@ def getDrugsforPathways(pathways: Union[str, List[str]]) -> Dict[str, Any]:
             combined[col] = None
     combined = combined[column_order]
 
-    _ensure_results_dir()
-    output_file = "results/pathway_drug_candidates.csv"
+    output_file = _output_file("pathway_drug_candidates.csv", output_folder)
     combined.to_csv(output_file, index=False)
+    output_str = str(output_file)
 
     summary = {
         "total_pathways": len(pathway_map),
@@ -1892,9 +1905,9 @@ def getDrugsforPathways(pathways: Union[str, List[str]]) -> Dict[str, Any]:
         "success": True,
         "data": {
             "summary": summary,
-            "analysis_recommendation": f"Full pathway-drug associations are available in {output_file}.",
+            "analysis_recommendation": f"Full pathway-drug associations are available in {output_str}.",
         },
-        "output_file": output_file,
+        "output_file": output_str,
         "message": f"Resolved {len(combined)} pathway-drug associations across {summary['total_pathways']} pathway inputs.",
     }
 

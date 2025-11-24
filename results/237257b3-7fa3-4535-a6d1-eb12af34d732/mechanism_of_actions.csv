@@ -1,0 +1,123 @@
+chembl_id,drug_name,mechanism_of_action
+CHEMBL1016,CANDESARTAN,Type-1 angiotensin II receptor antagonist
+CHEMBL1017,TELMISARTAN,Type-1 angiotensin II receptor antagonist
+CHEMBL1042,CHOLECALCIFEROL,Vitamin D receptor agonist
+CHEMBL1064,SIMVASTATIN,HMG-CoA reductase inhibitor
+CHEMBL1069,VALSARTAN,Type-1 angiotensin II receptor antagonist
+CHEMBL107,COLCHICINE,Tubulin inhibitor
+CHEMBL1082407,ENZALUTAMIDE,Androgen Receptor antagonist
+CHEMBL1088752,LOSMAPIMOD,MAP kinase p38 alpha inhibitor
+CHEMBL1088752,LOSMAPIMOD,MAP kinase p38 beta inhibitor
+CHEMBL112,ACETAMINOPHEN,Anandamide amidohydrolase inhibitor
+CHEMBL112,ACETAMINOPHEN,Cyclooxygenase inhibitor
+CHEMBL112,ACETAMINOPHEN,Vanilloid receptor opener
+CHEMBL1161,MOMETASONE FUROATE,Glucocorticoid receptor agonist
+CHEMBL1200689,NITRIC OXIDE,Soluble guanylate cyclase activator
+CHEMBL1200694,SEVOFLURANE,GABA-A receptor; anion channel positive allosteric modulator
+CHEMBL1200694,SEVOFLURANE,Glycine receptor (alpha-1/beta) positive modulator
+CHEMBL1200694,SEVOFLURANE,Potassium channel subfamily K member 10 opener
+CHEMBL1200694,SEVOFLURANE,Potassium channel subfamily K member 18 opener
+CHEMBL1200694,SEVOFLURANE,Potassium channel subfamily K member 2 opener
+CHEMBL1200694,SEVOFLURANE,Potassium channel subfamily K member 3 opener
+CHEMBL1200694,SEVOFLURANE,Potassium channel subfamily K member 9 opener
+CHEMBL1200699,DOXYCYCLINE,Bacterial 70S ribosome inhibitor
+CHEMBL1200699,DOXYCYCLINE,Matrix metalloproteinase 13 inhibitor
+CHEMBL1200699,DOXYCYCLINE,Matrix metalloproteinase 7 inhibitor
+CHEMBL1200699,DOXYCYCLINE,Matrix metalloproteinase 8 inhibitor
+CHEMBL1200699,DOXYCYCLINE,Matrix metalloproteinase-1 inhibitor
+CHEMBL1201010,FLUDROCORTISONE ACETATE,Mineralocorticoid receptor agonist
+CHEMBL1201081,METHYLPREDNISOLONE SODIUM SUCCINATE,Glucocorticoid receptor agonist
+CHEMBL1201438,ALDESLEUKIN,Interleukin-2 receptor agonist
+CHEMBL1201562,INTERFERON BETA-1A,Interferon alpha/beta receptor agonist
+CHEMBL1201570,ANAKINRA,Interleukin-1 receptor antagonist
+CHEMBL1201580,ADALIMUMAB,TNF-alpha inhibitor
+CHEMBL1201581,INFLIXIMAB,TNF-alpha inhibitor
+CHEMBL1201583,BEVACIZUMAB,Vascular endothelial growth factor A inhibitor
+CHEMBL1201823,ABATACEPT,T-lymphocyte activation antigen CD80 inhibitor
+CHEMBL1201823,ABATACEPT,T-lymphocyte activation antigen CD86 inhibitor
+CHEMBL1201834,CANAKINUMAB,Interleukin-1 beta inhibitor
+CHEMBL1237022,TOCILIZUMAB,Interleukin-6 receptor alpha subunit inhibitor
+CHEMBL1256,ISOFLURANE,GABA-A receptor; anion channel positive allosteric modulator
+CHEMBL1256,ISOFLURANE,Glycine receptor (alpha-1/beta) positive modulator
+CHEMBL1256,ISOFLURANE,Potassium channel subfamily K member 10 opener
+CHEMBL1256,ISOFLURANE,Potassium channel subfamily K member 18 opener
+CHEMBL1256,ISOFLURANE,Potassium channel subfamily K member 2 opener
+CHEMBL1256,ISOFLURANE,Potassium channel subfamily K member 3 opener
+CHEMBL1256,ISOFLURANE,Potassium channel subfamily K member 9 opener
+CHEMBL131,PREDNISOLONE,Glucocorticoid receptor agonist
+CHEMBL1370,BUDESONIDE,Glucocorticoid receptor agonist
+CHEMBL1513,IRBESARTAN,Type-1 angiotensin II receptor antagonist
+CHEMBL1516,OLMESARTAN,Type-1 angiotensin II receptor antagonist
+CHEMBL1536,ERGOCALCIFEROL,Vitamin D receptor agonist
+CHEMBL154,NAPROXEN,Cyclooxygenase inhibitor
+CHEMBL1560,CAPTOPRIL,Angiotensin-converting enzyme inhibitor
+CHEMBL1569,AMANTADINE HYDROCHLORIDE,Glutamate [NMDA] receptor antagonist
+CHEMBL1569,AMANTADINE HYDROCHLORIDE,Matrix protein 2 inhibitor
+CHEMBL163,RITONAVIR,Cytochrome P450 3A inhibitor
+CHEMBL163,RITONAVIR,Human immunodeficiency virus type 1 protease inhibitor
+CHEMBL1643,RIBAVIRIN,Inosine-5'-monophosphate dehydrogenase 1 inhibitor
+CHEMBL1643,RIBAVIRIN,RNA inhibitor
+CHEMBL1643,RIBAVIRIN,RNA-directed RNA polymerase inhibitor
+CHEMBL1690,HYDROXYCHLOROQUINE SULFATE,Ferriprotoporphyrin IX inhibitor
+CHEMBL1690,HYDROXYCHLOROQUINE SULFATE,Toll-like receptor 7 antagonist
+CHEMBL1690,HYDROXYCHLOROQUINE SULFATE,Toll-like receptor 9 antagonist
+CHEMBL1737,SILDENAFIL CITRATE,Phosphodiesterase 5A inhibitor
+CHEMBL1743033,ITOLIZUMAB,T-cell differentiation antigen CD6 inhibitor
+CHEMBL1743034,IXEKIZUMAB,Interleukin 17A inhibitor
+CHEMBL1743050,OLOKIZUMAB,Interleukin-6 inhibitor
+CHEMBL1743070,SILTUXIMAB,Interleukin-6 antagonist
+CHEMBL191413,REPARIXIN,Interleukin-8 receptor A modulator
+CHEMBL191413,REPARIXIN,Interleukin-8 receptor B modulator
+CHEMBL1981592,AVIPTADIL,Adrenergic receptor alpha antagonist
+CHEMBL198362,RIVAROXABAN,Coagulation factor X inhibitor
+CHEMBL2040682,CICLESONIDE,Glucocorticoid receptor agonist
+CHEMBL2095208,COBICISTAT,Cytochrome P450 3A inhibitor
+CHEMBL2105759,BARICITINIB,Tyrosine-protein kinase JAK1 inhibitor
+CHEMBL2105759,BARICITINIB,Tyrosine-protein kinase JAK2 inhibitor
+CHEMBL2108723,PEGINTERFERON LAMBDA-1A,Interferon lambda receptor agonist
+CHEMBL2108730,SARILUMAB,Interleukin-6 receptor alpha subunit antagonist
+CHEMBL2108806,BEMIPARIN SODIUM,Antithrombin-III activator
+CHEMBL2109343,LERONLIMAB,C-C chemokine receptor type 5 antagonist
+CHEMBL2110727,CENICRIVIROC,C-C chemokine receptor type 2 antagonist
+CHEMBL2110727,CENICRIVIROC,C-C chemokine receptor type 5 antagonist
+CHEMBL231779,APIXABAN,Coagulation factor X inhibitor
+CHEMBL2364655,EVOLOCUMAB,Subtilisin/kexin type 9 inhibitor
+CHEMBL237500,LINAGLIPTIN,Dipeptidyl peptidase IV inhibitor
+CHEMBL25,ASPIRIN,Cyclooxygenase inhibitor
+CHEMBL3,NICOTINE,Neuronal acetylcholine receptor; alpha4/beta2 agonist
+CHEMBL3544984,TRADIPITANT,Neurokinin 1 receptor antagonist
+CHEMBL3545189,LANADELUMAB,Plasma kallikrein inhibitor
+CHEMBL3707325,LENZILUMAB,Granulocyte-macrophage colony-stimulating factor inhibitor
+CHEMBL3707348,ACALABRUTINIB,Tyrosine-protein kinase BTK inhibitor
+CHEMBL384467,DEXAMETHASONE,Glucocorticoid receptor agonist
+CHEMBL389621,HYDROCORTISONE,Glucocorticoid receptor agonist
+CHEMBL3900409,BRENSOCATIB,Dipeptidyl peptidase I inhibitor
+CHEMBL398435,TICAGRELOR,Purinergic receptor P2Y12 negative allosteric modulator
+CHEMBL409,BICALUTAMIDE,Androgen Receptor antagonist
+CHEMBL4297680,1018 ISS,Toll-like receptor 9 agonist
+CHEMBL4297717,CD24FC,Heat shock 70 kDa protein 1A/1B inhibitor
+CHEMBL4297717,CD24FC,Heat shock protein HSP90 inhibitor
+CHEMBL4297717,CD24FC,High mobility group protein B1 inhibitor
+CHEMBL4297717,CD24FC,Sialic acid-binding Ig-like lectin 10 modulator
+CHEMBL4297819,ROPEGINTERFERON ALFA-2B,Interferon alpha/beta receptor positive modulator
+CHEMBL4297886,ASUNERCEPT,Tumor necrosis factor ligand superfamily member 6 binding agent
+CHEMBL4298207,ZILUCOPLAN,Complement C5 inhibitor
+CHEMBL429910,DAPAGLIFLOZIN,Sodium/glucose cotransporter 2 inhibitor
+CHEMBL451930,PLITIDEPSIN,Elongation factor 1-alpha 2 inhibitor
+CHEMBL4594417,PRUXELUTAMIDE,Androgen Receptor antagonist
+CHEMBL4650299,HEPARIN,Antithrombin-III activator
+CHEMBL4650406,LEVILIMAB,Interleukin-6 receptor alpha subunit inhibitor
+CHEMBL514800,APREMILAST,Phosphodiesterase 4 inhibitor
+CHEMBL547,ISOTRETINOIN,Retinoic acid receptor agonist
+CHEMBL57242,AZILSARTAN,Type-1 angiotensin II receptor antagonist
+CHEMBL596,FENTANYL,Mu opioid receptor agonist
+CHEMBL6,INDOMETHACIN,Cyclooxygenase inhibitor
+CHEMBL635,PREDNISONE,Glucocorticoid receptor agonist
+CHEMBL650,METHYLPREDNISOLONE,Glucocorticoid receptor agonist
+CHEMBL71,CHLORPROMAZINE,D2-like dopamine receptor antagonist
+CHEMBL71,CHLORPROMAZINE,Serotonin 2a (5-HT2a) receptor antagonist
+CHEMBL877,TRANEXAMIC ACID,Plasminogen inhibitor
+CHEMBL902,FAMOTIDINE,Histamine H2 receptor antagonist
+CHEMBL932,DIPYRIDAMOLE,"3',5'-cyclic phosphodiesterase inhibitor"
+CHEMBL932,DIPYRIDAMOLE,Equilibrative nucleoside transporter 1 inhibitor
+CHEMBL960,LEFLUNOMIDE,Dihydroorotate dehydrogenase inhibitor

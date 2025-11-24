@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import base64
 import hashlib
+import json
 import mimetypes
 import os
 import shutil
 from datetime import datetime
+from html import escape
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -31,13 +33,17 @@ from backend.memory.episodic_memory.thread_manager import (
     remove_thread_id,
     update_thread_title,
 )
+from backend.utils.output_paths import (
+    get_results_root,
+    list_task_files,
+    remove_task_dir,
+)
 
 
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
 
-RESULTS_DIR = Path("results")
-RESULTS_DIR.mkdir(exist_ok=True)
+RESULTS_DIR = get_results_root()
 
 EPISODIC_ORCHESTRATOR = None
 
@@ -108,32 +114,183 @@ def _format_file_list(state: UIState) -> str:
     return "\n".join(lines)
 
 
-def _resolve_thread_id(state: UIState, selection: Optional[str]) -> Optional[str]:
-    if not selection:
-        return None
-    if selection in state.thread_choice_map:
-        return state.thread_choice_map[selection]
-    if "|||" in selection:
-        return selection.split("|||", 1)[0]
-    return selection
+MAX_VISIBLE_FILES = 50
 
 
-def _conversation_rows(state: UIState) -> List[List[str]]:
-    rows: List[List[str]] = []
-    name_counts: Dict[str, int] = {}
+def _render_thread_files(thread_id: str) -> str:
+    try:
+        files = list_task_files(thread_id)
+    except Exception:
+        files = []
+    if not files:
+        return "<p class='conversation-card__empty'>No output files yet.</p>"
+    items: List[str] = []
+    root = RESULTS_DIR
+    limited_files = files[:MAX_VISIBLE_FILES]
+    for path in limited_files:
+        try:
+            stats = path.stat()
+            timestamp = datetime.fromtimestamp(stats.st_mtime).strftime("%b %d · %H:%M")
+        except OSError:
+            timestamp = ""
+        try:
+            rel_display = str(path.relative_to(root))
+        except ValueError:
+            rel_display = str(path)
+        items.append(
+            "<li class='conversation-card__file-item' title='{rel}'>"
+            "<span class='conversation-card__file-name'>{name}</span>"
+            "</li>".format(
+                rel=escape(rel_display),
+                name=escape(path.name),
+            )
+        )
+    remaining = len(files) - MAX_VISIBLE_FILES
+    more_indicator = ""
+    if remaining > 0:
+        more_indicator = f"<li class='conversation-card__file-more'>+{remaining} more…</li>"
+    return (
+        "<div class='conversation-card__files-container'>"
+        "<ul class='conversation-card__files'>{}</ul>"
+        "{}"
+        "</div>"
+    ).format("".join(items), more_indicator)
+
+
+def _conversation_panel_markup(state: UIState) -> str:
+    cards: List[str] = [
+        "<div class='conversation-list__container' id='conversation-list-root'>",
+        "<div class='conversation-list__header'>Conversation</div>",
+    ]
+    if not state.thread_ids:
+        cards.append("<p class='conversation-card__empty'>No conversations yet.</p></div>")
+        return "\n".join(cards)
     for thread in state.thread_ids:
-        title = thread["title"]
-        count = name_counts.get(title, 0) + 1
-        name_counts[title] = count
-        label = title if count == 1 else f"{title} ({count})"
-        prefix = "●" if thread["thread_id"] == state.current_thread_id else "○"
-        rows.append([f"{prefix} {label}", "🗑️"])
-    return rows
+        thread_id = thread["thread_id"]
+        is_active = thread_id == state.current_thread_id
+        title = escape(thread["title"])
+        file_block = _render_thread_files(thread_id)
+        cards.append(
+            "<details class='conversation-card {active}' data-thread-id='{tid}' {open_attr}>"
+            "<summary>"
+            "<div class='conversation-card__title-row'>"
+            "<span class='conversation-card__chevron' aria-hidden='true'></span>"
+            "<span class='conversation-card__title'>{title}</span>"
+            "<button type='button' class='conversation-card__delete' "
+            "data-delete-thread='{tid}' data-confirm-message='Delete this conversation?'>🗑️</button>"
+            "</div>"
+            "</summary>"
+            "<div class='conversation-card__body'>{files}</div>"
+            "</details>".format(
+                active="is-active" if is_active else "",
+                tid=escape(thread_id),
+                open_attr="open" if is_active else "",
+                title=title,
+                files=file_block,
+            )
+        )
+    cards.append("</div>")
+    return "\n".join(cards)
 
 
-def _conversation_table_update(state: UIState):
-    rows = _conversation_rows(state)
-    return gr.update(value=rows, row_count=(len(rows), "dynamic"))
+def _conversation_panel_update(state: UIState):
+    return gr.update(value=_conversation_panel_markup(state))
+
+
+_CONVERSATION_SCRIPT = """
+<script>
+(function() {
+    function findBus() {
+        const el = document.getElementById("conversation-action-bus");
+        if (!el) {
+            return null;
+        }
+        if (el.matches && el.matches("textarea, input")) {
+            return el;
+        }
+        return el.querySelector ? el.querySelector("textarea, input") : null;
+    }
+
+    function sendAction(payload) {
+        const bus = findBus();
+        if (!bus) {
+            return;
+        }
+        const enriched = Object.assign({ ts: Date.now() }, payload || {});
+        bus.value = JSON.stringify(enriched);
+        bus.dispatchEvent(new Event("input", { bubbles: true }));
+        bus.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+
+    function bindHandlers() {
+        const root = document.getElementById("conversation-list-root");
+        const bus = findBus();
+        if (!root || !bus) {
+            return;
+        }
+
+        root.querySelectorAll("summary").forEach((summary) => {
+            if (summary.dataset.repBound === "1") {
+                return;
+            }
+            summary.dataset.repBound = "1";
+            summary.addEventListener("click", (event) => {
+                if (event.target && event.target.closest("[data-delete-thread]")) {
+                    return;
+                }
+                const parent = summary.closest("details");
+                if (!parent) {
+                    return;
+                }
+                const threadId = parent.getAttribute("data-thread-id");
+                if (!threadId) {
+                    return;
+                }
+                sendAction({ type: "activate", thread_id: threadId });
+            });
+        });
+
+        root.querySelectorAll("[data-delete-thread]").forEach((button) => {
+            if (button.dataset.repBound === "1") {
+                return;
+            }
+            button.dataset.repBound = "1";
+            button.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                const threadId = button.getAttribute("data-delete-thread");
+                if (!threadId) {
+                    return;
+                }
+                const confirmMessage = button.getAttribute("data-confirm-message");
+                if (confirmMessage && !window.confirm(confirmMessage)) {
+                    return;
+                }
+                sendAction({ type: "delete", thread_id: threadId });
+            });
+        });
+    }
+
+    function ensureReady() {
+        if (!document.getElementById("conversation-list-root") || !findBus()) {
+            window.requestAnimationFrame(ensureReady);
+            return;
+        }
+        bindHandlers();
+    }
+
+    ensureReady();
+    if (window.__repConversationObserver) {
+        window.__repConversationObserver.disconnect();
+    }
+    const observer = new MutationObserver(() => {
+        window.requestAnimationFrame(bindHandlers);
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    window.__repConversationObserver = observer;
+})();
+</script>
+"""
 
 
 async def _refresh_conversation(state: UIState, thread_id: str) -> None:
@@ -177,10 +334,11 @@ async def on_app_load():
     approve_update = gr.update(visible=state.waiting_for_approval)
     return (
         state,
-        _conversation_table_update(state),
+        _conversation_panel_markup(state),
         list(state.messages),
         attachments,
         state.use_episodic_learning,
+        gr.update(value=""),
         gr.update(value=""),
     )
 
@@ -194,7 +352,7 @@ async def _activate_thread(thread_id: Optional[str], state: UIState):
     if not thread_id:
         return (
             state,
-            _conversation_table_update(state),
+            _conversation_panel_update(state),
             list(state.messages),
             _format_file_list(state),
             gr.update(value=""),
@@ -206,7 +364,7 @@ async def _activate_thread(thread_id: Optional[str], state: UIState):
     attachments = _format_file_list(state)
     return (
         state,
-        _conversation_table_update(state),
+        _conversation_panel_update(state),
         list(state.messages),
         attachments,
         gr.update(value=""),
@@ -227,7 +385,7 @@ def on_new_task(state: UIState):
     state.processed_message_ids = set()
     return (
         state,
-        _conversation_table_update(state),
+        _conversation_panel_update(state),
         list(state.messages),
         _format_file_list(state),
         gr.update(value=""),
@@ -238,12 +396,13 @@ async def _delete_thread(thread_id: Optional[str], state: UIState):
     if not thread_id or len(state.thread_ids) <= 1:
         return (
             state,
-            _conversation_table_update(state),
+            _conversation_panel_update(state),
             list(state.messages),
             _format_file_list(state),
             gr.update(value=""),
         )
     remove_thread_id(thread_id)
+    remove_task_dir(thread_id)
     state.thread_ids = load_thread_ids()
     state.thread_files.pop(thread_id, None)
     if state.current_thread_id == thread_id and state.thread_ids:
@@ -254,35 +413,50 @@ async def _delete_thread(thread_id: Optional[str], state: UIState):
     state.current_app_config = None
     return (
         state,
-        _conversation_table_update(state),
+        _conversation_panel_update(state),
         list(state.messages),
         _format_file_list(state),
         gr.update(value=""),
     )
 
 
-async def on_conversation_table_select(evt: gr.SelectData, state: UIState):
-    if not state.thread_ids or evt.index is None:
+async def on_conversation_action(action_payload: str, state: UIState):
+    payload = (action_payload or "").strip()
+    if not payload:
         return (
             state,
-            _conversation_table_update(state),
+            _conversation_panel_update(state),
+            list(state.messages),
+            _format_file_list(state),
+            gr.update(value=""),
+            gr.update(value=""),
+        )
+    try:
+        action = json.loads(payload)
+    except json.JSONDecodeError:
+        return (
+            state,
+            _conversation_panel_update(state),
+            list(state.messages),
+            _format_file_list(state),
+            gr.update(value=""),
+            gr.update(value=""),
+        )
+    action_type = action.get("type")
+    thread_id = action.get("thread_id")
+    if action_type == "delete":
+        result = await _delete_thread(thread_id, state)
+    elif action_type == "activate":
+        result = await _activate_thread(thread_id, state)
+    else:
+        result = (
+            state,
+            _conversation_panel_update(state),
             list(state.messages),
             _format_file_list(state),
             gr.update(value=""),
         )
-    row, col = evt.index
-    if row is None or row >= len(state.thread_ids):
-        return (
-            state,
-            _conversation_table_update(state),
-            list(state.messages),
-            _format_file_list(state),
-            gr.update(value=""),
-        )
-    thread_id = state.thread_ids[row]["thread_id"]
-    if col == 1:
-        return await _delete_thread(thread_id, state)
-    return await _activate_thread(thread_id, state)
+    return (*result, gr.update(value=""))
 
 
 def on_files_uploaded(files, state: UIState):
@@ -331,6 +505,7 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
             state,
             list(state.messages),
             gr.update(value=""),
+            _conversation_panel_update(state),
         )
         return
 
@@ -346,6 +521,7 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
             state,
             list(state.messages),
             gr.update(value=""),
+            _conversation_panel_update(state),
         )
     else:
         final_prompt = _append_file_paths(prompt, state)
@@ -368,6 +544,7 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
             state,
             list(state.messages),
             gr.update(value=""),
+            _conversation_panel_update(state),
         )
 
     state.current_app_config = app_config
@@ -385,6 +562,7 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
                     state,
                     list(state.messages),
                     gr.update(value=""),
+                    _conversation_panel_update(state),
                 )
         elif event_type == "complete":
             state.waiting_for_approval = bool(payload)
@@ -393,6 +571,7 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
                 state,
                 list(state.messages),
                 gr.update(value=""),
+                _conversation_panel_update(state),
             )
 
 
@@ -484,8 +663,16 @@ def build_demo():
     #chatbot-panel [data-testid*="user"] * {
         font-size: 1rem !important;
     }
+    #conversation-action-bus {
+        display: none !important;
+    }
     """
-    with gr.Blocks(title=APP_TITLE, theme=gr.themes.Default(), css=extra_css) as demo:
+    with gr.Blocks(
+        title=APP_TITLE,
+        theme=gr.themes.Default(),
+        css=extra_css,
+        head=_CONVERSATION_SCRIPT,
+    ) as demo:
         state = gr.State()
 
         with gr.Row(elem_id="app-header"):
@@ -545,37 +732,120 @@ def build_demo():
                 background: transparent;
                 white-space: pre;
             }
-    #conversation-table table,
-    #conversation-table table td,
-    #conversation-table table th {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 0.9rem;
-        table-layout: fixed;
-    }
-    #conversation-table .wrap {
-        overflow-x: hidden !important;
-    }
-    #conversation-table table {
+    #conversation-list {
+        margin-top: 0.5rem;
+        font-family: inherit;
         width: 100%;
+        display: block;
     }
-    #conversation-table table td:first-child {
-        white-space: nowrap;
+    #conversation-list, #conversation-list > div, #conversation-list-root {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    #conversation-list-root {
+        border: 1px solid #d1d5db;
+        border-radius: 12px;
+        background: #fff;
         overflow: hidden;
-        text-overflow: ellipsis;
+        box-shadow: 0 1px 2px rgb(15 23 42 / 0.04);
     }
-    #conversation-table table thead th:first-child {
-        border-right: none !important;
+    .conversation-list__header {
+        font-weight: 600;
+        padding: 0.75rem 0.85rem;
+        border-bottom: 1px solid #e5e7eb;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        font-size: 0.85rem;
+        color: #4b5563;
+        background: #f9fafb;
     }
-    #conversation-table table thead th:last-child {
+    details.conversation-card {
+        border-bottom: 1px solid #f3f4f6;
+    }
+    details.conversation-card:last-child {
+        border-bottom: none;
+    }
+    details.conversation-card summary {
+        list-style: none;
+        padding: 0.6rem 0.85rem;
+        cursor: pointer;
+        background: transparent;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+    details.conversation-card summary::-webkit-details-marker {
         display: none;
     }
-    #conversation-table table td:last-child {
-        text-align: center;
-        width: 35px !important;
-        min-width: 35px !important;
-        padding-left: 0;
-        padding-right: 0;
+    details.conversation-card.is-active summary {
+        background: #eef2ff;
+        color: #111827;
+    }
+    .conversation-card__title-row {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .conversation-card__title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: inherit;
+        flex: 1;
+    }
+    .conversation-card__chevron {
+        width: 12px;
+        height: 12px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg);
+        transition: transform 0.2s ease;
+    }
+    details.conversation-card[open] .conversation-card__chevron {
+        transform: rotate(-135deg);
+    }
+    .conversation-card__delete {
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+        padding: 0.1rem 0.35rem;
         font-size: 0.8rem;
+        background: #fff;
+        cursor: pointer;
+        color: #4b5563;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+    .conversation-card__delete:hover {
+        background: #f3f4f6;
+        color: #111827;
+    }
+    .conversation-card__body {
+        background: #f9fafb;
+        padding: 0.5rem 0.85rem 0.85rem;
+    }
+    .conversation-card__files-container {
+        max-height: 180px;
+        overflow-y: auto;
+        padding-right: 0.25rem;
+    }
+    .conversation-card__files {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .conversation-card__file-item {
+        font-size: 0.82rem;
+        padding: 0 0;
+        color: #374151;
+    }
+    .conversation-card__file-name {
+        font-weight: 500;
+    }
+    .conversation-card__file-more {
+        font-size: 0.78rem;
+        color: #6b7280;
+        margin-top: 0.3rem;
+    }
+    .conversation-card__empty {
+        font-size: 0.82rem;
+        color: #6b7280;
+        margin: 0;
     }
     </style>
     """
@@ -587,16 +857,16 @@ def build_demo():
                 extract_btn = gr.Button("📚 Extract Learning")
                 learning_status = gr.Markdown()
 
-                conversation_table = gr.Dataframe(
-                    headers=["Conversation", ""],
-                    datatype=["str", "str"],
-                    label="Conversations",
-                    interactive=False,
-                    row_count=(0, "dynamic"),
-                    col_count=(2, "fixed"),
-                    elem_id="conversation-table",
-                    column_widths=["auto", "32px"],
-                    wrap=True,
+                conversation_list = gr.HTML(
+                    value="",
+                    elem_id="conversation-list",
+                    min_height=10,
+                    container=False,
+                )
+                conversation_action_bus = gr.Textbox(
+                    value="",
+                    show_label=False,
+                    elem_id="conversation-action-bus",
                 )
                 new_task_btn = gr.Button("New Task")
 
@@ -619,11 +889,12 @@ def build_demo():
             inputs=None,
             outputs=[
                 state,
-                conversation_table,
+                conversation_list,
                 chatbot,
                 files_md,
                 use_learning,
                 user_input,
+                conversation_action_bus,
             ],
         )
 
@@ -633,16 +904,16 @@ def build_demo():
             outputs=state,
         )
 
-        conversation_table.select(
-            on_conversation_table_select,
-            inputs=state,
-            outputs=[state, conversation_table, chatbot, files_md, user_input],
+        conversation_action_bus.change(
+            on_conversation_action,
+            inputs=[conversation_action_bus, state],
+            outputs=[state, conversation_list, chatbot, files_md, user_input, conversation_action_bus],
         )
 
         new_task_btn.click(
             on_new_task,
             inputs=state,
-            outputs=[state, conversation_table, chatbot, files_md, user_input],
+            outputs=[state, conversation_list, chatbot, files_md, user_input],
         )
 
         file_upload.upload(
@@ -660,12 +931,12 @@ def build_demo():
         send_btn.click(
             on_send_message,
             inputs=[user_input, state],
-            outputs=[state, chatbot, user_input],
+            outputs=[state, chatbot, user_input, conversation_list],
         )
         user_input.submit(
             on_send_message,
             inputs=[user_input, state],
-            outputs=[state, chatbot, user_input],
+            outputs=[state, chatbot, user_input, conversation_list],
         )
 
         extract_btn.click(

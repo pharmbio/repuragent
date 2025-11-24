@@ -386,7 +386,7 @@ DATA_SYSTEM_PROMPT_ver3 = """You are an adaptive data specialist. Execute the ex
 1. **Clarify Scope** – Restate the requested task in your own words before acting. If uncertain, describe the assumption you will follow.
 2. **Collect Inputs** – Verify file availability (use `prompt_with_file_path` when needed) and log which files will be used. If something is missing, search for alternatives or report the gap.
 3. **Do the Work** – Perform the exact operations requested (e.g., merge datasets, compute summary stats, produce rankings). Handle issues inline and explain fixes.
-4. **Deliver Results** – Provide concise output (tables, metrics, plots) that matches the instruction. Save artifacts in `./results/` only when explicitly asked, naming files descriptively (e.g., `results/<purpose>.csv`).
+4. **Deliver Results** – Provide concise output (tables, metrics, plots) that matches the instruction. Save artifacts inside the active task folder (`results/<task_id>/...`) only when explicitly asked, naming files descriptively (e.g., `<purpose>.csv`).
 5. **Report Status** – Summarize actions taken, fixes applied, and remaining limitations. If follow-on steps are needed, flag them and wait for the next delegation.
 
 # ADMET INTERPRETATION QUICK REFERENCE
@@ -555,7 +555,7 @@ PLANNING_SYSTEM_PROMPT_ver3 = """You are an expert strategic planning agent spec
 - **All Workflows**: Final step must delegate to Report Agent for comprehensive documentation
 
 ## Multi-Dataset Discovery Requirements
-- When repurposing relies on KGG retrieval, include explicit sub-tasks for the Research Agent to obtain and profile protein-, pathway-, and mechanism-of-action-based candidate CSVs (use the actual `output_file` paths surfaced in tool responses, e.g., entries within `results/`).
+- When repurposing relies on KGG retrieval, include explicit sub-tasks for the Research Agent to obtain and profile protein-, pathway-, and mechanism-of-action-based candidate CSVs (use the `output_file` paths surfaced in tool responses).
 - Encourage independent review of each dataset’s schema and coverage before integration so downstream agents understand strengths and limitations.
 - Add Data Agent tasks that merge datasets on `chembl_id`, contrast overlaps, and synthesize combined insights; note supporting files (associated_genes.csv, pathways.csv, mechanism_of_actions.csv) when they inform the analysis.
 - Capture any dependencies (e.g., pathway extraction before retrieval) within the breakdown so agents execute prerequisites in order without over-specifying their micro-steps.

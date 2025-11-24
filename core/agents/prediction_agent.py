@@ -1,8 +1,9 @@
+import json
 import os
 import re
+import shlex
 import subprocess
-import json
-from typing import List, Union
+from typing import List, Optional, Union
 
 import pandas as pd
 from langchain_core.tools import tool
@@ -12,7 +13,7 @@ from rapidfuzz import process
 from app.config import logger
 from core.prompts.prompts import PREDICTION_SYSTEM_PROMPT_ver3
 from backend.utils.fuzzy_path import prompt_with_file_path
-
+from backend.utils.output_paths import task_file_path
 
 
 def smiles_csv(smiles_input: Union[str, List[str]]) -> Union[str, os.PathLike]:
@@ -80,376 +81,359 @@ def format_clf_df(df, column):
     df = df.drop(['tmp'],axis=1)
     return df
 
+
+def _prepare_output_file(filename: str, output_folder: Optional[str] = None):
+    """Return the path for a classifier artifact inside the active task directory."""
+    path = task_file_path(filename, output_folder=output_folder)
+    if path.exists():
+        path.unlink()
+    return path
+
 @tool
-def CYP3A4_classifier(smiles_input: Union[str, List[str]]):
+def CYP3A4_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for CYP3A4 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/CYP3A4_results.csv """
-    
-    #Delete old data: 
-    if os.path.exists('./results/CYP3A4_results.csv'):
-        os.remove('./results/CYP3A4_results.csv')
+        Absolute path to the generated `CYP3A4_results.csv` inside the task output folder."""
 
+    output_path = _prepare_output_file("CYP3A4_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP3A4_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.79 \
     --output-format CSV \
-    --output results/CYP3A4_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     # Modify output columns 
-    df = pd.read_csv('./results/CYP3A4_results.csv')
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','CYP3A4_inhibition']
     df = format_clf_df(df, 'CYP3A4_inhibition')
-    df.to_csv('./results/CYP3A4_results.csv', index=False)
+    df.to_csv(output_path, index=False)
 
-    return './results/CYP3A4_results.csv'
+    return str(output_path)
 
 @tool
-def hERG_classifier(smiles_input: Union[str, List[str]]):
+def hERG_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for hERG inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/hERG_results.csv """
-    
-    #Delete old data: 
-    if os.path.exists('./results/hERG_results.csv'):
-        os.remove('./results/hERG_results.csv')
+        Absolute path to `hERG_results.csv` saved for this task."""
 
+    output_path = _prepare_output_file("hERG_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/hERG_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.78 \
     --output-format CSV \
-    --output results/hERG_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     
     # Modify output columns 
-    df = pd.read_csv('./results/hERG_results.csv')
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','hERG_inhibition']
     df = format_clf_df(df, 'hERG_inhibition')
-    df.to_csv('./results/hERG_results.csv', index=False)
+    df.to_csv(output_path, index=False)
     
-    return './results/hERG_results.csv'
+    return str(output_path)
 
 @tool
-def AMES_classifier(smiles_input: Union[str, List[str]]):
+def AMES_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for AMES inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/AMES_results.csv """
-    
-    #Delete old data: 
-    if os.path.exists('./results/AMES_results.csv'):
-        os.remove('./results/AMES_results.csv')
+        Absolute path to `AMES_results.csv` for this task."""
 
+    output_path = _prepare_output_file("AMES_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/AMES_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.81 \
     --output-format CSV \
-    --output results/AMES_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     # Modify output columns 
-    df = pd.read_csv('./results/AMES_results.csv')
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','AMES_mutagenic']
     df = format_clf_df(df, 'AMES_mutagenic')
-    df.to_csv('./results/AMES_results.csv', index=False)
+    df.to_csv(output_path, index=False)
     
-    return './results/AMES_results.csv'
+    return str(output_path)
 
 @tool
-def PGP_classifier(smiles_input: Union[str, List[str]]):
+def PGP_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for P-glycoprotein inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/PGP_results.csv """
-    
-    #Delete old data: 
-    if os.path.exists('./results/PGP_results.csv'):
-        os.remove('./results/PGP_results.csv')
+        Absolute path to `PGP_results.csv` saved in the task folder."""
 
+    output_path = _prepare_output_file("PGP_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/PGP_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.83 \
     --output-format CSV \
-    --output results/PGP_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
-    # Modify output columns 
-    df = pd.read_csv('./results/PGP_results.csv')
+    # Modify output columns
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','PGP_inhibition']
     df = format_clf_df(df, 'PGP_inhibition')
-    df.to_csv('./results/PGP_results.csv', index=False)
-    
-    return './results/PGP_results.csv'
+    df.to_csv(output_path, index=False)
+
+    return str(output_path)
 
 
 @tool
-def Solubility_regressor(smiles_input: Union[str, List[str]]):
+def Solubility_regressor(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained regression model for solubility prediction with single point prediction and prediction interval.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/Solubility_results.csv"""
-    
-    #Delete old data: 
-    if os.path.exists('./results/Solubility_results.csv'):
-        os.remove('./results/Solubility_results.csv')
+        Path to `Solubility_results.csv` stored for this task."""
 
+    output_path = _prepare_output_file("Solubility_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/Solubility_rgs_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.71 \
     --output-format CSV \
-    --output results/Solubility_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     # Modify output columns 
-    df = pd.read_csv('./results/Solubility_results.csv')
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','logS','logS_lower_bound','logS_upper_bound', 'Capped_logS_lower_bound', 'Capped_logS_upper_bound']
-    df.to_csv('./results/Solubility_results.csv', index=False)
+    df.to_csv(output_path, index=False)
 
-    return './results/Solubility_results.csv'
+    return str(output_path)
 
 @tool
-def Lipophilicity_regressor(smiles_input: Union[str, List[str]]):
+def Lipophilicity_regressor(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained regression model for lipophilicity prediction with single point prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/Lipophilicity_results.csv"""
-    
-    #Delete old data: 
-    if os.path.exists('./results/Lipophilicity_results.csv'):
-        os.remove('./results/Lipophilicity_results.csv')
+        Path to `Lipophilicity_results.csv` inside the task directory."""
 
+    output_path = _prepare_output_file("Lipophilicity_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
 
     # Generate logP
     from rdkit import Chem
     from rdkit.Chem import Crippen
-    
+
     df = pd.read_csv(data_path)
     df['mol'] = df['smiles'].apply(lambda smi: Chem.MolFromSmiles(smi))
     df['logP'] = df['mol'].apply(lambda mol: Crippen.MolLogP(mol))
     df = df.drop(['mol'], axis=1)
 
-    # Modify output columns 
-    df.to_csv('./results/Lipophilicity_results.csv', index=False)
+    # Modify output columns
+    df.to_csv(output_path, index=False)
 
-    return './results/Lipophilicity_results.csv'
+    return str(output_path)
 
 @tool
-def PAMPA_classifier(smiles_input: Union[str, List[str]]):
+def PAMPA_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for PAMPA permeability assay.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/PAMPA_results.csv"""
+        Path to `PAMPA_results.csv` for the current task."""
 
-    #Delete old data: 
-    if os.path.exists('./results/PAMPA_results.csv'):
-        os.remove('./results/PAMPA_results.csv')
-
+    output_path = _prepare_output_file("PAMPA_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/PAMPA_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.75 \
     --output-format CSV \
-    --output results/PAMPA_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     # Modify output columns 
-    df = pd.read_csv('./results/PAMPA_results.csv')
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','PAMPA_permeability']
     df = format_clf_df(df, 'PAMPA_permeability')
-    df.to_csv('./results/PAMPA_results.csv', index=False)
+    df.to_csv(output_path, index=False)
 
-    return "./results/PAMPA_results.csv"
+    return str(output_path)
 
 @tool
-def BBB_classifier(smiles_input: Union[str, List[str]]):
+def BBB_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for assessing Blood Brain Barrier penetration ability.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/BBB_results.csv"""
+        Path to `BBB_results.csv` stored under the task output directory."""
 
-    #Delete old data: 
-    if os.path.exists('./results/BBB_results.csv'):
-        os.remove('./results/BBB_results.csv')
-
+    output_path = _prepare_output_file("BBB_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/BBB_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.80 \
     --output-format CSV \
-    --output results/BBB_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     # Modify output columns 
-    df = pd.read_csv('./results/BBB_results.csv')
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','BBB_penetration']
     df = format_clf_df(df, 'BBB_penetration')
-    df.to_csv('./results/BBB_results.csv', index=False)
+    df.to_csv(output_path, index=False)
 
-    return './results/BBB_results.csv'
+    return str(output_path)
 
 @tool
-def CYP2C19_classifier(smiles_input: Union[str, List[str]]):
+def CYP2C19_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for CYP2C19 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/CYP2C19_results.csv """
-    
-    #Delete old data: 
-    if os.path.exists('./results/CYP2C19_results.csv'):
-        os.remove('./results/CYP2C19_results.csv')
+        Path to `CYP2C19_results.csv` for this task."""
 
+    output_path = _prepare_output_file("CYP2C19_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP2C19_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.80 \
     --output-format CSV \
-    --output results/CYP2C19_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
-    # Modify output columns 
-    df = pd.read_csv('./results/CYP2C19_results.csv')
+    # Modify output columns
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','CYP2C19_inhibition']
     df = format_clf_df(df, 'CYP2C19_inhibition')
-    df.to_csv('./results/CYP2C19_results.csv', index=False)
+    df.to_csv(output_path, index=False)
 
-    return './results/CYP2C19_results.csv'
+    return str(output_path)
 
 @tool
-def CYP2D6_classifier(smiles_input: Union[str, List[str]]):
+def CYP2D6_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for CYP2D6 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/CYP2D6_results.csv """
-    
-    #Delete old data: 
-    if os.path.exists('./results/CYP2D6_results.csv'):
-        os.remove('./results/CYP2D6_results.csv')
+        Path to `CYP2D6_results.csv` stored for this task."""
 
+    output_path = _prepare_output_file("CYP2D6_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP2D6_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.80 \
     --output-format CSV \
-    --output results/CYP2D6_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     # Modify output columns 
-    df = pd.read_csv('./results/CYP2D6_results.csv')
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','CYP2D6_inhibition']
     df = format_clf_df(df, 'CYP2D6_inhibition')
-    df.to_csv('./results/CYP2D6_results.csv', index=False)
+    df.to_csv(output_path, index=False)
 
-    return './results/CYP2D6_results.csv'
+    return str(output_path)
 
 @tool
-def CYP1A2_classifier(smiles_input: Union[str, List[str]]):
+def CYP1A2_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for CYP1A2 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/CYP1A2_results.csv """
-    
-    #Delete old data: 
-    if os.path.exists('./results/CYP1A2_results.csv'):
-        os.remove('./results/CYP1A2_results.csv')
+        Path to `CYP1A2_results.csv` stored for this task."""
 
+    output_path = _prepare_output_file("CYP1A2_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP1A2_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.84 \
     --output-format CSV \
-    --output results/CYP1A2_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     # Modify output columns 
-    df = pd.read_csv('./results/CYP1A2_results.csv')
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','CYP1A2_inhibition']
     df = format_clf_df(df, 'CYP1A2_inhibition')
-    df.to_csv('./results/CYP1A2_results.csv', index=False)
+    df.to_csv(output_path, index=False)
 
-    return './results/CYP1A2_results.csv'
+    return str(output_path)
 
 @tool
-def CYP2C9_classifier(smiles_input: Union[str, List[str]]):
+def CYP2C9_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
     """Pretrained classification model for CYP2C9 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
                       a list of SMILES strings, or a path to a CSV/TSV file 
                       with a 'smiles' column.
     Returns:
-        The output is csv file path results/CYP2C9_results.csv """
-    
-    #Delete old data: 
-    if os.path.exists('./results/CYP2C9_results.csv'):
-        os.remove('./results/CYP2C9_results.csv')
+        Path to `CYP2C9_results.csv` saved for this conversation."""
 
+    output_path = _prepare_output_file("CYP2C9_results.csv", output_folder)
     data_path = smiles_csv(smiles_input)
+    output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
     --model models/CYP2C9_clf_trained.jar \
     --predict-file CSV {data_path} \
     --confidences 0.80 \
     --output-format CSV \
-    --output results/CYP2C9_results.csv'
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    --output {output_str}'
+    _ = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
     # Modify output columns 
-    df = pd.read_csv('./results/CYP2C9_results.csv')
+    df = pd.read_csv(output_path)
     df.columns = ['smiles','p_value_0','p_value_1','CYP2C9_inhibition']
     df = format_clf_df(df, 'CYP2C9_inhibition')
-    df.to_csv('./results/CYP2C9_results.csv', index=False)
+    df.to_csv(output_path, index=False)
 
-    return './results/CYP2C9_results.csv'
+    return str(output_path)
 
 def build_prediction_agent(llm):
     prediction_agent = create_react_agent(

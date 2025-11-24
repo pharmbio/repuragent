@@ -38,6 +38,15 @@ RUN mkdir -p /app/data /app/results /app/models
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Pre-fetch Chroma default embedding model to avoid runtime download delays
+RUN python - <<'PY'
+from chromadb.utils.embedding_functions import DefaultEmbeddingFunction
+
+embedder = DefaultEmbeddingFunction()
+embedder(["warmup"])  # triggers model download & caching
+print("Chroma default embedding model cached during build.")
+PY
+
 # Copy the entire application
 COPY . .
 

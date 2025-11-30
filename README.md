@@ -9,8 +9,12 @@ Drug repurposing offers an efficient strategy to accelerate therapeutic discover
 </div>
 
 
-### Demo Page with example output:
-[RepurAgent Demo Page](https://repuragent.streamlit.app) with example output for a COVID-19 repurposing.
+### Version Announcement:
+
+This repository contains a local application that you can clone and run on your own machine. As a result, all data files, database and chat memory remain on your device. Additionally, we offer several alternative versions:
+
+- [RepurAgent Web](https://repuragent.serve.scilifelab.se): This is the web version of RepurAgent, which can be used online without installation. Simply register for an account to access the web app.
+- [RepurAgent Demo Page](https://repuragent.streamlit.app): This is a static demo of RepurAgent designed for viewing purposes only. You cannot interact with the agent in this mode.
 
 
 ### Core Agent Architecture

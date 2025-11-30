@@ -9,7 +9,6 @@ from langgraph.types import Command
 
 from app.app_config import AppRunConfig
 from app.config import RECURSION_LIMIT, logger
-from backend.utils.output_paths import reset_current_task_id, set_current_task_id
 from core.supervisor.supervisor import create_app
 
 
@@ -53,7 +52,6 @@ async def stream_langgraph_events(
         "recursion_limit": RECURSION_LIMIT,
     }
 
-    token = set_current_task_id(thread_id)
     try:
         async with app_session(app_config) as app:
             stream_iterator = app.astream(
@@ -84,8 +82,6 @@ async def stream_langgraph_events(
             yield ("complete", True)
             return
         raise
-    finally:
-        reset_current_task_id(token)
 
 
 def build_stream_input(user_message: str, *, resume: bool = False) -> Any:

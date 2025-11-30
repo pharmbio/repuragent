@@ -20,6 +20,7 @@ from langchain_core.messages import AIMessage
 from backend.utils.local_python_executor import local_python_executor, reset_executor_state, BASE_BUILTIN_MODULES
 from backend.utils.fuzzy_path import prompt_with_file_path
 from core.prompts.prompts import DATA_SYSTEM_PROMPT_ver3
+from backend.utils.output_paths import ensure_task_dir
 
 DEFAULT_AUTHORIZED_IMPORTS = [
     'json',
@@ -131,11 +132,21 @@ def create_agent_builder(
     model_with_tools = model.bind_tools(tools=tools)
     
     # Define the agent node - aligned with template's call_model pattern
+    def _context_message() -> SystemMessage:
+        task_dir = ensure_task_dir()
+        resolved = task_dir.resolve()
+        return SystemMessage(
+            content=(
+                "Active task output directory: "
+                f"{resolved}. Always write files inside this folder (for example by "
+                "setting `output_folder = '" + str(resolved) + "'`)."
+            )
+        )
+
     def call_model(state: AgentState, config: RunnableConfig) -> AgentState:
         """Call the model with the current state."""
         messages = state["messages"]
-        # Add system prompt to the beginning
-        payload = [SystemMessage(content=prompt)] + messages
+        payload = [SystemMessage(content=prompt), _context_message()] + messages
         response = model_with_tools.invoke(payload, config)
         # Add agent name if provided
         if name:
@@ -145,7 +156,7 @@ def create_agent_builder(
     async def acall_model(state: AgentState, config: RunnableConfig) -> AgentState:
         """Async version of call_model."""
         messages = state["messages"]
-        payload = [SystemMessage(content=prompt)] + messages
+        payload = [SystemMessage(content=prompt), _context_message()] + messages
         response = await model_with_tools.ainvoke(payload, config)
         if name:
             response.name = name

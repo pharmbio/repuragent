@@ -20,6 +20,8 @@ rapidfuzz==3.13.0
 fuzzywuzzy==0.18.0
 gradio==5.49.1
 aiosqlite==0.20.0
+fastapi==0.115.5
+uvicorn==0.32.0
 
 # Chemistry and bioinformatics - exact versions
 chembl-webresource-client==0.10.9

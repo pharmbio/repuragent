@@ -35,6 +35,7 @@ class UIState:
     use_episodic_learning: bool = True
     thread_files: Dict[str, List[FileRecord]] = field(default_factory=dict)
     uploaded_files: List[FileRecord] = field(default_factory=list)
+    thread_output_files: Dict[str, List[FileRecord]] = field(default_factory=dict)
     current_app_config: Optional[AppRunConfig] = None
 
     def ensure_thread_storage(self, thread_id: str) -> None:

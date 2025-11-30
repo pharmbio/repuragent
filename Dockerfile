@@ -1,11 +1,16 @@
 # Repuragent Docker Container
-FROM python:3.12-slim
+FROM python:3.13-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive \
-    JAVA_HOME=/usr/lib/jvm/default-java
+    JAVA_HOME=/usr/lib/jvm/default-java \
+    GRADIO_SERVER_NAME="0.0.0.0" \
+    GRADIO_SERVER_PORT=7860
+ENV USER=repuragent
+ENV HOME=/home/$USER
+RUN useradd -m -u 1000 $USER
 
 # Install system dependencies including Java 11
 RUN apt-get update && apt-get install -y \
@@ -32,7 +37,7 @@ RUN java -version
 WORKDIR /app
 
 # Create necessary directories
-RUN mkdir -p /app/data /app/results /app/models
+RUN mkdir -p /app/data /app/results /app/models /app/temp
 
 # Copy requirements first for better caching
 COPY requirements.txt ./
@@ -53,65 +58,15 @@ COPY . .
 # Set proper permissions
 RUN chmod +x models/CPSign/cpsign-2.0.0-fatjar.jar 2>/dev/null || true
 RUN chmod -R 755 /app
+RUN chown -R $USER:$USER /app
 
 # Create volumes for persistent data and memory stores
 VOLUME ["/app/data", "/app/results", "/app/backend/memory"]
 
 # Expose Gradio port
-EXPOSE 8501
+EXPOSE 7860
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-    CMD curl -f http://localhost:8501/ || exit 1
-
-# Create entrypoint script
-COPY <<EOF /app/entrypoint.sh
-#!/bin/bash
-set -e
-
-# Check if .env file exists, if not create a template
-if [ ! -f /app/.env ]; then
-    echo "Creating .env template..."
-    cat > /app/.env << 'ENVEOF'
-# OpenAI API key (mandatory)
-OPENAI_API_KEY=your-api-key
-
-# LANGSMITH TRACING API KEY (Optional)
-#LANGSMITH_TRACING=true
-#LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
-#LANGSMITH_API_KEY=tracking-api-key
-#LANGSMITH_PROJECT=project-name
-ENVEOF
-    echo "Please edit /app/.env and set your OPENAI_API_KEY"
-fi
-
-# Check Java installation
-echo "Java version:"
-java -version
-
-# Check CPSign jar file
-if [ -f "/app/models/CPSign/cpsign-2.0.0-fatjar.jar" ]; then
-    echo "CPSign jar file found"
-else
-    echo "Warning: CPSign jar file not found at /app/models/CPSign/cpsign-2.0.0-fatjar.jar"
-fi
-
-# Check if models directory has the required model files
-if [ -d "/app/models" ] && [ "$(ls -A /app/models)" ]; then
-    echo "Model files found: \$(ls /app/models | wc -l) files"
-else
-    echo "Warning: No model files found in /app/models"
-fi
-
-# Start the application
-echo "Starting Repuragent application..."
-cd /app
-export GRADIO_SERVER_NAME="0.0.0.0"
-export GRADIO_SERVER_PORT="${PORT:-8501}"
-python main.py
-EOF
-
-RUN chmod +x /app/entrypoint.sh
-
-# Set the entrypoint
-ENTRYPOINT ["/app/entrypoint.sh"]
+# Default command
+USER $USER
+ENV GRADIO_TEMP_DIR="/app/temp"
+CMD ["python", "main.py"]

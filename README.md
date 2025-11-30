@@ -55,7 +55,7 @@ echo "LANGCHAIN_PROJECT=repuragent" >> .env
 docker-compose up --build
 ```
 
-Open [http://localhost:8501](http://localhost:8501) to access the Gradio application.
+Open [http://localhost:7860](http://localhost:7860) to access the Gradio application.
 
 ### Daily Usage
 ```bash

@@ -15,6 +15,7 @@ This repository contains a local application that you can clone and run on your 
 
 - [RepurAgent Web](https://repuragent.serve.scilifelab.se): This is the web version of RepurAgent, which can be used online without installation. Simply register for an account to access the web app.
 - [RepurAgent Demo Page](https://repuragent.streamlit.app): This is a static demo of RepurAgent designed for viewing purposes only. You cannot interact with the agent in this mode.
+- [Documentation](https://repuragent.readthedocs.io/)
 
 
 ### Core Agent Architecture

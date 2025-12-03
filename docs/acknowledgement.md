@@ -6,19 +6,19 @@ them and points to the original sources for attribution.
 ## Knowledge Graph Generator (KGG)
 
 We rely on the [Knowledge Graph Generator (KGG)](https://github.com/Fraunhofer-ITMP/kgg)
-from Fraunhofer ITMP to create disease-specific knowledge graphs and extract information from it. Its
+from Fraunhofer ITMP to create disease-specific knowledge graphs and extract information from them. Its
 automated pipeline ingests curated sources (OpenTargets, UniProt, ChEMBL, etc.) and lets us
 pick the disease ID, protein threshold, and clinical-stage filters.
 
 ## REMEDI4ALL Chemical Annotator
 
-For compound annotations we use the
+For compound annotations, we use the
 [REMEDI4ALL Chemical Annotator](https://github.com/REMEDI4ALL/chemical_annotator), which
 queries ChEMBL, UniChem, PubChem, and KEGG from SMILES/InChI inputs.
 
-## REMEDI4ALL Technical Note
+## REMEDI4ALL Standard Operating Procedures
 
-Our SOPs are from the REMEDi4ALL technical notes, for example 
+Our SOPs are provided from the REMEDi4ALL technical notes.
 
 ## LitSense
 
@@ -27,6 +27,17 @@ a PubMed-scale neural search engine described by Salatino et al. (Nucleic Acids 
 2025). LitSense indexes titles, abstracts, and full text where available, and combines
 semantic representations with curated entity tagging to surface mechanism-, target-, and
 phenotype-level passages that drive Repuragent's research agent prompts.
+
+## Hugging Face Local Python Executor
+
+The `python_executor` in the data agent reuses Hugging Face's Apache-2.0 licensed local Python executor to keep code runs safely scoped
+to a curated import list.
+
+## SOP Indexing Stack
+
+Our SOP ingestion pipeline depends on [Unstructured](https://github.com/Unstructured-IO/unstructured)
+for PDF parsing plus OpenAI's embedding models. Unstructured handles table/image-aware chunking, while ChatGPT/Embeddings power the
+summaries and Chroma vectors that back the SOP RAG experience. 
 
 ## CPSign
 

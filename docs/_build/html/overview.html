@@ -88,24 +88,45 @@
              
   <section id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
-<p>Repuragent is an Agentic AI system for Drug Repurposing. It uses a LangGraph supervisor architecture at its core, where the supervisor agent drives a team of specialized agents. These agents mine biomedical literature, traverse curated knowledge graphs, run ADMET models, generate and execute Python code, and write human-readable reports. This chapter orients you before you dive into edition-specific guides.</p>
+<p>Repuragent is an Agentic AI system for Drug Repurposing. It uses a LangGraph supervisor
+architecture at its core, where the supervisor agent drives a team of specialized agents.
+These agents mine biomedical literature, traverse curated knowledge graphs, run ADMET
+models, generate and execute Python code, and write human-readable reports. This chapter
+orients you before you dive into edition-specific guides.</p>
 <section id="what-the-application-delivers">
 <h2>1.1 What the Application Delivers<a class="headerlink" href="#what-the-application-delivers" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><strong>Autonomous planning</strong> – the planning agent decomposes a user’s questions into a sequence of actions, enriched by Standard Operating Procedures and episodic memory of prior successful workflows.</p></li>
-<li><p><strong>Evidence gathering</strong> – the research agent queries PubMed via LitSense, searches your SOP vault, and builds knowledge graphs (KGG) to surface drugs, proteins, and pathways.</p></li>
-<li><p><strong>Data/analysis automation</strong> – the data agent executes safety-controlled Python code snippets (pandas, RDKit, scikit-learn, etc) directly inside the task workspace.</p></li>
-<li><p><strong>Predictive modeling</strong> – the prediction agent calls pretrained CPSign classifiers/regressors plus RDKit-derived features to produce ADMET dashboards.</p></li>
-<li><p><strong>Reporting and oversight</strong> – the supervisor agent ensures every step is auditable, pauses for human approval when needed, and the report agent synthesizes the whole task run at the end.</p></li>
+<li><p><strong>Autonomous planning</strong><br />
+The planning agent decomposes a user’s questions into a sequence of actions, enriched by
+Standard Operating Procedures and episodic memory of prior successful workflows.</p></li>
+<li><p><strong>Evidence gathering</strong><br />
+The research agent queries PubMed via LitSense, searches your SOP vault, and builds
+knowledge graphs (KGG) to surface drugs, proteins, and pathways.</p></li>
+<li><p><strong>Data/analysis automation</strong><br />
+The data agent executes safety-controlled Python code snippets (pandas, RDKit,
+scikit-learn, etc) directly inside the task workspace.</p></li>
+<li><p><strong>Predictive modeling</strong><br />
+The prediction agent calls pretrained CPSign classifiers/regressors plus RDKit-derived
+features to produce ADMET dashboards.</p></li>
+<li><p><strong>Reporting and oversight</strong><br />
+The supervisor agent ensures every step is auditable, pauses for human approval when
+needed, and the report agent synthesizes the whole task run at the end.</p></li>
 </ul>
 </section>
 <section id="two-versions">
 <h2>1.2 Two Versions<a class="headerlink" href="#two-versions" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><strong>Local app</strong> – the <a class="reference external" href="https://github.com/pharmbio/repuragent">GitHub Repo</a> that you clone, run in Docker, and keep entirely on your workstation. Nothing leaves your machine beyond the API calls authorized by your own <code class="docutils literal notranslate"><span class="pre">OPENAI_API_KEY</span></code>.</p></li>
-<li><p><strong>Web app</strong> – hosted at <a class="reference external" href="https://repuragent.serve.scilifelab.se">repuragent.serve.scilifelab.se</a>. It uses the same LangGraph architecture in the core, but is deployed on the SciLifeLab Serve infrastructure for multiple users. No installation is required for this version.</p></li>
+<li><p><strong>Local app:</strong> the <a class="reference external" href="https://github.com/pharmbio/repuragent">GitHub Repo</a> that you clone,
+run in Docker, and keep entirely on your workstation. Nothing leaves your machine beyond
+the API calls authorized by your own <code class="docutils literal notranslate"><span class="pre">OPENAI_API_KEY</span></code>.</p></li>
+<li><p><strong>Web app:</strong> hosted at <a class="reference external" href="https://repuragent.serve.scilifelab.se">repuragent.serve.scilifelab.se</a>.
+It uses the same LangGraph architecture in the core, but is deployed on the SciLifeLab
+Serve infrastructure for multiple users. No installation is required for this version.</p></li>
+<li><p><strong>Local App Guide:</strong> use the <a class="reference internal" href="local.html"><span class="std std-doc">Local App Guide</span></a> when you want full control and
+private processing (requires your own OpenAI API key).</p></li>
+<li><p><strong>Web App Guide:</strong> use the <a class="reference internal" href="web.html"><span class="std std-doc">Web App Guide</span></a> when you need instant usage without
+managing hardware.</p></li>
 </ul>
-<p>Use the <a class="reference internal" href="local.html"><span class="std std-doc">Local App Guide</span></a> when you want full control and private processing. However, you need your own OpenAI API Key. Use the <a class="reference internal" href="web.html"><span class="std std-doc">Web App Guide</span></a> when you need instant usage without managing hardware.</p>
 </section>
 <section id="feature-comparison">
 <h2>1.3 Feature Comparison<a class="headerlink" href="#feature-comparison" title="Link to this heading"></a></h2>
@@ -142,11 +163,11 @@
 <section id="typical-workflow">
 <h3>Typical Workflow<a class="headerlink" href="#typical-workflow" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
-<li><p><strong>Frame the problem</strong> in chat—describe the indication, constraints, or hypotheses.</p></li>
-<li><p><strong>Attach relevant data</strong>—upload CSV/JSON/PDF files.</p></li>
-<li><p><strong>Approve and monitor</strong>—planning may pause for human review, modification, and approval</p></li>
-<li><p><strong>Review results</strong>—download artifacts from the Conversation panel.</p></li>
-<li><p><strong>Iterate or branch</strong>—continue the same thread (conversation) to preserve context, or start a new one when exploring a different hypothesis.</p></li>
+<li><p><strong>Frame the problem</strong> – describe the indication, constraints, or hypotheses in chat.</p></li>
+<li><p><strong>Attach relevant data</strong> – upload CSV/JSON/PDF files.</p></li>
+<li><p><strong>Approve and monitor</strong> – planning may pause for human review, modification, and approval.</p></li>
+<li><p><strong>Review results</strong> – download artifacts from the Conversation panel.</p></li>
+<li><p><strong>Iterate or branch</strong> – continue the same thread to preserve context, or start a new one when exploring a different hypothesis.</p></li>
 </ol>
 </section>
 </section>

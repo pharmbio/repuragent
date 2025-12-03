@@ -61,6 +61,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#data-agent-core-agents-data-agent-py">Data Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/data_agent.py</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prediction-agent-core-agents-prediction-agent-py">Prediction Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/prediction_agent.py</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#report-agent-core-agents-report-agent-py">Report Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/report_agent.py</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supervisor-human-in-the-loop">Supervisor &amp; Human-in-the-Loop</a></li>
 </ul>
 </li>
 </ul>
@@ -160,9 +161,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol_search_sop</span></code> – RAG tools for REMEDi4ALL’s SOPs.</p></li>
 </ul>
 </li>
-<li><p><strong>Notes:</strong> Uses <code class="docutils literal notranslate"><span class="pre">PLANNING_SYSTEM_PROMPT_ver3</span></code> (episodically enhanced when enabled) via <code class="docutils literal notranslate"><span class="pre">EpisodicLearningSystem.create_enhanced_planning_prompt</span></code> so previous successful decompositions can seed new plans.</p></li>
+<li><p><strong>Notes:</strong> Uses <code class="docutils literal notranslate"><span class="pre">PLANNING_SYSTEM_PROMPT_ver3</span></code> (episodically enhanced when enabled) via
+<code class="docutils literal notranslate"><span class="pre">EpisodicLearningSystem.create_enhanced_planning_prompt</span></code> so previous successful
+decompositions can seed new plans.</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="research-agent-core-agents-research-agent-py">
 <h3>Research Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/research_agent.py</span></code>)<a class="headerlink" href="#research-agent-core-agents-research-agent-py" title="Link to this heading"></a></h3>
 <ul class="simple">
@@ -183,8 +187,10 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">prompt_with_file_path</span></code> – resolves natural-language file references into concrete repo paths.</p></li>
 </ul>
 </li>
+<li><p><strong>Notes:</strong> Outputs citations, graph summaries, and ranked tables as JSON/CSV artifacts stored under each thread directory.</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="data-agent-core-agents-data-agent-py">
 <h3>Data Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/data_agent.py</span></code>)<a class="headerlink" href="#data-agent-core-agents-data-agent-py" title="Link to this heading"></a></h3>
 <ul class="simple">
@@ -199,6 +205,7 @@
 <li><p><strong>Notes:</strong> Runs on a custom LangGraph StateGraph (<code class="docutils literal notranslate"><span class="pre">ToolNode</span></code>) that injects the writable directory via <code class="docutils literal notranslate"><span class="pre">ensure_task_dir()</span></code>, enabling clean CSV/Parquet exports and Matplotlib/Plotly/Seaborn visualizations.</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="prediction-agent-core-agents-prediction-agent-py">
 <h3>Prediction Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/prediction_agent.py</span></code>)<a class="headerlink" href="#prediction-agent-core-agents-prediction-agent-py" title="Link to this heading"></a></h3>
 <ul class="simple">
@@ -220,13 +227,31 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">Lipophilicity_regressor</span></code> – RDKit-backed logP estimator.</p></li>
 </ul>
 </li>
+<li><p><strong>Notes:</strong> Every tool writes its CSV output (probabilities, <code class="docutils literal notranslate"><span class="pre">p_value_0/1</span></code>, binary calls) via <code class="docutils literal notranslate"><span class="pre">task_file_path()</span></code> so downloads remain sandboxed per thread.</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="report-agent-core-agents-report-agent-py">
 <h3>Report Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/report_agent.py</span></code>)<a class="headerlink" href="#report-agent-core-agents-report-agent-py" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><strong>Main role:</strong> assembles the final narrative brief once execution completes.</p></li>
+<li><p><strong>Tools:</strong> <em>(none – relies on the conversation history provided by the supervisor).</em></p></li>
 <li><p><strong>Notes:</strong> Guided by <code class="docutils literal notranslate"><span class="pre">REPORT_SYSTEM_PROMPT</span></code>, it summarizes findings, caveats, and recommended next steps using.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="supervisor-human-in-the-loop">
+<h3>Supervisor &amp; Human-in-the-Loop<a class="headerlink" href="#supervisor-human-in-the-loop" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Main role:</strong> orchestrates routing between planning, agents, and optional <code class="docutils literal notranslate"><span class="pre">human_chat</span></code> interrupts while maintaining shared memory.</p></li>
+<li><p><strong>Tools:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_supervisor</span></code> – wires together the Research, Data, Prediction, and Report agents.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route_from_start</span></code> – initial router deciding whether to plan first or execute directly.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">human_chat</span></code> – pause point for manual approval or edits before execution resumes.</p></li>
+</ul>
+</li>
+<li><p><strong>Notes:</strong> <code class="docutils literal notranslate"><span class="pre">initialize_memory()</span></code> selects <code class="docutils literal notranslate"><span class="pre">AsyncSqliteSaver</span></code> (local) or the web checkpoint backend, and <code class="docutils literal notranslate"><span class="pre">backend/utils/output_paths.py</span></code> keeps every tool locked to its thread directory for both safety and per-user isolation.</p></li>
 </ul>
 <p>Use this section when you need to extend the system (e.g., add a new tools), audit data flows for compliance reviews, or explain to others exactly how Repuragent handles their information. Refer back to the <a class="reference internal" href="shared_usage.html"><span class="std std-doc">Shared Usage Guidelines</span></a> for operator-facing workflows and the <a class="reference internal" href="troubleshooting.html"><span class="std std-doc">Troubleshooting</span></a> chapter for common failure modes.</p>
 </section>

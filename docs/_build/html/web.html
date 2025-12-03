@@ -85,48 +85,70 @@
              
   <section id="web-app-guidelines">
 <h1>Web App Guidelines<a class="headerlink" href="#web-app-guidelines" title="Link to this heading"></a></h1>
-<p>The hosted version at <a class="reference external" href="https://repuragent.serve.scilifelab.se">https://repuragent.serve.scilifelab.se</a> delivers Repuragent as a managed service. This chapter explains how to register, what data is stored, and how the cloud deployment protects each user.</p>
+<p>The hosted version at <a class="reference external" href="https://repuragent.serve.scilifelab.se">https://repuragent.serve.scilifelab.se</a>
+delivers Repuragent as a managed service. This chapter explains how to register, what data
+is stored, and how the cloud deployment protects each user.</p>
 <section id="account-registration">
 <h2>3.1 Account Registration<a class="headerlink" href="#account-registration" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p><strong>Sign up</strong> – click <em>Register</em> on UI, enter your email, and choose a strong password.<br />
-Account information is hashed with Argon2id before being stored in PostgreSQL, so neither admins nor developers ever see plaintext.</p></li>
-<li><p><strong>Email verification</strong> – an email from repuragent.uu&#64;gmail.com will be sent to your registered email with a one-time verification link.</p></li>
-<li><p><strong>Sign in</strong> – once verified, log in to reach the Repuragent Web UI.</p></li>
-<li><p><strong>Account recovery</strong> – use <em>Forgot password</em> to receive a reset link (valid for 1 h). New passwords are hashed the same way as during sign-up.</p></li>
+<li><p><strong>Sign up</strong><br />
+Click <em>Register</em> on the UI, enter your email, and choose a strong password.
+Account information is hashed with Argon2id before being stored in PostgreSQL, so
+neither admins nor developers ever see plaintext.</p></li>
+<li><p><strong>Email verification</strong><br />
+An email from <a class="reference external" href="mailto:repuragent&#46;uu&#37;&#52;&#48;gmail&#46;com">repuragent<span>&#46;</span>uu<span>&#64;</span>gmail<span>&#46;</span>com</a> will be sent to your registered email with a one-time verification link.</p></li>
+<li><p><strong>Sign in</strong><br />
+Once verified, log in to reach the Repuragent Web UI.</p></li>
+<li><p><strong>Account recovery</strong><br />
+Use <em>Forgot password</em> to receive a reset link (valid for 1 h). New passwords are hashed the same way as during sign-up.</p></li>
 </ol>
-<p>If you do not receive any email after registration or a request to change your password, check your spam email folder or contact us via <code class="docutils literal notranslate"><span class="pre">repuragent.uu&#64;gmail.com</span></code>.</p>
+<p>If you do not receive any email after registration or a request to change your password, check your spam email folder or contact us via <a class="reference external" href="mailto:repuragent&#46;uu&#37;&#52;&#48;gmail&#46;com">repuragent<span>&#46;</span>uu<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 <p>The demo thread appears alongside your own conversations; it is a read-only example.</p>
 </section>
 <section id="how-the-web-app-stores-and-handles-data">
 <h2>3.2 How the Web App Stores and Handles Data<a class="headerlink" href="#how-the-web-app-stores-and-handles-data" title="Link to this heading"></a></h2>
-<p><strong>What is stored permanently?</strong></p>
 <ul class="simple">
-<li><p>Episodic memory, which is the task decomposition patterns, is stored permanently with the Agent. However, it only stored if you decided to hit the <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">Learning</span></code> button on the web interface.</p></li>
-<li><p>Chat history is also stored, but only for 2 days due to resource limitations. After that, all the conversation and relevant files will be automatically removed. If you want to permanently store conversation history, please consider using the <a class="reference internal" href="local.html"><span class="std std-doc">Local version</span></a>.</p></li>
+<li><p><strong>What is stored permanently?</strong></p>
+<ul>
+<li><p>Episodic memory (task decomposition patterns) is stored permanently with the Agent,
+but only if you hit the <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">Learning</span></code> button on the web interface.</p></li>
+<li><p>Chat history is also stored, but only for 2 days due to resource limitations. After
+that, all conversations and relevant files are automatically removed. For permanent
+history, consider the <a class="reference internal" href="local.html"><span class="std std-doc">Local version</span></a>.</p></li>
 </ul>
-<p><strong>What happens if I delete a conversation on the web interface?</strong></p>
-<ul class="simple">
-<li><p>When you hit Delete conversation on the web interface and confirm, the chat history and all relevant data files, output files will be removed permanently from the database. There is no recovery mechanism to protect your data privacy.</p></li>
+</li>
+<li><p><strong>What happens if I delete a conversation on the web interface?</strong></p>
+<ul>
+<li><p>When you delete a conversation and confirm, the chat history and all related data/output
+files are removed permanently from the database. There is no recovery mechanism.</p></li>
 </ul>
-<p><strong>What is <em>not</em> stored?</strong></p>
-<ul class="simple">
-<li><p>All your data files and results will not be stored in the system.</p></li>
-<li><p>Your data files and output files will be shown to you only and will be removed within 2 days.</p></li>
-<li><p>All this data is not used for training the model.</p></li>
+</li>
+<li><p><strong>What is <em>not</em> stored?</strong></p>
+<ul>
+<li><p>Data files and results are not retained in the system.</p></li>
+<li><p>Your files and outputs are only visible to you and are removed within 2 days.</p></li>
+<li><p>None of this data is used for training the model.</p></li>
 </ul>
-<p><strong>Data privacy</strong></p>
-<ul class="simple">
-<li><p>Each user has an isolated root directory and a unique thread namespace (UUID). The backend enforces per-user path checks before issuing download tokens.</p></li>
+</li>
+<li><p><strong>Data privacy</strong></p>
+<ul>
+<li><p>Each user has an isolated root directory and a unique thread namespace (UUID). The
+backend enforces per-user path checks before issuing download tokens.</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="when-to-choose-the-web-app">
 <h2>3.3 When to Choose the Web App<a class="headerlink" href="#when-to-choose-the-web-app" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><strong>You need zero installation</strong> - using the web app only requires account registration, then use.</p></li>
-<li><p><strong>You want zero infrastructure</strong> – the hosted service handles Docker, PostgreSQL, ChromaDB, and updates for you.</p></li>
-<li><p><strong>You need multi-user collaboration</strong> – every researcher gets a private workspace.</p></li>
-<li><p><strong>You require centralized data policies</strong> – retention, backups, and access control all live in one deployment.</p></li>
+<li><p><strong>You need zero installation</strong><br />
+Using the web app only requires account registration, then use.</p></li>
+<li><p><strong>You want zero infrastructure</strong><br />
+The hosted service handles Docker, PostgreSQL, ChromaDB, and updates for you.</p></li>
+<li><p><strong>You need multi-user collaboration</strong><br />
+Every researcher gets a private workspace.</p></li>
+<li><p><strong>You require centralized data policies</strong><br />
+Retention, backups, and access control all live in one deployment.</p></li>
 </ul>
 </section>
 </section>

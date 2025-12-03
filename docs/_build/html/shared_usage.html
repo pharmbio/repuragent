@@ -85,22 +85,44 @@
              
   <section id="usage-guidelines">
 <h1>Usage Guidelines<a class="headerlink" href="#usage-guidelines" title="Link to this heading"></a></h1>
-<p>Regardless of versions, both builds present the similar Gradio UI and LangGraph architecrture. Use this chapter as the operating manual once your deployment is running.</p>
+<p>Regardless of versions, both builds present the similar Gradio UI and LangGraph
+architecrture. Use this chapter as the operating manual once your deployment is running.</p>
 <section id="prompting-the-requirements">
 <h2>4.1 Prompting the requirements<a class="headerlink" href="#prompting-the-requirements" title="Link to this heading"></a></h2>
-<p>Before letting the agent autonomously handle your request, there are several steps that decides the quality of downstream exection:</p>
+<p>Before letting the agent autonomously handle your request, there are several steps that
+decides the quality of downstream exection:</p>
 <ul class="simple">
-<li><p><strong>Crafting the Initial Prompt:</strong> Imagine you are a manager delegating tasks to a team member. Your initial prompt should clearly mention the specific goals you want the agent to achieve. Include all relevant details such as disease names, protein targets, mechanisms of action, drug candidates, or any other information necessary for the task.</p></li>
-<li><p><strong>Planning Phase:</strong> After submitting your prompt, the Planning Agent will take some time to process it using SOPs and episodic memory. During this phase, the agent generates an initial plan outlining a potential approach to fulfill your request.</p></li>
-<li><p><strong>Review and Refinement:</strong> Carefully review the proposed plan. This step is crucial: continue iterating and refining the plan through additional prompts until you feel confident and satisfied with the approach. The success of the entire workflow largely depends on the quality of this initial planning stage.</p></li>
-<li><p><strong>Approval and Execution:</strong> Once you are satisfied with the plan, type <strong>“Approved”</strong> (or a similar confirmation). At this point, the Supervisor Agent and its sub-agents will take over to execute the full plan autonomously. The processing time can vary depending on task complexity. For example, the complete pipeline demonstrated in the demo may take approximately 25–35 minutes.</p></li>
-<li><p><strong>Performance Considerations:</strong> Execution will be significantly faster if you already have knowledge graph files available. If the system needs to generate the knowledge graphs on-the-fly, the process will naturally take longer.</p></li>
+<li><p><strong>Crafting the Initial Prompt</strong><br />
+Imagine you are a manager delegating tasks to a team member. Your initial prompt should
+clearly mention the specific goals you want the agent to achieve. Include all relevant
+details such as disease names, protein targets, mechanisms of action, drug candidates, or
+any other information necessary for the task.</p></li>
+<li><p><strong>Planning Phase</strong><br />
+After submitting your prompt, the Planning Agent will take some time to process it using
+SOPs and episodic memory. During this phase, the agent generates an initial plan
+outlining a potential approach to fulfill your request.</p></li>
+<li><p><strong>Review and Refinement</strong><br />
+Carefully review the proposed plan. This step is crucial: continue iterating and refining
+the plan through additional prompts until you feel confident and satisfied with the
+approach. The success of the entire workflow largely depends on the quality of this
+initial planning stage.</p></li>
+<li><p><strong>Approval and Execution</strong><br />
+Once you are satisfied with the plan, type <strong>“Approved”</strong> (or a similar confirmation). At
+this point, the Supervisor Agent and its sub-agents will take over to execute the full
+plan autonomously. The processing time can vary depending on task complexity. For
+example, the complete pipeline demonstrated in the demo may take approximately 25–35
+minutes.</p></li>
+<li><p><strong>Performance Considerations</strong><br />
+Execution will be significantly faster if you already have knowledge graph files
+available. If the system needs to generate the knowledge graphs on-the-fly, the process
+will naturally take longer.</p></li>
 </ul>
 </section>
 <section id="working-with-files">
 <h2>4.2 Working With Files<a class="headerlink" href="#working-with-files" title="Link to this heading"></a></h2>
-<ol class="arabic">
-<li><p><strong>Uploading</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Uploading</strong></p></li>
+</ol>
 <ul class="simple">
 <li><p>Drag-and-drop files into the upload widget or select them via the file picker.</p></li>
 <li><p>For knowledge graph file, we are using <a class="reference external" href="https://github.com/Fraunhofer-ITMP/kgg">knowledge graph generator</a> package from Fraunhofer-ITMP. The acceptable KG file is the pickle file of the knowledge graph oject in the package.</p></li>
@@ -113,26 +135,28 @@
 
 <span class="n">kg_path</span> <span class="o">=</span> <span class="s2">&quot;data/kg_file.pkl&quot;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">kg_path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-  <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">kg</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+   <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">kg</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-<li><p><strong>Listing &amp; content</strong></p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Listing &amp; content</strong></p></li>
+</ol>
 <ul class="simple">
 <li><p>The sidebar shows every conversation you own (plus demo threads on the web edition).</p></li>
 <li><p>Click on one conversation, you will see all the files associated with it.</p></li>
 <li><p>Clicking a filename issues a download file to your device.</p></li>
 <li><p>Deleting a conversation removes <em>all</em> uploads and outputs for that conversation. Back up anything important first—the action cannot be undone.</p></li>
 </ul>
-</li>
-</ol>
 </section>
 <section id="episodic-learning-ui">
 <h2>4.3 Episodic Learning UI<a class="headerlink" href="#episodic-learning-ui" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><strong>What it is</strong> – LangMem + Chroma capture successful planning decompositions so the next run can reuse proven strategies.</p></li>
-<li><p><strong>How it works</strong> – every conversation can be extracted into an “episode” with task and decomposition patterns. When enabled, the planning agent automatically pulls the two most relevant examples into its system prompt.</p></li>
-<li><p>The extraction process only happens with current conversation that you are in, only when you click <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">Learning</span></code> button on the UI.</p></li>
+<li><p><strong>What it is</strong><br />
+LangMem + Chroma capture successful planning decompositions so the next run can reuse proven strategies.</p></li>
+<li><p><strong>How it works</strong><br />
+Every conversation can be extracted into an “episode” with task and decomposition patterns. When enabled, the planning agent automatically pulls the two most relevant examples into its system prompt.</p></li>
+<li><p><strong>Extraction trigger</strong><br />
+The extraction process only happens with current conversation that you are in, only when you click <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">Learning</span></code> button on the UI.</p></li>
 </ul>
 </section>
 </section>

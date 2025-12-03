@@ -132,8 +132,11 @@
 </pre></div>
 </div>
 </li>
-<li><p><strong>Access the UI</strong> at <a class="reference external" href="http://localhost:7860">http://localhost:7860</a> and follow the <a class="reference internal" href="shared_usage.html"><span class="std std-doc">Shared Usage Guidelines</span></a> to start prompting.</p></li>
-<li><p><strong>Stop/restart</strong> with <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">down</span></code> and <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">-d</span></code> whenever you need.</p></li>
+<li><p><strong>Access the UI</strong><br />
+Visit <a class="reference external" href="http://localhost:7860">http://localhost:7860</a> and follow the
+<a class="reference internal" href="shared_usage.html"><span class="std std-doc">Shared Usage Guidelines</span></a> to start prompting.</p></li>
+<li><p><strong>Stop/restart</strong><br />
+Use <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">down</span></code> and <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">-d</span></code> whenever you need.</p></li>
 </ol>
 </section>
 <section id="optional-integrations">
@@ -156,8 +159,10 @@
 <section id="debugging-logs">
 <h3>Debugging &amp; Logs<a class="headerlink" href="#debugging-logs" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><strong>Real-time logs</strong> – <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">logs</span> <span class="pre">-f</span> <span class="pre">repuragent</span></code>.</p></li>
-<li><p><strong>Hot-reload code</strong> – edit files on the host, then re-run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">--build</span></code> to rebuild the image with your changes.</p></li>
+<li><p><strong>Real-time logs</strong><br />
+<code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">logs</span> <span class="pre">-f</span> <span class="pre">repuragent</span></code>.</p></li>
+<li><p><strong>Hot-reload code</strong><br />
+Edit files on the host, then re-run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">--build</span></code> to rebuild the image with your changes.</p></li>
 </ul>
 </section>
 </section>
@@ -175,15 +180,24 @@ python<span class="w"> </span>sop_indexer.py
 <li><p>The script chunks documents, stores summaries in ChromaDB (<code class="docutils literal notranslate"><span class="pre">backend/memory/sop_documents/chromadb/sop_rag</span></code>), and saves original pages in a docstore folder (<code class="docutils literal notranslate"><span class="pre">backend/memory/sop_documents/docstore</span></code>).</p></li>
 </ul>
 </li>
-<li><p><strong>How it becomes available</strong> – on app startup, <code class="docutils literal notranslate"><span class="pre">SOPRetriever</span></code> loads the persisted vector store. When an agent calls <code class="docutils literal notranslate"><span class="pre">protocol_search_sop</span></code>, it retrieves your newest snippets automatically.</p></li>
-<li><p><strong>Refreshing content</strong> – repeat the indexer any time you add/edit SOP files. Delete <code class="docutils literal notranslate"><span class="pre">backend/memory/episodic_memory/chroma_db</span></code> if you need a clean rebuild SOP library.</p></li>
+<li><p><strong>How it becomes available</strong><br />
+On app startup, <code class="docutils literal notranslate"><span class="pre">SOPRetriever</span></code> loads the persisted vector store. When an agent calls
+<code class="docutils literal notranslate"><span class="pre">protocol_search_sop</span></code>, it retrieves your newest snippets automatically.</p></li>
+<li><p><strong>Refreshing content</strong><br />
+Repeat the indexer any time you add/edit SOP files. Delete
+<code class="docutils literal notranslate"><span class="pre">backend/memory/episodic_memory/chroma_db</span></code> if you need a clean rebuild SOP library.</p></li>
 </ol>
 </section>
 <section id="local-data-handling">
 <h2>2.5 Local Data Handling<a class="headerlink" href="#local-data-handling" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><strong>Everything is local</strong> – uploads, results, embeddings, checkpoints, and logs stay under the repo folder you cloned. No telemetry is sent unless you explicitly enable LangSmith.</p></li>
-<li><p><strong>No hidden uploads</strong> – the app never transmits your data except to the model endpoints you configure (OpenAI, LangSmith). Review their own privacy terms—the local app simply relays your prompts/files over the API calls your key authorizes.</p></li>
+<li><p><strong>Everything is local</strong><br />
+Uploads, results, embeddings, checkpoints, and logs stay under the repo folder you
+cloned. No telemetry is sent unless you explicitly enable LangSmith.</p></li>
+<li><p><strong>No hidden uploads</strong><br />
+The app never transmits your data except to the model endpoints you configure (OpenAI,
+LangSmith). Review their own privacy terms—the local app simply relays your prompts/files
+over the API calls your key authorizes.</p></li>
 </ul>
 <p>With the prerequisites in place, you can rely on this guide plus the <a class="reference internal" href="shared_usage.html"><span class="std std-doc">Shared Usage Guidelines</span></a> to operate Repuragent completely locally.</p>
 </section>

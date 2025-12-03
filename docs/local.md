@@ -27,9 +27,12 @@ The local version is the exact code that lives on [github.com/pharmbio/repuragen
    docker-compose up --build
    ```
 
-4. **Access the UI** at [http://localhost:7860](http://localhost:7860) and follow the [Shared Usage Guidelines](shared_usage.md) to start prompting.
+4. **Access the UI**  
+   Visit [http://localhost:7860](http://localhost:7860) and follow the
+   [Shared Usage Guidelines](shared_usage.md) to start prompting.
 
-5. **Stop/restart** with `docker-compose down` and `docker-compose up -d` whenever you need.
+5. **Stop/restart**  
+   Use `docker-compose down` and `docker-compose up -d` whenever you need.
 
 ## 2.3 Optional Integrations
 
@@ -45,8 +48,10 @@ The local version is the exact code that lives on [github.com/pharmbio/repuragen
 3. Restart Docker. Every run now emits detailed traces (graph nodes, tool calls, token usage) to the LangSmith dashboard.
 
 ### Debugging & Logs
-- **Real-time logs** – `docker-compose logs -f repuragent`.
-- **Hot-reload code** – edit files on the host, then re-run `docker-compose up --build` to rebuild the image with your changes.
+- **Real-time logs**  
+  `docker-compose logs -f repuragent`.
+- **Hot-reload code**  
+  Edit files on the host, then re-run `docker-compose up --build` to rebuild the image with your changes.
 
 ## 2.4 Injecting New SOPs (Local App Only)
 
@@ -60,13 +65,22 @@ The local version lets you inject your own SOP documents into the system
    ```
    - The script chunks documents, stores summaries in ChromaDB (`backend/memory/sop_documents/chromadb/sop_rag`), and saves original pages in a docstore folder (`backend/memory/sop_documents/docstore`).
 
-3. **How it becomes available** – on app startup, `SOPRetriever` loads the persisted vector store. When an agent calls `protocol_search_sop`, it retrieves your newest snippets automatically.
+3. **How it becomes available**  
+   On app startup, `SOPRetriever` loads the persisted vector store. When an agent calls
+   `protocol_search_sop`, it retrieves your newest snippets automatically.
 
-4. **Refreshing content** – repeat the indexer any time you add/edit SOP files. Delete `backend/memory/episodic_memory/chroma_db` if you need a clean rebuild SOP library.
+4. **Refreshing content**  
+   Repeat the indexer any time you add/edit SOP files. Delete
+   `backend/memory/episodic_memory/chroma_db` if you need a clean rebuild SOP library.
 
 ## 2.5 Local Data Handling
 
-- **Everything is local** – uploads, results, embeddings, checkpoints, and logs stay under the repo folder you cloned. No telemetry is sent unless you explicitly enable LangSmith.
-- **No hidden uploads** – the app never transmits your data except to the model endpoints you configure (OpenAI, LangSmith). Review their own privacy terms—the local app simply relays your prompts/files over the API calls your key authorizes.
+- **Everything is local**  
+  Uploads, results, embeddings, checkpoints, and logs stay under the repo folder you
+  cloned. No telemetry is sent unless you explicitly enable LangSmith.
+- **No hidden uploads**  
+  The app never transmits your data except to the model endpoints you configure (OpenAI,
+  LangSmith). Review their own privacy terms—the local app simply relays your prompts/files
+  over the API calls your key authorizes.
 
 With the prerequisites in place, you can rely on this guide plus the [Shared Usage Guidelines](shared_usage.md) to operate Repuragent completely locally.

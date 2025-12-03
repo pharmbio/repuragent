@@ -22,6 +22,6 @@ local
 web
 shared_usage
 technical
-troubleshooting
+acknowledgement
 contact
 ```

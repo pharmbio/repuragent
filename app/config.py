@@ -27,7 +27,6 @@ SQLITE_DB_PATH = SHORTTERM_MEMORY_DIR / "langgraph_checkpoints.db"
 THREAD_IDS_FILE = SHORTTERM_MEMORY_DIR / "thread_ids.json"
 
 # File retention and download security
-RESULT_RETENTION_DAYS = int(os.environ.get("RESULT_RETENTION_DAYS", "2"))
 FILE_DOWNLOAD_SECRET = os.environ.get("FILE_DOWNLOAD_SECRET", "repuragent-download")
 FILE_DOWNLOAD_TOKEN_TTL_SECONDS = int(os.environ.get("FILE_DOWNLOAD_TOKEN_TTL_SECONDS", "600"))
 

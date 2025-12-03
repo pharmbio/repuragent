@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Details &mdash; Repuragent  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Troubleshooting" href="troubleshooting.html" />
+    <link rel="prev" title="Usage Guidelines" href="shared_usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Repuragent
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="local.html">Local App Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">Web App Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shared_usage.html">Usage Guidelines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Technical Details</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#system-architecture-overview">5.1 System Architecture Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core-services">5.1.1 Core Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-flow">5.1.2 Data Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#agents-tools">5.2 Agents &amp; Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#planning-agent-core-agents-planning-agent-py">Planning Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/planning_agent.py</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#research-agent-core-agents-research-agent-py">Research Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/research_agent.py</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-agent-core-agents-data-agent-py">Data Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/data_agent.py</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prediction-agent-core-agents-prediction-agent-py">Prediction Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/prediction_agent.py</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#report-agent-core-agents-report-agent-py">Report Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/report_agent.py</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Repuragent</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Technical Details</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/technical.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="technical-details">
+<h1>Technical Details<a class="headerlink" href="#technical-details" title="Link to this heading"></a></h1>
+<p>This chapter is aimed at power users who want to understand how Repuragent is wired under the hood—what services run where, how data flows through the stack, and which tools each agent can call.</p>
+<section id="system-architecture-overview">
+<h2>5.1 System Architecture Overview<a class="headerlink" href="#system-architecture-overview" title="Link to this heading"></a></h2>
+<section id="core-services">
+<h3>5.1.1 Core Services<a class="headerlink" href="#core-services" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Role</p></th>
+<th class="head"><p>Local app</p></th>
+<th class="head"><p>Web app</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UI/API</p></td>
+<td><p>Gradio + FastAPI (<code class="docutils literal notranslate"><span class="pre">app/gradio_app.py</span></code>)</p></td>
+<td><p>Runs inside the local Docker container</p></td>
+<td><p>Same code, but wrapped with auth routes &amp; retention hooks</p></td>
+</tr>
+<tr class="row-odd"><td><p>Supervisor graph</p></td>
+<td><p>LangGraph supervisor (<code class="docutils literal notranslate"><span class="pre">core/supervisor/supervisor.py</span></code>) orchestrating planning → human review → execution agents</p></td>
+<td><p>Identical</p></td>
+<td><p>Identical</p></td>
+</tr>
+<tr class="row-even"><td><p>Short-term memory</p></td>
+<td><p>LangGraph checkpoints (user conversations, tool outputs)</p></td>
+<td><p>SQLite file in <code class="docutils literal notranslate"><span class="pre">backend/memory/shortterm_memory</span></code></p></td>
+<td><p>PostgreSQL database</p></td>
+</tr>
+<tr class="row-odd"><td><p>Long-term memory</p></td>
+<td><p>Chroma + LangMem episodic store (<code class="docutils literal notranslate"><span class="pre">backend/memory/episodic_memory</span></code>)</p></td>
+<td><p>Stored on disk, warmed via Docker volume</p></td>
+<td><p>Stored in <code class="docutils literal notranslate"><span class="pre">persistence/memory/episodic_memory</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>SOP Retrieval</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">backend/sop_rag</span></code> (indexer + retriever) backed by Chroma + docstore</p></td>
+<td><p>Local files under <code class="docutils literal notranslate"><span class="pre">backend/memory/sop_documents</span></code></p></td>
+<td><p>Operators mount their own <code class="docutils literal notranslate"><span class="pre">persistence/memory/sop_documents</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-flow">
+<h3>5.1.2 Data Flow<a class="headerlink" href="#data-flow" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>User input</strong> enters through Gradio, is logged via LangGraph checkpoints, and becomes the “messages” channel consumed by the supervisor.</p></li>
+<li><p><strong>Supervisor routing</strong> (<code class="docutils literal notranslate"><span class="pre">route_from_start</span></code>) decides whether to invoke the planning agent or proceed directly to execution. Planning outputs can trigger a human-review interrupt before execution resumes.</p></li>
+<li><p><strong>Execution agents</strong> (Research, Data, Prediction, Report) are LangGraph nodes bound to tool suites. Tool calls persist artifacts via <code class="docutils literal notranslate"><span class="pre">backend/utils/output_paths.py</span></code> inside the active thread directory.</p></li>
+<li><p><strong>Downloads</strong> are gated by signed tokens (<code class="docutils literal notranslate"><span class="pre">FILE_DOWNLOAD_SECRET</span></code>) that embed the path and expiry (10 min by default).</p></li>
+</ol>
+</section>
+</section>
+<section id="agents-tools">
+<h2>5.2 Agents &amp; Tools<a class="headerlink" href="#agents-tools" title="Link to this heading"></a></h2>
+<p>Each agent is defined in <code class="docutils literal notranslate"><span class="pre">core/agents/</span></code> and built with LangGraph’s <code class="docutils literal notranslate"><span class="pre">create_react_agent</span></code> (or a custom StateGraph for the data agent).</p>
+<section id="planning-agent-core-agents-planning-agent-py">
+<h3>Planning Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/planning_agent.py</span></code>)<a class="headerlink" href="#planning-agent-core-agents-planning-agent-py" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Main role:</strong> decomposes user requirements into a multi-step plan before execution begins.</p></li>
+<li><p><strong>Tools:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">literature_search_pubmed</span></code> – RAG tools for all availale publication on PubMed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol_search_sop</span></code> – RAG tools for REMEDi4ALL’s SOPs.</p></li>
+</ul>
+</li>
+<li><p><strong>Notes:</strong> Uses <code class="docutils literal notranslate"><span class="pre">PLANNING_SYSTEM_PROMPT_ver3</span></code> (episodically enhanced when enabled) via <code class="docutils literal notranslate"><span class="pre">EpisodicLearningSystem.create_enhanced_planning_prompt</span></code> so previous successful decompositions can seed new plans.</p></li>
+</ul>
+</section>
+<section id="research-agent-core-agents-research-agent-py">
+<h3>Research Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/research_agent.py</span></code>)<a class="headerlink" href="#research-agent-core-agents-research-agent-py" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Main role:</strong> gathers biomedical context, builds or inspects knowledge graphs, and surfaces citations plus KG-derived candidates.</p></li>
+<li><p><strong>Tools:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">literature_search_pubmed</span></code> – RAG tools for all availale publication on PubMed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol_search_sop</span></code> – RAG tools for REMEDi4ALL’s SOPs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">search_disease_id</span></code> – resolves disease names to the identifiers required by KGG.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_knowledge_graph</span></code> – kicks off KGG graph generation and persists the pickle.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extract_drugs_from_kg</span></code> – pulls drug nodes plus metadata from an existing KG.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extract_proteins_from_kg</span></code> – pulls protein targets from the KG snapshot.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extract_pathways_from_kg</span></code> – pulls pathway associations captured in the KG.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extract_mechanism_of_actions_from_kg</span></code> – pulls MoA relationships from the KG.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getDrugsforProteins</span></code> – pulls Open Targets <code class="docutils literal notranslate"><span class="pre">knownDrugs</span></code> rows given proteins.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getDrugsforMechanisms</span></code> – queries ChEMBL’s mechanism/molecule endpoints for the supplied MoA strings, filters by phase/type, and returns the matching drug set with SMILES.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getDrugsforPathways</span></code> – resolves pathway names to Reactome IDs, maps associated proteins to Ensembl IDs, and reuses Open Targets <code class="docutils literal notranslate"><span class="pre">knownDrugs</span></code> + ChEMBL SMILES to list pathway-linked drugs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prompt_with_file_path</span></code> – resolves natural-language file references into concrete repo paths.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="data-agent-core-agents-data-agent-py">
+<h3>Data Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/data_agent.py</span></code>)<a class="headerlink" href="#data-agent-core-agents-data-agent-py" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Main role:</strong> performs data analysis and visualization inside a sandboxed workspace.</p></li>
+<li><p><strong>Tools:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">python_executor</span></code> – sandboxed Python REPL (pandas, NumPy, RDKit, scikit-learn, etc.) that preserves state between calls.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reset_python_state</span></code> – nukes the Python namespace to recover from errors or keep memory low.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prompt_with_file_path</span></code> – turns human-friendly file descriptions into absolute paths inside the thread sandbox.</p></li>
+</ul>
+</li>
+<li><p><strong>Notes:</strong> Runs on a custom LangGraph StateGraph (<code class="docutils literal notranslate"><span class="pre">ToolNode</span></code>) that injects the writable directory via <code class="docutils literal notranslate"><span class="pre">ensure_task_dir()</span></code>, enabling clean CSV/Parquet exports and Matplotlib/Plotly/Seaborn visualizations.</p></li>
+</ul>
+</section>
+<section id="prediction-agent-core-agents-prediction-agent-py">
+<h3>Prediction Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/prediction_agent.py</span></code>)<a class="headerlink" href="#prediction-agent-core-agents-prediction-agent-py" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Main role:</strong> standardizes SMILES inputs and executes CPSign/RDKit models to score ADME/Tox liabilities plus physicochemical properties.</p></li>
+<li><p><strong>Tools:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">smiles_csv</span></code> – canonicalizes raw SMILES inputs into <code class="docutils literal notranslate"><span class="pre">data/modelling_data.csv</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CYP3A4_classifier</span></code> – CPSign classification model for CYP3A4 inhibition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CYP2C19_classifier</span></code> – CPSign classification model for CYP2C19 inhibition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CYP2D6_classifier</span></code> – CPSign classification model for CYP2D6 inhibition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CYP1A2_classifier</span></code> – CPSign classification model for CYP1A2 inhibition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CYP2C9_classifier</span></code> – CPSign classification model for CYP2C9 inhibition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hERG_classifier</span></code> – CPSign classification model for hERG cardiotoxicity risk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AMES_classifier</span></code> – CPSign Ames mutagenicity classifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PGP_classifier</span></code> – CPSign classifier for P-gp substrate likelihood.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PAMPA_classifier</span></code> – CPSign classifier for PAMPA permeability.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BBB_classifier</span></code> – CPSign classifier for blood–brain barrier penetration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Solubility_regressor</span></code> – CPSign regression model returning logS with confidence.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Lipophilicity_regressor</span></code> – RDKit-backed logP estimator.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="report-agent-core-agents-report-agent-py">
+<h3>Report Agent (<code class="docutils literal notranslate"><span class="pre">core/agents/report_agent.py</span></code>)<a class="headerlink" href="#report-agent-core-agents-report-agent-py" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Main role:</strong> assembles the final narrative brief once execution completes.</p></li>
+<li><p><strong>Notes:</strong> Guided by <code class="docutils literal notranslate"><span class="pre">REPORT_SYSTEM_PROMPT</span></code>, it summarizes findings, caveats, and recommended next steps using.</p></li>
+</ul>
+<p>Use this section when you need to extend the system (e.g., add a new tools), audit data flows for compliance reviews, or explain to others exactly how Repuragent handles their information. Refer back to the <a class="reference internal" href="shared_usage.html"><span class="std std-doc">Shared Usage Guidelines</span></a> for operator-facing workflows and the <a class="reference internal" href="troubleshooting.html"><span class="std std-doc">Troubleshooting</span></a> chapter for common failure modes.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="shared_usage.html" class="btn btn-neutral float-left" title="Usage Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Repuragent Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

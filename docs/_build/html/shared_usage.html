@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usage Guidelines &mdash; Repuragent  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Technical Details" href="technical.html" />
+    <link rel="prev" title="Web App Guidelines" href="web.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Repuragent
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="local.html">Local App Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">Web App Guidelines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prompting-the-requirements">4.1 Prompting the requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-files">4.2 Working With Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#episodic-learning-ui">4.3 Episodic Learning UI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="technical.html">Technical Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Repuragent</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Usage Guidelines</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/shared_usage.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="usage-guidelines">
+<h1>Usage Guidelines<a class="headerlink" href="#usage-guidelines" title="Link to this heading"></a></h1>
+<p>Regardless of versions, both builds present the similar Gradio UI and LangGraph architecrture. Use this chapter as the operating manual once your deployment is running.</p>
+<section id="prompting-the-requirements">
+<h2>4.1 Prompting the requirements<a class="headerlink" href="#prompting-the-requirements" title="Link to this heading"></a></h2>
+<p>Before letting the agent autonomously handle your request, there are several steps that decides the quality of downstream exection:</p>
+<ul class="simple">
+<li><p><strong>Crafting the Initial Prompt:</strong> Imagine you are a manager delegating tasks to a team member. Your initial prompt should clearly mention the specific goals you want the agent to achieve. Include all relevant details such as disease names, protein targets, mechanisms of action, drug candidates, or any other information necessary for the task.</p></li>
+<li><p><strong>Planning Phase:</strong> After submitting your prompt, the Planning Agent will take some time to process it using SOPs and episodic memory. During this phase, the agent generates an initial plan outlining a potential approach to fulfill your request.</p></li>
+<li><p><strong>Review and Refinement:</strong> Carefully review the proposed plan. This step is crucial: continue iterating and refining the plan through additional prompts until you feel confident and satisfied with the approach. The success of the entire workflow largely depends on the quality of this initial planning stage.</p></li>
+<li><p><strong>Approval and Execution:</strong> Once you are satisfied with the plan, type <strong>“Approved”</strong> (or a similar confirmation). At this point, the Supervisor Agent and its sub-agents will take over to execute the full plan autonomously. The processing time can vary depending on task complexity. For example, the complete pipeline demonstrated in the demo may take approximately 25–35 minutes.</p></li>
+<li><p><strong>Performance Considerations:</strong> Execution will be significantly faster if you already have knowledge graph files available. If the system needs to generate the knowledge graphs on-the-fly, the process will naturally take longer.</p></li>
+</ul>
+</section>
+<section id="working-with-files">
+<h2>4.2 Working With Files<a class="headerlink" href="#working-with-files" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Uploading</strong></p>
+<ul class="simple">
+<li><p>Drag-and-drop files into the upload widget or select them via the file picker.</p></li>
+<li><p>For knowledge graph file, we are using <a class="reference external" href="https://github.com/Fraunhofer-ITMP/kgg">knowledge graph generator</a> package from Fraunhofer-ITMP. The acceptable KG file is the pickle file of the knowledge graph oject in the package.</p></li>
+<li><p>You can create such pickle file by using the below pattern:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">kgg.src.kgg_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">createKG</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+
+<span class="n">kg</span> <span class="o">=</span> <span class="n">createKG</span><span class="p">()</span>
+
+<span class="n">kg_path</span> <span class="o">=</span> <span class="s2">&quot;data/kg_file.pkl&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">kg_path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">kg</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Listing &amp; content</strong></p>
+<ul class="simple">
+<li><p>The sidebar shows every conversation you own (plus demo threads on the web edition).</p></li>
+<li><p>Click on one conversation, you will see all the files associated with it.</p></li>
+<li><p>Clicking a filename issues a download file to your device.</p></li>
+<li><p>Deleting a conversation removes <em>all</em> uploads and outputs for that conversation. Back up anything important first—the action cannot be undone.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="episodic-learning-ui">
+<h2>4.3 Episodic Learning UI<a class="headerlink" href="#episodic-learning-ui" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>What it is</strong> – LangMem + Chroma capture successful planning decompositions so the next run can reuse proven strategies.</p></li>
+<li><p><strong>How it works</strong> – every conversation can be extracted into an “episode” with task and decomposition patterns. When enabled, the planning agent automatically pulls the two most relevant examples into its system prompt.</p></li>
+<li><p>The extraction process only happens with current conversation that you are in, only when you click <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">Learning</span></code> button on the UI.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="web.html" class="btn btn-neutral float-left" title="Web App Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="technical.html" class="btn btn-neutral float-right" title="Technical Details" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Repuragent Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

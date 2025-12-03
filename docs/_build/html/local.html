@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local App Guidelines &mdash; Repuragent  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Web App Guidelines" href="web.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Repuragent
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Local App Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">2.1 Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start">2.2 Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-integrations">2.3 Optional Integrations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#langsmith-tracing">LangSmith Tracing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debugging-logs">Debugging &amp; Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#injecting-new-sops-local-app-only">2.4 Injecting New SOPs (Local App Only)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#local-data-handling">2.5 Local Data Handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">Web App Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shared_usage.html">Usage Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technical.html">Technical Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Repuragent</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Local App Guidelines</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/local.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="local-app-guidelines">
+<h1>Local App Guidelines<a class="headerlink" href="#local-app-guidelines" title="Link to this heading"></a></h1>
+<p>The local version is the exact code that lives on <a class="reference external" href="https://github.com/pharmbio/repuragent">github.com/pharmbio/repuragent</a>. Clone it, run it with Docker, and everything—uploads, conversation history, model artifacts—stays on your machine.</p>
+<section id="prerequisites">
+<h2>2.1 Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Requirement</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OPENAI_API_KEY</span></code></p></td>
+<td><p>Mandatory. The key never leaves your workstation; it is read from <code class="docutils literal notranslate"><span class="pre">.env</span></code> by <code class="docutils literal notranslate"><span class="pre">app/config.py</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Docker Desktop</p></td>
+<td><p>Install Docker Desktop from <a class="reference external" href="https://www.docker.com/products/docker-desktop/">docker.com</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p>Optional</p></td>
+<td><p>LangSmith account and API key for tracing task details. More details on <a class="reference external" href="https://smith.langchain.com">smith.langchain.com</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="quick-start">
+<h2>2.2 Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Clone or update the repo.</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pharmbio/repuragent.git
+<span class="nb">cd</span><span class="w"> </span>repuragent
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create <code class="docutils literal notranslate"><span class="pre">.env</span></code>.</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;OPENAI_API_KEY=your-openai-api-key-here&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.env
+</pre></div>
+</div>
+</li>
+<li><p><strong>Build and run.</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>up<span class="w"> </span>--build
+</pre></div>
+</div>
+</li>
+<li><p><strong>Access the UI</strong> at <a class="reference external" href="http://localhost:7860">http://localhost:7860</a> and follow the <a class="reference internal" href="shared_usage.html"><span class="std std-doc">Shared Usage Guidelines</span></a> to start prompting.</p></li>
+<li><p><strong>Stop/restart</strong> with <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">down</span></code> and <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">-d</span></code> whenever you need.</p></li>
+</ol>
+</section>
+<section id="optional-integrations">
+<h2>2.3 Optional Integrations<a class="headerlink" href="#optional-integrations" title="Link to this heading"></a></h2>
+<section id="langsmith-tracing">
+<h3>LangSmith Tracing<a class="headerlink" href="#langsmith-tracing" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Create a project at <a class="reference external" href="https://smith.langchain.com">smith.langchain.com</a> and generate an API key.</p></li>
+<li><p>Append to <code class="docutils literal notranslate"><span class="pre">.env</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;LANGCHAIN_TRACING_V2=true&quot;</span><span class="w">  </span>&gt;<span class="w"> </span>.env
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;LANGCHAIN_ENDPOINT=https://api.smith.langchain.com&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.env
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;LANGCHAIN_API_KEY=lsm-your-langsmith-key&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.env
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;LANGCHAIN_PROJECT=repuragent-local&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.env
+</pre></div>
+</div>
+</li>
+<li><p>Restart Docker. Every run now emits detailed traces (graph nodes, tool calls, token usage) to the LangSmith dashboard.</p></li>
+</ol>
+</section>
+<section id="debugging-logs">
+<h3>Debugging &amp; Logs<a class="headerlink" href="#debugging-logs" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Real-time logs</strong> – <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">logs</span> <span class="pre">-f</span> <span class="pre">repuragent</span></code>.</p></li>
+<li><p><strong>Hot-reload code</strong> – edit files on the host, then re-run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">--build</span></code> to rebuild the image with your changes.</p></li>
+</ul>
+</section>
+</section>
+<section id="injecting-new-sops-local-app-only">
+<h2>2.4 Injecting New SOPs (Local App Only)<a class="headerlink" href="#injecting-new-sops-local-app-only" title="Link to this heading"></a></h2>
+<p>The local version lets you inject your own SOP documents into the system</p>
+<ol class="arabic">
+<li><p><strong>Drop source files</strong> into <code class="docutils literal notranslate"><span class="pre">data/SOP/</span></code>. The SOP indexer accepts PDF and DOCX; keep filenames descriptive (they appear in citations).</p></li>
+<li><p><strong>Index or re-index</strong> with the provided script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>backend/sop_rag
+python<span class="w"> </span>sop_indexer.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The script chunks documents, stores summaries in ChromaDB (<code class="docutils literal notranslate"><span class="pre">backend/memory/sop_documents/chromadb/sop_rag</span></code>), and saves original pages in a docstore folder (<code class="docutils literal notranslate"><span class="pre">backend/memory/sop_documents/docstore</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>How it becomes available</strong> – on app startup, <code class="docutils literal notranslate"><span class="pre">SOPRetriever</span></code> loads the persisted vector store. When an agent calls <code class="docutils literal notranslate"><span class="pre">protocol_search_sop</span></code>, it retrieves your newest snippets automatically.</p></li>
+<li><p><strong>Refreshing content</strong> – repeat the indexer any time you add/edit SOP files. Delete <code class="docutils literal notranslate"><span class="pre">backend/memory/episodic_memory/chroma_db</span></code> if you need a clean rebuild SOP library.</p></li>
+</ol>
+</section>
+<section id="local-data-handling">
+<h2>2.5 Local Data Handling<a class="headerlink" href="#local-data-handling" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Everything is local</strong> – uploads, results, embeddings, checkpoints, and logs stay under the repo folder you cloned. No telemetry is sent unless you explicitly enable LangSmith.</p></li>
+<li><p><strong>No hidden uploads</strong> – the app never transmits your data except to the model endpoints you configure (OpenAI, LangSmith). Review their own privacy terms—the local app simply relays your prompts/files over the API calls your key authorizes.</p></li>
+</ul>
+<p>With the prerequisites in place, you can rely on this guide plus the <a class="reference internal" href="shared_usage.html"><span class="std std-doc">Shared Usage Guidelines</span></a> to operate Repuragent completely locally.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="web.html" class="btn btn-neutral float-right" title="Web App Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Repuragent Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

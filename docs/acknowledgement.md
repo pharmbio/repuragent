@@ -16,7 +16,7 @@ queries ChEMBL, UniChem, PubChem, and KEGG from SMILES/InChI inputs.
 
 ## REMEDI4ALL Standard Operating Procedures
 
-Our SOPs are provided from the REMEDi4ALL technical notes.
+The Standard Operating Procedures used in our system are provided by REMEDi4ALL. Visit [REMEDi4ALL](https://remedi4all.org) home apge for more details.
 
 ## LitSense
 

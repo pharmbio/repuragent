@@ -26,11 +26,13 @@ from app.config import (
     APP_TITLE,
     FILE_DOWNLOAD_SECRET,
     FILE_DOWNLOAD_TOKEN_TTL_SECONDS,
+    GITHUB_URL,
     GRADIO_SERVER_NAME,
     GRADIO_SERVER_PORT,
     LOGO_PATH,
     UI_CONCURRENCY_LIMIT,
     UI_QUEUE_MAX_SIZE,
+    USER_GUIDE_URL,
 )
 from app.langgraph_runner import build_stream_input, stream_langgraph_events, app_session
 from app.state import FileRecord, UIState
@@ -88,6 +90,17 @@ INTRO_MARKDOWN = (
 )
 
 INTRO_SKIP_TEXTS = {INTRO_MARKDOWN.strip()}
+HEADER_LINKS_HTML = f"""
+<div class="header-links-content">
+    <a class="header-link" href="{escape(GITHUB_URL, quote=True)}" target="_blank" rel="noopener noreferrer">
+        GitHub
+    </a>
+    <span class="header-link-divider" aria-hidden="true">|</span>
+    <a class="header-link" href="{escape(USER_GUIDE_URL, quote=True)}" target="_blank" rel="noopener noreferrer">
+        User guide
+    </a>
+</div>
+"""
 
 PRIMARY_FERN = colors.Color(
     c50="#dbeee5",
@@ -994,6 +1007,14 @@ def build_demo():
     extra_css = """
     :root {
         --app-font: "Inter", "Helvetica Neue", Arial, sans-serif;
+        --header-link-color: #1f2937;
+        --header-link-divider-color: #9ca3af;
+        --header-link-hover-color: #1f5c55;
+    }
+    body.dark {
+        --header-link-color: #f8fafc;
+        --header-link-divider-color: rgba(248, 250, 252, 0.65);
+        --header-link-hover-color: #9fc3b2;
     }
     body,
     .gradio-container,
@@ -1034,6 +1055,39 @@ def build_demo():
         font-weight: 900;
         line-height: 1;
         margin: 0;
+    }
+    #header-links-column {
+        margin-left: auto;
+        padding: 0 !important;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #header-links {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-transform: none;
+        color: var(--header-link-color);
+    }
+    #header-links .header-link {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        white-space: nowrap;
+    }
+    #header-links .header-link-divider {
+        color: var(--header-link-divider-color);
+        font-weight: 400;
+        padding: 0 1.25rem;
+        user-select: none;
+    }
+    #header-links .header-link:hover,
+    #header-links .header-link:focus {
+        color: var(--header-link-hover-color);
+        text-decoration: underline;
     }
     #intro-text,
     #intro-text p {
@@ -1096,6 +1150,8 @@ def build_demo():
                     gr.HTML(logo_markup, elem_id="app-logo")
             with gr.Column(scale=1):
                 gr.HTML(f"<div class='app-title-text'>{APP_TITLE}</div>", elem_id="app-title")
+            with gr.Column(scale=0, min_width=200, elem_id="header-links-column"):
+                gr.HTML(HEADER_LINKS_HTML, elem_id="header-links")
         gr.HTML(
             """
             <style>

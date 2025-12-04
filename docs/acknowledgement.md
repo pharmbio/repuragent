@@ -6,9 +6,7 @@ them and points to the original sources for attribution.
 ## Knowledge Graph Generator (KGG)
 
 We rely on the [Knowledge Graph Generator (KGG)](https://github.com/Fraunhofer-ITMP/kgg)
-from Fraunhofer ITMP to create disease-specific knowledge graphs and extract information from them. Its
-automated pipeline ingests curated sources (OpenTargets, UniProt, ChEMBL, etc.) and lets us
-pick the disease ID, protein threshold, and clinical-stage filters.
+from Fraunhofer ITMP to create disease-specific knowledge graphs and extract information from them.
 
 ## REMEDI4ALL Chemical Annotator
 
@@ -33,16 +31,10 @@ phenotype-level passages that drive Repuragent's research agent prompts.
 The `python_executor` in the data agent reuses Hugging Face's Apache-2.0 licensed local Python executor to keep code runs safely scoped
 to a curated import list.
 
-## SOP Indexing Stack
+## Unstructured
 
-Our SOP ingestion pipeline depends on [Unstructured](https://github.com/Unstructured-IO/unstructured)
-for PDF parsing plus OpenAI's embedding models. Unstructured handles table/image-aware chunking, while ChatGPT/Embeddings power the
-summaries and Chroma vectors that back the SOP RAG experience. 
+Our SOP RAG system depends on [Unstructured](https://github.com/Unstructured-IO/unstructured) for PDF parsing plus OpenAI's embedding models. Unstructured handles table/image-aware chunking, while ChatGPT/Embeddings power the summaries and Chroma vectors that back the SOP RAG experience. 
 
 ## CPSign
 
-Predictive modeling runs through
-[CPSign](https://cpsign.readthedocs.io/en/latest/), which provides conformal QSAR models,
-Signatures/ECFP/CDK descriptors, and LIBLINEAR/LIBSVM back ends on the JVM. We follow the
-official CLI/API guidance for training and deployment and direct users to the CPSign docs
-for advanced topics such as encryption, explainability, and Serve publishing.
+Predictive models were trained and evaluated using [CPSign](https://cpsign.readthedocs.io/en/latest/).

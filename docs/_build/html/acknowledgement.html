@@ -51,13 +51,13 @@
 <li class="toctree-l1"><a class="reference internal" href="shared_usage.html">Usage Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="technical.html">Technical Details</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Acknowledgement</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#knowledge-graph-generator-kgg">Knowledge Graph Generator (KGG)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#remedi4all-chemical-annotator">REMEDI4ALL Chemical Annotator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#remedi4all-standard-operating-procedures">REMEDI4ALL Standard Operating Procedures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remedi4all-chemical-annotator">REMEDI4ALL Chemical Annotator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#knowledge-graph-generator-kgg">Knowledge Graph Generator (KGG)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#litsense">LitSense</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hugging-face-local-python-executor">Hugging Face Local Python Executor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sop-indexing-stack">SOP Indexing Stack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cpsign">CPSign</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unstructured">Unstructured</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cpsign-package-and-tdc-data">CPSign package and TDC data</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact &amp; Support</a></li>
@@ -89,14 +89,10 @@
              
   <section id="acknowledgement">
 <h1>Acknowledgement<a class="headerlink" href="#acknowledgement" title="Link to this heading"></a></h1>
-<p>Repuragent depends on a handful of open-source scientific tools and data. This page summarizes how we use
-them and points to the original sources for attribution.</p>
-<section id="knowledge-graph-generator-kgg">
-<h2>Knowledge Graph Generator (KGG)<a class="headerlink" href="#knowledge-graph-generator-kgg" title="Link to this heading"></a></h2>
-<p>We rely on the <a class="reference external" href="https://github.com/Fraunhofer-ITMP/kgg">Knowledge Graph Generator (KGG)</a>
-from Fraunhofer ITMP to create disease-specific knowledge graphs and extract information from them. Its
-automated pipeline ingests curated sources (OpenTargets, UniProt, ChEMBL, etc.) and lets us
-pick the disease ID, protein threshold, and clinical-stage filters.</p>
+<p>Repuragent relies on several open-source scientific tools, data, and guidelines. This page summarizes these resources and links to the original sources for proper acknowledgment.</p>
+<section id="remedi4all-standard-operating-procedures">
+<h2>REMEDI4ALL Standard Operating Procedures<a class="headerlink" href="#remedi4all-standard-operating-procedures" title="Link to this heading"></a></h2>
+<p>The Standard Operating Procedures used in our system are provided by REMEDi4ALL. Visit <a class="reference external" href="https://remedi4all.org">REMEDi4ALL</a> home page for more details.</p>
 </section>
 <section id="remedi4all-chemical-annotator">
 <h2>REMEDI4ALL Chemical Annotator<a class="headerlink" href="#remedi4all-chemical-annotator" title="Link to this heading"></a></h2>
@@ -104,36 +100,28 @@ pick the disease ID, protein threshold, and clinical-stage filters.</p>
 <a class="reference external" href="https://github.com/REMEDI4ALL/chemical_annotator">REMEDI4ALL Chemical Annotator</a>, which
 queries ChEMBL, UniChem, PubChem, and KEGG from SMILES/InChI inputs.</p>
 </section>
-<section id="remedi4all-standard-operating-procedures">
-<h2>REMEDI4ALL Standard Operating Procedures<a class="headerlink" href="#remedi4all-standard-operating-procedures" title="Link to this heading"></a></h2>
-<p>Our SOPs are provided from the REMEDi4ALL technical notes.</p>
+<section id="knowledge-graph-generator-kgg">
+<h2>Knowledge Graph Generator (KGG)<a class="headerlink" href="#knowledge-graph-generator-kgg" title="Link to this heading"></a></h2>
+<p>We rely on the <a class="reference external" href="https://github.com/Fraunhofer-ITMP/kgg">Knowledge Graph Generator (KGG)</a>
+from Fraunhofer ITMP to create disease-specific knowledge graphs and extract information from them.</p>
 </section>
 <section id="litsense">
 <h2>LitSense<a class="headerlink" href="#litsense" title="Link to this heading"></a></h2>
 <p>Literature grounding relies on <a class="reference external" href="https://academic.oup.com/nar/article/53/W1/W361/8133630">LitSense</a>,
-a PubMed-scale neural search engine described by Salatino et al. (Nucleic Acids Research,
-2025). LitSense indexes titles, abstracts, and full text where available, and combines
-semantic representations with curated entity tagging to surface mechanism-, target-, and
-phenotype-level passages that drive Repuragent’s research agent prompts.</p>
+a PubMed semantic search engine. LitSense indexes titles, abstracts, and full text where available, and combines their
+semantic representations.</p>
 </section>
 <section id="hugging-face-local-python-executor">
 <h2>Hugging Face Local Python Executor<a class="headerlink" href="#hugging-face-local-python-executor" title="Link to this heading"></a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">python_executor</span></code> in the data agent reuses Hugging Face’s Apache-2.0 licensed local Python executor to keep code runs safely scoped
-to a curated import list.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">python_executor</span></code> tool in the data agent was built on the <a class="reference external" href="https://huggingface.co/docs/smolagents/index">Smolagents</a> Python executor. It helps keep code running safely scoped to a curated import list.</p>
 </section>
-<section id="sop-indexing-stack">
-<h2>SOP Indexing Stack<a class="headerlink" href="#sop-indexing-stack" title="Link to this heading"></a></h2>
-<p>Our SOP ingestion pipeline depends on <a class="reference external" href="https://github.com/Unstructured-IO/unstructured">Unstructured</a>
-for PDF parsing plus OpenAI’s embedding models. Unstructured handles table/image-aware chunking, while ChatGPT/Embeddings power the
-summaries and Chroma vectors that back the SOP RAG experience.</p>
+<section id="unstructured">
+<h2>Unstructured<a class="headerlink" href="#unstructured" title="Link to this heading"></a></h2>
+<p>Our SOP RAG system relies on <a class="reference external" href="https://github.com/Unstructured-IO/unstructured">Unstructured</a> for parsing PDF files. Unstructured processes text, tables, and images before chunking and embedding them with the OpenAI embedding model, which is then stored in ChromaDB for semantic search later.</p>
 </section>
-<section id="cpsign">
-<h2>CPSign<a class="headerlink" href="#cpsign" title="Link to this heading"></a></h2>
-<p>Predictive modeling runs through
-<a class="reference external" href="https://cpsign.readthedocs.io/en/latest/">CPSign</a>, which provides conformal QSAR models,
-Signatures/ECFP/CDK descriptors, and LIBLINEAR/LIBSVM back ends on the JVM. We follow the
-official CLI/API guidance for training and deployment and direct users to the CPSign docs
-for advanced topics such as encryption, explainability, and Serve publishing.</p>
+<section id="cpsign-package-and-tdc-data">
+<h2>CPSign package and TDC data<a class="headerlink" href="#cpsign-package-and-tdc-data" title="Link to this heading"></a></h2>
+<p>Predictive models were trained and evaluated using <a class="reference external" href="https://cpsign.readthedocs.io/en/latest/">CPSign</a>. The data for training the models was downloaded from <a class="reference external" href="https://tdcommons.ai">Therapeutics Data Commons</a></p>
 </section>
 </section>
 

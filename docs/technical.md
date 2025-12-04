@@ -30,11 +30,9 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
 
 - **Main role:** decomposes user requirements into a multi-step plan before execution begins.
 - **Tools:**
-  - `literature_search_pubmed` – RAG tools for all availale publication on PubMed.
+  - `literature_search_pubmed` – RAG tools for all available publications on PubMed.
   - `protocol_search_sop` – RAG tools for REMEDi4ALL's SOPs.
-- **Notes:** Uses `PLANNING_SYSTEM_PROMPT_ver3` (episodically enhanced when enabled) via
-  `EpisodicLearningSystem.create_enhanced_planning_prompt` so previous successful
-  decompositions can seed new plans.
+- **Notes:** Uses `PLANNING_SYSTEM_PROMPT_ver3` with Examples placeholders, which enables pasting the episodic memory to enhance planning capability. 
 
 ---
 
@@ -42,10 +40,10 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
 
 - **Main role:** gathers biomedical context, builds or inspects knowledge graphs, and surfaces citations plus KG-derived candidates.
 - **Tools:**
-  - `literature_search_pubmed` – RAG tools for all availale publication on PubMed.
+  - `literature_search_pubmed` – RAG tools for all available publications on PubMed.
   - `protocol_search_sop` – RAG tools for REMEDi4ALL's SOPs.
   - `search_disease_id` – resolves disease names to the identifiers required by KGG.
-  - `create_knowledge_graph` – kicks off KGG graph generation and persists the pickle.
+  - `create_knowledge_graph` – kicks off KGG graph generation and stores it as a pickle file.
   - `extract_drugs_from_kg` – pulls drug nodes plus metadata from an existing KG.
   - `extract_proteins_from_kg` – pulls protein targets from the KG snapshot.
   - `extract_pathways_from_kg` – pulls pathway associations captured in the KG.
@@ -54,7 +52,6 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
   - `getDrugsforMechanisms` – queries ChEMBL’s mechanism/molecule endpoints for the supplied MoA strings, filters by phase/type, and returns the matching drug set with SMILES.
   - `getDrugsforPathways` – resolves pathway names to Reactome IDs, maps associated proteins to Ensembl IDs, and reuses Open Targets `knownDrugs` + ChEMBL SMILES to list pathway-linked drugs.
   - `prompt_with_file_path` – resolves natural-language file references into concrete repo paths.
-- **Notes:** Outputs citations, graph summaries, and ranked tables as JSON/CSV artifacts stored under each thread directory.
 
 ---
 
@@ -65,7 +62,6 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
   - `python_executor` – sandboxed Python REPL (pandas, NumPy, RDKit, scikit-learn, etc.) that preserves state between calls.
   - `reset_python_state` – nukes the Python namespace to recover from errors or keep memory low.
   - `prompt_with_file_path` – turns human-friendly file descriptions into absolute paths inside the thread sandbox.
-- **Notes:** Runs on a custom LangGraph StateGraph (`ToolNode`) that injects the writable directory via `ensure_task_dir()`, enabling clean CSV/Parquet exports and Matplotlib/Plotly/Seaborn visualizations.
 
 ---
 
@@ -80,13 +76,13 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
   - `CYP1A2_classifier` – CPSign classification model for CYP1A2 inhibition.
   - `CYP2C9_classifier` – CPSign classification model for CYP2C9 inhibition.
   - `hERG_classifier` – CPSign classification model for hERG cardiotoxicity risk.
-  - `AMES_classifier` – CPSign Ames mutagenicity classifier.
-  - `PGP_classifier` – CPSign classifier for P-gp substrate likelihood.
-  - `PAMPA_classifier` – CPSign classifier for PAMPA permeability.
-  - `BBB_classifier` – CPSign classifier for blood–brain barrier penetration.
-  - `Solubility_regressor` – CPSign regression model returning logS with confidence.
+  - `AMES_classifier` – CPSign classification model for Ames mutagenicity.
+  - `PGP_classifier` – CPSign classification model for P-gp substrate.
+  - `PAMPA_classifier` – CPSign classification model for PAMPA permeability.
+  - `BBB_classifier` – CPSign classification model for Blood–brain Barrier Penetration.
+  - `Solubility_regressor` – CPSign regression model for solubility (output logS).
   - `Lipophilicity_regressor` – RDKit-backed logP estimator.
-- **Notes:** Every tool writes its CSV output (probabilities, `p_value_0/1`, binary calls) via `task_file_path()` so downloads remain sandboxed per thread.
+- **Notes:** Every tool writes its output to a CSV file (stored in `results/<task_id>/output.csv` for the local version). In both Local and Web apps, the output files are displayed in the UI so users can easily download them to their own devices.
 
 ---
 
@@ -94,17 +90,17 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
 
 - **Main role:** assembles the final narrative brief once execution completes.
 - **Tools:** *(none – relies on the conversation history provided by the supervisor).*
-- **Notes:** Guided by `REPORT_SYSTEM_PROMPT`, it summarizes findings, caveats, and recommended next steps using.
+- **Notes:** Guided by `REPORT_SYSTEM_PROMPT`, it summarizes findings, caveats, and recommended next steps.
 
 ---
 
-### Supervisor & Human-in-the-Loop
+### Supervisor Agent (`core/supervisor/supervisor.py`)
 
-- **Main role:** orchestrates routing between planning, agents, and optional `human_chat` interrupts while maintaining shared memory.
+- **Main role:** orchestrates routing between sub-agents.
 - **Tools:**
-  - `create_supervisor` – wires together the Research, Data, Prediction, and Report agents.
-  - `route_from_start` – initial router deciding whether to plan first or execute directly.
-  - `human_chat` – pause point for manual approval or edits before execution resumes.
-- **Notes:** `initialize_memory()` selects `AsyncSqliteSaver` (local) or the web checkpoint backend, and `backend/utils/output_paths.py` keeps every tool locked to its thread directory for both safety and per-user isolation.
+  - `transfer_to_data_agent` – delegate tasks and contexts to the Data Agent. 
+  - `transfer_to_prediction_agent` – delegate tasks and contexts to the Prediction Agent. 
+  - `transfer_to_research_agent` – delegate tasks and context to the Research Agent. 
+  - `transfer_to_report_agent` – delegate tasks and context to the Report Agent. 
 
-Use this section when you need to extend the system (e.g., add a new tools), audit data flows for compliance reviews, or explain to others exactly how Repuragent handles their information. Refer back to the [Shared Usage Guidelines](shared_usage.md) for operator-facing workflows and the [Troubleshooting](troubleshooting.md) chapter for common failure modes.
+Use this section when you need to extend the system (e.g., add a new tool), audit data flows for compliance reviews, or explain to others exactly how Repuragent handles their information. Refer back to the [Usage Guidelines](shared_usage.md) for operator-facing workflows.

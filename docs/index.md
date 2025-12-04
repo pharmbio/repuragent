@@ -10,9 +10,10 @@ right experience for your team.
 
 ## How to Use This Guide
 
-1. **Start with the overview** – learn Repuragent’s general features and how the versions compare.
+1. **Start with the Overview** – learn Repuragent’s general features and how the versions compare.
 2. **Follow the version-specific guide** – pick the local or web chapter that matches your usage target.
-3. **Consult operations & troubleshooting chapters** – reference them whenever you customize, scale, or debug Repuragent.
+3. **Usage Guidelines focus** – local and web apps are different when initializing the app. After that, the usages are the same and presented in [Usage Guidelines](shared_usage.md).
+4. **Contact and Support** – reference them whenever you customize, scale, or debug Repuragent.
 
 ```{toctree}
 :maxdepth: 2

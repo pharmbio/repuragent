@@ -9,7 +9,6 @@ from typing import List, Optional
 
 RESULTS_ROOT = Path("results")
 RESULTS_ROOT.mkdir(parents=True, exist_ok=True)
-TASK_FILES_SUBDIR = "files"
 
 _task_id_var: contextvars.ContextVar[Optional[str]] = contextvars.ContextVar(
     "repuragent_task_id",
@@ -52,14 +51,6 @@ def ensure_task_dir(task_id: Optional[str] = None) -> Path:
     return path
 
 
-def ensure_task_files_dir(task_id: Optional[str] = None) -> Path:
-    """Return the canonical files directory for a task."""
-    base = ensure_task_dir(task_id)
-    files_dir = base / TASK_FILES_SUBDIR
-    files_dir.mkdir(parents=True, exist_ok=True)
-    return files_dir
-
-
 def resolve_output_folder(
     preferred_folder: Optional[str] = None,
     *,
@@ -76,7 +67,7 @@ def resolve_output_folder(
     """
     base_dir = ensure_task_dir(task_id)
     if not preferred_folder:
-        return ensure_task_files_dir(task_id)
+        return base_dir
 
     candidate = Path(preferred_folder)
     if not candidate.is_absolute():
@@ -84,13 +75,13 @@ def resolve_output_folder(
         if parts:
             candidate = base_dir / Path(*parts)
         else:
-            return ensure_task_files_dir(task_id)
+            return base_dir
 
     try:
         candidate.relative_to(base_dir)
     except ValueError:
         # Never allow writes outside of the managed task directory.
-        return ensure_task_files_dir(task_id)
+        return base_dir
 
     candidate.mkdir(parents=True, exist_ok=True)
     return candidate
@@ -108,7 +99,7 @@ def task_file_path(
     elif isinstance(output_folder, Path):
         folder_path = output_folder
     else:
-        folder_path = ensure_task_files_dir(task_id)
+        folder_path = ensure_task_dir(task_id)
     folder_path.mkdir(parents=True, exist_ok=True)
     return folder_path / filename
 
@@ -116,13 +107,25 @@ def task_file_path(
 def list_task_files(task_id: str) -> List[Path]:
     """List files that belong to a task, newest first."""
     base_dir = ensure_task_dir(task_id)
-    files_dir = base_dir / TASK_FILES_SUBDIR
-    directory = files_dir if files_dir.exists() else base_dir
-    if not directory.exists():
+    legacy_dir = base_dir / "files"
+    candidate_dirs = [base_dir]
+    if legacy_dir.exists():
+        candidate_dirs.append(legacy_dir)
+    files: List[Path] = []
+    for directory in candidate_dirs:
+        if directory.exists():
+            files.extend(path for path in directory.rglob("*") if path.is_file())
+    if not files:
         return []
-    files = [path for path in directory.rglob("*") if path.is_file()]
-    files.sort(key=lambda item: item.stat().st_mtime, reverse=True)
-    return files
+    seen = set()
+    unique_files: List[Path] = []
+    for path in files:
+        resolved = path.resolve()
+        if resolved not in seen:
+            seen.add(resolved)
+            unique_files.append(path)
+    unique_files.sort(key=lambda item: item.stat().st_mtime, reverse=True)
+    return unique_files
 
 
 def remove_task_dir(task_id: str) -> None:

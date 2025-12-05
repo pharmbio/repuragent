@@ -3,7 +3,7 @@ import os
 import re
 import shlex
 import subprocess
-from typing import List, Optional, Union
+from typing import List, Union
 
 import pandas as pd
 from langchain_core.tools import tool
@@ -82,15 +82,15 @@ def format_clf_df(df, column):
     return df
 
 
-def _prepare_output_file(filename: str, output_folder: Optional[str] = None):
+def _prepare_output_file(filename: str):
     """Return the path for a classifier artifact inside the active task directory."""
-    path = task_file_path(filename, output_folder=output_folder)
+    path = task_file_path(filename)
     if path.exists():
         path.unlink()
     return path
 
 @tool
-def CYP3A4_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def CYP3A4_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for CYP3A4 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -99,7 +99,7 @@ def CYP3A4_classifier(smiles_input: Union[str, List[str]], output_folder: Option
     Returns:
         Absolute path to the generated `CYP3A4_results.csv` inside the task output folder."""
 
-    output_path = _prepare_output_file("CYP3A4_results.csv", output_folder)
+    output_path = _prepare_output_file("CYP3A4_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -119,7 +119,7 @@ def CYP3A4_classifier(smiles_input: Union[str, List[str]], output_folder: Option
     return str(output_path)
 
 @tool
-def hERG_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def hERG_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for hERG inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -128,7 +128,7 @@ def hERG_classifier(smiles_input: Union[str, List[str]], output_folder: Optional
     Returns:
         Absolute path to `hERG_results.csv` saved for this task."""
 
-    output_path = _prepare_output_file("hERG_results.csv", output_folder)
+    output_path = _prepare_output_file("hERG_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -148,7 +148,7 @@ def hERG_classifier(smiles_input: Union[str, List[str]], output_folder: Optional
     return str(output_path)
 
 @tool
-def AMES_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def AMES_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for AMES inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -157,7 +157,7 @@ def AMES_classifier(smiles_input: Union[str, List[str]], output_folder: Optional
     Returns:
         Absolute path to `AMES_results.csv` for this task."""
 
-    output_path = _prepare_output_file("AMES_results.csv", output_folder)
+    output_path = _prepare_output_file("AMES_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -177,7 +177,7 @@ def AMES_classifier(smiles_input: Union[str, List[str]], output_folder: Optional
     return str(output_path)
 
 @tool
-def PGP_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def PGP_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for P-glycoprotein inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -186,7 +186,7 @@ def PGP_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[
     Returns:
         Absolute path to `PGP_results.csv` saved in the task folder."""
 
-    output_path = _prepare_output_file("PGP_results.csv", output_folder)
+    output_path = _prepare_output_file("PGP_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -207,7 +207,7 @@ def PGP_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[
 
 
 @tool
-def Solubility_regressor(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def Solubility_regressor(smiles_input: Union[str, List[str]]):
     """Pretrained regression model for solubility prediction with single point prediction and prediction interval.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -216,7 +216,7 @@ def Solubility_regressor(smiles_input: Union[str, List[str]], output_folder: Opt
     Returns:
         Path to `Solubility_results.csv` stored for this task."""
 
-    output_path = _prepare_output_file("Solubility_results.csv", output_folder)
+    output_path = _prepare_output_file("Solubility_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -235,7 +235,7 @@ def Solubility_regressor(smiles_input: Union[str, List[str]], output_folder: Opt
     return str(output_path)
 
 @tool
-def Lipophilicity_regressor(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def Lipophilicity_regressor(smiles_input: Union[str, List[str]]):
     """Pretrained regression model for lipophilicity prediction with single point prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -244,7 +244,7 @@ def Lipophilicity_regressor(smiles_input: Union[str, List[str]], output_folder: 
     Returns:
         Path to `Lipophilicity_results.csv` inside the task directory."""
 
-    output_path = _prepare_output_file("Lipophilicity_results.csv", output_folder)
+    output_path = _prepare_output_file("Lipophilicity_results.csv")
     data_path = smiles_csv(smiles_input)
 
     # Generate logP
@@ -262,7 +262,7 @@ def Lipophilicity_regressor(smiles_input: Union[str, List[str]], output_folder: 
     return str(output_path)
 
 @tool
-def PAMPA_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def PAMPA_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for PAMPA permeability assay.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -271,7 +271,7 @@ def PAMPA_classifier(smiles_input: Union[str, List[str]], output_folder: Optiona
     Returns:
         Path to `PAMPA_results.csv` for the current task."""
 
-    output_path = _prepare_output_file("PAMPA_results.csv", output_folder)
+    output_path = _prepare_output_file("PAMPA_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -291,7 +291,7 @@ def PAMPA_classifier(smiles_input: Union[str, List[str]], output_folder: Optiona
     return str(output_path)
 
 @tool
-def BBB_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def BBB_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for assessing Blood Brain Barrier penetration ability.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -300,7 +300,7 @@ def BBB_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[
     Returns:
         Path to `BBB_results.csv` stored under the task output directory."""
 
-    output_path = _prepare_output_file("BBB_results.csv", output_folder)
+    output_path = _prepare_output_file("BBB_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -320,7 +320,7 @@ def BBB_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[
     return str(output_path)
 
 @tool
-def CYP2C19_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def CYP2C19_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for CYP2C19 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -329,7 +329,7 @@ def CYP2C19_classifier(smiles_input: Union[str, List[str]], output_folder: Optio
     Returns:
         Path to `CYP2C19_results.csv` for this task."""
 
-    output_path = _prepare_output_file("CYP2C19_results.csv", output_folder)
+    output_path = _prepare_output_file("CYP2C19_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -349,7 +349,7 @@ def CYP2C19_classifier(smiles_input: Union[str, List[str]], output_folder: Optio
     return str(output_path)
 
 @tool
-def CYP2D6_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def CYP2D6_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for CYP2D6 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -358,7 +358,7 @@ def CYP2D6_classifier(smiles_input: Union[str, List[str]], output_folder: Option
     Returns:
         Path to `CYP2D6_results.csv` stored for this task."""
 
-    output_path = _prepare_output_file("CYP2D6_results.csv", output_folder)
+    output_path = _prepare_output_file("CYP2D6_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -378,7 +378,7 @@ def CYP2D6_classifier(smiles_input: Union[str, List[str]], output_folder: Option
     return str(output_path)
 
 @tool
-def CYP1A2_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def CYP1A2_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for CYP1A2 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -387,7 +387,7 @@ def CYP1A2_classifier(smiles_input: Union[str, List[str]], output_folder: Option
     Returns:
         Path to `CYP1A2_results.csv` stored for this task."""
 
-    output_path = _prepare_output_file("CYP1A2_results.csv", output_folder)
+    output_path = _prepare_output_file("CYP1A2_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \
@@ -407,7 +407,7 @@ def CYP1A2_classifier(smiles_input: Union[str, List[str]], output_folder: Option
     return str(output_path)
 
 @tool
-def CYP2C9_classifier(smiles_input: Union[str, List[str]], output_folder: Optional[str] = None):
+def CYP2C9_classifier(smiles_input: Union[str, List[str]]):
     """Pretrained classification model for CYP2C9 inhibition prediction.
     Args:
         smiles_input: A SMILES string, a comma-separated string of SMILES, 
@@ -416,7 +416,7 @@ def CYP2C9_classifier(smiles_input: Union[str, List[str]], output_folder: Option
     Returns:
         Path to `CYP2C9_results.csv` saved for this conversation."""
 
-    output_path = _prepare_output_file("CYP2C9_results.csv", output_folder)
+    output_path = _prepare_output_file("CYP2C9_results.csv")
     data_path = smiles_csv(smiles_input)
     output_str = shlex.quote(str(output_path))
     cmd = f'java -jar models/CPSign/cpsign-2.0.0-fatjar.jar predict \

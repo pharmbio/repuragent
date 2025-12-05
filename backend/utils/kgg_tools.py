@@ -25,14 +25,14 @@ from backend.utils.output_paths import resolve_output_folder, task_file_path  # 
 from kgg.kgg_apiutils import createKG, searchDisease  # noqa E402
 
 
-def _output_dir(output_folder: Optional[str] = None):
+def _output_dir():
     """Resolve the writable directory for KGG artifacts."""
-    return resolve_output_folder(output_folder)
+    return resolve_output_folder()
 
 
-def _output_file(filename: str, output_folder: Optional[str] = None):
+def _output_file(filename: str):
     """Build a file path scoped to the active task directory."""
-    return task_file_path(filename, output_folder=output_folder)
+    return task_file_path(filename)
 
 
 # ========== Tool 1: Disease Search ==========
@@ -101,7 +101,6 @@ def create_knowledge_graph(
     disease_id: str, 
     clinical_trial_phase: int = 1,
     protein_threshold: float = 0.5,
-    output_folder: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Create a disease-specific knowledge graph using KGG.
@@ -147,7 +146,7 @@ def create_knowledge_graph(
             }
         
         import pickle
-        output_dir = _output_dir(output_folder)
+        output_dir = _output_dir()
         kg_path = output_dir / f"kg_{disease_id.replace(':', '_')}.pkl"
         
         with open(kg_path, 'wb') as f:
@@ -195,7 +194,7 @@ def create_knowledge_graph(
 # ========== Tool 3: Extract Drugs from KG ==========
 
 @tool
-def extract_drugs_from_kg(kg_path: str, limit: int = 20, output_folder: Optional[str] = None) -> Dict[str, Any]:
+def extract_drugs_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
     """
     Extract drug information from a previously created knowledge graph.
     
@@ -261,7 +260,7 @@ def extract_drugs_from_kg(kg_path: str, limit: int = 20, output_folder: Optional
             if 'mechanisms' in df.columns:
                 df['mechanisms'] = df['mechanisms'].apply(lambda x: '; '.join(x) if isinstance(x, list) else x)
             
-            output_dir = _output_dir(output_folder)
+            output_dir = _output_dir()
             csv_path = output_dir / "known_drugs.csv"
             df.to_csv(csv_path, index=False)
             csv_str = str(csv_path)
@@ -337,7 +336,7 @@ def extract_drugs_from_kg(kg_path: str, limit: int = 20, output_folder: Optional
 
 # ========== Tool 3: Extract Mechanism of Action from KG ==========
 @tool
-def extract_mechanism_of_actions_from_kg(kg_path: str, output_folder: Optional[str] = None) -> Dict[str, Any]:
+def extract_mechanism_of_actions_from_kg(kg_path: str) -> Dict[str, Any]:
     """
     Extract mechanism of actions from a knowledge graph.
     
@@ -377,7 +376,7 @@ def extract_mechanism_of_actions_from_kg(kg_path: str, output_folder: Optional[s
 
     df = pd.DataFrame(rows).drop_duplicates().sort_values(["chembl_id", "mechanism_of_action"]).reset_index(drop=True)
     
-    csv_path = _output_file("mechanism_of_actions.csv", output_folder)
+    csv_path = _output_file("mechanism_of_actions.csv")
     df.to_csv(csv_path, index=False)
     csv_str = str(csv_path)
     
@@ -405,7 +404,6 @@ def extract_mechanism_of_actions_from_kg(kg_path: str, output_folder: Optional[s
 def extract_proteins_from_kg(
     kg_path: str,
     druggable_only: bool = False,
-    output_folder: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Extract protein/target information from a previously created knowledge graph.
@@ -460,7 +458,7 @@ def extract_proteins_from_kg(
         # Create pandas DataFrame
         df = pd.DataFrame(protein_info)
         
-        output_path = _output_file('associated_genes.csv', output_folder)
+        output_path = _output_file('associated_genes.csv')
         df.to_csv(output_path, index=False)
         output_str = str(output_path)
         
@@ -515,7 +513,7 @@ def extract_proteins_from_kg(
 # ========== Tool 6: Extract Pathways from KG ==========
 
 @tool
-def extract_pathways_from_kg(kg_path: str, limit: int = 20, output_folder: Optional[str] = None) -> Dict[str, Any]:
+def extract_pathways_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
     """
     Extract pathway information from a knowledge graph.
     
@@ -569,7 +567,7 @@ def extract_pathways_from_kg(kg_path: str, limit: int = 20, output_folder: Optio
             if 'associated_drugs' in df.columns:
                 df['associated_drugs'] = df['associated_drugs'].apply(lambda x: '; '.join(x) if isinstance(x, list) else x)
             
-            csv_path = _output_file("pathways.csv", output_folder)
+            csv_path = _output_file("pathways.csv")
             df.to_csv(csv_path, index=False)
             csv_str = str(csv_path)
             
@@ -649,7 +647,6 @@ def extract_pathways_from_kg(kg_path: str, limit: int = 20, output_folder: Optio
 def extract_side_effects_from_kg(
     kg_path: str,
     drug_id: Optional[str] = None,
-    output_folder: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Extract side effect information from a knowledge graph.
@@ -691,7 +688,7 @@ def extract_side_effects_from_kg(
             # Create DataFrame from side_effects list
             df = pd.DataFrame(side_effects)
             
-            csv_path = _output_file("side_effects.csv", output_folder)
+            csv_path = _output_file("side_effects.csv")
             df.to_csv(csv_path, index=False)
             csv_str = str(csv_path)
             
@@ -1237,7 +1234,6 @@ def getDrugsforProteins_count(ensg):
 @tool
 def getDrugsforProteins(
     proteins: Union[str, List[str]],
-    output_folder: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Get known drugs that are associated with given proteins.
     
@@ -1334,7 +1330,7 @@ def getDrugsforProteins(
 
     api_response.columns = ['phase','status','disease_id','disease_name', 'chembl_id','drug_name','gene_symbol','smiles']
     
-    output_file = _output_file('protein_drug_candidates.csv', output_folder)
+    output_file = _output_file('protein_drug_candidates.csv')
     api_response.to_csv(output_file, index=False)
     output_str = str(output_file)
 
@@ -1382,7 +1378,6 @@ def getDrugsforMechanisms(
     batch_size: int = 10,
     only_small_molecule: bool = True,   # set False to include biologics too
     min_phase: int = 4,              # use 4 for approved drugs only
-    output_folder: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Retrieve drugs associated with mechanism of action.
@@ -1503,7 +1498,7 @@ def getDrugsforMechanisms(
         columns=["drug_name", "chembl_id", "mechanism_of_actions", "smiles"],
     ).reset_index(drop=True)
 
-    output_path = _output_file('mechanism_drug_candidate.csv', output_folder)
+    output_path = _output_file('mechanism_drug_candidate.csv')
     df.to_csv(output_path, index=False)
     output_str = str(output_path)
 
@@ -1525,7 +1520,6 @@ def getDrugsforMechanisms(
 @tool
 def getDrugsforPathways(
     pathways: Union[str, List[str]],
-    output_folder: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Retrieve drugs associated with biological pathways.
@@ -1885,7 +1879,7 @@ def getDrugsforPathways(
             combined[col] = None
     combined = combined[column_order]
 
-    output_file = _output_file("pathway_drug_candidates.csv", output_folder)
+    output_file = _output_file("pathway_drug_candidates.csv")
     combined.to_csv(output_file, index=False)
     output_str = str(output_file)
 

@@ -252,7 +252,7 @@ def _legacy_input_task_root(thread_id: str) -> Path:
 
 
 def _input_files_dir(thread_id: str) -> Path:
-    directory = _input_task_root(thread_id) / "files"
+    directory = _input_task_root(thread_id)
     directory.mkdir(parents=True, exist_ok=True)
     return directory
 

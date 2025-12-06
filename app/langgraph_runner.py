@@ -12,6 +12,34 @@ from app.config import RECURSION_LIMIT, logger
 from core.supervisor.supervisor import create_app
 
 
+def _resolve_agent_name(metadata: dict, default: str | None = None) -> str:
+    """Best-effort mapping from LangGraph metadata to a display-friendly agent name."""
+    node = metadata.get("langgraph_node")
+    if node and node not in {"agent"}:
+        return node
+
+    triggers = metadata.get("langgraph_triggers") or ()
+    for trig in triggers:
+        if isinstance(trig, str) and "branch:to:" in trig:
+            candidate = trig.split("branch:to:", 1)[-1]
+            if candidate and candidate not in {"agent", "__start__", "__end__", "__pregel_pull"}:
+                return candidate
+
+    checkpoint = metadata.get("langgraph_checkpoint_ns")
+    if isinstance(checkpoint, str) and ":" in checkpoint:
+        prefix = checkpoint.split(":", 1)[0]
+        if prefix and prefix not in {"agent", "__start__", "__end__", "__pregel_pull"}:
+            return prefix
+
+    path = metadata.get("langgraph_path")
+    if isinstance(path, (list, tuple)):
+        for element in reversed(path):
+            if element not in {"__pregel_pull", "__start__", "__end__", "agent"}:
+                return element
+
+    return (node or default or "agent")
+
+
 @asynccontextmanager
 async def app_session(app_config: AppRunConfig):
     """Create and clean up a LangGraph app for a single async operation."""
@@ -54,16 +82,37 @@ async def stream_langgraph_events(
 
     try:
         async with app_session(app_config) as app:
-            stream_iterator = app.astream(
+            event_iterator = app.astream_events(
                 stream_input,
                 config=config,
-                stream_mode="updates",
+                version="v1",
             )
 
-            async for chunk in stream_iterator:
-                if isinstance(chunk, tuple) or not isinstance(chunk, dict):
-                    continue
-                yield ("chunk", chunk)
+            async for event in event_iterator:
+                event_type = event.get("event")
+                data = event.get("data") or {}
+                metadata = event.get("metadata") or {}
+                agent_name = _resolve_agent_name(metadata, event.get("name"))
+
+                if event_type == "on_chat_model_stream":
+                    chunk = data.get("chunk")
+                    if chunk:
+                        yield ("stream_token", {"agent": agent_name, "chunk": chunk})
+
+                elif event_type == "on_chain_stream":
+                    chunk = data.get("chunk")
+                    if not chunk:
+                        continue
+                    if metadata.get("langgraph_node"):
+                        # Wrap node-level chunks into the format expected by the UI.
+                        payload = chunk
+                        if not isinstance(chunk, dict) or "messages" not in chunk:
+                            payload = {"messages": [chunk]}
+                        yield ("chunk", {agent_name: payload})
+                    else:
+                        # Root graph stream may already be in the expected shape.
+                        yield ("chunk", chunk)
+
 
             interrupted = False
             if check_for_interrupts:

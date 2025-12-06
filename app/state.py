@@ -21,6 +21,7 @@ class UIState:
 
     thread_ids: List[Dict] = field(default_factory=list)
     current_thread_id: Optional[str] = None
+    selected_thread_id: Optional[str] = None
     messages: List[ChatMessage] = field(default_factory=list)
     message_lookup: Dict[str, int] = field(default_factory=dict)
     agent_blocks: Dict[str, Dict] = field(default_factory=dict)
@@ -30,8 +31,11 @@ class UIState:
     processed_message_ids: Set[str] = field(default_factory=set)
     processed_tools_ids: Set[str] = field(default_factory=set)
     processed_content_hashes: Set[int] = field(default_factory=set)
+    streaming_message_lookup: Dict[str, Dict[str, int]] = field(default_factory=dict)
     waiting_for_approval: bool = False
     approval_interrupted: bool = False
+    stale_threads: Set[str] = field(default_factory=set)
+    pending_stream_events: Dict[str, List] = field(default_factory=dict)
     use_episodic_learning: bool = True
     thread_files: Dict[str, List[FileRecord]] = field(default_factory=dict)
     uploaded_files: List[FileRecord] = field(default_factory=list)

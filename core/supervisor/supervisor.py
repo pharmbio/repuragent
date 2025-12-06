@@ -19,11 +19,11 @@ from core.prompts.prompts import SUPERVISOR_SYSTEM_PROMPT_ver3
 
 def initialize_agents(llm, user_request: Optional[str] = None, use_episodic_learning: bool = True):
     """Initialize all agents with optional episodic learning for planning agent."""
-    planning_llm = init_chat_model('gpt-4o', model_provider = 'openai')
-    data_llm = init_chat_model('gpt-5', model_provider = 'openai')
-    research_llm = init_chat_model('gpt-5-mini', model_provider = 'openai')
-    prediction_llm = init_chat_model('gpt-4o', model_provider = 'openai')
-    report_llm = init_chat_model('gpt-5', model_provider = 'openai')
+    planning_llm = init_chat_model('gpt-4o', model_provider = 'openai', streaming=True)
+    data_llm = init_chat_model('gpt-5', model_provider = 'openai', streaming=True)
+    research_llm = init_chat_model('gpt-5-mini', model_provider = 'openai', streaming=True)
+    prediction_llm = init_chat_model('gpt-4o', model_provider = 'openai', streaming=True)
+    report_llm = init_chat_model('gpt-5', model_provider = 'openai', streaming=True)
 
     research_agent = build_research_agent(research_llm)
     data_agent = build_data_agent(data_llm)
@@ -75,7 +75,7 @@ def route_from_start(state) -> Literal["plan", "skip"]:
         return "plan"
 
     # Initialize LLM for routing decision
-    llm = init_chat_model('gpt-4o', model_provider='openai')
+    llm = init_chat_model('gpt-4o', model_provider='openai', streaming=True)
 
     prompt = (
         "You are a router for an agent workflow.\n"
@@ -182,7 +182,7 @@ async def create_app(user_request: Optional[str] = None, use_episodic_learning: 
         user_request: Current user request for context-aware planning agent enhancement
         use_episodic_learning: Whether to use episodic learning for planning agent
     """
-    llm = init_chat_model('gpt-5-mini', model_provider = 'openai')
+    llm = init_chat_model('gpt-5-mini', model_provider = 'openai', streaming=True)
     
     # Build agents with episodic learning for planning agent
     research_agent, data_agent, prediction_agent, planning_agent, report_agent = initialize_agents(

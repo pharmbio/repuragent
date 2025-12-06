@@ -29,6 +29,7 @@ def reset_chat_messages(state: UIState) -> None:
     state.message_lookup = {}
     state.agent_blocks = {}
     state.tool_call_block_lookup = {}
+    state.streaming_message_lookup = {}
     state.last_agent_block_id = None
     state.message_seq = 0
 
@@ -109,6 +110,48 @@ def process_chunk(state: UIState, chunk: Dict[str, Any]) -> bool:
     return updated
 
 
+def process_stream_token(state: UIState, agent_name: Optional[str], chunk: Any) -> bool:
+    """Apply a token-level stream update for the given agent."""
+    if not agent_name or agent_name.lower() in IGNORED_NODES:
+        return False
+    return _append_streaming_text(state, agent_name, chunk)
+
+
+def _append_streaming_text(state: UIState, agent_name: str, chunk: Any) -> bool:
+    agent_key = (agent_name or "assistant").lower()
+    text = _coerce_stream_text(getattr(chunk, "content", None) if chunk is not None else None)
+    if not text:
+        return False
+
+    message_id = getattr(chunk, "id", None)
+    if isinstance(chunk, dict):
+        message_id = message_id or chunk.get("id")
+
+    block = _ensure_agent_block(state, agent_key)
+    lookup_key = str(message_id) if message_id else f"{agent_key}:{block['block_id']}:stream"
+    stream_entry = state.streaming_message_lookup.get(lookup_key)
+
+    if stream_entry and stream_entry.get("block_id") == block["block_id"]:
+        idx = stream_entry.get("item_index")
+        if idx is not None and idx < len(block["items"]):
+            block["items"][idx]["content"] += text
+        else:
+            block["items"].append({"type": "message", "content": text})
+            state.streaming_message_lookup[lookup_key] = {
+                "block_id": block["block_id"],
+                "item_index": len(block["items"]) - 1,
+            }
+    else:
+        block["items"].append({"type": "message", "content": text})
+        state.streaming_message_lookup[lookup_key] = {
+            "block_id": block["block_id"],
+            "item_index": len(block["items"]) - 1,
+        }
+
+    _refresh_block_message(state, block["block_id"])
+    return True
+
+
 def _ingest_message(state: UIState, raw_msg: Any, agent_name: Optional[str]) -> bool:
     role = _get_role(raw_msg)
     if role in {"human", "user"}:
@@ -136,8 +179,29 @@ def _ingest_ai_message(state: UIState, raw_msg: Any, agent_name: Optional[str]) 
     updated = False
 
     text = _coerce_text(getattr(raw_msg, "content", None))
+    primary_stream_key = str(message_id)
+    fallback_stream_key = f"{agent_key}:{block['block_id']}:stream"
+    stream_entry = state.streaming_message_lookup.get(primary_stream_key) or state.streaming_message_lookup.get(fallback_stream_key)
+    if stream_entry and primary_stream_key not in state.streaming_message_lookup:
+        state.streaming_message_lookup[primary_stream_key] = stream_entry
+        state.streaming_message_lookup.pop(fallback_stream_key, None)
     if text:
-        block["items"].append({"type": "message", "content": text})
+        if stream_entry and stream_entry.get("block_id") == block["block_id"]:
+            idx = stream_entry.get("item_index")
+            if idx is not None and idx < len(block["items"]):
+                block["items"][idx]["content"] = text
+            else:
+                block["items"].append({"type": "message", "content": text})
+                state.streaming_message_lookup[str(message_id)] = {
+                    "block_id": block["block_id"],
+                    "item_index": len(block["items"]) - 1,
+                }
+        else:
+            block["items"].append({"type": "message", "content": text})
+            state.streaming_message_lookup[str(message_id)] = {
+                "block_id": block["block_id"],
+                "item_index": len(block["items"]) - 1,
+            }
         updated = True
 
     tool_calls = getattr(raw_msg, "tool_calls", None) or []
@@ -174,8 +238,18 @@ def _ingest_tool_result(state: UIState, raw_msg: Any) -> bool:
     if msg_id in state.processed_message_ids:
         return False
 
-    tool_call_id = getattr(raw_msg, "tool_call_id", None) or getattr(raw_msg, "name", None)
-    block_id = state.tool_call_block_lookup.get(str(tool_call_id)) or state.last_agent_block_id
+    tool_call_id = getattr(raw_msg, "tool_call_id", None)
+    if isinstance(raw_msg, dict):
+        tool_call_id = tool_call_id or raw_msg.get("tool_call_id")
+
+    if tool_call_id:
+        if tool_call_id in state.processed_tools_ids:
+            state.processed_message_ids.add(msg_id)
+            return False
+        block_id = state.tool_call_block_lookup.get(str(tool_call_id))
+    else:
+        block_id = state.last_agent_block_id
+
     if not block_id:
         state.processed_message_ids.add(msg_id)
         return False
@@ -197,6 +271,7 @@ def _ingest_tool_result(state: UIState, raw_msg: Any) -> bool:
     )
     if tool_call_id:
         state.tool_call_block_lookup.pop(str(tool_call_id), None)
+        state.processed_tools_ids.add(tool_call_id)
     _refresh_block_message(state, block_id)
     state.processed_message_ids.add(msg_id)
     return True
@@ -238,7 +313,7 @@ def _render_block_content(items: List[Dict[str, str]]) -> str:
         elif item["type"] == "tool_call":
             sections.append(
                 _render_tool_section(
-                    "Tools Calling",
+                    "Tool call",
                     item["content"],
                     item.get("tool_name"),
                     body_is_html=item.get("content_is_html", False),
@@ -247,7 +322,7 @@ def _render_block_content(items: List[Dict[str, str]]) -> str:
         elif item["type"] == "tool_result":
             sections.append(
                 _render_tool_section(
-                    "Tools Result",
+                    "Tool result",
                     item["content"],
                     item.get("tool_name"),
                     body_is_html=item.get("content_is_html", False),
@@ -295,6 +370,23 @@ def _coerce_text(content: Any) -> str:
     if isinstance(content, dict) and content.get("type") == "text":
         return str(content.get("text", "")).strip()
     return str(content).strip()
+
+
+def _coerce_stream_text(content: Any) -> str:
+    """Coerce streamed token content without trimming whitespace."""
+    if content is None:
+        return ""
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        parts = []
+        for item in content:
+            if isinstance(item, dict) and item.get("type") == "text":
+                parts.append(item.get("text", ""))
+        return "".join(parts)
+    if isinstance(content, dict) and content.get("type") == "text":
+        return str(content.get("text", ""))
+    return str(content)
 
 
 def _get_role(raw_msg: Any) -> str:

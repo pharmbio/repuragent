@@ -69,7 +69,15 @@ async def stream_langgraph_events(
     *,
     check_for_interrupts: bool = False,
 ):
-    """Yield LangGraph stream chunks followed by a completion event."""
+    """Yield LangGraph stream chunks followed by a completion event.
+
+    Token-level streaming is disabled; we forward structured events:
+    - ai_message: completed AI message (and inline tool_calls if present)
+    - tool_call_start: tool invocation began
+    - tool_result: tool invocation completed
+    - chunk: checkpoint/state updates
+    - complete: finished (payload indicates interruption)
+    """
     if not thread_id:
         raise ValueError("No active conversation thread is selected.")
 
@@ -94,10 +102,28 @@ async def stream_langgraph_events(
                 metadata = event.get("metadata") or {}
                 agent_name = _resolve_agent_name(metadata, event.get("name"))
 
-                if event_type == "on_chat_model_stream":
-                    chunk = data.get("chunk")
-                    if chunk:
-                        yield ("stream_token", {"agent": agent_name, "chunk": chunk})
+                if event_type == "on_chat_model_end":
+                    message = data.get("output")
+                    if message:
+                        tool_calls = getattr(message, "tool_calls", None) or (
+                            message.get("tool_calls") if isinstance(message, dict) else None
+                        )
+                        yield ("ai_message", {"agent": agent_name, "message": message, "tool_calls": tool_calls})
+
+                elif event_type == "on_tool_start":
+                    call = data.get("input")
+                    if call:
+                        yield ("tool_call_start", {"agent": agent_name, "call": call})
+
+                elif event_type == "on_tool_end":
+                    result = data.get("output")
+                    call = data.get("input")
+                    call_id = getattr(call, "id", None) if call else None
+                    if result:
+                        payload = {"agent": agent_name, "result": result}
+                        if call_id:
+                            payload["call_id"] = call_id
+                        yield ("tool_result", payload)
 
                 elif event_type == "on_chain_stream":
                     chunk = data.get("chunk")

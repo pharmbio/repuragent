@@ -39,7 +39,9 @@ from app.state import FileRecord, UIState
 from app.ui.chat_timeline import (
     append_user_message,
     process_chunk,
-    process_stream_token,
+    process_ai_message,
+    process_tool_call_start,
+    process_tool_result,
     rebuild_from_plain_messages,
     rebuild_from_raw_messages,
 )
@@ -180,11 +182,28 @@ def _get_selected_thread() -> Optional[str]:
 
 def _apply_stream_event(event_type: str, payload: Any, state: UIState) -> bool:
     """Apply a single streamed event to the UI state."""
-    if event_type == "stream_token":
-        additions = False
+    if event_type == "ai_message":
         if isinstance(payload, dict):
-            additions = process_stream_token(state, payload.get("agent"), payload.get("chunk"))
-        return additions
+            return process_ai_message(
+                state,
+                payload.get("agent"),
+                payload.get("message"),
+                payload.get("tool_calls"),
+            )
+        return False
+    if event_type == "tool_call_start":
+        if isinstance(payload, dict):
+            return process_tool_call_start(state, payload.get("agent"), payload.get("call"))
+        return False
+    if event_type == "tool_result":
+        if isinstance(payload, dict):
+            return process_tool_result(
+                state,
+                payload.get("agent"),
+                payload.get("call_id"),
+                payload.get("result"),
+            )
+        return False
     if event_type == "chunk":
         return process_chunk(state, payload)
     if event_type == "complete":

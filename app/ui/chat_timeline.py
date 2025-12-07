@@ -110,6 +110,63 @@ def process_chunk(state: UIState, chunk: Dict[str, Any]) -> bool:
     return updated
 
 
+def process_ai_message(state: UIState, agent_name: Optional[str], message: Any, tool_calls: Any) -> bool:
+    """Handle a completed AI message (no token streaming)."""
+    if not agent_name or agent_name.lower() in IGNORED_NODES or not message:
+        return False
+    agent_key = (agent_name or "assistant").lower()
+    message_id = _derive_message_id(message) or state.next_message_id(agent_key)
+    if message_id in state.processed_message_ids:
+        return False
+
+    block = _ensure_agent_block(state, agent_key)
+    updated = False
+
+    text = _coerce_text(getattr(message, "content", None))
+    stream_entry = state.streaming_message_lookup.get(str(message_id))
+    if text:
+        if stream_entry and stream_entry.get("block_id") == block["block_id"]:
+            idx = stream_entry.get("item_index")
+            if idx is not None and idx < len(block["items"]):
+                block["items"][idx]["content"] = text
+            else:
+                block["items"].append({"type": "message", "content": text})
+                state.streaming_message_lookup[str(message_id)] = {
+                    "block_id": block["block_id"],
+                    "item_index": len(block["items"]) - 1,
+                }
+        else:
+            block["items"].append({"type": "message", "content": text})
+            state.streaming_message_lookup[str(message_id)] = {
+                "block_id": block["block_id"],
+                "item_index": len(block["items"]) - 1,
+            }
+        updated = True
+
+    call_list = tool_calls or getattr(message, "tool_calls", None) or []
+    for call in call_list:
+        updated |= _append_tool_call(state, block, call)
+
+    if updated:
+        _refresh_block_message(state, block["block_id"])
+    state.processed_message_ids.add(message_id)
+    return updated
+
+
+def process_tool_call_start(state: UIState, agent_name: Optional[str], tool_call: Any) -> bool:
+    """Render a tool call when it starts."""
+    if not agent_name or agent_name.lower() in IGNORED_NODES or not tool_call:
+        return False
+    return _ingest_tool_call_start(state, agent_name, tool_call)
+
+
+def process_tool_result(state: UIState, agent_name: Optional[str], call_id: Any, result: Any) -> bool:
+    """Render a tool result when it finishes."""
+    if not agent_name or agent_name.lower() in IGNORED_NODES or result is None:
+        return False
+    return _ingest_tool_result_event(state, agent_name, call_id, result)
+
+
 def process_stream_token(state: UIState, agent_name: Optional[str], chunk: Any) -> bool:
     """Apply a token-level stream update for the given agent."""
     if not agent_name or agent_name.lower() in IGNORED_NODES:
@@ -152,6 +209,44 @@ def _append_streaming_text(state: UIState, agent_name: str, chunk: Any) -> bool:
     return True
 
 
+def _update_tool_call_item(block: Dict, call: Any, *, call_id: Optional[Any] = None) -> bool:
+    """Insert or update a tool_call item on a block."""
+    resolved_id = call_id or getattr(call, "id", None)
+    if isinstance(call, dict):
+        resolved_id = resolved_id or call.get("id")
+    # Without an id we cannot reconcile later updates; avoid adding duplicates.
+    if resolved_id is None:
+        return False
+    call_name = getattr(call, "name", None) or (call.get("name") if isinstance(call, dict) else "tool")
+    call_args = (
+        getattr(call, "args", None)
+        or (call.get("args") if isinstance(call, dict) else None)
+        or (call.get("function", {}).get("arguments") if isinstance(call, dict) else None)
+        or (call.get("arguments") if isinstance(call, dict) else None)
+    )
+
+    content, is_html = _format_tool_call_body(call_name, call_args)
+    call_key = str(resolved_id) if resolved_id is not None else None
+
+    if call_key:
+        for idx, item in enumerate(block["items"]):
+            if item.get("type") == "tool_call" and item.get("id") == call_key:
+                block["items"][idx]["content"] = content
+                block["items"][idx]["content_is_html"] = is_html
+                return True
+
+    block["items"].append(
+        {
+            "type": "tool_call",
+            "id": call_key,
+            "tool_name": call_name,
+            "content": content,
+            "content_is_html": is_html,
+        }
+    )
+    return True
+
+
 def _ingest_message(state: UIState, raw_msg: Any, agent_name: Optional[str]) -> bool:
     role = _get_role(raw_msg)
     if role in {"human", "user"}:
@@ -164,7 +259,7 @@ def _ingest_message(state: UIState, raw_msg: Any, agent_name: Optional[str]) -> 
         return _ingest_ai_message(state, raw_msg, agent_name)
 
     if role in {"tool", "function"}:
-        return _ingest_tool_result(state, raw_msg)
+        return _ingest_tool_result_raw(state, raw_msg)
 
     return False
 
@@ -220,36 +315,25 @@ def _append_tool_call(state: UIState, block: Dict, call: Any) -> bool:
     call_args = getattr(call, "args", None) or (call.get("args") if isinstance(call, dict) else {})
     call_id = getattr(call, "id", None) or (call.get("id") if isinstance(call, dict) else state.next_message_id("tool_call"))
 
-    content, is_html = _format_tool_call_body(call_name, call_args)
-    block["items"].append(
-        {
-            "type": "tool_call",
-            "tool_name": call_name,
-            "content": content,
-            "content_is_html": is_html,
-        }
+    updated = _update_tool_call_item(
+        block,
+        {"id": call_id, "name": call_name, "args": call_args},
+        call_id=call_id,
     )
     state.tool_call_block_lookup[str(call_id)] = block["block_id"]
-    return True
+    return updated
 
 
-def _ingest_tool_result(state: UIState, raw_msg: Any) -> bool:
+def _ingest_tool_result_raw(state: UIState, raw_msg: Any) -> bool:
     msg_id = _derive_message_id(raw_msg) or state.next_message_id("tool_result")
     if msg_id in state.processed_message_ids:
         return False
 
-    tool_call_id = getattr(raw_msg, "tool_call_id", None)
-    if isinstance(raw_msg, dict):
-        tool_call_id = tool_call_id or raw_msg.get("tool_call_id")
-
-    if tool_call_id:
-        if tool_call_id in state.processed_tools_ids:
-            state.processed_message_ids.add(msg_id)
-            return False
-        block_id = state.tool_call_block_lookup.get(str(tool_call_id))
-    else:
-        block_id = state.last_agent_block_id
-
+    tool_call_id = getattr(raw_msg, "tool_call_id", None) or getattr(raw_msg, "name", None)
+    if tool_call_id and tool_call_id in state.processed_tools_ids:
+        state.processed_message_ids.add(msg_id)
+        return False
+    block_id = state.tool_call_block_lookup.get(str(tool_call_id)) or state.last_agent_block_id
     if not block_id:
         state.processed_message_ids.add(msg_id)
         return False
@@ -274,6 +358,61 @@ def _ingest_tool_result(state: UIState, raw_msg: Any) -> bool:
         state.processed_tools_ids.add(tool_call_id)
     _refresh_block_message(state, block_id)
     state.processed_message_ids.add(msg_id)
+    return True
+
+
+def _ingest_tool_call_start(state: UIState, agent_name: str, tool_call: Any) -> bool:
+    agent_key = (agent_name or "assistant").lower()
+    call_id = getattr(tool_call, "id", None) or (tool_call.get("id") if isinstance(tool_call, dict) else None)
+    if not call_id:
+        return False
+    call_name = getattr(tool_call, "name", None) or (tool_call.get("name") if isinstance(tool_call, dict) else None)
+    if not call_name:
+        return False
+    block = _ensure_agent_block(state, agent_key)
+    updated = _update_tool_call_item(
+        block,
+        {"id": call_id, "name": call_name, "args": getattr(tool_call, "args", None) or (tool_call.get("args") if isinstance(tool_call, dict) else None)},
+        call_id=call_id,
+    )
+    if updated:
+        state.tool_call_block_lookup[str(call_id)] = block["block_id"]
+        _refresh_block_message(state, block["block_id"])
+    return updated
+
+
+def _ingest_tool_result_event(state: UIState, agent_name: str, call_id: Any, result: Any) -> bool:
+    if not call_id:
+        return False
+    block_id = state.tool_call_block_lookup.get(str(call_id)) or state.last_agent_block_id
+    if not block_id:
+        return False
+    block = state.agent_blocks.get(block_id)
+    if not block:
+        return False
+
+    tool_name = getattr(result, "name", None) or (result.get("name") if isinstance(result, dict) else "tool_result")
+    content, is_html = _format_tool_result_content(getattr(result, "content", None) or (result.get("content") if isinstance(result, dict) else result), tool_name)
+
+    replaced = False
+    for idx, item in enumerate(block["items"]):
+        if item.get("type") == "tool_result" and item.get("id") == str(call_id):
+            block["items"][idx]["content"] = content
+            block["items"][idx]["content_is_html"] = is_html
+            replaced = True
+            break
+    if not replaced:
+        block["items"].append(
+            {
+                "type": "tool_result",
+                "id": str(call_id),
+                "tool_name": tool_name,
+                "content": content,
+                "content_is_html": is_html,
+            }
+        )
+    _refresh_block_message(state, block_id)
+    state.tool_call_block_lookup.pop(str(call_id), None)
     return True
 
 

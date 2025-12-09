@@ -13,6 +13,7 @@ class FileRecord:
     path: str
     hash: Optional[str]
     name: str
+    record_id: Optional[str] = None
 
 
 @dataclass
@@ -41,6 +42,8 @@ class UIState:
     uploaded_files: List[FileRecord] = field(default_factory=list)
     thread_output_files: Dict[str, List[FileRecord]] = field(default_factory=dict)
     current_app_config: Optional[AppRunConfig] = None
+    stop_signals: Dict[str, bool] = field(default_factory=dict)
+    running_threads: Set[str] = field(default_factory=set)
 
     def ensure_thread_storage(self, thread_id: str) -> None:
         if thread_id not in self.thread_files:

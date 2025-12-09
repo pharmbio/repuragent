@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import asyncio
-from contextlib import suppress
 import base64
 import hashlib
 import hmac
@@ -10,6 +9,7 @@ import mimetypes
 import os
 import shutil
 import time
+from contextlib import suppress
 from datetime import datetime
 from html import escape
 from pathlib import Path
@@ -33,8 +33,10 @@ from app.config import (
     UI_CONCURRENCY_LIMIT,
     UI_QUEUE_MAX_SIZE,
     USER_GUIDE_URL,
+    logger,
 )
 from app.langgraph_runner import build_stream_input, stream_langgraph_events, app_session
+from app.partners import get_partner_organizations
 from app.state import FileRecord, UIState
 from app.ui.chat_timeline import (
     append_user_message,
@@ -153,15 +155,61 @@ REPURAGENT_THEME = (
 )
 
 
+def _inline_image_src(path: Path, *, log_missing: bool = True) -> Optional[str]:
+    if not path.exists():
+        if log_missing:
+            logger.warning("Partner logo not found at %s", path)
+        return None
+    data = base64.b64encode(path.read_bytes()).decode("ascii")
+    mime, _ = mimetypes.guess_type(str(path))
+    return f"data:{mime or 'image/png'};base64,{data}"
+
+
 def _logo_html() -> str:
     """Embed the logo as inline HTML to avoid Gradio's image toolbar."""
-    logo_path = Path(LOGO_PATH)
-    if not logo_path.exists():
+    logo_src = _inline_image_src(Path(LOGO_PATH), log_missing=False)
+    if not logo_src:
         return ""
-    data = base64.b64encode(logo_path.read_bytes()).decode("ascii")
-    mime, _ = mimetypes.guess_type(str(logo_path))
-    mime = mime or "image/png"
-    return f'<img src="data:{mime};base64,{data}" alt="{APP_TITLE} logo" class="app-logo-img" />'
+    return f'<img src="{logo_src}" alt="{APP_TITLE} logo" class="app-logo-img" />'
+
+
+def _partner_logos_html() -> str:
+    cards: List[str] = []
+    for org in get_partner_organizations():
+        logo_src = _inline_image_src(Path(org["logo"]))
+        url = org.get("url")
+        name = org.get("name") or "Partner"
+        if not logo_src or not url:
+            continue
+        size = (org.get("size") or "").lower()
+        extra_class = ""
+        if size == "xl":
+            extra_class = " partner-logo-card--xl"
+        cards.append(
+            (
+                "<a class='partner-logo-card{extra}' href='{href}' target='_blank' "
+                "rel='noopener noreferrer' title='{title}' data-partner-card='1'>"
+                "<img src='{src}' alt='{alt}' />"
+                "</a>"
+            ).format(
+                extra=extra_class,
+                href=escape(url, quote=True),
+                title=escape(name, quote=True),
+                src=escape(logo_src, quote=True),
+                alt=escape(f"{name} logo", quote=True),
+            )
+        )
+    if not cards:
+        return ""
+    cards_markup = "".join(cards)
+    return (
+        "<div class='partner-slider' data-partner-slider='1'>"
+        "<div class='partner-slider__viewport'>"
+        "<div class='partner-slider__track'>{cards}</div>"
+        "</div>"
+        "<div class='partner-slider__dots' role='tablist' aria-label='Partner carousel controls'></div>"
+        "</div>"
+    ).format(cards=cards_markup)
 
 
 def _get_orchestrator():
@@ -376,6 +424,39 @@ def _remove_input_task_dir(thread_id: str) -> None:
         shutil.rmtree(legacy_root, ignore_errors=True)
 
 
+def _prune_dir(path: Path) -> None:
+    """Remove a directory if it is empty."""
+    if path.exists():
+        try:
+            next(path.iterdir())
+        except StopIteration:
+            try:
+                path.rmdir()
+            except OSError:
+                pass
+        except OSError:
+            pass
+
+
+def _delete_thread_uploads(thread_id: str, records: List[FileRecord]) -> None:
+    """Best-effort removal of uploaded files for a thread."""
+    seen_dirs: set[Path] = set()
+    for record in records:
+        path_value = record.path
+        if not path_value:
+            continue
+        resolved = _safe_resolve(path_value)
+        try:
+            resolved.relative_to(INPUT_ROOT)
+        except ValueError:
+            continue
+        resolved.unlink(missing_ok=True)
+        seen_dirs.add(resolved.parent)
+    for directory in seen_dirs:
+        _prune_dir(directory)
+    _prune_dir(_input_task_root(thread_id))
+
+
 def _save_uploaded_file(uploaded_file, thread_id: str) -> Tuple[Path, str]:
     """Persist uploaded file to the data directory."""
     target_dir = _input_files_dir(thread_id)
@@ -389,7 +470,7 @@ def _save_uploaded_file(uploaded_file, thread_id: str) -> Tuple[Path, str]:
     return destination, _hash_file(destination)
 
 
-MAX_VISIBLE_FILES = 50
+MAX_VISIBLE_FILES = 100
 
 
 def _render_thread_files(state: UIState, thread_id: str) -> str:
@@ -571,6 +652,7 @@ _CONVERSATION_SCRIPT = """
         bus.dispatchEvent(new Event("input", { bubbles: true }));
         bus.dispatchEvent(new Event("change", { bubbles: true }));
     }
+
     function filenameFromDisposition(disposition) {
         if (!disposition) {
             return "";
@@ -689,15 +771,101 @@ _CONVERSATION_SCRIPT = """
         });
     }
 
+    function initPartnerSlider(slider) {
+        if (!slider || slider.dataset.sliderInitialized === "1") {
+            return;
+        }
+        const viewport = slider.querySelector(".partner-slider__viewport");
+        const track = slider.querySelector(".partner-slider__track");
+        const cards = Array.from(slider.querySelectorAll(".partner-logo-card"));
+        const dots = slider.querySelector(".partner-slider__dots");
+        if (!viewport || !track || !cards.length || !dots) {
+            return;
+        }
+        const state = { index: 0, perSlide: 1, total: 1 };
+        const requestRecalc = () => window.requestAnimationFrame(recalc);
+
+        function applyTransform() {
+            const viewportWidth = viewport.getBoundingClientRect().width || 1;
+            track.style.transform = `translateX(-${state.index * viewportWidth}px)`;
+        }
+
+        function goTo(index) {
+            state.index = Math.max(0, Math.min(index, state.total - 1));
+            applyTransform();
+            renderDots();
+        }
+
+        function renderDots() {
+            dots.innerHTML = "";
+            if (state.total <= 1) {
+                dots.style.display = "none";
+                return;
+            }
+            dots.style.display = "flex";
+            for (let i = 0; i < state.total; i += 1) {
+                const dot = document.createElement("button");
+                dot.type = "button";
+                dot.className = "partner-slider__dot" + (i === state.index ? " is-active" : "");
+                dot.setAttribute("aria-label", `Show partner group ${i + 1}`);
+                dot.addEventListener("click", () => goTo(i));
+                dots.appendChild(dot);
+            }
+        }
+
+        function recalc() {
+            const viewportWidth = viewport.getBoundingClientRect().width || 1;
+            const sampleWidth = cards[0].getBoundingClientRect().width || 1;
+            const styles = window.getComputedStyle(track);
+            const gap = parseFloat(styles.columnGap || styles.gap || "16") || 16;
+            const perSlide = Math.max(1, Math.floor((viewportWidth + gap) / (sampleWidth + gap)));
+            state.perSlide = perSlide;
+            state.total = Math.max(1, Math.ceil(cards.length / perSlide));
+            state.index = Math.min(state.index, state.total - 1);
+            renderDots();
+            applyTransform();
+        }
+
+        const ro = window.ResizeObserver ? new ResizeObserver(requestRecalc) : null;
+        if (ro) {
+            ro.observe(viewport);
+        } else {
+            window.addEventListener("resize", requestRecalc);
+        }
+        requestRecalc();
+        cards.forEach((card) => {
+            const img = card.querySelector("img");
+            if (!img) {
+                return;
+            }
+            if (img.complete) {
+                requestRecalc();
+            } else {
+                img.addEventListener("load", requestRecalc, { once: true });
+            }
+        });
+        slider.dataset.sliderInitialized = "1";
+    }
+
+    function initPartnerSliders() {
+        document.querySelectorAll("[data-partner-slider]").forEach((slider) => initPartnerSlider(slider));
+    }
+
     function ensureReady() {
         if (!document.getElementById("conversation-list-root") || !findBus()) {
             window.requestAnimationFrame(ensureReady);
             return;
         }
         bindHandlers();
+        initPartnerSliders();
     }
 
     ensureReady();
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initPartnerSliders, { once: true });
+    } else {
+        initPartnerSliders();
+    }
     if (window.__repConversationObserver) {
         window.__repConversationObserver.disconnect();
     }
@@ -916,8 +1084,26 @@ def on_clear_files(state: UIState):
     current_thread = state.current_thread_id
     if not current_thread:
         return state, _conversation_panel_update(state)
-    _clear_input_files(current_thread)
+    thread_records = list(state.thread_files.get(current_thread, []))
+    deletable_records: List[FileRecord] = []
+    for record in thread_records:
+        path_value = record.path
+        if not path_value:
+            continue
+        resolved = _safe_resolve(path_value)
+        try:
+            resolved.relative_to(INPUT_ROOT)
+        except ValueError:
+            continue
+        deletable_records.append(record)
+
+    if not deletable_records:
+        gr.Info("No user uploads to clear for this conversation.")
+        return state, _conversation_panel_update(state)
+
+    _delete_thread_uploads(current_thread, deletable_records)
     _hydrate_input_files(state, current_thread)
+    state.uploaded_files = []
     return state, _conversation_panel_update(state)
 
 
@@ -942,6 +1128,7 @@ def _append_file_paths(prompt: str, state: UIState) -> str:
 
 async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Optional[str] = None):
     prompt = (prompt or "").strip()
+    thread_id = state.current_thread_id
     if not prompt and not approve_signal:
         yield (
             state,
@@ -969,9 +1156,9 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
         final_prompt = _append_file_paths(prompt, state)
         append_user_message(state, prompt)
         user_messages = [m for m in state.messages if m.role == "user"]
-        if len(user_messages) == 1 and state.current_thread_id:
+        if len(user_messages) == 1 and thread_id:
             title = prompt[:30] + "..." if len(prompt) > 30 else prompt
-            update_thread_title(state.current_thread_id, title)
+            update_thread_title(thread_id, title)
             state.thread_ids = load_thread_ids()
         app_config = AppRunConfig(
             user_request=prompt if state.use_episodic_learning else None,
@@ -990,24 +1177,31 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
         )
 
     state.current_app_config = app_config
+    if thread_id:
+        state.selected_thread_id = thread_id
 
-    task_token = set_current_task_id(state.current_thread_id)
+    context_task_token = set_current_task_id(thread_id)
+    if thread_id:
+        state.running_threads.add(thread_id)
+        state.stop_signals.setdefault(thread_id, False)
     try:
         stream_iter = stream_langgraph_events(
             app_config,
             stream_input,
-            state.current_thread_id,
+            thread_id,
             check_for_interrupts=True,
         )
+        stream_iter_closed = False
         stream_task = asyncio.create_task(stream_iter.__anext__())
-        watch_thread_id = state.current_thread_id
+        watch_thread_id = thread_id if state else None
         poll_task = (
             asyncio.create_task(asyncio.sleep(FILE_LIST_REFRESH_INTERVAL_SECONDS))
             if watch_thread_id
             else None
         )
-        buffer = state.pending_stream_events.setdefault(watch_thread_id, [])
+        buffer = state.pending_stream_events.setdefault(watch_thread_id, []) if watch_thread_id else []
         ui_attached = True
+        stopped = False
         try:
             while stream_task:
                 wait_tasks = [stream_task]
@@ -1061,13 +1255,39 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
                             list(state.messages),
                             gr.update(value=""),
                             _conversation_panel_update(state),
-                        )
+                            )
                     stream_task = asyncio.create_task(stream_iter.__anext__())
+                if state.stop_signals.get(watch_thread_id):
+                    stopped = True
+                    state.waiting_for_approval = False
+                    state.approval_interrupted = False
+                    state.current_app_config = None
+                    if poll_task:
+                        poll_task.cancel()
+                        with suppress(asyncio.CancelledError):
+                            await poll_task
+                        poll_task = None
+                    if stream_task:
+                        stream_task.cancel()
+                        with suppress(asyncio.CancelledError):
+                            await stream_task
+                        stream_task = None
+                    with suppress(Exception):
+                        await stream_iter.aclose()
+                    stream_iter_closed = True
+                    break
         finally:
             if poll_task:
                 poll_task.cancel()
                 with suppress(asyncio.CancelledError):
                     await poll_task
+            if stream_task:
+                stream_task.cancel()
+                with suppress(asyncio.CancelledError):
+                    await stream_task
+            if not stream_iter_closed:
+                with suppress(Exception):
+                    await stream_iter.aclose()
 
         if not ui_attached:
             # Ensure the UI retains the user's selected thread instead of reverting to the last streamed snapshot.
@@ -1083,7 +1303,8 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
             state.selected_thread_id = selected_thread
         is_active_thread = (selected_thread or state.current_thread_id) == watch_thread_id
         if not is_active_thread:
-            state.stale_threads.add(watch_thread_id)
+            if watch_thread_id:
+                state.stale_threads.add(watch_thread_id)
         elif ui_attached and _refresh_output_files_for(state, watch_thread_id):
             yield (
                 state,
@@ -1091,13 +1312,57 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
                 gr.update(value=""),
                 _conversation_panel_update(state),
             )
+        if stopped:
+            if watch_thread_id:
+                state.stop_signals.pop(watch_thread_id, None)
+                state.running_threads.discard(watch_thread_id)
+            yield (
+                state,
+                list(state.messages),
+                gr.update(value=""),
+                _conversation_panel_update(state),
+            )
+            return
     finally:
-        reset_current_task_id(task_token)
+        reset_current_task_id(context_task_token)
+        if thread_id:
+            state.running_threads.discard(thread_id)
+            state.stop_signals.pop(thread_id, None)
 
 
 async def on_send_message(prompt: str, state: UIState):
     async for update in _run_user_message(prompt, state):
         yield update
+
+
+async def on_stop_run(state: UIState):
+    if state is None:
+        state = _initialize_state()
+    target_thread = state.current_thread_id
+    if not target_thread:
+        return (
+            state,
+            list(state.messages),
+            gr.update(),
+            _conversation_panel_update(state),
+        )
+    if target_thread not in state.running_threads:
+        gr.Info("No active run to stop.")
+        return (
+            state,
+            list(state.messages),
+            gr.update(),
+            _conversation_panel_update(state),
+        )
+    state.stop_signals[target_thread] = True
+    state.waiting_for_approval = False
+    gr.Info("Stopping current run...")
+    return (
+        state,
+        list(state.messages),
+        gr.update(),
+        _conversation_panel_update(state),
+    )
 
 
 def on_extract_learning(state: UIState):
@@ -1117,6 +1382,8 @@ def build_demo():
         --header-link-color: #1f2937;
         --header-link-divider-color: #9ca3af;
         --header-link-hover-color: #1f5c55;
+        --partner-card-width: 220px;
+        --partner-card-gap: 1.15rem;
     }
     body.dark {
         --header-link-color: #f8fafc;
@@ -1238,6 +1505,95 @@ def build_demo():
     #chatbot-panel [data-testid*="user"] * {
         font-size: 1rem !important;
     }
+    #partner-logos-panel {
+        width: 100%;
+        margin: 0 auto 1.25rem;
+        padding: 0;
+    }
+    #partner-logos-panel .partner-slider {
+        width: min(100%, 1080px);
+        margin: 0 auto;
+    }
+    .partner-slider__viewport {
+        overflow: hidden;
+        width: 100%;
+    }
+    .partner-slider__track {
+        display: flex;
+        gap: var(--partner-card-gap);
+        padding: 0.25rem;
+        will-change: transform;
+        transition: transform 0.4s ease;
+    }
+    .partner-logo-card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        padding: 1.05rem 1.85rem;
+        min-height: 115px;
+        min-width: var(--partner-card-width);
+        width: var(--partner-card-width);
+        max-width: var(--partner-card-width);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+        transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+        flex: 0 0 var(--partner-card-width);
+    }
+    .partner-logo-card:hover,
+    .partner-logo-card:focus-visible {
+        transform: translateY(-2px);
+        border-color: #cbd5f5;
+        box-shadow: 0 12px 20px rgba(15, 23, 42, 0.12);
+    }
+    .partner-logo-card img {
+        max-height: 70px;
+        max-width: calc(var(--partner-card-width) - 20px);
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        filter: saturate(1.05);
+    }
+    .partner-logo-card--xl {
+        min-width: calc(var(--partner-card-width) + 60px);
+        width: calc(var(--partner-card-width) + 60px);
+        max-width: calc(var(--partner-card-width) + 60px);
+    }
+    .partner-logo-card--xl img {
+        max-height: 90px;
+        max-width: calc(var(--partner-card-width) + 20px);
+    }
+    .partner-slider__dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.45rem;
+        margin-top: 0.5rem;
+    }
+    .partner-slider__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: #d1d5db;
+        border: 0;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .partner-slider__dot.is-active {
+        background: transparent;
+        border: 2px solid #111827;
+    }
+    #input-actions-row {
+        margin-top: 0.5rem;
+        gap: 0.65rem;
+    }
+    #send-button {
+        width: 100%;
+    }
+    #stop-button {
+        width: 100%;
+        min-width: 120px;
+    }
     #conversation-action-bus {
         display: none !important;
     }
@@ -1259,6 +1615,9 @@ def build_demo():
                 gr.HTML(f"<div class='app-title-text'>{APP_TITLE}</div>", elem_id="app-title")
             with gr.Column(scale=0, min_width=200, elem_id="header-links-column"):
                 gr.HTML(HEADER_LINKS_HTML, elem_id="header-links")
+        partner_panel = _partner_logos_html()
+        if partner_panel:
+            gr.HTML(partner_panel, elem_id="partner-logos-panel")
         gr.HTML(
             """
             <style>
@@ -1470,7 +1829,11 @@ def build_demo():
                     elem_id="chatbot-panel",
                 )
                 user_input = gr.Textbox(label="Your message", lines=3)
-                send_btn = gr.Button("Send", variant="primary")
+                with gr.Row(elem_id="input-actions-row"):
+                    with gr.Column(scale=9):
+                        send_btn = gr.Button("Send", variant="primary", elem_id="send-button")
+                    with gr.Column(scale=1, min_width=120):
+                        stop_btn = gr.Button("Stop", variant="secondary", elem_id="stop-button")
 
         demo.load(
             on_app_load,
@@ -1530,6 +1893,12 @@ def build_demo():
         user_input.submit(
             on_send_message,
             inputs=[user_input, state],
+            outputs=[state, chatbot, user_input, conversation_list],
+        )
+
+        stop_btn.click(
+            on_stop_run,
+            inputs=state,
             outputs=[state, chatbot, user_input, conversation_list],
         )
 

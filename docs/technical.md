@@ -1,6 +1,6 @@
 # Technical Details
 
-This chapter is aimed at power users who want to understand how Repuragent is wired under the hood—what services run where, how data flows through the stack, and which tools each agent can call.
+This chapter presents technical details under the hood of Repuragent. It provides developers with the understanding needed to customise the system. Use this section when you need to extend the system (e.g., add a new tool), audit data flows, or explain to others exactly how Repuragent handles their information. Refer back to the [Usage Guidelines](shared_usage.md) for operator-facing workflows.
 
 ## 5.1 System Architecture Overview
 
@@ -17,9 +17,11 @@ This chapter is aimed at power users who want to understand how Repuragent is wi
 
 ### 5.1.2 Data Flow
 
-1. **User input** enters through Gradio, is logged via LangGraph checkpoints, and becomes the “messages” channel consumed by the supervisor.
-2. **Supervisor routing** (`route_from_start`) decides whether to invoke the planning agent or proceed directly to execution. Planning outputs can trigger a human-review interrupt before execution resumes.
-3. **Execution agents** (Research, Data, Prediction, Report) are LangGraph nodes bound to tool suites. Tool calls persist artifacts via `backend/utils/output_paths.py` inside the active thread directory.
+1. **User input** enters through Gradio, is logged via LangGraph checkpoints, and becomes the “messages” consumed by the supervisor.
+2. **Initial routing** (`route_from_start`) decides whether to invoke the planning agent or proceed directly to execution. 
+3. **Planning agent** generates intial plan and can trigger a human-review interrupt before execution resumes.
+4. **Supervisor agent** recieves final plan from planning agent and delegate sub-task to specialised agent and keep trach on the execution status. 
+3. **Specilise agents** (Research, Data, Prediction, Report) are LangGraph nodes bound to tool suites. Tool calls persist artifacts via `backend/utils/output_paths.py` inside the active thread directory.
 4. **Downloads** are gated by signed tokens (`FILE_DOWNLOAD_SECRET`) that embed the path and expiry (10 min by default).
 
 ## 5.2 Agents & Tools
@@ -103,4 +105,3 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
   - `transfer_to_research_agent` – delegate tasks and context to the Research Agent. 
   - `transfer_to_report_agent` – delegate tasks and context to the Report Agent. 
 
-Use this section when you need to extend the system (e.g., add a new tool), audit data flows for compliance reviews, or explain to others exactly how Repuragent handles their information. Refer back to the [Usage Guidelines](shared_usage.md) for operator-facing workflows.

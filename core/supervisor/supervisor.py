@@ -8,7 +8,7 @@ from langgraph.graph import START, END
 from langchain_core.messages import HumanMessage
 from langgraph.types import Command
 
-from app.config import SQLITE_DB_PATH, logger
+from app.config import OPENAI_API_KEY, SQLITE_DB_PATH, logger
 from core.agents.prediction_agent import build_prediction_agent
 from core.agents.research_agent import build_research_agent
 from core.agents.data_agent import build_data_agent
@@ -32,6 +32,43 @@ def initialize_agents(llm, user_request: Optional[str] = None, use_episodic_lear
     report_agent = build_report_agent(report_llm)
     
     return research_agent, data_agent, prediction_agent, planning_agent, report_agent
+
+
+_approval_judge_llm = None
+
+
+def _get_approval_judge_llm():
+    global _approval_judge_llm
+    if _approval_judge_llm is None:
+        _approval_judge_llm = init_chat_model("gpt-5-nano", model_provider="openai", api_key=OPENAI_API_KEY)
+    return _approval_judge_llm
+
+
+def _judge_plan_feedback(feedback: str) -> Literal["approve", "revise"]:
+    """Use a lightweight LLM to classify whether the user approved or requested revisions."""
+    if not feedback:
+        return "revise"
+    llm = _get_approval_judge_llm()
+    prompt = (
+        "You evaluate a human's feedback on an execution plan.\n"
+        "Reply with EXACTLY one word:\n"
+        "- APPROVE → the human explicitly authorizes execution immediately.\n"
+        "- REVISE → the human asks for changes, more info, or expresses uncertainty.\n"
+        "Do not add punctuation or commentary.\n"
+        f"Feedback: {feedback}\n"
+    )
+    try:
+        response = llm.invoke(prompt)
+        content = getattr(response, "content", str(response)).strip().lower()
+    except Exception as exc:  # pragma: no cover - defensive logging
+        logger.warning("Approval judge failed, defaulting to revise: %s", exc)
+        return "revise"
+    if content.startswith("approve"):
+        return "approve"
+    if content.startswith("revise"):
+        return "revise"
+    logger.info("Approval judge returned unrecognized answer '%s'; defaulting to revise", content)
+    return "revise"
 
 
 async def initialize_memory() -> Tuple[AsyncSqliteSaver | MemorySaver, Optional[aiosqlite.Connection]]:
@@ -120,20 +157,11 @@ def route_from_planning(state) -> Literal["human_chat", "supervisor"]:
     
     # Check the most recent human message (excluding the first) for approval terms
     most_recent_feedback = human_messages[-1]
-    content_lower = most_recent_feedback.lower().strip()
-    approval_terms = [
-        "approved", "approve", "looks good", "send to supervisor", 
-        "proceed", "go ahead", "execute", "ok", "good", "yes"
-    ]
-    
-    # Check if any approval term is found in feedback messages
-    for term in approval_terms:
-        if term in content_lower:
-            logger.info(f"Approval detected in human feedback: '{most_recent_feedback}' contains '{term}'")
-            return "supervisor"
-    
-    # No approval found in feedback messages
-    logger.info(f"Human feedback found but no approval: '{most_recent_feedback}'")
+    decision = _judge_plan_feedback(most_recent_feedback)
+    if decision == "approve":
+        logger.info("Approval judge confirmed plan approval")
+        return "supervisor"
+    logger.info("Approval judge requested more revisions")
     return "human_chat"
 
 

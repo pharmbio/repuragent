@@ -13,19 +13,19 @@ Drug repurposing offers an efficient strategy to accelerate therapeutic discover
 
 This repository contains a local application that you can clone and run on your own machine. As a result, all data files, database and chat memory remain on your device. Additionally, we offer several alternative versions:
 
-- [RepurAgent Web](https://repuragent.serve.scilifelab.se): This is the web version of RepurAgent, which can be used online without installation. Simply register for an account to access the web app.
-- [RepurAgent Demo Page](https://repuragent.streamlit.app): This is a static demo of RepurAgent designed for viewing purposes only. You cannot interact with the agent in this mode.
-- [Documentation](https://repuragent.readthedocs.io/)
+- [Repuragent Web](https://repuragent.serve.scilifelab.se): This is the web version of Repuragent, which can be used without installation. Simply register for an account to access the app.
+- [Repuragent Demo Page](https://repuragent.streamlit.app): This is a static demo of Repuragent designed for viewing purposes only. You cannot interact with the agent in this mode.
+- [Documentation](https://repuragent.readthedocs.io/): User guides and technical details.
 
 
 ### Core Agent Architecture
 
-- **Planning Agent**: Decomposes complex tasks using episodic memory learning, Standard Operating Procedures (SOPs), and academic publications.
-- **Supervisor Agent**: Delegate tasks to specialized agents and track the complete status of the whole task sequence.
-- **Research Agent**: Performs literature mining via PubMed, accesses knowledge graphs, and integrates biomedical databases.
-- **Prediction Agent**: Executes molecular property predictions using pre-trained ML models for ADMET properties
+- **Planning Agent**: Decomposes complex tasks using episodic memory, Standard Operating Procedures (SOPs), and academic publications.
+- **Supervisor Agent**: Delegate tasks to specialized agents and track the completion status.
+- **Research Agent**: Performs literature mining, accesses knowledge graphs, and integrates biomedical databases.
+- **Prediction Agent**: Executes molecular property predictions using pre-trained ML models.
 - **Data Agent**: Manages multi-format data processing, SMILES standardization, and visualization
-- **Report Agent**: Generates comprehensive analytical reports and visualizations
+- **Report Agent**: Generates comprehensive reports.
 
 ### Advanced Memory Systems
 
@@ -86,8 +86,8 @@ docker-compose logs -f
 repuragent/
 ├── app/           # Gradio UI interface
 ├── core/          # AI agents and logic
-├── backend/       # Memory and RAG systems
-├── models/        # Machine learning models
+├── backend/       # Memory, tools, and RAG systems
+├── models/        # Pretrained ML models
 ├── data/          # Input data will be stored here
 ├── results/       # Output files will be stored here
 └── main.py        # Entry point

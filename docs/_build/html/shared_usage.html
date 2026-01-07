@@ -51,11 +51,11 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Usage Guidelines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#prompting-the-requirements">4.1 Prompting the requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#working-with-files">4.2 Working With Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#episodic-learning-ui">4.3 Episodic Learning UI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#episodic-learning">4.3 Episodic Learning</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="technical.html">Technical Details</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact &amp; Support</a></li>
 </ul>
 
@@ -85,36 +85,34 @@
              
   <section id="usage-guidelines">
 <h1>Usage Guidelines<a class="headerlink" href="#usage-guidelines" title="Link to this heading"></a></h1>
-<p>Regardless of versions, both builds present the similar Gradio UI and LangGraph
-architecrture. Use this chapter as the operating manual once your deployment is running.</p>
+<p>Regardless of the versions, both builds share the same core architecture and functionality. Use this chapter as the operating manual.</p>
 <section id="prompting-the-requirements">
 <h2>4.1 Prompting the requirements<a class="headerlink" href="#prompting-the-requirements" title="Link to this heading"></a></h2>
 <p>Before letting the agent autonomously handle your request, there are several steps that
-decides the quality of downstream exection:</p>
+decides the quality of downstream execution:</p>
 <ul class="simple">
 <li><p><strong>Crafting the Initial Prompt</strong><br />
 Imagine you are a manager delegating tasks to a team member. Your initial prompt should
 clearly mention the specific goals you want the agent to achieve. Include all relevant
 details such as disease names, protein targets, mechanisms of action, drug candidates, or
-any other information necessary for the task.</p></li>
+any other information necessary for the task, and align with your preferences.</p></li>
 <li><p><strong>Planning Phase</strong><br />
-After submitting your prompt, the Planning Agent will take some time to process it using
-SOPs and episodic memory. During this phase, the agent generates an initial plan
+After you submit your prompt, the planning agent will take some time to process it using supporting information from SOPs and episodic memory. During this phase, the agent generates an initial plan
 outlining a potential approach to fulfill your request.</p></li>
 <li><p><strong>Review and Refinement</strong><br />
-Carefully review the proposed plan. This step is crucial: continue iterating and refining
-the plan through additional prompts until you feel confident and satisfied with the
+Carefully review the proposed plan. This step is crucial: use your domain expertise, continue refining
+the plan through additional prompts until you feel satisfied with the
 approach. The success of the entire workflow largely depends on the quality of this
 initial planning stage.</p></li>
 <li><p><strong>Approval and Execution</strong><br />
 Once you are satisfied with the plan, type <strong>“Approved”</strong> (or a similar confirmation). At
-this point, the Supervisor Agent and its sub-agents will take over to execute the full
-plan autonomously. The processing time can vary depending on task complexity. For
-example, the complete pipeline demonstrated in the demo may take approximately 25–35
+At this point, the supervisor agent will take over to execute the full
+plan autonomously by delegating sub-tasks to specialized agents. The processing time can vary depending on task complexity. For
+For example, the complete pipeline demonstrated in the demo may take approximately 25–35
 minutes.</p></li>
 <li><p><strong>Performance Considerations</strong><br />
 Execution will be significantly faster if you already have knowledge graph files
-available. If the system needs to generate the knowledge graphs on-the-fly, the process
+available. If the system needs to generate the knowledge graphs on the fly, the process
 will naturally take longer.</p></li>
 </ul>
 </section>
@@ -125,8 +123,8 @@ will naturally take longer.</p></li>
 </ol>
 <ul class="simple">
 <li><p>Drag-and-drop files into the upload widget or select them via the file picker.</p></li>
-<li><p>For knowledge graph file, we are using <a class="reference external" href="https://github.com/Fraunhofer-ITMP/kgg">knowledge graph generator</a> package from Fraunhofer-ITMP. The acceptable KG file is the pickle file of the knowledge graph oject in the package.</p></li>
-<li><p>You can create such pickle file by using the below pattern:</p></li>
+<li><p>For the knowledge graph file, we are using the <a class="reference external" href="https://github.com/Fraunhofer-ITMP/kgg">Knowledge Graph Generator</a> package from Fraunhofer-ITMP. The acceptable KG file is the pickle file of the knowledge graph object.</p></li>
+<li><p>You can create such a pickle file by using the template below:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">kgg.src.kgg_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">createKG</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
@@ -142,21 +140,21 @@ will naturally take longer.</p></li>
 <li><p><strong>Listing &amp; content</strong></p></li>
 </ol>
 <ul class="simple">
-<li><p>The sidebar shows every conversation you own (plus demo threads on the web edition).</p></li>
-<li><p>Click on one conversation, you will see all the files associated with it.</p></li>
+<li><p>The sidebar shows every conversation you own (plus demo conversation).</p></li>
+<li><p>Click on one conversation, and you will see all the files associated with it.</p></li>
 <li><p>Clicking a filename issues a download file to your device.</p></li>
 <li><p>Deleting a conversation removes <em>all</em> uploads and outputs for that conversation. Back up anything important first—the action cannot be undone.</p></li>
 </ul>
 </section>
-<section id="episodic-learning-ui">
-<h2>4.3 Episodic Learning UI<a class="headerlink" href="#episodic-learning-ui" title="Link to this heading"></a></h2>
+<section id="episodic-learning">
+<h2>4.3 Episodic Learning<a class="headerlink" href="#episodic-learning" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>What it is</strong><br />
-LangMem + Chroma capture successful planning decompositions so the next run can reuse proven strategies.</p></li>
+LangMem + Chroma captures successful planning decompositions so the next run can reuse proven strategies.</p></li>
 <li><p><strong>How it works</strong><br />
-Every conversation can be extracted into an “episode” with task and decomposition patterns. When enabled, the planning agent automatically pulls the two most relevant examples into its system prompt.</p></li>
+Every conversation can be extracted into an “episode” with <em>Task</em> and <em>Decomposition</em> patterns. When enabled, the planning agent automatically pulls the two most relevant examples into its system prompt.</p></li>
 <li><p><strong>Extraction trigger</strong><br />
-The extraction process only happens with current conversation that you are in, only when you click <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">Learning</span></code> button on the UI.</p></li>
+The extraction process happens only for the current conversation you are in, and only when you click the <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">Learning</span></code> button in the UI.</p></li>
 </ul>
 </section>
 </section>
@@ -172,7 +170,7 @@ The extraction process only happens with current conversation that you are in, o
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Repuragent Team.</p>
+    <p>&#169; Copyright 2026, Repuragent Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

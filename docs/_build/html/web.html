@@ -49,13 +49,12 @@
 <li class="toctree-l1"><a class="reference internal" href="local.html">Local App Guidelines</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Web App Guidelines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#account-registration">3.1 Account Registration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-the-web-app-stores-and-handles-data">3.2 How the Web App Stores and Handles Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#when-to-choose-the-web-app">3.3 When to Choose the Web App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-the-repuragent-stores-and-handles-data">3.2 How the Repuragent stores and handles data</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="shared_usage.html">Usage Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="technical.html">Technical Details</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact &amp; Support</a></li>
 </ul>
 
@@ -86,32 +85,29 @@
   <section id="web-app-guidelines">
 <h1>Web App Guidelines<a class="headerlink" href="#web-app-guidelines" title="Link to this heading"></a></h1>
 <p>The hosted version at <a class="reference external" href="https://repuragent.serve.scilifelab.se">https://repuragent.serve.scilifelab.se</a>
-delivers Repuragent as a managed service. This chapter explains how to register, what data
+delivers Repuragent as a web application. This chapter explains how to register an account, what data
 is stored, and how the cloud deployment protects each user.</p>
 <section id="account-registration">
 <h2>3.1 Account Registration<a class="headerlink" href="#account-registration" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p><strong>Sign up</strong><br />
 Click <em>Register</em> on the UI, enter your email, and choose a strong password.
-Account information is hashed with Argon2id before being stored in PostgreSQL, so
-neither admins nor developers ever see plaintext.</p></li>
+Account information is hashed before being stored in PostgreSQL.</p></li>
 <li><p><strong>Email verification</strong><br />
 An email from <a class="reference external" href="mailto:repuragent&#46;uu&#37;&#52;&#48;gmail&#46;com">repuragent<span>&#46;</span>uu<span>&#64;</span>gmail<span>&#46;</span>com</a> will be sent to your registered email with a one-time verification link.</p></li>
 <li><p><strong>Sign in</strong><br />
-Once verified, log in to reach the Repuragent Web UI.</p></li>
+Once verified, log in to access Repuragent’s full functionality. The demo conversation appears once you log in; it is a read-only example. Create a new task to start your own conversations.</p></li>
 <li><p><strong>Account recovery</strong><br />
-Use <em>Forgot password</em> to receive a reset link (valid for 1 h). New passwords are hashed the same way as during sign-up.</p></li>
+Use <em>Forgot password</em> to receive a reset link.</p></li>
 </ol>
 <p>If you do not receive any email after registration or a request to change your password, check your spam email folder or contact us via <a class="reference external" href="mailto:repuragent&#46;uu&#37;&#52;&#48;gmail&#46;com">repuragent<span>&#46;</span>uu<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
-<p>The demo thread appears alongside your own conversations; it is a read-only example.</p>
 </section>
-<section id="how-the-web-app-stores-and-handles-data">
-<h2>3.2 How the Web App Stores and Handles Data<a class="headerlink" href="#how-the-web-app-stores-and-handles-data" title="Link to this heading"></a></h2>
+<section id="how-the-repuragent-stores-and-handles-data">
+<h2>3.2 How the Repuragent stores and handles data<a class="headerlink" href="#how-the-repuragent-stores-and-handles-data" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><strong>What is stored permanently?</strong></p>
+<li><p><strong>What is stored in the system?</strong></p>
 <ul>
-<li><p>Episodic memory (task decomposition patterns) is stored permanently with the Agent,
-but only if you hit the <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">Learning</span></code> button on the web interface.</p></li>
+<li><p>When you hit hit the <em>Extract Learning</em> button on the web interface, the Repuragent will analyse your current conversation and store the task decomposition patterns permanently into Episodic memory. Note that, it jsut happen when you hit <em>Extract Learning</em> button.</p></li>
 <li><p>Chat history is also stored, but only for 2 days due to resource limitations. After
 that, all conversations and relevant files are automatically removed. For permanent
 history, consider the <a class="reference internal" href="local.html"><span class="std std-doc">Local version</span></a>.</p></li>
@@ -125,30 +121,11 @@ files are removed permanently from the database. There is no recovery mechanism.
 </li>
 <li><p><strong>What is <em>not</em> stored?</strong></p>
 <ul>
-<li><p>Data files and results are not retained in the system.</p></li>
+<li><p>None of your data is used for training the model.</p></li>
+<li><p>Data files and results are not exposed to any other users.</p></li>
 <li><p>Your files and outputs are only visible to you and are removed within 2 days.</p></li>
-<li><p>None of this data is used for training the model.</p></li>
 </ul>
 </li>
-<li><p><strong>Data privacy</strong></p>
-<ul>
-<li><p>Each user has an isolated root directory and a unique thread namespace (UUID). The
-backend enforces per-user path checks before issuing download tokens.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="when-to-choose-the-web-app">
-<h2>3.3 When to Choose the Web App<a class="headerlink" href="#when-to-choose-the-web-app" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><strong>You need zero installation</strong><br />
-Using the web app only requires account registration, then use.</p></li>
-<li><p><strong>You want zero infrastructure</strong><br />
-The hosted service handles Docker, PostgreSQL, ChromaDB, and updates for you.</p></li>
-<li><p><strong>You need multi-user collaboration</strong><br />
-Every researcher gets a private workspace.</p></li>
-<li><p><strong>You require centralized data policies</strong><br />
-Retention, backups, and access control all live in one deployment.</p></li>
 </ul>
 </section>
 </section>
@@ -164,7 +141,7 @@ Retention, backups, and access control all live in one deployment.</p></li>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Repuragent Team.</p>
+    <p>&#169; Copyright 2026, Repuragent Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

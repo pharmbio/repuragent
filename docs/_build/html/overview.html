@@ -46,19 +46,16 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#what-the-application-delivers">1.1 What the Application Delivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-the-repuragent-delivers">1.1 What the Repuragent delivers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#two-versions">1.2 Two Versions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#feature-comparison">1.3 Feature Comparison</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#typical-workflow">Typical Workflow</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#feature-comparison">1.3 Feature Comparison</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="local.html">Local App Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="web.html">Web App Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shared_usage.html">Usage Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="technical.html">Technical Details</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact &amp; Support</a></li>
 </ul>
 
@@ -88,44 +85,33 @@
              
   <section id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
-<p>Repuragent is an Agentic AI system for Drug Repurposing. It uses a LangGraph supervisor
-architecture at its core, where the supervisor agent drives a team of specialized agents.
-These agents mine biomedical literature, traverse curated knowledge graphs, run ADMET
-models, generate and execute Python code, and write human-readable reports. This chapter
-orients you before you dive into edition-specific guides.</p>
-<section id="what-the-application-delivers">
-<h2>1.1 What the Application Delivers<a class="headerlink" href="#what-the-application-delivers" title="Link to this heading"></a></h2>
+<p>Repuragent is an Agentic AI system for Drug Repurposing. It uses Agentic Supervisor
+architecture at its core, where the supervisor agent drives a team of five specialised agents, including a planning agent, a prediction agent, a research agent, a data agent, and a report agent. These agents dynamically plan the execution, run ADMET models, mine biomedical literature, traverse curated knowledge graphs, generate and execute Python code, and write human-readable reports. This chapter orients you before you dive into edition-specific guides.</p>
+<section id="what-the-repuragent-delivers">
+<h2>1.1 What the Repuragent delivers<a class="headerlink" href="#what-the-repuragent-delivers" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>Autonomous planning</strong><br />
-The planning agent decomposes a user’s questions into a sequence of actions, enriched by
-Standard Operating Procedures and episodic memory of prior successful workflows.</p></li>
+The planning agent decomposes the user’s question into a sequence of actions, enriched by
+Standard Operating Procedures (SOPs) and episodic memory of prior successful workflows.</p></li>
 <li><p><strong>Evidence gathering</strong><br />
-The research agent queries PubMed via LitSense, searches your SOP vault, and builds
-knowledge graphs (KGG) to surface drugs, proteins, and pathways.</p></li>
+The research agent queries literature on PubMed, searches the SOPs vault, and builds
+knowledge graphs (KG) to surface drugs, proteins, and pathways.</p></li>
+<li><p><strong>Predictive modeling</strong><br />
+The prediction agent calls pretrained CPSign classifiers/regressors to produce ADMET properties predictions.</p></li>
 <li><p><strong>Data/analysis automation</strong><br />
 The data agent executes safety-controlled Python code snippets (pandas, RDKit,
 scikit-learn, etc) directly inside the task workspace.</p></li>
-<li><p><strong>Predictive modeling</strong><br />
-The prediction agent calls pretrained CPSign classifiers/regressors plus RDKit-derived
-features to produce ADMET dashboards.</p></li>
 <li><p><strong>Reporting and oversight</strong><br />
-The supervisor agent ensures every step is auditable, pauses for human approval when
-needed, and the report agent synthesizes the whole task run at the end.</p></li>
+The UI and supervisor agent design ensures every executed step is traceable, can be paused for human approval when needed, and that the report agent synthesises the entire task run at the end.</p></li>
 </ul>
 </section>
 <section id="two-versions">
 <h2>1.2 Two Versions<a class="headerlink" href="#two-versions" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><strong>Local app:</strong> the <a class="reference external" href="https://github.com/pharmbio/repuragent">GitHub Repo</a> that you clone,
-run in Docker, and keep entirely on your workstation. Nothing leaves your machine beyond
-the API calls authorized by your own <code class="docutils literal notranslate"><span class="pre">OPENAI_API_KEY</span></code>.</p></li>
+build and run in Docker Container, and keep input/ouput, files, conversation history entirely on your device. Nothing leaves your machine beyond the API calls authorised by your own <code class="docutils literal notranslate"><span class="pre">OPENAI_API_KEY</span></code>. Use the <a class="reference internal" href="local.html"><span class="std std-doc">Local App Guide</span></a> when you want full control and private processing (requires your own OpenAI API key).</p></li>
 <li><p><strong>Web app:</strong> hosted at <a class="reference external" href="https://repuragent.serve.scilifelab.se">repuragent.serve.scilifelab.se</a>.
-It uses the same LangGraph architecture in the core, but is deployed on the SciLifeLab
-Serve infrastructure for multiple users. No installation is required for this version.</p></li>
-<li><p><strong>Local App Guide:</strong> use the <a class="reference internal" href="local.html"><span class="std std-doc">Local App Guide</span></a> when you want full control and
-private processing (requires your own OpenAI API key).</p></li>
-<li><p><strong>Web App Guide:</strong> use the <a class="reference internal" href="web.html"><span class="std std-doc">Web App Guide</span></a> when you need instant usage without
-managing hardware.</p></li>
+It uses the same core with Local, but is deployed on the SciLifeLab Serve infrastructure for multiple users. No installation is required for this version. Use the <a class="reference internal" href="web.html"><span class="std std-doc">Web App Guide</span></a> for instant use without managing hardware.</p></li>
 </ul>
 </section>
 <section id="feature-comparison">
@@ -139,11 +125,11 @@ managing hardware.</p></li>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Distribution</p></td>
-<td><p>GitHub source; you run it with Docker</p></td>
+<td><p>GitHub source; run it with Docker</p></td>
 <td><p>Hosted service</p></td>
 </tr>
 <tr class="row-odd"><td><p>Authentication</p></td>
-<td><p>None (runs as the launching user)</p></td>
+<td><p>None (single-user)</p></td>
 <td><p>Email + password</p></td>
 </tr>
 <tr class="row-even"><td><p>Short-term memory</p></td>
@@ -160,16 +146,6 @@ managing hardware.</p></li>
 </tr>
 </tbody>
 </table>
-<section id="typical-workflow">
-<h3>Typical Workflow<a class="headerlink" href="#typical-workflow" title="Link to this heading"></a></h3>
-<ol class="arabic simple">
-<li><p><strong>Frame the problem</strong> – describe the indication, constraints, or hypotheses in chat.</p></li>
-<li><p><strong>Attach relevant data</strong> – upload CSV/JSON/PDF files.</p></li>
-<li><p><strong>Approve and monitor</strong> – planning may pause for human review, modification, and approval.</p></li>
-<li><p><strong>Review results</strong> – download artifacts from the Conversation panel.</p></li>
-<li><p><strong>Iterate or branch</strong> – continue the same thread to preserve context, or start a new one when exploring a different hypothesis.</p></li>
-</ol>
-</section>
 </section>
 </section>
 
@@ -184,7 +160,7 @@ managing hardware.</p></li>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Repuragent Team.</p>
+    <p>&#169; Copyright 2026, Repuragent Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

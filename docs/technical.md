@@ -44,6 +44,7 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
 - **Tools:**
   - `literature_search_pubmed` – RAG tools for all available publications on PubMed.
   - `protocol_search_sop` – RAG tools for REMEDi4ALL's SOPs.
+  - `annotate_chemicals` – Collect drug annotations from public chemical databases (including, ChEMBL, UniChem, PubChem, and KEGG) based on exact match with query pattern.
   - `search_disease_id` – resolves disease names to the identifiers required by KGG.
   - `create_knowledge_graph` – kicks off KGG graph generation and stores it as a pickle file.
   - `extract_drugs_from_kg` – pulls drug nodes plus metadata from an existing KG.

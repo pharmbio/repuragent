@@ -96,7 +96,7 @@
              
   <section id="technical-details">
 <h1>Technical Details<a class="headerlink" href="#technical-details" title="Link to this heading"></a></h1>
-<p>This chapter is aimed at power users who want to understand how Repuragent is wired under the hood—what services run where, how data flows through the stack, and which tools each agent can call.</p>
+<p>This chapter presents technical details under the hood of Repuragent. It provides developers with the understanding needed to customise the system. Use this section when you need to extend the system (e.g., add a new tool), audit data flows, or explain to others exactly how Repuragent handles their information. Refer back to the <a class="reference internal" href="shared_usage.html"><span class="std std-doc">Usage Guidelines</span></a> for operator-facing workflows.</p>
 <section id="system-architecture-overview">
 <h2>5.1 System Architecture Overview<a class="headerlink" href="#system-architecture-overview" title="Link to this heading"></a></h2>
 <section id="core-services">
@@ -141,9 +141,11 @@
 <section id="data-flow">
 <h3>5.1.2 Data Flow<a class="headerlink" href="#data-flow" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
-<li><p><strong>User input</strong> enters through Gradio, is logged via LangGraph checkpoints, and becomes the “messages” channel consumed by the supervisor.</p></li>
-<li><p><strong>Supervisor routing</strong> (<code class="docutils literal notranslate"><span class="pre">route_from_start</span></code>) decides whether to invoke the planning agent or proceed directly to execution. Planning outputs can trigger a human-review interrupt before execution resumes.</p></li>
-<li><p><strong>Execution agents</strong> (Research, Data, Prediction, Report) are LangGraph nodes bound to tool suites. Tool calls persist artifacts via <code class="docutils literal notranslate"><span class="pre">backend/utils/output_paths.py</span></code> inside the active thread directory.</p></li>
+<li><p><strong>User input</strong> enters through Gradio, is logged via LangGraph checkpoints, and becomes the “messages” consumed by the supervisor.</p></li>
+<li><p><strong>Initial routing</strong> (<code class="docutils literal notranslate"><span class="pre">route_from_start</span></code>) decides whether to invoke the planning agent or proceed directly to execution.</p></li>
+<li><p><strong>Planning agent</strong> generates intial plan and can trigger a human-review interrupt before execution resumes.</p></li>
+<li><p><strong>Supervisor agent</strong> recieves final plan from planning agent and delegate sub-task to specialised agent and keep trach on the execution status.</p></li>
+<li><p><strong>Specilise agents</strong> (Research, Data, Prediction, Report) are LangGraph nodes bound to tool suites. Tool calls persist artifacts via <code class="docutils literal notranslate"><span class="pre">backend/utils/output_paths.py</span></code> inside the active thread directory.</p></li>
 <li><p><strong>Downloads</strong> are gated by signed tokens (<code class="docutils literal notranslate"><span class="pre">FILE_DOWNLOAD_SECRET</span></code>) that embed the path and expiry (10 min by default).</p></li>
 </ol>
 </section>
@@ -173,6 +175,7 @@
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">literature_search_pubmed</span></code> – RAG tools for all available publications on PubMed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol_search_sop</span></code> – RAG tools for REMEDi4ALL’s SOPs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">annotate_chemicals</span></code> – Collect drug annotations from public chemical databases (including, ChEMBL, UniChem, PubChem, and KEGG) based on exact match with query pattern.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">search_disease_id</span></code> – resolves disease names to the identifiers required by KGG.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">create_knowledge_graph</span></code> – kicks off KGG graph generation and stores it as a pickle file.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extract_drugs_from_kg</span></code> – pulls drug nodes plus metadata from an existing KG.</p></li>
@@ -249,7 +252,6 @@
 </ul>
 </li>
 </ul>
-<p>Use this section when you need to extend the system (e.g., add a new tool), audit data flows for compliance reviews, or explain to others exactly how Repuragent handles their information. Refer back to the <a class="reference internal" href="shared_usage.html"><span class="std std-doc">Usage Guidelines</span></a> for operator-facing workflows.</p>
 </section>
 </section>
 </section>
@@ -265,7 +267,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Repuragent Team.</p>
+    <p>&#169; Copyright 2026, Repuragent Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

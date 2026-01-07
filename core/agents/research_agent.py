@@ -14,6 +14,8 @@ from backend.utils.kgg_tools import (
         getDrugsforMechanisms,
         getDrugsforPathways
     )
+from backend.utils.chemical_annotator.tools import annotate_chemicals
+
 logger.info("Using KGG-based modular tools")
 KGG_AVAILABLE = True
 
@@ -30,7 +32,8 @@ def build_research_agent(llm):
         extract_mechanism_of_actions_from_kg,
         getDrugsforProteins,
         getDrugsforPathways,
-        getDrugsforMechanisms
+        getDrugsforMechanisms, 
+        annotate_chemicals
     ]
 
 

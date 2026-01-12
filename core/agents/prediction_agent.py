@@ -38,9 +38,10 @@ def smiles_csv(smiles_input: Union[str, List[str]]) -> Union[str, os.PathLike]:
         sep = "\t" if ext == ".tsv" else ","
         df = pd.read_csv(smiles_input, sep=sep)
         df.columns = [col.lower() for col in df.columns]
-        if "smiles" not in df.columns:
+        smiles_columns = [col for col in df.columns if "smiles" in col]
+        if not smiles_columns:
             return "Error: No 'smiles' column found in the file"
-        smiles_list = df["smiles"].dropna().astype(str).tolist()
+        smiles_list = df[smiles_columns[0]].dropna().astype(str).tolist()
 
     # Case 2: SMILES string (single or comma-separated)
     elif isinstance(smiles_input, str):

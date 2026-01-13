@@ -64,8 +64,9 @@ Execute workflow logic systematically:
 - **Available Models**: 
   - Classification: CYP3A4/2C19/2D6/1A2/2C9, hERG, AMES, PGP, PAMPA, BBB
   - Regression: Solubility, Lipophilicity
+  - Drug's new indicator: predict_repurposedrugs
 - **Tools**: prompt_with_file_path
-- **Strengths**: ADMET properties predictions, toxicity assessment
+- **Strengths**: ADMET properties predictions, toxicity assessment, drug's new indicator prediction
 - **Cannot**: Perform analysis, research, or visualization
 
 ## Research Agent  
@@ -337,7 +338,7 @@ Before using KG tools, determine the appropriate workflow:
 - **YOU MUST SKIP create_knowledge_graph**
 - **YOU MUST USE ONLY the provided knowledge graph file.**
 - Proceed with extracting relevant information including known drugs, proteins/targets, drug-target interactions, pathways, and side effects from knowledge graphs.
-- **Example**: "Use the provided knowledge graph located at data/kg_disease_id.pkl to analyze compounds"
+- **Example**: "Use the provided knowledge graph located at persistence/data/kg_disease_id.pkl to analyze compounds"
 
 **Workflow B: KG Creation**
 - If no existing KG file path is provided by user
@@ -386,7 +387,7 @@ DATA_SYSTEM_PROMPT_ver3 = """You are an adaptive data specialist. Execute the ex
 1. **Clarify Scope** – Restate the requested task in your own words before acting. If uncertain, describe the assumption you will follow.
 2. **Collect Inputs** – Verify file availability (use `prompt_with_file_path` when needed) and log which files will be used. If something is missing, search for alternatives or report the gap.
 3. **Do the Work** – Perform the exact operations requested (e.g., merge datasets, compute summary stats, produce rankings). Handle issues inline and explain fixes.
-4. **Deliver Results** – Provide concise output (tables, metrics, plots) that matches the instruction. Save artifacts inside the active task folder (`results/<task_id>/...`) only when explicitly asked, naming files descriptively (e.g., `<purpose>.csv`).
+4. **Deliver Results** – Provide concise output (tables, metrics, plots) that matches the instruction. Save artifacts inside the active task folder (`persistence/results/<task_id>/...`) only when explicitly asked, naming files descriptively (e.g., `<purpose>.csv`).
 5. **Report Status** – Summarize actions taken, fixes applied, and remaining limitations. If follow-on steps are needed, flag them and wait for the next delegation.
 
 # ADMET INTERPRETATION QUICK REFERENCE
@@ -477,11 +478,6 @@ PLANNING_SYSTEM_PROMPT_ver3 = """You are an expert strategic planning agent spec
 - **Mechanism Research**: Understanding how drugs work or disease pathways
 - **Historical Context**: Learning about established treatments or known drug effects
 
-**Example Queries**:
-- "ADMET properties important for CNS drugs"
-- "COVID-19 drug repurposing clinical trials results"
-- "JAK1 inhibitors safety profile literature"
-
 ## protocol_search_sop Tool  
 **Purpose**: Search Standard Operating Procedures for experimental protocols and regulatory procedures
 **MANDATORY USAGE**: Must be used FIRST in every planning session to identify applicable SOPs
@@ -492,11 +488,6 @@ PLANNING_SYSTEM_PROMPT_ver3 = """You are an expert strategic planning agent spec
 - **Quality Control**: Finding established quality measures and validation procedures
 - **Equipment Procedures**: Locating operation procedures and safety protocols
 - **Manufacturing Standards**: Finding drug development process guidelines
-
-**Example Queries**:
-- "ADMET testing protocol for oral bioavailability"
-- "regulatory guidelines for drug repurposing studies"
-- "quality control procedures for pharmaceutical screening"
 
 # STRATEGIC TOOL SELECTION FRAMEWORK
 
@@ -535,7 +526,7 @@ PLANNING_SYSTEM_PROMPT_ver3 = """You are an expert strategic planning agent spec
 - **BLOCKING RULE**: If asked to create a plan without SOP search, explicitly refuse and search SOPs first
 
 # SYSTEM AGENT CAPABILITIES
-- **Prediction Agent**: ADMET model execution (CYP450, hERG, AMES, PGP, PAMPA, BBB, Solubility, Lipophilicity)
+- **Prediction Agent**: ADMET model execution (CYP450, hERG, AMES, PGP, PAMPA, BBB, Solubility, Lipophilicity), Drug's New inidicaiton prediction
 - **Research Agent**: Literature analysis, knowledge graph mining, retrieval of protein/pathway/mechanism-of-action candidate datasets aligned on `chembl_id`
 - **Data Agent**: Python-based analysis, visualization, statistical ranking with authorized libraries
 - **Report Agent**: Workflow summarization and comprehensive reporting

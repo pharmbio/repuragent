@@ -99,7 +99,7 @@ def search_disease_id(disease_name: str) -> Dict[str, Any]:
 @tool 
 def create_knowledge_graph(
     disease_id: str, 
-    clinical_trial_phase: int = 1,
+    clinical_trial_phase: int = 3,
     protein_threshold: float = 0.5,
 ) -> Dict[str, Any]:
     """
@@ -108,7 +108,7 @@ def create_knowledge_graph(
     
     Args:
         disease_id: EFO/MONDO disease ID (e.g., "EFO_0000685", "MONDO_0004975")
-        clinical_trial_phase: Minimum clinical trial phase (1-4)
+        clinical_trial_phase: Minimum clinical trial phase (1-4, prefer 3)
         protein_threshold: Minimum protein association score (0.0-1.0)
     
     Returns:

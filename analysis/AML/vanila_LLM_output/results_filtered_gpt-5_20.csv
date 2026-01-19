@@ -1,0 +1,18 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,ABL/FLT3 TKI,Potent inhibitor of FLT3-ITD signaling,0.1,200.0,nM,Robust activity in MOLM13.,ponatinib,False,CHEMBL2105708
+Sunitinib,Multi-kinase TKI (includes FLT3),Inhibits FLT3 among other kinases; active in FLT3-ITD AML lines,1.0,3000.0,nM,,sunitinib,False,CHEMBL597365
+Dasatinib,Src/Abl TKI,Disrupts FLT3-ITD downstream signaling,0.5,1000.0,nM,AML cell line activity reported.,dasatinib,False,CHEMBL1421
+Bortezomib,Proteasome inhibitor,26S proteasome inhibition leading to cytotoxicity,0.5,100.0,nM,Nanomolar cytotoxicity in AML including MOLM13.,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Proteasome inhibition (irreversible),1.0,200.0,nM,AML cell line activity reported.,carfilzomib,False,CHEMBL451887
+Panobinostat,Pan-HDAC inhibitor,Histone deacetylase inhibition,2.0,200.0,nM,Potent sub-µM activity in AML lines.,panobinostat,False,CHEMBL483254
+Tigecycline,Antibiotic (glycylcycline),Inhibits mitochondrial translation; targets AML stem/progenitor cells,0.2,20.0,µM,,tigecycline,False,CHEMBL376140
+Mefloquine,Antimalarial,Lysosomotropic agent with reported AML selectivity (including LSCs),0.5,20.0,µM,,mefloquine,False,CHEMBL172
+Niclosamide,Anthelmintic,Uncouples OXPHOS and inhibits Wnt signaling,0.05,5.0,µM,AML line activity reported.,niclosamide,False,CHEMBL1448
+Simvastatin,Statin (HMG-CoA reductase inhibitor),Mevalonate pathway blockade leading to antiproliferative effects,0.1,10.0,µM,Use the active hydroxy-acid form; test mevalonate rescue at 50–100 µM as a specificity control.,simvastatin,False,CHEMBL1201391
+Auranofin,Anti-rheumatic,Thioredoxin reductase inhibition,50.0,2000.0,nM,Potent in AML including FLT3-ITD.,auranofin,False,CHEMBL1366
+Disulfiram,ALDH inhibitor / proteostasis disruptor,Forms Cu–disulfiram complex that targets proteostasis/NPL4,10.0,1000.0,nM,Co-administer copper (0.5–2 µM CuCl2); optimize copper; include copper-alone controls.,disulfiram,False,CHEMBL964
+Pimozide,Antipsychotic (dopamine receptor antagonist),Modulates STAT5 and calmodulin,0.5,10.0,µM,Reported activity in FLT3-ITD AML.,pimozide,False,CHEMBL1423
+Thioridazine,Antipsychotic (phenothiazine),Functionally targets AML stem-like cells; antiproliferative effects,0.5,10.0,µM,,thioridazine,False,CHEMBL1200916
+Omacetaxine,Protein synthesis inhibitor,Inhibits translational elongation,1.0,100.0,nM,Also known as homoharringtonine; approved in CML; AML cell line cytotoxicity reported.,omacetaxine,False,CHEMBL46286
+Temsirolimus,mTORC1 inhibitor,Inhibits mTORC1 leading to cytostatic/antiproliferative effects,10.0,1000.0,nM,Sometimes pro-apoptotic at higher exposures or in combinations.,temsirolimus,False,CHEMBL1201182
+Dihydroartemisinin,Antimalarial (artemisinin derivative),Induces ROS generation and ER stress,0.5,20.0,µM,AML line activity reported.,dihydroartemisinin,False,CHEMBL307261

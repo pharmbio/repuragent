@@ -1,0 +1,55 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) can be a promising strategy to accelerate drug development processes. Below is a list of 20 drugs that have been considered for AML treatment, based on their known mechanisms of action and potential to inhibit proliferation in AML cell lines like MOLM13. Please note that experimentally determining the IC50 in specific cell lines often requires empirical testing in the lab, so these concentrations are general recommendations that would need to be optimized experimentally.
+
+1. **Arsenic Trioxide** - Known for its usage in acute promyelocytic leukemia, can be tried at a starting concentration of 0.1–0.5 µM.
+   
+2. **Vorinostat (SAHA)** - A histone deacetylase inhibitor, typically tested at 1–5 µM.
+
+3. **Dasatinib** - This Src family kinase inhibitor can be tested at 10–100 nM.
+
+4. **Imatinib** - A BCR-ABL tyrosine kinase inhibitor, recommended starting at 1–5 µM.
+
+5. **Sorafenib** - A multikinase inhibitor, can be trialed at concentrations of 1–5 µM.
+
+6. **Ibrutinib** - A Bruton's tyrosine kinase inhibitor, should be tested around 1–10 µM.
+
+7. **Lenalidomide** - An immunomodulatory drug, start with concentrations of 0.1–5 µM.
+
+8. **Decitabine** - A hypomethylating agent, check concentrations starting from 0.5–5 µM.
+
+9. **Venetoclax** - A BCL-2 inhibitor, test at 0.01–1 µM.
+
+10. **Bortezomib** - A proteasome inhibitor, best to start with 5–20 nM.
+
+11. **Carfilzomib** - Another proteasome inhibitor, use at 10–50 nM.
+
+12. **Palbociclib** - A CDK4/6 inhibitor, start at 0.1–1 µM.
+
+13. **Selinexor** - A selective inhibitor of nuclear export, try 0.1–1 µM.
+
+14. **THZ1** - A CDK7 inhibitor, use concentrations around 0.1–1 µM.
+
+15. **Ruxolitinib** - A JAK1/JAK2 inhibitor, test at 0.1–1 µM.
+
+16. **Venetoclax** – A BCL-2 inhibitor, effective at 10–500 nM.
+
+17. **Tazemetostat** - An EZH2 inhibitor, start with 1–10 µM.
+
+18. **Midostaurin** - A FLT3 inhibitor, typically tested at 0.1–1 µM.
+
+19. **Gilteritinib** - Another FLT3 inhibitor, recommended at 0.1–1 µM.
+
+20. **Selumetinib** - A MEK inhibitor, start at 1–10 µM.
+
+For each of these drugs, care should be taken to ensure that the concentrations proposed are adjusted based on the specific response of the MOLM13 cell line or other AML cell models, and using a reliable IC50 determination methodology in experimental assays. Always consult with a professional laboratory setting and scientific literature for the most accurate results.

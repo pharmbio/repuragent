@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Arsenic Trioxide,Inducer of apoptosis and angiogenesis inhibitor,Induces apoptosis and inhibits angiogenesis,0.5,5.0,µM,Used in acute promyelocytic leukemia,arsenic trioxide,False,CHEMBL5483015
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits Src family kinases, BCR-ABL, and c-KIT",1.0,10.0,nM,,dasatinib,False,CHEMBL1421
+Sunitinib,Multiple receptor tyrosine kinase inhibitor,"Inhibitor of VEGFR, PDGFR, and c-KIT",10.0,100.0,nM,,sunitinib,False,CHEMBL597365
+Repurposed ritonavir,Protease inhibitor,Inhibits CYP enzymes affecting AML cell signaling,1.0,10.0,µM,Primarily used as an HIV protease inhibitor,repurposed ritonavir,False,CHEMBL3182552
+Tamoxifen,Estrogen receptor modulator,Shows off-target effects in cancer pathways,1.0,10.0,µM,,tamoxifen,False,CHEMBL83
+Metformin,Diabetes medication,Affects AMPK/mTOR pathways influencing cancer cell metabolism,10.0,50.0,mM,,metformin,False,CHEMBL1431
+Auranofin,Antirheumatic agent,Affects thioredoxin reductase and may induce AML cell apoptosis,1.0,5.0,µM,,auranofin,False,CHEMBL1366
+Thalidomide,Immunomodulator,Functions in immunomodulation and antiangiogenic pathways,10.0,50.0,µM,,thalidomide,False,CHEMBL426123
+Roflumilast,PDE4 inhibitor,Possible effects in cyclic AMP related pathways in AML,100.0,500.0,nM,,roflumilast,False,CHEMBL193240
+Disulfiram,Proteasome inhibitor,Potential metabolic and proteasome inhibition in cancer cells,0.5,5.0,µM,Used primarily as an alcohol-aversion drug,disulfiram,False,CHEMBL964
+Itraconazole,Antifungal,Inhibits Hedgehog pathway,0.1,1.0,µM,,itraconazole,False,CHEMBL5483033
+Simvastatin,Statin,Inhibits hydroxymethylglutaryl-CoA reductase,1.0,20.0,µM,Shows anti-tumor effects,simvastatin,False,CHEMBL1201391
+Ponatinib,Tyrosine kinase inhibitor,Multi-target activity against BCR-ABL,1.0,10.0,nM,,ponatinib,False,CHEMBL2105708
+Ruxolitinib,JAK inhibitor,JAK2 inhibition,0.1,1.0,µM,Used in myeloproliferative disorders,ruxolitinib,False,CHEMBL1287854
+Chloroquine,Antimalarial,Inhibition of autophagy,10.0,50.0,µM,,chloroquine,False,CHEMBL76
+Everolimus,mTOR inhibitor,Affects cell proliferation through mTOR pathways,1.0,10.0,nM,Used in anti-cancer treatments,everolimus,False,CHEMBL1908360

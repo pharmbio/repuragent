@@ -1,0 +1,138 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved, “existing” drugs with published anti-AML activity (many with explicit data in FLT3-ITD AML lines such as MOLM13/MV4-11). For each, I summarize the rationale and a literature-anchored potency estimate, then suggest a practical concentration span to explore for an in vitro IC50 determination in AML cells. Notes: potency can vary with serum, exposure time, cell density, and readout; use these spans as starting brackets and refine around observed responses. References are representative, not exhaustive.
+
+1) Sorafenib (multi-kinase; approved for HCC/RCC)
+- Rationale: Potent FLT3-ITD inhibitor; robust activity in MOLM13/MV4-11.
+- Reported AML cell IC50: ~5–50 nM in FLT3-ITD lines.
+- Concentration span to test: 0.5–500 nM.
+- Refs: Pratz et al., Clin Cancer Res 2009; Zarrinkar et al., Blood 2009.
+
+2) Ponatinib (ABL/FLT3/multi-kinase; CML/Ph+ ALL)
+- Rationale: Strong FLT3-ITD activity; active in MOLM13 models.
+- Reported IC50: low single-digit nM in FLT3-ITD AML lines.
+- Span: 0.05–100 nM.
+- Refs: Smith et al., Blood 2013; Gozgit et al., Leukemia 2011.
+
+3) Sunitinib (multi-kinase including FLT3; RCC/GIST)
+- Rationale: Inhibits FLT3-ITD; active in MOLM13/MV4-11.
+- Reported IC50: ~10–60 nM in FLT3-ITD lines.
+- Span: 1–300 nM.
+- Refs: Zhang et al., Blood 2006; Zarrinkar et al., Blood 2009.
+
+4) Dasatinib (SRC/ABL family; CML/Ph+ ALL)
+- Rationale: Inhibits SRC-family/other kinases; preclinical AML activity including FLT3-ITD contexts.
+- Reported IC50: ~20–300 nM (cell-line dependent).
+- Span: 1–3000 nM.
+- Refs: Weisberg et al., Blood 2007; Quintás-Cardama et al., Cancer 2011.
+
+5) Bortezomib (proteasome inhibitor; MM/MCL)
+- Rationale: Proteasome inhibition kills AML cells; synergy with FLT3 blockade.
+- Reported IC50: ~5–20 nM in AML lines (incl. FLT3-ITD).
+- Span: 0.5–200 nM.
+- Refs: Attar et al., Clin Cancer Res 2008; Podar et al., Leukemia 2008.
+
+6) Carfilzomib (proteasome inhibitor; MM)
+- Rationale: Potent proteasome inhibitor; AML cytotoxicity reported (incl. FLT3-ITD lines).
+- Reported IC50: ~10–50 nM.
+- Span: 0.5–1000 nM.
+- Refs: Niewerth et al., Leukemia 2014; Eytan et al., Oncotarget 2016.
+
+7) Selinexor (XPO1 inhibitor; MM/DLBCL)
+- Rationale: Nuclear export inhibition; strong activity in AML including MOLM13/MV4-11.
+- Reported IC50: ~50–200 nM in AML lines.
+- Span: 10–5000 nM.
+- Refs: Etchin et al., Sci Transl Med 2013; Ranganathan et al., Clin Cancer Res 2012.
+
+8) Tigecycline (antibiotic; mitochondrial translation inhibitor)
+- Rationale: Selectively targets mitochondrial translation; effective in AML cells and stem/progenitors; MOLM13 used in multiple studies.
+- Reported IC50: ~1–5 µM.
+- Span: 0.3–30 µM.
+- Refs: Skrtić et al., Cancer Cell 2011; Skrtić et al., Sci Transl Med 2014.
+
+9) Niclosamide (anthelmintic; Wnt/STAT3/OXPHOS modulator)
+- Rationale: Broad anticancer activity; AML cell killing incl. FLT3-ITD contexts reported.
+- Reported IC50: ~0.2–1 µM.
+- Span: 0.05–10 µM.
+- Refs: Liu et al., Oncotarget 2016; Wieland et al., Leukemia 2013.
+
+10) Auranofin (anti-rheumatic; thioredoxin reductase inhibitor)
+- Rationale: Increases ROS, disrupts redox homeostasis; AML cytotoxicity including MOLM13.
+- Reported IC50: ~0.3–2 µM.
+- Span: 0.05–10 µM.
+- Refs: Fiskus et al., Blood 2014; Raninga et al., Leukemia 2015.
+
+11) Thioridazine (antipsychotic; dopamine receptor antagonist)
+- Rationale: Targets leukemia stem/progenitor cells; AML activity in vitro and ex vivo.
+- Reported IC50: ~1–10 µM.
+- Span: 0.3–30 µM.
+- Refs: Sadarangani et al., Sci Transl Med 2015; Zahreddine et al., Cell 2012.
+
+12) Pimozide (antipsychotic; STAT5 inhibitor)
+- Rationale: Inhibits STAT5 signaling downstream of FLT3-ITD; active in MOLM13/MV4-11.
+- Reported IC50: ~2–5 µM.
+- Span: 0.1–20 µM.
+- Refs: Nelson et al., Blood 2011; Wu et al., Leukemia 2010.
+
+13) Vorinostat/SAHA (HDAC inhibitor; CTCL)
+- Rationale: Epigenetic modulation; AML cytotoxicity and differentiation effects.
+- Reported IC50: ~0.5–2 µM.
+- Span: 0.05–10 µM.
+- Refs: Rosato et al., Clin Cancer Res 2003; Fiskus et al., Cancer Res 2009.
+
+14) Panobinostat (HDAC inhibitor; MM)
+- Rationale: Potent pan-HDACi; active in AML lines including FLT3-ITD, often synergistic with kinase inhibitors.
+- Reported IC50: ~5–50 nM.
+- Span: 0.001–1 µM.
+- Refs: Fiskus et al., Clin Cancer Res 2012; Heider et al., Leukemia 2013.
+
+15) Everolimus (mTORC1 inhibitor; RCC/TSC)
+- Rationale: PI3K/mTOR pathway is active in AML; mTOR inhibitors reduce proliferation and survival.
+- Reported IC50 (viability/growth): tens to low hundreds of nM (context-dependent).
+- Span: 1–1000 nM.
+- Refs: Recher et al., Blood 2005; Tamburini et al., Blood 2008.
+
+16) Fostamatinib (SYK inhibitor; ITP)
+- Rationale: SYK contributes to AML survival; SYK inhibition impairs AML growth.
+- Reported IC50: ~0.5–3 µM.
+- Span: 0.1–10 µM.
+- Refs: Puissant et al., Blood 2014; Hahn et al., Leukemia 2009.
+
+17) Ruxolitinib (JAK1/2 inhibitor; myelofibrosis/ET)
+- Rationale: Dampens JAK/STAT signaling; can blunt STAT5 downstream of FLT3-ITD and shows activity/combination benefit in AML models.
+- Reported IC50: ~0.1–5 µM (variable).
+- Span: 0.01–10 µM.
+- Refs: Eghtedar et al., Blood 2012; Pemmaraju et al., Leuk Res 2015.
+
+18) Trametinib (MEK1/2 inhibitor; melanoma/NF1)
+- Rationale: MAPK pathway targeting; activity in RAS/MAPK-driven AML and in combinations with FLT3 inhibitors.
+- Reported IC50: ~0.05–1 µM in sensitive AML; often higher in FLT3-ITD monotherapy.
+- Span: 0.01–10 µM.
+- Refs: Gallipoli et al., Blood 2015; McCubrey et al., Oncotarget 2012.
+
+19) Disulfiram (ALDH inhibitor; alcohol aversion), activity enhanced by bioavailable copper
+- Rationale: Induces proteotoxic/ROS stress; AML cytotoxicity reported, especially with copper present in vitro.
+- Reported IC50: sub-µM to low-µM in AML lines (with copper).
+- Span: 0.01–5 µM (note: literature often includes copper, which can markedly shift potency).
+- Refs: Yip et al., Leuk Res 2011; Skrott et al., Nature 2017.
+
+20) Simvastatin (HMG-CoA reductase inhibitor; dyslipidemia)
+- Rationale: Mevalonate pathway inhibition triggers AML apoptosis; preclinical synergy with conventional agents.
+- Reported IC50: ~2–10 µM in AML lines.
+- Span: 0.5–50 µM.
+- Refs: Chapman et al., Br J Haematol 2010; Clendening & Penn, Nat Rev Cancer 2012.
+
+Additional notes
+- MOLM13 is FLT3-ITD; FLT3-active TKIs (sorafenib, ponatinib, sunitinib) and agents that impair FLT3 signaling output (pimozide/STAT5, proteasome inhibitors, selinexor) are often particularly potent.
+- For solubility and stability, consult each drug’s chemical profile and published AML assay conditions; observed IC50s can shift with exposure time and serum binding.
+- Consider counter-screens in non-FLT3-ITD AML lines (e.g., OCI-AML3) to benchmark selectivity for MOLM13.

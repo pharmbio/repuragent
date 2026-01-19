@@ -1,0 +1,55 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved, “existing” drugs with literature support for anti-AML activity and strong rationale for activity in FLT3-ITD–positive lines like MOLM13. For each, I suggest a practical screening range for a 10-point, 3-fold dilution IC50 assay in MOLM13. Adjust ranges as needed based on pilot results and solubility; DMSO commonly ≤0.1% v/v.
+
+FLT3/multikinase inhibitors (particularly relevant to MOLM13, which is FLT3-ITD+)
+- Sorafenib (HCC/RCC; FLT3, RAF, VEGFR): 0.5 nM to 5 μM
+- Ponatinib (CML/ALL; ABL, FLT3, KIT): 0.03 nM to 1 μM
+- Sunitinib (RCC/GIST; FLT3, KIT, VEGFR): 1 nM to 10 μM
+- Regorafenib (CRC/GIST/HCC; FLT3, VEGFR, TIE2): 1 nM to 10 μM
+- Cabozantinib (RCC/HCC; MET, AXL, FLT3): 0.5 nM to 5 μM
+- Axitinib (RCC; primarily VEGFR, reported FLT3 activity): 0.5 nM to 5 μM
+- Dasatinib (CML/ALL; SRC/ABL/KIT; some AML activity): 1 nM to 5 μM
+
+Apoptosis/BCL2 pathway
+- Venetoclax (CLL/SLL, repurposed to AML; BCL2): 0.1 nM to 1 μM
+
+Proteostasis/protein synthesis
+- Bortezomib (MM/MCL; proteasome): 0.5 nM to 200 nM
+- Carfilzomib (MM; proteasome): 0.5 nM to 200 nM
+- Omacetaxine (CML; protein synthesis inhibitor): 1 nM to 500 nM
+
+Epigenetic modulators
+- Panobinostat (MM; HDAC): 0.5 nM to 200 nM
+- Vorinostat (CTCL; HDAC): 50 nM to 15 μM
+
+Nuclear export
+- Selinexor (MM, DLBCL; XPO1): 5 nM to 2 μM
+
+MAPK pathway
+- Trametinib (melanoma; MEK1/2): 0.1 nM to 1 μM
+- Selumetinib (NF1 PN; MEK1/2): 1 nM to 3 μM
+
+mTOR pathway
+- Everolimus (various solid tumors; mTORC1): 1 nM to 10 μM
+
+Metabolism/redox and other repurposed agents
+- Leflunomide (RA; via teriflunomide, DHODH): 1 μM to 200 μM
+- Auranofin (RA; thioredoxin reductase inhibitor): 10 nM to 5 μM
+- Niclosamide (anthelmintic; Wnt/mitochondrial/STAT3 disruptor): 10 nM to 5 μM
+
+Notes
+- These ranges are chosen to bracket reported AML potencies (including MOLM13/MV4-11 where available) and accommodate variability from serum, media, and assay format. If unsure, use the upper bound as the top dose and perform 10-point 3-fold serial dilutions downward.
+- For highly potent agents (ponatinib, bortezomib, panobinostat, trametinib, omacetaxine), include sub-nanomolar to low-nanomolar points to avoid top-plateau truncation.
+- Confirm compound solubility and cell-line DMSO tolerance; many stocks are in DMSO.
+- As a positive control for FLT3-ITD dependency in MOLM13, a potent FLT3 inhibitor (e.g., ponatinib or sorafenib) is useful.

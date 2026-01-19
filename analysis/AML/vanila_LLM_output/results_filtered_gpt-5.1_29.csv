@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Sunitinib,Multikinase inhibitor,Inhibits FLT3 and other receptor tyrosine kinases involved in proliferation and survival,1.0,10000.0,nM,,sunitinib,False,CHEMBL597365
+Dasatinib,BCR-ABL/Src family tyrosine kinase inhibitor,"Inhibits BCR-ABL, Src family kinases, KIT and other kinases, disrupting oncogenic signaling",0.5,5000.0,nM,,dasatinib,False,CHEMBL1421
+Nilotinib,BCR-ABL tyrosine kinase inhibitor,Selectively inhibits BCR-ABL and can inhibit some FLT3 and KIT mutants,1.0,10000.0,nM,,nilotinib,False,CHEMBL255863
+Ponatinib,Pan–BCR-ABL and multikinase inhibitor,"Potently inhibits BCR-ABL (including T315I), FLT3-ITD and other AML-relevant kinases",0.05,1000.0,nM,,ponatinib,False,CHEMBL2105708
+Ibrutinib,BTK inhibitor,"Covalently inhibits Bruton's tyrosine kinase, with additional off-target effects on myeloid signaling pathways",10.0,20000.0,nM,,ibrutinib,False,CHEMBL1873475
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits JAK1 and JAK2, reducing JAK/STAT pathway signaling",10.0,20000.0,nM,,ruxolitinib,False,CHEMBL1287854
+Everolimus,mTOR inhibitor,"Allosterically inhibits mTORC1, reducing protein synthesis and cell growth",0.5,5000.0,nM,,everolimus,False,CHEMBL1908360
+Temsirolimus,mTOR inhibitor,Prodrug of sirolimus; inhibits mTORC1 signaling to block cell growth and proliferation,0.5,5000.0,nM,,temsirolimus,False,CHEMBL1201182
+Metformin,Biguanide; metabolic/AMPK activator,"Inhibits mitochondrial complex I, activates AMPK, and induces metabolic stress in leukemic cells",0.1,20.0,mM,,metformin,False,CHEMBL1431
+Disulfiram,ALDH inhibitor; repurposed anticancer agent,"Inhibits aldehyde dehydrogenase and, in the presence of copper, affects proteasome and NF-κB signaling leading to apoptosis",10.0,10000.0,nM,"Tested in combination with fixed low micromolar copper (e.g., CuCl₂ or CuSO₄ at ~0.5–1 µM)",disulfiram,False,CHEMBL964
+Chloroquine,Antimalarial; autophagy inhibitor,"Lysosomotropic agent that impairs autophagosome-lysosome fusion, inhibiting autophagy",0.5,50.0,µM,Alternative: hydroxychloroquine with similar autophagy-inhibitory mechanism,chloroquine,False,CHEMBL76
+Celecoxib,COX-2 inhibitor; NSAID,Primarily inhibits COX-2; also exerts COX-2–independent effects on PI3K/Akt and ER stress pathways,1.0,80.0,µM,,celecoxib,False,CHEMBL118
+Valproic acid,Antiepileptic; HDAC inhibitor,"Inhibits histone deacetylases leading to altered gene expression, differentiation, and growth inhibition",0.1,5.0,mM,,valproic acid,False,CHEMBL109
+Thalidomide,Immunomodulatory drug (IMiD),Binds cereblon E3 ligase complex leading to degradation of IKZF1/3 and immunomodulatory/anti-angiogenic effects,0.5,100.0,µM,Part of the thalidomide/lenalidomide IMiD class,thalidomide,False,CHEMBL426123
+Auranofin,Oral gold compound; thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increasing ROS and triggering apoptosis in AML cells",5.0,5000.0,nM,,auranofin,False,CHEMBL1366
+Teriflunomide,Immunomodulatory/antirheumatic; DHODH inhibitor,"Inhibits dihydroorotate dehydrogenase (DHODH), blocking de novo pyrimidine synthesis and cell proliferation",0.5,100.0,µM,Active metabolite of leflunomide; leflunomide itself may require mid- to high-micromolar concentrations in vitro,teriflunomide,False,CHEMBL973

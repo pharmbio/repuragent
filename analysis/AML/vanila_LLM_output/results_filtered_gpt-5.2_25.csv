@@ -1,0 +1,16 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Sunitinib,Multi-kinase inhibitor (multi-TKI),"Inhibits multiple RTKs including FLT3, KIT, and VEGFR",0.01,10.0,µM,Approved; noted anti-proliferative in some AML contexts,sunitinib,False,CHEMBL597365
+Dasatinib,Kinase inhibitor (SRC/ABL inhibitor),Inhibits SRC family kinases and ABL to disrupt survival signaling in some AML subsets,0.001,3.0,µM,Approved; text notes reported AML effects in subsets,dasatinib,False,CHEMBL1421
+Ponatinib,Multi-kinase inhibitor (multi-TKI),Broad kinase inhibition including FLT3 variants,0.001,1.0,µM,Approved; noted experimental use in AML,ponatinib,False,CHEMBL2105708
+Idelalisib,PI3K inhibitor (PI3Kδ-selective),Inhibits PI3Kδ to reduce PI3K/AKT pathway signaling,0.01,10.0,µM,Approved; PI3K/AKT axis noted as often active in AML,idelalisib,False,CHEMBL4095008
+Copanlisib,PI3K inhibitor (PI3Kα/δ),Inhibits PI3Kα and PI3Kδ to block downstream PI3K/AKT signaling,0.003,3.0,µM,Approved; noted as sometimes more broadly cytotoxic than δ-selective PI3K inhibitors,copanlisib,False,CHEMBL3218576
+Ruxolitinib,JAK inhibitor (JAK1/2),Inhibits JAK1/2 to suppress JAK/STAT signaling,0.03,30.0,µM,Approved; JAK/STAT implicated in AML microenvironment and subsets,ruxolitinib,False,CHEMBL1287854
+Trametinib,MEK inhibitor (MEK1/2),Inhibits MEK1/2 to reduce MAPK pathway signaling downstream of FLT3/RAS,0.001,1.0,µM,Approved; MAPK pathway noted as engaged downstream of FLT3/RAS,trametinib,False,CHEMBL2103875
+Everolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 to reduce growth/proliferation signaling,0.003,3.0,µM,Approved; noted modest single-agent effects but testable,everolimus,False,CHEMBL1908360
+Temsirolimus,mTOR inhibitor,Inhibits mTOR signaling to reduce proliferation/survival pathways,0.003,3.0,µM,Approved; described as similar to everolimus with potentially different cellular potency,temsirolimus,False,CHEMBL1201182
+Palbociclib,CDK inhibitor (CDK4/6),Inhibits CDK4/6 to block cell-cycle progression (G1 arrest),0.03,30.0,µM,Approved; AML sensitivity described as variable,palbociclib,False,CHEMBL2364621
+Abemaciclib,CDK inhibitor (CDK4/6),Inhibits CDK4/6; noted additional off-target CDK9/transcriptional effects,0.01,10.0,µM,Approved; text notes more CDK9/off-target transcriptional impact vs palbociclib; sometimes stronger cytotoxicity,abemaciclib,False,CHEMBL3301610
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases to alter chromatin/transcription and promote anti-leukemic effects,0.0003,0.3,µM,Approved; noted often potent in vitro,panobinostat,False,CHEMBL483254
+Valproic acid,HDAC-modulating agent (HDAC activity),Exhibits HDAC-inhibitory activity; used in differentiation/epigenetic regimens,0.1,10.0,mM,Approved; higher concentrations needed per text; widely tested in AML differentiation/epigenetic regimens,valproic acid,False,CHEMBL109
+Chloroquine,Autophagy inhibitor,Inhibits lysosomal acidification/autophagic flux to impair autophagy,1.0,100.0,µM,Approved; noted can sensitize AML; variable single-agent cytotoxicity,chloroquine,False,CHEMBL76
+Hydroxychloroquine,Autophagy inhibitor,Inhibits lysosomal function/autophagic flux similarly to chloroquine,3.0,150.0,µM,Approved; described as similar to chloroquine with typically slightly higher IC50s,hydroxychloroquine,False,CHEMBL1535

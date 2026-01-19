@@ -1,0 +1,55 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) involves identifying compounds that are already approved or well-studied for other indications but have shown potential efficacy in inhibiting AML cell line proliferation. Identifying precise IC50 concentrations would require detailed experimental data specific to AML cell lines, notably MOLM13. However, based on existing literature and research studies, here are some drugs that have been identified as potential candidates for repurposing in AML treatment, along with general concentration guidelines for IC50 assays:
+
+1. **Venetoclax**: Primarily used for chronic lymphocytic leukemia (CLL), Venetoclax is a BCL-2 inhibitor with potential AML activity. IC50 can vary but typically ranges from 10-100 nM for BCL-2 expressing lines.
+
+2. **Sorafenib**: An FDA-approved drug for renal and hepatocellular carcinoma with known activity against FLT3, a common mutation in AML. IC50 values typically range from 1-10 µM.
+
+3. **Arsenic Trioxide**: Approved for acute promyelocytic leukemia (APL), it has been investigated for broader AML use. Preliminary IC50 values are typically around 0.1-2 µM.
+
+4. **Dasatinib**: A tyrosine kinase inhibitor used in chronic myeloid leukemia (CML), it has shown potential in AML, particularly those with FLT3 mutations. IC50 values can range between 1-5 µM.
+
+5. **Imatinib**: Known for CML treatment, Imatinib has potential utility in certain AML subtypes. IC50 values often reported around 1-10 µM.
+
+6. **Metformin**: Primarily used for type 2 diabetes, it has demonstrated cytotoxicity in some cancer models, including AML. IC50 values would vary but often start in the low mM range for cancer cell lines.
+
+7. **Bortezomib**: Approved for multiple myeloma, this proteasome inhibitor has potential effectiveness in AML. IC50 is often reported in the range of 5-10 nM.
+
+8. **Auranofin**: Approved for rheumatoid arthritis, it has demonstrated preclinical activity against AML cells. Typical IC50 values might be around 1-5 µM.
+
+9. **Itraconazole**: An antifungal with reported anti-cancer properties, it has shown activity in AML models. IC50 concentrations are typically 0.1-1 µM.
+
+10. **Thalidomide/Lenalidomide**: Immunomodulatory drugs used in multiple myeloma, showing some activity in AML lines. IC50 values vary significantly based on the cell type but often are in the micromolar range.
+
+11. **Midostaurin**: Originally tested as a broad kinase inhibitor and approved for FLT3-mutant AML. IC50 often ranges from 1-10 nM for FLT3-mutated lines.
+
+12. **Rapamycin (Sirolimus)**: Used as an immunosuppressant, it has mTOR inhibitory activity potentially applicable in AML. IC50 is generally around 10-50 nM.
+
+13. **Celecoxib**: A COX-2 inhibitor for arthritis has shown activity against various cancers including potential use in AML. IC50 values often range from 10-100 µM.
+
+14. **Vorinostat (SAHA)**: Approved for cutaneous T-cell lymphoma, selectively inhibits histone deacetylases. IC50 values in AML are often in the range of 0.5-2 µM.
+
+15. **Parthenolide**: A natural product, initially an anti-inflammatory with notable activity against AML stem cells. IC50 generally reported around 5-10 µM.
+
+16. **Bevacizumab**: A monoclonal antibody against VEGF, explored in various cancer types including AML. IC50 values will depend on specific cell line expression but could be in low nanomolar ranges.
+
+17. **Paclitaxel**: A well-known chemotherapeutic drug used primarily for breast cancer and other solid tumors, explored for AML. IC50 values often around 0.1-10 µM.
+
+18. **Azacitidine**: A DNA methyltransferase inhibitor, already approved for certain myelodysplastic syndromes but showing activity against AML. IC50 values typically in the 0.1-5 µM range.
+
+19. **Chloroquine**: An antimalarial drug explored for its role in autophagy inhibition in cancers, including leukemia. IC50 values often range from 10-30 µM.
+
+20. **EGCG (Epigallocatechin gallate)**: A component of green tea with broad anticancer properties including AML activity. IC50 values can vary but are often in the range of 10-50 µM.
+
+For precise IC50 values, conducting specific in vitro assays on MOLM13 or similar AML cell lines is necessary as responses can vary based on genetic and phenotypic factors. Consideration of these detailed pharmacological studies can guide concentration adjustments for these assays.

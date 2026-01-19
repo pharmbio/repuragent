@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Azacitidine,DNA methyltransferase inhibitor,"Inhibits DNA methylation, leading to gene reactivation and apoptosis",0.1,10.0,µM,Also known as Vidaza.
+Decitabine,DNA methyltransferase inhibitor,"Inhibits DNA methylation, promoting differentiation and apoptosis",0.05,5.0,µM,Also known as Dacogen.
+Valproic Acid,Histone deacetylase inhibitor,Increases histone acetylation leading to changes in gene expression,0.5,10.0,mM,Also known as Depakote.
+Ascorbic Acid,Antioxidant,Acts as a reducing agent to enhance oxidative stress in cancer cells,1.0,6.0,mM,Commonly known as Vitamin C.
+Vorinostat,Histone deacetylase inhibitor,"Inhibits histone deacetylases, leading to altered gene expression",1.0,7.0,µM,Also known as Zolinza.
+Entinostat,Histone deacetylase inhibitor,"Inhibits specific class I HDACs, promoting apoptosis and growth arrest",0.1,5.0,µM,Also known as SNDX-275.
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and several other tyrosine kinases,0.1,1.0,µM,Also known as Sprycel.
+Imatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase activity,0.5,5.0,µM,Also known as Gleevec.
+Tariquidar,P-glycoprotein inhibitor,"Inhibits P-glycoprotein, which can promote drug accumulation in cells",0.5,6.0,µM,Also known as XR9576.
+Dexamethasone,Glucocorticoid,Induces apoptosis in certain leukemic cell lines,0.03,1.0,µM,
+Cyclophosphamide,Alkylating agent,"Cross-links DNA, leading to cell death",50.0,500.0,µM,
+Methotrexate,Antimetabolite,"Inhibits folate metabolism, affecting DNA synthesis",0.1,10.0,µM,
+Tamoxifen,Selective estrogen receptor modulator,"Blocks estrogen receptors, can induce apoptosis in certain cells",1.0,10.0,µM,
+Ruxolitinib,Janus kinase inhibitor,"Inhibits JAK1 and JAK2, affecting signaling pathways",0.5,5.0,µM,Also known as Jakafi.
+Aspirin,Non-steroidal anti-inflammatory drug,"Irreversibly inhibits COX enzymes, reducing inflammation and proliferation",0.5,5.0,mM,
+Metformin,Biguanide,Decreases glucose production and may influence cancer metabolism,1.0,10.0,mM,
+Curcumin,Natural product,Exhibits anti-inflammatory properties and induces apoptosis,1.0,10.0,µM,
+Quercetin,Flavonoid,Exhibits antioxidant properties and can induce apoptosis,5.0,25.0,µM,
+N-acetylcysteine,Antioxidant,Acts as a precursor to glutathione and exerts antioxidant activity,0.5,5.0,mM,Also known as NAC.
+Rapamycin,mTOR inhibitor,"Inhibits mTOR signaling pathway, leading to cell cycle arrest",0.1,1.0,µM,Also known as Sirolimus.

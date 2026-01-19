@@ -1,0 +1,138 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest *repurposing candidates* and **experimentally testable IC50 assay concentration ranges** that are practical for MOLM-13 and other AML lines, but I can’t provide potency claims like “this will inhibit MOLM-13” for specific drugs without evidence, and I can’t fabricate IC50s. What I *can* do is: (1) list **existing (non-AML) drugs with published AML/MOLM-13 preclinical activity signals and/or mechanistic rationale**, and (2) give **testable concentration ranges** you can use to *measure* IC50s in a standard viability/proliferation assay.
+
+Below are 20 widely available drugs often explored for AML repurposing, with **starting IC50-testing ranges** that are commonly used for small-molecule screening (typically spanning ~3–4 logs). For each, I include a pragmatic **top concentration** that is usually soluble/assay-feasible in DMSO-based cell assays, and a **suggested dilution series**.
+
+---
+
+## Practical IC50 assay setup (MOLM-13)
+- **Assay**: CellTiter-Glo / Resazurin / IncuCyte confluence, 72 h (MOLM-13 often shows clearer separation at 72 h than 48 h for cytostatic drugs).
+- **Seeding**: 5–20k cells/well (96-well), optimize for log-phase growth.
+- **Vehicle**: Keep **final DMSO constant** (≤0.1–0.2%).
+- **Series**: 10-point, 1:3 (or 1:2) serial dilution.
+- **Controls**: Positive control such as **midostaurin** or **quizartinib** (if you have them) for MOLM-13 FLT3-ITD sensitivity; negative control DMSO.
+
+---
+
+## Top 20 repurposing candidates + IC50-testable concentration ranges
+
+### 1) **Venetoclax** (BCL-2 inhibitor; approved for CLL/AML combos)
+- **Test range**: **0.1 nM – 10 µM**
+- **Suggested top**: 10 µM, 10-pt 1:3 dilution  
+- Notes: Often shows strong effects in some AML backgrounds; synergy with hypomethylating agents is common.
+
+### 2) **Navitoclax (ABT-263)** (BCL-2/BCL-XL inhibitor)
+- **Test range**: **1 nM – 10 µM**
+- **Top**: 10 µM
+
+### 3) **Dasatinib** (SRC/ABL kinase inhibitor; CML/ALL drug)
+- **Test range**: **0.5 nM – 10 µM**
+- **Top**: 10 µM
+
+### 4) **Ponatinib** (multi-kinase; BCR-ABL/FLT3 activity reported)
+- **Test range**: **0.5 nM – 5 µM**
+- **Top**: 5 µM (often sufficient; solubility/cytotoxicity can be limiting)
+
+### 5) **Sorafenib** (multi-kinase; used off-label in FLT3-ITD AML contexts)
+- **Test range**: **1 nM – 20 µM**
+- **Top**: 20 µM
+
+### 6) **Sunitinib** (multi-kinase inhibitor)
+- **Test range**: **1 nM – 20 µM**
+- **Top**: 20 µM
+
+### 7) **Regorafenib** (multi-kinase inhibitor)
+- **Test range**: **1 nM – 20 µM**
+- **Top**: 20 µM
+
+### 8) **Crizotinib** (ALK/ROS1/MET inhibitor; also reported to hit other kinases)
+- **Test range**: **1 nM – 20 µM**
+- **Top**: 20 µM
+
+### 9) **Erlotinib** (EGFR inhibitor; multiple reports of AML cell effects at µM range)
+- **Test range**: **10 nM – 50 µM**
+- **Top**: 50 µM (watch solubility; consider 20–30 µM if precipitation occurs)
+
+### 10) **Gefitinib** (EGFR inhibitor)
+- **Test range**: **10 nM – 50 µM**
+- **Top**: 50 µM
+
+### 11) **Trametinib** (MEK1/2 inhibitor)
+- **Test range**: **0.1 nM – 1 µM**
+- **Top**: 1 µM (MEK inhibitors are often potent; keep low top)
+
+### 12) **Cobimetinib** (MEK inhibitor)
+- **Test range**: **0.1 nM – 2 µM**
+- **Top**: 2 µM
+
+### 13) **Everolimus** (mTOR inhibitor)
+- **Test range**: **0.1 nM – 10 µM**
+- **Top**: 10 µM
+
+### 14) **Temsirolimus** (mTOR inhibitor)
+- **Test range**: **0.1 nM – 10 µM**
+- **Top**: 10 µM
+
+### 15) **Palbociclib** (CDK4/6 inhibitor)
+- **Test range**: **1 nM – 20 µM**
+- **Top**: 20 µM  
+- Notes: Many AML lines aren’t classic CDK4/6-dependent; still frequently tested in repurposing panels.
+
+### 16) **Ribociclib** (CDK4/6 inhibitor)
+- **Test range**: **1 nM – 20 µM**
+- **Top**: 20 µM
+
+### 17) **Abemaciclib** (CDK4/6 inhibitor; broader CDK activity)
+- **Test range**: **1 nM – 20 µM**
+- **Top**: 20 µM
+
+### 18) **Bortezomib** (proteasome inhibitor; approved for myeloma)
+- **Test range**: **0.1 nM – 1 µM**
+- **Top**: 1 µM (often very potent; avoid unnecessarily high doses)
+
+### 19) **Carfilzomib** (proteasome inhibitor)
+- **Test range**: **0.1 nM – 1 µM**
+- **Top**: 1 µM
+
+### 20) **Chloroquine / Hydroxychloroquine** (autophagy-lysosome inhibitors; repurposing staple)
+- **Test range**: **0.5 µM – 200 µM**
+- **Top**: 200 µM (often needed for on-target autophagy blockade in vitro; monitor general toxicity)
+
+---
+
+## Suggested plate-ready dilution scheme (example)
+For most kinase inhibitors / targeted drugs:
+- **Top**: 10 or 20 µM  
+- **10-point, 1:3 dilution** gives: 20, 6.67, 2.22, 0.741, 0.247, 0.0823, 0.0274, 0.00914, 0.00305, 0.00102 µM.
+
+For very potent agents (trametinib, bortezomib, venetoclax):
+- **Top**: 1 µM (or 10 µM for venetoclax), start lower (0.1–1 nM) and cover up to top.
+
+---
+
+## Important practical notes (so your IC50s are interpretable)
+- **MOLM-13 is FLT3-ITD**, so FLT3-pathway inhibitors (e.g., sorafenib/ponatinib/multi-kinase) often show clearer single-agent effects than in FLT3-WT lines, but this is not guaranteed.
+- **Protein binding & serum**: IC50 shifts with FBS %. Keep it consistent (e.g., 10–20% FBS) and report it.
+- **Edge effects & evaporation**: use outer wells for buffer/medium or a humidity chamber.
+
+---
+
+## If you want a more MOLM-13–specific shortlist
+Tell me:
+1) 2D culture conditions (RPMI + %FBS?),  
+2) assay length (48 vs 72 vs 96 h),  
+3) whether you want **clinically achievable plasma-range-focused** concentrations, and  
+4) whether you’ll allow **tool/withdrawn drugs** (many “best” AML hits are not marketed).
+
+I can then re-rank these 20 specifically for MOLM-13 and propose one or two optimized dilution ranges per drug (e.g., narrow ranges for very potent candidates and wider ranges for weak/lysosomotropic ones).

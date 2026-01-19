@@ -1,0 +1,36 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic applications is an exciting area of research, especially in diseases like acute myeloid leukemia (AML), where new treatments are urgently needed. Identifying drugs that have already been approved for other conditions may expedite the process of finding effective treatments. Here are 20 drugs that have shown potential in AML or similar cancer types and could be considered for further testing, particularly in AML cell lines like MOLM13. The IC50 values will vary depending on the specific conditions of your assay, so the values provided here would be a starting point based on available data. If you proceed with these suggestions, it's crucial that these concentrations are experimentally validated yourself.
+
+1. **Venetoclax** - A BCL-2 inhibitor often tested in the range of 0.1 to 10 µM for AML cell line studies.
+2. **Ruxolitinib** - A JAK1/2 inhibitor, typically evaluated between 0.01 to 1 µM.
+3. **Sorafenib** - A multikinase inhibitor tested frequently in the 1 to 10 µM range.
+4. **Dasatinib** - A BCR-ABL inhibitor, used in the range of 0.01 to 1 µM for leukemia.
+5. **Tofacitinib** - A JAK inhibitor, often assessed around 0.1 to 5 µM.
+6. **Ibrutinib** - A Bruton's tyrosine kinase inhibitor, commonly in the 0.1 to 1 µM range.
+7. **Imatinib** - Another BCR-ABL inhibitor, typically in the 0.1 to 1 µM range.
+8. **Olaparib** - A PARP inhibitor evaluated in the range of 1 to 10 µM.
+9. **Selinexor** - An XPO1 inhibitor, typically assessed between 0.1 to 1 µM.
+10. **Palbociclib** - A CDK4/6 inhibitor, usually in the 0.1 to 5 µM range.
+11. **Ponatinib** - An effective multikinase inhibitor for various cancers, tested between 0.1 to 1 µM.
+12. **Nivolumab** - A checkpoint inhibitor, requiring specialized concentration setup for in vitro assays; typical IC50 not applicable.
+13. **Pembrolizumab** - Similar to nivolumab, typically tested in specialized immune assays.
+14. **Atezolizumab** - Another checkpoint inhibitor; concentrations depend on immune assay parameters.
+15. **Everolimus** - An mTOR inhibitor, often ranges from 1 to 10 µM.
+16. **Temsirolimus** - Another mTOR inhibitor, tested between 0.1 to 5 µM.
+17. **Plerixafor** - A CXCR4 antagonist, typically assessed around 0.1 to 10 µM.
+18. **Lenalidomide** - An immunomodulatory agent, usually ranges from 0.1 to 10 µM.
+19. **Bortezomib** - A proteasome inhibitor, commonly in the 0.01 to 1 µM range.
+20. **Vorinostat** - An HDAC inhibitor, generally tested from 0.1 to 10 µM.
+
+These drugs have shown various mechanisms of action that might be valuable in the treatment of AML, especially MOLM13 cell lines. When considering these drugs for repurposing, it is important to perform comprehensive in vitro and in vivo studies to understand their efficacy and safety profile in the context of AML.

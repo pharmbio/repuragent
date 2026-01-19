@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Gilteritinib,Kinase inhibitor (FLT3),Inhibits FLT3 and AXL tyrosine kinases,0.05083,1000.0,nM,Also marketed as Xospata; active in FLT3‑ITD AML such as MOLM13; recommended top conc 1 µM for 10‑pt 3× series.
+Quizartinib,Kinase inhibitor (FLT3),"Potent FLT3 inhibitor, selective for FLT3‑ITD",0.005083,100.0,nM,Also known as AC220; text notes optional top conc 1 µM for extended range but primary recommendation 100 nM.
+Crenolanib,Kinase inhibitor (pan‑FLT3),Pan‑FLT3 inhibition (active vs ITD and some TKD mutants),0.05083,1000.0,nM,Recommended top conc 1 µM; useful for FLT3‑ITD MOLM13 testing.
+Midostaurin,Multi‑kinase inhibitor,Inhibits multiple kinases including FLT3 (and PKC family),0.50827,10000.0,nM,Also known as PKC412; recommended top conc 10 µM; broader kinase profile.
+Sorafenib,Multi‑kinase inhibitor,"Inhibits RAF, VEGFR, FLT3 and other kinases",0.50827,10000.0,nM,Has activity against FLT3‑ITD; recommended top conc 10 µM.
+Ponatinib,Multi‑kinase inhibitor,Broad kinase inhibitor with off‑target FLT3 activity,0.05083,1000.0,nM,Heterogeneous effects in AML; recommended top conc 1 µM.
+Venetoclax,BCL‑2 inhibitor (BH3 mimetic),Selective BCL‑2 antagonist promoting apoptosis,0.05083,1000.0,nM,"Also ABT‑199; clinically active in AML in combinations (e.g., with HMAs); recommended top conc 1 µM."
+Navitoclax,BCL‑2/BCL‑xL inhibitor,Inhibits BCL‑2 and BCL‑xL (BH3 mimetic) to induce apoptosis,0.05083,1000.0,nM,Also known as ABT‑263; useful comparator to venetoclax; top conc 1 µM.
+Selinexor,Nuclear export inhibitor,Inhibits XPO1 (CRM1) to block nuclear export of tumor suppressors,0.05083,1000.0,nM,XPO1 inhibitor active in AML preclinical models; recommended top conc 1 µM.
+Alvocidib,CDK inhibitor,Inhibits CDKs (notably CDK9) affecting transcriptional regulation,0.05083,1000.0,nM,Also called Flavopiridol; targets transcriptional addiction in AML; recommended top conc 1 µM.
+Palbociclib,CDK4/6 inhibitor,Selective inhibition of CDK4 and CDK6 to induce cell‑cycle arrest,0.50827,10000.0,nM,May affect AML proliferation in subsets; recommended top conc 10 µM.
+Panobinostat,HDAC inhibitor,Pan‑histone deacetylase inhibitor altering transcription/chromatin,0.05083,1000.0,nM,Also LBH589; active in AML models and combinations; top conc 1 µM.
+Bortezomib,Proteasome inhibitor,Inhibits 20S proteasome leading to accumulation of misfolded proteins and apoptosis,0.05083,1000.0,nM,Proteasome inhibition can be cytotoxic in AML; recommended top conc 1 µM.
+Azacitidine,Hypomethylating agent (nucleoside analogue),Incorporates into DNA/RNA and inhibits DNA methyltransferases (DNMTs),0.50827,10000.0,nM,Metabolically labile — may require repeat dosing/longer exposure (96 h); recommended top conc 10 µM.
+Decitabine,Hypomethylating agent (nucleoside analogue),DNMT inhibitor via incorporation into DNA and covalent trapping of DNMTs,0.50827,10000.0,nM,Similar notes to azacitidine regarding dosing/exposure; top conc 10 µM.
+Cytarabine,Nucleoside analogue (antimetabolite),Incorporates into DNA causing chain termination and inhibits DNA synthesis,0.50827,10000.0,nM,Also called Ara‑C; standard AML chemotherapy — may require repeat dosing or 96 h exposure; recommended top conc 10 µM.
+Doxorubicin,Anthracycline / Topoisomerase II poison,Intercalates DNA and inhibits topoisomerase II causing DNA damage,0.50827,10000.0,nM,Standard anthracycline in AML regimens; recommended top conc 10 µM.
+Ibrutinib,BTK inhibitor (with off‑targets),Covalent inhibitor of BTK and additional kinases,0.50827,10000.0,nM,Some AML subtypes show sensitivity; useful for testing combinations; recommended top conc 10 µM.
+OTX015,BET bromodomain inhibitor,Inhibits BET family (BRD2/3/4) to disrupt oncogenic transcription programs,0.05083,1000.0,nM,Also known as MK‑8628; investigational BET inhibitor active in AML preclinical models; top conc 1 µM.
+Idasanutlin,MDM2 inhibitor,Inhibits MDM2 to activate p53 pathway (p53‑dependent apoptosis),0.50827,10000.0,nM,Also RG7388; effective only in TP53 wild‑type AML — verify MOLM13 p53 status; recommended top conc 10 µM.

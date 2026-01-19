@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Ponatinib,Tyrosine kinase inhibitor (multi-kinase; includes FLT3),"Inhibits FLT3 and other kinases, blocking FLT3-ITD signaling in AML cells",0.1,1000.0,nM,"Approved for CML/Ph+ ALL; very potent versus FLT3-ITD AML lines (e.g., MOLM13-like)."
+Sorafenib,Multi-kinase inhibitor (RAF/VEGFR/FLT3),"Inhibits RAF, VEGFR, and FLT3 signaling; antiproliferative in FLT3-ITD AML",0.5,5000.0,nM,Approved for RCC/HCC; longstanding off-label activity in FLT3-ITD AML models.
+Sunitinib,Multi-kinase inhibitor (includes FLT3),"Inhibits FLT3 and other receptor tyrosine kinases, reducing AML cell growth",1.0,10000.0,nM,Approved for RCC; inhibits proliferation of FLT3-ITD AML lines.
+Cabozantinib,Multi-kinase inhibitor (MET/AXL/VEGFR; reported FLT3 activity),Blocks MET/AXL/VEGFR and has reported FLT3 activity; active in FLT3-ITD AML in vitro,0.5,5000.0,nM,Approved for RCC/HCC; reported activity in FLT3-ITD AML.
+Axitinib,VEGFR inhibitor (reported FLT3 activity),Inhibits VEGFR and has reported FLT3 inhibitory activity in AML cells,1.0,10000.0,nM,Approved for RCC; inhibits FLT3-ITD AML cells in vitro.
+Regorafenib,Multi-kinase inhibitor (includes FLT3),Inhibits multiple kinases including FLT3; active in FLT3-ITD AML models,1.0,10000.0,nM,Approved for CRC/GIST/HCC; reported activity in FLT3-ITD AML.
+Trametinib,MEK1/2 inhibitor,"Blocks MEK1/2, suppressing downstream FLT3/MAPK signaling in AML cells",0.1,5000.0,nM,Approved for melanoma; antiproliferative in AML lines.
+Fostamatinib,SYK inhibitor (prodrug; active moiety R406),"Inhibits SYK, a survival node in AML",30.0,30000.0,nM,Approved for ITP; activity reported in MOLM13-like AML lines; active moiety is R406.
+Omacetaxine mepesuccinate,Protein synthesis inhibitor,"Inhibits protein translation, leading to cytotoxicity in myeloid leukemia cells",0.5,1000.0,nM,Approved for CML; broadly cytotoxic to myeloid leukemia.
+Selinexor,XPO1 inhibitor,"Blocks nuclear export via XPO1 inhibition, promoting tumor suppressor retention",1.0,10000.0,nM,Approved for MM/DLBCL; single-agent AML activity in vitro (incl. FLT3-ITD lines).
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, inducing apoptosis in AML cells",0.5,500.0,nM,Approved for MM/MCL; potent anti-AML activity in many cell lines.
+Panobinostat,Pan-HDAC inhibitor,"Inhibits histone deacetylases, causing epigenetic reprogramming and apoptosis",0.5,1000.0,nM,Approved for MM; active at low nanomolar in AML lines.
+Romidepsin,HDAC1/2 inhibitor,"Inhibits class I HDACs (HDAC1/2), leading to potent AML cytotoxicity",0.1,100.0,nM,Approved for CTCL; very potent; light sensitive.
+Vorinostat,Pan-HDAC inhibitor,Inhibits HDACs to reduce proliferation and induce apoptosis in AML cells,10.0,50000.0,nM,Approved for CTCL; active in AML cell lines.
+Tigecycline,Mitochondrial translation inhibitor (antibiotic),"Inhibits mitochondrial protein synthesis, selectively affecting AML cells",10.0,50000.0,nM,AML cells (incl. FLT3-ITD) are sensitive; light sensitive.
+Niclosamide,Mitochondrial uncoupler/Wnt pathway modulator,"Acts as a mitochondrial uncoupler and inhibits Wnt signaling, inducing AML cytotoxicity",10.0,20000.0,nM,Anthelmintic; highly lipophilic; pre-dissolve in DMSO; consider Pluronic F-68 if precipitation occurs.
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increasing ROS and inducing apoptosis in AML cells",10.0,20000.0,nM,Anti-rheumatic; induces ROS in AML cells.
+Clofazimine,Antimycobacterial with redox/mitochondrial effects,"Generates ROS and perturbs membranes, killing leukemia cells",1.0,10000.0,nM,Leprosy drug; highly lipophilic; pre-dissolve in DMSO; possible need for surfactant if precipitation.
+Pimozide,STAT5 inhibitor (antipsychotic),"Inhibits STAT5 signaling, critical in FLT3-ITD AML (e.g., MOLM13)",10.0,30000.0,nM,Antipsychotic; reported to inhibit growth of FLT3-ITD AML cells.
+Disulfiram,ALDH inhibitor; copper-dependent proteasome/NPL4 effects,"Inhibits ALDH and, with copper co-supplementation, disrupts proteasome/NPL4 function in AML cells",10.0,10000.0,nM,Test with 1 µM CuCl2 co-supplement; disulfiram is unstable—prepare fresh and protect from light.

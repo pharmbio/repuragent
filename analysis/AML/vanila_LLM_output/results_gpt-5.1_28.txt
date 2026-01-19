@@ -1,0 +1,160 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a practical, *experiment-focused* list of 20 repurposable or non‑AML‑approved drugs reported to have antiproliferative activity in AML (with particular relevance to FLT3‑ITD–positive lines like MOLM‑13 when possible). For each, I give:
+
+- Mechanism / rationale  
+- Suggested **IC₅₀ assay concentration range** (final concentrations in wells), assuming 72‑hr viability/proliferation assays in MOLM‑13 or similar AML lines.
+
+Use these ranges as **starting points** for titrations, not as definitive potency values; actual IC₅₀s will depend on serum, cell density, exposure time, etc.
+
+---
+
+## General in‑vitro assay guidance (for all below)
+
+- Cell line: MOLM‑13 (FLT3‑ITD, highly proliferative)  
+- Assay: 72 h CellTiter‑Glo / MTT / resazurin or similar  
+- Initial test range for small molecules: **0.1 nM – 30 µM** in ~8–10 serial 3‑fold dilutions  
+- Plate: 96‑ or 384‑well, 3–6k cells/well (96‑well as reference)  
+- Vehicle: 0.1% DMSO max in all wells including controls  
+
+Volumes below are given as **concentration ranges to include in your dilution series**.
+
+---
+
+## A. Kinase inhibitors and targeted agents (already on the market but not originally for AML)
+
+### 1. Sorafenib  
+- Type: Multikinase inhibitor (RAF, VEGFR, PDGFR, FLT3)  
+- Rationale: Inhibits FLT3‑ITD; known activity in FLT3‑mutant AML including MOLM‑13.  
+- Test range: **1 nM – 10 µM** (e.g., 1, 3, 10, 30, 100, 300 nM, 1, 3, 10 µM).
+
+### 2. Sunitinib  
+- Type: Multikinase inhibitor (FLT3, KIT, VEGFR, PDGFR)  
+- Rationale: FLT3 inhibition; antiproliferative in FLT3‑ITD AML.  
+- Test range: **1 nM – 10 µM**.
+
+### 3. Midostaurin* (PKC/FLT3 inhibitor; FDA‑approved for AML but originally developed as a broad kinase inhibitor)  
+- Type: Multikinase (FLT3, PKC, KIT)  
+- Rationale: Good reference FLT3 inhibitor in MOLM‑13; use as positive control and repurposing benchmark.  
+- Test range: **0.5 nM – 5 µM**.
+
+### 4. Nintedanib  
+- Type: VEGFR/FGFR/PDGFR inhibitor; approved for idiopathic pulmonary fibrosis and some cancers  
+- Rationale: Shown to inhibit AML cells and leukemic stem/progenitor compartments in some preclinical work.  
+- Test range: **1 nM – 10 µM**.
+
+### 5. Dasatinib  
+- Type: SRC/ABL inhibitor; approved in CML/ALL  
+- Rationale: Inhibits SRC family and some KIT/FLT3‑related signaling; reported activity in some AML models.  
+- Test range: **1 nM – 10 µM**.
+
+### 6. Imatinib  
+- Type: BCR‑ABL/KIT/PDGFR inhibitor (CML/GIST)  
+- Rationale: Limited direct AML efficacy, but can inhibit KIT‑dependent AML subtypes; useful as a comparator.  
+- Test range: **10 nM – 20 µM**.
+
+### 7. Trametinib  
+- Type: MEK1/2 inhibitor (melanoma)  
+- Rationale: AML often depends on RAS/RAF/MEK/ERK signaling; MEK inhibition can reduce proliferation and sensitize to other agents.  
+- Test range: **0.1 nM – 3 µM** (MOLM‑13 often sensitive in low‑nM range).
+
+### 8. Everolimus  
+- Type: mTORC1 inhibitor (solid tumors, transplant)  
+- Rationale: PI3K/AKT/mTOR pathway active in AML; everolimus inhibits proliferation and enhances apoptosis in AML cell lines.  
+- Test range: **1 nM – 10 µM**.
+
+### 9. Bortezomib  
+- Type: 26S proteasome inhibitor (multiple myeloma, MCL)  
+- Rationale: Induces apoptosis and disrupts NF‑κB signaling in AML cells, including FLT3‑ITD lines.  
+- Test range: **0.5 nM – 1 µM** (often low‑nM IC₅₀).
+
+### 10. Carfilzomib  
+- Type: Irreversible proteasome inhibitor (myeloma)  
+- Rationale: Similar rationale as bortezomib; potent apoptosis induction in AML lines.  
+- Test range: **0.5 nM – 1 µM**.
+
+---
+
+## B. Epigenetic / transcription‑related drugs
+
+### 11. Vorinostat (SAHA)  
+- Type: HDAC inhibitor (T‑cell lymphoma)  
+- Rationale: AML cells are HDAC‑dependent; vorinostat induces differentiation/apoptosis and synergizes with many AML drugs.  
+- Test range: **50 nM – 20 µM** (start around 0.05, 0.15, 0.5, 1.5, 5, 15 µM).
+
+### 12. Panobinostat  
+- Type: Pan‑HDAC inhibitor (myeloma)  
+- Rationale: Very potent HDAC inhibitor; strong antiproliferative effects in AML models.  
+- Test range: **0.5 nM – 1 µM**.
+
+### 13. Belinostat  
+- Type: HDAC inhibitor (peripheral T‑cell lymphoma)  
+- Rationale: Similar to vorinostat/panobinostat; broad anti‑leukemic epigenetic modulation.  
+- Test range: **10 nM – 10 µM**.
+
+### 14. Decitabine* (hypomethylating agent; already AML/MDS drug but originally developed as an antimetabolite)  
+- Type: DNMT inhibitor (nucleoside analog)  
+- Rationale: Gold‑standard epigenetic comparator; used at low micromolar in vitro to induce DNA hypomethylation and growth inhibition.  
+- Test range: **0.1 µM – 20 µM** (be mindful of instability; refresh if using >24 h assays).
+
+### 15. Azacitidine* (also an HMA, repurposed from older cytotoxic use)  
+- Type: DNMT inhibitor / ribonucleoside analog  
+- Rationale: Widely used; reference for epigenetic therapy and combination testing.  
+- Test range: **0.5 µM – 50 µM**.
+
+---
+
+## C. Metabolic / signaling modulators
+
+### 16. Metformin  
+- Type: Biguanide; AMPK activator / mitochondrial complex I inhibitor (diabetes)  
+- Rationale: Targets leukemia cell metabolism, decreases oxidative phosphorylation; often needs higher in‑vitro concentrations than plasma levels.  
+- Test range: **0.1 mM – 20 mM** (100 µM – 20,000 µM).
+
+### 17. Ibrutinib  
+- Type: BTK inhibitor (CLL, MCL, WM)  
+- Rationale: BTK and related kinases contribute to survival signaling in some myeloid leukemias; preclinical AML data exist.  
+- Test range: **10 nM – 20 µM**.
+
+### 18. Venetoclax* (BCL‑2 inhibitor; approved for AML now, but originally developed for CLL)  
+- Type: BCL‑2 inhibitor  
+- Rationale: Strong activity in AML, particularly in combination with HMAs; excellent positive control for apoptosis in MOLM‑13.  
+- Test range: **0.1 nM – 3 µM** (often low‑nM IC₅₀).
+
+---
+
+## D. Immunomodulatory / other repurposable drugs
+
+### 19. Thalidomide  
+- Type: Immunomodulatory drug (IMiD; multiple myeloma)  
+- Rationale: Anti‑angiogenic and immunomodulatory; direct AML cell killing is moderate, but worth profiling in vitro.  
+- Test range: **0.5 µM – 50 µM**.
+
+### 20. Lenalidomide  
+- Type: IMiD (myeloma, MDS with del(5q))  
+- Rationale: Shows variable but sometimes significant anti‑leukemic activity; also modulates microenvironment‑dependent survival.  
+- Test range: **0.1 µM – 50 µM**.
+
+---
+
+## Suggested experimental design for an initial MOLM‑13 screen
+
+- Plate MOLM‑13 at 3,000–6,000 cells/well (96‑well), 100 µL RPMI + 10% FBS.  
+- Prepare **10‑point 3‑fold serial dilutions** for each compound within the ranges above.  
+- Incubate 72 h; read luminescent viability (e.g., CellTiter‑Glo).  
+- Include:
+  - DMSO control (0.1%)  
+  - Positive controls: midostaurin (FLT3), bortezomib, venetoclax  
+- Fit dose–response curves (4‑parameter logistic) to obtain IC₅₀ values.
+
+If you tell me which subset (e.g., kinase inhibitors only, or only off‑patent/oral agents) you intend to prioritize, I can refine the list and narrow concentration ranges more precisely for MOLM‑13.

@@ -1,0 +1,44 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved drugs from other indications with published anti-AML activity, including activity in the FLT3-ITD–positive AML line MOLM-13. For each, I list an approximate reported cellular IC50 (viability/proliferation) in MOLM-13 or closely related FLT3-ITD AML lines (e.g., MV4-11). Potencies vary with assay format, serum, and exposure time; use the original papers and your institutional SOPs to choose exact test ranges.
+
+FLT3/multikinase inhibitors (strong activity in MOLM-13)
+1) Ponatinib (CML/Ph+ ALL; pan-ABL/FLT3 inhibitor): IC50 ~1–10 nM in MOLM-13/MV4-11.
+2) Sorafenib (RCC/HCC; multikinase, FLT3-ITD active): IC50 ~1–10 nM in MOLM-13/MV4-11.
+3) Sunitinib (RCC; multikinase/FLT3): IC50 ~5–20 nM in FLT3-ITD AML lines, including MOLM-13.
+4) Cabozantinib (RCC/thyroid; MET/VEGFR, also inhibits FLT3): IC50 ~5–30 nM in MOLM-13/MV4-11.
+5) Regorafenib (CRC/GIST/HCC; multikinase, FLT3): IC50 ~30–100 nM in MOLM-13/MV4-11.
+6) Pazopanib (RCC/STS; multikinase, some FLT3 activity): IC50 ~0.1–0.3 μM in MOLM-13/MV4-11.
+7) Dasatinib (CML/Ph+ ALL; SRC/ABL, some FLT3): IC50 ~50–200 nM in MOLM-13 (context-dependent).
+8) Nilotinib (CML; ABL/KIT, weaker FLT3): IC50 ~1–5 μM in MOLM-13.
+
+Non-FLT3 targeted oncology drugs
+9) Omacetaxine mepesuccinate (CML; protein translation inhibitor): IC50 ~2–20 nM in MOLM-13.
+10) Bortezomib (MM/MCL; proteasome inhibitor): IC50 ~5–50 nM in MOLM-13.
+11) Carfilzomib (MM; proteasome inhibitor): IC50 ~10–50 nM in MOLM-13.
+12) Selinexor (MM; XPO1 inhibitor): IC50 ~0.1–0.5 μM in MOLM-13.
+13) Ibrutinib (CLL/MCL; BTK inhibitor with off-targets): IC50 ~1–5 μM in MOLM-13 (variable).
+
+Repurposed anti-infectives and other non-oncology agents
+14) Tigecycline (antibiotic; mitochondrial translation): IC50 ~1–5 μM in MOLM-13.
+15) Niclosamide (anthelmintic; OXPHOS/Wnt signaling): IC50 ~0.2–1 μM in MOLM-13.
+16) Auranofin (anti-rheumatic; thioredoxin reductase inhibitor): IC50 ~0.5–2 μM in MOLM-13.
+17) Clofazimine (antimycobacterial; Wnt/lysosome effects): IC50 ~0.1–0.5 μM in AML lines incl. MOLM-13.
+18) Mefloquine (antimalarial; lysosomal disruption): IC50 ~2–8 μM in MOLM-13.
+19) Artesunate/dihydroartemisinin (antimalarial; ROS/Fe-dependent): IC50 ~1–5 μM in MOLM-13.
+20) Pimozide (antipsychotic; STAT5 inhibition): IC50 ~1–5 μM in MOLM-13. Thioridazine (antipsychotic) is similar with IC50 ~5–15 μM.
+
+Notes
+- MOLM-13 is FLT3-ITD–driven; FLT3-active TKIs (ponatinib, sorafenib, sunitinib, cabozantinib, regorafenib) are typically the most potent single agents in this line.
+- Reported IC50 values come from peer-reviewed studies using standard cell viability/proliferation readouts; expect shifts based on serum, exposure time, and endpoint.
+- Check original publications and product datasheets for details and verify identity/mycoplasma status of MOLM-13 before experiments.

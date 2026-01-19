@@ -1,0 +1,132 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing small molecules (approved or clinical-stage) with good rationale for repurposing or testing in AML — especially in FLT3-ITD AML lines such as MOLM13 — together with practical, experimentally-testable concentration guidance for an IC50/proliferation assay.
+
+General assay recommendations (use with the concentration series below)
+- Use a 10‑point, 3‑fold serial dilution series for each compound (gives coverage from the top concentration down to ~50 pM when top = 1 µM). Prepare compound stocks in DMSO and keep final DMSO ≤0.5% (ideally ≤0.1%).
+- Plate MOLM13 in 96‑well format as suspension cells (typical starting density 5,000–10,000 cells/well), incubate 72 h (standard) before viability readout (CellTiter‑Glo or comparable). For nucleoside analogues you may also test 96 h or repeat dosing if desired.
+- Run at least triplicates and include vehicle (DMSO) and positive controls (e.g., cytarabine and a FLT3 inhibitor).
+- Report IC50 from nonlinear curve fit (four‑parameter logistic).
+
+For each drug below I give: mechanism/why relevant to AML (and to MOLM13 where applicable), recommended top concentration for a 10‑point 3‑fold dilution series, and an approximate expected IC50 range (literature/cell-line dependent — use as a guide).
+
+1) Gilteritinib (Xospata)
+- Target: FLT3 (and AXL). MOLM13 (FLT3‑ITD) is typically sensitive.
+- Top conc (for 10‑pt 3× series): 1 µM (series: 1 µM → ~50 pM)
+- Expected IC50 (MOLM13-range): ~1–50 nM
+
+2) Quizartinib (AC220)
+- Target: FLT3 (very potent on FLT3‑ITD).
+- Top conc: 100 nM (or 1 µM if you want extended range)
+- Expected IC50: ~0.1–10 nM
+
+3) Crenolanib
+- Target: pan‑FLT3 inhibitor (active vs ITD and some TKD mutants).
+- Top conc: 1 µM
+- Expected IC50: ~1–100 nM
+
+4) Midostaurin (PKC412)
+- Target: multi‑kinase including FLT3.
+- Top conc: 10 µM
+- Expected IC50: ~100 nM–1 µM
+
+5) Sorafenib
+- Target: multi‑kinase (FLT3, RAF, VEGFR, etc.). Has activity against FLT3‑ITD.
+- Top conc: 10 µM
+- Expected IC50: ~10–500 nM
+
+6) Ponatinib
+- Target: multi‑kinase (including FLT3 off‑target activity). Heterogeneous effects in AML.
+- Top conc: 1 µM
+- Expected IC50: ~1–200 nM
+
+7) Venetoclax (ABT‑199)
+- Target: BCL‑2. AML lines (including some MOLM lines) can be sensitive, and combination therapy (hypomethylating agents) is clinically effective.
+- Top conc: 1 µM
+- Expected IC50: ~10–200 nM (cell‑dependent)
+
+8) Navitoclax (ABT‑263)
+- Target: BCL‑2/BCL‑xL. Useful comparator to venetoclax.
+- Top conc: 1 µM
+- Expected IC50: ~50–500 nM
+
+9) Selinexor (XPO1 inhibitor)
+- Target: nuclear export (XPO1). Active in AML preclinical models.
+- Top conc: 1 µM
+- Expected IC50: ~50–500 nM
+
+10) Alvocidib / Flavopiridol
+- Target: CDKs (notably CDK9; transcriptional addiction in AML).
+- Top conc: 1 µM
+- Expected IC50: ~10–500 nM
+
+11) Palbociclib
+- Target: CDK4/6. May inhibit AML proliferation in subsets; useful to test for cell‑cycle dependencies.
+- Top conc: 10 µM
+- Expected IC50: ~0.1–5 µM (cell dependent)
+
+12) Panobinostat (LBH589)
+- Target: pan‑HDAC inhibitor. Active in AML models and in combinations.
+- Top conc: 1 µM
+- Expected IC50: ~1–200 nM
+
+13) Bortezomib
+- Target: 20S proteasome. Proteasome inhibition can be cytotoxic in AML.
+- Top conc: 1 µM
+- Expected IC50: ~1–100 nM
+
+14) Azacitidine
+- Target: DNA methyltransferase (hypomethylating agent). In vitro dosing is different from in vivo; may require repeat dosing/time.
+- Top conc: 10 µM
+- Expected IC50 (viability assays): often ~0.1–5 µM
+
+15) Decitabine
+- Target: DNMT inhibitor (similar notes to azacitidine).
+- Top conc: 10 µM
+- Expected IC50: ~0.1–5 µM
+
+16) Cytarabine (Ara‑C)
+- Target: nucleoside analogue; standard AML chemo. MOLM13 often sensitive.
+- Top conc: 10 µM
+- Expected IC50: ~0.01–1 µM
+
+17) Doxorubicin
+- Target: DNA intercalator/topoisomerase II poison. Standard anthracycline in AML regimens.
+- Top conc: 10 µM
+- Expected IC50: ~10–500 nM
+
+18) Ibrutinib
+- Target: BTK (and off‑targets). Some AML subtypes show sensitivity; useful repurposing candidate to test combinations.
+- Top conc: 10 µM
+- Expected IC50: ~0.1–10 µM
+
+19) OTX015 / MK‑8628 (BET inhibitor)
+- Target: BET bromodomain proteins (transcriptional regulators); active in AML models.
+- Top conc: 1 µM
+- Expected IC50: ~10–500 nM
+
+20) Idasanutlin (RG7388)
+- Target: MDM2 inhibitor (activates p53). Effective only in TP53 wild‑type AML — check MOLM13 p53 status before interpretation.
+- Top conc: 10 µM
+- Expected IC50: ~0.1–2 µM (p53 WT dependent)
+
+Practical notes and variations
+- If you prefer a single standardized series, choose top concentrations as above and perform a 10‑point 3× dilution for all drugs. For very potent kinase inhibitors you can reduce the top conc (e.g., 100 nM) to improve resolution in the low‑nM range.
+- Some agents (azacitidine/decitabine/cytarabine) are metabolically labile and sometimes require renewed dosing or longer exposure (96 h) to see full effect — consider running both 72 h and 96 h timepoints.
+- For MOLM13 (FLT3‑ITD) prioritize FLT3 inhibitors (gilteritinib, quizartinib, crenolanib, midostaurin, sorafenib, ponatinib) and BCL‑2 targeting (venetoclax) when selecting single agents; combinations (FLT3i + venetoclax, FLT3i + HMA, HDAC + BH3 mimetic) are commonly tested.
+- If you want exact concentration series written out for each compound (i.e., the 10 concentrations numerically), tell me which drugs you want enumerated and I will produce the full numbers.
+
+If you want, I can:
+- Provide a printable plate map and exact µM/nM series for each drug (10 concentrations).
+- Suggest 2–3 prioritized drug combinations to test in MOLM13 and recommended concentration matrices (e.g., 6×6 checkerboard).
+- Tailor the list to strictly FDA‑approved drugs only (I included some investigational agents such as OTX015 and idasanutlin).

@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Gilteritinib,FLT3/AXL inhibitor,Small-molecule tyrosine kinase inhibitor of FLT3 and AXL,0.03,300.0,nM,"Highly active in FLT3-ITD AML (e.g., MOLM-13)"
+Quizartinib,FLT2/FLT3 inhibitor,Selective inhibitor of FLT3 tyrosine kinase (also reported FLT2),0.01,100.0,nM,Also known as AC220
+Crenolanib,FLT3 inhibitor,Potent FLT3 inhibitor active against D835 and other FLT3 mutants,0.1,1000.0,nM,
+Midostaurin,Multikinase inhibitor,Inhibits multiple kinases including FLT3 and PKC,1.0,10000.0,nM,Equivalent range: 0.001–10 µM
+Sorafenib,Multikinase inhibitor,"Inhibits FLT3, VEGFR, and RAF kinases",0.1,1000.0,nM,
+Ponatinib,Tyrosine kinase inhibitor,Broad-spectrum TKI with activity against FLT3,0.01,300.0,nM,
+Sunitinib,Multikinase inhibitor,Inhibits multiple receptor tyrosine kinases,1.0,10000.0,nM,Equivalent range: 0.001–10 µM
+Venetoclax,BCL-2 inhibitor,BH3-mimetic that selectively inhibits BCL-2 to induce apoptosis,1.0,10000.0,nM,Equivalent range: 0.001–10 µM
+Bortezomib,Proteasome inhibitor,Reversible inhibitor of the 26S proteasome,0.5,100.0,nM,
+Carfilzomib,Proteasome inhibitor,Irreversible proteasome inhibitor (epoxyketone),0.5,100.0,nM,
+Panobinostat,HDAC inhibitor,Pan-HDAC inhibition leading to epigenetic modulation and apoptosis,0.5,100.0,nM,
+Omacetaxine,Protein translation inhibitor,Inhibits protein synthesis by interfering with ribosomal elongation,1.0,100.0,nM,Also known as homoharringtonine (HHT)
+Selinexor,XPO1 inhibitor,Inhibits nuclear export receptor XPO1/CRM1,10.0,1000.0,nM,
+Trametinib,MEK inhibitor,Selective inhibitor of MEK1/2 in the MAPK pathway,0.1,1000.0,nM,
+Ruxolitinib,JAK inhibitor,Selective JAK1/2 inhibitor,0.1,30.0,µM,
+Everolimus,mTOR inhibitor,Selective mTORC1 (rapalog) inhibitor,0.1,1000.0,nM,
+Tigecycline,Antibiotic (tetracycline class),Inhibits mitochondrial protein translation in leukemic cells,0.05,50.0,µM,
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increasing oxidative stress",0.05,20.0,µM,Oral gold complex drug
+Niclosamide,Anthelmintic,Disrupts oxidative phosphorylation and modulates Wnt/STAT3 signaling,0.05,10.0,µM,
+Disulfiram,ALDH inhibitor,Inhibits aldehyde dehydrogenase; copper-dependent cytotoxicity,0.01,10.0,µM,"Activity enhanced by low-µM Cu2+ (e.g., 0.5–1 µM)"

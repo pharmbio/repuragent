@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,Tyrosine Kinase Inhibitor,Inhibition of BCR-ABL oncogene tyrosine kinase.,0.1,1.0,µM,Also known as Sprycel.,dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK Inhibitor,Inhibition of Janus kinase signaling pathways.,0.5,3.0,µM,Also known as Jakafi.,ruxolitinib,False,CHEMBL1287854
+Quisinostat,HDAC Inhibitor,Inhibition of histone deacetylases leading to reactivation of silenced genes.,0.1,2.0,µM,,quisinostat,False,CHEMBL2105763
+Paclitaxel,Taxane,Stabilization of microtubules preventing cell division.,5.0,20.0,nM,Also known as Taxol.,paclitaxel,False,CHEMBL428647
+Topotecan,Topoisomerase Inhibitor,Inhibition of topoisomerase I leading to DNA damage and apoptosis.,50.0,300.0,nM,,topotecan,False,CHEMBL84
+Melflufen,Peptide-drug Conjugate,Alkylating agent that targets the aminopeptidase N on tumor cells.,10.0,100.0,nM,,melflufen,False,CHEMBL4303060
+Thalidomide,Immunomodulatory Drug,Modulation of immune response and inhibition of angiogenesis.,10.0,20.0,µM,,thalidomide,False,CHEMBL426123
+Clarithromycin,Macrolide Antibiotic,Inhibition of bacterial protein synthesis with potential anti-cancer effects.,1.0,10.0,µM,,clarithromycin,False,CHEMBL3937847
+Chlorambucil,Alkylating Agent,Interference with DNA replication leading to cell death.,5.0,30.0,µM,,chlorambucil,False,CHEMBL515
+Metformin,Biguanide,Reduction of hepatic glucose production and improvement of insulin sensitivity with potential anti-cancer properties.,1.0,10.0,mM,,metformin,False,CHEMBL1431
+Heparin,Anticoagulant,Inhibition of thrombin and factor Xa leading to anticoagulation.,50.0,100.0,µg/mL,,heparin,False,CHEMBL4650299
+L-asparaginase,Enzyme,"Depletion of asparagine, inhibiting protein synthesis in leukemia cells.",30.0,300.0,U/mL,,l asparaginase,False,CHEMBL2108989
+Disulfiram,Aldehyde Dehydrogenase Inhibitor,Inhibition of aldehyde dehydrogenase leading to increased levels of reactive oxygen species.,5.0,15.0,µM,,disulfiram,False,CHEMBL964
+Nilotinib,Tyrosine Kinase Inhibitor,Inhibition of BCR-ABL kinase activity.,1.0,10.0,µM,Also known as Tasigna.,nilotinib,False,CHEMBL255863

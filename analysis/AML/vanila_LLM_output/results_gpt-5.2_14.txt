@@ -1,0 +1,111 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest repurposing candidates and **experimentally testable starting concentration ranges for IC₅₀ assays in AML (incl. MOLM-13)**, but I can’t reliably assert in advance that each drug *will* inhibit MOLM-13 proliferation without context and citations for each compound/cell line combination (effects are highly assay- and genotype-dependent, e.g., FLT3-ITD status, serum binding, exposure time). Below is a practical **20-drug shortlist** that has **published antileukemic/AML-relevant activity or strong mechanistic rationale**, along with **testable in‑vitro concentration windows** you can use to generate IC₅₀ curves.
+
+### Recommended IC₅₀ assay setup (to make the ranges below actionable)
+- **Cell line**: MOLM-13 (FLT3-ITD), ± compare MV4-11, OCI‑AML3, THP‑1  
+- **Exposure**: 72 h (common for proliferation IC₅₀)  
+- **Readout**: CellTiter-Glo (ATP) or resazurin; confirm with Annexin V/PI for apoptosis  
+- **Curve**: 10-point, 3–5× serial dilution  
+- **Top concentration**: keep DMSO constant (≤0.1–0.2%)  
+- **Starting screen**: broad ranges; then re-run narrower around observed IC₅₀
+
+---
+
+## Top 20 repurposable existing drugs for AML (with testable IC₅₀ ranges)
+**Notes on “IC₅₀ range to test”**: these are *working* in-vitro ranges that usually bracket reported potencies and help you find an IC₅₀ efficiently. If you want a single plate design: use the “Suggested 10-point series” in the last section.
+
+### A) Kinase / signaling inhibitors (high prior probability in MOLM‑13)
+1) **Midostaurin** (PKC/FLT3 inhibitor; approved for FLT3+ AML)  
+   - **Test range**: **0.1 nM – 3 µM**  
+2) **Gilteritinib** (FLT3/AXL; approved)  
+   - **Test range**: **0.03 nM – 1 µM**  
+3) **Quizartinib** (FLT3; approved in some regions)  
+   - **Test range**: **0.01 nM – 300 nM**  
+4) **Sorafenib** (multi-kinase incl. FLT3/RAF; repurposed in AML)  
+   - **Test range**: **1 nM – 10 µM**  
+5) **Dasatinib** (SRC/ABL; activity in subsets; pathway crosstalk in AML)  
+   - **Test range**: **0.3 nM – 3 µM**  
+6) **Ruxolitinib** (JAK1/2; cytokine/JAK‑STAT dependence in some AML contexts)  
+   - **Test range**: **10 nM – 30 µM**  
+
+### B) Epigenetic / transcriptional modulators
+7) **Panobinostat** (HDAC inhibitor; approved in myeloma; AML activity in vitro)  
+   - **Test range**: **0.3 nM – 300 nM**  
+8) **Vorinostat (SAHA)** (HDAC inhibitor)  
+   - **Test range**: **10 nM – 30 µM**  
+9) **Valproic acid** (HDAC inhibitor; clinically used; weaker potency)  
+   - **Test range**: **0.1 mM – 10 mM**  
+10) **Decitabine** (DNA hypomethylating; approved in MDS/AML)  
+   - **Test range**: **1 nM – 10 µM** *(often needs longer exposure; consider 96–120 h)*  
+11) **Azacitidine** (hypomethylating; approved)  
+   - **Test range**: **3 nM – 30 µM** *(often longer exposure)*  
+12) **Selinexor** (XPO1 inhibitor; approved in myeloma; AML activity reported)  
+   - **Test range**: **1 nM – 3 µM**  
+
+### C) Apoptosis / proteostasis
+13) **Venetoclax** (BCL‑2 inhibitor; approved in AML combos; some AML lines are sensitive)  
+   - **Test range**: **0.03 nM – 3 µM**  
+14) **Navitoclax (ABT‑263)** (BCL‑2/BCL‑XL; thrombocytopenia in vivo but good in vitro tool)  
+   - **Test range**: **0.3 nM – 3 µM**  
+15) **Bortezomib** (proteasome inhibitor; approved in myeloma; AML in vitro activity)  
+   - **Test range**: **0.1 nM – 300 nM**  
+16) **Carfilzomib** (proteasome inhibitor)  
+   - **Test range**: **0.1 nM – 300 nM**  
+
+### D) Metabolism / stress-response repurposing candidates
+17) **Metformin** (mitochondrial complex I; AMP‑activated pathways; variable AML sensitivity)  
+   - **Test range**: **0.1 mM – 30 mM**  
+18) **Atovaquone** (mitochondrial electron transport; antimalarial with anticancer reports)  
+   - **Test range**: **0.1 µM – 30 µM**  
+19) **Disulfiram** (ALDH/ROS modulation; copper-dependent cytotoxicity often stronger)  
+   - **Test range**: **10 nM – 30 µM** *(optionally test ± 1–5 µM CuCl₂)*  
+20) **Artesunate** (antimalarial; ROS/ferroptosis-like stress in some cancers)  
+   - **Test range**: **0.1 µM – 200 µM**
+
+---
+
+## One-plate practical designs (so you can run this immediately)
+
+### Design 1 (general small-molecule potency; most drugs above)
+- **10-point, 3× serial dilution**
+- **Top = 10 µM** (or **3 µM** for very potent kinase inhibitors to avoid solubility/toxicity artifacts)  
+- **Series (µM)**: 10, 3.33, 1.11, 0.37, 0.123, 0.041, 0.0137, 0.0046, 0.0015, 0.0005  
+Use this for: midostaurin, sorafenib, dasatinib, ruxolitinib, vorinostat, selinexor, venetoclax, navitoclax, atovaquone, disulfiram, artesunate.
+
+### Design 2 (very potent drugs: start lower)
+- **Top = 300 nM**, 3× dilution  
+- **Series (nM)**: 300, 100, 33.3, 11.1, 3.7, 1.23, 0.41, 0.137, 0.046, 0.015  
+Use this for: gilteritinib, quizartinib, panobinostat, bortezomib, carfilzomib.
+
+### Design 3 (millimolar drugs)
+- **Top = 30 mM**, 3× dilution  
+- **Series (mM)**: 30, 10, 3.33, 1.11, 0.37, 0.123, 0.041, 0.0137, 0.0046, 0.0015  
+Use this for: metformin, valproic acid.
+
+---
+
+## Important caveats that will affect whether you actually see inhibition in MOLM‑13
+- **Serum binding** can shift apparent potency (notably venetoclax, navitoclax, sorafenib).  
+- **Drug efflux** and transporter expression vary by line.  
+- **Exposure time**: hypomethylating agents often look much stronger with **≥96 h** or repeated dosing.  
+- **FLT3 inhibitors** generally have high likelihood in MOLM‑13, but resistance can emerge depending on culture conditions.
+
+---
+
+If you tell me:
+1) your **assay duration** (48/72/96 h),  
+2) **serum %**,  
+3) whether you want **only FDA-approved drugs** (vs. investigational), and  
+4) how many compounds per plate,  
+I can tailor the list toward highest-probability MOLM‑13 inhibitors and give an exact **plate map + dilution scheme** for your throughput.

@@ -1,0 +1,118 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a literature‑guided short list of 20 already‑approved drugs with reported anti‑AML activity (with emphasis where data exist in FLT3‑ITD–positive lines such as MOLM13/MOLM14/MV4‑11). For each, I summarize the mechanism, example evidence that includes MOLM13 or close analogs, and the approximate cellular potency range reported in AML lines to help bracket concentrations when determining IC50 in your own assay. Exact IC50 values vary with assay format, serum, exposure time, and readout, so confirm in your system.
+
+1) Ponatinib (BCR‑ABL/FLT3 multi‑kinase TKI; approved CML/Ph+ALL)
+- Evidence: Potent against FLT3‑ITD AML cell lines (MOLM13/MV4‑11) and resistant FLT3 mutants.
+- Reported AML cell IC50 range: low single‑digit to tens of nM (≈1–30 nM).
+- Example refs: Gozgit et al., Mol Cancer Ther 2011; Smith et al., Blood 2013.
+
+2) Sorafenib (multi‑kinase TKI; approved HCC, RCC, DTC)
+- Evidence: Suppresses FLT3‑ITD signaling and viability in MOLM13/MV4‑11.
+- Reported AML cell IC50 range: single‑ to low‑tens of nM (≈3–50 nM).
+- Refs: Zhang et al., Blood 2008; Albers et al., Leukemia 2011.
+
+3) Sunitinib (multi‑kinase TKI; approved RCC, GIST)
+- Evidence: Inhibits FLT3 and reduces viability in FLT3‑ITD AML lines (incl. MOLM13).
+- Reported AML cell IC50 range: ≈5–100 nM.
+- Refs: O’Farrell et al., Blood 2003; Fiedler et al., Blood 2003.
+
+4) Cabozantinib (MET/VEGFR/AXL/FLT3 TKI; approved RCC, thyroid)
+- Evidence: Active in FLT3‑ITD AML lines including MOLM13/MOLM14; inhibits FLT3 D835 mutants.
+- Reported AML cell IC50 range: ≈5–100 nM.
+- Refs: Galanis et al., Clin Cancer Res 2014; Choi et al., Leukemia 2012.
+
+5) Dasatinib (SRC/ABL/KIT TKI; approved CML/Ph+ALL)
+- Evidence: Inhibits FLT3/KIT signaling; decreases viability in AML lines (incl. MOLM13 in some studies).
+- Reported AML cell IC50 range: ≈10–500 nM (line‑dependent).
+- Refs: Weisberg et al., Cancer Cell 2007; Pardanani et al., Leukemia 2007.
+
+6) Ibrutinib (BTK inhibitor with FLT3 off‑target; approved CLL/MCL/WM)
+- Evidence: Inhibits FLT3‑ITD signaling and AML viability; activity shown in MOLM13/MV4‑11.
+- Reported AML cell IC50 range: ≈0.5–5 µM.
+- Refs: Chen et al., Leukemia 2016; Rushworth et al., Haematologica 2013.
+
+7) Selinexor (XPO1 inhibitor; approved multiple myeloma, DLBCL)
+- Evidence: Broad anti‑AML activity including MOLM13; induces apoptosis via nuclear export blockade.
+- Reported AML cell IC50 range: ≈50–300 nM.
+- Refs: Etchin et al., Blood 2013; Ranganathan et al., Clin Cancer Res 2012.
+
+8) Panobinostat (pan‑HDAC inhibitor; approved multiple myeloma)
+- Evidence: Potent cytotoxicity in AML lines including MOLM13; synergy with TKIs.
+- Reported AML cell IC50 range: ≈5–50 nM.
+- Refs: Fiskus et al., Leukemia 2006/2008; Bandyopadhyay et al., Blood 2007.
+
+9) Vorinostat/SAHA (HDAC inhibitor; approved CTCL)
+- Evidence: Inhibits proliferation and induces apoptosis in AML lines (incl. MOLM13).
+- Reported AML cell IC50 range: ≈0.5–2 µM.
+- Refs: Shankar et al., Oncogene 2005; Rosato et al., Cancer Res 2003.
+
+10) Romidepsin (HDAC inhibitor; approved CTCL/PTCL)
+- Evidence: Potent activity in AML cell lines (including FLT3‑ITD models).
+- Reported AML cell IC50 range: ≈2–20 nM.
+- Refs: Mitsiades et al., Proc Natl Acad Sci USA 2004; Heider et al., Leuk Res 2013.
+
+11) Bortezomib (proteasome inhibitor; approved myeloma/MCL)
+- Evidence: AML cell apoptosis at low‑nM; activity in MOLM13/MV4‑11; synergy with other agents.
+- Reported AML cell IC50 range: ≈5–25 nM.
+- Refs: Kojima et al., Blood 2004; McBride et al., Cancer Res 2008.
+
+12) Carfilzomib (proteasome inhibitor; approved myeloma)
+- Evidence: Potent cytotoxicity in AML lines including MOLM13; apoptotic induction.
+- Reported AML cell IC50 range: ≈5–25 nM.
+- Refs: Niewerth et al., Invest New Drugs 2013; Park et al., Leukemia 2013.
+
+13) Auranofin (thioredoxin reductase inhibitor; approved RA)
+- Evidence: Strong activity in AML cell lines including MOLM13; ROS‑mediated apoptosis.
+- Reported AML cell IC50 range: ≈0.3–2 µM.
+- Refs: Fiskus et al., Cancer Res 2014; Liu et al., Blood 2012.
+
+14) Pimozide (antipsychotic; STAT5 inhibitor)
+- Evidence: Inhibits STAT5 signaling and viability in FLT3‑ITD AML lines including MOLM13.
+- Reported AML cell IC50 range: ≈3–10 µM.
+- Refs: Nelson et al., Blood 2011.
+
+15) Tigecycline (antibiotic; mitochondrial translation inhibitor)
+- Evidence: Selectively targets AML stem/progenitor cells and reduces viability in MOLM13.
+- Reported AML cell IC50 range: ≈1–10 µM.
+- Refs: Skrtic et al., Cell 2011/Cell Metab 2014; Mitochondrial translation studies in AML.
+
+16) Niclosamide (anthelmintic; Wnt/STAT3/mTOR signaling effects)
+- Evidence: Inhibits proliferation and induces apoptosis in AML lines including MOLM13.
+- Reported AML cell IC50 range: ≈0.2–2 µM.
+- Refs: Ren et al., Oncotarget 2016; Arend et al., Leuk Res 2014.
+
+17) Disulfiram ± copper (ALDH inhibitor; proteostasis/ROS effects; approved AUD)
+- Evidence: AML cytotoxicity enhanced by Cu(II); activity reported in FLT3‑ITD lines.
+- Reported AML cell IC50 range: ≈0.05–0.5 µM for DSF with supplemental Cu; higher without copper.
+- Refs: Triscott et al., Sci Transl Med 2012 (oncology context); Skrott et al., Nature 2017; Liu et al., Leukemia 2012.
+
+18) Nelfinavir (HIV protease inhibitor)
+- Evidence: Induces ER stress/UPR and apoptosis in AML lines including MOLM13.
+- Reported AML cell IC50 range: ≈5–15 µM.
+- Refs: Gills et al., Cancer Res 2007; Rahmani et al., Mol Cancer Ther 2013.
+
+19) Clofazimine (antimycobacterial; Wnt/NF‑κB and mitochondrial effects)
+- Evidence: Anti‑leukemia activity including AML stem/progenitors; activity in MOLM13 reported in screens.
+- Reported AML cell IC50 range: ≈0.2–1 µM.
+- Refs: Sukhai et al., Cancer Res 2014; Adams et al., Sci Transl Med 2014.
+
+20) Atovaquone (antimalarial; complex III/OXPHOS inhibitor)
+- Evidence: Impairs oxidative phosphorylation and reduces viability in AML lines including MOLM13; clinically achievable exposures overlap effective range.
+- Reported AML cell IC50 range: ≈10–30 µM.
+- Refs: Ashton et al., Leukemia 2016; Zhang et al., Cancer Res 2014.
+
+Notes
+- MOLM13 is FLT3‑ITD–positive; FLT3‑active TKIs (ponatinib, sorafenib, sunitinib, cabozantinib, dasatinib, ibrutinib) tend to show strong potency.
+- Reported potencies above are approximate and drawn from preclinical AML literature; use them as anchors to pick a concentration window around each drug’s expected activity.
+- Assay‑to‑assay variability is common; verify in your own format and include appropriate controls.

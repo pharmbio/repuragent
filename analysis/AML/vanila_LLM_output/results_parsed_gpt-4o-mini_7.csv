@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sunitinib,Tyrosine kinase inhibitor,Inhibits multiple receptor tyrosine kinases,0.1,10.0,µM,Also known as Sutent.
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and SRC family kinases,0.1,1.0,µM,Also known as Sprycel.
+Imatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase,0.1,5.0,µM,Also known as Gleevec.
+Valproic Acid,Histone deacetylase inhibitor,Modulates gene expression via HDAC inhibition,0.5,3.0,mM,Suggested as a chromatin-modifying agent.
+Vorinostat,Histone deacetylase inhibitor,Inhibits HDAC leading to altered gene expression,0.1,5.0,µM,Also known as Zolinza.
+Decitabine,Demethylating agent,Inhibits DNA methyltransferase,0.1,1.0,µM,Also known as Dacogen.
+Azacitidine,Demethylating agent,Inhibits DNA methyltransferase,0.1,3.0,µM,Also known as Vidaza.
+Trametinib,MEK inhibitor,"Inhibits MEK1 and MEK2, suppressing ERK signaling",0.01,1.0,µM,Also known as Mekinist.
+Bortezomib,Proteasome inhibitor,Inhibits proteasome leading to accumulation of pro-apoptotic factors,0.01,1.0,µM,Also known as Velcade.
+Selinexor,Exportin 1 inhibitor,Inhibits nuclear export of tumor suppressor proteins,0.1,2.0,µM,Also known as Xpovio.
+Clofarabine,Antimetabolite,Inhibits DNA synthesis and repair,0.1,2.0,µM,Also known as Clolar.
+Pomalidomide,Immunomodulatory drug,Enhances immune response and inhibits tumor cell proliferation,0.01,1.0,µM,Suggested as a circuit modulator.
+Dexamethasone,Corticosteroid,Suppresses inflammation and immune response,1.0,10.0,µM,Also known as Decadron.
+Auranofin,Gold compound,"Inhibits thioredoxin reductase, leading to apoptosis",0.5,5.0,µM,
+Paclitaxel,Chemotherapy agent,Stabilizes microtubules and inhibits cell division,0.1,1.0,µM,Suggested as a tubulin inhibitor.
+Celecoxib,COX-2 inhibitor,"Inhibits cyclooxygenase-2, reducing inflammation and tumor growth",10.0,50.0,µM,
+Metformin,Antidiabetic agent,"Activates AMPK, reducing glucose production and promoting apoptosis",1.0,10.0,mM,
+Kinetin,Cytokinins,Inhibits cell proliferation and induces apoptosis,1.0,10.0,µM,
+Fenretinide,Synthetic retinoid,Induces apoptosis and inhibits tumor growth,0.1,1.0,µM,Also known as 4-HPR.
+Doxorubicin,Anthracycline antibiotic,Intercalates DNA and inhibits topoisomerase II,0.01,1.0,µM,

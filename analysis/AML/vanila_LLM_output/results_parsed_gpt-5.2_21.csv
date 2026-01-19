@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Midostaurin,Multikinase inhibitor (FLT3 inhibitor),Inhibits multiple kinases including FLT3 to reduce AML cell proliferation,0.3,1.0,µM,Approved for FLT3+ AML; MOLM-13 often responsive
+Gilteritinib,Tyrosine kinase inhibitor (FLT3/AXL inhibitor),"Inhibits FLT3 and AXL signaling, active in FLT3-ITD AML models",0.1,300.0,nM,"Approved for FLT3+ AML; noted strong activity in FLT3-ITD lines (e.g., MOLM-13)"
+Quizartinib,Tyrosine kinase inhibitor (FLT3 inhibitor),Potent inhibition of FLT3 signaling,0.1,300.0,nM,Approved in some regions; described as classic MOLM-13 tool/therapy
+Sorafenib,Multikinase inhibitor,Inhibits multiple kinases including FLT3; suppresses proliferation signaling in AML,3.0,10.0,µM,Approved for RCC/HCC; used off-label in AML
+Ponatinib,Multikinase inhibitor (tyrosine kinase inhibitor),Potent multikinase inhibition including activity against FLT3 variants; used in resistance contexts,0.3,1.0,µM,Approved for CML/ALL; noted for resistance contexts
+Dasatinib,Tyrosine kinase inhibitor (SRC/ABL inhibitor),Inhibits SRC/ABL family kinases; can suppress AML signaling in subsets,3.0,10.0,µM,Approved for CML/ALL
+Trametinib,MEK inhibitor,Inhibits MEK1/2 in the RAS/MAPK pathway,0.3,1.0,µM,Rationale: RAS/MAPK-driven AML subsets
+Everolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 to downregulate PI3K/AKT/mTOR signaling,3.0,10.0,µM,Approved in cancers/transplant; PI3K/AKT/mTOR axis common in AML
+Temsirolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 to reduce growth/proliferation signaling,3.0,10.0,µM,Approved for RCC; similar rationale to everolimus
+Venetoclax,BCL-2 inhibitor,Selective inhibition of BCL-2 to promote apoptosis,3.0,10.0,µM,Approved in CLL and AML combinations; described as strong anti-AML in many contexts
+Navitoclax,BCL-2 family inhibitor (BCL-XL/BCL-2),Inhibits BCL-XL and BCL-2 to promote apoptosis,3.0,10.0,µM,Alternative name: ABT-263; clinical stage; suggested for venetoclax-resistant states
+Pimozide,Antipsychotic (repurposing candidate),Reported interference with STAT5/STAT signaling,10.0,30.0,µM,Approved antipsychotic; solubility limits noted
+Mebendazole,Anthelmintic,Microtubule disruption/antimitotic effects; reported anti-leukemia activity,10.0,30.0,µM,Approved anthelmintic; solubility limits noted
+Niclosamide,Anthelmintic,Modulates WNT/β-catenin and STAT3 and acts as a mitochondrial uncoupler,3.0,10.0,µM,AML activity reports; solubility/handling concerns noted
+Disulfiram,Aldehyde dehydrogenase (ALDH) inhibitor / repurposed addiction therapy,Induces proteostasis/redox stress; cytotoxicity often copper-dependent,10.0,30.0,µM,Approved for alcoholism; noted as often Cu2+-dependent (± copper condition)
+Auranofin,Thioredoxin reductase inhibitor,Inhibits thioredoxin reductase leading to ROS/redox stress,3.0,10.0,µM,Approved for rheumatoid arthritis; AML sensitivity reports mentioned
+Arsenic trioxide,Antineoplastic (APL therapy),Induces redox/proteotoxic stress,10.0,30.0,µM,Approved for APL; broader AML effects at higher doses noted
+Valproic acid,HDAC inhibitor (weak) / antiepileptic,Weak HDAC inhibition leading to epigenetic modulation and differentiation effects,3.0,10.0,mM,Approved antiepileptic
+Hydroxychloroquine,Antimalarial; autophagy inhibitor,Inhibits autophagy via lysosomal inhibition,60.0,200.0,nM,Approved antimalarial; described as having combination potential in AML
+Metformin,Antidiabetic (biguanide),Inhibits mitochondrial complex I and activates AMPK; anti-proliferative in some AML models,15.0,50.0,mM,Approved for type 2 diabetes

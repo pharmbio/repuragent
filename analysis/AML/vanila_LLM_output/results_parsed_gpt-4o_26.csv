@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,"Inhibits the B-cell lymphoma 2 (BCL-2) protein, promoting apoptosis.",0.1,10.0,µM,Common in treating chronic lymphocytic leukemia.
+Ruxolitinib,JAK1/2 inhibitor,"Blocks Janus kinase 1 and 2 pathways, affecting immune and cancer cell signaling.",0.01,1.0,µM,Used in myelofibrosis treatment.
+Sorafenib,Multikinase inhibitor,"Inhibits tumor cell proliferation and angiogenesis by targeting Raf kinase, VEGF, and PDGFR.",1.0,10.0,µM,"Approved for liver, kidney, and thyroid cancers."
+Dasatinib,BCR-ABL inhibitor,"Inhibits BCR-ABL tyrosine kinase, affecting cancer cell proliferation.",0.01,1.0,µM,Commonly used in chronic myeloid leukemia.
+Tofacitinib,JAK inhibitor,"Inhibits Janus kinase pathways, regulating immune function and cancer growth.",0.1,5.0,µM,Approved for rheumatoid arthritis treatment.
+Ibrutinib,Bruton's tyrosine kinase inhibitor,"Inhibits BTK, interfering with B-cell receptor signaling.",0.1,1.0,µM,Used for chronic lymphocytic leukemia and mantle cell lymphoma.
+Imatinib,BCR-ABL inhibitor,"Targets BCR-ABL and c-KIT tyrosine kinases, reducing cancer cell proliferation.",0.1,1.0,µM,First-line treatment for chronic myeloid leukemia.
+Olaparib,PARP inhibitor,"Inhibits PARP enzyme, impairing cancer cell DNA repair mechanisms.",1.0,10.0,µM,Used in BRCA-mutated cancers.
+Selinexor,XPO1 inhibitor,"Blocks XPO1, leading to nuclear retention of tumor suppressor proteins.",0.1,1.0,µM,Approved for multiple myeloma.
+Palbociclib,CDK4/6 inhibitor,"Inhibits cyclin-dependent kinases 4 and 6, halting cancer cell cycle progression.",0.1,5.0,µM,Used in HR-positive breast cancer.
+Ponatinib,Multikinase inhibitor,"Inhibits BCR-ABL and other tyrosine kinases, targeting cancer cell growth.",0.1,1.0,µM,Effective against T315I mutation in chronic myeloid leukemia.
+Nivolumab,Checkpoint inhibitor,"Blocks PD-1, enhancing immune response against tumors.",0.0,0.0,,Used in various immunotherapy contexts; requires tailored concentrations.
+Pembrolizumab,Checkpoint inhibitor,"Blocks PD-1, enhancing immune response against tumors.",0.0,0.0,,Similar to nivolumab with tailored use in immune assays.
+Atezolizumab,Checkpoint inhibitor,"Blocks PD-L1, enhancing immune surveillance.",0.0,0.0,,Concentration dependent on immune parameters.
+Everolimus,mTOR inhibitor,"Inhibits mTOR signaling pathway, affecting tumor cell growth.",1.0,10.0,µM,"Approved for renal cell carcinoma, TSC, and more."
+Temsirolimus,mTOR inhibitor,"Inhibits mTOR pathway, reducing cancer cell growth and proliferation.",0.1,5.0,µM,Used for renal cell carcinoma.
+Plerixafor,CXCR4 antagonist,"Blocks CXCR4 axis, affecting hematopoietic cell mobilization.",0.1,10.0,µM,Used in stem cell mobilization for transplantation.
+Lenalidomide,Immunomodulatory agent,Modulates immune function and inhibits angiogenesis.,0.1,10.0,µM,Common for multiple myeloma treatment.
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome, disrupting protein degradation in cancer cells.",0.01,1.0,µM,Used in multiple myeloma and mantle cell lymphoma.
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases, affecting gene expression and cancer cell death.",0.1,10.0,µM,Used for cutaneous T-cell lymphoma.

@@ -1,0 +1,86 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is a rapidly growing field of research, as it may provide quicker and more cost-effective treatment options. The following are 20 drugs that have shown potential for repurposing in the context of AML, particularly with respect to inhibiting AML cell line proliferation, including MOLM13 cells. Note that the specific IC50 values can vary based on experimental conditions and cell lines, and should be verified through experimental assays. The suggested concentrations are approximations based on existing literature for various assays.
+
+### Top 20 Drugs for Potential Repurposing in AML 
+
+1. **Venetoclax (ABT-199)**
+   - IC50: 10-100 nM
+
+2. **Azacitidine (Vidaza)**
+   - IC50: 0.5-5 µM
+
+3. **Decitabine (Dacogen)**
+   - IC50: 0.4-10 µM
+
+4. **Clofarabine**
+   - IC50: 0.2-1 µM
+
+5. **Hydroxyurea**
+   - IC50: 50-200 µM
+
+6. **Thalidomide**
+   - IC50: 1-3 µM
+
+7. **Lenalidomide (Revlimid)**
+   - IC50: 1-10 µM
+
+8. **Bortezomib (Velcade)**
+   - IC50: 5-50 nM
+
+9. **Romidepsin**
+   - IC50: 10-200 nM
+
+10. **Histone deacetylase inhibitors (such as panobinostat)**
+    - IC50: 1-10 µM
+
+11. **Gleevec (Imatinib)**
+    - IC50: 0.1-1 µM
+
+12. **Topotecan**
+    - IC50: 1-300 nM
+
+13. **Doxorubicin**
+    - IC50: 0.1-1 µM
+
+14. **Carfilzomib**
+    - IC50: 50-500 nM
+
+15. **Pomalidomide**
+    - IC50: 0.5-5 µM
+
+16. **Sunitinib**
+    - IC50: 1-10 µM
+
+17. **Sorafenib**
+    - IC50: 0.5-5 µM
+
+18. **Selinexor**
+    - IC50: 100 nM - 1 µM
+
+19. **Metformin**
+    - IC50: 500-1500 µM
+
+20. **Auranofin**
+    - IC50: 5-20 µM
+
+### Experimental Considerations
+- **Cell Line**: MOLM13 is a human acute myeloid leukemia cell line and should be cultured under optimal conditions for the assay.
+- **Assay Design**: Various methods such as MTT, WST-1, or flow cytometry can be used to determine cell viability and proliferation.
+- **Concentration Range**: The suggested concentrations should be tested in a range to establish a dose-response curve for accurate IC50 determination.
+- **Controls**: Include appropriate positive and negative controls to validate the results.
+
+### A Note on Drug Development
+For any repurposed drug, it's critical to assess drug toxicity, the pharmacodynamics, and the pharmacokinetics in the context of AML. Additionally, it's important to confirm findings in clinical and preclinical models before considering any changes to treatment protocols.
+
+Always refer to the latest research literature and guidelines for the most up-to-date information.

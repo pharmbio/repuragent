@@ -1,0 +1,12 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Romidepsin,HDAC inhibitor,Inhibits histone deacetylation,1.0,10.0,nM,,romidepsin,False,CHEMBL343448
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylation,1.0,10.0,µM,,panobinostat,False,CHEMBL483254
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and SRC family kinases,0.1,1.0,µM,,dasatinib,False,CHEMBL1421
+Nilotinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL,0.1,1.0,µM,,nilotinib,False,CHEMBL255863
+Bortezomib,Proteasome inhibitor,Inhibits proteasome function,0.01,1.0,µM,,bortezomib,False,CHEMBL325041
+Thalidomide,Immunomodulator,Modulates immune response,1.0,10.0,µM,,thalidomide,False,CHEMBL426123
+Sunitinib,Tyrosine kinase inhibitor,Inhibits multiple kinases involved in tumor growth,0.1,1.0,µM,,sunitinib,False,CHEMBL597365
+Beclomethasone,Corticosteroid,Anti-inflammatory properties,10.0,100.0,nM,,beclomethasone,False,CHEMBL1586
+Cladribine,Antimetabolite,Inhibits DNA synthesis,0.1,1.0,µM,,cladribine,False,CHEMBL1619
+Auranofin,Antirheumatic,Antioxidant and pro-apoptotic effects,1.0,10.0,µM,,auranofin,False,CHEMBL1366
+Trametinib,MEK inhibitor,Inhibits MEK1/2 in the MAPK pathway,5.0,50.0,nM,,trametinib,False,CHEMBL2103875

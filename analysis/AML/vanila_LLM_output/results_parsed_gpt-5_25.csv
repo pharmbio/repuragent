@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Ponatinib,Multikinase inhibitor,"Inhibits FLT3-ITD and other tyrosine kinases (e.g., BCR-ABL), suppressing downstream signaling",1.0,10.0,nM,"Active against resistant FLT3 mutants; also targets ABL, PDGFR, VEGFR; aka AP24534"
+Sorafenib,Multikinase inhibitor,"Inhibits RAF, VEGFR, PDGFR, and FLT3, blocking FLT3-ITD signaling",0.5,3.0,µM,Clinical activity in FLT3-ITD AML; aka BAY 43-9006
+Sunitinib,Multikinase inhibitor,"Inhibits FLT3, VEGFR, PDGFR and other RTKs to reduce AML cell signaling",50.0,300.0,nM,Early FLT3 inhibitor with activity in FLT3-ITD AML; aka SU11248
+Cabozantinib,Multikinase inhibitor,Inhibits MET and VEGFR2 and also targets FLT3 (including some resistance mutants),10.0,60.0,nM,Also known as XL184; preclinical FLT3-ITD AML activity reported
+Dasatinib,SRC/ABL family kinase inhibitor,Inhibits SRC/ABL kinases and related signaling that supports AML proliferation,0.2,1.0,µM,Used in CML; shows activity and synergy in AML models
+Selinexor,XPO1 inhibitor,"Blocks nuclear export (XPO1/CRM1), retaining tumor suppressors in the nucleus",50.0,200.0,nM,Also known as KPT-330; strong preclinical AML activity including MOLM-13
+Bortezomib,Proteasome inhibitor,Reversible 26S proteasome inhibition leading to proteotoxic stress and apoptosis,5.0,15.0,nM,Also known as VELCADE; AML cell line sensitivity reported
+Carfilzomib,Proteasome inhibitor,Irreversible 20S proteasome inhibition causing accumulation of misfolded proteins,20.0,100.0,nM,Also known as KYPROLIS; AML lines show susceptibility
+Panobinostat,HDAC inhibitor,"Pan-HDAC inhibition (class I/II), inducing histone acetylation and apoptosis",5.0,20.0,nM,Also known as LBH589; synergy with FLT3 inhibitors reported
+Vorinostat,HDAC inhibitor,"Histone deacetylase inhibition (class I/II), altering gene expression and inducing apoptosis",1.0,2.0,µM,Also known as SAHA; AML growth inhibition documented
+Romidepsin,HDAC inhibitor,Class I selective HDAC inhibition leading to apoptosis in AML cells,2.0,10.0,nM,Also known as FK228; potent class I HDAC inhibitor
+Everolimus,mTORC1 inhibitor,Rapalog that inhibits mTORC1 signaling to reduce protein synthesis and proliferation,1.0,5.0,µM,Also known as RAD001; often cytostatic but can be cytotoxic in AML
+Temsirolimus,mTOR inhibitor,Rapalog that inhibits mTOR signaling and AML cell proliferation,0.5,2.0,µM,Also known as CCI-779; related to sirolimus/rapamycin class
+Ruxolitinib,JAK1/2 inhibitor,Blocks JAK-STAT signaling pathway that supports AML survival,1.0,5.0,µM,Used for myelofibrosis/PV; activity in AML subsets and combinations
+Fostamatinib,SYK inhibitor (prodrug),"Inhibits SYK kinase (via active metabolite R406), impairing pro-survival signaling",1.0,3.0,µM,Active metabolite R406 mediates activity; preclinical AML efficacy including FLT3-ITD contexts
+Tigecycline,Antibiotic; mitochondrial translation inhibitor,"Inhibits mitochondrial ribosomal translation, selectively impairing AML cell metabolism",1.0,5.0,µM,Glycylcycline antibiotic; selective toxicity to AML cells/stem cells reported
+Pimozide,Antipsychotic; STAT5 pathway inhibitor,D2 receptor antagonist that inhibits STAT5 signaling downstream of FLT3-ITD,2.0,10.0,µM,Repurposed for STAT5 inhibition in AML (MOLM-13/MV4-11)
+Ciclopirox,Antifungal; iron chelator,"Chelates iron and inhibits iron-dependent enzymes, inducing apoptosis in AML",1.0,5.0,µM,Also referred to as CPX; disrupts iron-dependent pathways
+Disulfiram,Aldehyde dehydrogenase inhibitor (Cu-dependent antineoplastic activity),"In presence of copper, forms Cu–DDC complex that targets NPL4/proteasome",0.1,1.0,µM,"Activity requires physiological copper (e.g., CuCl2 supplementation); aka DSF"
+Niclosamide,Anthelmintic,Disrupts Wnt/β-catenin and mTOR signaling and perturbs cellular energetics,0.3,2.0,µM,Reported anti-leukemia activity; consider solubility/formulation for assays

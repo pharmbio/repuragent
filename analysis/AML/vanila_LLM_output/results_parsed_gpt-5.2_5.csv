@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Midostaurin,Multi-kinase inhibitor (PKC/FLT3),Inhibits FLT3 and PKC signaling to reduce proliferation/survival in FLT3-driven AML,0.3,3.0,µM,AML-approved; described as PKC/FLT3 multi-kinase inhibitor
+Gilteritinib,Kinase inhibitor (FLT3/AXL),Inhibits FLT3 and AXL receptor tyrosine kinases to block AML growth signaling,0.1,1.0,µM,AML-approved
+Quizartinib,Kinase inhibitor (FLT3),Selective inhibition of FLT3 signaling to suppress FLT3-driven AML proliferation,0.03,300.0,nM,Clinical/approved in some regions
+Sorafenib,Multi-kinase inhibitor,Inhibits multiple kinases including FLT3 to reduce AML cell proliferation/survival,0.3,3.0,µM,Repurposed off-label in FLT3-ITD AML
+Sunitinib,Multi-kinase inhibitor,Inhibits multiple receptor tyrosine kinases with reported FLT3 activity,1.0,10.0,µM,Includes FLT3 activity
+Ponatinib,Multi-kinase inhibitor,Broad kinase inhibition; reported activity in some FLT3-driven contexts,0.3,3.0,µM,Activity noted in some FLT3-driven contexts
+Venetoclax,BCL-2 inhibitor (BH3 mimetic),Inhibits BCL-2 to trigger mitochondrial apoptosis in AML cells,0.1,10.0,µM,AML-approved in combinations; often steep dose–response so include very low nM points
+Navitoclax,BCL-2/BCL-xL inhibitor (BH3 mimetic),Inhibits anti-apoptotic BCL-2 family proteins (BCL-2 and BCL-xL) to promote apoptosis,0.3,10.0,µM,Also referred to as ABT-263; thrombocytopenia limits clinical use but useful preclinically
+AT-101,BH3 mimetic-like apoptosis modulator,Gossypol-derived compound with BH3 mimetic-like pro-apoptotic activity and multiple targets,0.1,50.0,µM,Alternative name: gossypol; noted as multiple targets
+Trametinib,MEK inhibitor,Inhibits MEK1/2 in the MAPK pathway to suppress proliferation in MAPK-active AML subsets,0.3,3.0,µM,Described as effective in MAPK-active AML subsets
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases to alter chromatin/transcription and reduce tumor cell viability,0.3,300.0,nM,Hematologic activity; potent in vitro
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases to change gene expression and induce growth arrest/apoptosis,10.0,30.0,µM,Also referred to as SAHA
+Romidepsin,HDAC inhibitor,Potent HDAC inhibition leading to transcriptional changes and apoptosis,0.03,30.0,nM,Noted as very potent
+Valproic acid,HDAC inhibitor (weak),Weak HDAC inhibition with epigenetic effects; often requires high concentrations in vitro,0.1,10.0,mM,Weak potency; frequently requires mM concentrations in vitro
+Azacitidine,Hypomethylating agent (DNA/RNA),Incorporates into nucleic acids and inhibits DNMT activity to reduce methylation and alter gene expression,10.0,100.0,µM,AML-approved; needs longer exposure; note suggests 96 h exposure or repeated dosing to model clinical schedule
+Decitabine,Hypomethylating agent (DNA),Incorporates into DNA and inhibits DNMTs causing DNA hypomethylation and transcriptional reprogramming,1.0,10.0,µM,AML/MDS-approved; often more potent than azacitidine in vitro; note suggests 96 h exposure
+Bortezomib,Proteasome inhibitor,Inhibits the proteasome to induce proteotoxic stress and apoptosis,0.1,100.0,nM,Cited with multiple AML studies; suggested positive control
+Carfilzomib,Proteasome inhibitor,Irreversibly inhibits the proteasome to trigger proteostasis stress and apoptosis,0.3,300.0,nM,Noted as potent
+Auranofin,Thioredoxin reductase inhibitor,Inhibits thioredoxin reductase to increase oxidative stress and promote cell death,10.0,10.0,µM,Induces oxidative stress; activity reported in AML models
+Chloroquine,Lysosomotropic/autophagy inhibitor,"Raises lysosomal pH and inhibits autophagy/lysosomal function, sometimes enhancing AML cell death",0.3,100.0,µM,Modest as single agent; sometimes enhances AML cell death

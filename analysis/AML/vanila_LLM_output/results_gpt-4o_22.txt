@@ -1,0 +1,36 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for treating acute myeloid leukemia (AML) is an exciting area of research, as it can potentially expedite the availability of new treatments due to the established safety profiles of these drugs. However, it is crucial to note that concrete experimental data supporting the efficacy and proper dosage of these drugs for AML, and specifically for MOLM-13 cell lines, may not be readily available. Nonetheless, here are some promising candidates for repurposing, along with general information or typical concentrations for IC50 experiments based on existing research. Keep in mind that detailed experimental validation is required for each suggestion:
+
+1. **Venetoclax**: Initially used for chronic lymphocytic leukemia (CLL). [300-500 nM]
+2. **Dasatinib**: Tyrosine kinase inhibitor used for chronic myeloid leukemia. [10-100 nM]
+3. **Imatinib**: Another tyrosine kinase inhibitor initially used for CML. [1-5 μM]
+4. **Sorafenib**: A multikinase inhibitor, used in various cancers. [1-10 μM]
+5. **Ruxolitinib**: JAK1/2 inhibitor, used for myelofibrosis and polycythemia vera. [1-10 μM]
+6. **Etoposide**: A topoisomerase inhibitor, used in various cancers. [1-10 μM]
+7. **Vorinostat (SAHA)**: A histone deacetylase inhibitor, used in cutaneous T-cell lymphoma. [1-5 μM]
+8. **Arsenic Trioxide**: Used in acute promyelocytic leukemia. [0.5-2 μM]
+9. **Bortezomib**: A proteasome inhibitor, used for multiple myeloma. [5-20 nM]
+10. **Tamoxifen**: Used mainly for breast cancer treatment. [5-10 μM]
+11. **Chloroquine**: An antimalarial with some anticancer potential. [5-20 μM]
+12. **Metformin**: Commonly used for type 2 diabetes, with emerging anticancer effects. [1-10 mM]
+13. **Celecoxib**: A COX-2 inhibitor, used for arthritis pain and inflammation. [5-20 μM]
+14. **Itraconazole**: Antifungal drug potentially inhibiting hedgehog pathway and angiogenesis in cancer. [1-10 μM]
+15. **Rifampicin**: Used for tuberculosis, with evidence of antiproliferative effects. [10-50 μM]
+16. **Simvastatin**: A statin, targeting cholesterol and showing potential in cancer therapy. [1-10 μM]
+17. **Hydroxychloroquine**: Related to chloroquine with autophagy inhibition effects. [5-20 μM]
+18. **Thalidomide**: Angiogenesis inhibitor used in multiple myeloma. [5-20 μM]
+19. **Dimethyl fumarate**: Used for multiple sclerosis, with an effect on NRF2 pathway. [5-20 μM]
+20. **Disulfiram**: Used for alcohol dependency, has shown some anticancer potential. [0.1-1 μM]
+
+Please note that these concentrations are rough estimates based on general IC50 experiments typically found in literature. The specific effective concentrations for inhibiting MOLM-13 cells might differ significantly due to unique cellular context, and preliminary assays should be conducted to determine the exact IC50 values for these drugs against MOLM-13 using standardized protocols. Always consult up-to-date, peer-reviewed research publications and collaborate with pharmacological experts when planning experiments.

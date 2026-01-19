@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multi-kinase TKI,"Inhibits FLT3 and other tyrosine kinases, suppressing AML proliferation",5.0,30.0,nM,Approved for HCC/RCC/thyroid; robust activity in FLT3-ITD lines including MOLM-13 and MV4-11
+Ponatinib,BCR-ABL TKI,Inhibits BCR-ABL and FLT3 (including resistant FLT3 mutants),5.0,30.0,nM,Approved for CML/Ph+ ALL; active in MOLM-13/MV4-11
+Sunitinib,Multi-kinase TKI,Inhibits FLT3 and other RTKs to suppress AML cell proliferation,50.0,200.0,nM,Approved for RCC/GIST; SU11248 in early literature
+Fostamatinib,SYK inhibitor,SYK inhibition via active metabolite R406 reduces AML growth/survival,0.3,2.0,µM,Approved for ITP; R406 is the active metabolite; activity shown in MOLM-13
+Bortezomib,Proteasome inhibitor,26S proteasome inhibition induces apoptosis and cell-cycle arrest,5.0,30.0,nM,Active in AML lines including MOLM-13; combinable with cytarabine/anthracyclines
+Carfilzomib,Proteasome inhibitor,Irreversible 20S proteasome inhibition causing AML cell cytotoxicity,5.0,50.0,nM,Active in FLT3-ITD models; synergy with other agents reported
+Selinexor,XPO1 inhibitor,"Blocks nuclear export (XPO1/CRM1), inducing anti-leukemic activity",0.1,0.8,µM,Broad AML activity including MOLM-13; clinical AML trials conducted
+Panobinostat,HDAC inhibitor,Pan-HDAC inhibition leading to apoptosis/differentiation in AML cells,10.0,50.0,nM,Potent in AML lines; MOLM-13 included in datasets
+Vorinostat,HDAC inhibitor,HDAC inhibition producing anti-proliferative and pro-apoptotic effects,1.0,3.0,µM,Also known as SAHA; approved for CTCL; studied with hypomethylators in AML
+Tigecycline,Antibiotic; mitochondrial translation inhibitor,Inhibits mitochondrial translation/respiration to impair AML cell viability,0.5,5.0,µM,Effective in primary AML and MOLM-13/MV4-11
+Atovaquone,Antiprotozoal; complex III inhibitor,Inhibits mitochondrial electron transport complex III (OXPHOS inhibition),1.0,10.0,µM,Targets OXPHOS-dependent AML; activity shown in FLT3-ITD models
+Mefloquine,Antimalarial; lysosomotropic agent,Induces lysosomal dysfunction leading to apoptosis in AML cells,2.0,10.0,µM,Activity observed in MOLM-13 and primary AML blasts
+Auranofin,Anti-rheumatic; thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increases ROS, induces apoptosis",0.5,2.0,µM,Active in FLT3-ITD AML; synergy with cytarabine/ATM inhibitors reported
+Disulfiram,ALDH inhibitor/metal chelator,Copper-enhanced proteasome/NPL4 inhibition; ALDH inhibition,0.2,2.0,µM,Potency typically sub- to low-micromolar in presence of physiologic copper; higher without added copper; numeric range inferred from phrasing as exact values were not provided in the text
+Niclosamide,Anthelmintic; pathway/mitochondrial uncoupling modulator,Inhibits Wnt/STAT3/mTOR signaling and uncouples mitochondria,0.2,2.0,µM,Activity reported in FLT3-ITD AML models
+Ciclopirox olamine,Antifungal; iron chelator/RNR inhibitor,"Chelates iron and inhibits ribonucleotide reductase, causing apoptosis and cell-cycle arrest",1.0,5.0,µM,Active in AML lines including MOLM-13; preclinical AML models show activity
+Deferasirox,Iron chelator,Iron deprivation reduces AML proliferation and induces apoptosis,5.0,20.0,µM,Active across multiple AML lines including FLT3-ITD models
+Pimozide,Antipsychotic,Inhibits STAT5 signaling downstream of FLT3-ITD; calmodulin/calpain effects,2.0,10.0,µM,Active in MOLM-13/MV4-11 with apoptosis induction; QT risk class noted in general
+Nelfinavir,HIV protease inhibitor,"Induces ER/proteotoxic stress, affects UPR and PI3K/AKT signaling",4.0,10.0,µM,Cytotoxic to AML lines; enhances proteasome inhibitor activity
+Dasatinib,SRC/ABL/KIT TKI,"Inhibits SRC-family kinases, ABL, KIT; attenuates some FLT3 signaling",0.1,1.0,µM,Anti-proliferative in AML lines including MOLM-13 in some reports; often stronger in combinations

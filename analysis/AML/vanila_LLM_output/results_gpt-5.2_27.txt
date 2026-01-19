@@ -1,0 +1,85 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest *candidate* repurposing drugs with **experimentally testable concentration ranges** for running an **IC₅₀ proliferation assay in AML cell lines (including MOLM-13)**.  
+
+Important constraints up front:
+- **I can’t reliably claim** each drug will inhibit MOLM‑13 proliferation without referencing specific experimental data (which varies by lab conditions, serum, timepoint, readout, etc.).  
+- What I *can* do is: pick **existing (marketed/clinical) drugs with plausible AML activity** (often via kinase/epigenetic/metabolic stress or apoptosis pathways) and provide **practical screening ranges** that are routinely used and are **highly likely to bracket an IC₅₀** if the compound has activity.  
+- Any hits should be followed with confirmation (dose–response, time course, apoptosis/cell-cycle markers, target engagement).
+
+## Suggested repurposing drugs (20) + practical IC₅₀ assay concentration ranges
+Assay ranges below are **final well concentrations** intended for **8–12 point dose–response** (e.g., 1:3 or 1:2 dilutions). For MOLM‑13, a common starting point is **72 h viability readout** (CellTiter-Glo/Resazurin), but 48–96 h is also used.
+
+| Drug (existing use) | Primary target / rationale (high level) | Suggested IC₅₀ test range (µM) | Notes for MOLM‑13-style assays |
+|---|---|---:|---|
+| **Midostaurin** | Multi-kinase; FLT3 | 0.001–3 | Include **≤0.1% DMSO**; potent range |
+| **Gilteritinib** | FLT3/AXL inhibitor | 0.0003–1 | Often sub-µM in FLT3-driven contexts |
+| **Sorafenib** | Multi-kinase (RAF/VEGFR/FLT3) | 0.01–10 | Solubility limits; watch precipitation |
+| **Sunitinib** | Multi-kinase | 0.01–10 | Light sensitive; use fresh dilutions |
+| **Dasatinib** | SRC/ABL family | 0.001–3 | Can show steep dose response |
+| **Ponatinib** | Multi-kinase (incl. FLT3 activity reported in some contexts) | 0.001–3 | Potent; keep low DMSO |
+| **Erlotinib** | EGFR inhibitor (often off-target stress in AML) | 0.1–50 | Many AML lines need higher µM |
+| **Trametinib** | MEK inhibitor | 0.001–3 | Particularly relevant if MAPK-dependent |
+| **Everolimus** | mTORC1 inhibitor | 0.001–10 | Often cytostatic; consider longer timepoints |
+| **Temsirolimus** | mTOR inhibitor | 0.001–10 | Similar to everolimus |
+| **Bortezomib** | Proteasome inhibitor | 0.0003–0.3 | Very potent; avoid plastic binding issues |
+| **Carfilzomib** | Proteasome inhibitor | 0.0003–0.3 | Short half-life in media; timing matters |
+| **Venetoclax** | BCL-2 inhibitor | 0.001–10 | Strongly context-dependent; serum effects |
+| **Navitoclax** | BCL-2/BCL-XL | 0.01–10 | Can be more cytotoxic; platelet toxicity irrelevant in vitro |
+| **Ruxolitinib** | JAK1/2 inhibitor | 0.01–30 | Often mid-µM in AML lines |
+| **Tofacitinib** | JAK inhibitor | 0.1–50 | Typically weaker than ruxolitinib in AML |
+| **Panobinostat** | HDAC inhibitor | 0.001–1 | Potent; include low nM points |
+| **Vorinostat (SAHA)** | HDAC inhibitor | 0.05–10 | Usually µM-range activity |
+| **Valproic acid** | HDAC (weak) | 100–5000 | Needs **mM**; use sodium valproate (aqueous) |
+| **Metformin** | Mitochondrial complex I stress | 100–20000 | Needs **mM**; media glucose strongly affects |
+
+### Why these ranges?
+They are designed to be **broad enough to catch activity** across:
+- **high-potency targeted inhibitors** (often nM–low µM),
+- **epigenetic agents** (nM–µM),
+- **metabolic/pleiotropic drugs** (often high µM–mM in vitro).
+
+## Practical IC₅₀ assay setup (MOLM‑13 focused)
+If you want, I can tailor this to your exact plate format and readout.
+
+**Typical conditions**
+- Cells: MOLM‑13 in log phase, viability >90%
+- Plate: 96-well (white for luminescence)
+- Seeding: ~5,000–15,000 cells/well (optimize so control wells remain in exponential growth for 72 h)
+- Exposure: **72 h** (common for MOLM‑13 drug response curves)
+- Readout: CellTiter-Glo (ATP) or Resazurin
+
+**Dose-response design**
+- Use **10–12 concentrations**, 1:3 dilution series  
+- Keep **DMSO constant** across wells (commonly 0.1% max; some cells tolerate 0.2%).
+- Include controls: vehicle only, and at least one strong cytotoxic control (e.g., staurosporine or doxorubicin) for assay QC.
+
+**Example 10-point 1:3 series (starting at 10 µM)**
+10, 3.33, 1.11, 0.37, 0.123, 0.041, 0.0137, 0.0046, 0.0015, 0.0005 µM  
+(Adjust start based on the table above; e.g., start at 0.3 µM for bortezomib/carfilzomib.)
+
+## A few “gotchas” that strongly affect apparent IC₅₀
+- **Serum binding** (e.g., venetoclax/navitoclax): IC₅₀ can shift dramatically with FBS%.
+- **Cell density**: higher seeding can make drugs appear weaker.
+- **Assay duration**: cytostatic agents (mTOR inhibitors) may need 96 h to show clearer effects.
+- **Compound adsorption/instability**: proteasome inhibitors and hydrophobic TKIs can be sensitive to handling.
+
+## If you want this list to be *MOLM‑13-optimized*
+Tell me:
+1) your **viability readout** (CTG vs resazurin vs trypan),  
+2) **assay duration** (48/72/96 h),  
+3) **FBS %**,  
+4) max **DMSO %**, and  
+5) whether you specifically want **non-oncology drugs only** (e.g., excluding approved cancer TKIs).  
+
+Then I can refine the list to prioritize compounds most likely to show measurable MOLM‑13 inhibition in the chosen conditions and provide a ready-to-run plate map concentration set for each.

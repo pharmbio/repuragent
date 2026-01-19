@@ -1,0 +1,40 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is an attractive strategy, particularly due to the wealth of existing safety and pharmacokinetic data. Below is a list of 20 drugs that could be considered for repurposing, along with experimentally testable concentrations for IC50 assays based on current literature. Note that these are suggestions and specific IC50 values can vary by assay results and specific conditions.
+
+1. **Azacitidine** - IC50: ~0.1-1 µM
+2. **Decitabine** - IC50: ~0.1-1 µM
+3. **Dexamethasone** - IC50: ~1-10 µM
+4. **Clofarabine** - IC50: ~0.1-5 µM
+5. **Imatinib (Gleevec)** - IC50: ~0.1-1 µM
+6. **Nilotinib** - IC50: ~0.1-1 µM
+7. **Midostaurin** - IC50: ~0.1-1 µM
+8. **Venetoclax** - IC50: ~1-10 µM
+9. **Sorafenib** - IC50: ~0.5-5 µM
+10. **Ruxolitinib** - IC50: ~0.1-1 µM
+11. **Sunitinib** - IC50: ~0.1-1 µM
+12. **Thalidomide** - IC50: ~10-20 µM
+13. **Lenalidomide** - IC50: ~1-10 µM
+14. **Bortezomib** - IC50: ~10-50 nM
+15. **Hydroxyurea** - IC50: ~50-100 µM
+16. **Tretinoin (All-trans retinoic acid)** - IC50: ~0.1-1 µM
+17. **Metformin** - IC50: ~1-10 mM
+18. **Quisinostat** - IC50: ~0.1-1 µM
+19. **Curcumin** - IC50: ~5-20 µM
+20. **Resveratrol** - IC50: ~25-50 µM
+
+### Notes
+- The IC50 values are approximate and can vary depending on cell line, assay conditions, and experimental setup. It's essential to validate these results in your specific assays.
+- Heterogeneity in AML makes it crucial to test these compounds in relevant cell lines, including MOLM13.
+- Consider additional factors such as combination therapies, as some drugs may be more effective when used alongside others.
+- Conducting preliminary dose-response experiments will help determine the precise IC50 values for MOLM13 cells. Adjust concentrations according to the results and ensure that you adhere to all safety and ethical guidelines when conducting experiments.

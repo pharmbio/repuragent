@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Azacitidine,Hypomethylating agent,"Inhibits DNA methyltransferase, leading to reduced DNA methylation and reactivation of silenced genes",0.1,10.0,µM,Also known as Vidaza.
+Decitabine,Hypomethylating agent,"Inhibits DNA methyltransferase, leading to reduced DNA methylation and reactivation of silenced genes",0.1,10.0,µM,Also known as Dacogen.
+Gleevec,Tyrosine kinase inhibitor,"Inhibits Bcr-Abl tyrosine kinase activity, leading to apoptosis in Bcr-Abl expressing cells",0.1,5.0,µM,Also known as Imatinib.
+Sorafenib,Kinase inhibitor,Inhibits multiple kinases involved in tumor proliferation and angiogenesis,1.0,10.0,µM,Also known as Nexavar.
+Nilotinib,Tyrosine kinase inhibitor,Inhibits Bcr-Abl kinase to induce apoptosis,0.1,5.0,µM,Also known as Tasigna.
+Dasatinib,Tyrosine kinase inhibitor,Inhibits Bcr-Abl and several SRC family kinases,0.1,2.0,µM,Also known as Sprycel.
+Venetoclax,BCL-2 inhibitor,Inhibits BCL-2 protein to induce apoptosis in cancer cells,0.1,10.0,µM,Also known as Venclexta.
+Lenalidomide,Immunomodulatory drug,Modulates immune response and inhibits tumor growth,10.0,100.0,µM,Also known as Revlimid.
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response,1.0,10.0,µM,
+Clofarabine,Antimetabolite,Inhibits DNA synthesis and induces apoptosis,0.1,5.0,µM,
+Dexamethasone,Glucocorticoid,Induces apoptosis in lymphoid cells; anti-inflammatory effects,0.1,10.0,µM,
+Bortezomib,Proteasome inhibitor,Inhibits proteasome function leading to apoptosis in cancer cells,1.0,20.0,nM,Also known as Velcade.
+Cyclophosphamide,Alkylating agent,Crosslinks DNA leading to cell death,0.1,10.0,µM,Also known as Cytoxan.
+Topotecan,Topoisomerase inhibitor,Inhibits topoisomerase I leading to DNA damage and apoptosis,0.1,10.0,µM,
+Etoposide,Topoisomerase inhibitor,Inhibits topoisomerase II leading to DNA damage and apoptosis,0.1,10.0,µM,Also known as VP-16.
+Quinacrine,Antimalarial/anticancer,Interacts with DNA and may inhibit cell proliferation,1.0,10.0,µM,
+Metformin,Antidiabetic drug,Activates AMPK and inhibits glucose production in the liver,1.0,10.0,mM,
+Atorvastatin,Statin,"Inhibits HMG-CoA reductase, reducing cholesterol synthesis",1.0,10.0,µM,Also known as Lipitor.
+Rapamycin,mTOR inhibitor,"Inhibits mTOR pathway, leading to reduced cell proliferation",0.1,5.0,µM,Also known as Sirolimus.
+Ticlopidine,Antiplatelet agent,Inhibits platelet aggregation by blocking ADP receptors,10.0,100.0,µM,

@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Midostaurin,Multi-kinase inhibitor (FLT3 inhibitor),Inhibits multiple kinases including FLT3,0.3,300.0,nM,Rationale emphasizes MOLM-13/FLT3-ITD biology; AML precedent
+Sunitinib,Multi-kinase inhibitor,"Inhibits multiple kinases including FLT3, KIT, and VEGFR",1.0,1000.0,nM,Targets listed: FLT3/KIT/VEGFR
+Sorafenib,Kinase inhibitor (RAF/FLT3 inhibitor),Inhibits RAF kinases and FLT3,1.0,1000.0,nM,Noted as used off-label in FLT3-ITD AML
+Dasatinib,Tyrosine kinase inhibitor (SRC/ABL inhibitor),Inhibits SRC family kinases and ABL,0.3,300.0,nM,Mentioned to hit kinases relevant to AML signaling
+Bosutinib,Tyrosine kinase inhibitor (SRC/ABL inhibitor),Inhibits SRC and ABL kinases,3.0,3000.0,nM,Described as potential AML cytostatic effects
+Ponatinib,Multi-kinase inhibitor (broad-spectrum TKI),Broad kinase inhibition; noted activity in FLT3-mut AML contexts,0.3,300.0,nM,Context: FLT3-mut AML settings
+Nilotinib,Tyrosine kinase inhibitor (ABL/KIT/PDGFR inhibitor),"Inhibits ABL, KIT, and PDGFR",10.0,10.0,µM,Range given as 10 nM–10 µM; affects AML subsets
+Imatinib,Tyrosine kinase inhibitor (ABL/KIT/PDGFR inhibitor),"Inhibits ABL, KIT, and PDGFR",0.1,30.0,µM,Described as limited but testable in panels
+Ruxolitinib,JAK inhibitor,Inhibits JAK1 and JAK2 signaling,10.0,10.0,µM,Rationale: AML cytokine/JAK-STAT dependence in some settings
+Tofacitinib,JAK inhibitor,Inhibits JAK pathway signaling,30.0,30.0,µM,Presented as a repurposing angle
+Trametinib,MEK inhibitor,Inhibits MEK1/2 in the MAPK pathway,0.3,300.0,nM,Rationale: MAPK pathway in AML
+Selumetinib,MEK inhibitor,Inhibits MEK1/2,3.0,3.0,µM,Noted as an older MEK inhibitor
+Everolimus,mTOR inhibitor,Inhibits mTORC1,1.0,1.0,µM,Rationale: PI3K/AKT/mTOR pathway common in AML
+Temsirolimus,mTOR inhibitor,Inhibits mTORC1,1.0,3.0,µM,
+Sirolimus,mTOR inhibitor,Inhibits mTORC1,0.3,300.0,nM,Alternative name given: rapamycin
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases (HDACs),0.3,300.0,nM,Rationale: AML epigenetic vulnerability
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases (HDACs),30.0,30.0,µM,
+Valproic acid,HDAC inhibitor (weak),Weak HDAC inhibition; epigenetic/differentiation effects,0.1,10.0,mM,Called low potency (mM) in the text
+Disulfiram,Repurposed small molecule (ALDH/proteostasis/ROS modulator),Modulates ALDH/proteostasis/ROS; reported leukemia cell toxicity especially with copper,0.01,10.0,µM,Text notes “± copper”; copper may shift potency lower
+Mebendazole,Microtubule inhibitor (anthelmintic),Disrupts microtubules,10.0,10.0,µM,Mentioned as having anticancer repurposing literature

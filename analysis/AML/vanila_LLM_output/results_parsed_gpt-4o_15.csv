@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,"Inhibits BCL-2, promoting apoptosis in cancer cells",10.0,500.0,nM,Alternative name: ABT-199
+Ruxolitinib,JAK1/2 inhibitor,Inhibits JAK1/2 preventing cytokine signaling,0.5,100.0,nM,
+Dasatinib,BCR-ABL/Src family kinase inhibitor,Inhibits BCR-ABL and Src family kinases involved in cell division and survival,5.0,250.0,nM,
+Midostaurin,Multi-targeted kinase inhibitor,"Inhibits multiple kinases including FLT3, involved in cancer cell proliferation",10.0,500.0,nM,Alternative name: PKC412
+Sorafenib,Multi-kinase inhibitor,Blocks various kinases influencing tumor growth angiogenesis,1.0,10.0,µM,
+Imatinib,BCR-ABL tyrosine kinase inhibitor,Targets BCR-ABL tyrosine kinase to halt proliferation in leukemia cells,100.0,500.0,nM,Alternative name: Gleevec
+Auranofin,Anti-rheumatic agent,"Inhibits redox balance, affecting cancer cell survival",0.1,10.0,µM,
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis and inhibits vascular cell proliferation,0.1,2.0,µM,
+Ibrutinib,Bruton's tyrosine kinase inhibitor,"Blocks BTK, disrupting B-cell receptor signaling",0.1,10.0,µM,
+Itraconazole,Antifungal agent,Disrupts sterol synthesis affecting cell membrane integrity,1.0,10.0,µM,
+Metformin,AMPK activator/antidiabetic,"Activates AMPK, inhibiting mTOR pathway and cancer cell energy metabolism",1.0,10.0,mM,
+Lovastatin,HMG-CoA reductase inhibitor,"Inhibits HMG-CoA reductase, reducing cholesterol synthesis impacting cancer cell survival",0.1,10.0,µM,
+Disulfiram,Alcohol aversion agent,Inhibits aldehyde dehydrogenase and other pathways affecting cancer cell viability,0.1,10.0,µM,
+Tamoxifen,Selective estrogen receptor modulator,Blocks estrogen receptors preventing cancer cell growth,0.1,10.0,µM,
+Nifuroxazide,Antimicrobial agent,Inhibits STAT3 signaling pathway in cancer cells,0.1,10.0,µM,
+Chloroquine,Antimalarial,Disrupts autophagy and lysosomal activity in cancer cells,1.0,10.0,µM,
+Bortezomib,Proteasome inhibitor,Inhibits 26S proteasome affecting protein degradation in cancer cells,1.0,100.0,nM,
+Celecoxib,COX-2 inhibitor,"Inhibits COX-2 reducing prostaglandin synthesis, affecting cancer growth and survival",1.0,10.0,µM,
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response,0.1,10.0,µM,
+Omeprazole,Proton pump inhibitor,Inhibits gastric acid secretion by blocking H+/K+ ATPase activity,1.0,50.0,µM,

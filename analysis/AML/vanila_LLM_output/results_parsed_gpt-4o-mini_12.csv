@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Hydroxyurea,Anticancer,"Inhibits ribonucleotide reductase, reducing DNA synthesis.",50.0,100.0,μM,
+Pazopanib,Multikinase inhibitor,"Inhibits VEGFR, PDGFR, and c-KIT.",10.0,10.0,μM,
+Vorinostat,HDAC inhibitor,Promotes cell cycle arrest and apoptosis.,0.5,4.0,μM,Also known as SAHA.
+Decitabine,DNA methyltransferase inhibitor,Inhibits DNA methyltransferase.,0.1,1.0,μM,
+Clofarabine,Antimetabolite,Inhibits DNA synthesis.,0.1,1.0,μM,
+Thalidomide,Immunomodulatory drug,Modulates immune response and inhibits angiogenesis.,2.0,10.0,μM,
+Lenalidomide,Immunomodulatory drug,"Similar to thalidomide, but more potent.",0.1,1.0,μM,
+Azacitidine,DNA methyltransferase inhibitor,Also a DNA methyltransferase inhibitor.,0.1,1.0,μM,
+Roxithromycin,Antibiotic,May induce apoptosis in leukemic cells.,5.0,15.0,μM,
+Metformin,Antidiabetic,Alters cellular energy metabolism and may inhibit cell proliferation.,1.0,5.0,mM,
+Bortezomib,Proteasome inhibitor,Induces apoptosis in cancer cells.,10.0,50.0,nM,
+Nelarabine,Nucleoside analog,Disrupts DNA synthesis.,0.1,1.0,μM,
+Carfilzomib,Proteasome inhibitor,Second-generation proteasome inhibitor.,1.0,10.0,nM,
+Auranofin,Gold compound,Shows anti-cancer activity through multiple mechanisms.,1.0,5.0,μM,
+Fingolimod,Sphingosine-1-phosphate receptor modulator,Modulates immune response.,100.0,100.0,nM,Also known as FTY720.
+Ruxolitinib,JAK inhibitor,"JAK1/JAK2 inhibitor, modulates immune response.",1.0,5.0,μM,
+Dexamethasone,Corticosteroid,May enhance apoptosis in leukemic cells.,1.0,10.0,μM,
+Sorafenib,Multi-kinase inhibitor,Effects on cell survival.,0.5,3.0,μM,
+Chlorambucil,Alkylating agent,Disrupts DNA.,10.0,50.0,μM,
+Imatinib,Tyrosine kinase inhibitor,"BCR-ABL tyrosine kinase inhibitor, also affects other pathways.",0.1,1.0,μM,

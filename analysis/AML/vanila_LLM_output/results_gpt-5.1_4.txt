@@ -1,0 +1,164 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a **shortlist of 20 existing drugs** with literature support or mechanistic rationale for **repurposing against AML**, especially **FLT3-ITD–positive lines like MOLM‑13**. For each, I also give a **reasonable starting concentration range for in‑vitro IC₅₀ determinations** (e.g., 72‑h CellTiter‑Glo, MTS, or similar).
+
+Use these as **screening ranges**, then narrow around the observed activity. Values are based on reported IC₅₀s (when available), known pharmacology, and typical in‑vitro testing windows for small molecules.
+
+---
+
+## General assay notes (for all compounds)
+
+- Cell line: MOLM‑13 (FLT3‑ITD–mutant AML), ± a second line (e.g., MV4‑11 or THP‑1) for comparison.  
+- Assay window: 72 h treatment is common for proliferation/viability.  
+- Assay readout: ATP‑based or resazurin/MTS.  
+- Concentration design:  
+  - **Primary screen**: 8–10‑point half‑log dilution from the upper limit given below.  
+  - **Vehicle control**: identical DMSO concentration (commonly ≤0.1%).  
+
+Where “expected IC₅₀” is included, it’s approximate and line‑dependent; use it only to guide the range.
+
+---
+
+## 1. Nilotinib  
+- Class: BCR‑ABL / KIT / PDGFR inhibitor; has activity against FLT3 in some studies.  
+- Rationale: Multiple reports show anti‑proliferative effects in AML, including FLT3‑mutated contexts.  
+- Suggested range: **0.001–10 µM**  
+- Expect many AML cells to respond around **0.05–1 µM**.
+
+## 2. Dasatinib  
+- Class: SRC/ABL family TKI.  
+- Rationale: Inhibits multiple kinases involved in AML signaling; reported activity in AML lines.  
+- Range: **0.001–10 µM**  
+- Expect IC₅₀ around **0.01–1 µM** in sensitive cells.
+
+## 3. Sorafenib  
+- Class: Multikinase inhibitor (RAF, VEGFR, PDGFR, FLT3).  
+- Rationale: Widely reported activity against FLT3‑ITD AML lines (MOLM‑13, MV4‑11).  
+- Range: **0.001–10 µM**  
+- Many studies report IC₅₀ in FLT3‑ITD AML around **1–10 nM**; include low‑nM doses.
+
+## 4. Sunitinib  
+- Class: Multikinase inhibitor (FLT3, KIT, VEGFR, PDGFR, etc.).  
+- Rationale: Known to inhibit FLT3 and suppress growth of FLT3‑mutant AML lines.  
+- Range: **0.001–10 µM**  
+- Likely IC₅₀ in **10–200 nM** range in sensitive AML lines.
+
+## 5. Ponatinib  
+- Class: Pan‑BCR‑ABL / multikinase inhibitor (including FLT3).  
+- Rationale: Strong FLT3‑ITD inhibition; potent in MOLM‑13 and MV4‑11.  
+- Range: **0.0001–1 µM**  
+- Expected IC₅₀ for FLT3‑ITD AML often **1–20 nM**; include sub‑nM to 100 nM.
+
+## 6. Imatinib  
+- Class: BCR‑ABL / KIT / PDGFR inhibitor.  
+- Rationale: Less active than newer TKIs but may inhibit KIT/PDGFR‑driven subsets; useful comparator.  
+- Range: **0.01–50 µM**  
+- AML responses are often weaker; expect IC₅₀ in the **5–20 µM** region if any.
+
+## 7. Midostaurin  
+- Class: Multikinase inhibitor; clinically used in FLT3‑mut AML.  
+- Rationale: Established activity in FLT3‑ITD AML; MOLM‑13 is frequently used in midostaurin studies.  
+- Range: **0.001–10 µM**  
+- Many FLT3‑ITD lines show IC₅₀ **~10–100 nM**.
+
+## 8. Crenolanib  
+- Class: FLT3 inhibitor (type I).  
+- Rationale: Potent FLT3 inhibitor with strong activity in FLT3‑ITD AML lines including MOLM‑13.  
+- Range: **0.0003–3 µM**  
+- Often reported IC₅₀ **< 50 nM**; include 0.3–30 nM data points.
+
+## 9. Quizartinib (AC220)  
+- Class: FLT3 inhibitor (type II).  
+- Rationale: Very potent vs FLT3‑ITD; MOLM‑13 is a standard sensitive line.  
+- Range: **0.0001–1 µM**  
+- Many reports show IC₅₀ in **1–10 nM** range.
+
+## 10. Ibrutinib  
+- Class: BTK inhibitor.  
+- Rationale: Off‑target inhibition of other kinases and signaling mediators; some AML lines show sensitivity.  
+- Range: **0.01–20 µM**  
+- Expect IC₅₀ (if present) usually **1–10 µM** in AML.
+
+## 11. Venetoclax (ABT‑199)  
+- Class: BCL‑2 inhibitor.  
+- Rationale: Very active in AML (including FLT3‑ITD); MOLM‑13 is typically highly sensitive.  
+- Range: **0.0003–3 µM**  
+- Expected IC₅₀ often **1–50 nM** in BCL‑2–dependent AML lines.
+
+## 12. Navitoclax (ABT‑263)  
+- Class: BCL‑2/BCL‑XL inhibitor.  
+- Rationale: Pre‑venetoclax BH3 mimetic; shows anti‑leukemic activity in several AML lines.  
+- Range: **0.001–10 µM**  
+- AML IC₅₀ frequently **10–200 nM** in sensitive cells.
+
+## 13. Disulfiram (± copper)  
+- Class: ALDH inhibitor; proteasome‑related and NF‑κB activity when complexed with Cu²⁺.  
+- Rationale: Multiple reports of anti‑leukemic effects; AML stem‑cell targeting proposed.  
+- Range (drug): **0.05–5 µM** disulfiram  
+- If using Cu²⁺ supplementation: 0.5–2 µM CuCl₂; test combination matrix.  
+- Expect IC₅₀ roughly **0.1–2 µM** in responsive AML lines.
+
+## 14. Metformin  
+- Class: Antidiabetic; AMPK activator, mitochondrial complex I modulator.  
+- Rationale: Reported anti‑proliferative effects in AML via metabolic stress, though often at higher doses.  
+- Range: **0.1–20 mM**  
+- IC₅₀ typically in the **1–10 mM** range in vitro.
+
+## 15. Chloroquine / Hydroxychloroquine  
+- Class: Antimalarial; autophagy inhibitor.  
+- Rationale: Autophagy blockade can reduce AML cell survival; used alone or in combination.  
+- Range: **1–50 µM**  
+- AML IC₅₀ often **10–30 µM** in vitro.
+
+## 16. Atorvastatin (or Simvastatin)  
+- Class: HMG‑CoA reductase inhibitor (statins).  
+- Rationale: Disrupts prenylation and membrane signaling; several statins show AML cell growth inhibition.  
+- Range: **0.1–50 µM**  
+- IC₅₀ often **1–10 µM** for simvastatin/atorvastatin in AML lines.
+
+## 17. Thalidomide / Lenalidomide  
+- Class: Immunomodulatory drugs (IMiDs).  
+- Rationale: Complex immunomodulatory and direct anti‑leukemic actions; data in AML is mixed but present.  
+- Range: **0.1–50 µM**  
+- Direct IC₅₀ in AML lines, if present, usually **5–30 µM**.
+
+## 18. Bortezomib  
+- Class: Proteasome inhibitor.  
+- Rationale: Induces apoptosis in AML cells via proteasome inhibition and NF‑κB pathway blockade.  
+- Range: **0.0003–0.3 µM**  
+- AML IC₅₀ frequently **5–50 nM**.
+
+## 19. Carfilzomib  
+- Class: Irreversible proteasome inhibitor.  
+- Rationale: Potent apoptosis induction in AML cell lines, including FLT3‑mutant subsets.  
+- Range: **0.0001–0.3 µM**  
+- IC₅₀ often **5–30 nM**.
+
+## 20. Vorinostat (SAHA)  
+- Class: HDAC inhibitor.  
+- Rationale: Epigenetic modulation; induces apoptosis and differentiation in multiple AML lines (including MOLM‑13 in many studies).  
+- Range: **0.01–10 µM**  
+- Common IC₅₀ range **0.5–5 µM**.
+
+---
+
+### Practical experimental design suggestion
+
+For each drug, you can standardize an initial 8‑point, 3‑fold dilution series, for example (adjust starting point per ranges above):
+
+- Example for potent TKIs (e.g., quizartinib, ponatinib):  
+  100 nM → 12.3 nM → 1.5 nM → 0.19 nM, etc., plus one higher concentration (300 nM–1 µM).
+- Example for weaker agents (e.g., metformin, statins):  
+  20 mM → 6.7 mM → 2.2 mM → 0.74 mM, etc.
+
+If you tell me your plate format (96 vs 384) and detection method, I can help you design exact dilution steps and layouts tailored to MOLM‑13.

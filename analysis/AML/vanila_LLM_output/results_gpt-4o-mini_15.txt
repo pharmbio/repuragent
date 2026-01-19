@@ -1,0 +1,84 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) can offer new avenues for therapy and may expedite the development process. Below is a list of 20 drugs that have been investigated for their potential in various cancers and may be candidates for repurposing in AML, particularly against the MOLM13 cell line. Note that the listed concentrations for an IC50 assay are approximate and should be refined based on preliminary experiments and specific pharmacological data.
+
+### Top 20 Drugs for Consideration:
+
+1. **Clofarabine**
+   - IC50: 0.2 - 1 µM
+
+2. **Decitabine**
+   - IC50: 0.1 - 1 µM
+
+3. **Venetoclax**
+   - IC50: 0.1 - 1 µM
+
+4. **Azacitidine**
+   - IC50: 0.1 - 1 µM
+
+5. **Sorafenib**
+   - IC50: 0.5 - 5 µM
+
+6. **Dasatinib**
+   - IC50: 0.1 - 0.5 µM
+
+7. **Imatinib**
+   - IC50: 0.5 - 3 µM
+
+8. **Bortezomib**
+   - IC50: 5 - 30 nM
+
+9. **Dexamethasone**
+   - IC50: 1 - 10 µM
+
+10. **Metformin**
+    - IC50: 500 - 1000 µM
+
+11. **Ruxolitinib**
+    - IC50: 1 - 5 µM
+
+12. **Thalidomide**
+    - IC50: 5 - 10 µM
+
+13. **Lenalidomide**
+    - IC50: 1 - 10 µM
+
+14. **Lopinavir**
+    - IC50: 10 - 30 µM
+
+15. **Chlorambucil**
+    - IC50: 10 - 30 µM
+
+16. **Cyclophosphamide**
+    - IC50: 10 - 50 µM
+
+17. **Topotecan**
+    - IC50: 10 - 100 nM
+
+18. **Etoposide**
+    - IC50: 1 - 10 µM
+
+19. **Pazopanib**
+    - IC50: 1 - 5 µM
+
+20. **Hydroxyurea**
+    - IC50: 10 - 100 µM
+
+### Experimental Considerations:
+1. **Cell Line Usage**: Ensure that MOLM13 cells are maintained under appropriate culture conditions.
+2. **Assay Design**: Utilize a standardized proliferation assay such as MTT, CellTiter-Glo, or similar.
+3. **Dose-Response Curves**: Perform preliminary experiments to establish dose-response curves across several concentrations to determine the exact IC50.
+4. **Mechanistic Studies**: Consider combining drugs to assess possible synergistic effects.
+5. **Safety & Toxicology**: Evaluate potential off-target effects and cytotoxicity toward normal hematopoietic cells.
+
+Always consult relevant literature and databases, such as DrugBank, PubChem, and clinical trial registries, for the most recent findings and further optimize the conditions based on experimental results.

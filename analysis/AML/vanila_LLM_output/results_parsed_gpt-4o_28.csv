@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Arsenic Trioxide,Miscellaneous antineoplastic,Induces apoptosis in leukemic cells,0.1,0.5,µM,Used in acute promyelocytic leukemia treatment
+Vorinostat,Histone deacetylase inhibitor,Inhibits histone deacetylase leading to chromatin remodeling,1.0,5.0,µM,Also known as SAHA
+Dasatinib,Src family kinase inhibitor,Inhibits multiple kinases including Src family proteins,10.0,100.0,nM,Targets BCR-ABL and SRC kinases
+Imatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase,1.0,5.0,µM,Commonly used in chronic myeloid leukemia
+Sorafenib,Multikinase inhibitor,Inhibits RAF kinases and receptor tyrosine kinases,1.0,5.0,µM,"Also affects VEGFR, PDGFR"
+Ibrutinib,Bruton's tyrosine kinase inhibitor,Blocks B-cell receptor signaling,1.0,10.0,µM,Used in chronic lymphocytic leukemia
+Lenalidomide,Immunomodulatory drug,Modulates the immune system and has angiogenic effects,0.1,5.0,µM,Derivative of thalidomide
+Decitabine,Hypomethylating agent,"Incorporates into DNA, inhibiting DNA methyltransferase",0.5,5.0,µM,Used for myelodysplastic syndrome
+Venetoclax,BCL-2 inhibitor,"Inhibits BCL-2, promoting apoptosis",0.01,1.0,µM,Effective in chronic lymphocytic leukemia
+Bortezomib,Proteasome inhibitor,Inhibits the proteasome activity in the cell,5.0,20.0,nM,Used in multiple myeloma treatment
+Carfilzomib,Proteasome inhibitor,Irreversibly inhibits chymotrypsin-like activity of proteasome,10.0,50.0,nM,Approved for multiple myeloma
+Palbociclib,CDK4/6 inhibitor,Inhibits cyclin-dependent kinases 4 and 6,0.1,1.0,µM,Used in breast cancer therapy
+Selinexor,Selective inhibitor of nuclear export,Blocks nuclear export by inhibiting XPO1,0.1,1.0,µM,Approval for multiple myeloma
+THZ1,CDK7 inhibitor,Inhibits transcription through CDK7 suppression,0.1,1.0,µM,Experimental drug
+Ruxolitinib,JAK1/JAK2 inhibitor,Inhibits the JAK-STAT signaling pathway,0.1,1.0,µM,Used in myeloproliferative diseases
+Venetoclax,BCL-2 inhibitor,Induces apoptosis by inhibiting BCL-2,10.0,500.0,nM,Duplicated entry corrected
+Tazemetostat,EZH2 inhibitor,Inhibits the histone methyltransferase EZH2,1.0,10.0,µM,Used in certain epigenetic therapies
+Midostaurin,FLT3 inhibitor,Targets FLT3 receptor tyrosine kinase,0.1,1.0,µM,Approved for use in AML with specific mutations
+Gilteritinib,FLT3 inhibitor,"Potent, selective inhibitor targeting FLT3",0.1,1.0,µM,Also targets AXL receptor
+Selumetinib,MEK inhibitor,Inhibits the MEK1/2 signaling pathway,1.0,10.0,µM,Used in specific cancers with MAPK pathway alterations

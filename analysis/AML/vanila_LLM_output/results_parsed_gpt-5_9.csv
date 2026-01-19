@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Ponatinib,Multikinase TKI,"Inhibits FLT3, BCR-ABL, VEGFR",0.1,300.0,nM,Approved for CML/Ph+ ALL; potent FLT3-ITD inhibitor; robust activity in MOLM-13/MV4-11
+Sorafenib,Multikinase TKI,"Inhibits RAF, VEGFR, PDGFR, FLT3",0.5,500.0,nM,Approved for HCC/RCC; inhibits FLT3-ITD signaling; strong activity in MOLM-13
+Sunitinib,Multikinase TKI,"Inhibits FLT3, VEGFR, PDGFR",1.0,3000.0,nM,Approved for RCC/GIST; active in FLT3-ITD AML lines
+Dasatinib,ABL/SRC TKI,Inhibits SRC/ABL; can suppress FLT3-ITD signaling,0.5,1000.0,nM,Approved for CML/Ph+ ALL; activity in MOLM-13 reported
+Vandetanib,Multikinase TKI,"Inhibits VEGFR, EGFR, RET; some FLT3 activity",50.0,5000.0,nM,Approved for medullary thyroid cancer; AML growth inhibition at sub-µM to low-µM
+Regorafenib,Multikinase TKI,"Inhibits multiple kinases incl. KIT, VEGFR; some FLT3",50.0,5000.0,nM,Approved for CRC/GIST/HCC; AML cell line activity in low-µM
+Trametinib,MEK inhibitor,MEK1/2 inhibitor,1.0,1000.0,nM,Approved for melanoma; MEK/ERK pathway downstream of FLT3-ITD; suppresses AML proliferation incl. MOLM-13
+Selumetinib,MEK inhibitor,MEK1/2 inhibitor,10.0,10000.0,nM,Approved for NF1-related plexiform neurofibromas; AML activity typically sub-µM to low-µM
+Everolimus,mTOR inhibitor,mTORC1 inhibitor,50.0,10000.0,nM,Approved for RCC/TSC and others; mTOR signaling supports AML growth; cytostatic/anti-proliferative effects
+Temsirolimus,mTOR inhibitor,mTORC1 inhibitor,50.0,10000.0,nM,Approved for RCC; reported activity in AML cell models
+Copanlisib,PI3K inhibitor,PI3Kα/δ inhibitor,10.0,3000.0,nM,Approved for lymphoma; PI3K pathway active in AML; sub-µM activity reported
+Bortezomib,Proteasome inhibitor,26S proteasome inhibitor,0.5,300.0,nM,Approved for multiple myeloma/MCL; broad AML cytotoxicity at low nM; active in MOLM-13
+Carfilzomib,Proteasome inhibitor,Irreversible 20S proteasome inhibitor,1.0,1000.0,nM,Approved for multiple myeloma; AML activity in low nM
+Panobinostat,HDAC inhibitor,Pan-HDAC inhibitor,0.5,300.0,nM,Approved for multiple myeloma; strong AML activity at low nM
+Vorinostat,HDAC inhibitor,HDAC inhibitor,50.0,10000.0,nM,Approved for CTCL; AML growth inhibition and differentiation effects
+Belinostat,HDAC inhibitor,Pan-HDAC inhibitor,50.0,5000.0,nM,Approved for PTCL; AML cell inhibition in sub- to low-µM
+Selinexor,Nuclear export inhibitor,XPO1 inhibitor,5.0,3000.0,nM,Approved for multiple myeloma/DLBCL; induces nuclear retention of tumor suppressors; active in MOLM-13
+Tigecycline,Antibiotic (mitochondrial translation inhibitor),"Inhibits mitochondrial translation, impairing OXPHOS",50.0,20000.0,nM,Approved antibiotic; impairs OXPHOS-dependent AML cells incl. MOLM-13
+Auranofin,Antirheumatic (redox modulator),Inhibits thioredoxin reductase; increases ROS,50.0,5000.0,nM,Approved antirheumatic; promotes ROS-mediated AML cytotoxicity
+Nelfinavir,HIV protease inhibitor,HIV protease inhibition; induces ER stress/UPR,500.0,20000.0,nM,Approved antiretroviral; reported anti-AML activity in low- to mid-µM

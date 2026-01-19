@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,Inhibits BCL-2 protein to induce apoptosis,30.0,100.0,nM,Commonly used in combination therapy for AML
+Sorafenib,RAF kinase inhibitor,Inhibits RAF serine/threonine and VEGFR kinases,2.0,2.0,µM,Also targets VEGFR and used in renal cell carcinoma
+Ruxolitinib,JAK inhibitor,Inhibits JAK1 and JAK2 enzymes,200.0,450.0,nM,Primarily used for myelofibrosis and polycythemia vera
+Idelalisib,PI3K inhibitor,Inhibits PI3K delta kinase,15.0,15.0,nM,Used in treatment of B-cell malignancies
+Dasatinib,BCR-ABL inhibitor,Inhibits BCR-ABL and SRC family kinases,2.0,5.0,nM,Effective in treating CML
+Ibrutinib,BTK inhibitor,Inhibits Bruton's tyrosine kinase,10.0,100.0,nM,Approved for certain B-cell malignancies
+Tofacitinib,JAK inhibitor,Inhibits JAK1 and JAK3 enzymes,5.0,100.0,nM,Primarily used for rheumatoid arthritis
+Clofarabine,Nucleoside analogue,Inhibits DNA synthesis via incorporation into DNA,50.0,500.0,nM,Used in pediatric ALL
+Dactinomycin,Anti-tumor antibiotic,Inhibits DNA and RNA synthesis by intercalating DNA,1.0,10.0,nM,Also known as actinomycin D
+Auranofin,Gold compound,Inhibits thioredoxin reductase,1.0,2.0,µM,Used in rheumatoid arthritis treatment
+Bortezomib,Proteasome inhibitor,Inhibits proteasome activity leading to apoptosis,7.0,10.0,nM,Approved for multiple myeloma treatment
+Selinexor,Selective inhibitor of nuclear export,Targets XPO1/CRM1 to induce apoptosis,100.0,100.0,nM,Used in relapsed/refractory multiple myeloma and DLBCL
+Hydroxyurea,Ribonucleotide reductase inhibitor,Inhibits DNA synthesis by decreasing deoxynucleotide production,20.0,200.0,µM,Commonly used in myeloproliferative disorders
+Disulfiram,Aldehyde dehydrogenase inhibitor,Inhibits aldehyde dehydrogenase resulting in increased reactive oxygen species,500.0,1000.0,nM,Used in alcohol dependency treatment
+Metformin,Biguanide,Activates AMP kinase to decrease glucose production and increase insulin sensitivity,5.0,10.0,mM,Used primarily for type 2 diabetes mellitus
+Doxycycline,Antibiotic (Tetracycline class),Inhibits protein synthesis by binding to the 30S ribosomal subunit,50.0,50.0,µM,Not traditionally used for AML treatment
+Simvastatin,Statin,Inhibits HMG-CoA reductase leading to decreased cholesterol synthesis,0.1,10.0,µM,Primarily for hypercholesterolemia
+Quinacrine,Antimalarial,Inhibits NF-kB signaling pathway,2.0,5.0,µM,Investigational in oncology
+Arsenic Trioxide,Antineoplastic agent,Induces apoptosis via PML-RARA degradation,0.5,2.0,µM,Approved for APL treatment
+Chloroquine,Antimalarial,Inhibits autophagy pathways and alters lysosomal pH,8.0,15.0,µM,Also used for autoimmune conditions

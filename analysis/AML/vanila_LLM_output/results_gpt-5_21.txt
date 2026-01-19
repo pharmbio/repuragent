@@ -1,0 +1,55 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved, “existing” drugs with published activity against AML cell lines (and/or FLT3-ITD–positive models that closely mirror MOLM13). For each, I’ve included a concise rationale and an experimentally practical concentration range for 10-point, 3-fold serial dilutions in a 72-hour IC50 assay on MOLM13. Keep final DMSO ≤0.1% (v/v) across wells.
+
+FLT3/MAPK pathway–focused (high likelihood of activity in FLT3-ITD MOLM13)
+- Ponatinib (CML/Ph+ ALL TKI; multi-kinase incl. FLT3): Very potent versus FLT3-ITD AML lines. Test range: 0.1 nM–1 μM.
+- Sorafenib (RCC/HCC; RAF/VEGFR/FLT3 inhibitor): Longstanding off-label activity in FLT3-ITD AML (incl. MOLM13-like models). Test range: 0.5 nM–5 μM.
+- Sunitinib (RCC; multi-kinase incl. FLT3): Inhibits proliferation of FLT3-ITD AML lines. Test range: 1 nM–10 μM.
+- Cabozantinib (RCC/HCC; MET/AXL/VEGFR; reported FLT3 activity): Active in FLT3-ITD AML in vitro. Test range: 0.5 nM–5 μM.
+- Axitinib (RCC; VEGFR; reported FLT3 activity): Inhibits FLT3-ITD AML cells in vitro. Test range: 1 nM–10 μM.
+- Regorafenib (CRC/GIST/HCC; multi-kinase incl. FLT3): Reported activity in FLT3-ITD AML models. Test range: 1 nM–10 μM.
+- Trametinib (melanoma; MEK1/2 inhibitor): Blocks downstream FLT3/MAPK signaling; antiproliferative in AML lines. Test range: 0.1 nM–5 μM.
+
+Signaling/kinase or translation inhibitors with AML activity
+- Fostamatinib (ITP; SYK inhibitor; active moiety R406): SYK is a survival node in AML; activity reported in MOLM13-like lines. Test range: 30 nM–30 μM.
+- Omacetaxine mepesuccinate (CML; protein synthesis inhibitor): Broadly cytotoxic to myeloid leukemia cells. Test range: 0.5 nM–1 μM.
+- Selinexor (MM/DLBCL; XPO1 inhibitor): Prominent single-agent AML activity in vitro (incl. FLT3-ITD lines). Test range: 1 nM–10 μM.
+- Bortezomib (MM/MCL; proteasome inhibitor): Potent anti-AML activity in many cell lines. Test range: 0.5 nM–500 nM.
+
+Epigenetic modifiers with in vitro AML activity
+- Panobinostat (MM; pan-HDAC inhibitor): Active at low-nanomolar in AML lines. Test range: 0.5 nM–1 μM.
+- Romidepsin (CTCL; HDAC1/2 inhibitor): Very potent; strong AML cytotoxicity reported. Test range: 0.1 nM–100 nM.
+- Vorinostat (CTCL; pan-HDAC inhibitor): Inhibits proliferation and induces apoptosis in AML cell lines. Test range: 10 nM–50 μM.
+
+Metabolism/mitochondria–targeting agents
+- Tigecycline (antibiotic; mitochondrial translation inhibitor): AML cells (incl. FLT3-ITD lines) are sensitive. Test range: 10 nM–50 μM.
+- Niclosamide (anthelmintic; mitochondrial uncoupler/Wnt inhibitor): Cytotoxic to AML lines at low micromolar. Test range: 10 nM–20 μM.
+- Auranofin (anti-rheumatic; thioredoxin reductase inhibitor): Induces ROS and apoptosis in AML cells. Test range: 10 nM–20 μM.
+- Clofazimine (leprosy; redox/mitochondrial effects): Kills leukemia cells via ROS and membrane perturbation. Test range: 1 nM–10 μM.
+
+STAT5/autophagy/ALDH-associated
+- Pimozide (antipsychotic; STAT5 inhibitor): STAT5 is critical in FLT3-ITD AML (e.g., MOLM13); pimozide inhibits growth. Test range: 10 nM–30 μM.
+- Disulfiram + Cu2+ (alcohol aversion; ALDH inhibitor/copper-dependent proteasome/NPL4 effects): AML cells sensitive with copper supplementation. Test range: 10 nM–10 μM disulfiram with 1 μM CuCl2 co-supplement.
+
+Assay setup suggestions (to improve data quality)
+- Cell line/conditions: MOLM13 (FLT3-ITD); 3,000–5,000 cells per well (96-well), RPMI-1640 + 10% FBS, 72 h exposure.
+- Readout: ATP-based luminescence (e.g., CellTiter-Glo) or resazurin; include vehicle controls matched for DMSO ≤0.1% (v/v).
+- Dilution scheme: 10-point, 3-fold serial dilutions spanning the ranges above; run ≥3 technical replicates.
+- Special handling:
+  - Disulfiram is unstable; prepare fresh and include 1 μM CuCl2; protect from light.
+  - Tigecycline and romidepsin are light sensitive; minimize light exposure.
+  - Niclosamide/clofazimine are highly lipophilic; pre-dissolve in DMSO (10 mM stocks), ensure thorough mixing; consider adding 0.1% Pluronic F-68 if precipitation is observed.
+- Optional controls: Positive cytotoxic control (e.g., staurosporine 1 μM), FLT3 reference inhibitor (e.g., quizartinib, for benchmarking only), and mevalonate rescue for on-target validation with statins if you choose to include them in follow-up.
+
+These ranges are chosen to bracket reported AML potencies and accommodate serum binding/assay-to-assay variability. If you need a short “top 8” prioritized set specifically for MOLM13, start with ponatinib, sorafenib, sunitinib, cabozantinib, axitinib, regorafenib, pimozide, and tigecycline.

@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Azacitidine,Antineoplastic agent,DNA methyltransferase inhibitor,0.1,5.0,µM,Also known as Vidaza.
+Decitabine,Antineoplastic agent,DNA methyltransferase inhibitor,0.1,1.0,µM,Also known as Dacogen.
+Lenalidomide,Immunomodulatory drug,Inhibits tumor proliferation,1.0,10.0,µM,Also known as Revlimid.
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response,10.0,20.0,µM,
+Vorinostat,HDAC inhibitor,Inhibition of histone deacetylases,0.5,5.0,µM,Also known as Zolinza.
+Romidepsin,HDAC inhibitor,Inhibition of histone deacetylases,0.1,1.0,µM,Also known as Istodax.
+Bortezomib,Proteasome inhibitor,Inhibition of the proteasome pathway,1.0,10.0,nM,Also known as Velcade.
+Carfilzomib,Proteasome inhibitor,Inhibition of the proteasome pathway,1.0,10.0,nM,Also known as Kyprolis.
+Chlorambucil,Alkylating agent,Alkylation of DNA leading to cross-linking,1.0,10.0,µM,
+Imatinib,Tyrosine kinase inhibitor,Inhibition of BCR-ABL tyrosine kinase,0.1,5.0,µM,Also known as Gleevec.
+Nilotinib,Tyrosine kinase inhibitor,Inhibition of BCR-ABL tyrosine kinase,0.1,10.0,µM,Also known as Tasigna.
+Dasatinib,Tyrosine kinase inhibitor,Inhibition of BCR-ABL and Src kinases,0.1,8.0,µM,Also known as Sprycel.
+Dexamethasone,Corticosteroid,Anti-inflammatory and immunosuppressive effects,0.1,10.0,µM,
+Asparaginase,Enzyme/antitumor agent,Depletes asparagine for cancer cells,0.5,2.0,U/mL,
+Trametinib,MEK inhibitor,Inhibition of MEK1 and MEK2,1.0,10.0,nM,Also known as Mekinist.
+Everolimus,mTOR inhibitor,Inhibition of mTOR signaling pathway,1.0,10.0,µM,Also known as Afinitor.
+Clofarabine,Nucleoside analog,Inhibition of DNA synthesis,0.1,1.0,µM,
+5-Fluorouracil,Antimetabolite,Inhibition of nucleotide synthesis,1.0,20.0,µM,Also known as 5-FU.
+Metformin,Biguanide,Inhibition of hepatic glucose production,1.0,10.0,mM,
+SB202190,p38 MAPK inhibitor,Inhibition of p38 MAPK pathway,1.0,10.0,µM,

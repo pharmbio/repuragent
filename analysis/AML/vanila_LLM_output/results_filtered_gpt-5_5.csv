@@ -1,0 +1,18 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,Multi-kinase inhibitor,Inhibits BCR-ABL and FLT3 among other kinases; active in FLT3-ITD AML,0.5,200.0,nM,Frequently single-digit to tens of nM in FLT3-ITD AML cells,ponatinib,False,CHEMBL2105708
+Cabozantinib,Multi-kinase inhibitor,"Inhibits MET, VEGFR2, and FLT3; reported FLT3 inhibition in AML",0.5,500.0,nM,Low-nM activity reported in FLT3-ITD AML lines,cabozantinib,False,CHEMBL2105717
+Sunitinib,Multi-kinase inhibitor,"Inhibits FLT3, VEGFR, and PDGFR family kinases",1.0,5000.0,nM,Typically tens to low hundreds of nM in FLT3-ITD AML,sunitinib,False,CHEMBL597365
+Regorafenib,Multi-kinase inhibitor,Inhibits multiple kinases including FLT3,1.0,5000.0,nM,Often low- to mid-nM activity versus FLT3-ITD AML cells,regorafenib,False,CHEMBL1946170
+Dasatinib,SRC/ABL family kinase inhibitor,Inhibits SRC and ABL family kinases,10.0,5000.0,nM,"Activity reported in subsets of AML lines, including MLL- or SRC-dependent contexts",dasatinib,False,CHEMBL1421
+Trametinib,MEK1/2 inhibitor,Allosteric inhibitor of MEK1/2 in the MAPK pathway,1.0,1000.0,nM,RAS/MAPK-driven AML models are more responsive; may be cytostatic,trametinib,False,CHEMBL2103875
+Panobinostat,HDAC inhibitor,Pan-HDAC inhibitor causing histone acetylation and transcriptional changes,0.5,100.0,nM,Broad AML potency commonly in low-nM,panobinostat,False,CHEMBL483254
+Bortezomib,Proteasome inhibitor,Reversibly inhibits the 20S proteasome (chymotrypsin-like activity),0.5,100.0,nM,AML cell viability often inhibited at low-nM,bortezomib,False,CHEMBL325041
+Auranofin,Thioredoxin reductase inhibitor,"Irreversibly inhibits thioredoxin reductase, increasing oxidative stress",0.1,5.0,µM,Reported sub- to low-µM activity in AML including FLT3-ITD models,auranofin,False,CHEMBL1366
+Tigecycline,Mitochondrial translation inhibitor,Inhibits mitochondrial protein synthesis by targeting mitoribosomes,0.1,50.0,µM,Targets leukemia stem/OXPHOS dependence; low-µM in AML lines,tigecycline,False,CHEMBL376140
+Atovaquone,Electron transport chain inhibitor (OXPHOS),Inhibits mitochondrial ETC complex III to suppress OXPHOS,0.1,50.0,µM,"Low- to mid-µM growth inhibition in AML cells, including FLT3-ITD",atovaquone,False,CHEMBL1450
+Nelfinavir,HIV protease inhibitor,Induces ER stress and inhibits PI3K–AKT signaling,0.2,50.0,µM,Typically low- to mid-µM in AML,nelfinavir,False,CHEMBL365442
+Niclosamide,Anthelmintic,Disrupts Wnt/STAT3 signaling and mitochondrial OXPHOS,0.01,10.0,µM,Often sub-µM in leukemia cells; watch solubility,niclosamide,False,CHEMBL1448
+Disulfiram,ALDH inhibitor,ALDH inhibition; copper-dependent proteasome inhibition and oxidative stress,0.01,10.0,µM,AML activity commonly sub- to low-µM in vitro; copper can enhance effect,disulfiram,False,CHEMBL964
+Leflunomide,DHODH inhibitor prodrug,Prodrug of teriflunomide; inhibits dihydroorotate dehydrogenase to block de novo pyrimidine synthesis,1.0,300.0,µM,Differentiation/anti-proliferative effects; AML IC50s often in tens of µM,leflunomide,False,CHEMBL960
+Pitavastatin,HMG-CoA reductase inhibitor (statin),"Inhibits HMG-CoA reductase, blocking mevalonate pathway and prenylation",0.1,50.0,µM,Statins show low-µM AML cytotoxicity via mevalonate-pathway dependence,pitavastatin,False,CHEMBL1201753
+Ruxolitinib,JAK1/2 inhibitor,Inhibits JAK1 and JAK2 to block JAK/STAT signaling,0.1,50.0,µM,Stronger effects in JAK/STAT–dependent contexts; single-agent potency in MOLM-13 may be modest but useful in combinations,ruxolitinib,False,CHEMBL1287854

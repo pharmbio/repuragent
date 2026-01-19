@@ -1,0 +1,16 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Arsenic trioxide,Chemotherapeutic agent,Promotes apoptosis and differentiation of leukemic cells,0.1,2.0,µM,"Also known as ATO, commonly used in acute promyelocytic leukemia.",arsenic trioxide,False,CHEMBL5483015
+Dasatinib,Tyrosine kinase inhibitor,Inhibits multiple tyrosine kinases including BCR-ABL,0.5,5.0,nM,Effective in leukemias resistant to Imatinib.,dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK inhibitor,Inhibits JAK1 and JAK2 activity,1.0,10.0,µM,Approved for myeloproliferative disorders.,ruxolitinib,False,CHEMBL1287854
+Sunitinib,Tyrosine kinase inhibitor,"Targets VEGFR, PDGFR, and c-KIT",0.1,1.0,µM,Used in the treatment of renal cell carcinoma and gastrointestinal stromal tumors.,sunitinib,False,CHEMBL597365
+Bortezomib,Proteasome inhibitor,Disrupts proteasome activity leading to apoptosis,1.0,10.0,nM,Approved for multiple myeloma.,bortezomib,False,CHEMBL325041
+Metformin,Biguanide,Decreases hepatic glucose production and improves insulin sensitivity,1.0,20.0,mM,Commonly used for Type 2 diabetes.,metformin,False,CHEMBL1431
+Statins,HMG-CoA reductase inhibitor,Inhibits cholesterol synthesis pathway leading to cell cycle arrest,0.1,10.0,µM,Includes simvastatin and lovastatin.,statins,False,CHEMBL286958
+Chloroquine,Antimalarial and autophagy inhibitor,Inhibits lysosomal acidification impacting autophagic flux,1.0,10.0,µM,Repurposed for several cancers due to its autophagy modulation.,chloroquine,False,CHEMBL76
+Auranofin,Gold compound,Inhibits thioredoxin reductase leading to oxidative stress,0.5,2.0,µM,Originally used in rheumatoid arthritis.,auranofin,False,CHEMBL1366
+Itraconazole,Antifungal,Inhibits ergosterol biosynthesis,1.0,5.0,µM,Shows potential in inhibiting angiogenesis and cancer cell proliferation.,itraconazole,False,CHEMBL5483033
+Ritonavir,Antiretroviral protease inhibitor,Inhibits HIV protease and impacts various cellular pathways,1.0,10.0,µM,Used in combination therapies for HIV.,ritonavir,False,CHEMBL3182552
+Quinacrine,Antiprotozoal,Interferes with DNA and RNA synthesis,0.5,5.0,µM,Also being investigated for prion diseases.,quinacrine,False,CHEMBL2105615
+Niclosamide,Anthelmintic,Disrupts cellular bioenergetics via oxidative phosphorylation uncoupling,0.5,5.0,µM,Shows anticancer potential beyond its antiparasitic uses.,niclosamide,False,CHEMBL1448
+Sirolimus,mTOR inhibitor,Inhibits mTOR signaling pathway,1.0,100.0,nM,"Also known as Rapamycin, used in organ transplant rejection.",sirolimus,False,CHEMBL263427
+Hydroxychloroquine,Antimalarial and immunomodulator,Inhibits lysosomal function and autophagosome-lysosome fusion,5.0,20.0,µM,"Similar mechanism to Chloroquine, also used in autoimmune diseases.",hydroxychloroquine,False,CHEMBL1535

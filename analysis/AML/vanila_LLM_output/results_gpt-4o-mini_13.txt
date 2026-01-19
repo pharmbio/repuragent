@@ -1,0 +1,80 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic applications, such as in the treatment of acute myeloid leukemia (AML), can be a promising strategy. Here’s a list of 20 existing drugs that have shown potential for repurposing in AML treatment, particularly targeting the MOLM13 cell line. Alongside each drug, suggested experimentally testable concentrations for an IC50 assay (where applicable) are provided. These concentrations are indicative and should be optimized further in laboratory conditions:
+
+1. **Azacitidine (Vidaza)**
+   - Concentration: 0.1–10 μM
+
+2. **Decitabine (Dacogen)**
+   - Concentration: 0.1–10 μM
+
+3. **Gleevec (Imatinib)**
+   - Concentration: 0.1–5 μM
+
+4. **Sorafenib (Nexavar)**
+   - Concentration: 1–10 μM
+
+5. **Nilotinib (Tasigna)**
+   - Concentration: 0.1–5 μM
+
+6. **Dasatinib (Sprycel)**
+   - Concentration: 0.1–2 μM
+
+7. **Venetoclax (Venclexta)**
+   - Concentration: 0.1–10 μM
+
+8. **Lenalidomide (Revlimid)**
+   - Concentration: 10–100 μM
+
+9. **Thalidomide**
+   - Concentration: 1–10 μM
+
+10. **Clofarabine**
+    - Concentration: 0.1–5 μM
+
+11. **Dexamethasone**
+    - Concentration: 0.1–10 μM
+
+12. **Bortezomib (Velcade)**
+    - Concentration: 1–20 nM
+
+13. **Cyclophosphamide (Cytoxan)**
+    - Concentration: 0.1–10 μM
+
+14. **Topotecan**
+    - Concentration: 0.1–10 μM
+
+15. **Etoposide (VP-16)**
+    - Concentration: 0.1–10 μM
+
+16. **Quinacrine**
+    - Concentration: 1–10 μM
+
+17. **Metformin**
+    - Concentration: 1–10 mM
+
+18. **Atorvastatin (Lipitor)**
+    - Concentration: 1–10 μM
+
+19. **Rapamycin (Sirolimus)**
+    - Concentration: 0.1–5 μM
+
+20. **Ticlopidine**
+    - Concentration: 10–100 μM
+
+### Notes:
+- **In vitro Testing**: For each of these compounds, testing should ideally be initiated at multiple concentrations to establish a dose-response curve that can provide accurate determination of the IC50.
+- **Cell Line Specification**: MOLM13 is a commonly used human acute myeloid leukemia cell line. Ensure that the assay conditions (e.g., medium, incubation time, etc.) are appropriate for this particular cell line.
+- **Mechanism of Action**: Some of these drugs have established mechanisms that may be applicable to AML, which might contribute to their effectiveness. For example, epigenetic modifiers like azacitidine and decitabine can lead to altered gene expression relevant to leukemia treatment.
+
+Before proceeding with experimental testing, consult current literature and laboratory safety protocols. Always check for the latest research as drug efficacy can vary widely based on context, drug formulation, and specific mutations present in the cell line being tested.

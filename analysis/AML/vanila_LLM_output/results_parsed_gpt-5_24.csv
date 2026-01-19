@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Ponatinib,BCR-ABL/FLT3 multi-kinase TKI,Inhibits FLT3-ITD and other tyrosine kinases to block AML cell signaling,1.0,30.0,nM,Approved for CML/Ph+ ALL; active against FLT3-ITD and resistant FLT3 mutants; activity in MOLM13/MV4-11
+Sorafenib,Multi-kinase TKI,Inhibits FLT3 and RAF/VEGFR/PDGFR signaling to reduce AML proliferation,3.0,50.0,nM,"Approved for HCC, RCC, DTC; suppresses FLT3-ITD signaling; activity in MOLM13/MV4-11"
+Sunitinib,Multi-kinase TKI,Inhibits FLT3 (and KIT/VEGFR) signaling in AML cells,5.0,100.0,nM,"Approved for RCC, GIST; reduces viability in FLT3-ITD AML including MOLM13"
+Cabozantinib,Multi-kinase TKI,"Inhibits MET, VEGFR, AXL, and FLT3 including D835 mutants",5.0,100.0,nM,Approved for RCC and thyroid cancer; active in MOLM13/MOLM14
+Dasatinib,SRC/ABL/KIT TKI,Blocks SRC/ABL/KIT and inhibits FLT3/KIT-driven signaling,10.0,500.0,nM,Approved for CML/Ph+ ALL; decreases viability in AML lines including MOLM13 in some studies
+Ibrutinib,BTK inhibitor,Covalent BTK inhibitor with off-target FLT3 inhibition in AML,0.5,5.0,µM,Approved for CLL/MCL/WM; activity in MOLM13/MV4-11
+Selinexor,XPO1 (nuclear export) inhibitor,Blocks exportin-1 mediated nuclear export leading to apoptosis,50.0,300.0,nM,Approved for multiple myeloma and DLBCL; broad anti-AML activity including MOLM13
+Panobinostat,Pan-HDAC inhibitor,"Inhibits histone deacetylases, altering transcription and inducing apoptosis",5.0,50.0,nM,Approved for multiple myeloma; potent in AML including MOLM13; synergy with TKIs reported
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases to induce differentiation/apoptosis,0.5,2.0,µM,Also known as SAHA; approved for CTCL; active in MOLM13
+Romidepsin,HDAC inhibitor,HDAC inhibition leading to apoptosis in AML cells,2.0,20.0,nM,Approved for CTCL/PTCL; potent activity in FLT3-ITD models
+Bortezomib,Proteasome inhibitor,Reversibly inhibits the 26S proteasome causing proteotoxic stress and apoptosis,5.0,25.0,nM,Approved for multiple myeloma/MCL; low-nM apoptosis in MOLM13/MV4-11; synergy with other agents
+Carfilzomib,Proteasome inhibitor,Irreversible proteasome inhibitor inducing apoptotic cell death,5.0,25.0,nM,Approved for multiple myeloma; potent cytotoxicity in AML including MOLM13
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increasing ROS and inducing apoptosis",0.3,2.0,µM,Approved for rheumatoid arthritis; active in AML including MOLM13
+Pimozide,Antipsychotic; STAT5 pathway inhibitor,Inhibits STAT5 signaling downstream of FLT3-ITD,3.0,10.0,µM,Antipsychotic repurposed; activity in FLT3-ITD AML including MOLM13
+Tigecycline,Antibiotic; mitochondrial translation inhibitor,Blocks mitochondrial translation and impairs OXPHOS in AML cells,1.0,10.0,µM,Selectively targets AML stem/progenitor cells; reduces viability in MOLM13
+Niclosamide,Anthelmintic,Modulates Wnt/STAT3/mTOR signaling and mitochondrial function,0.2,2.0,µM,Induces apoptosis and inhibits proliferation in AML including MOLM13
+Disulfiram,ALDH inhibitor,ALDH inhibition; with copper forms complexes that disrupt proteostasis and elevate ROS,0.05,0.5,µM,Also called DSF; potency markedly enhanced with supplemental Cu(II); higher ranges needed without copper; activity reported in FLT3-ITD lines
+Nelfinavir,HIV protease inhibitor,Induces ER stress/UPR leading to apoptosis in AML cells,5.0,15.0,µM,Repurposed antiviral; activity in MOLM13
+Clofazimine,Antimycobacterial agent,Affects Wnt/NF-κB signaling and mitochondrial function,0.2,1.0,µM,Anti-leukemia activity including AML stem/progenitors; activity in MOLM13 reported in screens
+Atovaquone,Antimalarial; OXPHOS inhibitor,Inhibits mitochondrial complex III to impair oxidative phosphorylation,10.0,30.0,µM,Clinically achievable exposures overlap effective range; reduces viability in MOLM13

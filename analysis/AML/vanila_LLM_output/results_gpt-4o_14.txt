@@ -1,0 +1,75 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) involves identifying compounds that can impact the proliferation or survival of AML cells, including the MOLM13 cell line. Here is a list of 20 drugs that are not traditionally used for AML but have shown potential in preclinical studies or in vitro assays for their anti-leukemic properties. The suggested IC50 concentrations are based on available preclinical data or estimates and should be experimentally verified in your specific setting.
+
+1. **Venetoclax**: A BCL-2 inhibitor with promising activity in AML.
+   - IC50: ~10-100 nM
+
+2. **Auranofin**: A gold compound used for rheumatoid arthritis that can induce oxidative stress in AML cells.
+   - IC50: ~0.5-5 μM
+
+3. **Metformin**: An antidiabetic drug with reported efficacy in several cancer models, including AML.
+   - IC50: ~1-10 mM
+
+4. **Arsenic trioxide**: Used in acute promyelocytic leukemia; has activity in other AML subsets.
+   - IC50: ~0.1-1 μM
+
+5. **Ibrutinib**: A BTK inhibitor primarily used for chronic lymphocytic leukemia but might affect AML proliferation pathways.
+   - IC50: ~0.5-5 μM
+
+6. **Dasatinib**: Approved for chronic myeloid leukemia; shows activity against certain AML kinases.
+   - IC50: ~5-20 nM
+
+7. **Leflunomide**: An immunomodulatory drug that inhibits pyrimidine synthesis.
+   - IC50: ~10-50 μM
+
+8. **Thalidomide**: Known for its anti-angiogenic properties; explored for AML due to potential anti-tumor effects.
+   - IC50: ~0.5-5 μM
+
+9. **Celecoxib**: A COX-2 inhibitor that has shown some anti-cancer effects.
+   - IC50: ~5-25 μM
+
+10. **Disulfiram**: Used in the treatment of alcoholism and has shown anticancer potential.
+    - IC50: ~0.1-1 μM
+
+11. **Riluzole**: A neuroprotective drug that could affect glutamate signaling pathways in AML.
+    - IC50: ~10-50 μM
+
+12. **Chloroquine**: Antimalarial with autophagy inhibition properties useful in AML.
+    - IC50: ~10-50 μM
+
+13. **Dexamethasone**: A corticosteroid with apoptotic effects in certain leukemic cells.
+    - IC50: ~1-10 μM
+
+14. **Nelfinavir**: An antiretroviral protease inhibitor with potential anti-leukemic activity.
+    - IC50: ~10-50 μM
+
+15. **Minocycline**: An antibiotic with anti-inflammatory and potential anti-cancer properties.
+    - IC50: ~10-50 μM
+
+16. **Amiodarone**: An antiarrhythmic agent that can induce apoptosis in cancer cells.
+    - IC50: ~10-50 μM
+
+17. **Vorinostat (SAHA)**: An HDAC inhibitor showing potential synergistic effects in AML.
+    - IC50: ~0.5-5 μM
+
+18. **Cyclosporine**: An immunosuppressant with roles in modulating drug resistance and apoptosis.
+    - IC50: ~2-10 μM
+
+19. **Doxycycline**: Another antibiotic that may disrupt mitochondrial biogenesis in cancer cells.
+    - IC50: ~10-50 μM
+
+20. **Simvastatin**: A cholesterol-lowering agent with observed anti-proliferative effects in AML.
+    - IC50: ~0.1-1 μM
+
+Please note that while these drugs have shown promise, experimental validation is critical, as the efficacy and safety profiles can vary across different laboratory conditions and patient-specific contexts. Additionally, these drugs should be tested in combination with standard AML treatments to assess potential synergies. Safety profiles and mechanisms of action should be thoroughly investigated before proceeding with preclinical or clinical testing.

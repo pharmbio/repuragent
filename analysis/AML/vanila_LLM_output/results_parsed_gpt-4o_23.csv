@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,"Inhibits BCL-2, promoting apoptosis of AML cells",0.01,0.1,μM,Particularly promising in combination therapies.
+Sorafenib,Multi-kinase inhibitor,Targets several tyrosine kinases involved in cancer cell growth and survival,1.0,10.0,μM,Effective when used in combination with other AML treatments.
+Metformin,Anti-diabetic,"Activates AMP-activated protein kinase, inhibiting mitochondrial respiratory-chain complex 1",1.0,10.0,mM,"Explored for its potential as a cancer therapeutic, particularly for AML."
+Auranofin,Anti-rheumatic,"Inhibits thioredoxin reductase, impacting redox balance and inducing cell death",0.5,5.0,μM,Potential anti-leukemic activity.
+Decitabine,DNA methyltransferase inhibitor,"Incorporates into DNA, leading to hypomethylation and re-expression of silenced genes",0.1,1.0,μM,Already approved for use in certain AML treatments.
+Arsenic Trioxide,Chemotherapy agent,Induces apoptosis through morphologic changes and DNA fragmentation,0.1,1.0,μM,Approved for treatment of acute promyelocytic leukemia.
+Clofarabine,Purine nucleoside analog,"Inhibits DNA synthesis, causing cell cycle arrest",10.0,100.0,nM,Used for children's refractory to other therapies.
+Vorinostat (SAHA),HDAC inhibitor,"Inhibits histone deacetylases, leading to apoptosis and disrupted neoplastic growth",1.0,5.0,μM,Potential for use in AML due to its epigenetic action.
+Itraconazole,Antifungal,"Inhibits cytochrome P450 3A4, impacting hedgehog signaling pathway",1.0,10.0,μM,Shows broadband anticancer activity beyond its antifungal use.
+Ruxolitinib,JAK inhibitor,"Targets Janus kinases, blocking inflammatory cytokine signaling",0.5,5.0,μM,Evaluated for efficacy in treating various hematological malignancies.
+Selinexor,Exportin inhibitor,"Blocks nuclear export by inhibiting exportin 1 (XPO1), trapping tumor suppressor proteins in the nucleus",50.0,500.0,nM,In trials for various leukemias.
+Bortezomib,Proteasome inhibitor,"Disrupts proteasome activity, inducing cell death",0.005,0.1,μM,"Approved for multiple myeloma, explored for AML treatment."
+Disulfiram,Antabuse,"Inhibits aldehyde dehydrogenase, inducing cytotoxicity in cancer cells",0.5,5.0,μM,Potential use in cancer therapies due to its mechanism of action.
+Omeprazole,Proton pump inhibitor,"Inhibits H+/K+ ATPase, affecting cellular pH regulation and potentially cancer cell survival",10.0,100.0,μM,Anti-cancer properties emerging as secondary to its primary use.
+Thalidomide,Immunomodulatory drug,Modulates the immune system and impacts angiogenesis,1.0,10.0,μM,Revived for use in multiple myeloma and being explored for AML.
+Tacrolimus,Immunosuppressant,"Inhibits calcineurin, blocking T-cell activation",0.5,5.0,μM,Under investigation for its potential broader applications in cancer treatment.
+Simvastatin,Statin,"Inhibits HMG-CoA reductase, impacting cholesterol synthesis and potentially cell proliferation",10.0,100.0,μM,Investigated for cancer growth inhibition effect.
+Azacitidine,DNA methyltransferase inhibitor,"Incorporates into DNA/RNA, promoting gene reactivation through hypomethylation",0.1,1.0,μM,"Analog of decitabine, approved for certain hematological malignancies."
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and Src family kinases,0.5,5.0,nM,Widely used in chronic myeloid leukemia and under review for AML.
+Dantrolene,Muscle relaxant,"Inhibits calcium ion release from sarcoplasmic reticulum, affecting cell signaling",10.0,100.0,μM,Investigated for its side-effect profile in a cancer context.

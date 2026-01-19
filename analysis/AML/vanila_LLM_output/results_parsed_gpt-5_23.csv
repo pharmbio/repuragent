@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Ponatinib,Multikinase tyrosine kinase inhibitor (TKI),Potent FLT3 inhibitor (also inhibits BCR‑ABL and other kinases); robust activity in FLT3‑ITD AML models,0.0,0.0,nM,Indicated for CML/Ph+ ALL; reported low‑nM potency; active in MOLM‑13 and MV4‑11
+Sorafenib,Multikinase TKI,Inhibits FLT3‑ITD and RAF/VEGFR signaling; suppresses proliferation of FLT3‑ITD AML lines,0.0,0.0,nM,Approved for HCC/RCC; reported low‑ to mid‑nM potency; activity in MOLM‑13
+Sunitinib,Multikinase TKI,FLT3 inhibitor with activity across FLT3‑ITD AML lines,0.0,0.0,nM,Approved for RCC/GIST; reported nM potency in MOLM‑13 and related models
+Cabozantinib,Multikinase TKI,"Inhibits FLT3 WT and mutants (including D835) and other kinases (e.g., MET, VEGFR2)",0.0,0.0,nM,Approved for RCC/HCC/MTC; reported low‑nM activity; active in MOLM‑13
+Axitinib,TKI (primarily VEGFR),Inhibits FLT3 signaling in AML models in addition to VEGFR,0.0,0.0,nM,Approved for RCC; reported low‑nM activity; activity in MOLM‑13/MV4‑11
+Regorafenib,Multikinase TKI,Potent against FLT3‑ITD; antiproliferative in AML cell lines,0.0,0.0,nM,Approved for CRC/GIST/HCC; reported nM potency; activity includes MOLM‑13
+Vandetanib,TKI,Inhibits FLT3 signaling (also EGFR/VEGFR/RET),0.0,0.0,µM,Also known as ZD6474; reported nM–sub‑µM activity in FLT3‑ITD AML models
+Pazopanib,Multikinase TKI,Off‑target FLT3 inhibition in addition to VEGFR/PDGFR; reported activity in FLT3‑ITD AML cell lines,0.0,0.0,µM,Approved for RCC/STS; reported sub‑µM activity
+Selinexor,Selective inhibitor of nuclear export (XPO1 inhibitor),Blocks XPO1‑mediated nuclear export; induces apoptosis and inhibits proliferation in AML cells,0.0,0.0,µM,Approved for MM/DLBCL; reported sub‑µM activity; activity includes MOLM‑13
+Trametinib,MEK inhibitor,Inhibits MEK1/2 in the RAS/RAF/MEK/ERK pathway; active in RAS/MAPK‑driven AML models,0.0,0.0,µM,Approved for melanoma; reported sub‑µM activity; MOLM‑13 responsiveness reported in screens
+Everolimus,mTOR inhibitor (mTORC1),Inhibits mTOR signaling to suppress AML cell proliferation,0.0,0.0,µM,Approved for RCC and other cancers; text also references Temsirolimus as similar mTOR inhibitor; reported sub‑µM–µM activity; activity includes MOLM‑13
+Pimozide,Antipsychotic (repurposed),Inhibits STAT5 pathway signaling leading to apoptosis in FLT3‑ITD AML cells,0.0,0.0,µM,Reported µM activity; active in MOLM‑13; dopamine D2 receptor antagonist by original indication
+Thioridazine,Antipsychotic (phenothiazine),Targets leukemia stem/progenitor cells; proposed to disrupt dopamine receptor signaling and induce apoptosis,0.0,0.0,µM,Reported µM activity in AML cell lines
+Bortezomib,Proteasome inhibitor,"Reversibly inhibits 26S proteasome, inducing proteotoxic stress and apoptosis",0.0,0.0,nM,Approved for MM/MCL; reported nM cytotoxicity in AML lines including MOLM‑13
+Carfilzomib,Proteasome inhibitor,Irreversible 20S proteasome inhibitor causing accumulation of ubiquitinated proteins and apoptosis,0.0,0.0,nM,Approved for MM; reported nM potency in AML lines including MOLM‑13
+Tigecycline,Antibiotic (glycylcycline),"Inhibits mitochondrial translation, impairing oxidative phosphorylation in AML cells/LSCs",0.0,0.0,µM,Reported µM activity; selectively impairs AML blasts/LSCs; MOLM‑13 sensitivity reported
+Auranofin,Thioredoxin reductase inhibitor (gold compound/DMARD),Inhibits thioredoxin reductase leading to ROS accumulation and AML cytotoxicity,0.0,0.0,µM,Approved for rheumatoid arthritis; reported sub‑µM–µM activity; active in MOLM‑13
+Disulfiram,ALDH inhibitor (repurposed),Inhibits ALDH; reported to target NPL4 and induce proteotoxic/ROS stress (often potentiated by copper),0.0,0.0,µM,Used for alcohol‑use disorder; activity in AML lines including MOLM‑13; often tested ± copper cofactor
+Vorinostat,HDAC inhibitor,"Inhibits class I/II histone deacetylases, promoting acetylation and apoptosis",0.0,0.0,µM,Also known as SAHA; approved for CTCL; reported sub‑µM–µM activity; active in MOLM‑13
+Panobinostat,Pan‑HDAC inhibitor,Broad inhibition of HDAC isoforms leading to chromatin remodeling and apoptosis,0.0,0.0,µM,Approved for MM; strong preclinical AML activity with MOLM‑13 sensitivity; reported sub‑µM activity

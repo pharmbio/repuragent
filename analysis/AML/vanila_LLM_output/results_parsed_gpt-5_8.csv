@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multikinase inhibitor (incl. FLT3),Inhibits FLT3 and multiple RTKs to suppress AML proliferation,5e-05,1.0,µM,"Approved for HCC, RCC; strong activity in FLT3-ITD AML including MOLM-13"
+Ponatinib,BCR-ABL/FLT3 tyrosine kinase inhibitor,Inhibits BCR-ABL and FLT3 kinases,0.015,300.0,nM,Approved for CML/Ph+ ALL; very potent in FLT3-ITD AML including MOLM-13
+Sunitinib,Multikinase inhibitor (incl. FLT3),Inhibits FLT3 and other RTKs (VEGFR/PDGFR),0.00015,3.0,µM,"Approved for RCC, GIST; active in FLT3-ITD AML"
+Cabozantinib,Multikinase inhibitor (incl. FLT3),Inhibits multiple RTKs including FLT3,5e-05,1.0,µM,"Approved for RCC, thyroid cancer; potent in FLT3-ITD AML including MOLM-13"
+Lenvatinib,VEGFR/RET/FGFR inhibitor (reported FLT3 activity),"Inhibits VEGFR, RET, FGFR; reported to inhibit FLT3",0.00025,5.0,µM,"Approved for thyroid, HCC, RCC; active in FLT3-ITD AML models"
+Nintedanib,VEGFR/FGFR/PDGFR inhibitor,Triple angiokinase inhibitor (VEGFR/FGFR/PDGFR),0.00025,5.0,µM,Approved for IPF; preclinical activity in FLT3-ITD AML including MOLM-13
+Dasatinib,SRC/ABL tyrosine kinase inhibitor,Inhibits SRC-family kinases and ABL signaling,5e-05,1.0,µM,Approved for CML/Ph+ ALL; activity in MLL/FLT3 AML lines
+Fostamatinib,SYK inhibitor,Prodrug of R406; inhibits SYK signaling,0.0015,30.0,µM,Approved for ITP; SYK dependency in MLL-rearranged AML; activity in MOLM-13; active metabolite R406
+Ruxolitinib,JAK1/2 inhibitor,Blocks JAK-STAT signaling,0.0005,10.0,µM,Approved for myelofibrosis and PV; variable single-agent AML activity; consider cytokine-driven contexts
+Trametinib,MEK1/2 inhibitor,Inhibits MEK to block MAPK pathway,5e-05,1.0,µM,Approved for melanoma; MAPK pathway inhibition active in AML; test alone and in combinations
+Selumetinib,MEK1/2 inhibitor,Inhibits MEK to suppress MAPK signaling,0.0005,10.0,µM,Approved for NF1-associated PN; MEK inhibition can suppress AML; test on MOLM-13
+Venetoclax,BCL-2 inhibitor,Induces apoptosis via selective BCL-2 inhibition,0.0005,10.0,µM,Approved for CLL/SLL and AML; highly protein-bound; AML line responses vary
+Bortezomib,Proteasome inhibitor,"Inhibits 26S proteasome, inducing apoptosis",0.005,100.0,nM,Approved for multiple myeloma and MCL; potent cytotoxicity in AML including MOLM-13
+Carfilzomib,Proteasome inhibitor,Irreversible 20S proteasome inhibition,0.005,100.0,nM,Approved for multiple myeloma; strong proteasome-dependent killing in AML lines
+Omacetaxine mepesuccinate,Protein synthesis inhibitor,Inhibits translation elongation (homoharringtonine derivative),0.005,100.0,nM,Approved for CML; broad antileukemic activity in AML cell lines
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases causing epigenetic reprogramming,0.001,20.0,µM,Also known as SAHA; approved for CTCL; activity reported in MOLM-13
+Panobinostat,HDAC inhibitor,Potent pan-HDAC inhibition leading to apoptosis,5e-05,1.0,µM,Approved for multiple myeloma; active in AML lines
+Belinostat,HDAC inhibitor,Inhibits histone deacetylases to alter gene expression,0.001,20.0,µM,Approved for PTCL; cytotoxic to AML cell lines
+Tigecycline,Mitochondrial translation inhibitor (antibiotic),"Inhibits mitochondrial protein synthesis, impairing oxidative phosphorylation",0.0025,50.0,µM,Selective OxPhos impairment in AML including MOLM-13
+Auranofin,Thioredoxin reductase inhibitor,Inhibits TrxR causing oxidative stress–mediated cell death,0.0005,10.0,µM,Approved for rheumatoid arthritis; induces oxidative stress in AML cell lines

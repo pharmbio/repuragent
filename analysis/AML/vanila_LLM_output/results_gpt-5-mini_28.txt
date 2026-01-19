@@ -1,0 +1,130 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or advanced clinical agents) that have published preclinical activity against acute myeloid leukemia (AML) cell lines (including FLT3‑ITD models such as MOLM13) and that are good candidates for repurposing screens. For each drug I give a short rationale, a suggested experimentally testable IC50 concentration series (top concentration and a practical serial-dilution plan), and an approximate literature-based IC50 range where available. These suggestions are tuned for a standard 72 h viability assay on MOLM13 (see practical assay notes at the end). Numbers are approximate — run pilot curves and check compound solubility/stability before committing to large screens.
+
+Legend for dilution series: recommended format is 10 concentrations in a 3‑fold serial dilution (10 points, 3× serial), unless otherwise noted. “Top conc.” = highest concentration to plate.
+
+1) Gilteritinib (FLT3/AXL inhibitor)  
+- Rationale: Potent against FLT3‑ITD AML (MOLM13 is FLT3‑ITD).  
+- Top conc.: 1 µM; 10‑point, 3× serial (1 µM → ~0.5 pM).  
+- Expected IC50 (MOLM13/FLT3‑ITD): ~1–50 nM.
+
+2) Quizartinib (FLT3 inhibitor)  
+- Rationale: Highly potent FLT3 inhibitor; active in FLT3‑ITD cells.  
+- Top conc.: 300 nM; 10‑point, 3× serial (300 nM → ~0.15 pM). If unsure, use 1 µM top.  
+- Expected IC50: sub‑nM to low nM.
+
+3) Midostaurin (multikinase/FLT3 inhibitor)  
+- Rationale: Approved FLT3 inhibitor used in AML therapy.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: ~10–200 nM (depends on cell context).
+
+4) Crenolanib (FLT3 inhibitor)  
+- Rationale: Active against FLT3‑ITD and certain resistant mutants.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: low‑to‑mid nM.
+
+5) Sorafenib (multikinase inhibitor)  
+- Rationale: Has activity in FLT3‑ITD AML preclinically and clinically off‑label.  
+- Top conc.: 3 µM; 10‑point, 3× serial (3 µM → ~15 pM).  
+- Expected IC50: ~50–500 nM (cell dependent).
+
+6) Ponatinib (pan‑tyrosine kinase inhibitor)  
+- Rationale: Potent multi‑kinase inhibitor with reported activity in FLT3‑ITD models.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: low‑to‑mid nM to 100s nM (context dependent).
+
+7) Venetoclax (BCL‑2 inhibitor)  
+- Rationale: FDA‑approved for AML combinations; potent apoptosis inducer in AML cell lines (MOLM13 often sensitive).  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: ~5–100 nM (often ~10–50 nM in sensitive AML lines).
+
+8) Bortezomib (proteasome inhibitor)  
+- Rationale: Proteasome inhibition causes apoptosis in AML cells; used clinically in hematologic malignancies.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: low‑to‑mid nM.
+
+9) Carfilzomib (second‑gen proteasome inhibitor)  
+- Rationale: Potent proteasome inhibitor with activity in AML models.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: low nM.
+
+10) Panobinostat (pan‑HDAC inhibitor)  
+- Rationale: Epigenetic modulator with anti‑AML activity in vitro.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: ~10–200 nM (depending on line and exposure).
+
+11) Entinostat (class I HDAC inhibitor)  
+- Rationale: Class I selective HDAC inhibitor with reported AML activity (synergy with other agents).  
+- Top conc.: 3 µM; 10‑point, 3× serial.  
+- Expected IC50: ~100 nM–1 µM.
+
+12) Volasertib (PLK1 inhibitor)  
+- Rationale: PLK1 inhibitors cause mitotic arrest and have preclinical AML efficacy.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: low‑to‑mid nM to 100 nM.
+
+13) Alisertib (Aurora A kinase inhibitor)  
+- Rationale: Disrupts mitosis; active in AML preclinical studies.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: ~10–500 nM.
+
+14) Palbociclib (CDK4/6 inhibitor)  
+- Rationale: CDK inhibition can block proliferation in subsets of AML; testable in MOLM13.  
+- Top conc.: 10 µM; 10‑point, 3× serial (10 µM → ~5 pM).  
+- Expected IC50: often >100 nM (line dependent; sometimes µM).
+
+15) Trametinib (MEK inhibitor)  
+- Rationale: MAPK pathway inhibition has activity in RAS/MAPK‑activated AMLs.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: low‑to‑mid nM to 100 nM (context dependent).
+
+16) Ibrutinib (BTK/TEC inhibitor)  
+- Rationale: BTK inhibitors have off‑target effects relevant to AML and reported preclinical activity.  
+- Top conc.: 3 µM; 10‑point, 3× serial.  
+- Expected IC50: ~100 nM–1 µM (cell dependent).
+
+17) Dasatinib (SRC/ABL/SFK inhibitor)  
+- Rationale: Multi‑kinase activity with some reported AML cell activity.  
+- Top conc.: 1 µM; 10‑point, 3× serial.  
+- Expected IC50: ~1–500 nM.
+
+18) Everolimus (mTOR inhibitor)  
+- Rationale: mTOR pathway implicated in AML proliferation; rapalogs show preclinical activity.  
+- Top conc.: 10 µM; 10‑point, 3× serial (for broad coverage).  
+- Expected IC50: ~10–1000 nM (often higher than potent kinase inhibitors).
+
+19) Azacitidine (DNMT inhibitor; hypomethylating agent)  
+- Rationale: Standard AML therapy — however in vitro activity requires metabolic activation and longer exposure.  
+- Top conc.: 100 µM; 8‑point, 3× serial (100 µM → ~0.5 µM); treat for 5–7 days with medium change every 24–48 h or use longer exposure assay.  
+- Expected IC50: often in low–high micromolar in short assays; longer assays give more relevant epigenetic effects.
+
+20) Mebendazole (anti‑helminth; tubulin binder)  
+- Rationale: Repurposing candidate with preclinical antileukemia activity (disrupts microtubules, triggers apoptosis).  
+- Top conc.: 10 µM; 10‑point, 3× serial.  
+- Expected IC50: ~100 nM–5 µM (variable).
+
+Practical assay notes and recommendations
+- Standard parameters (suggested): MOLM13 in 96‑well plates, seed 3,000–10,000 cells/well (optimize to be in log phase through assay). Treat 72 hours for most small molecules. For epigenetic drugs (azacitidine, decitabine) use 5–7 day exposure with periodic medium/compound refresh.  
+- Viability readout: ATP‑based (CellTiter‑Glo) or resazurin; use at least triplicate wells per concentration and include vehicle (DMSO) controls. Keep final DMSO ≤0.5% (ideally 0.1–0.2%).  
+- Recommended dilution series format: 10 concentrations, 3× serial dilutions is a robust standard (covers from top conc down ~8 orders of magnitude). If solubility is an issue, use 8 points. For very potent inhibitors (expected single‑digit nM) you can set top conc at 1 µM to avoid waste and nonspecific effects. For weak agents or compounds with high protein binding, start at 10 µM.  
+- Positive control: include a known cytotoxic (staurosporine or a drug with known activity in MOLM13 such as gilteritinib or venetoclax if tolerated) to confirm assay performance.  
+- Data fitting: fit a 4‑parameter logistic curve to derive IC50. Report IC50 with 95% CI and check Hill slope; for biphasic curves consider alternative fits.  
+- Compound handling: verify compound purity and solubility; some compounds (e.g., azacitidine) are unstable in solution — prepare fresh or follow vendor recommendations. Consider serum presence: some drugs lose potency in high serum; if doing serum‑free or low‑serum conditions, note physiological relevance.
+
+If you want, I can:
+- produce ready‑to‑print plate maps (compound concentrations per well) for 96‑well format based on any of the listed top concentrations; or  
+- prioritize the list for MOLM13 specifically (if you want a shorter “top 5–10” to test first); or  
+- provide suggested combination pairs (e.g., venetoclax + FLT3 inhibitor) and concentrations for synergy testing.
+
+Which follow‑up would you prefer?

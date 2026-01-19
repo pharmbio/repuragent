@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Metformin,Biguanide,Reduces glucose production in the liver and increases insulin sensitivity.,1000.0,10000.0,µM,Commonly used for type 2 diabetes.
+Dexamethasone,Corticosteroid,Suppresses inflammation and modulates immune response.,1.0,100.0,µM,Anti-inflammatory and anti-allergic properties.
+Melfalan,Alkylating agent,"Cross-links DNA, preventing cell replication.",1.0,10.0,µM,Brand name Alkeran.
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases leading to increased acetylation of histones and modulation of gene transcription.,0.1,5.0,µM,Also known as SAHA.
+Gemcitabine,Nucleoside analogue,Inhibits DNA synthesis by mimicking deoxycytidine triphosphate.,1.0,10.0,µM,
+Lenalidomide,Immunomodulatory drug,Inhibits angiogenesis and stimulates immune response against tumors.,0.1,10.0,µM,
+Celecoxib,Nonsteroidal anti-inflammatory drug (NSAID),"Inhibits cyclooxygenase-2 (COX-2), reducing inflammation and tumor growth.",10.0,100.0,µM,
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response.,1.0,10.0,µM,
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis in cancer cells and alters gene expression.,0.1,5.0,µM,
+Tamoxifen,Selective estrogen receptor modulator,"Blocks estrogen receptors, inhibiting the growth of estrogen-dependent tumors.",1.0,10.0,µM,
+Rapamycin,mTOR inhibitor,"Inhibits the mTOR pathway, affecting cell growth and proliferation.",1.0,100.0,nM,
+L-asparaginase,Enzyme,"Depletes asparagine levels, leading to cell death in asparagine-dependent tumors.",0.1,2.0,U/mL,
+Bosutinib,Tyrosine kinase inhibitor,"Inhibits Bcr-Abl and Src family kinases, interfering with signaling for growth and survival.",0.1,1.0,µM,
+Sunitinib,Tyrosine kinase inhibitor,Inhibits various growth factor receptors and angiogenic pathways.,0.1,1.0,µM,
+Carfilzomib,Proteasome inhibitor,"Inhibits proteasome function, leading to accumulation of pro-apoptotic factors.",1.0,20.0,nM,
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, disrupting cellular protein homeostasis and inducing apoptosis.",1.0,10.0,nM,
+Axitinib,Tyrosine kinase inhibitor,"Inhibits vascular endothelial growth factor receptors, interrupting tumor angiogenesis.",0.01,1.0,µM,
+Etoposide,Topoisomerase inhibitor,"Inhibits topoisomerase II, preventing DNA unwinding and replication.",5.0,50.0,µM,
+Hydroxyurea,Antimetabolite,"Inhibits ribonucleotide reductase, reducing DNA synthesis.",10.0,100.0,µM,
+Disulfiram,Aldehyde dehydrogenase inhibitor,Inhibits the metabolism of acetaldehyde and promotes apoptosis in cancer cells.,1.0,10.0,µM,

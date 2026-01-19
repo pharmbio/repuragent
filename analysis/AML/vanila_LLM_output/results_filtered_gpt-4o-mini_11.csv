@@ -1,0 +1,11 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases,0.1,1.0,µM,,panobinostat,False,CHEMBL483254
+Ruxolitinib,JAK inhibitor,Inhibits Janus kinases and downstream signaling,0.5,5.0,µM,,ruxolitinib,False,CHEMBL1287854
+Alvocidib,CDK inhibitor,"Inhibits cyclin-dependent kinases, promoting apoptosis",0.1,1.0,µM,Also known as flavopiridol,alvocidib,False,CHEMBL2105698
+Trametinib,MEK inhibitor,"Inhibits MEK1/2, blocking MAPK/ERK signaling",0.1,1.0,µM,,trametinib,False,CHEMBL2103875
+Nilotinib,BCR-ABL inhibitor,Inhibits the BCR-ABL fusion protein,1.0,5.0,µM,,nilotinib,False,CHEMBL255863
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome, disrupting protein degradation",0.1,1.0,µM,,bortezomib,False,CHEMBL325041
+L-asparaginase,Enzyme,"Hydrolyzes asparagine to aspartate, starving leukemic cells",1.0,3.0,U/mL,,l asparaginase,False,CHEMBL2108989
+Aspirin,NSAID,"Inhibits cyclooxygenase enzymes, reducing inflammation",1.0,10.0,mM,,aspirin,False,CHEMBL25
+Metformin,Biguanide,Decreases glucose production and improves insulin sensitivity,1.0,10.0,mM,,metformin,False,CHEMBL1431
+Thalidomide,Immunomodulatory drug,Modulates immune response and inhibits angiogenesis,1.0,10.0,µM,,thalidomide,False,CHEMBL426123

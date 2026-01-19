@@ -1,0 +1,116 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below I list 20 existing, clinically used drugs that have published or preclinical evidence for anti‑AML activity (many specifically tested in AML cell lines or shown activity in FLT3‑ITD models such as MOLM‑13). For each I give a short rationale and a practical, literature‑compatible screening concentration range to use when performing cell‑viability/IC50 dose–response experiments. I do not provide step‑by‑step wet‑lab protocols; please run any experiments only in an appropriate laboratory with trained personnel and institutional approvals.
+
+How to interpret the concentration guidance
+- The ranges are intended for a standard multi‑point dose–response (e.g., 8–12 concentrations spanning several log10 units) so you can reliably estimate IC50s.  
+- I group compounds by expected potency class (nM‑potent vs µM‑potent) and give an example screening window. Use an appropriate serial dilution (e.g., 3‑ or 4‑fold steps across 8–12 points). Confirm solubility and vehicle limits before testing. Exposure time and assay format change apparent IC50s (commonly 48–72 h viability assays are used in AML cell lines).  
+- Include vehicle controls and positive controls (e.g., a known FLT3 inhibitor for MOLM‑13 sensitivity) in each plate.
+
+Top 20 candidate drugs (short rationale + suggested screening range for IC50 testing)
+
+1) Sorafenib (multi‑kinase inhibitor; inhibits FLT3 among other kinases)
+- Rationale: clinical/experimental activity in FLT3‑ITD AML models, MOLM‑13 is FLT3‑ITD positive and usually sensitive.
+- Suggested screening window: 0.1 nM – 10 µM (use an 8–12 point series spanning this).
+
+2) Gilteritinib (FLT3/AXL inhibitor; approved in relapsed FLT3 AML)
+- Rationale: potent FLT3 inhibition; expected low‑nM activity in FLT3‑mutant AML lines.
+- Suggested screening window: 0.01 nM – 1 µM (nM‑potent class).
+
+3) Midostaurin (multi‑kinase/FLT3 inhibitor; approved for FLT3‑mutant AML)
+- Rationale: FLT3 activity; used clinically in AML; expected nM‑low‑µM activity depending on context.
+- Suggested screening window: 0.1 nM – 10 µM.
+
+4) Venetoclax (BCL‑2 inhibitor; approved for AML combinations)
+- Rationale: BCL‑2 inhibition strongly reduces viability in many AML lines; often synergizes with other agents.
+- Suggested screening window: 0.01 nM – 1 µM (very potent in responsive lines).
+
+5) Auranofin (gold compound; thioredoxin reductase inhibitor)
+- Rationale: induces oxidative stress and apoptosis in AML models; reported single‑agent activity in AML lines.
+- Suggested screening window: 1 nM – 100 µM (expect low‑µM IC50s in many AML lines).
+
+6) Disulfiram (alcohol‑aversion drug; copper‑dependent proteasome/ALDH effects)
+- Rationale: Disulfiram + copper shows anti‑leukemic activity in preclinical studies via multiple mechanisms.
+- Suggested screening window: 10 nM – 100 µM (often active in low‑µM range when copper is present).
+
+7) Niclosamide (anti‑helminthic; inhibits Wnt/STAT3, mitochondrial uncoupling)
+- Rationale: multiple studies showed anti‑proliferative effects in AML cell lines and stem‑like cells.
+- Suggested screening window: 1 nM – 100 µM (often active in sub‑ to low‑µM range).
+
+8) Mebendazole (anti‑helminthic; microtubule disruption)
+- Rationale: reported cytotoxicity in various cancer cell lines including AML; may disrupt mitosis and induce apoptosis.
+- Suggested screening window: 1 nM – 100 µM (expect µM potency).
+
+9) Tigecycline (antibiotic; inhibits mitochondrial translation)
+- Rationale: targets mitochondrial translation/oxidative metabolism in leukemia stem cells and AML lines.
+- Suggested screening window: 1 nM – 100 µM (commonly low‑µM effective concentrations).
+
+10) Itraconazole (antifungal; Hedgehog/angiogenesis and cholesterol trafficking effects)
+- Rationale: anti‑cancer activity reported in preclinical AML models by modulating signaling and drug efflux.
+- Suggested screening window: 10 nM – 50 µM.
+
+11) Metformin (biguanide antidiabetic; impacts mitochondrial respiration/AMPK)
+- Rationale: metabolic reprogramming can reduce AML proliferation; often used in combination studies.
+- Suggested screening window: 100 nM – 10 mM (metformin often requires higher concentrations in vitro; interpret with caution).
+
+12) Simvastatin (HMG‑CoA reductase inhibitor; interferes with prenylation)
+- Rationale: statins have shown apoptosis and differentiation effects in AML lines; synergy with other agents reported.
+- Suggested screening window: 1 nM – 50 µM.
+
+13) Chloroquine / Hydroxychloroquine (autophagy inhibitors)
+- Rationale: autophagy inhibition can sensitize AML cells, including MOLM‑13, to other drugs and in some cases reduce viability.
+- Suggested screening window: 10 nM – 100 µM (commonly low‑ to mid‑µM concentrations used).
+
+14) Pimozide (antipsychotic; reported STAT5/other signaling effects)
+- Rationale: repurposing screens have identified pimozide as inhibitory in some AML models; may target oncogenic signaling.
+- Suggested screening window: 1 nM – 100 µM.
+
+15) Thioridazine (antipsychotic; reported targeting of cancer stem cells)
+- Rationale: reported to preferentially affect leukemia stem‑like cells and increase differentiation/apoptosis.
+- Suggested screening window: 1 nM – 100 µM.
+
+16) Pyrvinium pamoate (anti‑helminthic; Wnt inhibitor/mitochondrial effects)
+- Rationale: antiproliferative activity in several cancer cell lines; mitochondrial/Wnt effects can be relevant in AML.
+- Suggested screening window: 1 nM – 50 µM.
+
+17) Doxycycline (tetracycline antibiotic; mitochondrial ribosome inhibitor)
+- Rationale: mitochondrial translation inhibition can preferentially affect leukemia stem cells and reduce proliferation.
+- Suggested screening window: 1 nM – 100 µM.
+
+18) Tamoxifen (selective estrogen receptor modulator)
+- Rationale: ER‑independent antiproliferative effects in multiple cancer types and reports of activity in leukemia cell lines.
+- Suggested screening window: 1 nM – 50 µM.
+
+19) Celecoxib (COX‑2 inhibitor; also affects survivin and signaling pathways)
+- Rationale: COX‑2 and downstream survival pathways implicated in leukemia; celecoxib has shown cytotoxicity in AML cells.
+- Suggested screening window: 1 nM – 100 µM.
+
+20) Emetine (protein synthesis inhibitor; antiprotozoal/antiemetic historically)
+- Rationale: strong cytotoxic activity through translation inhibition reported in cancer cells; potent but toxic (handle carefully).
+- Suggested screening window: 0.01 nM – 10 µM (potent—work with care and appropriate controls).
+
+Practical notes for designing the IC50 plate (non‑procedural guidance)
+- Choose dilution factor and number of points to cover at least 3–5 log10 units around expected potency. Typical options: 8–12 concentrations with 3‑fold or 2‑fold serial dilutions.  
+- For nM‑potent kinase inhibitors or targeted agents, include low‑nM to low‑µM coverage; for repurposed non‑oncology agents that act at µM concentrations, include low µM up to tens of µM.  
+- Always check compound solubility and prepare concentrated stocks in an appropriate vehicle (ensure vehicle final % is constant across wells).  
+- Compare single‑agent activity to established AML controls (e.g., a known FLT3 inhibitor in MOLM‑13) and include negative controls. Consider timepoints (48 h vs 72 h) as this affects IC50.
+
+References and next steps
+- For each candidate above, there are preclinical studies (cell lines, primary AML samples, or xenografts) and repurposing screens that motivated inclusion. If you want, I can:
+  - Provide a short bibliography (key papers) for a selected subset of these compounds (I’ll cite primary studies and reviews).  
+  - Convert the general screening windows above into explicit 10‑point concentration series for any subset of drugs (e.g., give the exact concentrations for a 3‑fold 10‑point dilution) if that is acceptable to you.
+
+Safety/responsibility
+- Work only in approved labs with qualified personnel. Many of the listed compounds have known systemic toxicities at high concentrations; interpret in vitro potency in the context of achievable plasma/tissue levels and safety profiles.
+
+If you tell me which of these drugs you most want to prioritize (or if you want explicit 8–12 point dilution series for any subset), I can supply tailored concentration series and brief literature references for each candidate.

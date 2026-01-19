@@ -1,0 +1,83 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic uses can be a valuable strategy in oncology, including acute myeloid leukemia (AML). The following list includes 20 drugs that have shown potential for repurposing and could be tested for activity against AML cell lines such as MOLM13. The suggested concentrations for IC50 assays are based on available literature and should be optimized in the laboratory for specific conditions.
+
+### List of Drugs for Repositioning in AML
+
+1. **Dexamethasone** - A corticosteroid with immunosuppressive properties.
+   - **IC50 Test Concentration**: 1-10 µM
+
+2. **Vorinostat** (SAHA) - An HDAC inhibitor that can induce cell cycle arrest.
+   - **IC50 Test Concentration**: 0.5-5 µM
+
+3. **Azacitidine** - A hypomethylating agent.
+   - **IC50 Test Concentration**: 0.1-1 µM
+
+4. **Decitabine** - A cytosine analog used for demethylation.
+   - **IC50 Test Concentration**: 0.1-1 µM
+
+5. **Metformin** - An antidiabetic drug that may exert anti-cancer effects.
+   - **IC50 Test Concentration**: 5-25 mM
+
+6. **Ruxolitinib** - A JAK1/2 inhibitor used in myelofibrosis.
+   - **IC50 Test Concentration**: 0.1-1 µM
+
+7. **Nilotinib** - A tyrosine kinase inhibitor primarily used in CML.
+   - **IC50 Test Concentration**: 0.1-0.5 µM
+
+8. **Thalidomide** - An immunomodulatory drug with anti-angiogenic properties.
+   - **IC50 Test Concentration**: 1-10 µM
+
+9. **Celecoxib** - A COX-2 inhibitor with potential antitumor activity.
+   - **IC50 Test Concentration**: 1-10 µM
+
+10. **Meclizine** - An antihistamine that has shown anti-cancer properties.
+    - **IC50 Test Concentration**: 1-10 µM
+
+11. **Carbendazim** - A benzimidazole fungicide that can affect cancer cell growth.
+    - **IC50 Test Concentration**: 1-10 µM
+
+12. **Resveratrol** - A natural compound found in grapes that has anticancer potential.
+    - **IC50 Test Concentration**: 1-10 µM
+
+13. **Quercetin** - A flavonoid with antioxidant properties.
+    - **IC50 Test Concentration**: 1-20 µM
+
+14. **Curcumin** - An active component of turmeric with anti-inflammatory and anti-cancer effects.
+    - **IC50 Test Concentration**: 5-15 µM
+
+15. **Loperamide** - An opioid used for diarrhea that may affect tumor growth.
+    - **IC50 Test Concentration**: 5-15 µM
+
+16. **Thioridazine** - An antipsychotic that may have anticancer activities.
+    - **IC50 Test Concentration**: 1-10 µM
+
+17. **Atovaquone** - An antiprotozoal drug with some reported anti-cancer effects.
+    - **IC50 Test Concentration**: 1-10 µM
+
+18. **Sildenafil** - A phosphodiesterase inhibitor that may have some anticancer applications.
+    - **IC50 Test Concentration**: 1-10 µM
+
+19. **Chloroquine** - An antimalarial drug that can inhibit autophagy.
+    - **IC50 Test Concentration**: 5-20 µM
+
+20. **Propranolol** - A beta-blocker that has shown potential anti-cancer effects.
+    - **IC50 Test Concentration**: 1-10 µM
+
+### Important Considerations
+- The suggested concentrations are preliminary and should be optimized based on the specific experimental setup and conditions.
+- It is essential to perform dose-response experiments to determine the actual IC50 values in MOLM13 and other relevant AML cell lines.
+- Additional studies to evaluate the combinatorial effects with standard AML therapies might also be insightful.
+- Ensure to use appropriate controls and methods for assessing cell viability to ensure robust data. 
+
+Before starting experimental work, it is advisable to review the literature for any new evidence and refine the approach based on updated findings in drug repurposing for AML treatment.

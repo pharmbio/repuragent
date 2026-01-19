@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Arsenic Trioxide,Chemotherapy agent,Inhibits cell proliferation and induces apoptosis,1.0,10.0,µM,Also known as ATO.,arsenic trioxide,False,CHEMBL5483015
+Sirolimus,mTOR inhibitor,Inhibits mTOR signaling pathway,10.0,100.0,nM,Also known as Rapamycin.,sirolimus,False,CHEMBL263427
+Gemcitabine,Antimetabolite,Inhibits DNA synthesis,1.0,10.0,µM,,gemcitabine,False,CHEMBL3039516
+Bortezomib,Proteasome inhibitor,Induces apoptosis by disrupting protein catabolism,1.0,100.0,nM,,bortezomib,False,CHEMBL325041
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and stimulates immune response,100.0,1000.0,nM,,thalidomide,False,CHEMBL426123
+Minocycline,Tetracycline antibiotic,"Inhibits protein synthesis in bacteria, potential anti-inflammatory effects",10.0,100.0,µM,,minocycline,False,CHEMBL1200881
+Metformin,Biguanide,Inhibits hepatic glucose production and enhances insulin sensitivity,10.0,100.0,mM,,metformin,False,CHEMBL1431
+Tamoxifen,Selective estrogen receptor modulator,Inhibits estrogen receptors,1.0,10.0,µM,,tamoxifen,False,CHEMBL83
+Lapatinib,Tyrosine kinase inhibitor,Inhibits EGFR and HER2 signaling,0.1,10.0,µM,,lapatinib,False,CHEMBL554
+Dabrafenib,BRAF inhibitor,Inhibits mutated BRAF kinases,10.0,100.0,nM,,dabrafenib,False,CHEMBL2028663
+Carfilzomib,Proteasome inhibitor,Induces apoptosis by blocking protein breakdown,1.0,10.0,µM,,carfilzomib,False,CHEMBL451887
+Nintedanib,Tyrosine kinase inhibitor,Inhibits multiple tyrosine kinases involved in angiogenesis,1.0,10.0,µM,,nintedanib,False,CHEMBL502835
+Clofazimine,Antimycobacterial agent,"Interferes with bacterial lipid synthesis, potential anti-cancer effects",1.0,100.0,µM,,clofazimine,False,CHEMBL1292
+Auranofin,Antirheumatic gold compound,"Inhibits thioredoxin reductase, leading to oxidative stress in cancer cells",1.0,10.0,µM,,auranofin,False,CHEMBL1366

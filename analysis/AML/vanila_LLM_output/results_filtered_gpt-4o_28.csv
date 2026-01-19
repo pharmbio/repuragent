@@ -1,0 +1,11 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Arsenic Trioxide,Miscellaneous antineoplastic,Induces apoptosis in leukemic cells,0.1,0.5,µM,Used in acute promyelocytic leukemia treatment,arsenic trioxide,False,CHEMBL5483015
+Dasatinib,Src family kinase inhibitor,Inhibits multiple kinases including Src family proteins,10.0,100.0,nM,Targets BCR-ABL and SRC kinases,dasatinib,False,CHEMBL1421
+Ibrutinib,Bruton's tyrosine kinase inhibitor,Blocks B-cell receptor signaling,1.0,10.0,µM,Used in chronic lymphocytic leukemia,ibrutinib,False,CHEMBL1873475
+Bortezomib,Proteasome inhibitor,Inhibits the proteasome activity in the cell,5.0,20.0,nM,Used in multiple myeloma treatment,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Irreversibly inhibits chymotrypsin-like activity of proteasome,10.0,50.0,nM,Approved for multiple myeloma,carfilzomib,False,CHEMBL451887
+Palbociclib,CDK4/6 inhibitor,Inhibits cyclin-dependent kinases 4 and 6,0.1,1.0,µM,Used in breast cancer therapy,palbociclib,False,CHEMBL2364621
+THZ1,CDK7 inhibitor,Inhibits transcription through CDK7 suppression,0.1,1.0,µM,Experimental drug,thz1,False,CHEMBL4303279
+Ruxolitinib,JAK1/JAK2 inhibitor,Inhibits the JAK-STAT signaling pathway,0.1,1.0,µM,Used in myeloproliferative diseases,ruxolitinib,False,CHEMBL1287854
+Tazemetostat,EZH2 inhibitor,Inhibits the histone methyltransferase EZH2,1.0,10.0,µM,Used in certain epigenetic therapies,tazemetostat,False,CHEMBL4594260
+Selumetinib,MEK inhibitor,Inhibits the MEK1/2 signaling pathway,1.0,10.0,µM,Used in specific cancers with MAPK pathway alterations,selumetinib,False,CHEMBL2105684

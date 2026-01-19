@@ -1,0 +1,83 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) can be a promising strategy, especially considering the known safety profiles of these compounds. Below is a list of 20 drugs that have potential for testing against AML, specifically targeting the MOLM13 cell line. The suggested concentrations for IC50 assays are based on known pharmacological profiles, published literature, and preliminary studies, but actual IC50 values should be empirically determined for each compound in the specific experimental context.
+
+### Top 20 Drugs for Repurposing in Acute Myeloid Leukemia
+
+1. **Metformin**
+   - Suggested Concentration: 1-10 mM
+
+2. **Dexamethasone**
+   - Suggested Concentration: 1-100 μM
+
+3. **Melfalan (Alkeran)**
+   - Suggested Concentration: 1-10 μM
+
+4. **Vorinostat (SAHA)**
+   - Suggested Concentration: 0.1-5 μM
+
+5. **Gemcitabine**
+   - Suggested Concentration: 1-10 μM
+
+6. **Lenalidomide**
+   - Suggested Concentration: 0.1-10 μM
+
+7. **Celecoxib**
+   - Suggested Concentration: 10-100 μM
+
+8. **Thalidomide**
+   - Suggested Concentration: 1-10 μM
+
+9. **Arsenic Trioxide**
+   - Suggested Concentration: 0.1-5 μM
+
+10. **Tamoxifen**
+    - Suggested Concentration: 1-10 μM
+
+11. **Rapamycin**
+    - Suggested Concentration: 1-100 nM
+
+12. **L-asparaginase**
+    - Suggested Concentration: 0.1-2 U/mL
+
+13. **Bosutinib**
+    - Suggested Concentration: 0.1-1 μM
+
+14. **Sunitinib**
+    - Suggested Concentration: 0.1-1 μM
+
+15. **Carfilzomib**
+    - Suggested Concentration: 1-20 nM
+
+16. **Bortezomib**
+    - Suggested Concentration: 1-10 nM
+
+17. **Axitinib**
+    - Suggested Concentration: 0.01-1 μM
+
+18. **Etoposide**
+    - Suggested Concentration: 5-50 μM
+
+19. **Hydroxyurea**
+    - Suggested Concentration: 10-100 μM
+
+20. **Disulfiram**
+    - Suggested Concentration: 1-10 μM
+
+### Considerations:
+- **Experimental Validation**: Each compound will require thorough testing to confirm efficacy against MOLM13 and to determine the actual IC50 values, as these can be influenced by several factors including cell culture conditions, assay methods, and the specific batch of the drug used.
+- **Mechanistic Studies**: Understanding the mechanism of action for each compound in the context of AML can provide insights into potential combination therapies and enhance therapeutic efficacy.
+- **Safety and Toxicity**: While these drugs are already in clinical use or have established safety profiles, careful monitoring for toxicity in AML patients is essential, particularly for those with comorbidities.
+- **Ethics and Approvals**: All experimental protocols should adhere to ethical guidelines and receive appropriate approvals before proceeding.
+
+Before implementing any tests, it's essential to review current literature and preliminary data for these compounds concerning their effects on AML.

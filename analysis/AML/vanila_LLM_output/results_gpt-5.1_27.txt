@@ -1,0 +1,173 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 existing drugs with published or strong preclinical rationale for repurposing in AML, especially FLT3‑ITD–positive models like MOLM‑13. For each, I include:
+
+- **Primary known target/use**
+- **Rationale in AML/MOLM13 (brief)**
+- **Suggested IC₅₀ assay concentration range** (final drug concentration in wells), suitable for proliferation/viability assays (e.g., CellTiter‑Glo, MTT, resazurin) over 48–72 h in MOLM13.
+
+Unless otherwise noted, use a **10‑point or 12‑point half‑log dilution series** spanning the indicated range.
+
+---
+
+## 1. Sorafenib
+- **Original use**: Multikinase inhibitor (RAF, VEGFR, PDGFR); approved for renal cell carcinoma, HCC.
+- **Rationale**: Strong activity against FLT3‑ITD AML; MOLM13 is FLT3‑ITD–positive and sorafenib is widely used as FLT3 inhibitor in preclinical AML work.
+- **Suggested range**: **1 nM – 10 µM** (e.g., 1, 3, 10, 30, 100, 300 nM; 1, 3, 10 µM).
+
+---
+
+## 2. Midostaurin (PKC412)
+- **Original use**: Multikinase inhibitor; approved for FLT3‑mutated AML but originally developed for solid tumors.
+- **Rationale**: Established FLT3 inhibitor with activity in MOLM13 and other FLT3‑ITD lines.
+- **Suggested range**: **0.3 nM – 3 µM** (often low‑nanomolar IC₅₀ in FLT3‑ITD cells).
+
+---
+
+## 3. Ponatinib
+- **Original use**: BCR‑ABL inhibitor (including T315I); approved for CML/ALL.
+- **Rationale**: Potent inhibitor of FLT3 (including resistant mutants). Strong preclinical data in FLT3‑ITD AML lines including MOLM13.
+- **Suggested range**: **0.1 nM – 1 µM**.
+
+---
+
+## 4. Dasatinib
+- **Original use**: SRC/ABL inhibitor; approved for CML/Ph+ ALL.
+- **Rationale**: Inhibits multiple tyrosine kinases (SRC family, KIT, PDGFR). Shows activity in some AML subtypes and can inhibit downstream signaling in FLT3‑ITD cells.
+- **Suggested range**: **1 nM – 10 µM**.
+
+---
+
+## 5. Imatinib
+- **Original use**: BCR‑ABL, KIT, PDGFR inhibitor; CML/GIST.
+- **Rationale**: Limited direct efficacy in most AML, but activity in KIT‑dependent subsets. Useful as a repurposing candidate in specific genetic backgrounds and as a control compound.
+- **Suggested range**: **0.1 µM – 50 µM** (MOLM13 is not KIT‑addicted; expect weaker effect but still testable).
+
+---
+
+## 6. Nilotinib
+- **Original use**: Second‑generation BCR‑ABL inhibitor; CML.
+- **Rationale**: Broader kinase inhibition than imatinib; some activity in AML models, particularly with KIT/PDGFR involvement.
+- **Suggested range**: **1 nM – 10 µM**.
+
+---
+
+## 7. Sunitinib
+- **Original use**: VEGFR, PDGFR, KIT inhibitor; renal cell carcinoma, GIST.
+- **Rationale**: Inhibits FLT3 and related RTKs. Shown to inhibit proliferation in FLT3‑mutant AML lines.
+- **Suggested range**: **1 nM – 20 µM**.
+
+---
+
+## 8. Venetoclax (ABT‑199)
+- **Original use**: BCL‑2 inhibitor; approved for CLL and AML (but originally for CLL/NHL).
+- **Rationale**: Highly potent pro‑apoptotic agent in AML; MOLM13 is BCL‑2‑dependent and sensitive at low‑nanomolar levels.
+- **Suggested range**: **0.1 nM – 1 µM**.
+
+---
+
+## 9. Navitoclax (ABT‑263)
+- **Original use**: BCL‑2/BCL‑XL inhibitor (hematologic malignancies).
+- **Rationale**: Broad anti‑apoptotic protein inhibitor with known efficacy in AML cell lines; used as a tool for BCL‑2 family addiction.
+- **Suggested range**: **1 nM – 10 µM**.
+
+---
+
+## 10. Panobinostat (LBH589)
+- **Original use**: Pan‑HDAC inhibitor; approved for multiple myeloma.
+- **Rationale**: Epigenetic modulation in AML; induces apoptosis and differentiation in AML cell lines including FLT3‑ITD models.
+- **Suggested range**: **0.3 nM – 3 µM**.
+
+---
+
+## 11. Vorinostat (SAHA)
+- **Original use**: HDAC inhibitor; CTCL.
+- **Rationale**: Widely used HDAC inhibitor with antiproliferative effects in AML cell lines. Often used in combination with hypomethylating agents or FLT3 inhibitors.
+- **Suggested range**: **0.1 µM – 20 µM**.
+
+---
+
+## 12. Decitabine (5‑aza‑2′‑deoxycytidine)
+- **Original use**: DNA hypomethylating agent; approved for MDS/AML.
+- **Rationale**: Induces DNA hypomethylation and differentiation/apoptosis. Although a standard AML drug, it was originally MDS‑focused and is an archetypal epigenetic repurposing candidate.
+- **Suggested range**: **1 nM – 10 µM** for 72‑h assays (fresh drug every 24 h if possible due to instability).
+
+---
+
+## 13. Azacitidine
+- **Original use**: Hypomethylating agent; MDS/AML.
+- **Rationale**: Similar to decitabine; used in AML and high‑risk MDS, affects proliferation and differentiation of AML lines.
+- **Suggested range**: **10 nM – 30 µM** (again, consider replenishing).
+
+---
+
+## 14. Rapamycin (Sirolimus)
+- **Original use**: mTOR inhibitor; immunosuppressant.
+- **Rationale**: AML cells often show activated PI3K/AKT/mTOR signaling. Rapamycin can reduce growth and clonogenicity in AML lines including FLT3‑ITD.
+- **Suggested range**: **0.1 nM – 1 µM**.
+
+---
+
+## 15. Everolimus (RAD001)
+- **Original use**: mTOR inhibitor; renal cell carcinoma, breast cancer, NETs.
+- **Rationale**: Similar to rapamycin with better pharmacologic properties; has shown growth inhibition in AML preclinical studies.
+- **Suggested range**: **0.1 nM – 3 µM**.
+
+---
+
+## 16. Metformin
+- **Original use**: Type 2 diabetes; AMPK activator, mitochondrial complex I inhibitor.
+- **Rationale**: Anti‑proliferative and pro‑differentiation effects in leukemia models; impacts cellular metabolism and mTOR signaling. Typical IC₅₀ in vitro is in the high‑micromolar to millimolar range.
+- **Suggested range**: **0.1 mM – 20 mM** (use higher end cautiously and check osmolarity).
+
+---
+
+## 17. Disulfiram (± copper)
+- **Original use**: Alcohol aversion therapy (ALDH inhibitor).
+- **Rationale**: Targets ALDH‑positive leukemic stem/progenitor cells; with copper, can inhibit NF‑κB and proteasome activity in AML cells.
+- **Suggested range**:  
+  - Disulfiram alone: **10 nM – 10 µM**  
+  - If adding Cu²⁺ (e.g., CuCl₂ ~0.5–1 µM), keep disulfiram in the **10 nM–1 µM** window to minimize nonspecific toxicity.
+
+---
+
+## 18. Thioridazine
+- **Original use**: Antipsychotic (dopamine receptor antagonist).
+- **Rationale**: Reported to target leukemic stem cells and disrupt autophagy and calcium homeostasis; kills AML cells preferentially over normal HSCs in some studies.
+- **Suggested range**: **0.1 µM – 30 µM** (watch for nonspecific toxicity at high doses).
+
+---
+
+## 19. Mebendazole
+- **Original use**: Anthelmintic; microtubule inhibitor.
+- **Rationale**: Microtubule disruption and potential hedgehog pathway inhibition; antiproliferative effects reported in several cancers including leukemias.
+- **Suggested range**: **0.1 µM – 30 µM**.
+
+---
+
+## 20. Arsenic trioxide (ATO)
+- **Original use**: APL (PML‑RARA+) treatment.
+- **Rationale**: Induces oxidative stress, apoptosis, and degradation of oncogenic proteins. Though classically for APL, ATO has broader activity in AML lines at higher concentrations.
+- **Suggested range**: **0.1 µM – 20 µM**.
+
+---
+
+### Practical IC₅₀ Assay Setup (brief)
+
+- **Cells**: MOLM13 in log‑phase, viability >90%; seed at ~5–10×10³ cells/well (96‑well, 100 µL).
+- **Incubation**: 48–72 h (many kinase inhibitors show clear effects at 72 h; hypomethylating agents may need 72 h + replenishment).
+- **Readout**: ATP‑based (CellTiter‑Glo) or similar viability assay.
+- **Dilutions**: Prepare serial half‑log dilutions from the top concentration down to at least 2–3 orders of magnitude below expected IC₅₀.
+- **Controls**: 0.1–0.2% DMSO vehicle; optional positive control (e.g., sorafenib or venetoclax).
+
+These ranges are intended to bracket likely IC₅₀ values while avoiding immediate extreme toxicity or solubility issues. For any specific compound you prioritize, you can narrow the window after a first pass.

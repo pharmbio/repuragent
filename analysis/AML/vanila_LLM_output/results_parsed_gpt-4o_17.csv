@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Metformin,Biguanide,"Ampk activator, anti-proliferative effects",1.0,10.0,mM,Commonly used Type 2 Diabetes medication.
+Arsenic Trioxide,Antineoplastic agent,Induces apoptosis via ROS generation,0.1,10.0,µM,FDA-approved for APL.
+Auranofin,"Gold compound, anti-rheumatic",Inhibits thioredoxin reductase,0.1,10.0,µM,Potential anti-cancer properties.
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL, Src family kinases",1.0,100.0,nM,Used in CML treatment.
+Sorafenib,Multikinase inhibitor,"Inhibits RAF kinase, VEGFRs, PDGFRs",1.0,10.0,µM,Used in HCC and RCC.
+Venetoclax,BCL-2 inhibitor,Induces apoptosis by BCL-2 inhibition,1.0,100.0,nM,Approved for AML treatment.
+Ruxolitinib,JAK1/2 inhibitor,Inhibits JAK-STAT signaling,0.1,1.0,µM,Approved for myelofibrosis.
+Ibrutinib,BTK inhibitor,Inhibits B-cell receptor signaling,0.1,10.0,µM,Approved for B-cell malignancies.
+Thalidomide,Immunomodulatory agent,"Inhibits angiogenesis, modulates cytokine production",1.0,50.0,µM,"Known teratogen, approved for multiple myeloma."
+Imatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL, inhibits c-Kit and PDGFR",0.1,10.0,µM,Used in CML and GISTs.
+Chloroquine,"Antimalarial, autophagy inhibitor",Inhibits autophagy by lysosomal trapping,1.0,20.0,µM,Also used in Lupus and RA.
+Hydroxychloroquine,"Antimalarial, autophagy inhibitor","Inhibits autophagy, immunosuppression",1.0,20.0,µM,Nonproprietary anti-inflammatory features.
+Clofazimine,Antimycobacterial,"Inhibit bacterial proliferation, immune modulation in cancer",0.1,10.0,µM,Approved for leprosy treatment.
+Itraconazole,Antifungal agent,"Inhibits ergosterol synthesis, impacts Hedgehog pathway",0.1,10.0,µM,Potential off-label use in cancer.
+Sirolimus,mTOR inhibitor,"Inhibits mTORC1, arrests cell cycle at G1 phase",1.0,100.0,nM,Used for transplant rejection prophylaxis.
+Everolimus,mTOR inhibitor,Specific mTORC1 inhibition,1.0,100.0,nM,Used for various cancers and organ transplantation.
+Valproic Acid,HDAC inhibitor,Modulates gene expression by inhibiting HDAC,0.5,10.0,mM,Well-known anticonvulsant.
+Vorinostat,HDAC inhibitor,Induces cell cycle arrest and apoptosis via histone acetylation,0.1,10.0,µM,FDA-approved for cutaneous T-cell lymphoma.
+Fluoxetine,Selective serotonin reuptake inhibitor,"ERK phosphorylation, possible autophagy in cancer",1.0,20.0,µM,"Common antidepressant, SSRI."
+Niclosamide,"Anthelmintic, Wnt pathway inhibitor",Inhibits mitochondrial uncoupling and various signaling pathways,0.1,10.0,µM,Investigated for multiple cancer types.

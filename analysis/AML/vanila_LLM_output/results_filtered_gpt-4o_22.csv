@@ -1,0 +1,16 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,Tyrosine kinase inhibitor,Targets SRC family kinases and BCR-ABL,10.0,100.0,nM,Used for chronic myeloid leukemia,dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits JAK1/2 signaling, reducing cytokine signaling and proliferation",1.0,10.0,μM,Used for myelofibrosis and polycythemia vera,ruxolitinib,False,CHEMBL1287854
+Arsenic Trioxide,Chemotherapeutic agent,Induces differentiation and apoptosis of leukemia cells,0.5,2.0,μM,Used in acute promyelocytic leukemia,arsenic trioxide,False,CHEMBL5483015
+Bortezomib,Proteasome inhibitor,"Inhibits 26S proteasome activity, promoting apoptosis of myeloma cells",5.0,20.0,nM,Used for multiple myeloma,bortezomib,False,CHEMBL325041
+Tamoxifen,Selective estrogen receptor modulator (SERM),"Competes with estrogen for binding estrogen receptors, inhibiting transcription of estrogen-responsive genes",5.0,10.0,μM,Used mainly for breast cancer treatment,tamoxifen,False,CHEMBL83
+Chloroquine,"Antimalarial, autophagy inhibitor",Interferes with lysosomal degradation and autophagy,5.0,20.0,μM,Shows anticancer potential beyond malaria treatment,chloroquine,False,CHEMBL76
+Metformin,"Biguanide, antidiabetic",Lowers hepatic glucose production and has an emerging role in cancer metabolism alteration,1.0,10.0,mM,Commonly used for type 2 diabetes,metformin,False,CHEMBL1431
+Celecoxib,COX-2 inhibitor,Blocks COX-2 enzyme involved in inflammation and apoptosis,5.0,20.0,μM,Used for arthritis pain and inflammation,celecoxib,False,CHEMBL118
+Itraconazole,Antifungal,Inhibits the hedgehog signaling and abnormal angiogenesis,1.0,10.0,μM,Shows potential as an anticancer agent beyond antifungal use,itraconazole,False,CHEMBL5483033
+Rifampicin,Antibiotic,Inhibits bacterial DNA-dependent RNA synthesis; potential antiproliferative effects,10.0,50.0,μM,Primarily used for tuberculosis,rifampicin,False,CHEMBL374478
+Simvastatin,Statin (HMG-CoA reductase inhibitor),"Decreases cholesterol production, with emerging cancer therapy potential",1.0,10.0,μM,Typically used as a cholesterol-lowering medication,simvastatin,False,CHEMBL1201391
+Hydroxychloroquine,"Antimalarial, autophagy inhibitor",Inhibits lysosomal function and autophagy similar to chloroquine,5.0,20.0,μM,Shows promise in cancer therapy,hydroxychloroquine,False,CHEMBL1535
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response,5.0,20.0,μM,Used in multiple myeloma and has a controversial history,thalidomide,False,CHEMBL426123
+Dimethyl fumarate,"Antioxidant, anti-inflammatory","Activates the NRF2 pathway, leading to enhanced cellular defense",5.0,20.0,μM,Used for multiple sclerosis,dimethyl,False,CHEMBL2107333
+Disulfiram,Aldehyde dehydrogenase inhibitor,"Inhibits acetaldehyde dehydrogenase, with emerging anticancer properties",0.1,1.0,μM,Previously used for alcohol dependency treatment,disulfiram,False,CHEMBL964

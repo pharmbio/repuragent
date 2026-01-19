@@ -1,0 +1,138 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 existing, clinically used drugs (or advanced clinical candidates) with evidence of activity against AML, many with data in FLT3‑ITD–positive lines such as MOLM‑13. For each, I include:
+
+- **Primary AML‑relevant target / rationale**
+- **Suggested IC₅₀ assay concentration range** (a 10‑point series is typical; listed as approximate top and bottom bounds). These ranges are based on reported in‑vitro potencies in AML or similar cell types and are intended as *starting points* for MOLM‑13 viability/proliferation assays (e.g., CellTiter‑Glo, MTT, resazurin) over 48–72 h.
+
+Use DMSO ≤0.1% v/v in all wells, include vehicle controls, and adjust ranges after first pass based on observed curve shifts.
+
+---
+
+## FLT3 and multikinase inhibitors
+
+### 1. Midostaurin (PKC412)
+- **Target/rationale:** Multikinase inhibitor (FLT3, KIT, PDGFR, PKC). Approved for FLT3‑mutant AML. Strong activity in FLT3‑ITD AML lines including MOLM‑13.
+- **Suggested range:** 1 nM – 10 µM  
+  (e.g., 1, 3, 10, 30, 100, 300, 1000, 3000, 10000 nM)
+
+### 2. Gilteritinib (ASP2215)
+- **Target/rationale:** Potent, selective FLT3/AXL inhibitor. Approved for relapsed/refractory FLT3‑mutant AML. Very low‑nM IC₅₀ in MOLM‑13.
+- **Suggested range:** 0.1 nM – 1 µM  
+  Narrower follow‑up if very potent (e.g., 0.1–300 nM) after first run.
+
+### 3. Sorafenib
+- **Target/rationale:** Multikinase inhibitor (FLT3, RAF, VEGFR, PDGFR). Used off‑label in FLT3‑ITD AML, active in MOLM‑13.
+- **Suggested range:** 1 nM – 20 µM  
+
+### 4. Quizartinib (AC220)
+- **Target/rationale:** Highly potent FLT3 inhibitor, strong activity in FLT3‑ITD AML lines.
+- **Suggested range:** 0.1 nM – 1 µM  
+
+### 5. Sunitinib
+- **Target/rationale:** Multikinase inhibitor (FLT3, KIT, PDGFR, VEGFR). Shows anti‑proliferative effects in AML cell lines.
+- **Suggested range:** 1 nM – 10 µM  
+
+---
+
+## BCL‑2 and apoptosis pathway
+
+### 6. Venetoclax (ABT‑199)
+- **Target/rationale:** BCL‑2 inhibitor. Approved in combination regimens in AML. Strong single‑agent activity in many AML lines; synergy with hypomethylating agents.
+- **Suggested range:** 0.1 nM – 5 µM  
+  (AML line IC₅₀ often sub‑100 nM; use narrower range later if needed.)
+
+### 7. Navitoclax (ABT‑263)
+- **Target/rationale:** BCL‑2/BCL‑XL inhibitor; extensive preclinical AML data.
+- **Suggested range:** 1 nM – 10 µM  
+
+---
+
+## DNA methylation / epigenetic drugs
+
+### 8. Azacitidine (5‑AZA)
+- **Target/rationale:** DNA methyltransferase inhibitor; approved for MDS/AML. At low µM exerts hypomethylating and antiproliferative effects.
+- **Suggested range:** 0.1 µM – 50 µM  
+  (Longer exposure, e.g., 72–120 h, is often needed for robust readouts.)
+
+### 9. Decitabine (5‑aza‑2′‑deoxycytidine)
+- **Target/rationale:** DNMT inhibitor; approved for AML/MDS. Similar profile to azacitidine.
+- **Suggested range:** 0.01 µM – 10 µM  
+  (Again, consider ≥72 h exposure.)
+
+### 10. Vorinostat (SAHA)
+- **Target/rationale:** Pan‑HDAC inhibitor; induces differentiation and apoptosis in AML cells.
+- **Suggested range:** 0.01 µM – 20 µM  
+
+### 11. Panobinostat (LBH589)
+- **Target/rationale:** Potent pan‑HDAC inhibitor with strong AML preclinical activity.
+- **Suggested range:** 0.1 nM – 1 µM  
+
+---
+
+## IDH, metabolic and signaling inhibitors
+
+### 12. Ivosidenib (AG‑120)
+- **Target/rationale:** Mutant IDH1 inhibitor; approved in IDH1‑mutated AML. Even in IDH1‑WT cells, can be useful for comparison and as a negative control if MOLM‑13 is WT.
+- **Suggested range:** 0.01 µM – 20 µM  
+
+### 13. Enasidenib (AG‑221)
+- **Target/rationale:** Mutant IDH2 inhibitor; approved in IDH2‑mutated AML. Same rationale as above.
+- **Suggested range:** 0.01 µM – 20 µM  
+
+### 14. Ruxolitinib
+- **Target/rationale:** JAK1/2 inhibitor; can suppress cytokine‑dependent survival pathways in some AML contexts and stromal co‑culture models.
+- **Suggested range:** 0.01 µM – 10 µM  
+
+### 15. Everolimus (RAD001)
+- **Target/rationale:** mTORC1 inhibitor; mTOR signaling is frequently activated in AML, including FLT3‑ITD lines.
+- **Suggested range:** 0.1 nM – 5 µM  
+
+### 16. Trametinib
+- **Target/rationale:** MEK1/2 inhibitor. RAS/MAPK pathway is often active in AML; trametinib shows in‑vitro anti‑proliferative effects in various leukemias.
+- **Suggested range:** 0.1 nM – 5 µM  
+
+---
+
+## Proteasome, HSP90, and other stress‑response targets
+
+### 17. Bortezomib
+- **Target/rationale:** Proteasome inhibitor; induces apoptosis in AML cells and can sensitize to other agents.
+- **Suggested range:** 0.1 nM – 1 µM  
+
+### 18. Carfilzomib
+- **Target/rationale:** Irreversible proteasome inhibitor; strong cytotoxicity in AML lines in vitro.
+- **Suggested range:** 0.1 nM – 1 µM  
+
+### 19. 17‑AAG (Tanespimycin) or 17‑DMAG
+- **Target/rationale:** HSP90 inhibitors. FLT3 and other oncogenic kinases in AML are HSP90 clients; these drugs destabilize them, including in MOLM‑13.
+- **Suggested range:** 1 nM – 5 µM  
+
+---
+
+## Metabolism / differentiation agent
+
+### 20. All‑trans retinoic acid (ATRA)
+- **Target/rationale:** Retinoic acid receptor agonist. Standard in APL, but also exerts differentiation and anti‑proliferative effects in some non‑APL AML lines, often in combination with other agents.
+- **Suggested range:** 0.01 µM – 20 µM  
+
+---
+
+### Practical notes for MOLM‑13 IC₅₀ assays
+
+- **Exposure time:** 48–72 h is typical for small‑molecule viability/proliferation assays; DNMT inhibitors often need 72–120 h for full effect.
+- **Cell density:** Common starting density: 1–2 × 10⁴ cells / 100 µL per well (96‑well plate), adjusted so vehicle controls remain in log‑phase for the full assay.
+- **Serial dilutions:** 3‑fold or 10‑fold serial dilutions from a top dose are standard. Start broad (as suggested), then refine around the IC₅₀ window.
+- **Readout:** ATP‑based (CellTiter‑Glo) or resazurin are robust for suspension cells like MOLM‑13; combine with trypan blue/flow cytometry for apoptosis vs cytostatic effects if needed.
+
+If you specify whether you want mainly “non‑oncology” repurposing candidates (e.g., metabolic, cardiovascular, anti‑infective drugs) I can refine this list toward drugs farthest from classical AML therapeutics.

@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,"Inhibits BCL-2 protein, inducing apoptosis in cancer cells.",10.0,1000.0,nM,Approved for chronic lymphocytic leukemia.
+Sorafenib,Multi-kinase inhibitor,Targets several tyrosine kinases including FLT3.,1.0,10000.0,nM,Particularly effective in FLT3-ITD mutated AML.
+Quizartinib (AC220),FLT3 inhibitor,Selective inhibition of FLT3 kinase.,0.1,1000.0,nM,Used for relapsed/refractory AML.
+Midostaurin (PKC412),Broad-spectrum kinase inhibitor,Inhibits multiple kinase pathways.,100.0,1000.0,nM,Effective in FLT3-mutated AML.
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and other kinases.,1.0,10000.0,nM,Initially used for chronic myeloid leukemia.
+Ibrutinib,Bruton's tyrosine kinase inhibitor,"Inhibits BTK, affecting B-cell receptor signaling.",10.0,2000.0,nM,Approved for B-cell malignancies.
+Ruxolitinib,JAK1/JAK2 inhibitor,"Inhibits JAK1 and JAK2, modulating cytokine signaling.",100.0,10000.0,nM,Approved for myelofibrosis and polycythemia vera.
+Lenalidomide,Immunomodulatory agent,Alters cytokine production and immune response.,0.1,10.0,µM,Effective in inducing AML blast differentiation.
+Bortezomib,Proteasome inhibitor,Disrupts protein degradation and induces apoptosis.,1.0,100.0,nM,Approved for multiple myeloma.
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis and partially affects cell cycle.,0.1,2.0,µM,Primarily used in acute promyelocytic leukemia (APL).
+Metformin,Antidiabetic agent,"Activates AMPK pathway, affecting cell proliferation.",1.0,5.0,mM,Shows anti-leukemic effects.
+Valproic Acid,HDAC inhibitor,"Inhibits histone deacetylases, altering gene expression.",0.5,5.0,mM,Potential differentiation-inducing effects.
+Thalidomide,Immunomodulatory agent,Modulates cytokine release and immune response.,1.0,10.0,µM,Used for multiple myeloma.
+Aprepitant,NK-1 receptor antagonist,"Inhibits the neurokinin 1 (NK-1) receptor, affecting cell proliferation.",1.0,10.0,µM,Originally an antiemetic agent.
+Mosunetuzumab,Bispecific antibody,"Targets CD20 and CD3, engaging T cells to kill AML cells.",0.1,1.0,nM,Used in cell-based assays.
+Nicotinamide,Vitamin B derivative,Induces differentiation of leukemia cells.,1.0,10.0,mM,Form of vitamin B3.
+Clofarabine,Purine nucleoside analog,"Inhibits DNA synthesis, causing cell death.",10.0,1000.0,nM,Approved for pediatric acute lymphoblastic leukemia (ALL).
+Disulfiram,Aldehyde dehydrogenase inhibitor,"Inhibits aldehyde dehydrogenase, affecting cancer cell metabolism.",0.5,5.0,µM,Original use as alcohol aversion therapy.
+Clarithromycin,Macrolide antibiotic,Modulates autophagy pathways.,10.0,100.0,µM,Typically used as an antibiotic.
+Simvastatin,HMG-CoA reductase inhibitor,"Disrupts cholesterol biosynthesis, affecting cancer cell survival.",1.0,10.0,µM,Commonly used as a cholesterol-lowering agent.

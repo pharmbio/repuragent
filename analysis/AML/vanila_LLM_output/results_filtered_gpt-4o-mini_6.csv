@@ -1,0 +1,12 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ara-C,Nucleoside analog,Inhibits DNA synthesis by incorporating into DNA as cytarabine triphosphate.,0.1,1.0,µM,Also known as Cytarabine.,ara c,False,CHEMBL567324
+Tasigna,Tyrosine kinase inhibitor,"Inhibits BCR-ABL and other tyrosine kinases, blocking cell division and survival.",100.0,600.0,nM,Also known as Nilotinib.,tasigna,False,CHEMBL1201740
+Carfilzomib,Proteasome inhibitor,"Inhibits the proteasome, leading to apoptosis in neoplastic cells.",5.0,50.0,nM,Also known as Kyprolis.,carfilzomib,False,CHEMBL451887
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL and src kinases, impeding cancer cell growth.",1.0,100.0,nM,Also known as Sprycel.,dasatinib,False,CHEMBL1421
+TGF-β Receptor Inhibitor,Receptor inhibitor,"Blocks TGF-β signaling pathway, potentially reducing cancer cell growth.",1.0,10.0,µM,Also known as LY364947.,tgf receptor inhibitor,False,CHEMBL1236268
+Bortezomib,Proteasome inhibitor,Induces apoptosis in neoplastic cells by inhibiting the proteasome pathway.,1.0,10.0,nM,Also known as Velcade.,bortezomib,False,CHEMBL325041
+Osimertinib,EGFR inhibitor,"Inhibits mutated EGFR, leading to reduced cancer cell proliferation.",10.0,100.0,nM,Also known as Tagrisso.,osimertinib,False,CHEMBL3545063
+Epothilone B,Microtubule stabilizer,"Stabilizes microtubules, preventing their depolymerization and inhibiting cell division.",10.0,100.0,nM,Also known as EpoB.,epothilone b,False,CHEMBL4303268
+Celecoxib,COX-2 inhibitor,"Inhibits COX-2 enzyme, exerting anti-inflammatory and potential anti-cancer effects.",10.0,50.0,µM,Also known as Celebrex.,celecoxib,False,CHEMBL118
+Rapamycin,mTOR inhibitor,"Inhibits mTOR pathway, leading to decreased cell growth and proliferation.",1.0,20.0,nM,Also known as Sirolimus.,rapamycin,False,CHEMBL413
+Lapatinib,Tyrosine kinase inhibitor,"Inhibits ErbB1 and ErbB2 (HER2) receptors, affecting cancer cell growth.",100.0,500.0,nM,Also known as Tykerb.,lapatinib,False,CHEMBL554

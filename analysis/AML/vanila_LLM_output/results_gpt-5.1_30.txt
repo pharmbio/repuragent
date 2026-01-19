@@ -1,0 +1,210 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 clinically used (or late‑stage) drugs with evidence or strong rationale for repurposing in AML, with emphasis on FLT3‑ITD–positive lines such as MOLM13. For each, I give:
+
+- **Primary known target/mechanism**
+- **Key AML/MOLM13 evidence or rationale (brief)**
+- **Suggested IC50 assay concentration range** (a log‑spaced screening range you can refine later; values are for in‑vitro cell viability/proliferation assays, e.g., 72 h MTS/CellTiter-Glo on MOLM13).  
+
+Use DMSO ≤0.1% (preferably ≤0.05%) in all wells, including controls.
+
+---
+
+## 1. Midostaurin (PKC412)
+
+- **Type**: Multikinase inhibitor (FLT3, KIT, PDGFR, PKC).
+- **Rationale**: Approved for FLT3‑mutated AML. Inhibits FLT3‑ITD AML cell lines including MOLM13 at low nM.
+- **Test range**:  
+ 1 – 3 – 10 – 30 – 100 – 300 – 1000 nM.
+
+---
+
+## 2. Sorafenib
+
+- **Type**: Multikinase inhibitor (FLT3, RAF, VEGFR, PDGFR).
+- **Rationale**: Off‑label in FLT3‑ITD AML; strong activity in MOLM13 and MV4‑11.
+- **Test range**:  
+ 1 – 3 – 10 – 30 – 100 – 300 – 1000 nM.
+
+---
+
+## 3. Sunitinib
+
+- **Type**: Multikinase inhibitor (FLT3, KIT, PDGFR, VEGFR).
+- **Rationale**: In vitro FLT3 inhibition; reported anti‑proliferative effects in FLT3‑ITD AML models.
+- **Test range**:  
+ 1 – 3 – 10 – 30 – 100 – 300 – 1000 nM.
+
+---
+
+## 4. Ponatinib
+
+- **Type**: BCR‑ABL/FLT3/FGFR inhibitor.
+- **Rationale**: Potent FLT3 inhibitor including some TKD mutants; active in FLT3‑ITD AML cell lines.
+- **Test range**:  
+ 0.3 – 1 – 3 – 10 – 30 – 100 – 300 nM.
+
+---
+
+## 5. Dasatinib
+
+- **Type**: SRC/ABL family kinase inhibitor.
+- **Rationale**: Reported anti‑leukemic activity in subsets of AML (e.g., SRC‑dependent); some effects in FLT3‑ITD models via downstream signaling.
+- **Test range**:  
+ 1 – 3 – 10 – 30 – 100 – 300 – 1000 nM.
+
+---
+
+## 6. Nilotinib
+
+- **Type**: BCR‑ABL, KIT, PDGFR inhibitor.
+- **Rationale**: Shown to inhibit proliferation in some AML cell lines, particularly those with activated KIT/PDGFR pathways.
+- **Test range**:  
+ 10 – 30 – 100 – 300 – 1000 – 3000 nM.
+
+---
+
+## 7. Imatinib
+
+- **Type**: BCR‑ABL, KIT, PDGFR inhibitor.
+- **Rationale**: Utility in AML subtypes with KIT or PDGFR rearrangements; as a repurposing benchmark it helps discriminate dependency on these kinases in MOLM13.
+- **Test range**:  
+ 0.3 – 1 – 3 – 10 – 30 – 100 – 300 µM (less potent in FLT3‑ITD AML, so go higher).
+
+---
+
+## 8. Venetoclax (ABT‑199)
+
+- **Type**: BCL‑2 inhibitor.
+- **Rationale**: Approved for AML in combination; MOLM13 is typically BCL‑2‑dependent and quite sensitive.
+- **Test range**:  
+ 1 – 3 – 10 – 30 – 100 – 300 – 1000 nM.
+
+---
+
+## 9. Ruxolitinib
+
+- **Type**: JAK1/2 inhibitor.
+- **Rationale**: JAK/STAT pathway contributes to survival in some AML contexts; can reveal JAK‑STAT dependency in MOLM13.
+- **Test range**:  
+ 0.3 – 1 – 3 – 10 – 30 – 100 – 300 nM.
+
+---
+
+## 10. Tofacitinib
+
+- **Type**: JAK1/3 inhibitor (approved for RA).
+- **Rationale**: Modulates cytokine‑driven survival signaling; some JAK‑dependent leukemias show sensitivity.
+- **Test range**:  
+ 0.3 – 1 – 3 – 10 – 30 – 100 – 300 nM.
+
+---
+
+## 11. Everolimus
+
+- **Type**: mTORC1 inhibitor.
+- **Rationale**: PI3K/AKT/mTOR is active in AML; mTOR inhibition reduces AML proliferation and synergizes with FLT3/BCL‑2 inhibitors.
+- **Test range**:  
+ 0.3 – 1 – 3 – 10 – 30 – 100 – 300 nM.
+
+---
+
+## 12. Sirolimus (Rapamycin)
+
+- **Type**: mTORC1 inhibitor.
+- **Rationale**: Classic mTOR inhibitor with known anti‑proliferative effects in AML cell lines.
+- **Test range**:  
+ 0.3 – 1 – 3 – 10 – 30 – 100 – 300 nM.
+
+---
+
+## 13. Metformin
+
+- **Type**: AMPK activator / mitochondrial complex I inhibitor (antidiabetic).
+- **Rationale**: At high micromolar–low millimolar levels, can impair mitochondrial function and proliferation in AML cells.
+- **Test range**:  
+ 0.3 – 1 – 3 – 10 – 30 mM.
+
+---
+
+## 14. Disulfiram (± copper)
+
+- **Type**: ALDH inhibitor; forms Cu‑dependent complexes that generate ROS and inhibit proteasome/NPL4.
+- **Rationale**: AML stem/progenitor cells often ALDH‑high; disulfiram + Cu shows activity in AML lines including FLT3‑ITD.
+- **Test range** (disulfiram alone, Cu added separately at e.g. 1–5 µM):  
+ 0.1 – 0.3 – 1 – 3 – 10 – 30 µM.
+
+---
+
+## 15. Valproic acid
+
+- **Type**: HDAC inhibitor (class I/IIa) and anticonvulsant.
+- **Rationale**: Differentiation‑inducing and cytostatic effects in AML; used in low‑intensity regimens.
+- **Test range**:  
+ 0.3 – 1 – 3 – 10 – 30 – 100 – 300 µM.
+
+---
+
+## 16. Vorinostat (SAHA)
+
+- **Type**: HDAC inhibitor (approved for CTCL).
+- **Rationale**: Potent anti‑proliferative and pro‑apoptotic effects in multiple AML cell lines, including FLT3‑ITD models.
+- **Test range**:  
+ 0.1 – 0.3 – 1 – 3 – 10 – 30 µM.
+
+---
+
+## 17. Panobinostat
+
+- **Type**: Pan‑HDAC inhibitor.
+- **Rationale**: Very potent; reported low‑nanomolar activity in AML cell lines.
+- **Test range**:  
+ 1 – 3 – 10 – 30 – 100 – 300 nM.
+
+---
+
+## 18. Chloroquine (or Hydroxychloroquine)
+
+- **Type**: Autophagy/lysosome inhibitor (antimalarial).
+- **Rationale**: Autophagy supports AML survival, especially under targeted therapy; CQ/HCQ has shown AML cell line cytotoxicity and synergy with TKIs.
+- **Test range**:  
+ 1 – 3 – 10 – 30 – 100 – 300 – 1000 µM.
+
+---
+
+## 19. Thalidomide / Lenalidomide (IMiDs)
+
+- **Type**: Cereblon modulators; immunomodulatory, induce degradation of IKZF1/3, etc.
+- **Rationale**: Some AML subsets show sensitivity; also modulate microenvironmental support.
+- **Test range**:  
+ 1 – 3 – 10 – 30 – 100 – 300 – 1000 µM.
+
+---
+
+## 20. Niclosamide
+
+- **Type**: Anthelmintic; uncouples oxidative phosphorylation, inhibits Wnt/STAT3/NF‑κB.
+- **Rationale**: Published anti‑leukemic and anti‑stem‑cell data in AML; affects mitochondrial metabolism and survival signaling.
+- **Test range**:  
+ 0.1 – 0.3 – 1 – 3 – 10 – 30 µM.
+
+---
+
+### Practical notes for IC50 assays in MOLM13
+
+- **Assay setup**: 72 h exposure, 2–5 × 10³ cells/well in 96‑well plates is typical for MOLM13; readout via ATP‑based (CellTiter‑Glo) or resazurin/MTS.
+- **Dilution scheme**: Use at least 7–8 concentrations per drug in 3‑fold serial dilutions around the ranges above; include DMSO‑only controls.
+- **Data**: Fit a 4‑parameter logistic curve (Hill slope variable) to calculate IC50. Confirm with at least 2 biological repeats.
+- **Controls**: Including a “positive control” FLT3 inhibitor (e.g., midostaurin or sorafenib) on each plate will help benchmark MOLM13 sensitivity and assay quality (Z’).
+
+If you tell me what’s in your compound library (e.g., only FDA‑approved vs global), I can refine this panel and prioritize the most mechanistically diverse set for MOLM13.

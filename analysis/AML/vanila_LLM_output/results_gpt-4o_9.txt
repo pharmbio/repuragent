@@ -1,0 +1,75 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for acute myeloid leukemia (AML) treatment, especially targeting cell lines like MOLM13, involves identifying compounds with potential anti-proliferative properties. The following list includes drugs that have been studied or suggested in literature for potential repurposing against AML. It's important to note that accurate experimentally testable concentrations for IC50 assays should be determined empirically, but approximate starting concentrations can be suggested based on typical screening protocols.
+
+1. **Venetoclax** - A BCL-2 inhibitor with known activity in hematological malignancies.
+   - Starting concentration range: 0.01 to 1 µM
+
+2. **Auranofin** - An anti-rheumatic agent with potential activity against oxidative stress in cancer cells.
+   - Starting concentration range: 0.5 to 10 µM
+
+3. **Arsenic Trioxide** - A chemotherapy agent used for acute promyelocytic leukemia with potential in AML.
+   - Starting concentration range: 0.5 to 5 µM
+
+4. **Ibrutinib** - A BTK inhibitor used in B-cell malignancies, with some evidence of anti-AML activity.
+   - Starting concentration range: 0.1 to 10 µM
+
+5. **Ixazomib** - A proteasome inhibitor used in multiple myeloma, potentially effective against AML.
+   - Starting concentration range: 0.1 to 10 µM
+
+6. **Decitabine** - A demethylating agent already used for certain types of AML.
+   - Starting concentration range: 0.1 to 10 µM
+
+7. **Dasatinib** - Originally a BCR-ABL inhibitor in CML, with potential broader kinase inhibition in AML.
+   - Starting concentration range: 0.1 to 5 µM
+
+8. **Tamoxifen** - An estrogen receptor modulator shown to inhibit growth in various cancer cell lines.
+   - Starting concentration range: 1 to 10 µM
+
+9. **Metformin** - Commonly used for diabetes, with studies indicating anti-cancer properties.
+   - Starting concentration range: 0.1 to 10 mM
+
+10. **Ruxolitinib** - A JAK inhibitor used in myeloproliferative neoplasms, investigated for AML.
+    - Starting concentration range: 0.1 to 10 µM
+
+11. **Simvastatin** - A statin with potential anti-leukemic effects through cholesterol pathway inhibition.
+    - Starting concentration range: 1 to 10 µM
+
+12. **Chloroquine** - An anti-malarial that has shown ability to enhance chemotherapy actions.
+    - Starting concentration range: 1 to 10 µM
+
+13. **Carfilzomib** - A proteasome inhibitor with effects on protein degradation pathways in AML.
+    - Starting concentration range: 0.1 to 5 µM
+
+14. **Rapamycin (Sirolimus)** - An mTOR inhibitor with studies showing anti-leukemic potential.
+    - Starting concentration range: 1 to 10 nM
+
+15. **Bortezomib** - Another proteasome inhibitor used in multiple myeloma, with AML potential.
+    - Starting concentration range: 0.1 to 10 µM
+
+16. **Itraconazole** - An antifungal with possible Hedgehog signaling pathway inhibition.
+    - Starting concentration range: 1 to 10 µM
+
+17. **Mebendazole** - An anti-helminthic drug with documented off-target anti-cancer effects.
+    - Starting concentration range: 0.1 to 10 µM
+
+18. **Sulfasalazine** - Used for inflammatory diseases, with glutamate antiporter (xCT) inhibition.
+    - Starting concentration range: 1 to 50 µM
+
+19. **Disulfiram** - Used for alcohol dependency, interesting for its ALDH inhibition effect.
+    - Starting concentration range: 0.1 to 10 µM
+
+20. **Celecoxib** - A COX-2 inhibitor that has shown some anti-proliferative effects in cancer cells.
+    - Starting concentration range: 1 to 10 µM
+
+For testing, start by evaluating a range of concentrations across several orders of magnitude in order to accurately assess IC50 values. Tailor further experiments based on initial findings and optimize conditions specific to MOLM13 cell cultures. Always ensure that any preclinical evaluation complies with relevant ethical and safety regulations.

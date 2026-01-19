@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 Inhibitor,Inhibits BCL-2 to induce apoptosis,0.1,1.0,µM,
+Azacitidine,DNA Methyltransferase Inhibitor,Inhibits DNA methyltransferase leading to hypomethylation,0.5,5.0,µM,
+Decitabine,DNA Methyltransferase Inhibitor,Inhibits DNA methylation resulting in gene reactivation,0.1,1.0,µM,
+Clofarabine,Antineoplastic Agent,Interferes with DNA synthesis and repair,5.0,10.0,nM,
+Ruxolitinib,JAK1/2 Inhibitor,Inhibits JAK1 and JAK2 signaling pathways,3.0,10.0,nM,
+Sunitinib,Tyrosine Kinase Inhibitor,Inhibits receptor tyrosine kinases involved in tumor growth,50.0,200.0,nM,
+Dasatinib,BCR-ABL Inhibitor,Blocks BCR-ABL tyrosine kinase activity,1.0,100.0,nM,
+Nilotinib,BCR-ABL Inhibitor,Inhibits BCR-ABL fusion protein,10.0,100.0,nM,
+Metformin,Antidiabetic Drug,Improves glucose metabolism and may induce apoptosis,1.0,10.0,mM,
+Thalidomide,Immunomodulator,Modulates immune response and inhibits angiogenesis,1.0,10.0,µM,
+Lenalidomide,Immunomodulatory Drug,Enhances immune response against tumor cells,1.0,10.0,µM,
+Hydroxyurea,Antineoplastic Agent,Inhibits ribonucleotide reductase leading to depletion of deoxyribonucleotides,50.0,100.0,µM,
+Nelarabine,Nucleoside Replacing Agent,Inhibits DNA synthesis in lymphoblasts,5.0,50.0,µM,
+Bortezomib,Proteasome Inhibitor,Inhibits proteasome leading to apoptosis in cancer cells,10.0,30.0,nM,
+Kitruda,PD-1 Inhibitor,Inhibits PD-1 pathway to enhance T-cell response,1.0,100.0,nM,Alternative name: Pembrolizumab
+Rapamycin,mTOR Inhibitor,Inhibits mTORC1 signaling pathway affecting cell growth,0.5,5.0,nM,
+Chloroquine,"Antimalarial, lysosomal stabilizer",Inhibits autophagy and promotes apoptosis,10.0,30.0,µM,
+Arsenic Trioxide,Promotes apoptosis in AML,Induces differentiation and apoptosis in leukemic cells,0.5,5.0,µM,
+Trametinib,MEK Inhibitor,Inhibits MAPK/ERK pathway,1.0,100.0,nM,
+VEGF inhibitors,Anti-angiogenic,Inhibits vascular endothelial growth factor signaling,0.1,1.0,µg/mL,Example: Bevacizumab

@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,BCR-ABL and Src family kinase inhibitor,Targets and inhibits BCR-ABL and Src family kinases,0.01,1.0,µM,,dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK1/2 inhibitor,Inhibits Janus kinases 1 and 2,0.1,10.0,µM,,ruxolitinib,False,CHEMBL1287854
+Ibrutinib,BTK inhibitor,Inhibits Bruton's tyrosine kinase to impair B-cell proliferation,0.01,1.0,µM,,ibrutinib,False,CHEMBL1873475
+Metformin,AMPK activator,Activates AMP-activated protein kinase to affect glucose metabolism,1.0,10.0,mM,,metformin,False,CHEMBL1431
+Arsenic Trioxide,Induces apoptosis in leukemic cells,Triggers apoptosis and promotes differentiation in leukemic cells,0.1,10.0,µM,,arsenic trioxide,False,CHEMBL5483015
+Chloroquine,Autophagy inhibitor,"Blocks autophagy pathways, affecting tumor cell survival",10.0,100.0,µM,,chloroquine,False,CHEMBL76
+Auranofin,Inhibitor of thioredoxin reductase,Disrupts redox homeostasis by inhibiting thioredoxin reductase,0.1,10.0,µM,,auranofin,False,CHEMBL1366
+Dactinomycin,RNA synthesis inhibitor,"Inhibits RNA polymerase, preventing mRNA synthesis",0.01,1.0,µM,,dactinomycin,False,CHEMBL4748391
+Tigecycline,Mitochondrial translation inhibitor,Impairs mitochondrial protein synthesis,1.0,10.0,µM,,tigecycline,False,CHEMBL376140
+Bortezomib,Proteasome inhibitor,"Blocks proteasome activity, leading to apoptosis of cancer cells",0.01,1.0,µM,,bortezomib,False,CHEMBL325041
+Hydroxychloroquine,Autophagy inhibitor,Inhibits lysosomal activity and autophagy,10.0,100.0,µM,,hydroxychloroquine,False,CHEMBL1535
+"Statins (e.g., simvastatin)",HMG-CoA reductase inhibitor,Lowers cholesterol production; may affect cancer cell metabolism,0.1,10.0,µM,Primarily used for lowering cholesterol levels,statins,False,CHEMBL1201391
+Valproic Acid,HDAC inhibitor,"Inhibits histone deacetylase, affecting cell cycle and differentiation",100.0,1000.0,µM,,valproic acid,False,CHEMBL109
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune responses,0.1,10.0,µM,,thalidomide,False,CHEMBL426123

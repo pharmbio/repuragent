@@ -1,0 +1,83 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for acute myeloid leukemia (AML) treatment involves identifying compounds that have shown efficacy in other conditions and testing them for their effects on AML cell lines, including MOLM13. Below is a list of 20 existing drugs that could potentially be repurposed for AML, along with suggested concentrations for IC50 assays. The proposed concentrations are based on literature values and preliminary data from related studies; however, it is essential to confirm their suitability within specific experimental contexts.
+
+### 20 Existing Drugs Potentially Repurposable for AML
+
+1. **Baricitinib**
+   - IC50: 1-5 µM
+
+2. **Ruxolitinib**
+   - IC50: 0.1-1 µM
+
+3. **Metformin**
+   - IC50: 5-15 mM
+
+4. **Vorinostat**
+   - IC50: 1-5 µM
+
+5. **Azacitidine**
+   - IC50: 0.1-1 µM 
+
+6. **Decitabine**
+   - IC50: 0.1-0.5 µM
+
+7. **Clofarabine**
+   - IC50: 0.03-0.1 µM
+
+8. **Dexamethasone**
+   - IC50: 1-10 µM
+
+9. **Nilotinib**
+   - IC50: 0.1-0.5 µM
+
+10. **Imatinib**
+    - IC50: 0.5-5 µM
+
+11. **Trabectedin (Yondelis)**
+    - IC50: 1-10 nM
+
+12. **Bortezomib**
+    - IC50: 0.1-1 µM
+
+13. **Thalidomide**
+    - IC50: 1-5 µM
+
+14. **Lenalidomide**
+    - IC50: 0.5-2 µM
+
+15. **Rifampicin**
+    - IC50: 1-10 µM
+
+16. **Quinacrine**
+    - IC50: 5-20 µM
+
+17. **Cisplatin**
+    - IC50: 1-5 µM
+
+18. **Citarabine (Ara-C)**
+    - IC50: 0.1-1 µM
+
+19. **Tocilizumab**
+    - IC50: 5-20 µg/mL (approx. 3.3-13.3 nM)
+
+20. **Aspirin**
+    - IC50: 1-5 mM
+
+### Notes:
+- The proposed IC50 values are approximations based on general literature and might vary depending on the specific experimental setup, including the cell line context, duration of exposure, and assay conditions.
+- It is critical to carry out a comprehensive investigation to establish the actual IC50 values in MOLM13 cells before proceeding with further studies.
+- In addition to cell proliferation assays, evaluating mechanisms of action and synergistic effects with other treatments would be vital for the drug repurposing endeavor.
+- Ethical considerations and proper regulatory approvals should be taken into account when repurposing drugs for new indications.
+  
+Consultation with pharmacology and oncology experts is strongly recommended to optimize experimental designs and interpret results effectively.

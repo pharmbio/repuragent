@@ -1,0 +1,82 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for acute myeloid leukemia (AML) treatment is an active area of research and can potentially accelerate the development of effective therapies. Below are 20 existing drugs that have been studied or proposed for repurposing in the context of AML, along with suggested concentrations for experimentally testable IC50 assays. Keep in mind that the effectiveness of these drugs can vary based on specific cellular contexts and mechanisms of action. Therefore, preliminary experiments should validate the context of applicability, particularly for the MOLM13 cell line.
+
+### Top 20 Existing Drugs for Repurposing in AML
+
+1. **Sunitinib (Sutent)**
+   - Suggested concentration range: 0.1 µM - 10 µM
+
+2. **Dasatinib (Sprycel)**
+   - Suggested concentration range: 0.1 µM - 1 µM
+
+3. **Imatinib (Gleevec)**
+   - Suggested concentration range: 0.1 µM - 5 µM
+
+4. **Chromatin-modifying agents (e.g., Valproic Acid)**
+   - Suggested concentration range: 0.5 mM - 3 mM
+
+5. **Vorinostat (Zolinza)**
+   - Suggested concentration range: 0.1 µM - 5 µM
+
+6. **Decitabine (Dacogen)**
+   - Suggested concentration range: 0.1 µM - 1 µM
+
+7. **Azacitidine (Vidaza)**
+   - Suggested concentration range: 0.1 µM - 3 µM
+
+8. **Trametinib (Mekinist)**
+   - Suggested concentration range: 0.01 µM - 1 µM
+
+9. **Bortezomib (Velcade)**
+   - Suggested concentration range: 0.01 µM - 1 µM
+
+10. **Selinexor (Xpovio)**
+    - Suggested concentration range: 0.1 µM - 2 µM
+
+11. **Clofarabine (Clolar)**
+    - Suggested concentration range: 0.1 µM - 2 µM
+
+12. **Circuit Modulators (e.g., Pomalidomide)**
+    - Suggested concentration range: 0.01 µM - 1 µM
+
+13. **Dexamethasone (Decadron)**
+    - Suggested concentration range: 1 µM - 10 µM
+
+14. **Auranofin**
+    - Suggested concentration range: 0.5 µM - 5 µM
+
+15. **Tubulin Inhibitors (e.g., Paclitaxel)**
+    - Suggested concentration range: 0.1 µM - 1 µM
+
+16. **Celecoxib**
+    - Suggested concentration range: 10 µM - 50 µM
+
+17. **Metformin**
+    - Suggested concentration range: 1 mM - 10 mM
+
+18. **Kinetin**
+    - Suggested concentration range: 1 µM - 10 µM
+
+19. **Fenretinide (4-HPR)**
+    - Suggested concentration range: 0.1 µM - 1 µM
+
+20. **Doxorubicin**
+    - Suggested concentration range: 0.01 µM - 1 µM
+
+### Notes:
+- The concentration ranges provided are proposed based on literature and typical dosages used in similar assays. Preliminary dose-response studies should be carried out to confirm effective concentrations for MOLM13 specifically.
+- It's crucial to consider the pharmacodynamics and pharmacokinetics of these drugs, alongside potential side effects and their effects in combination therapies.
+- Before proceeding with IC50 assays, appropriate experimental designs, including controls and replicates, should be established to ensure robust and reproducible results.
+  
+This information offers a pathway for both researchers in AML and drug repurposing efforts to explore existing therapies, but further validation and study are essential for clinical application.

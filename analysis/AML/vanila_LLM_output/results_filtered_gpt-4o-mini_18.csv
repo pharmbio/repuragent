@@ -1,0 +1,14 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response,10.0,20.0,µM,,thalidomide,False,CHEMBL426123
+Romidepsin,HDAC inhibitor,Inhibition of histone deacetylases,0.1,1.0,µM,Also known as Istodax.,romidepsin,False,CHEMBL343448
+Bortezomib,Proteasome inhibitor,Inhibition of the proteasome pathway,1.0,10.0,nM,Also known as Velcade.,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Inhibition of the proteasome pathway,1.0,10.0,nM,Also known as Kyprolis.,carfilzomib,False,CHEMBL451887
+Chlorambucil,Alkylating agent,Alkylation of DNA leading to cross-linking,1.0,10.0,µM,,chlorambucil,False,CHEMBL515
+Nilotinib,Tyrosine kinase inhibitor,Inhibition of BCR-ABL tyrosine kinase,0.1,10.0,µM,Also known as Tasigna.,nilotinib,False,CHEMBL255863
+Dasatinib,Tyrosine kinase inhibitor,Inhibition of BCR-ABL and Src kinases,0.1,8.0,µM,Also known as Sprycel.,dasatinib,False,CHEMBL1421
+Asparaginase,Enzyme/antitumor agent,Depletes asparagine for cancer cells,0.5,2.0,U/mL,,asparaginase,False,CHEMBL2108989
+Trametinib,MEK inhibitor,Inhibition of MEK1 and MEK2,1.0,10.0,nM,Also known as Mekinist.,trametinib,False,CHEMBL2103875
+Everolimus,mTOR inhibitor,Inhibition of mTOR signaling pathway,1.0,10.0,µM,Also known as Afinitor.,everolimus,False,CHEMBL1908360
+5-Fluorouracil,Antimetabolite,Inhibition of nucleotide synthesis,1.0,20.0,µM,Also known as 5-FU.,5 fluorouracil,False,CHEMBL185
+Metformin,Biguanide,Inhibition of hepatic glucose production,1.0,10.0,mM,,metformin,False,CHEMBL1431
+SB202190,p38 MAPK inhibitor,Inhibition of p38 MAPK pathway,1.0,10.0,µM,,sb202190,False,CHEMBL278041

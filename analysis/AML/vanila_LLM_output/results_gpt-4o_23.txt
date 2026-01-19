@@ -1,0 +1,75 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) offers a promising strategy to accelerate drug development by bypassing early-phase testing. Below is a list of 20 existing drugs that have been explored or have potential for repurposing in AML treatment, especially against cell lines like MOLM13. The IC50 values provided are typical ranges or estimates that can be experimentally verified; they should ultimately be tailored based on specific experimental conditions such as the assay format and cell line used.
+
+1. **Venetoclax**: A BCL-2 inhibitor showing promise in AML.
+   - Suggested IC50 range: 0.01-0.1 μM
+
+2. **Sorafenib**: Multi-kinase inhibitor, often used in combination with other treatments.
+   - Suggested IC50 range: 1-10 μM
+
+3. **Metformin**: An anti-diabetic drug being investigated for anti-cancer properties.
+   - Suggested IC50 range: 1-10 mM
+
+4. **Auranofin**: An anti-rheumatic medication with potential anti-leukemic activity.
+   - Suggested IC50 range: 0.5-5 μM
+
+5. **Decitabine**: A DNA methyltransferase inhibitor already used in AML.
+   - Suggested IC50 range: 0.1-1 μM
+
+6. **Arsenic Trioxide**: Used in some leukemias, being tested for AML.
+   - Suggested IC50 range: 0.1-1 μM
+
+7. **Clofarabine**: A purine nucleoside analog, also used in AML.
+   - Suggested IC50 range: 10-100 nM
+
+8. **Vorinostat (SAHA)**: An HDAC inhibitor with potential for AML.
+   - Suggested IC50 range: 1-5 μM
+
+9. **Itraconazole**: An antifungal with demonstrated anticancer activity.
+   - Suggested IC50 range: 1-10 μM
+
+10. **Ruxolitinib**: A JAK inhibitor, evaluated for use in AML.
+    - Suggested IC50 range: 0.5-5 μM
+
+11. **Selinexor**: An exportin inhibitor with anti-leukemia effects.
+    - Suggested IC50 range: 50-500 nM
+
+12. **Bortezomib**: A proteasome inhibitor, used in combination therapies.
+    - Suggested IC50 range: 0.005-0.1 μM
+
+13. **Disulfiram**: An anti-alcoholism drug investigated for cancer treatment.
+    - Suggested IC50 range: 0.5-5 μM
+
+14. **Omeprazole**: A proton pump inhibitor with emerging anti-cancer effects.
+    - Suggested IC50 range: 10-100 μM
+
+15. **Thalidomide**: An immunomodulatory drug showing some efficacy in AML.
+    - Suggested IC50 range: 1-10 μM
+
+16. **Tacrolimus**: An immunosuppressant with potential anti-cancer properties.
+    - Suggested IC50 range: 0.5-5 μM
+
+17. **Simvastatin**: A statin showing potential to inhibit cancer cell growth.
+    - Suggested IC50 range: 10-100 μM
+
+18. **Azacitidine**: Similar to decitabine, used in treatment of certain myelodysplastic syndromes.
+    - Suggested IC50 range: 0.1-1 μM
+
+19. **Dasatinib**: A tyrosine kinase inhibitor with applications in various leukemias.
+    - Suggested IC50 range: 0.5-5 nM
+
+20. **Dantrolene**: Muscle relaxant researched for potential anti-cancer uses.
+    - Suggested IC50 range: 10-100 μM
+
+For experimental validation, it is advisable to conduct dose-response studies to establish the precise IC50 values under specific conditions relevant to the working laboratory. Always verify pharmacokinetic properties, possible drug interactions, and cytotoxicity profiles to refine dosing regimens for most efficient preclinical and clinical investigations.

@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ruxolitinib,JAK1/2 Inhibitor,Inhibits JAK1 and JAK2 signaling pathways,3.0,10.0,nM,,ruxolitinib,False,CHEMBL1287854
+Sunitinib,Tyrosine Kinase Inhibitor,Inhibits receptor tyrosine kinases involved in tumor growth,50.0,200.0,nM,,sunitinib,False,CHEMBL597365
+Dasatinib,BCR-ABL Inhibitor,Blocks BCR-ABL tyrosine kinase activity,1.0,100.0,nM,,dasatinib,False,CHEMBL1421
+Nilotinib,BCR-ABL Inhibitor,Inhibits BCR-ABL fusion protein,10.0,100.0,nM,,nilotinib,False,CHEMBL255863
+Metformin,Antidiabetic Drug,Improves glucose metabolism and may induce apoptosis,1.0,10.0,mM,,metformin,False,CHEMBL1431
+Thalidomide,Immunomodulator,Modulates immune response and inhibits angiogenesis,1.0,10.0,µM,,thalidomide,False,CHEMBL426123
+Nelarabine,Nucleoside Replacing Agent,Inhibits DNA synthesis in lymphoblasts,5.0,50.0,µM,,nelarabine,False,CHEMBL1201112
+Bortezomib,Proteasome Inhibitor,Inhibits proteasome leading to apoptosis in cancer cells,10.0,30.0,nM,,bortezomib,False,CHEMBL325041
+Kitruda,PD-1 Inhibitor,Inhibits PD-1 pathway to enhance T-cell response,1.0,100.0,nM,Alternative name: Pembrolizumab,kitruda,False,
+Rapamycin,mTOR Inhibitor,Inhibits mTORC1 signaling pathway affecting cell growth,0.5,5.0,nM,,rapamycin,False,CHEMBL413
+Chloroquine,"Antimalarial, lysosomal stabilizer",Inhibits autophagy and promotes apoptosis,10.0,30.0,µM,,chloroquine,False,CHEMBL76
+Arsenic Trioxide,Promotes apoptosis in AML,Induces differentiation and apoptosis in leukemic cells,0.5,5.0,µM,,arsenic trioxide,False,CHEMBL5483015
+Trametinib,MEK Inhibitor,Inhibits MAPK/ERK pathway,1.0,100.0,nM,,trametinib,False,CHEMBL2103875
+VEGF inhibitors,Anti-angiogenic,Inhibits vascular endothelial growth factor signaling,0.1,1.0,µg/mL,Example: Bevacizumab,vegf inhibitors,False,CHEMBL5760702

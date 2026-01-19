@@ -1,0 +1,211 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a **shortlist of 20 existing (mostly FDA‑approved or late‑stage) drugs** that have evidence or strong rationale for repurposing in AML, with particular relevance to FLT3‑ITD–positive lines like **MOLM‑13**. For each, I give:
+
+- **Mechanism / rationale**
+- **Suggested IC50 assay concentration range** (e.g., 10‑point, half‑log or log spacing)
+- Notes specific to **MOLM‑13 / AML** where available
+
+IC50 ranges are *in vitro* starting suggestions based on published potencies in leukemia cells; you would typically run at least a 72‑h viability assay (e.g., CellTiter‑Glo, Alamar Blue) with 6–10 concentrations in triplicate.
+
+---
+
+## 1. Sorafenib  
+- **Class / target**: Multikinase inhibitor (FLT3, RAF, VEGFR, PDGFR).  
+- **Rationale**: Potent against FLT3‑ITD AML; MOLM‑13 is FLT3‑ITD+.  
+- **Typical IC50 in FLT3‑ITD AML**: ~1–10 nM in biochemical assays, ~10–100 nM in cells.  
+- **Suggested test range**:  
+  - 0.5 nM – 5 µM (e.g., 0.5, 1, 3, 10, 30, 100, 300, 1000, 3000, 5000 nM).  
+
+---
+
+## 2. Midostaurin (PKC412)  
+- **Class / target**: Multikinase inhibitor; approved for FLT3‑mut AML.  
+- **Rationale**: Direct clinical use in AML; strong MOLM‑13 activity reported.  
+- **Cellular IC50**: Often in the 10–100 nM range in FLT3‑ITD AML.  
+- **Suggested test range**:  
+  - 1 nM – 10 µM.
+
+---
+
+## 3. Quizartinib (AC220)  
+- **Class / target**: FLT3 inhibitor.  
+- **Rationale**: Highly potent against FLT3‑ITD cell lines including MOLM‑13.  
+- **Cellular IC50**: Low nanomolar range (1–10 nM).  
+- **Suggested test range**:  
+  - 0.1 nM – 1 µM.
+
+---
+
+## 4. Gilteritinib (ASP2215)  
+- **Class / target**: FLT3/AXL inhibitor; approved for relapsed/refractory FLT3‑mut AML.  
+- **Rationale**: Direct clinical AML agent; strong in MOLM‑13.  
+- **Cellular IC50**: ~1–30 nM reported in FLT3‑ITD AML.  
+- **Suggested test range**:  
+  - 0.1 nM – 3 µM.
+
+---
+
+## 5. Dasatinib  
+- **Class / target**: Src/Abl family kinase inhibitor.  
+- **Rationale**: Broad TK inhibitor; can affect signaling nodes (SRC, LYN) used by AML cells; some activity in FLT3‑mut contexts.  
+- **Cellular IC50 in leukemias**: Often 1–100 nM.  
+- **Suggested test range**:  
+  - 0.5 nM – 5 µM.
+
+---
+
+## 6. Sunitinib  
+- **Class / target**: Multikinase inhibitor (FLT3, KIT, VEGFR, PDGFR).  
+- **Rationale**: Reported activity in AML including FLT3‑mut lines.  
+- **Cellular IC50**: ~10–500 nM in various leukemia lines.  
+- **Suggested test range**:  
+  - 1 nM – 10 µM.
+
+---
+
+## 7. Nilotinib  
+- **Class / target**: BCR‑ABL, c‑KIT, PDGFR inhibitor.  
+- **Rationale**: Targets kinases relevant in some AML subsets; documented anti‑proliferative effects in AML cell lines.  
+- **Cellular IC50**: ~100 nM – low µM in non‑BCR‑ABL cells.  
+- **Suggested test range**:  
+  - 10 nM – 20 µM.
+
+---
+
+## 8. Imatinib  
+- **Class / target**: BCR‑ABL, PDGFR, c‑KIT inhibitor.  
+- **Rationale**: Repurposing especially in c‑KIT or PDGFR‑driven AML subsets; baseline for comparison.  
+- **Cellular IC50 (non‑BCR‑ABL)**: Often low‑µM.  
+- **Suggested test range**:  
+  - 100 nM – 50 µM.
+
+---
+
+## 9. Venetoclax (ABT‑199)  
+- **Class / target**: BCL‑2 inhibitor.  
+- **Rationale**: Now standard in AML combinations; strong activity in many AML lines including MOLM‑13.  
+- **Cellular IC50**: Frequently ~1–100 nM in BCL‑2–dependent hematologic cells.  
+- **Suggested test range**:  
+  - 0.5 nM – 5 µM.
+
+---
+
+## 10. Navitoclax (ABT‑263)  
+- **Class / target**: BCL‑2/BCL‑xL inhibitor.  
+- **Rationale**: Strong preclinical AML data; can sensitize MOLM‑13 to various agents.  
+- **Cellular IC50**: ~10–200 nM in many hematologic malignancies.  
+- **Suggested test range**:  
+  - 1 nM – 10 µM.
+
+---
+
+## 11. Ruxolitinib  
+- **Class / target**: JAK1/2 inhibitor.  
+- **Rationale**: AML cells with activated JAK/STAT signaling; shown to impair proliferation in subsets and in FLT3‑mut contexts via downstream signaling.  
+- **Cellular IC50**: Typically ~0.1–3 µM.  
+- **Suggested test range**:  
+  - 10 nM – 30 µM.
+
+---
+
+## 12. Tofacitinib  
+- **Class / target**: JAK1/3 inhibitor.  
+- **Rationale**: JAK/STAT pathway relevance in AML microenvironmental signaling; repurposing from RA.  
+- **Cellular IC50**: Usually 0.1–5 µM.  
+- **Suggested test range**:  
+  - 10 nM – 50 µM.
+
+---
+
+## 13. Everolimus (RAD001)  
+- **Class / target**: mTORC1 inhibitor.  
+- **Rationale**: PI3K/AKT/mTOR signaling is hyperactive in AML including MOLM‑13; synergy shown with FLT3 or BCL‑2 inhibitors.  
+- **Cellular IC50**: Often ~1–100 nM.  
+- **Suggested test range**:  
+  - 0.5 nM – 5 µM.
+
+---
+
+## 14. Temsirolimus  
+- **Class / target**: mTOR inhibitor.  
+- **Rationale**: Similar to everolimus; active in AML models and used in combination studies with TKIs.  
+- **Cellular IC50**: ~1–100 nM in leukemia lines.  
+- **Suggested test range**:  
+  - 0.5 nM – 5 µM.
+
+---
+
+## 15. Vorinostat (SAHA)  
+- **Class / target**: HDAC inhibitor.  
+- **Rationale**: Epigenetic therapy; extensive AML cell line data including synergy with FLT3/BCL‑2 inhibitors.  
+- **Cellular IC50**: Usually ~0.5–5 µM.  
+- **Suggested test range**:  
+  - 50 nM – 50 µM.
+
+---
+
+## 16. Panobinostat (LBH589)  
+- **Class / target**: Pan‑HDAC inhibitor.  
+- **Rationale**: Very potent epigenetic agent; reported to inhibit proliferation and induce apoptosis in FLT3‑ITD AML lines.  
+- **Cellular IC50**: low‑nanomolar to tens of nM.  
+- **Suggested test range**:  
+  - 0.5 nM – 1 µM.
+
+---
+
+## 17. Decitabine  
+- **Class / target**: DNA methyltransferase inhibitor (hypomethylating agent).  
+- **Rationale**: Already used in AML; can be benchmark or combination partner.  
+- **Cellular effective range**: Typically low‑µM with longer exposures (48–96 h).  
+- **Suggested test range**:  
+  - 100 nM – 20 µM (extended exposure recommended).
+
+---
+
+## 18. Azacitidine  
+- **Class / target**: DNMT inhibitor (HMA).  
+- **Rationale**: Standard AML agent; epigenetic modulation in MOLM‑13 and other lines.  
+- **Cellular effective range**: ~0.5–10 µM with prolonged exposure.  
+- **Suggested test range**:  
+  - 100 nM – 20 µM (72–96 h).
+
+---
+
+## 19. Metformin  
+- **Class / target**: AMPK activator; indirect mTOR inhibition.  
+- **Rationale**: Broad anticancer repurposing candidate; AML cells can be sensitive in high‑µM to low‑mM range; investigate metabolic vulnerability.  
+- **Cellular IC50**: Often 1–10 mM in cancer cell lines.  
+- **Suggested test range**:  
+  - 100 µM – 30 mM (pay attention to osmolarity and medium pH).
+
+---
+
+## 20. Disulfiram (± copper supplementation)  
+- **Class / target**: ALDH inhibitor; induces oxidative and proteotoxic stress (especially with Cu²⁺).  
+- **Rationale**: Targeting ALDH‑positive leukemic stem/progenitor cells; some AML line data show µM‑range cytotoxicity.  
+- **Cellular IC50**: ~0.2–5 µM (often tested at 0.5–10 µM) + low‑µM Cu²⁺.  
+- **Suggested test range**:  
+  - Disulfiram: 50 nM – 10 µM  
+  - CuCl₂ or CuSO₄: 0.5–5 µM (constant across curve).
+
+---
+
+### General experimental notes for MOLM‑13 IC50 assays
+
+- **Exposure time**: 72 h is typical for proliferation/viability IC50, especially for signaling and apoptosis‑targeted agents.
+- **Seeding density**: ~5×10³–1×10⁴ cells per well (96‑well) in 100 µL RPMI + 10% FBS (optimize so control wells remain in log phase).
+- **Readout**: ATP‑based (CellTiter‑Glo) or resazurin; include DMSO (% matched) controls.
+- **Curve fitting**: Use 4‑parameter logistic model to derive IC50; repeat at least twice independently.
+
+If you’d like, I can prioritize or refine this list (e.g., only non‑oncology‑approved drugs, or focus on metabolism, or propose combination matrices around MOLM‑13 specifically).

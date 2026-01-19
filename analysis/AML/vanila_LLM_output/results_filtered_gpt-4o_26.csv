@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ruxolitinib,JAK1/2 inhibitor,"Blocks Janus kinase 1 and 2 pathways, affecting immune and cancer cell signaling.",0.01,1.0,µM,Used in myelofibrosis treatment.,ruxolitinib,False,CHEMBL1287854
+Dasatinib,BCR-ABL inhibitor,"Inhibits BCR-ABL tyrosine kinase, affecting cancer cell proliferation.",0.01,1.0,µM,Commonly used in chronic myeloid leukemia.,dasatinib,False,CHEMBL1421
+Tofacitinib,JAK inhibitor,"Inhibits Janus kinase pathways, regulating immune function and cancer growth.",0.1,5.0,µM,Approved for rheumatoid arthritis treatment.,tofacitinib,False,CHEMBL2103743
+Ibrutinib,Bruton's tyrosine kinase inhibitor,"Inhibits BTK, interfering with B-cell receptor signaling.",0.1,1.0,µM,Used for chronic lymphocytic leukemia and mantle cell lymphoma.,ibrutinib,False,CHEMBL1873475
+Olaparib,PARP inhibitor,"Inhibits PARP enzyme, impairing cancer cell DNA repair mechanisms.",1.0,10.0,µM,Used in BRCA-mutated cancers.,olaparib,False,CHEMBL521686
+Palbociclib,CDK4/6 inhibitor,"Inhibits cyclin-dependent kinases 4 and 6, halting cancer cell cycle progression.",0.1,5.0,µM,Used in HR-positive breast cancer.,palbociclib,False,CHEMBL2364621
+Ponatinib,Multikinase inhibitor,"Inhibits BCR-ABL and other tyrosine kinases, targeting cancer cell growth.",0.1,1.0,µM,Effective against T315I mutation in chronic myeloid leukemia.,ponatinib,False,CHEMBL2105708
+Nivolumab,Checkpoint inhibitor,"Blocks PD-1, enhancing immune response against tumors.",0.0,0.0,,Used in various immunotherapy contexts; requires tailored concentrations.,nivolumab,False,CHEMBL2108738
+Pembrolizumab,Checkpoint inhibitor,"Blocks PD-1, enhancing immune response against tumors.",0.0,0.0,,Similar to nivolumab with tailored use in immune assays.,pembrolizumab,False,CHEMBL3137343
+Atezolizumab,Checkpoint inhibitor,"Blocks PD-L1, enhancing immune surveillance.",0.0,0.0,,Concentration dependent on immune parameters.,atezolizumab,False,CHEMBL3707227
+Everolimus,mTOR inhibitor,"Inhibits mTOR signaling pathway, affecting tumor cell growth.",1.0,10.0,µM,"Approved for renal cell carcinoma, TSC, and more.",everolimus,False,CHEMBL1908360
+Temsirolimus,mTOR inhibitor,"Inhibits mTOR pathway, reducing cancer cell growth and proliferation.",0.1,5.0,µM,Used for renal cell carcinoma.,temsirolimus,False,CHEMBL1201182
+Plerixafor,CXCR4 antagonist,"Blocks CXCR4 axis, affecting hematopoietic cell mobilization.",0.1,10.0,µM,Used in stem cell mobilization for transplantation.,plerixafor,False,CHEMBL5402188
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome, disrupting protein degradation in cancer cells.",0.01,1.0,µM,Used in multiple myeloma and mantle cell lymphoma.,bortezomib,False,CHEMBL325041

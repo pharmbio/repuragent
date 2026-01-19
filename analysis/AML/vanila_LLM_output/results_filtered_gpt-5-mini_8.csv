@@ -1,0 +1,9 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,Multi‑kinase inhibitor,Broad kinase inhibitor with off‑target FLT3 activity,0.05083,1000.0,nM,Heterogeneous effects in AML; recommended top conc 1 µM.,ponatinib,False,CHEMBL2105708
+Navitoclax,BCL‑2/BCL‑xL inhibitor,Inhibits BCL‑2 and BCL‑xL (BH3 mimetic) to induce apoptosis,0.05083,1000.0,nM,Also known as ABT‑263; useful comparator to venetoclax; top conc 1 µM.,navitoclax,False,CHEMBL2105690
+Alvocidib,CDK inhibitor,Inhibits CDKs (notably CDK9) affecting transcriptional regulation,0.05083,1000.0,nM,Also called Flavopiridol; targets transcriptional addiction in AML; recommended top conc 1 µM.,alvocidib,False,CHEMBL2105698
+Palbociclib,CDK4/6 inhibitor,Selective inhibition of CDK4 and CDK6 to induce cell‑cycle arrest,0.50827,10000.0,nM,May affect AML proliferation in subsets; recommended top conc 10 µM.,palbociclib,False,CHEMBL2364621
+Panobinostat,HDAC inhibitor,Pan‑histone deacetylase inhibitor altering transcription/chromatin,0.05083,1000.0,nM,Also LBH589; active in AML models and combinations; top conc 1 µM.,panobinostat,False,CHEMBL483254
+Bortezomib,Proteasome inhibitor,Inhibits 20S proteasome leading to accumulation of misfolded proteins and apoptosis,0.05083,1000.0,nM,Proteasome inhibition can be cytotoxic in AML; recommended top conc 1 µM.,bortezomib,False,CHEMBL325041
+Ibrutinib,BTK inhibitor (with off‑targets),Covalent inhibitor of BTK and additional kinases,0.50827,10000.0,nM,Some AML subtypes show sensitivity; useful for testing combinations; recommended top conc 10 µM.,ibrutinib,False,CHEMBL1873475
+OTX015,BET bromodomain inhibitor,Inhibits BET family (BRD2/3/4) to disrupt oncogenic transcription programs,0.05083,1000.0,nM,Also known as MK‑8628; investigational BET inhibitor active in AML preclinical models; top conc 1 µM.,otx015,False,CHEMBL3581647

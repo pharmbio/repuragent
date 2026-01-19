@@ -1,0 +1,65 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest *plausible* repurposing candidates with **experimentally testable IC₅₀ assay concentration ranges** for AML—particularly MOLM-13—but I can’t responsibly claim that each drug *will* inhibit MOLM-13 proliferation without citing specific evidence (which varies by genotype, culture conditions, and assay). What I *can* do is provide a **practical screening set**: approved/clinical-stage non-AML drugs with published or mechanistically plausible anti-AML activity, and **starting concentration ranges** that are routinely used in cell-based viability assays to obtain an IC₅₀ if the cell line is sensitive.
+
+Below are **20 existing drugs** (mostly approved) that have been investigated for anti-AML activity or target pathways relevant to MOLM-13 (often FLT3-ITD–driven). Concentration guidance assumes a standard 72‑h viability readout (CellTiter-Glo/Resazurin) and is meant as a **test range** for IC₅₀ curve fitting (not a claim of potency).
+
+---
+
+## Practical repurposing candidates (top 20) + IC₅₀ assay test ranges
+
+**How to read the “IC₅₀ test range”:** run an 8–12 point dilution series spanning the range shown (e.g., half‑log or 1:3 dilutions). If you don’t know sensitivity, a good default is 0.001–30 µM, but ranges below are tightened to typical on-target cellular windows and solubility realities.
+
+| Drug (existing indication) | Rationale relevant to AML/MOLM-13 | Suggested IC₅₀ test range (final in well) |
+|---|---|---|
+| **Midostaurin** (FLT3/PKC inhibitor; approved in AML) | Benchmarked FLT3 pathway inhibitor; MOLM-13 often sensitive | **0.001–1 µM** |
+| **Quizartinib** (FLT3 inhibitor; clinical/approved some regions) | Potent FLT3 inhibitor; strong activity in FLT3‑ITD models | **0.0003–0.3 µM** |
+| **Gilteritinib** (FLT3/AXL; approved AML) | Relevant comparator; MOLM-13 commonly responsive | **0.001–1 µM** |
+| **Sorafenib** (RAF/VEGFR/FLT3; approved solid tumors) | Has FLT3 activity; used off-label in FLT3‑ITD AML studies | **0.01–10 µM** |
+| **Sunitinib** (multi‑TKI; approved) | Hits FLT3/KIT/VEGFR; anti-proliferative in some AML contexts | **0.01–10 µM** |
+| **Dasatinib** (SRC/ABL; approved) | SRC family signaling can support AML survival; reported AML effects in subsets | **0.001–3 µM** |
+| **Ponatinib** (multi‑TKI; approved) | Broad kinase inhibition including FLT3 variants; used experimentally in AML | **0.001–1 µM** |
+| **Idelalisib** (PI3Kδ; approved) | PI3K/AKT axis often active in AML; can reduce proliferation in some models | **0.01–10 µM** |
+| **Copanlisib** (PI3Kα/δ; approved) | PI3K pathway targeting; sometimes more broadly cytotoxic than δ‑selective | **0.003–3 µM** |
+| **Ruxolitinib** (JAK1/2; approved) | JAK/STAT signaling implicated in AML microenvironment and subsets | **0.03–30 µM** |
+| **Trametinib** (MEK1/2; approved) | MAPK pathway can be engaged downstream of FLT3/RAS | **0.001–1 µM** |
+| **Everolimus** (mTORC1; approved) | mTOR dependence in AML; modest single-agent effects but testable | **0.003–3 µM** |
+| **Temsirolimus** (mTOR; approved) | Similar to everolimus; often slightly different cellular potency | **0.003–3 µM** |
+| **Palbociclib** (CDK4/6; approved) | Cell-cycle blockade; variable AML sensitivity but worth screening | **0.03–30 µM** |
+| **Abemaciclib** (CDK4/6; approved) | More CDK9/off-target transcriptional impact vs palbociclib; sometimes stronger cytotoxicity | **0.01–10 µM** |
+| **Panobinostat** (HDAC; approved) | Epigenetic vulnerability in AML; often potent in vitro | **0.0003–0.3 µM** |
+| **Vorinostat** (HDAC; approved) | Broader HDAC inhibitor; typically less potent than panobinostat | **0.03–30 µM** |
+| **Valproic acid** (HDAC activity; approved) | Widely tested in AML differentiation/epigenetic regimens; higher concentrations needed | **0.1–10 mM** |
+| **Chloroquine** (autophagy inhibitor; approved) | Autophagy inhibition can sensitize AML; variable single-agent cytotoxicity | **1–100 µM** |
+| **Hydroxychloroquine** (autophagy inhibitor; approved) | Similar to chloroquine; typically slightly higher IC₅₀s | **3–150 µM** |
+
+---
+
+## Notes to make these ranges “experimentally testable” in a real IC₅₀ assay
+
+- **Use a broad initial range if unsure:** 0.001–30 µM (or 0.0003–10 µM for very potent kinase/HDAC inhibitors) catches most behaviors.
+- **Vehicle (DMSO) control:** keep constant across wells (commonly ≤0.1% v/v).
+- **Timepoint:** MOLM‑13 often shows clearer separation at **72 h** (sometimes 96 h for slower-acting epigenetic/autophagy agents).
+- **Curve design:** 10 points, 1:3 dilutions is a good compromise (or half‑log).
+- **Cytostatic vs cytotoxic:** CDK/mTOR/HDAC drugs may reduce ATP readouts without outright killing; consider annexin V/PI follow-up.
+
+---
+
+## If you want this tailored specifically to MOLM‑13
+If you tell me:
+1) your assay duration (48/72/96 h),  
+2) medium/serum conditions,  
+3) whether you want **only FDA-approved** (exclude clinical-stage), and  
+4) whether you want to **avoid known AML drugs** (midostaurin/gilteritinib etc.),  
+
+I can refine the list to the most MOLM‑13–relevant repurposing set and give a ready-to-run **plate map concentration series** for each compound.

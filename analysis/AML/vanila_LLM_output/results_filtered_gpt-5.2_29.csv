@@ -1,0 +1,18 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Sunitinib,Receptor tyrosine kinase (RTK) inhibitor,Inhibits multiple RTKs (including FLT3 activity) to suppress oncogenic signaling,0.3,3.0,µM,Text notes it includes FLT3 activity.,sunitinib,False,CHEMBL597365
+Dasatinib,SRC/ABL family kinase inhibitor,Inhibits SRC-family and ABL kinases leading to broader signaling suppression,0.1,1.0,µM,Class noted as SRC/ABL family; described as broader signaling suppression.,dasatinib,False,CHEMBL1421
+Bosutinib,SRC/ABL kinase inhibitor,Inhibits SRC and ABL kinases to interfere with growth signaling,0.3,3.0,µM,Described as SRC/ABL; signaling.,bosutinib,False,CHEMBL2095206
+Ruxolitinib,JAK inhibitor (JAK1/2),Inhibits JAK1/2 to block cytokine-driven JAK-STAT signaling,1.0,10.0,µM,Axis specified: cytokine/JAK-STAT.,ruxolitinib,False,CHEMBL1287854
+Trametinib,MEK inhibitor (MEK1/2),Inhibits MEK1/2 to suppress MAPK pathway signaling,0.03,300.0,nM,MAPK pathway explicitly mentioned.,trametinib,False,CHEMBL2103875
+Everolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 to reduce protein synthesis and cell growth,0.1,1.0,µM,mTORC1 specified.,everolimus,False,CHEMBL1908360
+Temsirolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 signaling to impair growth and proliferation,0.1,1.0,µM,mTORC1 specified.,temsirolimus,False,CHEMBL1201182
+Sirolimus,mTOR inhibitor (mTORC1),Allosterically inhibits mTORC1 (via FKBP12 complex) to suppress growth signaling,0.1,1.0,µM,Alternative name provided in text: Rapamycin.,sirolimus,False,CHEMBL263427
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases causing increased histone acetylation and transcriptional changes,0.1,1.0,µM,Epigenetic/transcriptional modulation section.,panobinostat,False,CHEMBL483254
+Valproic acid,HDAC modulator (weak HDAC inhibitor at high concentrations),"Exerts HDAC-related effects at high µM–mM concentrations, altering transcription/differentiation programs",0.05,5.0,mM,Text notes HDAC effects occur at high µM–mM.,valproic acid,False,CHEMBL109
+ATRA,Retinoid (RAR agonist),Activates retinoic acid receptor (RAR) signaling to induce differentiation,1.0,10.0,µM,Primary name in text: ATRA; alternative name in parentheses: Tretinoin.,atra,False,CHEMBL1631960
+Metformin,Metabolic modulator,Induces mitochondrial complex I stress and alters cellular metabolism,0.1,50.0,mM,Text flags high in vitro concentrations may exceed clinically achievable free levels.,metformin,False,CHEMBL1431
+Disulfiram,ALDH-targeting/metal-dependent proteotoxic stress inducer,Induces ALDH/metal-dependent proteotoxic stress; activity often copper-dependent,1.0,10.0,µM,Text suggests testing ±0.1–1 µM CuSO4; notes copper dependence and possible solubility/stability issues.,disulfiram,False,CHEMBL964
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increasing oxidative stress",1.0,3.0,µM,Mechanism noted: oxidative stress via thioredoxin reductase.,auranofin,False,CHEMBL1366
+Artesunate,ROS/iron-dependent stress inducer (antimalarial),Promotes ROS and iron-dependent cellular stress,10.0,30.0,µM,Mechanism in text: ROS/iron-dependent stress.,artesunate,False,CHEMBL361497
+Niclosamide,Multi-pathway inhibitor/mitochondrial uncoupler (reported),Reported to affect WNT/STAT signaling and mitochondrial uncoupling,10.0,10.0,µM,Text notes WNT/STAT/mitochondrial uncoupling reported; also flags possible solubility/stability issues.,niclosamide,False,CHEMBL1448
+Mebendazole,Microtubule inhibitor (anthelmintic),Disrupts microtubules leading to antiproliferative effects,10.0,30.0,µM,Text notes antiproliferative activity in multiple cancers; also flags possible solubility/stability issues.,mebendazole,False,CHEMBL685

@@ -1,0 +1,12 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Pazopanib,Multikinase inhibitor,"Inhibits VEGFR, PDGFR, and c-KIT.",10.0,10.0,μM,,pazopanib,False,CHEMBL477772
+Thalidomide,Immunomodulatory drug,Modulates immune response and inhibits angiogenesis.,2.0,10.0,μM,,thalidomide,False,CHEMBL426123
+Roxithromycin,Antibiotic,May induce apoptosis in leukemic cells.,5.0,15.0,μM,,roxithromycin,False,CHEMBL1214185
+Metformin,Antidiabetic,Alters cellular energy metabolism and may inhibit cell proliferation.,1.0,5.0,mM,,metformin,False,CHEMBL1431
+Bortezomib,Proteasome inhibitor,Induces apoptosis in cancer cells.,10.0,50.0,nM,,bortezomib,False,CHEMBL325041
+Nelarabine,Nucleoside analog,Disrupts DNA synthesis.,0.1,1.0,μM,,nelarabine,False,CHEMBL1201112
+Carfilzomib,Proteasome inhibitor,Second-generation proteasome inhibitor.,1.0,10.0,nM,,carfilzomib,False,CHEMBL451887
+Auranofin,Gold compound,Shows anti-cancer activity through multiple mechanisms.,1.0,5.0,μM,,auranofin,False,CHEMBL1366
+Fingolimod,Sphingosine-1-phosphate receptor modulator,Modulates immune response.,100.0,100.0,nM,Also known as FTY720.,fingolimod,False,CHEMBL314854
+Ruxolitinib,JAK inhibitor,"JAK1/JAK2 inhibitor, modulates immune response.",1.0,5.0,μM,,ruxolitinib,False,CHEMBL1287854
+Chlorambucil,Alkylating agent,Disrupts DNA.,10.0,50.0,μM,,chlorambucil,False,CHEMBL515

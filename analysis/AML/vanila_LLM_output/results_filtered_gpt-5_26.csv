@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,Tyrosine kinase inhibitor,"Inhibits BCR‑ABL and FLT3, including ITD mutants",0.0001,1.0,µM,Approved for CML/Ph+ ALL; very potent in FLT3‑ITD AML and MOLM13.,ponatinib,False,CHEMBL2105708
+Sunitinib,Multi-kinase inhibitor,"Inhibits FLT3, VEGFR, PDGFR and KIT to suppress oncogenic signaling",0.001,10.0,µM,Approved for RCC/GIST; active in FLT3‑ITD AML lines.,sunitinib,False,CHEMBL597365
+Dasatinib,Src/Abl tyrosine kinase inhibitor,Inhibits BCR‑ABL and Src-family kinases to blunt AML signaling,0.0005,5.0,µM,Approved for CML/Ph+ ALL; often synergizes with FLT3 blockade; MOLM13 responsive.,dasatinib,False,CHEMBL1421
+Regorafenib,Multi-kinase inhibitor,Inhibits VEGFR/PDGFR/RAF and FLT3 to reduce proliferation,0.001,10.0,µM,Approved for CRC/GIST/HCC; anti‑proliferative in FLT3‑ITD AML.,regorafenib,False,CHEMBL1946170
+Cabozantinib,Tyrosine kinase inhibitor,"Inhibits MET, VEGFR2 and FLT3",0.0005,5.0,µM,Approved for RCC/thyroid; reported FLT3 inhibition and AML cell suppression.,cabozantinib,False,CHEMBL2105717
+Trametinib,MEK inhibitor,"Inhibits MEK1/2, suppressing MAPK signaling downstream of FLT3",0.0005,10.0,µM,Approved for melanoma; activity in AML lines.,trametinib,False,CHEMBL2103875
+Everolimus,mTOR inhibitor (mTORC1),"Inhibits mTORC1, reducing protein synthesis and growth signaling",0.0001,10.0,µM,Approved in transplant/solid tumors; anti‑proliferative in AML via mTOR blockade.,everolimus,False,CHEMBL1908360
+Temsirolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 to block mTOR pathway signaling,0.0001,10.0,µM,Approved for RCC; shows AML line activity.,temsirolimus,False,CHEMBL1201182
+Bortezomib,Proteasome inhibitor,Inhibits the 26S proteasome leading to apoptotic cell death,0.05,100.0,nM,Approved for MM/MCL; potent cytotoxicity in AML lines including MOLM13.,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Irreversibly inhibits the 20S proteasome,0.0005,1.0,µM,Approved for MM; strong AML line activity; complementary to bortezomib.,carfilzomib,False,CHEMBL451887
+Panobinostat,Pan‑HDAC inhibitor,Inhibits histone deacetylases causing epigenetic repression of AML growth,0.0005,1.0,µM,Approved for MM; MOLM13 reported sensitive.,panobinostat,False,CHEMBL483254
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits TrxR, inducing oxidative stress and cytotoxicity",0.001,20.0,µM,Approved for rheumatoid arthritis; robust AML cytotoxicity; MOLM13 reported sensitive.,auranofin,False,CHEMBL1366
+Tigecycline,Mitochondrial translation inhibitor (antibiotic),"Inhibits mitochondrial protein synthesis, impairing leukemic stem/progenitor metabolism",0.1,100.0,µM,Active in AML lines including MOLM13.,tigecycline,False,CHEMBL376140
+Disulfiram,Aldehyde dehydrogenase inhibitor,ALDH inhibition with copper‑dependent cytotoxicity in AML cells,0.001,10.0,µM,Include low‑micromolar copper; activity is copper‑dependent.,disulfiram,False,CHEMBL964
+Mebendazole,Anthelmintic; tubulin/hedgehog pathway modulator,Disrupts microtubules and hedgehog signaling to inhibit proliferation,0.01,20.0,µM,Shows AML cytotoxicity including in FLT3‑ITD contexts.,mebendazole,False,CHEMBL685
+Nelfinavir,HIV protease inhibitor,"Induces ER stress and inhibits PI3K–Akt signaling, causing proteotoxic stress",0.5,50.0,µM,Induces proteotoxic stress in AML lines.,nelfinavir,False,CHEMBL365442

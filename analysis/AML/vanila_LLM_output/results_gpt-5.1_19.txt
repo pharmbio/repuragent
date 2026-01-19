@@ -1,0 +1,218 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a curated list of 20 repurposable, already‑approved (or late‑stage) drugs with reported anti‑AML activity, with emphasis on MOLM‑13 or closely related FLT3‑ITD AML lines when available. For each, I suggest an experimentally testable IC₅₀ assay concentration range (a screening range, not a guaranteed IC₅₀), suitable for 72‑h viability/proliferation assays (e.g., CellTiter‑Glo, MTS, resazurin).
+
+**Key notes about the ranges**
+- Where literature IC₅₀s in AML/MOLM‑13 exist, I center the range around those values and span at least 2–3 logs.
+- For most small molecules, a 10‑point half‑log or log₁₀ dilution within the listed range is practical.
+- All concentrations are **nominal** (added to media). Always confirm solubility and cytotoxicity in your own conditions.
+
+---
+
+## 1. Metformin
+- **Primary use**: Type 2 diabetes (biguanide; mitochondrial complex I inhibitor).
+- **Rationale**: Inhibits oxidative phosphorylation; AML cells (including FLT3‑mut) show metabolic vulnerabilities to OXPHOS inhibition.
+- **Suggested screening range (MOLM‑13)**:  
+ 1 µM – 10 mM (e.g., 1, 10, 50, 100, 500, 1,000, 2,000, 5,000, 10,000 µM).  
+ In many leukemia lines, growth‑inhibitory effects often appear ≥0.5–1 mM.
+
+---
+
+## 2. Niclosamide
+- **Primary use**: Anthelmintic.
+- **Rationale**: Disrupts mitochondrial function, Wnt/β‑catenin, STAT3; reported anti‑leukemic activity.
+- **Suggested range**:  
+ 10 nM – 20 µM.  
+ IC₅₀ in various leukemia models is often in the low micromolar range.
+
+---
+
+## 3. Disulfiram (+/− Copper)
+- **Primary use**: Alcohol aversion therapy (ALDH inhibitor).
+- **Rationale**: ALDH inhibition and proteasome/ROS stress; AML stem/progenitor cells enriched in ALDH; activity enhanced by Cu²⁺.
+- **Suggested range** (no copper or with 1–2 µM CuSO₄):  
+ 1 nM – 5 µM.  
+ Many blood cancer cell lines show IC₅₀ ≈ 50–500 nM when copper is present.
+
+---
+
+## 4. Valproic Acid (Valproate)
+- **Primary use**: Antiepileptic, mood stabilizer; weak HDAC inhibitor.
+- **Rationale**: Epigenetic modulation, differentiation induction in AML, often combined with ATRA or hypomethylating agents.
+- **Suggested range**:  
+ 50 µM – 5 mM.  
+ AML cell lines typically show chromatin/viability effects in the 0.3–2 mM range.
+
+---
+
+## 5. Vorinostat (SAHA)
+- **Primary use**: HDAC inhibitor approved for CTCL.
+- **Rationale**: Potent HDAC inhibitor; strong in vitro activity in AML lines including FLT3‑mut.
+- **Suggested range**:  
+ 10 nM – 10 µM.  
+ AML IC₅₀s often 0.2–2 µM; MOLM‑13 commonly responds in the sub‑ to low‑micromolar range.
+
+---
+
+## 6. Panobinostat
+- **Primary use**: HDAC inhibitor (multiple myeloma).
+- **Rationale**: Broad HDAC inhibition; synergy with FLT3 inhibitors in FLT3‑ITD AML.
+- **Suggested range**:  
+ 1 nM – 1 µM.  
+ IC₅₀ for many AML lines: ~5–50 nM; expect potent activity in MOLM‑13.
+
+---
+
+## 7. Thalidomide / Lenalidomide (representative IMiD)
+- **Primary use**: Multiple myeloma, MDS with del(5q).
+- **Rationale**: Cereblon‑mediated degradation of transcription factors; immunomodulation; some activity in AML subtypes, though less consistent.
+- **Suggested range** (Lenalidomide as example):  
+ 10 nM – 50 µM.  
+ Direct cytotoxic IC₅₀ is often >1–5 µM in AML, but may show differentiation or combinatorial effects.
+
+---
+
+## 8. Mebendazole
+- **Primary use**: Anthelmintic (tubulin inhibitor).
+- **Rationale**: Microtubule disruption; reported anti‑leukemia activity.
+- **Suggested range**:  
+ 10 nM – 20 µM.  
+ AML cell line IC₅₀s frequently 0.1–5 µM.
+
+---
+
+## 9. Fluvoxamine (as representative SSRI)
+- **Primary use**: Antidepressant (SSRI).
+- **Rationale**: Several SSRIs (fluoxetine, sertraline, fluvoxamine) show cytotoxicity in leukemia cell lines via mitochondrial and ER stress.
+- **Suggested range**:  
+ 0.5 µM – 100 µM.  
+ Leukemia IC₅₀ reported commonly in ~5–30 µM range.
+
+---
+
+## 10. Sertraline
+- **Primary use**: Antidepressant (SSRI).
+- **Rationale**: Direct pro‑apoptotic effects in AML lines; reported synergy with BCL‑2 inhibition.
+- **Suggested range**:  
+ 0.5 µM – 100 µM.  
+ AML IC₅₀ usually ~5–20 µM.
+
+---
+
+## 11. Clofazimine
+- **Primary use**: Leprosy.
+- **Rationale**: Redox‑cycling, ROS generation, mitochondrial disruption; published anti‑AML activity (including FLT3‑ITD).
+- **Suggested range**:  
+ 10 nM – 10 µM.  
+ AML IC₅₀ typically 0.1–3 µM.
+
+---
+
+## 12. Doxycycline
+- **Primary use**: Antibiotic (tetracycline class).
+- **Rationale**: Inhibits mitochondrial protein synthesis; some reports of AML cell growth inhibition via mitochondrial stress.
+- **Suggested range**:  
+ 1 µM – 200 µM.  
+ Effects on proliferation often in the 10–100 µM range.
+
+---
+
+## 13. Itraconazole
+- **Primary use**: Antifungal.
+- **Rationale**: Hedgehog pathway and angiogenesis inhibition; cholesterol trafficking; some preclinical leukemia data.
+- **Suggested range**:  
+ 10 nM – 20 µM.  
+ Many cancer cell IC₅₀s in 0.5–5 µM range.
+
+---
+
+## 14. Terfenadine (or other repurposed antihistamine, e.g., astemizole)
+- **Primary use**: Antihistamine (withdrawn for QT issues but useful in vitro).
+- **Rationale**: hERG/K⁺ channel and off‑target effects; reported apoptosis in leukemic lines.
+- **Suggested range**:  
+ 0.1 µM – 50 µM.  
+ IC₅₀ for leukemia lines often ~1–10 µM.
+
+---
+
+## 15. Simvastatin (representative statin)
+- **Primary use**: Hyperlipidemia.
+- **Rationale**: Mevalonate pathway inhibition; AML lines can be sensitive to statin‑induced apoptosis.
+- **Suggested range**:  
+ 0.1 µM – 50 µM.  
+ AML IC₅₀ commonly 1–10 µM with adequate exposure.
+
+---
+
+## 16. Atorvastatin
+- **Primary use**: Hyperlipidemia.
+- **Rationale**: Similar to simvastatin; some studies suggest potent anti‑leukemic effects at micromolar concentrations.
+- **Suggested range**:  
+ 0.1 µM – 50 µM.  
+ Test overlapping doses with simvastatin for comparison.
+
+---
+
+## 17. Chloroquine / Hydroxychloroquine (autophagy inhibitor)
+- **Primary use**: Antimalarial; autoimmune diseases.
+- **Rationale**: Autophagy inhibition; can sensitize AML cells to cytotoxic and targeted agents; some direct growth inhibition.
+- **Suggested range** (Hydroxychloroquine):  
+ 1 µM – 100 µM.  
+ Direct IC₅₀ for AML lines often ~20–60 µM.
+
+---
+
+## 18. Propranolol
+- **Primary use**: Non‑selective β‑blocker.
+- **Rationale**: Anti‑angiogenic and direct anti‑tumor effects; some data in hematologic malignancies and leukemia models.
+- **Suggested range**:  
+ 0.5 µM – 100 µM.  
+ Leukemic cells often respond in 5–50 µM range.
+
+---
+
+## 19. Imatinib (as a control / repurposed kinase inhibitor)
+- **Primary use**: CML, Ph+ ALL, GIST.
+- **Rationale**: Not effective for FLT3‑ITD, but good benchmark for assay and for AML with rare BCR‑ABL or KIT mutations; also acts on some off‑targets.
+- **Suggested range**:  
+ 10 nM – 20 µM.  
+ AML line IC₅₀s vary widely; many non‑BCR‑ABL AML cells are relatively resistant (>5–10 µM).
+
+---
+
+## 20. Nilotinib / Dasatinib (second‑generation ABL/Src inhibitors)
+- **Primary use**: CML.
+- **Rationale**: Inhibit multiple kinases (Src family, KIT, etc.); have shown some activity in subsets of AML and as combination partners.
+- **Suggested range** (Nilotinib as example):  
+ 1 nM – 10 µM.  
+ Sensitive cells often have IC₅₀s in 10–200 nM range; MOLM‑13 may be less sensitive, but still useful as a kinase‑inhibitor control.
+
+---
+
+### Practical notes for MOLM‑13 assays
+
+1. **Assay setup**
+   - Seed MOLM‑13 at ~5–10 × 10³ cells/well in 96‑well plates (RPMI‑1640 + 10–20% FBS + appropriate supplements).
+   - Incubate 72 h with compounds in 0.1% DMSO (or vehicle‑matched), then measure viability.
+
+2. **Concentration design**
+   - Use a 10‑point log or half‑log dilution within each suggested range.
+   - Include at least:  
+     - vehicle control,  
+     - positive cytotoxic control (e.g., cytarabine 1–10 µM, or a known FLT3 inhibitor like quizartinib if available),  
+     - media‑only background.
+
+3. **Secondary readouts**
+   - For hits (IC₅₀ ≤ ~5–10 µM), follow up with annexin V/PI, cell‑cycle analysis, and possibly FLT3 signaling or mitochondrial assays where mechanistically relevant.
+
+If you’d like, I can narrow this to a smaller, higher‑priority panel focused on: (1) mitochondrial/OXPHOS disruptors, (2) epigenetic modulators, and (3) autophagy or proteostasis‑targeting drugs, specifically optimized for FLT3‑ITD AML like MOLM‑13.

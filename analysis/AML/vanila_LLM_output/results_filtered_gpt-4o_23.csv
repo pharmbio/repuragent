@@ -1,0 +1,14 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Metformin,Anti-diabetic,"Activates AMP-activated protein kinase, inhibiting mitochondrial respiratory-chain complex 1",1.0,10.0,mM,"Explored for its potential as a cancer therapeutic, particularly for AML.",metformin,False,CHEMBL1431
+Auranofin,Anti-rheumatic,"Inhibits thioredoxin reductase, impacting redox balance and inducing cell death",0.5,5.0,μM,Potential anti-leukemic activity.,auranofin,False,CHEMBL1366
+Arsenic Trioxide,Chemotherapy agent,Induces apoptosis through morphologic changes and DNA fragmentation,0.1,1.0,μM,Approved for treatment of acute promyelocytic leukemia.,arsenic trioxide,False,CHEMBL5483015
+Itraconazole,Antifungal,"Inhibits cytochrome P450 3A4, impacting hedgehog signaling pathway",1.0,10.0,μM,Shows broadband anticancer activity beyond its antifungal use.,itraconazole,False,CHEMBL5483033
+Ruxolitinib,JAK inhibitor,"Targets Janus kinases, blocking inflammatory cytokine signaling",0.5,5.0,μM,Evaluated for efficacy in treating various hematological malignancies.,ruxolitinib,False,CHEMBL1287854
+Bortezomib,Proteasome inhibitor,"Disrupts proteasome activity, inducing cell death",0.005,0.1,μM,"Approved for multiple myeloma, explored for AML treatment.",bortezomib,False,CHEMBL325041
+Disulfiram,Antabuse,"Inhibits aldehyde dehydrogenase, inducing cytotoxicity in cancer cells",0.5,5.0,μM,Potential use in cancer therapies due to its mechanism of action.,disulfiram,False,CHEMBL964
+Omeprazole,Proton pump inhibitor,"Inhibits H+/K+ ATPase, affecting cellular pH regulation and potentially cancer cell survival",10.0,100.0,μM,Anti-cancer properties emerging as secondary to its primary use.,omeprazole,False,CHEMBL1503
+Thalidomide,Immunomodulatory drug,Modulates the immune system and impacts angiogenesis,1.0,10.0,μM,Revived for use in multiple myeloma and being explored for AML.,thalidomide,False,CHEMBL426123
+Tacrolimus,Immunosuppressant,"Inhibits calcineurin, blocking T-cell activation",0.5,5.0,μM,Under investigation for its potential broader applications in cancer treatment.,tacrolimus,False,CHEMBL3989887
+Simvastatin,Statin,"Inhibits HMG-CoA reductase, impacting cholesterol synthesis and potentially cell proliferation",10.0,100.0,μM,Investigated for cancer growth inhibition effect.,simvastatin,False,CHEMBL1201391
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and Src family kinases,0.5,5.0,nM,Widely used in chronic myeloid leukemia and under review for AML.,dasatinib,False,CHEMBL1421
+Dantrolene,Muscle relaxant,"Inhibits calcium ion release from sarcoplasmic reticulum, affecting cell signaling",10.0,100.0,μM,Investigated for its side-effect profile in a cancer context.,dantrolene,False,CHEMBL1201288

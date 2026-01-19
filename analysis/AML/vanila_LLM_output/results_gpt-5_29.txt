@@ -1,0 +1,53 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing, non-AML-approved drugs with published anti-AML activity (including activity in FLT3-ITD models like MOLM13). For each, I list the mechanism and a practical concentration range to span when generating an IC50 curve in MOLM13. Ranges are chosen to bracket reported potencies and accommodate variability; use 8–12 points across the span. Actual potency will depend on assay conditions, serum, and compound handling/solubility.
+
+FLT3/MAPK/multikinase–pathway inhibitors (especially relevant to FLT3-ITD MOLM13)
+- Sorafenib (multi-kinase; inhibits FLT3): Range 0.1 nM to 3 µM
+- Ponatinib (ABL/FLT3/others): Range 0.1 nM to 3 µM
+- Sunitinib (multi-kinase; FLT3): Range 0.5 nM to 10 µM
+- Cabozantinib (MET/AXL/VEGFR; reported FLT3/AXL activity in AML): Range 0.5 nM to 10 µM
+- Regorafenib (multi-kinase; reported FLT3/TIE2): Range 0.5 nM to 10 µM
+- Dasatinib (SRC/ABL family; AML activity via SRC/KIT signaling): Range 0.5 nM to 10 µM
+- Trametinib (MEK1/2 inhibitor): Range 0.1 nM to 3 µM
+- Selumetinib (MEK1/2 inhibitor): Range 1 nM to 10 µM
+
+PI3K/mTOR pathway
+- Everolimus (mTORC1 inhibitor): Range 1 nM to 30 µM
+- Copanlisib (pan-PI3K inhibitor): Range 1 nM to 30 µM
+
+Proteasome inhibitors
+- Bortezomib (26S proteasome): Range 0.5 nM to 100 nM
+- Carfilzomib (irreversible proteasome inhibitor): Range 0.5 nM to 300 nM
+- Ixazomib (oral proteasome inhibitor): Range 1 nM to 1 µM
+
+Epigenetic modulators
+- Panobinostat (pan-HDAC inhibitor): Range 0.5 nM to 1 µM
+- Vorinostat/SAHA (HDAC inhibitor): Range 0.05 µM to 20 µM
+- Romidepsin (class I HDAC inhibitor): Range 0.1 nM to 0.5 µM
+
+Nuclear export inhibitor
+- Selinexor (XPO1/CRM1 inhibitor): Range 1 nM to 5 µM
+
+Mitochondrial/OxPhos and metabolic inhibitors
+- Tigecycline (mitochondrial translation inhibitor; antibiotic): Range 0.1 µM to 30 µM
+- Atovaquone (OxPhos complex III inhibitor; antimalarial): Range 0.1 µM to 30 µM
+- Niclosamide (oxidative phosphorylation/Wnt/STAT3; anthelmintic): Range 0.01 µM to 10 µM
+
+Redox/other
+- Auranofin (thioredoxin reductase inhibitor; anti-rheumatic): Range 0.01 µM to 10 µM
+
+Notes
+- MOLM13 is FLT3-ITD; FLT3-directed and downstream pathway inhibitors (first two sections) are often especially potent.
+- For poorly soluble compounds (e.g., niclosamide, atovaquone), ensure the top concentration is within solubility limits in your assay medium; if precipitation is seen, lower the top concentration.
+- If you need alternatives to reach 20 with different mechanisms, additional repurposing candidates with AML activity include omacetaxine mepesuccinate (homoharringtonine; approved for CML; suggest 0.5 nM–10 µM) and ruxolitinib (JAK1/2; suggest 0.01 µM–30 µM).

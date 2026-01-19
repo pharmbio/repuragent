@@ -1,0 +1,12 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Thalidomide,Immunomodulatory drug,Immunomodulation and anti-angiogenesis,1.0,10.0,µM,,thalidomide,False,CHEMBL426123
+Dasatinib,Tyrosine kinase inhibitor,Inhibition of BCR-ABL and SRC family kinases,0.1,5.0,µM,,dasatinib,False,CHEMBL1421
+Auranofin,Gold compound,Inhibition of thioredoxin reductase,0.1,5.0,µM,,auranofin,False,CHEMBL1366
+Metformin,Biguanide,Activation of AMPK and inhibition of gluconeogenesis,0.1,5.0,mM,,metformin,False,CHEMBL1431
+Bortezomib,Proteasome inhibitor,Inhibition of proteasome activity leading to apoptosis,1.0,50.0,nM,,bortezomib,False,CHEMBL325041
+Curcumin,Natural compound,Antioxidant and anti-inflammatory properties,1.0,20.0,µM,,curcumin,False,CHEMBL140
+Quercetin,Flavonoid,Antioxidant and potential to induce apoptosis,1.0,20.0,µM,,quercetin,False,CHEMBL50
+Resveratrol,Natural compound,Activation of sirtuins and antioxidant action,1.0,20.0,µM,,resveratrol,False,CHEMBL165
+Chloroquine,Antimalarial,Inhibition of autophagy and lysosomal function,1.0,10.0,µM,,chloroquine,False,CHEMBL76
+"Statins (e.g., Atorvastatin)",HMG-CoA reductase inhibitor,Reduction of cholesterol synthesis and potential effects on cell proliferation,1.0,10.0,µM,Includes Atorvastatin as an example.,statins,False,CHEMBL1487
+Sildenafil,Phosphodiesterase inhibitor,"Inhibition of phosphodiesterase type 5, increasing cGMP",1.0,20.0,µM,,sildenafil,False,CHEMBL1737

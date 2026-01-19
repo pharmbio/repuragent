@@ -1,0 +1,216 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 existing drugs (approved or in advanced clinical use for other indications) that have published evidence of activity in AML and/or specifically in MOLM13 or similar FLT3‑ITD+ AML lines. For each, I include:
+
+- Mechanism / why it’s relevant to AML  
+- A practical **IC₅₀ assay testing range** for MOLM13 or similar AML cells (a starting point; should be refined empirically).  
+- Notes on reported in‑vitro potency when available (approximate; varies by study, assay, and conditions).
+
+**Important**:  
+- Use appropriate DMSO and vehicle controls.  
+- Final DMSO ≤0.1% (preferably ≤0.05%).  
+- Suggested ranges are for 72‑h viability/proliferation assays (e.g., CellTiter‑Glo, MTS, resazurin) in MOLM13. For shorter exposures (24–48 h) you may need higher top doses.
+
+---
+
+## 1. Sorafenib
+- **Class/target**: Multikinase inhibitor (FLT3, RAF, VEGFR). Widely used off‑label in FLT3‑ITD AML.
+- **Rationale**: Strong activity in FLT3‑ITD+ cell lines, including MOLM13.
+- **Reported IC₅₀ (MOLM13/FLT3‑ITD)**: ~3–20 nM in many studies.
+- **Suggested test range**:  
+  - 0.1, 0.3, 1, 3, 10, 30, 100, 300 nM (optionally up to 1 µM).
+
+---
+
+## 2. Midostaurin (PKC412)
+- **Class/target**: Multikinase inhibitor, FLT3 and others. Approved for FLT3‑mut AML.
+- **Rationale**: Potent FLT3 inhibition, active in MOLM13.
+- **Reported IC₅₀ (FLT3‑ITD AML lines)**: ~5–50 nM.
+- **Suggested range**:  
+  - 1, 3, 10, 30, 100, 300 nM, 1 µM.
+
+---
+
+## 3. Sunitinib
+- **Class/target**: Multikinase inhibitor (FLT3, KIT, PDGFR, VEGFR).
+- **Rationale**: Shown to inhibit proliferation and induce apoptosis in FLT3‑ITD AML cell lines.
+- **Reported IC₅₀ in AML cells**: Often ~20–200 nM.
+- **Suggested range**:  
+  - 1, 3, 10, 30, 100, 300 nM, 1, 3 µM.
+
+---
+
+## 4. Dasatinib
+- **Class/target**: SRC/ABL family, also inhibits some KIT/FLT3 signaling.
+- **Rationale**: Preclinical AML data; can affect downstream survival pathways.
+- **Reported IC₅₀ in AML lines**: Typically ~10–300 nM.
+- **Suggested range**:  
+  - 1, 3, 10, 30, 100, 300 nM, 1 µM.
+
+---
+
+## 5. Imatinib
+- **Class/target**: BCR‑ABL, KIT, PDGFR.
+- **Rationale**: Some AML subsets with KIT or PDGFR alterations respond; MOLM13 is not classic imatinib‑sensitive but it’s a relevant negative/low‑effect control or for combination work.
+- **Expected IC₅₀**: Often >1–5 µM in non‑BCR‑ABL AML lines.
+- **Suggested range**:  
+  - 0.3, 1, 3, 10, 30, 100 µM.
+
+---
+
+## 6. Nilotinib
+- **Class/target**: BCR‑ABL/KIT inhibitor.
+- **Rationale**: Stronger KIT inhibition than imatinib; some AML subsets show sensitivity.
+- **Reported IC₅₀ in KIT‑dependent lines**: ~10–100 nM, but AML heterogenous.
+- **Suggested range**:  
+  - 1, 3, 10, 30, 100, 300 nM, 1, 3 µM.
+
+---
+
+## 7. Crizotinib
+- **Class/target**: ALK/MET/ROS1 inhibitor.
+- **Rationale**: Reported activity against certain AML subsets harboring ALK or MET pathway alterations; can be tested broadly for repurposing.
+- **Reported IC₅₀ in various leukemia lines**: ~0.1–2 µM.
+- **Suggested range**:  
+  - 10, 30, 100, 300 nM, 1, 3, 10 µM.
+
+---
+
+## 8. Venetoclax (ABT‑199)
+- **Class/target**: BCL‑2 inhibitor.
+- **Rationale**: Now standard in AML combinations; highly active in many AML cell lines including MOLM13.
+- **Reported IC₅₀ in AML lines**: ~1–50 nM in sensitive lines.
+- **Suggested range**:  
+  - 0.1, 0.3, 1, 3, 10, 30, 100 nM.
+
+---
+
+## 9. Navitoclax (ABT‑263)
+- **Class/target**: BCL‑2/BCL‑XL inhibitor.
+- **Rationale**: Broader anti‑apoptotic blockade; active in AML cell panels.
+- **Reported IC₅₀**: Often ~0.1–1 µM in myeloid lines.
+- **Suggested range**:  
+  - 10, 30, 100, 300 nM, 1, 3, 10 µM.
+
+---
+
+## 10. Ruxolitinib
+- **Class/target**: JAK1/2 inhibitor.
+- **Rationale**: JAK/STAT signaling is frequently activated in AML microenvironment; some cell lines show modest sensitivity.
+- **Reported IC₅₀**: Typically ~0.5–5 µM in myeloid cells.
+- **Suggested range**:  
+  - 0.3, 1, 3, 10, 30 µM.
+
+---
+
+## 11. Tofacitinib
+- **Class/target**: JAK1/3 inhibitor (approved for RA).
+- **Rationale**: Another way to modulate JAK/STAT; of interest for repurposing.
+- **Expected IC₅₀ in AML lines**: Likely in low‑micromolar range.
+- **Suggested range**:  
+  - 0.3, 1, 3, 10, 30 µM.
+
+---
+
+## 12. Ibrutinib
+- **Class/target**: BTK inhibitor.
+- **Rationale**: BTK signaling contributes to survival in some AML subsets; preclinical reports of modest AML activity and synergy with other agents.
+- **Reported IC₅₀ in myeloid lines**: Often ~1–10 µM.
+- **Suggested range**:  
+  - 0.3, 1, 3, 10, 30 µM.
+
+---
+
+## 13. Everolimus
+- **Class/target**: mTORC1 inhibitor.
+- **Rationale**: PI3K/AKT/mTOR pathway is active in AML; mTOR blockade reduces proliferation.
+- **Reported IC₅₀ in AML lines**: ~1–20 nM for mTOR signaling; growth inhibition often in ~10–100 nM range.
+- **Suggested range**:  
+  - 0.3, 1, 3, 10, 30, 100 nM, 300 nM.
+
+---
+
+## 14. Temsirolimus
+- **Class/target**: mTOR inhibitor (rapalog).
+- **Rationale**: Similar to everolimus; early clinical AML trials conducted.
+- **Reported IC₅₀**: Growth inhibition often in tens of nM.
+- **Suggested range**:  
+  - 0.3, 1, 3, 10, 30, 100 nM, 300 nM, 1 µM.
+
+---
+
+## 15. Pimozide
+- **Class/target**: Antipsychotic; functionally inhibits STAT5 and other signaling nodes.
+- **Rationale**: Several reports of pimozide suppressing STAT5‑driven leukemias and AML cell lines.
+- **Reported IC₅₀ in leukemia cells**: Often ~1–10 µM.
+- **Suggested range**:  
+  - 0.3, 1, 3, 10, 30 µM.
+
+---
+
+## 16. Disulfiram (+/‑ copper)
+- **Class/target**: ALDH inhibitor; forms copper complexes that induce ROS and proteasome inhibition.
+- **Rationale**: AML, including stem/progenitor cells, can be sensitive to ALDH and redox disruption; synergy with copper is common.
+- **Reported IC₅₀ in AML lines**: Typically ~0.1–1 µM (with copper).
+- **Suggested range**:  
+  - 10, 30, 100, 300 nM, 1, 3 µM.  
+  - If using Cu²⁺ (e.g., CuCl₂ 0.5–1 µM), keep conditions consistent.
+
+---
+
+## 17. Metformin
+- **Class/target**: AMPK activator, mitochondrial complex I inhibitor (antidiabetic).
+- **Rationale**: AML cells can be sensitive to metabolic disruption; metformin shows anti‑leukemic effects at higher concentrations in vitro.
+- **Reported IC₅₀ in leukemia lines**: Often 1–10 mM (millimolar).
+- **Suggested range**:  
+  - 0.3, 1, 3, 10, 30 mM (watch for osmolarity and pH; use appropriate controls).
+
+---
+
+## 18. Chloroquine / Hydroxychloroquine
+- **Class/target**: Autophagy inhibitor, lysosomotropic agent.
+- **Rationale**: Autophagy supports AML survival; chloroquine derivatives can sensitize AML cells.
+- **Reported IC₅₀ in AML lines**: Typically 5–30 µM for proliferation.
+- **Suggested range**:  
+  - 1, 3, 10, 30, 50, 100 µM.
+
+---
+
+## 19. Valproic acid
+- **Class/target**: HDAC inhibitor (broad), antiepileptic.
+- **Rationale**: Differentiation and apoptosis induction in AML; used clinically in low‑intensity regimens.
+- **Reported IC₅₀ in AML lines**: Usually 0.5–3 mM.
+- **Suggested range**:  
+  - 0.1, 0.3, 1, 3, 10 mM.
+
+---
+
+## 20. Bortezomib
+- **Class/target**: Proteasome inhibitor.
+- **Rationale**: Proteasome inhibition triggers apoptosis in AML cells; synergy with FLT3 inhibitors and HDAC inhibitors reported.
+- **Reported IC₅₀ in AML lines**: Often ~5–50 nM.
+- **Suggested range**:  
+  - 0.5, 1, 3, 10, 30, 100 nM.
+
+---
+
+### Practical IC₅₀ Assay Notes (for MOLM13)
+
+- **Cell density**: Commonly 3–5 × 10³ MOLM13 cells per well in 96‑well plates (optimize to stay in log‑phase over 72 h).  
+- **Exposure time**: 72 h recommended for first pass; some TKIs give clear effects by 48 h.  
+- **Readouts**:  
+  - Primary: Cell viability (CellTiter‑Glo, MTS, or similar).  
+  - Optional: Annexin V/PI for apoptosis at selected concentrations.  
+- **Curve fitting**: Use 8–10 concentrations, 3–4‑fold serial dilutions, in triplicate wells. Fit a 4‑parameter logistic curve to determine IC₅₀.
+
+If you’d like, I can narrow this to a smaller “high‑priority” subset (e.g., 6–8 drugs) optimized specifically for MOLM13 with a suggested plate layout and control scheme.

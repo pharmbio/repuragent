@@ -1,0 +1,95 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) can expedite the development of new therapeutic options by leveraging the known safety profiles and mechanisms of action of these drugs. Here, I will suggest 20 drugs that have shown potential in inhibiting proliferation of AML cell lines, particularly MOLM-13, either directly or via related pathways. It is important to validate these with experimental data for IC50 values and effectiveness in the specific AML context:
+
+1. **Venetoclax (ABT-199)**  
+   - Class: BCL-2 inhibitor  
+   - Testable concentration range: 10-500 nM
+
+2. **Ruxolitinib**  
+   - Class: JAK1/2 inhibitor  
+   - Testable concentration range: 0.5-100 nM
+
+3. **Dasatinib**  
+   - Class: BCR-ABL/Src family kinase inhibitor 
+   - Testable concentration range: 5-250 nM
+
+4. **Midostaurin (PKC412)**  
+   - Class: Multi-targeted kinase inhibitor  
+   - Testable concentration range: 10-500 nM
+
+5. **Sorafenib**  
+   - Class: Multi-kinase inhibitor  
+   - Testable concentration range: 1-10 µM
+
+6. **Imatinib (Gleevec)**  
+   - Class: BCR-ABL tyrosine kinase inhibitor  
+   - Testable concentration range: 100-500 nM
+
+7. **Auranofin**  
+   - Class: Anti-rheumatic agent  
+   - Testable concentration range: 0.1-10 µM
+
+8. **Arsenic Trioxide**  
+   - Class: Chemotherapeutic agent  
+   - Testable concentration range: 0.1-2 µM
+
+9. **Ibrutinib**  
+   - Class: Bruton's tyrosine kinase inhibitor  
+   - Testable concentration range: 0.1-10 µM
+
+10. **Itraconazole**  
+    - Class: Antifungal agent  
+    - Testable concentration range: 1-10 µM
+
+11. **Metformin**  
+    - Class: AMPK activator/antidiabetic  
+    - Testable concentration range: 1-10 mM 
+
+12. **Lovastatin**  
+    - Class: HMG-CoA reductase inhibitor  
+    - Testable concentration range: 0.1-10 µM
+
+13. **Disulfiram**  
+    - Class: Alcohol aversion agent  
+    - Testable concentration range: 0.1-10 µM
+
+14. **Tamoxifen**  
+    - Class: Selective estrogen receptor modulator  
+    - Testable concentration range: 0.1-10 µM 
+
+15. **Nifuroxazide**  
+    - Class: Antimicrobial agent  
+    - Testable concentration range: 0.1-10 µM
+
+16. **Chloroquine**  
+    - Class: Antimalarial  
+    - Testable concentration range: 1-10 µM 
+
+17. **Bortezomib**  
+    - Class: Proteasome inhibitor  
+    - Testable concentration range: 1-100 nM
+
+18. **Celecoxib**  
+    - Class: COX-2 inhibitor  
+    - Testable concentration range: 1-10 µM 
+
+19. **Thalidomide**  
+    - Class: Immunomodulatory drug  
+    - Testable concentration range: 0.1-10 µM
+
+20. **Omeprazole**  
+    - Class: Proton pump inhibitor  
+    - Testable concentration range: 1-50 µM 
+
+These suggested concentrations are starting points for determining IC50 values in vitro using MOLM-13 or other relevant AML cell lines. It is crucial to optimize concentrations and validate the efficacy in the specific cellular context of AML through robust experimental setups. Further, considering combination therapies and synergies might open new avenues for improved treatment regimens.

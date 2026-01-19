@@ -1,0 +1,16 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Metformin,Biguanide,Reduces glucose production in the liver and increases insulin sensitivity.,1000.0,10000.0,µM,Commonly used for type 2 diabetes.,metformin,False,CHEMBL1431
+Melfalan,Alkylating agent,"Cross-links DNA, preventing cell replication.",1.0,10.0,µM,Brand name Alkeran.,melfalan,False,CHEMBL852
+Gemcitabine,Nucleoside analogue,Inhibits DNA synthesis by mimicking deoxycytidine triphosphate.,1.0,10.0,µM,,gemcitabine,False,CHEMBL3039516
+Celecoxib,Nonsteroidal anti-inflammatory drug (NSAID),"Inhibits cyclooxygenase-2 (COX-2), reducing inflammation and tumor growth.",10.0,100.0,µM,,celecoxib,False,CHEMBL118
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response.,1.0,10.0,µM,,thalidomide,False,CHEMBL426123
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis in cancer cells and alters gene expression.,0.1,5.0,µM,,arsenic trioxide,False,CHEMBL5483015
+Tamoxifen,Selective estrogen receptor modulator,"Blocks estrogen receptors, inhibiting the growth of estrogen-dependent tumors.",1.0,10.0,µM,,tamoxifen,False,CHEMBL83
+Rapamycin,mTOR inhibitor,"Inhibits the mTOR pathway, affecting cell growth and proliferation.",1.0,100.0,nM,,rapamycin,False,CHEMBL413
+L-asparaginase,Enzyme,"Depletes asparagine levels, leading to cell death in asparagine-dependent tumors.",0.1,2.0,U/mL,,l asparaginase,False,CHEMBL2108989
+Bosutinib,Tyrosine kinase inhibitor,"Inhibits Bcr-Abl and Src family kinases, interfering with signaling for growth and survival.",0.1,1.0,µM,,bosutinib,False,CHEMBL2095206
+Sunitinib,Tyrosine kinase inhibitor,Inhibits various growth factor receptors and angiogenic pathways.,0.1,1.0,µM,,sunitinib,False,CHEMBL597365
+Carfilzomib,Proteasome inhibitor,"Inhibits proteasome function, leading to accumulation of pro-apoptotic factors.",1.0,20.0,nM,,carfilzomib,False,CHEMBL451887
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, disrupting cellular protein homeostasis and inducing apoptosis.",1.0,10.0,nM,,bortezomib,False,CHEMBL325041
+Axitinib,Tyrosine kinase inhibitor,"Inhibits vascular endothelial growth factor receptors, interrupting tumor angiogenesis.",0.01,1.0,µM,,axitinib,False,CHEMBL1289926
+Disulfiram,Aldehyde dehydrogenase inhibitor,Inhibits the metabolism of acetaldehyde and promotes apoptosis in cancer cells.,1.0,10.0,µM,,disulfiram,False,CHEMBL964

@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multi-kinase TKI,Inhibits multiple kinases including FLT3,1.0,1000.0,nM,Often potent in FLT3-ITD MOLM-13
+Ponatinib,Multikinase TKI (BCR-ABL/FLT3/VEGFR),"Inhibits BCR-ABL, FLT3, and VEGFR family kinases",0.03,300.0,nM,
+Sunitinib,Multi-kinase TKI,Inhibits multiple kinases including FLT3,3.0,3000.0,nM,FLT3 activity reported
+Cabozantinib,Multi-kinase TKI (MET/VEGFR2),Inhibits MET and VEGFR2; reported FLT3 inhibitory activity,0.3,3000.0,nM,
+Regorafenib,Multi-kinase TKI,Inhibits multiple kinases; reported FLT3 activity,3.0,3000.0,nM,
+Axitinib,VEGFR TKI,VEGFR inhibitor; reported FLT3 activity at low nM–µM,0.3,300.0,nM,
+Lenvatinib,Multi-kinase TKI,Inhibits multiple receptor tyrosine kinases,1.0,3000.0,nM,
+Dasatinib,ABL/SRC family TKI,Inhibits SRC and ABL kinases,0.3,300.0,nM,
+Nilotinib,ABL TKI,ABL inhibitor; reported FLT3 activity,3.0,3000.0,nM,
+Bosutinib,SRC/ABL family TKI,Inhibits SRC and ABL kinases,3.0,3000.0,nM,
+Ruxolitinib,JAK inhibitor,JAK1/2 inhibitor,10.0,10000.0,nM,
+Trametinib,MEK inhibitor,MEK1/2 inhibitor,0.1,100.0,nM,
+Selumetinib,MEK inhibitor,MEK1/2 inhibitor,10.0,10000.0,nM,
+Everolimus,mTOR inhibitor,mTORC1 inhibitor,0.3,300.0,nM,
+Temsirolimus,mTOR inhibitor,mTORC1 inhibitor,1.0,1000.0,nM,
+Vorinostat,HDAC inhibitor,Histone deacetylase (HDAC) inhibition,100.0,10000.0,nM,Also known as SAHA
+Panobinostat,HDAC inhibitor,Histone deacetylase (HDAC) inhibition,1.0,300.0,nM,
+Bortezomib,Proteasome inhibitor,26S proteasome inhibition (proteostasis disruption),1.0,100.0,nM,
+Carfilzomib,Proteasome inhibitor,Irreversible 20S proteasome inhibitor,1.0,100.0,nM,
+Selinexor,Nuclear export inhibitor,XPO1 (exportin 1) inhibitor,10.0,1000.0,nM,Active in AML including FLT3-ITD models

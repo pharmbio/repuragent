@@ -1,0 +1,14 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Arsenic Trioxide,,,0.5,10.0,µM,,arsenic trioxide,False,CHEMBL5483015
+Dasatinib,,,1.0,50.0,nM,,dasatinib,False,CHEMBL1421
+Ruxolitinib,,,0.1,5.0,µM,,ruxolitinib,False,CHEMBL1287854
+Auranofin,,,0.1,5.0,µM,,auranofin,False,CHEMBL1366
+Ibrutinib,,,0.1,10.0,µM,,ibrutinib,False,CHEMBL1873475
+Bortezomib,,,1.0,50.0,nM,,bortezomib,False,CHEMBL325041
+Carfilzomib,,,1.0,10.0,nM,,carfilzomib,False,CHEMBL451887
+Pazopanib,,,0.1,10.0,µM,,pazopanib,False,CHEMBL477772
+Erlotinib,,,0.1,10.0,µM,,erlotinib,False,CHEMBL1079742
+Lapatinib,,,0.1,10.0,µM,,lapatinib,False,CHEMBL554
+Nintedanib,,,0.1,10.0,µM,,nintedanib,False,CHEMBL502835
+Ponatinib,,,0.1,10.0,µM,,ponatinib,False,CHEMBL2105708
+Ritonavir,,,0.1,10.0,µM,,ritonavir,False,CHEMBL3182552

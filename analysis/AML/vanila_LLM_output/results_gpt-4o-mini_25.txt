@@ -1,0 +1,83 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic applications, such as the treatment of acute myeloid leukemia (AML), can be a promising strategy. Below is a list of 20 drugs that have potential for repurposing in the treatment of AML, particularly focusing on targeting cell lines like MOLM13. It's worth noting that the concentrations suggested here for IC50 assays are general starting points based on existing literature; actual IC50 values can vary based on specific experimental conditions and drug formulations. Therefore, it is crucial to perform preliminary studies to refine these concentrations.
+
+### Potentially Repurposable Drugs for AML:
+
+1. **Venetoclax**
+   - IC50: 0.01 to 1 µM
+
+2. **Decitabine**
+   - IC50: 0.1 to 10 µM
+
+3. **Azacitidine**
+   - IC50: 0.1 to 5 µM
+
+4. **Gilteritinib**
+   - IC50: 0.05 to 5 µM
+
+5. **Clofarabine**
+   - IC50: 0.1 to 10 µM
+
+6. **Mitozantrone**
+   - IC50: 1 to 10 µM
+
+7. **Bortezomib**
+   - IC50: 1 to 10 nM
+
+8. **Vorinostat**
+   - IC50: 0.5 to 5 µM
+
+9. **Selinexor**
+   - IC50: 0.1 to 1 µM
+
+10. **Dexamethasone**
+    - IC50: 0.1 to 10 µM
+
+11. **Hydroxyurea**
+    - IC50: 10 to 100 µM
+
+12. **Imatinib**
+    - IC50: 0.5 to 5 µM
+
+13. **Dasatinib**
+    - IC50: 0.1 to 1 µM
+
+14. **Lopinavir**
+    - IC50: 10 to 50 µM
+
+15. **Thalidomide**
+    - IC50: 1 to 10 µM
+
+16. **Ruxolitinib**
+    - IC50: 0.1 to 1 µM
+
+17. **Midostaurin**
+    - IC50: 0.1 to 5 µM
+
+18. **Cisplatin**
+    - IC50: 0.1 to 10 µM
+
+19. **Etoposide**
+    - IC50: 1 to 10 µM
+
+20. **Auranofin**
+    - IC50: 0.1 to 5 µM
+
+### Notes on Testing:
+- The specific IC50 values should be confirmed for each drug in the context of MOLM13 cells, as variations in cell culture conditions or assay methodologies can affect drug sensitivity.
+- It is advisable to test drug combinations, as synergies might enhance efficacy against AML.
+- Ensure proper controls and replicates in all assays to validate findings effectively.
+
+### Conclusion
+Repurposing drugs requires careful validation in preclinical models to assess efficacy and safety. Extensive literature reviews and assays are essential to determine both efficacy in AML cell lines and optimal dosing for potential clinical application.

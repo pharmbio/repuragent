@@ -1,0 +1,81 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML), particularly focusing on inhibiting the proliferation of the MOLM-13 cell line, is a promising approach. Here’s a list of 20 drugs that have shown potential in various studies or are hypothesized to have activity against AML. The concentrations listed are indicative based on existing literature and could serve as a starting point for IC50 assays, but actual experimental testing will be required to confirm effectiveness.
+
+### 1. **Azacitidine (Vidaza)**
+   - **IC50 Concentration:** 0.1 - 1 µM
+
+### 2. **Decitabine (Dacogen)**
+   - **IC50 Concentration:** 0.1 - 1 µM
+
+### 3. **Dexamethasone**
+   - **IC50 Concentration:** 100 - 1000 nM
+
+### 4. **Vorinostat (Zolinza)**
+   - **IC50 Concentration:** 0.5 - 5 µM
+
+### 5. **Panobinostat (Farydak)**
+   - **IC50 Concentration:** 5 - 50 nM
+
+### 6. **Bortezomib (Velcade)**
+   - **IC50 Concentration:** 10 - 100 nM
+
+### 7. **Lenalidomide (Revlimid)**
+   - **IC50 Concentration:** 0.1 - 1 µM
+
+### 8. **Thalidomide**
+   - **IC50 Concentration:** 0.1 - 60 µM
+
+### 9. **Ruxolitinib (Jakafi)**
+   - **IC50 Concentration:** 1 - 10 µM
+
+### 10. **Imatinib (Gleevec)**
+   - **IC50 Concentration:** 0.1 - 5 µM
+
+### 11. **Dasatinib (Sprycel)**
+   - **IC50 Concentration:** 10 - 100 nM
+
+### 12. **Atrial Fibrillation (Sodium Channel Blockers like Lidocaine)**
+   - **IC50 Concentration:** 10 - 100 µM
+
+### 13. **Metformin**
+   - **IC50 Concentration:** 1 - 10 mM
+
+### 14. **SB202190 (p38 MAPK Inhibitor)**
+   - **IC50 Concentration:** 1 - 10 µM
+
+### 15. **Perifosine**
+   - **IC50 Concentration:** 1 - 10 µM
+
+### 16. **Quercetin**
+   - **IC50 Concentration:** 10 - 50 µM
+
+### 17. **Curcumin**
+   - **IC50 Concentration:** 5 - 20 µM 
+
+### 18. **Resveratrol**
+   - **IC50 Concentration:** 5 - 50 µM
+
+### 19. **Cladribine (Leustatin)**
+   - **IC50 Concentration:** 0.5 - 5 µM
+
+### 20. **Cyclophosphamide**
+   - **IC50 Concentration:** 1 - 10 µM
+
+### Notes on Testing
+- The listed concentrations may vary based on specific experimental conditions, including the cell culture medium, duration of drug exposure, and methodological variations in measuring cell viability or proliferation.
+- IC50 values should be confirmed through rigorous dose-response experiments to determine actual inhibition levels in MOLM-13 cells.
+- Combination therapies with other agents may also be explored to enhance effectiveness and overcome resistance mechanisms.
+
+### Conclusion
+Repurposing existing drugs for AML treatment is an exciting field of research. The above drugs represent a diverse array of mechanisms that could potentially inhibit AML cell line proliferation. However, further preclinical validation is crucial to ensure clinical relevance and safety.

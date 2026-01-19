@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Hydroxyurea,Antimetabolite,Inhibits DNA synthesis,50.0,150.0,µM,
+Azacitidine,DNA methyltransferase inhibitor,Inhibits DNA methylation,0.1,1.0,µM,
+Decitabine,DNA methyltransferase inhibitor,Inhibits DNA methylation,0.01,0.1,µM,
+All-trans retinoic acid,Retinoid,Regulates gene expression,0.5,5.0,µM,
+Metformin,Biguanide,Inhibits mitochondrial complex I,1.0,5.0,mM,
+Quercetin,Flavonoid,"Antioxidant properties, cell cycle arrest",10.0,30.0,µM,
+Lenalidomide,Immunomodulatory drug,"Modulates immune response, inhibits angiogenesis",1.0,5.0,µM,
+Tamoxifen,Selective estrogen receptor modulator,Estrogen receptor antagonist,1.0,10.0,µM,
+Imatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL fusion protein,0.1,1.0,µM,Inhibition of BCR-ABL positive cells
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases,1.0,5.0,µM,Also known as SAHA
+Bortezomib,Proteasome inhibitor,Inhibits proteasome function,1.0,10.0,nM,
+Dexamethasone,Glucocorticoid,Suppresses inflammation and immune response,100.0,500.0,nM,
+Prednisone,Glucocorticoid,"Anti-inflammatory, immunosuppressant",1.0,5.0,µM,
+Sunitinib,Tyrosine kinase inhibitor,Inhibits vascular endothelial growth factor receptors,1.0,10.0,µM,
+Nelarabine,Antineoplastic agent,Inhibits DNA synthesis and repair,0.1,1.0,µM,
+Celecoxib,COX-2 inhibitor,Inhibits cyclooxygenase-2,3.0,10.0,µM,
+L-asparaginase,Enzyme therapy,"Depletes asparagine, inhibiting protein synthesis",1.0,10.0,IU/mL,
+Selinexor,XPO1 inhibitor,Inhibits nuclear export of tumor suppressors,50.0,100.0,nM,
+Dactinomycin,Antitumor antibiotic,Inhibits DNA-dependent RNA synthesis,0.1,1.0,µM,
+Bosutinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and SRC family kinases,50.0,200.0,nM,

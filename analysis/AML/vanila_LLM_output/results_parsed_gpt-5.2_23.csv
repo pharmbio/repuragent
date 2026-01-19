@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Midostaurin,Multi-kinase inhibitor (PKC/FLT3),Inhibits FLT3 and PKC signaling kinases to reduce proliferation in FLT3-driven AML,1e-10,1e-05,M,Approved in FLT3+ AML; described as PKC/FLT3 multi-kinase inhibitor
+Sorafenib,Multi-kinase inhibitor (RAF/VEGFR/FLT3),Inhibits RAF kinases and receptor tyrosine kinases including VEGFR and FLT3,1e-10,1e-05,M,Used in oncology; studied in FLT3-ITD AML
+Sunitinib,Multi-kinase inhibitor (includes FLT3),Inhibits multiple receptor tyrosine kinases including FLT3,1e-10,1e-05,M,Approved for RCC/GIST; noted as multi-kinase including FLT3
+Dasatinib,Tyrosine kinase inhibitor (SRC/ABL),Inhibits SRC family kinases and ABL to suppress downstream proliferative signaling,1e-11,1e-05,M,Reported activity in subsets of AML; often discussed in combinations
+Trametinib,MEK inhibitor,Inhibits MEK1/2 in the MAPK pathway to suppress downstream signaling,1e-11,1e-05,M,Listed as MEK1/2 inhibitor; downstream pathway suppression in AML contexts
+Erlotinib,EGFR inhibitor,Inhibits EGFR tyrosine kinase; noted for off-target/repurposing activity in some AML settings,1e-10,1e-05,M,EGFR inhibitor; text notes off-target/repurposing activity in AML
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases to alter chromatin acetylation and gene expression,1e-09,0.0001,M,Alternative name: SAHA; approved for CTCL; studied in AML
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases to modulate transcription and promote apoptosis,1e-11,1e-05,M,Approved in multiple myeloma
+Valproic acid,HDAC inhibitor (at higher exposures),"At higher concentrations inhibits HDACs, affecting transcriptional programs and differentiation",1e-06,0.01,M,Long clinical history; explicitly noted HDAC inhibitor at higher exposures
+5-Azacitidine,DNA hypomethylating agent,Incorporates into nucleic acids and inhibits DNA methylation to reactivate silenced genes,1e-09,0.0001,M,Approved for MDS/AML
+Decitabine,DNA hypomethylating agent,"Nucleoside analog that inhibits DNA methyltransferases, reducing DNA methylation",1e-09,0.0001,M,Approved for MDS/AML
+Venetoclax,BCL-2 inhibitor,Selectively inhibits BCL-2 to trigger apoptosis in susceptible AML cells,1e-12,1e-05,M,Approved in AML combinations; noted that many AML lines respond
+Navitoclax,BCL-2/BCL-XL inhibitor,Inhibits anti-apoptotic BCL-2 family proteins (BCL-2 and BCL-XL) to promote apoptosis,1e-11,1e-05,M,Alternative name: ABT-263; described as clinical oncology drug
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, disrupting protein degradation and inducing proteotoxic stress/apoptosis",1e-12,1e-06,M,Approved in multiple myeloma
+Carfilzomib,Proteasome inhibitor,"Irreversibly inhibits the proteasome, causing accumulation of misfolded proteins and apoptosis",1e-12,1e-06,M,Approved in multiple myeloma
+Metformin,Metabolic modulator (mitochondrial complex I / AMPK axis),Inhibits mitochondrial complex I and influences AMPK-related metabolic signaling,1e-06,0.01,M,Referenced in AML metabolism studies
+Atovaquone,Mitochondrial electron transport inhibitor,Disrupts mitochondrial electron transport to impair cellular energy metabolism,1e-08,0.0001,M,Anticancer repurposing literature mentioned
+Disulfiram,ALDH inhibitor / repurposing agent,Inhibits ALDH; noted with cuproptosis-related hypotheses in AML repurposing,1e-09,0.0001,M,Text mentions ALDH inhibition and cuproptosis-related hypotheses
+Artesunate,Antimalarial (ROS/stress pathway modulator),Induces oxidative/stress responses (ROS-related) with reported activity in hematologic cancers,1e-08,0.0001,M,Antimalarial; hematologic cancer reports noted
+Chloroquine / Hydroxychloroquine,Lysosomotropic autophagy inhibitor,"Accumulates in lysosomes and inhibits autophagy/lysosomal function, often used for combination rationale",1e-07,0.001,M,Two related drugs listed together: chloroquine and hydroxychloroquine; described as lysosomotropic autophagy inhibitors

@@ -1,0 +1,153 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 existing (approved or late‑stage) drugs with evidence of anti‑AML activity, especially in FLT3‑mutant AML lines like MOLM13. I’ll focus on compounds with published in‑vitro data and give a reasonable concentration range for generating IC50 curves in proliferation/viability assays (e.g., CellTiter‑Glo, MTS, etc.).
+
+**General note on IC50 assay setup**
+
+- Typical starting point: **10‑point, 3‑fold serial dilution**.  
+- For most kinase inhibitors: **0.3 nM – 10 µM** or **1 nM – 30 µM** is a good window.  
+- For less potent cytotoxics: **1 nM – 100 µM**.  
+- Use **MOLM13** plus at least one other AML line (e.g., MV4‑11, THP‑1, HL‑60) for comparison.  
+- 48–72 h exposure is standard for proliferation/viability IC50.
+
+---
+
+## A. FLT3 and broad‑spectrum kinase inhibitors
+
+These have the strongest rationale for MOLM13 (FLT3‑ITD).
+
+### 1. **Midostaurin (PKC412)**
+- Type: Multikinase inhibitor (FLT3, KIT, PDGFR, etc.). FDA‑approved for FLT3‑mutated AML.
+- Reported MOLM13 IC50 (FLT3‑mutant AML): ~10–50 nM for FLT3 autophosphorylation; anti‑proliferative IC50 typically ~10–100 nM.
+- **Test range:** 0.5 nM – 5 µM.
+
+### 2. **Gilteritinib (ASP2215)**
+- Type: FLT3/AXL inhibitor; approved for relapsed/refractory FLT3‑mutant AML.
+- Reported IC50 in FLT3‑ITD lines (e.g., MOLM13/MV4‑11): low‑nanomolar (1–10 nM).
+- **Test range:** 0.1 nM – 1 µM.
+
+### 3. **Quizartinib (AC220)**
+- Type: Potent, selective FLT3 inhibitor (investigational/approved in some regions).
+- Reported IC50 for FLT3‑ITD AML (MOLM13/MV4‑11): ~1–5 nM.
+- **Test range:** 0.05 nM – 0.5 µM.
+
+### 4. **Sorafenib**
+- Type: Multikinase inhibitor (RAF, VEGFR, PDGFR, FLT3). Approved for HCC, RCC, etc.
+- Reported IC50 in FLT3‑ITD AML cell lines: ~5–50 nM (FLT3) and low‑100 nM for antiproliferative.
+- **Test range:** 1 nM – 10 µM.
+
+### 5. **Sunitinib**
+- Type: Multikinase inhibitor; approved for RCC, GIST.
+- FLT3‑ITD AML lines show growth inhibition in low‑100 nM range.
+- **Test range:** 1 nM – 20 µM.
+
+### 6. **Crenolanib**
+- Type: Potent FLT3 inhibitor (including TKD mutants).
+- IC50 in FLT3‑mutant lines: very low nanomolar (1–10 nM).
+- **Test range:** 0.1 nM – 1 µM.
+
+### 7. **Ponatinib**
+- Type: Pan‑BCR‑ABL/FLT3 inhibitor; approved for CML/Ph+ ALL.
+- FLT3‑ITD AML lines: often IC50 ~5–30 nM.
+- **Test range:** 0.5 nM – 5 µM.
+
+### 8. **Dasatinib**
+- Type: SRC/ABL family inhibitor; approved for CML/Ph+ ALL.
+- AML lines (including some FLT3‑mutants): proliferation IC50 typically ~10–200 nM.
+- **Test range:** 1 nM – 20 µM.
+
+---
+
+## B. Epigenetic and transcription‑related drugs
+
+### 9. **Decitabine**
+- Type: DNA hypomethylating agent; approved for MDS/AML.
+- In vitro, effective at **100 nM – 1 µM** (higher concentrations become cytotoxic).
+- **Test range:** 5 nM – 10 µM  
+  (focus on 50 nM – 2 µM for clinically relevant range).
+
+### 10. **Azacitidine**
+- Type: DNA/RNA hypomethylating agent; approved for MDS/AML.
+- Similar potency to decitabine; often used at **0.5 – 5 µM** in vitro.
+- **Test range:** 50 nM – 20 µM.
+
+### 11. **Panobinostat (LBH589)**
+- Type: Pan‑HDAC inhibitor; approved for multiple myeloma.
+- AML lines (including MOLM13) often show IC50 ~5–50 nM.
+- **Test range:** 0.5 nM – 5 µM.
+
+### 12. **Vorinostat (SAHA)**
+- Type: HDAC inhibitor; approved for CTCL.
+- AML lines: antiproliferative IC50 usually ~0.5–5 µM.
+- **Test range:** 50 nM – 50 µM.
+
+### 13. **Ruxolitinib**
+- Type: JAK1/2 inhibitor; approved for myelofibrosis, PV.
+- Some AML subtypes and cytokine‑dependent lines show sensitivity in ~0.1–5 µM range.
+- **Test range:** 10 nM – 30 µM.
+
+---
+
+## C. BCL2 / apoptosis and related pathways
+
+### 14. **Venetoclax (ABT‑199)**
+- Type: BCL‑2 inhibitor; approved (with HMA/LDAC) for AML in older/unfit patients.
+- AML lines (esp. those BCL‑2 dependent) often IC50 ~1–50 nM.
+- **Test range:** 0.1 nM – 1 µM.
+
+### 15. **Navitoclax (ABT‑263)**
+- Type: BCL‑2/BCL‑XL inhibitor (clinical‑stage).
+- AML cell lines: frequently IC50 ~50–500 nM.
+- **Test range:** 5 nM – 10 µM.
+
+### 16. **Obatoclax (GX15‑070)**
+- Type: Pan‑BCL‑2 family inhibitor (experimental, but widely used in vitro).
+- AML lines: IC50 often ~0.1–5 µM.
+- **Test range:** 50 nM – 30 µM.
+
+---
+
+## D. Other targeted or repurposable agents
+
+### 17. **Ibrutinib**
+- Type: BTK inhibitor; approved for CLL, mantle cell lymphoma, etc.
+- Some AML models show off‑target anti‑proliferative activity (SRC, TEC, interactor pathways) in low‑µM range.
+- **Test range:** 50 nM – 30 µM.
+
+### 18. **Imatinib**
+- Type: BCR‑ABL/KIT/PDGFR inhibitor; approved for CML, GIST.
+- Direct effect in typical AML lines is modest, but certain KIT‑mutant or PDGFR‑rearranged AMLs can be sensitive.
+- **Test range:** 100 nM – 50 µM.
+
+### 19. **Bortezomib**
+- Type: Proteasome inhibitor; approved for multiple myeloma, MCL.
+- AML lines: IC50 commonly ~5–50 nM.
+- **Test range:** 0.5 nM – 5 µM.
+
+### 20. **Selinexor**
+- Type: XPO1 (CRM1) inhibitor; approved for myeloma, DLBCL.
+- AML cell lines often respond in **50–500 nM** range.
+- **Test range:** 5 nM – 10 µM.
+
+---
+
+## Suggested practical assay plan (brief)
+
+1. **Cell line:** MOLM13 (plus at least one comparator AML line).  
+2. **Seeding:** 3–10 × 10³ cells/well in 96‑well plate; low serum (e.g., 10% FBS) with cytokines appropriate for MOLM13 if routinely used.  
+3. **Drug dilution:** 10‑point 3‑fold serial dilution covering the suggested range.  
+4. **Duration:** 72 h incubation for proliferation/viability IC50.  
+5. **Readout:** CellTiter‑Glo or MTS/XTT; normalize to DMSO control.  
+6. **Analysis:** Fit a 4‑parameter logistic curve and extract IC50; repeat in ≥3 biological replicates.
+
+If you want, I can help you design a more focused 8–10 drug short‑list optimized for MOLM13 specifically, or set up a 96‑well plate map with volume calculations for your dilutions.

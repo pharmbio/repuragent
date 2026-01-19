@@ -1,0 +1,122 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest **repurposing candidates** with **experimentally reasonable IC50 assay concentration ranges**, but I can’t reliably provide **“testable concentrations” that imply expected potency in MOLM-13** as a prediction. What I *can* do is: (1) list **existing, clinically used (or late-stage) drugs** with published **anti-AML / anti-FLT3 / anti-epigenetic / apoptosis** rationale and prior AML cell-line activity, and (2) give **standard in‑vitro screening concentration ranges** and **starting dilution series** commonly used to determine IC50 in MOLM‑13 (or similar AML lines). You should confirm actual IC50s experimentally (they vary with media, serum, exposure time, and readout).
+
+Below are **20 repurposing candidates** and **practical IC50 assay concentration plans**.
+
+---
+
+## Practical IC50 assay setup (MOLM‑13)
+**Typical exposure:** 72 h (also consider 48 h and 96 h as sensitivity checks)  
+**Readouts:** CellTiter-Glo (ATP), resazurin, or flow cytometry (Annexin V/PI)  
+**Plate:** 384‑well or 96‑well; keep DMSO constant (≤0.1–0.2%)  
+**Dose series template (10-point, 3-fold):**
+- For “potent” targets (kinase inhibitors): **0.1 nM → 10 µM**
+- For “moderate” agents: **1 nM → 30 µM**
+- For “weak/repurposed metabolic” drugs: **10 nM → 100 µM** (use caution with solubility)
+
+I provide **a recommended top concentration (Cmax in assay)** and a **dilution range** for each drug to bracket likely IC50s without assuming them.
+
+---
+
+## Top 20 repurposable drugs for AML (focus: MOLM‑13 proliferation inhibition)
+
+### Kinase / signaling inhibitors (high probability in MOLM‑13)
+1) **Midostaurin** (approved; multi-kinase incl. FLT3)  
+   **IC50 assay range:** 0.3 nM – 3 µM (top: 3 µM)
+
+2) **Gilteritinib** (approved FLT3/AXL inhibitor)  
+   **Range:** 0.1 nM – 1 µM (top: 1 µM)
+
+3) **Quizartinib** (FLT3 inhibitor; approved in some regions)  
+   **Range:** 0.03 nM – 300 nM (top: 0.3 µM)
+
+4) **Sorafenib** (approved; RAF/VEGFR/FLT3 activity)  
+   **Range:** 1 nM – 10 µM (top: 10 µM)
+
+5) **Ponatinib** (approved CML/ALL; broad kinase incl. FLT3)  
+   **Range:** 0.1 nM – 1 µM (top: 1 µM)
+
+6) **Dasatinib** (approved; SRC/ABL inhibitor; AML subsets)  
+   **Range:** 0.3 nM – 3 µM (top: 3 µM)
+
+7) **Trametinib** (approved; MEK inhibitor; MAPK-driven AML subsets)  
+   **Range:** 0.3 nM – 1 µM (top: 1 µM)
+
+8) **Temsirolimus** (approved; mTOR inhibitor)  
+   **Range:** 0.3 nM – 3 µM (top: 3 µM)
+
+---
+
+### Epigenetic / transcriptional modulators (common AML vulnerabilities)
+9) **Panobinostat** (approved for myeloma; pan-HDAC inhibitor)  
+   **Range:** 0.1 nM – 300 nM (top: 0.3 µM)
+
+10) **Vorinostat (SAHA)** (approved CTCL; HDAC inhibitor)  
+   **Range:** 1 nM – 10 µM (top: 10 µM)
+
+11) **Romidepsin** (approved; HDAC inhibitor)  
+   **Range:** 0.03 nM – 30 nM (top: 30 nM)
+
+12) **Valproic acid** (approved antiseizure; weak HDAC inhibitor; often needs high µM–mM)  
+   **Range:** 10 µM – 5 mM (top: 5 mM; ensure osmolarity/pH controls)
+
+13) **All-trans retinoic acid (ATRA)** (approved APL; differentiation agent; sometimes impacts non-APL AML in combos)  
+   **Range:** 0.1 nM – 10 µM (top: 10 µM; light-sensitive)
+
+---
+
+### Apoptosis / stress pathway targeting (frequently active in AML)
+14) **Venetoclax** (approved AML in combos; BCL-2 inhibitor)  
+   **Range:** 0.03 nM – 300 nM (top: 0.3 µM)
+
+15) **Navitoclax (ABT-263)** (clinical-stage; BCL-2/BCL-XL inhibitor)  
+   **Range:** 0.3 nM – 3 µM (top: 3 µM)
+
+16) **Mefloquine** (approved antimalarial; reported lysosomal/autophagy disruption; AML activity reported in some studies)  
+   **Range:** 10 nM – 30 µM (top: 30 µM)
+
+---
+
+### Metabolic / mitochondrial / proteostasis-oriented repurposing
+17) **Metformin** (approved; mitochondrial complex I stress; often requires high µM–mM in vitro)  
+   **Range:** 10 µM – 10 mM (top: 10 mM)
+
+18) **Arsenic trioxide** (approved APL; induces oxidative stress/proteostasis disruption; sometimes active beyond APL)  
+   **Range:** 10 nM – 30 µM (top: 30 µM)
+
+19) **Disulfiram (+ copper)** (approved alcohol aversion; ALDH/proteasome/NF‑κB stress; copper-dependent activity often stronger)  
+   **Range:** 1 nM – 10 µM (top: 10 µM)  
+   *If using CuCl₂ supplementation:* consider fixed **0.1–1 µM Cu²⁺** and titrate disulfiram.
+
+20) **Niclosamide** (approved anthelmintic; Wnt/STAT3/mitochondrial uncoupling reported)  
+   **Range:** 10 nM – 10 µM (top: 10 µM; watch solubility)
+
+---
+
+## Notes to make the IC50 data interpretable
+- **Match top concentration to solubility and protein binding.** Some compounds precipitate above ~10–30 µM in aqueous media.  
+- **Use two independent viability measures** (e.g., ATP + cell counting or Annexin V) because some drugs change metabolism without killing.  
+- **Include positive controls** (e.g., venetoclax, midostaurin, gilteritinib) and a **DMSO-only control**.  
+- **MOLM‑13 is often FLT3‑ITD–driven**, so FLT3 inhibitors can appear exceptionally potent; confirm by comparing with a FLT3‑WT AML line.
+
+---
+
+## If you tell me your constraints, I can refine the list
+To tailor this to your lab and avoid impractical picks, share:
+1) **Assay duration** (48/72/96 h) and readout  
+2) **Max DMSO** and **max top concentration** you allow (10 µM? 30 µM? 100 µM?)  
+3) Whether you want **only FDA‑approved** drugs or can include late-stage/regionally approved  
+4) Whether you want to **avoid AML-standard agents** (e.g., venetoclax/FLT3 inhibitors) and focus on *non-obvious* repurposing
+
+If you want, I can also provide a **ready-to-run plate map** with dilution scheme and recommended replicate numbers for a 96- or 384-well format.

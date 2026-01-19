@@ -1,0 +1,84 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for acute myeloid leukemia (AML) treatment is a promising strategy, particularly given the need for effective therapies in this challenging disease. Here are 20 existing drugs that have been studied or suggested for repurposing in leukemia treatment, along with experimentally testable concentrations for IC50 assays. Please note that the specific IC50 values can vary based on the experimental conditions, so the suggested concentrations are approximate and should be validated in your specific experimental setup.
+
+### Top 20 Existing Drugs for AML Treatment
+
+1. **Decitabine (DAC)**  
+   - **IC50 Concentration:** 0.1 - 1 µM
+
+2. **Azacitidine (AZA)**  
+   - **IC50 Concentration:** 0.1 - 2 µM
+
+3. **Mitoxantrone**  
+   - **IC50 Concentration:** 3 - 10 µM
+
+4. **Vorinostat (SAHA)**  
+   - **IC50 Concentration:** 1 - 5 µM
+
+5. **Panobinostat**  
+   - **IC50 Concentration:** 0.1 - 1 µM
+
+6. **Ruxolitinib**  
+   - **IC50 Concentration:** 0.5 - 5 µM
+
+7. **Gilteritinib**  
+   - **IC50 Concentration:** 0.1 - 1 µM
+
+8. **Clofarabine**  
+   - **IC50 Concentration:** 0.1 - 1 µM
+
+9. **Hydroxyurea**  
+   - **IC50 Concentration:** 50 - 200 µM
+
+10. **Alvocidib (flavopiridol)**  
+    - **IC50 Concentration:** 0.1 - 1 µM
+
+11. **Trametinib**  
+    - **IC50 Concentration:** 0.1 - 1 µM
+
+12. **Nilotinib**  
+    - **IC50 Concentration:** 1 - 5 µM
+
+13. **Imatinib**  
+    - **IC50 Concentration:** 1 - 5 µM
+
+14. **Bortezomib**  
+    - **IC50 Concentration:** 0.1 - 1 µM
+
+15. **Selinexor**  
+    - **IC50 Concentration:** 0.1 - 2 µM
+
+16. **L-asparaginase**  
+    - **IC50 Concentration:** 1 - 3 U/mL
+
+17. **Aspirin**  
+    - **IC50 Concentration:** 1 - 10 mM
+
+18. **Dexamethasone**  
+    - **IC50 Concentration:** 1 - 10 µM
+
+19. **Metformin**  
+    - **IC50 Concentration:** 1 - 10 mM
+
+20. **Thalidomide**  
+    - **IC50 Concentration:** 1 - 10 µM
+
+### Notes on IC50 Testing
+
+1. **Validation:** The IC50 values provided are approximate estimates based on existing literature. It is critical to conduct preliminary experiments to confirm the specific sensitivity of MOLM13 cells to these compounds.
+2. **Cell Culture:** AML cell lines like MOLM13 should be cultured under standard conditions, and drug effects can be assessed using various assays (MTT, Alamar Blue, etc.).
+3. **Dosage Range:** Employ a wide range of concentrations for accurate determination of the IC50. For example, use at least five different concentrations for each drug, including the suggested ones.
+4. **Combination Studies:** Combining drugs may show enhanced efficacy; consider testing drugs in conjunction with other therapies or with one another.
+
+This experimental strategy could potentially identify effective combinations or single agents for further development in AML therapies.

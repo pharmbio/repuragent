@@ -1,0 +1,464 @@
+drug_name,chembl_id,mechanism_of_actions,smiles
+HYDROXYUREA,CHEMBL467,Ribonucleoside-diphosphate reductase RR1 inhibitor,NC(=O)NO
+CYTARABINE,CHEMBL803,DNA inhibitor | DNA polymerase (alpha/delta/epsilon) inhibitor | RNA inhibitor,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+TROXACITABINE,CHEMBL359164,DNA polymerase (alpha/delta/epsilon) inhibitor,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+BIRICODAR,CHEMBL350775,P-glycoprotein 1 inhibitor,COc1cc(C(=O)C(=O)N2CCCC[C@H]2C(=O)OC(CCCc2cccnc2)CCCc2cccnc2)cc(OC)c1OC
+TARIQUIDAR,CHEMBL348475,P-glycoprotein 1 inhibitor,COc1cc2c(cc1OC)CN(CCc1ccc(NC(=O)c3cc(OC)c(OC)cc3NC(=O)c3cnc4ccccc4c3)cc1)CC2
+DASATINIB ANHYDROUS,CHEMBL1421,Bcr/Abl fusion protein inhibitor | Ephrin type-A receptor 2 inhibitor | Platelet-derived growth factor receptor beta inhibitor | SRC inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase ABL inhibitor,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1
+GEMCITABINE HYDROCHLORIDE,CHEMBL1637,DNA polymerase (alpha/delta/epsilon) inhibitor | Ribonucleoside-diphosphate reductase RR1 inhibitor,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+IMATINIB MESYLATE,CHEMBL1642,Bcr/Abl fusion protein inhibitor | Platelet-derived growth factor receptor beta inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase ABL inhibitor,CS(=O)(=O)O.Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+ZOSUQUIDAR,CHEMBL444172,P-glycoprotein 1 inhibitor,O[C@@H](COc1cccc2ncccc12)CN1CCN([C@@H]2c3ccccc3[C@@H]3[C@H](c4ccccc42)C3(F)F)CC1
+CLOFARABINE,CHEMBL1750,DNA inhibitor | DNA polymerase (alpha/delta/epsilon) inhibitor | Ribonucleoside-diphosphate reductase RR1 inhibitor,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+FLUDARABINE PHOSPHATE,CHEMBL1096882,DNA polymerase (alpha/delta/epsilon) inhibitor | Ribonucleoside-diphosphate reductase RR1 inhibitor,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+SORAFENIB TOSYLATE,CHEMBL1200485,Platelet-derived growth factor receptor beta inhibitor | Serine/threonine-protein kinase B-raf inhibitor | Serine/threonine-protein kinase RAF inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Tyrosine-protein kinase receptor RET inhibitor | Vascular endothelial growth factor receptor inhibitor,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1
+GALLIUM NITRATE,CHEMBL1200983,Ribonucleoside-diphosphate reductase RR1 inhibitor,
+MOTEXAFIN GADOLINIUM,CHEMBL3544910,Ribonucleoside-diphosphate reductase RR1 inhibitor,
+TEZACITABINE,CHEMBL3989496,Ribonucleoside-diphosphate reductase RR1 inhibitor,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)/C2=C\F)c(=O)n1.O
+ASPACYTARABINE,CHEMBL4297599,DNA disrupting agent | DNA polymerase (alpha/delta/epsilon) inhibitor,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+ENCEQUIDAR,CHEMBL4594298,P-glycoprotein 1 inhibitor,COc1cc2c(cc1OC)CN(CCc1ccc(-n3nnc(-c4cc(OC)c(OC)cc4NC(=O)c4cc(=O)c5ccccc5o4)n3)cc1)CC2
+SUNITINIB,CHEMBL535,Macrophage colony stimulating factor receptor inhibitor | Platelet-derived growth factor receptor beta inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Tyrosine-protein kinase receptor RET inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C
+TANDUTINIB,CHEMBL124660,Platelet-derived growth factor receptor beta inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor,COc1cc2c(N3CCN(C(=O)Nc4ccc(OC(C)C)cc4)CC3)ncnc2cc1OCCCN1CCCCC1
+TG100-801,CHEMBL403989,Platelet-derived growth factor receptor beta inhibitor | SRC inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,Cc1cc(-c2cc(OC(=O)c3ccccc3)ccc2Cl)cc2nnc(Nc3ccc(OCCN4CCCC4)cc3)nc12
+VEMURAFENIB,CHEMBL1229517,Serine/threonine-protein kinase B-raf inhibitor,CCCS(=O)(=O)Nc1ccc(F)c(C(=O)c2c[nH]c3ncc(-c4ccc(Cl)cc4)cc23)c1F
+REGORAFENIB,CHEMBL1946170,Ephrin type-A receptor 2 inhibitor | Platelet-derived growth factor receptor inhibitor | Serine/threonine-protein kinase B-raf inhibitor | Serine/threonine-protein kinase RAF inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase ABL inhibitor | Tyrosine-protein kinase receptor RET inhibitor | Vascular endothelial growth factor receptor inhibitor,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+CEP-32496,CHEMBL2029988,Epidermal growth factor receptor erbB1 inhibitor | Serine/threonine-protein kinase B-raf inhibitor | Tyrosine-protein kinase receptor RET inhibitor,COc1cc2ncnc(Oc3cccc(NC(=O)Nc4cc(C(C)(C)C(F)(F)F)on4)c3)c2cc1OC
+TELATINIB,CHEMBL2079588,Platelet-derived growth factor receptor beta inhibitor | Stem cell growth factor receptor inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,CNC(=O)c1cc(COc2nnc(Nc3ccc(Cl)cc3)c3ccoc23)ccn1
+DABRAFENIB MESYLATE,CHEMBL2105729,Serine/threonine-protein kinase B-raf inhibitor,CC(C)(C)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1.CS(=O)(=O)O
+TIVOZANIB HYDROCHLORIDE,CHEMBL2105756,Platelet-derived growth factor receptor beta inhibitor | Stem cell growth factor receptor inhibitor | Vascular endothelial growth factor receptor inhibitor,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC.Cl.O
+JI-101,CHEMBL3545155,Platelet-derived growth factor receptor beta inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,COc1ccc(Br)cc1NC(=O)Nc1cccc2c1ccn2Cc1ccnc(N)c1
+LIFIRAFENIB,CHEMBL4209157,Serine/threonine-protein kinase B-raf inhibitor,O=C1CCc2c(Oc3ccc4c(c3)[C@@H]3[C@H](O4)[C@H]3c3nc4cc(C(F)(F)F)ccc4[nH]3)ccnc2N1
+CATEQUENTINIB,CHEMBL4303201,Platelet-derived growth factor receptor beta inhibitor | Stem cell growth factor receptor inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ccnc2cc1OCC1(N)CC1
+SUNITINIB MALATE,CHEMBL1567,Macrophage colony stimulating factor receptor inhibitor | Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Tyrosine-protein kinase receptor RET inhibitor | Vascular endothelial growth factor receptor inhibitor,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C.O=C(O)C[C@H](O)C(=O)O
+ENMD-2076,CHEMBL482968,Macrophage colony stimulating factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,Cc1cc(Nc2cc(N3CCN(C)CC3)nc(/C=C/c3ccccc3)n2)n[nH]1
+RAF-265,CHEMBL558752,Serine/threonine-protein kinase B-raf inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,Cn1c(Nc2ccc(C(F)(F)F)cc2)nc2cc(Oc3ccnc(-c4ncc(C(F)(F)F)[nH]4)c3)ccc21
+QUIZARTINIB,CHEMBL576982,Macrophage colony stimulating factor receptor inhibitor | Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Tyrosine-protein kinase receptor RET inhibitor,CC(C)(C)c1cc(NC(=O)Nc2ccc(-c3cn4c(n3)sc3cc(OCCN5CCOCC5)ccc34)cc2)no1
+PAZOPANIB HYDROCHLORIDE,CHEMBL1201733,Macrophage colony stimulating factor receptor inhibitor | Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Vascular endothelial growth factor receptor inhibitor,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O.Cl
+FORETINIB,CHEMBL1230609,Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Vascular endothelial growth factor receptor inhibitor,COc1cc2c(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3F)ccnc2cc1OCCCN1CCOCC1
+FAMITINIB,CHEMBL1278146,Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,CCN(CC)CCN1CCc2[nH]c(/C=C3\C(=O)Nc4ccc(F)cc43)c(C)c2C1=O
+SU-014813,CHEMBL1721885,Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Vascular endothelial growth factor receptor inhibitor,Cc1[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c(C)c1C(=O)NC[C@H](O)CN1CCOCC1
+MASITINIB,CHEMBL1908391,Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1
+AMUVATINIB,CHEMBL2103851,Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor,S=C(NCc1ccc2c(c1)OCO2)N1CCN(c2ncnc3c2oc2ccccc23)CC1
+ENCORAFENIB,CHEMBL3301612,Serine/threonine-protein kinase B-raf inhibitor,COC(=O)N[C@@H](C)CNc1nccc(-c2cn(C(C)C)nc2-c2cc(Cl)cc(NS(C)(=O)=O)c2F)n1
+XL-281,CHEMBL3545027,Serine/threonine-protein kinase B-raf inhibitor | Serine/threonine-protein kinase RAF inhibitor,COC(=O)Nc1nc2cc(C3(O)c4ccccc4C(=O)N3c3cc(Cl)ccc3C)ccc2[nH]1
+PEXIDARTINIB,CHEMBL3813873,Macrophage colony stimulating factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor,FC(F)(F)c1ccc(CNc2ccc(Cc3c[nH]c4ncc(Cl)cc34)cn2)cn1
+PLIXORAFENIB,CHEMBL4303729,Serine/threonine-protein kinase B-raf inhibitor,O=C(c1c(F)ccc(NS(=O)(=O)N2CC[C@@H](F)C2)c1F)c1c[nH]c2ncc(-c3cnc(C4CC4)nc3)cc12
+XL-999,CHEMBL5314391,Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Vascular endothelial growth factor receptor inhibitor,CCN1CCC(Nc2ccc3c(c2)/C(=C(\c2cccc(F)c2)c2nc(C)c[nH]2)C(=O)N3)CC1
+SEMAXANIB,CHEMBL276711,Stem cell growth factor receptor inhibitor | Vascular endothelial growth factor receptor inhibitor,Cc1cc(C)c(/C=C2\C(=O)Nc3ccccc32)[nH]1
+ENMD-981693,CHEMBL52885,Platelet-derived growth factor receptor inhibitor | SRC inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,Cn1cc(C2=C(c3cn(C)c4cc([N+](=O)[O-])ccc34)C(=O)NC2=O)c2ccccc21
+VATALANIB,CHEMBL101253,Macrophage colony stimulating factor receptor inhibitor | Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Vascular endothelial growth factor receptor inhibitor,Clc1ccc(Nc2nnc(Cc3ccncc3)c3ccccc23)cc1
+CEDIRANIB,CHEMBL491473,Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Vascular endothelial growth factor receptor inhibitor,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ncnc2cc1OCCCN1CCCC1
+AT-9283,CHEMBL495727,Tyrosine-protein kinase ABL inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor,O=C(Nc1c[nH]nc1-c1nc2ccc(CN3CCOCC3)cc2[nH]1)NC1CC1
+DOVITINIB,CHEMBL522892,Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Vascular endothelial growth factor receptor inhibitor,CN1CCN(c2ccc3nc(-c4c(N)c5c(F)cccc5[nH]c4=O)[nH]c3c2)CC1
+MOTESANIB,CHEMBL572881,Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor RET inhibitor | Vascular endothelial growth factor receptor inhibitor,CC1(C)CNc2cc(NC(=O)c3cccnc3NCc3ccncc3)ccc21
+MIDOSTAURIN,CHEMBL608533,Platelet-derived growth factor receptor inhibitor | Protein kinase C (PKC) inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+ZOTIRACICLIB,CHEMBL1944698,Tyrosine-protein kinase receptor FLT3 inhibitor,CN1C/C=C/CCOc2cccc(c2)-c2ccnc(n2)Nc2cccc(c2)C1
+PEXIDARTINIB HYDROCHLORIDE,CHEMBL3989973,Macrophage colony stimulating factor receptor inhibitor | Stem cell growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor,Cl.FC(F)(F)c1ccc(CNc2ccc(Cc3c[nH]c4ncc(Cl)cc34)cn2)cn1
+AVAPRITINIB,CHEMBL4204794,Stem cell growth factor receptor inhibitor,Cn1cc(-c2cc3c(N4CCN(c5ncc([C@@](C)(N)c6ccc(F)cc6)cn5)CC4)ncnn3c2)cn1
+RIPRETINIB,CHEMBL4216467,Stem cell growth factor receptor inhibitor,CCn1c(=O)c(-c2cc(NC(=O)Nc3ccccc3)c(F)cc2Br)cc2cnc(NC)cc21
+SERALUTINIB,CHEMBL4650333,Macrophage colony stimulating factor receptor inhibitor | Platelet-derived growth factor receptor inhibitor | Stem cell growth factor receptor inhibitor,COc1ccc(-c2cncc(N[C@@H](C)c3cccc(NC(=O)c4cncc(C)c4)c3)n2)cc1OC
+AKN-028,CHEMBL4790100,Tyrosine-protein kinase receptor FLT3 inhibitor,Nc1ncc(-c2ccncc2)nc1Nc1ccc2[nH]ccc2c1
+VANDETANIB,CHEMBL24828,Tyrosine-protein kinase SRC inhibitor | Tyrosine-protein kinase receptor RET inhibitor | Vascular endothelial growth factor receptor inhibitor,COc1cc2/c(=N/c3ccc(Br)cc3F)nc[nH]c2cc1OCC1CCN(C)CC1
+C-1311,CHEMBL338604,DNA topoisomerase II inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor,CCN(CC)CCNc1ccc2ncn3c4ccc(O)cc4c(=O)c1c23
+LINIFANIB,CHEMBL223360,Macrophage colony stimulating factor receptor inhibitor | Platelet-derived growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor | Vascular endothelial growth factor receptor inhibitor,Cc1ccc(F)c(NC(=O)Nc2ccc(-c3cccc4[nH]nc(N)c34)cc2)c1
+LESTAURTINIB,CHEMBL603469,Tyrosine-protein kinase receptor FLT3 inhibitor | Tyrosine-protein kinase receptor RET inhibitor,C[C@]12O[C@H](C[C@]1(O)CO)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)CNC4=O
+FEDRATINIB,CHEMBL1287853,Tyrosine-protein kinase receptor FLT3 inhibitor,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1
+PACRITINIB,CHEMBL2035187,Tyrosine-protein kinase receptor FLT3 inhibitor,C1=N/C2=N/c3ccc(OCCN4CCCC4)c(c3)COC/C=C/COCc3cccc(c3)C(=C1)N2
+QUIZARTINIB DIHYDROCHLORIDE,CHEMBL2105709,Tyrosine-protein kinase receptor FLT3 inhibitor,CC(C)(C)c1cc(NC(=O)Nc2ccc(-c3cn4c(n3)sc3cc(OCCN5CCOCC5)ccc34)cc2)no1.Cl.Cl
+CRENOLANIB,CHEMBL2105728,Platelet-derived growth factor receptor inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor,CC1(COc2ccc3c(c2)ncn3-c2ccc3cccc(N4CCC(N)CC4)c3n2)COC1
+GILTERITINIB FUMARATE,CHEMBL3301603,Tyrosine-protein kinase receptor FLT3 inhibitor | Tyrosine-protein kinase receptor UFO inhibitor,CCc1nc(C(N)=O)c(Nc2ccc(N3CCC(N4CCN(C)CC4)CC3)c(OC)c2)nc1NC1CCOCC1.CCc1nc(C(N)=O)c(Nc2ccc(N3CCC(N4CCN(C)CC4)CC3)c(OC)c2)nc1NC1CCOCC1.O=C(O)/C=C/C(=O)O
+GILTERITINIB,CHEMBL3301622,Tyrosine-protein kinase receptor FLT3 inhibitor | Tyrosine-protein kinase receptor UFO inhibitor,CCc1nc(C(N)=O)c(Nc2ccc(N3CCC(N4CCN(C)CC4)CC3)c(OC)c2)nc1NC1CCOCC1
+RUSERONTINIB,CHEMBL3678958,Epidermal growth factor receptor erbB1 inhibitor | Tyrosine-protein kinase ABL inhibitor | Tyrosine-protein kinase receptor FLT3 inhibitor,CC(C)n1c(Nc2cccnc2)nc2cnc(Nc3ccc(N4CCN(C)CC4)cc3)nc21
+ALECTINIB HYDROCHLORIDE,CHEMBL3707320,Tyrosine-protein kinase receptor RET inhibitor,CCc1cc2c(cc1N1CCC(N3CCOCC3)CC1)C(C)(C)c1[nH]c3cc(C#N)ccc3c1C2=O.Cl
+NINGETINIB,CHEMBL3984441,Tyrosine-protein kinase receptor FLT3 inhibitor | Tyrosine-protein kinase receptor UFO inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,Cc1c(C(=O)Nc2ccc(Oc3ccnc4cc(OCC(C)(C)O)ccc34)c(F)c2)c(=O)n(-c2ccccc2)n1C
+FEDRATINIB HYDROCHLORIDE,CHEMBL4297216,Tyrosine-protein kinase receptor FLT3 inhibitor,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1.Cl.Cl.O
+SELPERCATINIB,CHEMBL4559134,Coiled-coil domain-containing protein 6/Tyrosine-protein kinase receptor RET inhibitor | Kinesin-1 heavy chain/ Tyrosine-protein kinase receptor RET inhibitor | Tyrosine-protein kinase receptor RET inhibitor,COc1ccc(CN2C3CC2CN(c2ccc(-c4cc(OCC(C)(C)O)cn5ncc(C#N)c45)cn2)C3)cn1
+PRALSETINIB,CHEMBL4582651,Coiled-coil domain-containing protein 6/Tyrosine-protein kinase receptor RET inhibitor | Kinesin-1 heavy chain/ Tyrosine-protein kinase receptor RET inhibitor | Tyrosine-protein kinase receptor RET inhibitor,CO[C@]1(C(=O)N[C@@H](C)c2ccc(-n3cc(F)cn3)nc2)CC[C@H](c2nc(C)cc(Nc3cc(C)[nH]n3)n2)CC1
+PACRITINIB CITRATE,CHEMBL5095049,Tyrosine-protein kinase receptor FLT3 inhibitor,C1=C/COCc2cc(ccc2OCCN2CCCC2)Nc2nccc(n2)-c2cccc(c2)COC/1.O=C(O)CC(O)(CC(=O)O)C(=O)O
+BRIVANIB,CHEMBL377300,Vascular endothelial growth factor receptor inhibitor,Cc1cc2c(F)c(Oc3ncnn4cc(OC[C@@H](C)O)c(C)c34)ccc2[nH]1
+AXITINIB,CHEMBL1289926,Vascular endothelial growth factor receptor inhibitor,CNC(=O)c1ccccc1Sc1ccc2c(/C=C/c3ccccn3)n[nH]c2c1
+ILORASERTIB,CHEMBL1980297,Platelet-derived growth factor receptor inhibitor | SRC inhibitor | Vascular endothelial growth factor receptor inhibitor,Nc1ncc(-c2cnn(CCO)c2)c2scc(-c3ccc(NC(=O)Nc4cccc(F)c4)cc3)c12
+CEP-11981,CHEMBL2010872,Vascular endothelial growth factor receptor inhibitor,CC(C)Cn1c2ccc(Nc3ncccn3)cc2c2c3c(c4c(c21)CCc1nn(C)cc1-4)C(=O)NC3
+LENVATINIB MESYLATE,CHEMBL2105704,Vascular endothelial growth factor receptor inhibitor,COc1cc2nccc(Oc3ccc(NC(=O)NC4CC4)c(Cl)c3)c2cc1C(N)=O.CS(=O)(=O)O
+LUCITANIB,CHEMBL2220486,Vascular endothelial growth factor receptor inhibitor,CNC(=O)c1cccc2cc(Oc3ccnc4cc(OCC5(N)CC5)c(OC)cc34)ccc12
+NINTEDANIB ESYLATE,CHEMBL3039504,Platelet-derived growth factor receptor inhibitor | Vascular endothelial growth factor receptor inhibitor,CCS(=O)(=O)O.COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1
+AG-13958,CHEMBL3545335,Vascular endothelial growth factor receptor inhibitor,Cc1cc(C(=O)Nc2cc(Nc3ccc4c(/C=C/c5ccccn5)n[nH]c4c3)ccc2F)n(C)n1
+BMS-690514,CHEMBL3545396,Epidermal growth factor receptor erbB1 inhibitor | Vascular endothelial growth factor receptor inhibitor,COc1cccc(Nc2ncnn3ccc(CN4CC[C@@H](N)[C@H](O)C4)c23)c1
+SURUFATINIB,CHEMBL4297190,Vascular endothelial growth factor receptor inhibitor,Cc1cc2cc(Oc3ccnc(Nc4cccc(CS(=O)(=O)NCCN(C)C)c4)n3)ccc2[nH]1
+FRUQUINTINIB,CHEMBL4303214,Vascular endothelial growth factor receptor inhibitor,CNC(=O)c1c(C)oc2cc(Oc3ncnc4cc(OC)c(OC)cc34)ccc12
+IBCASERTIB,CHEMBL5095033,Vascular endothelial growth factor receptor inhibitor,COc1ccc2c(Oc3ccc4c(C(=O)Nc5ccccc5N)cccc4c3)ccnc2c1
+NITROFURANTOIN,CHEMBL572,DNA inhibitor,O=C1CN(/N=C/c2ccc([N+](=O)[O-])o2)C(=O)N1
+METRONIDAZOLE,CHEMBL137,DNA inhibitor,Cc1ncc([N+](=O)[O-])n1CCO
+LAMIVUDINE,CHEMBL141,DNA inhibitor,Nc1ccn([C@@H]2CS[C@H](CO)O2)c(=O)n1
+NITROFURAZONE,CHEMBL869,DNA inhibitor,NC(=O)N/N=C/c1ccc([N+](=O)[O-])o1
+GENTIAN VIOLET,CHEMBL64894,DNA inhibitor,CN(C)c1ccc(C(=C2C=CC(=[N+](C)C)C=C2)c2ccc(N(C)C)cc2)cc1.[Cl-]
+FURAZOLIDONE,CHEMBL1103,DNA inhibitor,O=C1OCCN1/N=C/c1ccc([N+](=O)[O-])o1
+AZATHIOPRINE,CHEMBL1542,Amidophosphoribosyltransferase inhibitor | DNA inhibitor,Cn1cnc([N+](=O)[O-])c1Sc1ncnc2[nH]cnc12
+BRIVANIB ALANINATE,CHEMBL270995,Vascular endothelial growth factor receptor inhibitor,Cc1cc2c(F)c(Oc3ncnn4cc(OC[C@@H](C)OC(=O)[C@H](C)N)c(C)c34)ccc2[nH]1
+AZATHIOPRINE SODIUM,CHEMBL1200400,Amidophosphoribosyltransferase inhibitor | DNA inhibitor,Cn1cnc([N+](=O)[O-])c1Sc1ncnc2nc[n-]c12.[Na+]
+CHLOROXINE,CHEMBL1200596,DNA inhibitor,Oc1c(Cl)cc(Cl)c2cccnc12
+MERCAPTOPURINE,CHEMBL1200751,Amidophosphoribosyltransferase inhibitor | DNA inhibitor,O.S=c1[nH]cnc2nc[nH]c12
+CYCLOPHOSPHAMIDE,CHEMBL1200796,DNA inhibitor,O.O=P1(N(CCCl)CCCl)NCCCO1
+METRONIDAZOLE HYDROCHLORIDE,CHEMBL1200869,DNA inhibitor,Cc1ncc([N+](=O)[O-])n1CCO.Cl
+NITROFURANTOIN SODIUM,CHEMBL1201000,DNA inhibitor,O=C1CN(/N=C/c2ccc([N+](=O)[O-])o2)C(=O)[N-]1.[Na+]
+MECHLORETHAMINE HYDROCHLORIDE,CHEMBL1201001,DNA inhibitor,CN(CCCl)CCCl.Cl
+METHENAMINE HIPPURATE,CHEMBL1201104,DNA inhibitor,C1N2CN3CN1CN(C2)C3.O=C(O)CNC(=O)c1ccccc1
+BENDAMUSTINE HYDROCHLORIDE,CHEMBL1201734,DNA inhibitor,Cl.Cn1c(CCCC(=O)O)nc2cc(N(CCCl)CCCl)ccc21
+TIVOZANIB,CHEMBL1289494,Vascular endothelial growth factor receptor inhibitor,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC
+GLESATINIB,CHEMBL3989914,Vascular endothelial growth factor receptor inhibitor,COCCNCc1ccc(-c2cc3nccc(Oc4ccc(NC(=S)NC(=O)Cc5ccc(F)cc5)cc4F)c3s2)nc1
+METHOXSALEN,CHEMBL416,DNA inhibitor,COc1c2occc2cc2ccc(=O)oc12
+LOMUSTINE,CHEMBL514,DNA inhibitor,O=NN(CCCl)C(=O)NC1CCCCC1
+CHLORAMBUCIL,CHEMBL515,DNA inhibitor,O=C(O)CCCc1ccc(N(CCCl)CCCl)cc1
+MITOMYCIN,CHEMBL105,DNA inhibitor,CO[C@@]12[C@H](COC(N)=O)C3=C(C(=O)C(C)=C(N)C3=O)N1C[C@@H]1N[C@@H]12
+THIOTEPA,CHEMBL671,DNA inhibitor,S=P(N1CC1)(N1CC1)N1CC1
+TEMOZOLOMIDE,CHEMBL810,DNA inhibitor,Cn1nnc2c(C(N)=O)ncn2c1=O
+BUSULFAN,CHEMBL820,DNA inhibitor,CS(=O)(=O)OCCCCOS(C)(=O)=O
+MELPHALAN,CHEMBL852,DNA inhibitor,N[C@@H](Cc1ccc(N(CCCl)CCCl)cc1)C(=O)O
+OXALIPLATIN,CHEMBL414804,DNA inhibitor,
+CARBOPLATIN,CHEMBL1351,DNA inhibitor,
+ALTRETAMINE,CHEMBL1455,DNA inhibitor,CN(C)c1nc(N(C)C)nc(N(C)C)n1
+URACIL MUSTARD,CHEMBL1488,DNA inhibitor,Oc1ncc(N(CCCl)CCCl)c(O)n1
+PIPOBROMAN,CHEMBL1585,DNA inhibitor,O=C(CCBr)N1CCN(C(=O)CCBr)CC1
+CLADRIBINE,CHEMBL1619,DNA inhibitor,Nc1nc(Cl)nc2c1ncn2[C@H]1C[C@H](O)[C@@H](CO)O1
+MELPHALAN HYDROCHLORIDE,CHEMBL1200863,DNA inhibitor,Cl.N[C@@H](Cc1ccc(N(CCCl)CCCl)cc1)C(=O)O
+EPIRUBICIN HYDROCHLORIDE,CHEMBL1200981,DNA inhibitor,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@@H](O)[C@H](C)O1.Cl
+NELARABINE,CHEMBL1201112,DNA inhibitor,COc1nc(N)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1O
+PLICAMYCIN,CHEMBL1237054,DNA inhibitor,CO[C@H](C(=O)[C@@H](O)[C@@H](C)O)[C@@H]1Cc2cc3cc(O[C@H]4C[C@@H](O[C@@H]5C[C@@H](O)[C@H](O)[C@@H](C)O5)[C@H](O)[C@@H](C)O4)c(C)c(O)c3c(O)c2C(=O)[C@H]1O[C@H]1C[C@@H](O[C@@H]2C[C@@H](O)[C@@H](O[C@@H]3C[C@](C)(O)[C@H](O)[C@@H](C)O3)[C@@H](C)O2)[C@H](O)[C@@H](C)O1
+STREPTOZOCIN,CHEMBL1977579,DNA inhibitor,CN(N=O)C(=O)N[C@@H](C=O)[C@@H](O)[C@H](O)[C@H](O)CO
+DACARBAZINE,CHEMBL476,DNA inhibitor,CN(C)/N=N/c1[nH]cnc1C(N)=O
+CISPLATIN,CHEMBL11359,DNA inhibitor,
+CARMUSTINE,CHEMBL513,DNA inhibitor | RNA inhibitor,O=NN(CCCl)C(=O)NCCCl
+THIOGUANINE,CHEMBL727,DNA inhibitor | Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor,Nc1nc2[nH]cnc2c(=S)[nH]1
+IDOXURIDINE,CHEMBL788,DNA inhibitor,O=c1[nH]c(=O)n([C@H]2C[C@H](O)[C@@H](CO)O2)cc1I
+IFOSFAMIDE,CHEMBL1024,DNA inhibitor,O=P1(NCCCl)OCCCN1CCCl
+CLOFAZIMINE,CHEMBL1292,DNA inhibitor,CC(C)/N=c1\cc2n(-c3ccc(Cl)cc3)c3ccccc3nc-2cc1Nc1ccc(Cl)cc1
+FLUOROURACIL,CHEMBL185,DNA inhibitor | RNA inhibitor,O=c1[nH]cc(F)c(=O)[nH]1
+TRIOXSALEN,CHEMBL1475,DNA inhibitor,Cc1cc2cc3c(C)cc(=O)oc3c(C)c2o1
+AZACITIDINE,CHEMBL1489,DNA (cytosine-5)-methyltransferase 1 inhibitor | DNA (cytosine-5)-methyltransferase 3A inhibitor | DNA inhibitor | RNA inhibitor,Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c(=O)n1
+DAUNORUBICIN HYDROCHLORIDE,CHEMBL1563,DNA inhibitor | DNA topoisomerase II alpha inhibitor,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(C)=O)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1.Cl
+DOXORUBICIN HYDROCHLORIDE,CHEMBL359744,DNA inhibitor | DNA topoisomerase II alpha inhibitor,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1.Cl
+CAPECITABINE,CHEMBL1773,DNA inhibitor | RNA inhibitor,CCCCCOC(=O)Nc1nc(=O)n([C@@H]2O[C@H](C)[C@@H](O)[C@H]2O)cc1F
+VALRUBICIN,CHEMBL1096885,DNA inhibitor | DNA topoisomerase II alpha inhibitor,CCCCC(=O)OCC(=O)[C@]1(O)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](NC(=O)C(F)(F)F)[C@H](O)[C@H](C)O2)C1)C(=O)c1c(OC)cccc1C3=O
+PROCARBAZINE HYDROCHLORIDE,CHEMBL1200410,DNA inhibitor,CNNCc1ccc(C(=O)NC(C)C)cc1.Cl
+DAUNORUBICIN CITRATE,CHEMBL1200475,DNA inhibitor | DNA topoisomerase II alpha inhibitor,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(C)=O)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1.O=C(O)CC(O)(CC(=O)O)C(=O)O
+IDARUBICIN HYDROCHLORIDE,CHEMBL1200976,DNA inhibitor | DNA topoisomerase II alpha inhibitor,CC(=O)[C@]1(O)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](N)[C@H](O)[C@H](C)O2)C1)C(=O)c1ccccc1C3=O.Cl
+DECITABINE,CHEMBL1201129,DNA (cytosine-5)-methyltransferase 1 inhibitor | DNA (cytosine-5)-methyltransferase 3A inhibitor | DNA inhibitor,Nc1ncn([C@H]2C[C@H](O)[C@@H](CO)O2)c(=O)n1
+MITOXANTRONE HYDROCHLORIDE,CHEMBL1417019,DNA inhibitor | DNA topoisomerase II alpha inhibitor,Cl.Cl.O=C1c2c(O)ccc(O)c2C(=O)c2c(NCCNCCO)ccc(NCCNCCO)c21
+HYDROXYSTILBAMIDINE ISETHIONATE,CHEMBL2023895,DNA inhibitor | RNA inhibitor,N=C(N)c1ccc(/C=C/c2ccc(C(=N)N)cc2O)cc1.O=S(=O)(O)CCO.O=S(=O)(O)CCO
+OXAMNIQUINE,CHEMBL847,DNA inhibitor,CC(C)NCC1CCc2cc(CO)c([N+](=O)[O-])cc2N1
+VOSAROXIN,CHEMBL68117,DNA inhibitor | DNA topoisomerase II inhibitor,CN[C@H]1CN(c2ccc3c(=O)c(C(=O)O)cn(-c4nccs4)c3n2)C[C@@H]1OC
+APAZIQUONE,CHEMBL73822,DNA inhibitor,Cn1c(/C=C/CO)c(CO)c2c1C(=O)C=C(N1CC1)C2=O
+TERAMEPROCOL,CHEMBL90983,DNA inhibitor,COc1ccc(C[C@@H](C)[C@@H](C)Cc2ccc(OC)c(OC)c2)cc1OC
+TRIFLURIDINE,CHEMBL1129,DNA inhibitor,O=c1[nH]c(=O)n([C@H]2C[C@H](O)[C@@H](CO)O2)cc1C(F)(F)F
+IROFULVEN,CHEMBL118218,DNA inhibitor,CC1=C(CO)C2=C(C)C3(CC3)[C@@](C)(O)C(=O)C2=C1
+PENTAMIDINE ISETHIONATE,CHEMBL361506,DNA inhibitor | Kinetoplast DNA inhibitor,N=C(N)c1ccc(OCCCCCOc2ccc(C(=N)N)cc2)cc1.O=S(=O)(O)CCO.O=S(=O)(O)CCO
+DAUNORUBICIN,CHEMBL178,DNA inhibitor | DNA topoisomerase II alpha inhibitor,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(C)=O)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1
+NICLOSAMIDE,CHEMBL1448,DNA inhibitor,O=C(Nc1ccc([N+](=O)[O-])cc1Cl)c1cc(Cl)ccc1O
+EVOFOSFAMIDE,CHEMBL260046,DNA inhibitor,Cn1c(COP(=O)(NCCBr)NCCBr)cnc1[N+](=O)[O-]
+TRABECTEDIN,CHEMBL450449,DNA inhibitor,COc1cc2c(cc1O)CCN[C@]21CS[C@@H]2c3c(OC(C)=O)c(C)c4c(c3[C@H](COC1=O)N1[C@@H]2[C@H]2c3c(cc(C)c(OC)c3O)C[C@@H]([C@@H]1O)N2C)OCO4
+AMINOLEVULINIC ACID HYDROCHLORIDE,CHEMBL1200582,DNA inhibitor,Cl.NCC(=O)CCC(=O)O
+ESTRAMUSTINE PHOSPHATE SODIUM,CHEMBL1200721,DNA inhibitor,C[C@]12CC[C@@H]3c4ccc(OC(=O)N(CCCl)CCCl)cc4CC[C@H]3[C@@H]1CC[C@@H]2OP(=O)([O-])[O-].[Na+].[Na+]
+METHYL AMINOLEVULINATE HYDROCHLORIDE,CHEMBL1201093,DNA inhibitor,COC(=O)CCC(=O)CN.Cl
+PORFIMER SODIUM,CHEMBL1201481,DNA inhibitor,
+ELACYTARABINE,CHEMBL2105665,DNA inhibitor | RNA inhibitor,CCCCCCCC/C=C/CCCCCCCC(=O)OC[C@H]1O[C@@H](n2ccc(N)nc2=O)[C@@H](O)[C@@H]1O
+SAPACITABINE,CHEMBL2105681,DNA inhibitor,CCCCCCCCCCCCCCCC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2C#N)c(=O)n1
+PAFURAMIDINE MALEATE,CHEMBL2107359,Kinetoplast DNA inhibitor,CONC(=N)c1ccc(-c2ccc(-c3ccc(C(=N)NOC)cc3)o2)cc1.O=C(O)/C=C\C(=O)O
+VERTEPORFIN,CHEMBL5314346,DNA inhibitor,
+MECHLORETHAMINE,CHEMBL427,DNA inhibitor,CN(CCCl)CCCl
+AMSACRINE,CHEMBL43,DNA topoisomerase II inhibitor,COc1cc(NS(C)(=O)=O)ccc1Nc1c2ccccc2nc2ccccc12
+CLIOQUINOL,CHEMBL497,Iron chelating agent,Oc1c(I)cc(Cl)c2cccnc12
+TEGAFUR,CHEMBL20883,DNA inhibitor | RNA inhibitor,O=c1[nH]c(=O)n(C2CCCO2)cc1F
+NIFURTIMOX,CHEMBL290960,DNA inhibitor,CC1CS(=O)(=O)CCN1/N=C/c1ccc([N+](=O)[O-])o1
+ETOPOSIDE,CHEMBL44657,DNA topoisomerase II inhibitor,COc1cc([C@@H]2c3cc4c(cc3[C@@H](O[C@@H]3O[C@@H]5CO[C@@H](C)O[C@H]5[C@H](O)[C@H]3O)[C@H]3COC(=O)[C@H]23)OCO4)cc(OC)c1O
+DEFEROXAMINE MESYLATE,CHEMBL1234,Iron chelating agent,CC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCNC(=O)CCC(=O)N(O)CCCCCN.CS(=O)(=O)O
+CICLOPIROX,CHEMBL1413,Iron chelating agent,Cc1cc(C2CCCCC2)n(O)c(=O)c1
+PAZUFLOXACIN,CHEMBL240163,DNA topoisomerase II inhibitor,C[C@H]1COc2c(C3(N)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+TENIPOSIDE,CHEMBL452231,DNA topoisomerase II inhibitor,COc1cc([C@@H]2c3cc4c(cc3[C@@H](O[C@@H]3O[C@@H]5CO[C@@H](c6cccs6)O[C@H]5[C@H](O)[C@H]3O)[C@H]3COC(=O)[C@H]23)OCO4)cc(OC)c1O
+AMRUBICIN HYDROCHLORIDE,CHEMBL481958,DNA topoisomerase II alpha inhibitor,CC(=O)[C@]1(N)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](O)[C@H](O)CO2)C1)C(=O)c1ccccc1C3=O.Cl
+SECNIDAZOLE,CHEMBL498847,DNA inhibitor,Cc1ncc([N+](=O)[O-])n1CC(C)O
+DEFERASIROX,CHEMBL550348,Iron chelating agent,O=C(O)c1ccc(-n2nc(-c3ccccc3O)nc2-c2ccccc2O)cc1
+DEXRAZOXANE,CHEMBL1738,DNA topoisomerase II inhibitor | Iron sequestering agent,C[C@@H](CN1CC(=O)NC(=O)C1)N1CC(=O)NC(=O)C1
+ETOPOSIDE PHOSPHATE,CHEMBL1200645,DNA topoisomerase II alpha inhibitor,COc1cc([C@@H]2c3cc4c(cc3[C@@H](O[C@@H]3O[C@@H]5CO[C@@H](C)O[C@H]5[C@H](O)[C@H]3O)[C@H]3COC(=O)[C@H]23)OCO4)cc(OC)c1OP(=O)(O)O
+DEXRAZOXANE HYDROCHLORIDE,CHEMBL1200778,DNA topoisomerase II inhibitor | Iron chelating agent,C[C@@H](CN1CC(=O)NC(=O)C1)N1CC(=O)NC(=O)C1.Cl
+BERUBICIN HYDROCHLORIDE,CHEMBL2103796,DNA topoisomerase II inhibitor,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@H](OCc2ccccc2)[C@H](C)O1.Cl
+VALTORCITABINE,CHEMBL2106499,DNA inhibitor,CC(C)[C@H](N)C(=O)O[C@@H]1C[C@@H](n2ccc(N)nc2=O)O[C@H]1CO
+BECATECARIN,CHEMBL2107313,DNA topoisomerase II inhibitor,CCN(CC)CCN1C(=O)c2c(c3c4cccc(Cl)c4n([C@@H]4O[C@H](CO)[C@@H](OC)[C@H](O)[C@H]4O)c3c3[nH]c4c(Cl)cccc4c23)C1=O
+ALDOXORUBICIN,CHEMBL2107818,DNA topoisomerase II alpha inhibitor,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(/C(CO)=N/NC(=O)CCCCCN1C(=O)C=CC1=O)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1
+BETAMETHASONE,CHEMBL632,Glucocorticoid receptor agonist,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)CO
+PREDNISONE,CHEMBL635,Glucocorticoid receptor agonist,C[C@]12C=CC(=O)C=C1CC[C@@H]1[C@@H]2C(=O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO
+PREDNISOLONE,CHEMBL131,Glucocorticoid receptor agonist,C[C@]12C=CC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO
+HYDROCORTISONE,CHEMBL389621,Glucocorticoid receptor agonist,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO
+TRIAMCINOLONE ACETONIDE,CHEMBL1504,Glucocorticoid receptor agonist,CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@@]4(F)[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1
+FLUNISOLIDE,CHEMBL1512,Glucocorticoid receptor agonist,CC1(C)O[C@@H]2C[C@H]3[C@@H]4C[C@H](F)C5=CC(=O)C=C[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1
+HYDROCORTISONE CYPIONATE,CHEMBL1549,Glucocorticoid receptor agonist,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COC(=O)CCC1CCCC1
+CLOBETASOL PROPIONATE,CHEMBL1159650,Glucocorticoid receptor agonist,CCC(=O)O[C@]1(C(=O)CCl)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+AMRUBICIN,CHEMBL1186894,DNA topoisomerase II alpha inhibitor,CC(=O)[C@]1(N)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](O)[C@H](O)CO2)C1)C(=O)c1ccccc1C3=O
+PARAMETHASONE ACETATE,CHEMBL1200342,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(O)[C@H](C)C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+BETAMETHASONE DIPROPIONATE,CHEMBL1200384,Glucocorticoid receptor agonist,CCC(=O)OCC(=O)[C@@]1(OC(=O)CC)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+HYDROCORTISONE SODIUM SUCCINATE,CHEMBL1200495,Glucocorticoid receptor agonist,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COC(=O)CCC(=O)[O-].[Na+]
+FLUOROMETHOLONE,CHEMBL1200600,Glucocorticoid receptor agonist,CC(=O)[C@@]1(O)CC[C@H]2[C@@H]3C[C@H](C)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+HYDROCORTAMATE HYDROCHLORIDE,CHEMBL1200635,Glucocorticoid receptor agonist,CCN(CC)CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C.Cl
+BETAMETHASONE SODIUM PHOSPHATE,CHEMBL1200762,Glucocorticoid receptor agonist,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)COP(=O)([O-])[O-].[Na+].[Na+]
+HALCINONIDE,CHEMBL1200845,Glucocorticoid receptor agonist,CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)CC[C@]5(C)[C@@]4(F)[C@@H](O)C[C@]3(C)[C@]2(C(=O)CCl)O1
+LOTEPREDNOL ETABONATE,CHEMBL1200865,Glucocorticoid receptor agonist,CCOC(=O)O[C@]1(C(=O)OCCl)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+PREDNISOLONE TEBUTATE,CHEMBL1200909,Glucocorticoid receptor agonist,CC(C)(C)CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+MEDRYSONE,CHEMBL1201173,Glucocorticoid receptor agonist,CC(=O)[C@H]1CC[C@H]2[C@@H]3C[C@H](C)C4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@]12C
+DIFLUPREDNATE,CHEMBL1201749,Glucocorticoid receptor agonist,CCCC(=O)O[C@]1(C(=O)COC(C)=O)CC[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+METHYLPREDNISOLONE,CHEMBL650,Glucocorticoid receptor agonist,C[C@H]1C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2CC[C@]3(O)C(=O)CO)[C@@]2(C)C=CC(=O)C=C12
+TRIAMCINOLONE,CHEMBL1451,Glucocorticoid receptor agonist,C[C@]12C=CC(=O)C=C1CC[C@H]1[C@@H]3C[C@@H](O)[C@](O)(C(=O)CO)[C@@]3(C)C[C@H](O)[C@@]12F
+FLUOCINONIDE,CHEMBL1501,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]12OC(C)(C)O[C@@H]1C[C@H]1[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]12C
+FLUTICASONE FUROATE,CHEMBL1676,Glucocorticoid receptor agonist,C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(OC(=O)c1ccco1)C(=O)SCF
+DESOXIMETASONE,CHEMBL1766,Glucocorticoid receptor agonist,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@H]1C(=O)CO
+BETAMETHASONE BENZOATE,CHEMBL1200376,Glucocorticoid receptor agonist,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(OC(=O)c1ccccc1)C(=O)CO
+PREDNICARBATE,CHEMBL1200386,Glucocorticoid receptor agonist,CCOC(=O)O[C@]1(C(=O)COC(=O)CC)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+TRIAMCINOLONE DIACETATE,CHEMBL1200449,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(O)[C@H](OC(C)=O)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+BECLOMETHASONE DIPROPIONATE,CHEMBL1200500,Glucocorticoid receptor agonist,CCC(=O)OCC(=O)[C@@]1(OC(=O)CC)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(Cl)[C@@H](O)C[C@@]21C
+BETAMETHASONE ACETATE,CHEMBL1200538,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(O)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+DIFLORASONE DIACETATE,CHEMBL1200545,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(OC(C)=O)[C@@H](C)C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+HYDROCORTISONE VALERATE,CHEMBL1200562,Glucocorticoid receptor agonist,CCCCC(=O)O[C@]1(C(=O)CO)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+AMCINONIDE,CHEMBL1200732,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]12OC3(CCCC3)O[C@@H]1C[C@H]1[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]12C
+FLUMETHASONE PIVALATE,CHEMBL1200877,Glucocorticoid receptor agonist,C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)COC(=O)C(C)(C)C
+HALOBETASOL PROPIONATE,CHEMBL1200908,Glucocorticoid receptor agonist,CCC(=O)O[C@]1(C(=O)CCl)[C@@H](C)C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+HYDROCORTISONE SODIUM PHOSPHATE,CHEMBL1200968,Glucocorticoid receptor agonist,C[C@]12CCC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COP(=O)([O-])[O-].[Na+].[Na+]
+FLUOROMETHOLONE ACETATE,CHEMBL1201064,Glucocorticoid receptor agonist,CC(=O)O[C@]1(C(C)=O)CC[C@H]2[C@@H]3C[C@H](C)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+METHYLPREDNISOLONE SODIUM SUCCINATE,CHEMBL1201081,Glucocorticoid receptor agonist,C[C@H]1C[C@@H]2[C@H]([C@@H](O)C[C@@]3(C)[C@H]2CC[C@]3(O)C(=O)COC(=O)CCC(=O)[O-])[C@@]2(C)C=CC(=O)C=C12.[Na+]
+DESONIDE,CHEMBL1201109,Glucocorticoid receptor agonist,CC1(C)O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1
+DEXAMETHASONE SODIUM PHOSPHATE,CHEMBL2021430,Glucocorticoid receptor agonist,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)COP(=O)([O-])[O-].[Na+].[Na+]
+FLUOCINOLONE ACETONIDE,CHEMBL989,Glucocorticoid receptor agonist,CC1(C)O[C@@H]2C[C@H]3[C@@H]4C[C@H](F)C5=CC(=O)C=C[C@]5(C)[C@@]4(F)[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1
+HYDROCORTISONE ACETATE,CHEMBL1091,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+PREDNISOLONE ACETATE,CHEMBL1152,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+MOMETASONE FUROATE,CHEMBL1161,Glucocorticoid receptor agonist,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(Cl)[C@@H](O)C[C@]2(C)[C@@]1(OC(=O)c1ccco1)C(=O)CCl
+BUDESONIDE,CHEMBL1370,Glucocorticoid receptor agonist,CCCC1O[C@@H]2C[C@H]3[C@@H]4CCC5=CC(=O)C=C[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1
+DEXAMETHASONE,CHEMBL384467,Glucocorticoid receptor agonist,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@]2(C)[C@@]1(O)C(=O)CO
+BETAMETHASONE VALERATE,CHEMBL1497,Glucocorticoid receptor agonist,CCCCC(=O)O[C@]1(C(=O)CO)[C@@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+CORTISONE ACETATE,CHEMBL1650,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3C(=O)C[C@@]21C
+HYDROCORTISONE BUTYRATE,CHEMBL1683,Glucocorticoid receptor agonist,CCCC(=O)O[C@]1(C(=O)CO)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+RIMEXOLONE,CHEMBL1200617,Glucocorticoid receptor agonist,CCC(=O)[C@@]1(C)[C@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+FLUPREDNISOLONE,CHEMBL1200774,Glucocorticoid receptor agonist,C[C@]12C=CC(=O)C=C1[C@@H](F)C[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)CO
+TRIAMCINOLONE HEXACETONIDE,CHEMBL1200878,Glucocorticoid receptor agonist,CC(C)(C)CC(=O)OCC(=O)[C@@]12OC(C)(C)O[C@@H]1C[C@H]1[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]12C
+HYDROCORTISONE PROBUTATE,CHEMBL1200953,Glucocorticoid receptor agonist,CCCC(=O)O[C@]1(C(=O)COC(=O)CC)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+CLOCORTOLONE PIVALATE,CHEMBL1200975,Glucocorticoid receptor agonist,C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(Cl)[C@@H](O)C[C@]2(C)[C@H]1C(=O)COC(=O)C(C)(C)C
+ALCLOMETASONE DIPROPIONATE,CHEMBL1200989,Glucocorticoid receptor agonist,CCC(=O)OCC(=O)[C@@]1(OC(=O)CC)[C@H](C)C[C@H]2[C@H]3[C@H]([C@@H](O)C[C@@]21C)[C@@]1(C)C=CC(=O)C=C1C[C@H]3Cl
+PREDNISOLONE SODIUM PHOSPHATE,CHEMBL1201014,Glucocorticoid receptor agonist,C[C@]12C=CC(=O)C=C1CC[C@@H]1[C@@H]2[C@@H](O)C[C@@]2(C)[C@H]1CC[C@]2(O)C(=O)COP(=O)([O-])[O-].[Na+].[Na+]
+MEPREDNISONE,CHEMBL1201148,Glucocorticoid receptor agonist,C[C@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3C(=O)C[C@]2(C)[C@@]1(O)C(=O)CO
+METHYLPREDNISOLONE ACETATE,CHEMBL1364144,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(O)CC[C@H]2[C@@H]3C[C@H](C)C4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+DEXAMETHASONE ACETATE,CHEMBL1530428,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(O)[C@H](C)C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+CICLESONIDE,CHEMBL2040682,Glucocorticoid receptor agonist,CC(C)C(=O)OCC(=O)[C@@]12O[C@H](C3CCCCC3)O[C@@H]1C[C@H]1[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]12C
+FLUTICASONE PROPIONATE,CHEMBL1473,Glucocorticoid receptor agonist,CCC(=O)O[C@]1(C(=O)SCF)[C@H](C)C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)[C@@]3(F)[C@@H](O)C[C@@]21C
+OXYMORPHONE HYDROCHLORIDE,CHEMBL1200794,Opioid receptors; mu/kappa/delta agonist,CN1CC[C@]23c4c5ccc(O)c4O[C@H]2C(=O)CC[C@@]3(O)[C@H]1C5.Cl
+FLURANDRENOLIDE,CHEMBL1201012,Glucocorticoid receptor agonist,CC1(C)O[C@@H]2C[C@H]3[C@@H]4C[C@H](F)C5=CC(=O)CC[C@]5(C)[C@H]4[C@@H](O)C[C@]3(C)[C@]2(C(=O)CO)O1
+NALBUPHINE HYDROCHLORIDE,CHEMBL1201132,Opioid receptors; mu/kappa/delta agonist,Cl.Oc1ccc2c3c1O[C@H]1[C@@H](O)CC[C@@]4(O)[C@@H](C2)N(CC2CCC2)CC[C@]314
+CODEINE POLISTIREX,CHEMBL1201463,Opioid receptors; mu/kappa/delta agonist,
+HYDROCODONE POLISTIREX,CHEMBL1201470,Opioid receptors; mu/kappa/delta agonist,
+DEFLAZACORT,CHEMBL1201891,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]12N=C(C)O[C@@H]1C[C@H]1[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3[C@@H](O)C[C@@]12C
+MAPRACORAT,CHEMBL2103876,Glucocorticoid receptor agonist,Cc1ccc2c(NC[C@](O)(CC(C)(C)c3cc(F)cc4c3OCC4)C(F)(F)F)cccc2n1
+CORTIVAZOL,CHEMBL2105842,Glucocorticoid receptor agonist,CC(=O)OCC(=O)[C@@]1(O)[C@H](C)C[C@H]2[C@@H]3C=C(C)C4=Cc5c(cnn5-c5ccccc5)C[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+HYDROCORTISONE ACEPONATE,CHEMBL2106309,Glucocorticoid receptor agonist,CCC(=O)O[C@]1(C(=O)COC(C)=O)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+RESOCORTOL BUTYRATE,CHEMBL2107186,Glucocorticoid receptor agonist,CCCC(=O)O[C@]1(C(=O)CC)CC[C@H]2[C@@H]3CCC4=CC(=O)CC[C@]4(C)[C@H]3[C@@H](O)C[C@@]21C
+VAMOROLONE,CHEMBL2348780,Glucocorticoid receptor agonist,C[C@@H]1C[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)C3=CC[C@]2(C)[C@@]1(O)C(=O)CO
+CEBRANOPADOL,CHEMBL2364605,Opioid receptors; mu/kappa/delta agonist,CN(C)[C@]1(c2ccccc2)CC[C@]2(CC1)OCCc1c3cc(F)ccc3[nH]c12
+BENZHYDROCODONE HYDROCHLORIDE,CHEMBL3137310,Opioid receptors; mu/kappa/delta agonist,COc1ccc2c3c1O[C@H]1C(OC(=O)c4ccccc4)=CC[C@@H]4[C@@H](C2)N(C)CC[C@@]341.Cl
+DEXTROMORAMIDE,CHEMBL3833389,Opioid receptors; mu/kappa/delta agonist,C[C@@H](CC(C(=O)N1CCCC1)(c1ccccc1)c1ccccc1)N1CCOCC1
+HYDROCODONE BITARTRATE,CHEMBL3989677,Opioid receptors; mu/kappa/delta agonist,COc1ccc2c3c1O[C@H]1C(=O)CC[C@H]4[C@@H](C2)N(C)CC[C@]314.O.O.O=C(O)C(O)C(O)C(=O)O
+CODEINE SULFATE,CHEMBL4297091,Opioid receptors; mu/kappa/delta agonist,COc1ccc2c3c1O[C@H]1[C@@H](O)C=C[C@H]4[C@@H](C2)N(C)CC[C@@]341.COc1ccc2c3c1O[C@H]1[C@@H](O)C=C[C@H]4[C@@H](C2)N(C)CC[C@@]341.O.O.O.O=S(=O)(O)O
+CODEINE PHOSPHATE,CHEMBL6067642,Opioid receptors; mu/kappa/delta agonist,COc1ccc2c3c1O[C@H]1[C@@H](O)C=C[C@H]4[C@@H](C2)N(C)CC[C@@]341.COc1ccc2c3c1O[C@H]1[C@@H](O)C=C[C@H]4[C@@H](C2)N(C)CC[C@@]341.O.O=P(O)(O)O.O=P(O)(O)O
+BISANTRENE,CHEMBL25336,DNA disrupting agent,C(=N/NC1=NCCN1)\c1c2ccccc2c(/C=N/NC2=NCCN2)c2ccccc12
+ACRIDINE,CHEMBL39677,DNA disrupting agent,c1ccc2nc3ccccc3cc2c1
+TIRAPAZAMINE,CHEMBL50882,DNA disrupting agent,Nc1n[n+]([O-])c2ccccc2[n+]1[O-]
+PROFLAVINE,CHEMBL55400,DNA disrupting agent,Nc1ccc2cc3ccc(N)cc3nc2c1
+DOXIFLURIDINE,CHEMBL1130,DNA disrupting agent,C[C@H]1O[C@@H](n2cc(F)c(=O)[nH]c2=O)[C@H](O)[C@@H]1O
+TINIDAZOLE,CHEMBL1220,DNA disrupting agent,CCS(=O)(=O)CCn1c([N+](=O)[O-])cnc1C
+NIMUSTINE,CHEMBL136737,DNA disrupting agent,Cc1ncc(CNC(=O)N(CCCl)N=O)c(N)n1
+MITOBRONITOL,CHEMBL447629,DNA disrupting agent,O[C@@H]([C@H](O)[C@H](O)CBr)[C@H](O)CBr
+BROSTALLICIN,CHEMBL1189025,DNA disrupting agent,C=C(Br)C(=O)Nc1cc(C(=O)Nc2cc(C(=O)Nc3cc(C(=O)Nc4cc(C(=O)NCCNC(=N)N)n(C)c4)n(C)c3)n(C)c2)n(C)c1
+LB80380,CHEMBL1652128,DNA disrupting agent,CC(C)(C)C(=O)OCOP(=O)(COC1(Cn2cnc3cnc(N)nc32)CC1)OCOC(=O)C(C)(C)C
+GLUFOSFAMIDE,CHEMBL2107143,DNA disrupting agent,O=P(NCCCl)(NCCCl)O[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O
+CANFOSFAMIDE,CHEMBL2111086,DNA disrupting agent,N[C@@H](CCC(=O)N[C@@H](CS(=O)(=O)CCOP(=O)(N(CCCl)CCCl)N(CCCl)CCCl)C(=O)N[C@@H](C(=O)O)c1ccccc1)C(=O)O
+TRIPLATIN TETRANITRATE,CHEMBL4297208,DNA disrupting agent,
+4-DEMETHYL-4-CHOLESTERYLOXYCARBONYLPENCLOMEDINE,CHEMBL4297253,DNA disrupting agent,COc1nc(C(Cl)(Cl)Cl)c(Cl)c(OC(=O)O[C@H]2CC[C@@]3(C)C(=CC[C@H]4[C@@H]5CC[C@H]([C@H](C)CCCC(C)C)[C@@]5(C)CC[C@@H]43)C2)c1Cl
+KP-1461,CHEMBL4297297,DNA disrupting agent,CCCCCCCOC(=O)NC1=NC(=O)N([C@H]2C[C@H](O)[C@@H](CO)O2)CN1
+PM-00104,CHEMBL4297453,DNA disrupting agent,COc1c(C)cc2c(c1O)[C@@H]1[C@@H]3Cc4c(OC(C)=O)c(C)c5c(c4[C@H](CNC(=O)/C=C/c4cccc(C(F)(F)F)c4)N3[C@@H](O)[C@H](C2)N1C)OCO5
+BI-2536,CHEMBL513909,Serine/threonine-protein kinase PLK1 inhibitor,CC[C@@H]1C(=O)N(C)c2cnc(Nc3ccc(C(=O)NC4CCN(C)CC4)cc3OC)nc2N1C1CCCC1
+NILOTINIB HYDROCHLORIDE MONOHYDRATE,CHEMBL1201740,Bcr/Abl fusion protein inhibitor | Tyrosine-protein kinase ABL inhibitor,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1.Cl.O
+PEVONEDISTAT,CHEMBL1231160,NEDD8 activating enzyme inhibitor,NS(=O)(=O)OC[C@@H]1C[C@@H](n2ccc3c(N[C@H]4CCc5ccccc54)ncnc32)C[C@@H]1O
+VOLASERTIB,CHEMBL1233528,Serine/threonine-protein kinase PLK1 inhibitor,CC[C@@H]1C(=O)N(C)c2cnc(Nc3ccc(C(=O)N[C@H]4CC[C@H](N5CCN(CC6CC6)CC5)CC4)cc3OC)nc2N1C(C)C
+ONVANSERTIB,CHEMBL1738758,Serine/threonine-protein kinase PLK1 inhibitor,CN1CCN(c2ccc(OC(F)(F)F)c(Nc3ncc4c(n3)-c3c(c(C(N)=O)nn3CCO)CC4)c2)CC1
+BOSUTINIB MONOHYDRATE,CHEMBL2095206,Bcr/Abl fusion protein inhibitor,COc1cc(Nc2c(C#N)cnc3cc(OCCCN4CCN(C)CC4)c(OC)cc23)c(Cl)cc1Cl.O
+PONATINIB HYDROCHLORIDE,CHEMBL2105708,Bcr/Abl fusion protein inhibitor,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2cccnn12.Cl
+OLVEREMBATINIB,CHEMBL2316582,Bcr/Abl fusion protein inhibitor,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2[nH]ncc2c1
+RADOTINIB,CHEMBL4297524,Bcr/Abl fusion protein inhibitor,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cnccn5)n4)c3)cc(C(F)(F)F)c2)cn1
+BOSUTINIB,CHEMBL288441,Tyrosine-protein kinase ABL inhibitor | Tyrosine-protein kinase SRC inhibitor,COc1cc(Nc2c(C#N)cnc3cc(OCCCN4CCN(C)CC4)c(OC)cc23)c(Cl)cc1Cl
+MYCOPHENOLIC ACID,CHEMBL866,Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor,COc1c(C)c2c(c(O)c1C/C=C(\C)CCC(=O)O)C(=O)OC2
+BAFETINIB,CHEMBL206834,Tyrosine-protein kinase ABL inhibitor,Cc1ccc(NC(=O)c2ccc(CN3CC[C@H](N(C)C)C3)c(C(F)(F)F)c2)cc1Nc1nccc(-c2cncnc2)n1
+SARACATINIB,CHEMBL217092,Tyrosine-protein kinase ABL inhibitor | Tyrosine-protein kinase SRC inhibitor,CN1CCN(CCOc2cc(OC3CCOCC3)c3c(Nc4c(Cl)ccc5c4OCO5)ncnc3c2)CC1
+AZM-475271,CHEMBL426161,Tyrosine-protein kinase ABL inhibitor | Tyrosine-protein kinase SRC inhibitor,COc1ccc(Cl)c(Nc2ncnc3cc(OCC4CCN(C)CC4)c(OC)cc23)c1
+MYCOPHENOLATE MOFETIL,CHEMBL1456,Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor,COc1c(C)c2c(c(O)c1C/C=C(\C)CCC(=O)OCCN1CCOCC1)C(=O)OC2
+MIZORIBINE,CHEMBL245019,Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor,NC(=O)c1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1O
+TIRBANIBULIN,CHEMBL571546,Tyrosine-protein kinase SRC inhibitor,O=C(Cc1ccc(-c2ccc(OCCN3CCOCC3)cc2)cn1)NCc1ccccc1
+MYCOPHENOLATE MOFETIL HYDROCHLORIDE,CHEMBL1200955,Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor,COc1c(C)c2c(c(O)c1C/C=C(\C)CCC(=O)OCCN1CCOCC1)C(=O)OC2.Cl
+REBASTINIB,CHEMBL1738757,Tyrosine-protein kinase ABL inhibitor,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3cc(C(C)(C)C)nn3-c3ccc4ncccc4c3)c(F)c2)ccn1
+AVN-944,CHEMBL3349001,Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor,CC[C@H](CC#N)OC(=O)N[C@@H](C)c1cccc(NC(=O)Nc2ccc(-c3cnco3)c(OC)c2)c1
+FLUMATINIB,CHEMBL3545413,Tyrosine-protein kinase ABL inhibitor,Cc1ncc(NC(=O)c2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1Nc1nccc(-c2cccnc2)n1
+UMBRALISIB TOSYLATE,CHEMBL3989869,Tyrosine-protein kinase ABL inhibitor,CC(C)Oc1ccc(-c2nn([C@@H](C)c3oc4ccc(F)cc4c(=O)c3-c3cccc(F)c3)c3ncnc(N)c23)cc1F.Cc1ccc(S(=O)(=O)O)cc1
+VODOBATINIB,CHEMBL4130229,Bcr/Abl fusion protein inhibitor | Tyrosine-protein kinase ABL inhibitor,Cc1ccc(C(=O)NNC(=O)c2c(C)cccc2Cl)cc1C#Cc1cnc2ccccc2c1
+ASCIMINIB,CHEMBL4208229,Tyrosine-protein kinase ABL inhibitor,O=C(Nc1ccc(OC(F)(F)Cl)cc1)c1cnc(N2CC[C@@H](O)C2)c(-c2cc[nH]n2)c1
+ASCIMINIB HYDROCHLORIDE,CHEMBL4297220,Bcr/Abl fusion protein inhibitor,Cl.O=C(Nc1ccc(OC(F)(F)Cl)cc1)c1cnc(N2CC[C@@H](O)C2)c(-c2cc[nH]n2)c1
+DASATINIB,CHEMBL5416410,Bcr/Abl fusion protein inhibitor,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1.O
+ORANTINIB,CHEMBL274654,Platelet-derived growth factor receptor inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,Cc1[nH]c(/C=C2\C(=O)Nc3ccccc32)c(C)c1CCC(=O)O
+RIBAVIRIN,CHEMBL1643,RNA inhibitor,NC(=O)c1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)n1
+PATIDEGIB,CHEMBL538867,Smoothened homolog antagonist,CC1=C2C[C@H]3[C@@H](CC[C@@H]4C[C@H](NS(C)(=O)=O)CC[C@@]43C)[C@@H]2CC[C@@]2(C1)O[C@@H]1C[C@H](C)CN[C@H]1[C@H]2C
+SP-420,CHEMBL1092665,Iron sequestering agent,COCCOCCOc1ccc(C2=N[C@@](C)(C(=O)O)CS2)c(O)c1
+GLASDEGIB,CHEMBL2043437,Smoothened homolog antagonist,CN1CC[C@@H](NC(=O)Nc2ccc(C#N)cc2)C[C@@H]1c1nc2ccccc2[nH]1
+MYCOPHENOLATE SODIUM,CHEMBL2106643,Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor,COc1c(C)c2c(c(O)c1C/C=C(\C)CCC(=O)[O-])C(=O)OC2.[Na+]
+TALADEGIB,CHEMBL2142592,Smoothened homolog antagonist,CN(C(=O)c1ccc(F)cc1C(F)(F)F)C1CCN(c2nnc(-c3ccnn3C)c3ccccc23)CC1
+ABAMETAPIR,CHEMBL2205807,Iron sequestering agent,Cc1ccc(-c2ccc(C)cn2)nc1
+NAVTEMADLIN,CHEMBL3125702,Tumour suppressor p53/oncoprotein Mdm2 inhibitor,CC(C)[C@@H](CS(=O)(=O)C(C)C)N1C(=O)[C@@](C)(CC(=O)O)C[C@H](c2cccc(Cl)c2)[C@H]1c1ccc(Cl)cc1
+BMS-833923,CHEMBL3545403,Smoothened homolog antagonist,CNCc1ccc(C)c(NC(=O)c2ccc(Nc3nc(-c4ccccc4)c4ccccc4n3)cc2)c1
+ALRIZOMADLIN,CHEMBL4091801,Tumour suppressor p53/oncoprotein Mdm2 inhibitor,CCN1[C@@H](C(=O)NC23CCC(C(=O)O)(CC2)CC3)[C@H](c2cccc(Cl)c2F)[C@]2(C(=O)Nc3cc(Cl)ccc32)C12CCCCC2
+EMERAMIDE,CHEMBL4297510,Iron sequestering agent,O=C(NCCS)c1cccc(C(=O)NCCS)c1
+GLASDEGIB MALEATE,CHEMBL4297534,Smoothened homolog antagonist,CN1CC[C@@H](NC(=O)Nc2ccc(C#N)cc2)C[C@@H]1c1nc2ccccc2[nH]1.O=C(O)/C=C\C(=O)O
+TIPIFARNIB,CHEMBL289228,Protein farnesyltransferase inhibitor,Cn1cncc1[C@@](N)(c1ccc(Cl)cc1)c1ccc2c(c1)c(-c1cccc(Cl)c1)cc(=O)n2C
+LONAFARNIB,CHEMBL298734,Protein farnesyltransferase inhibitor,NC(=O)N1CCC(CC(=O)N2CCC([C@H]3c4ncc(Br)cc4CCc4cc(Cl)cc(Br)c43)CC2)CC1
+R-112,CHEMBL515271,Tyrosine-protein kinase SYK inhibitor,Oc1cccc(Nc2ncc(F)c(Nc3cccc(O)c3)n2)c1
+R-406,CHEMBL475251,Tyrosine-protein kinase SYK inhibitor,COc1cc(Nc2ncc(F)c(Nc3ccc4c(n3)NC(=O)C(C)(C)O4)n2)cc(OC)c1OC
+NAVITOCLAX,CHEMBL443684,Apoptosis regulator Bcl-2 inhibitor,CC1(C)CCC(c2ccc(Cl)cc2)=C(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(N[C@H](CCN5CCOCC5)CSc5ccccc5)c(S(=O)(=O)C(F)(F)F)c4)cc3)CC2)C1
+FOSTAMATINIB,CHEMBL2103830,Tyrosine-protein kinase SYK inhibitor,COc1cc(Nc2ncc(F)c(Nc3ccc4c(n3)N(COP(=O)(O)O)C(=O)C(C)(C)O4)n2)cc(OC)c1OC
+OBATOCLAX MESYLATE,CHEMBL2107358,Apoptosis regulator Bcl-2 inhibitor,COC1=CC(c2cc3ccccc3[nH]2)=N/C1=C\c1[nH]c(C)cc1C.CS(=O)(=O)O
+R-343,CHEMBL2170582,Tyrosine-protein kinase SYK inhibitor,CNC(=O)COc1cccc(Nc2ncc(F)c(Nc3ccc4c(c3)NC(=O)C(F)(F)O4)n2)c1
+IDASANUTLIN,CHEMBL2402737,Tumour suppressor p53/oncoprotein Mdm2 inhibitor,COc1cc(C(=O)O)ccc1NC(=O)[C@@H]1N[C@@H](CC(C)(C)C)[C@](C#N)(c2ccc(Cl)cc2F)[C@H]1c1cccc(Cl)c1F
+VENETOCLAX,CHEMBL3137309,Apoptosis regulator Bcl-2 inhibitor,CC1(C)CCC(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(NCC5CCOCC5)c([N+](=O)[O-])c4)c(Oc4cnc5[nH]ccc5c4)c3)CC2)=C(c2ccc(Cl)cc2)C1
+ENTOSPLETINIB,CHEMBL3265032,Tyrosine-protein kinase SYK inhibitor,c1cn2cc(-c3ccc4cn[nH]c4c3)nc(Nc3ccc(N4CCOCC4)cc3)c2n1
+SIREMADLIN,CHEMBL3653256,Tumour suppressor p53/oncoprotein Mdm2 inhibitor,COc1ncc(-c2nc3c(n2C(C)C)[C@H](c2ccc(Cl)cc2)N(c2cc(Cl)cn(C)c2=O)C3=O)c(OC)n1
+FOSTAMATINIB DISODIUM,CHEMBL3989516,Tyrosine-protein kinase SYK inhibitor,COc1cc(Nc2ncc(F)c(Nc3ccc4c(n3)N(COP(=O)([O-])[O-])C(=O)C(C)(C)O4)n2)cc(OC)c1OC.O.O.O.O.O.O.[Na+].[Na+]
+CERDULATINIB,CHEMBL4116008,Tyrosine-protein kinase SYK inhibitor,CCS(=O)(=O)N1CCN(c2ccc(Nc3ncc(C(N)=O)c(NC4CC4)n3)cc2)CC1
+MIVAVOTINIB CITRATE,CHEMBL4594253,Tyrosine-protein kinase SYK inhibitor,Cn1cc(-c2nc(N[C@@H]3CCCC[C@@H]3N)c(F)c3c2C(=O)NC3)cn1.O=C(O)CC(O)(CC(=O)O)C(=O)O
+SOVLEPLENIB,CHEMBL5095034,Tyrosine-protein kinase SYK inhibitor,CS(=O)(=O)N1CCC(c2ccc(-c3ncc4nccnc4c3NC[C@@H]3CNCCO3)cc2)CC1
+R-348,CHEMBL5314384,Tyrosine-protein kinase SYK inhibitor,C#CCOc1ccc(Nc2nc(Nc3ccc(C)c(S(=O)(=O)NC(=O)CC)c3)ncc2F)cc1
+TRIMETHOPRIM,CHEMBL22,Bacterial dihydrofolate reductase inhibitor,COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OC
+PYRIMETHAMINE,CHEMBL36,Dihydrofolate reductase inhibitor,CCc1nc(N)nc(N)c1-c1ccc(Cl)cc1
+METHOTREXATE,CHEMBL34259,Dihydrofolate reductase inhibitor,CN(Cc1cnc2nc(N)nc(N)c2n1)c1ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc1
+CO-TRIMOXAZOLE,CHEMBL58061,Bacterial dihydrofolate reductase inhibitor,COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OC.Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1
+AMINOSALICYLIC ACID,CHEMBL1169,Dihydrofolate reductase inhibitor,Nc1ccc(C(=O)O)c(O)c1
+ICLAPRIM,CHEMBL134561,Bacterial dihydrofolate reductase inhibitor,COc1cc(Cc2cnc(N)nc2N)c2c(c1OC)OC(C1CC1)C=C2
+AMINOSALICYLATE POTASSIUM,CHEMBL1200584,Dihydrofolate reductase inhibitor,Nc1ccc(C(=O)[O-])c(O)c1.[K+]
+PROGUANIL HYDROCHLORIDE,CHEMBL1201059,Dihydrofolate reductase inhibitor,CC(C)NC(=N)NC(=N)Nc1ccc(Cl)cc1.Cl
+TRIMETHOPRIM HYDROCHLORIDE,CHEMBL1201080,Bacterial dihydrofolate reductase inhibitor,COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OC.Cl
+PRALATREXATE,CHEMBL1201746,Dihydrofolate reductase inhibitor,C#CCC(Cc1cnc2nc(N)nc(N)c2n1)c1ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc1
+AMINOSALICYLATE SODIUM,CHEMBL2096646,Dihydrofolate reductase inhibitor,Nc1ccc(C(=O)[O-])c(O)c1.O.O.[Na+]
+TRIMETHOPRIM SULFATE,CHEMBL2110367,Bacterial dihydrofolate reductase inhibitor,COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OC.COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OC.O=S(=O)(O)O
+TRIMETREXATE GLUCURONATE,CHEMBL2218878,Dihydrofolate reductase inhibitor,COc1cc(NCc2ccc3nc(N)nc(N)c3c2C)cc(OC)c1OC.O=C(O)[C@H]1O[C@H](O)[C@H](O)[C@@H](O)[C@@H]1O
+PEMETREXED DISODIUM,CHEMBL2360464,Dihydrofolate reductase inhibitor,Nc1nc2[nH]cc(CCc3ccc(C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-])cc3)c2c(=O)[nH]1.[Na+].[Na+]
+METHOTREXATE SODIUM,CHEMBL3244648,Dihydrofolate reductase inhibitor,CN(Cc1cnc2nc(N)nc(N)c2n1)c1ccc(C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-])cc1.[Na+].[Na+]
+BEMCENTINIB,CHEMBL3809489,Tyrosine-protein kinase receptor UFO inhibitor,Nc1nc(Nc2ccc3c(c2)CC[C@@H](N2CCCC2)CC3)nn1-c1cc2c(nn1)-c1ccccc1CCC2
+LANRAPLENIB,CHEMBL3986824,Tyrosine-protein kinase SYK inhibitor,Nc1cncc(-c2cn3ccnc3c(Nc3ccc(N4CCN(C5COC5)CC4)cc3)n2)n1
+CYCLOGUANIL PAMOATE,CHEMBL3989825,Dihydrofolate reductase inhibitor,CC1(C)N=C(N)N=C(N)N1c1ccc(Cl)cc1.CC1(C)N=C(N)N=C(N)N1c1ccc(Cl)cc1.O=C(O)c1cc2ccccc2c(Cc2c(O)c(C(=O)O)cc3ccccc23)c1O
+GUSACITINIB,CHEMBL4594275,Tyrosine-protein kinase SYK inhibitor,N#CCC1CCN(c2nc(Nc3ccc(N4CCC(O)CC4)cc3)c3c(=O)[nH]ncc3n2)CC1
+PIRITREXIM,CHEMBL7492,Dihydrofolate reductase inhibitor,COc1ccc(OC)c(Cc2cnc3nc(N)nc(N)c3c2C)c1
+GEFITINIB,CHEMBL939,Epidermal growth factor receptor erbB1 inhibitor,COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCN1CCOCC1
+PEMETREXED,CHEMBL225072,Dihydrofolate reductase inhibitor,Nc1nc2[nH]cc(CCc3ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc3)c2c(=O)[nH]1
+FALNIDAMOL,CHEMBL258940,Epidermal growth factor receptor erbB1 inhibitor,CN1CCC(Nc2ncc3ncnc(Nc4ccc(F)c(Cl)c4)c3n2)CC1
+ERLOTINIB HYDROCHLORIDE,CHEMBL1079742,Epidermal growth factor receptor erbB1 inhibitor,C#Cc1cccc(Nc2ncnc3cc(OCCOC)c(OCCOC)cc23)c1.Cl
+LAPATINIB DITOSYLATE,CHEMBL1201179,Epidermal growth factor receptor erbB1 inhibitor,CS(=O)(=O)CCNCc1ccc(-c2ccc3ncnc(Nc4ccc(OCc5cccc(F)c5)c(Cl)c4)c3c2)o1.Cc1ccc(S(=O)(=O)O)cc1.Cc1ccc(S(=O)(=O)O)cc1.O
+ALLITINIB,CHEMBL1947204,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1ccc2ncnc(Nc3ccc(OCc4cccc(F)c4)c(Cl)c3)c2c1
+AFATINIB DIMALEATE,CHEMBL2105712,Epidermal growth factor receptor erbB1 inhibitor,CN(C)C/C=C/C(=O)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cc1O[C@H]1CCOC1.O=C(O)/C=C\C(=O)O.O=C(O)/C=C\C(=O)O
+OSIMERTINIB MESYLATE,CHEMBL3545063,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C.CS(=O)(=O)O
+SELINEXOR,CHEMBL3545185,Exportin-1 inhibitor,O=C(/C=C\n1cnc(-c2cc(C(F)(F)F)cc(C(F)(F)F)c2)n1)NNc1cnccn1
+OLMUTINIB,CHEMBL3786343,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cccc(Oc2nc(Nc3ccc(N4CCN(C)CC4)cc3)nc3ccsc23)c1
+PEMETREXED TROMETHAMINE,CHEMBL3989962,Dihydrofolate reductase inhibitor,NC(CO)(CO)CO.NC(CO)(CO)CO.Nc1nc(=O)c2c(CCc3ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc3)c[nH]c2[nH]1.O.O
+PEMETREXED MONOHYDRATE,CHEMBL5315053,Dihydrofolate reductase inhibitor,Nc1nc2[nH]cc(CCc3ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc3)c2c(=O)[nH]1.O
+PEMETREXED DIPOTASSIUM,CHEMBL6068329,Dihydrofolate reductase inhibitor,Nc1nc2[nH]cc(CCc3ccc(C(=O)N[C@@H](CCC(=O)[O-])C(=O)[O-])cc3)c2c(=O)[nH]1.[K+].[K+]
+NERATINIB,CHEMBL180022,Epidermal growth factor receptor erbB1 inhibitor,CCOc1cc2ncc(C#N)c(Nc3ccc(OCc4ccccn4)c(Cl)c3)c2cc1NC(=O)/C=C/CN(C)C
+CANERTINIB DIHYDROCHLORIDE,CHEMBL545315,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cc1OCCCN1CCOCC1.Cl.Cl
+AEE-788,CHEMBL587723,Epidermal growth factor receptor erbB1 inhibitor | Vascular endothelial growth factor receptor 2 inhibitor,CCN1CCN(Cc2ccc(-c3cc4c(N[C@H](C)c5ccccc5)ncnc4[nH]3)cc2)CC1
+PELITINIB,CHEMBL607707,Epidermal growth factor receptor erbB1 inhibitor,CCOc1cc2ncc(C#N)c(Nc3ccc(F)c(Cl)c3)c2cc1NC(=O)/C=C/CN(C)C
+VARLITINIB,CHEMBL2103842,Epidermal growth factor receptor erbB1 inhibitor,C[C@@H]1COC(Nc2ccc3ncnc(Nc4ccc(OCc5nccs5)c(Cl)c4)c3c2)=N1
+DACOMITINIB,CHEMBL2105719,Epidermal growth factor receptor erbB1 inhibitor,COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1NC(=O)/C=C/CN1CCCCC1.O
+SAPITINIB,CHEMBL2408045,Epidermal growth factor receptor erbB1 inhibitor,CNC(=O)CN1CCC(Oc2cc3c(Nc4cccc(Cl)c4F)ncnc3cc2OC)CC1
+OSIMERTINIB,CHEMBL3353410,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C
+TESEVATINIB,CHEMBL3544983,Epidermal growth factor receptor erbB1 inhibitor,COc1cc2c(Nc3ccc(Cl)c(Cl)c3F)ncnc2cc1OC[C@@H]1C[C@@H]2CN(C)C[C@@H]2C1
+SIMOTINIB,CHEMBL3545235,Epidermal growth factor receptor erbB1 inhibitor,COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCN1CC2(CC2)C2(C1)OCCO2
+ROCILETINIB,CHEMBL3545308,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cccc(Nc2nc(Nc3ccc(N4CCN(C(C)=O)CC4)cc3OC)ncc2C(F)(F)F)c1
+BRIGATINIB,CHEMBL3545311,Epidermal growth factor receptor erbB1 inhibitor,COc1cc(N2CCC(N3CCN(C)CC3)CC2)ccc1Nc1ncc(Cl)c(Nc2ccccc2P(C)(C)=O)n1
+PYROTINIB,CHEMBL3647420,Epidermal growth factor receptor erbB1 inhibitor,CCOc1cc2ncc(C#N)c(Nc3ccc(OCc4ccccn4)c(Cl)c3)c2cc1NC(=O)/C=C/[C@H]1CCCN1C
+NAZARTINIB,CHEMBL3787344,Epidermal growth factor receptor erbB1 inhibitor,Cc1cc(C(=O)Nc2nc3cccc(Cl)c3n2[C@@H]2CCCCN(C(=O)/C=C/CN(C)C)C2)ccn1
+THELIATINIB,CHEMBL5314410,Epidermal growth factor receptor erbB1 inhibitor,C#Cc1cccc(Nc2ncnc3cc(OC)c(NC(=O)N4C[C@H]5CCN(C)[C@H]5C4)cc23)c1
+ICOTINIB,CHEMBL2087361,Epidermal growth factor receptor erbB1 inhibitor,C#Cc1cccc(Nc2ncnc3cc4c(cc23)OCCOCCOCCO4)c1
+DACOMITINIB ANHYDROUS,CHEMBL2110732,Epidermal growth factor receptor erbB1 inhibitor,COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1NC(=O)/C=C/CN1CCCCC1
+AZD-3759,CHEMBL3623290,Epidermal growth factor receptor erbB1 inhibitor,COc1cc2ncnc(Nc3cccc(Cl)c3F)c2cc1OC(=O)N1CCN(C)C[C@H]1C
+NAQUOTINIB,CHEMBL3663929,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)N1CC[C@@H](Oc2nc(Nc3ccc(N4CCC(N5CCN(C)CC5)CC4)cc3)c(C(N)=O)nc2CC)C1
+PF-06459988,CHEMBL3786098,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)N1C[C@H](COc2nc(Nc3cnn(C)c3)nc3[nH]cc(Cl)c23)[C@@H](OC)C1
+NERATINIB MALEATE,CHEMBL3989921,Epidermal growth factor receptor erbB1 inhibitor,CCOc1cc2ncc(C#N)c(Nc3ccc(OCc4ccccn4)c(Cl)c3)c2cc1NC(=O)/C=C/CN(C)C.O=C(O)/C=C\C(=O)O
+MAVELERTINIB,CHEMBL3989970,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)N[C@@H]1CN(c2nc(Nc3cn(C)nc3OC)c3ncn(C)c3n2)C[C@H]1F
+FIRMONERTINIB,CHEMBL4297258,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C)c4ccccc34)n2)c(OCC(F)(F)F)nc1N(C)CCN(C)C
+ABIVERTINIB,CHEMBL4297865,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cccc(Oc2nc(Nc3ccc(N4CCN(C)CC4)c(F)c3)nc3[nH]ccc23)c1
+ABIVERTINIB MALEATE,CHEMBL4297866,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cccc(Oc2nc(Nc3ccc(N4CCN(C)CC4)c(F)c3)nc3[nH]ccc23)c1.O.O.O=C(O)/C=C\C(=O)O
+CLN-081,CHEMBL4650281,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)N[C@H]1C=C(C)c2c(-c3cnc4ccccc4c3)c3c(N)ncnc3n2C1
+AUMOLERTINIB,CHEMBL4761468,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cc(Nc2nccc(-c3cn(C4CC4)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C
+TRETINOIN,CHEMBL38,Retinoic acid receptor agonist,CC1=C(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)C(C)(C)CCC1
+ISOTRETINOIN,CHEMBL547,Retinoic acid receptor agonist,CC1=C(/C=C/C(C)=C/C=C/C(C)=C\C(=O)O)C(C)(C)CCC1
+ADAPALENE,CHEMBL1265,Retinoic acid receptor agonist,COc1ccc(-c2ccc3cc(C(=O)O)ccc3c2)cc1C12CC3CC(CC(C3)C1)C2
+TAZAROTENE,CHEMBL1657,Retinoic acid receptor agonist,CCOC(=O)c1ccc(C#Cc2ccc3c(c2)C(C)(C)CCS3)nc1
+ENASIDENIB MESYLATE,CHEMBL3989931,"Isocitrate dehydrogenase [NADP], mitochondrial inhibitor",CC(C)(O)CNc1nc(Nc2ccnc(C(F)(F)F)c2)nc(-c2cccc(C(F)(F)F)n2)n1.CS(=O)(=O)O
+IVOSIDENIB,CHEMBL3989958,Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor,N#Cc1ccnc(N2C(=O)CC[C@H]2C(=O)N(c2cncc(F)c2)[C@H](C(=O)NC2CC(F)(F)C2)c2ccccc2Cl)c1
+OLUTASIDENIB,CHEMBL4297610,Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor,C[C@H](Nc1ccc(C#N)n(C)c1=O)c1cc2cc(Cl)ccc2[nH]c1=O
+LAZERTINIB,CHEMBL4558324,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cc(Nc2nccc(-n3cc(CN(C)C)c(-c4ccccc4)n3)n2)c(OC)cc1N1CCOCC1
+DS-1001B,CHEMBL4650282,Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor,CC(C)(C)N.Cc1cn(C(=O)c2c(-c3c(Cl)cc(Cl)cc3Cl)noc2C(C)(C)F)c2cccc(/C=C/C(=O)O)c12
+MOBOCERTINIB,CHEMBL4650319,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cc(Nc2ncc(C(=O)OC(C)C)c(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C
+MOBOCERTINIB SUCCINATE,CHEMBL4802239,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cc(Nc2ncc(C(=O)OC(C)C)c(-c3cn(C)c4ccccc34)n2)c(OC)cc1N(C)CCN(C)C.O=C(O)CCC(=O)O
+LAZERTINIB MESYLATE,CHEMBL6068478,Epidermal growth factor receptor erbB1 inhibitor,C=CC(=O)Nc1cc(Nc2nccc(-n3cc(CN(C)C)c(-c4ccccc4)n3)n2)c(OC)cc1N1CCOCC1.CS(=O)(=O)O.O
+PACLITAXEL,CHEMBL428647,Tubulin inhibitor,CC(=O)O[C@H]1C(=O)[C@@]2(C)[C@H]([C@H](OC(=O)c3ccccc3)[C@]3(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)c4ccccc4)c4ccccc4)C(C)=C1C3(C)C)[C@]1(OC(C)=O)CO[C@@H]1C[C@@H]2O
+RIVIPANSEL,CHEMBL3707446,Selectin E antagonist,C[C@@H]1O[C@@H](O[C@@H]2[C@@H](NC(=O)c3cc(=O)[nH]c(=O)[nH]3)C[C@@H](C(=O)NCCNC(=O)COCCOCC(=O)Nc3cc(S(=O)(=O)O)cc4cc(S(=O)(=O)O)cc(S(=O)(=O)O)c34)C[C@H]2O[C@@H]2O[C@H](CO)[C@H](O)[C@H](O[C@@H](CC3CCCCC3)C(=O)O)[C@H]2OC(=O)c2ccccc2)[C@@H](O)[C@H](O)[C@@H]1O
+UPROLESELAN,CHEMBL3989971,Selectin E antagonist,CC[C@H]1C[C@@H](C(=O)NCCNC(=O)CCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOCCOC)C[C@@H](O[C@@H]2O[C@H](CO)[C@H](O)[C@H](O[C@@H](CC3CCCCC3)C(=O)O)[C@H]2NC(C)=O)[C@@H]1O[C@@H]1O[C@@H](C)[C@@H](O)[C@@H](O)[C@@H]1O
+IDH305,CHEMBL4167360,Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor,Cc1cc([C@H](C)Nc2nccc(N3C(=O)OC[C@@H]3[C@@H](C)F)n2)ncc1-c1ccnc(C(F)(F)F)c1
+COLCHICINE,CHEMBL107,Tubulin inhibitor,COc1cc2c(c(OC)c1OC)-c1ccc(OC)c(=O)cc1[C@@H](NC(C)=O)CC2
+GRISEOFULVIN,CHEMBL562,Tubulin inhibitor,COC1=CC(=O)C[C@@H](C)[C@]12Oc1c(Cl)c(OC)cc(OC)c1C2=O
+THIABENDAZOLE,CHEMBL625,Tubulin inhibitor,c1ccc2[nH]c(-c3cscn3)nc2c1
+MEBENDAZOLE,CHEMBL685,Tubulin inhibitor,COC(=O)Nc1nc2cc(C(=O)c3ccccc3)ccc2[nH]1
+FOSBRETABULIN DISODIUM,CHEMBL289351,Tubulin inhibitor,COc1ccc(/C=C\c2cc(OC)c(OC)c(OC)c2)cc1OP(=O)([O-])[O-].[Na+].[Na+]
+INDIBULIN,CHEMBL49642,Tubulin inhibitor,O=C(Nc1ccncc1)C(=O)c1cn(Cc2ccc(Cl)cc2)c2ccccc12
+VINBLASTINE SULFATE,CHEMBL378544,Tubulin inhibitor,CC[C@]1(O)C[C@@H]2CN(CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C)[C@H]3[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1.O=S(=O)(O)O
+ALBENDAZOLE,CHEMBL1483,Tubulin inhibitor,CCCSc1ccc2[nH]c(NC(=O)OC)nc2c1
+VINCRISTINE SULFATE,CHEMBL501867,Tubulin inhibitor,CC[C@]1(O)C[C@H]2CN(CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C=O)[C@H]3[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1.O=S(=O)(O)O
+LEXIBULIN,CHEMBL552212,Tubulin inhibitor,CCC[C@H](Nc1nc(-c2ccc(NC(=O)NCC)c(OC)c2)ncc1C)c1cccnc1
+VINORELBINE TARTRATE,CHEMBL538943,Tubulin inhibitor,CCC1=C[C@@H]2CN(C1)Cc1c([nH]c3ccccc13)[C@@](C(=O)OC)(c1cc3c(cc1OC)N(C)[C@H]1[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]4(CC)C=CCN5CC[C@]31[C@@H]54)C2.O=C(O)C(O)C(O)C(=O)O.O=C(O)C(O)C(O)C(=O)O
+PLINABULIN,CHEMBL1096380,Tubulin inhibitor,CC(C)(C)c1[nH]cnc1/C=c1\[nH]c(=O)/c(=C/c2ccccc2)[nH]c1=O
+CABAZITAXEL,CHEMBL1201748,Tubulin inhibitor,CO[C@H]1C(=O)[C@]2(C)[C@@H](OC)C[C@H]3OC[C@@]3(OC(C)=O)[C@H]2[C@H](OC(=O)c2ccccc2)[C@]2(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)c3ccccc3)C(C)=C1C2(C)C
+IXABEPILONE,CHEMBL1201752,Tubulin inhibitor,C/C(=C\c1csc(C)n1)[C@@H]1C[C@@H]2O[C@]2(C)CCC[C@H](C)[C@H](O)[C@@H](C)C(=O)C(C)(C)[C@@H](O)CC(=O)N1
+ERIBULIN MESYLATE,CHEMBL1683544,Tubulin inhibitor,C=C1C[C@@H]2CC[C@@]34C[C@H]5O[C@H]6[C@@H](O3)[C@H]3O[C@H](CC[C@@H]3O[C@H]6[C@H]5O4)CC(=O)C[C@@H]3[C@@H](OC)[C@@H](C[C@H](O)CN)O[C@H]3C[C@H]3O[C@@H](CC[C@@H]1O2)C[C@@H](C)C3=C.CS(=O)(=O)O
+CROLIBULIN,CHEMBL2103852,Tubulin inhibitor,COc1cc([C@H]2C(C#N)=C(N)Oc3c2ccc(N)c3N)cc(Br)c1OC
+VINFLUNINE,CHEMBL2110725,Tubulin inhibitor,CC[C@]12C=CCN3CC[C@@]4(c5cc([C@@]6(C(=O)OC)C[C@@H]7C[C@@H](C(C)(F)F)CN(Cc8c6[nH]c6ccccc86)C7)c(OC)cc5N(C)[C@H]4[C@@](O)(C(=O)OC)[C@@H]1OC(C)=O)[C@@H]32
+DOCETAXEL,CHEMBL3545252,Tubulin inhibitor,CC(=O)O[C@@]12CO[C@@H]1C[C@H](O)[C@@]1(C)C(=O)[C@H](O)C3=C(C)[C@@H](OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)c4ccccc4)C[C@@](O)([C@@H](OC(=O)c4ccccc4)[C@H]21)C3(C)C.O.O.O
+DOLASTATIN-10,CHEMBL39541,Tubulin inhibitor,CC[C@H](C)[C@@H]([C@@H](CC(=O)N1CCC[C@H]1[C@H](OC)[C@@H](C)C(=O)N[C@@H](Cc1ccccc1)c1nccs1)OC)N(C)C(=O)[C@@H](NC(=O)[C@H](C(C)C)N(C)C)C(C)C
+OXFENDAZOLE,CHEMBL42442,Tubulin inhibitor,COC(=O)Nc1nc2cc([S+]([O-])c3ccccc3)ccc2[nH]1
+OMBRABULIN,CHEMBL572284,Tubulin inhibitor,COc1ccc(/C=C\c2cc(OC)c(OC)c(OC)c2)cc1NC(=O)[C@@H](N)CO
+VINFLUNINE DITARTRATE,CHEMBL2105629,Tubulin inhibitor,CC[C@]12C=CCN3CC[C@@]4(c5cc([C@@]6(C(=O)OC)C[C@@H]7C[C@@H](C(C)(F)F)CN(Cc8c6[nH]c6ccccc86)C7)c(OC)cc5N(C)[C@H]4[C@@](O)(C(=O)OC)[C@@H]1OC(C)=O)[C@@H]32.O=C(O)C(O)C(O)C(=O)O.O=C(O)C(O)C(O)C(=O)O
+MILATAXEL,CHEMBL2107759,Tubulin inhibitor,CCC(=O)O[C@H]1C[C@H]2OC[C@@]2(OC(C)=O)C2[C@H](OC(=O)c3ccccc3)[C@]3(O)C[C@H](OC(=O)[C@H](O)[C@@H](CC(=O)OC(C)(C)C)c4ccco4)C(C)=C([C@@H](O)C(=O)[C@@]21C)C3(C)C
+SOBLIDOTIN,CHEMBL3989512,Tubulin inhibitor,CC[C@H](C)[C@@H]([C@@H](CC(=O)N1CCC[C@H]1[C@H](OC)[C@@H](C)C(=O)NCCc1ccccc1)OC)N(C)C(=O)[C@@H](NC(=O)[C@H](C(C)C)N(C)C)C(C)C
+PLOCABULIN,CHEMBL4297636,Tubulin inhibitor,C/C=C\C[C@@H](C/C=C\NC(=O)[C@@H](NC(=O)/C=C\C=C/C(C)=C/[C@H](C)[C@@H]1CC=C(OC)C(=O)O1)C(C)(C)C)OC(N)=O
+UCN-01,CHEMBL574737,Protein kinase C (PKC) inhibitor,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+SOTRASTAURIN,CHEMBL565612,Protein kinase C (PKC) inhibitor,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+ARRY-382,CHEMBL3644252,Macrophage colony stimulating factor receptor inhibitor,Cc1cccc(Cn2nc(C3CC3)c3c(NC(=O)c4cnc5cc(OCCN6CCN(C)CC6)ccn45)cccc32)n1
+EDICOTINIB,CHEMBL3674570,Macrophage colony stimulating factor receptor inhibitor,CC1(C)CC=C(c2nc(C3CC(C)(C)OC(C)(C)C3)ccc2NC(=O)c2nc(C#N)c[nH]2)CC1
+CARVEDILOL,CHEMBL723,Adrenergic receptor alpha-1 antagonist | Adrenergic receptor beta antagonist,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12
+OSI-632,CHEMBL253969,Vascular endothelial growth factor receptor 2 inhibitor,NC(=O)c1c(OCc2c(F)cc(Br)cc2F)nsc1NC(=O)NCCCCN1CCCC1
+DOXAZOSIN MESYLATE,CHEMBL1200561,Adrenergic receptor alpha-1 antagonist,COc1cc2nc(N3CCN(C(=O)C4COc5ccccc5O4)CC3)nc(N)c2cc1OC.CS(=O)(=O)O
+TRIMIPRAMINE MALEATE,CHEMBL1200948,Adrenergic receptor alpha-1 antagonist,CC(CN(C)C)CN1c2ccccc2CCc2ccccc21.O=C(O)/C=C\C(=O)O
+CABOZANTINIB S-MALATE,CHEMBL2103868,Vascular endothelial growth factor receptor 2 inhibitor,COc1cc2nccc(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3)c2cc1OC.O=C(O)C[C@H](O)C(=O)O
+GOLVATINIB,CHEMBL3039525,Vascular endothelial growth factor receptor 2 inhibitor,CN1CCN(C2CCN(C(=O)Nc3cc(Oc4ccc(NC(=O)C5(C(=O)Nc6ccc(F)cc6)CC5)c(F)c4)ccn3)CC2)CC1
+ALTIRATINIB,CHEMBL3545365,Vascular endothelial growth factor receptor 2 inhibitor,O=C(Nc1cc(Oc2cc(F)c(NC(=O)C3(C(=O)Nc4ccc(F)cc4)CC3)cc2F)ccn1)C1CC1
+RIVOCERANIB MESYLATE,CHEMBL3545414,Vascular endothelial growth factor receptor 2 inhibitor,CS(=O)(=O)O.N#CC1(c2ccc(NC(=O)c3cccnc3NCc3ccncc3)cc2)CCCC1
+BFH-772,CHEMBL4080062,Vascular endothelial growth factor receptor 2 inhibitor,O=C(Nc1cccc(C(F)(F)F)c1)c1cccc2cc(Oc3cc(CO)ncn3)ccc12
+THALIDOMIDE,CHEMBL468,CRL4(CRBN) E3 ubiquitin ligase inhibitor,O=C1CCC(N2C(=O)c3ccccc3C2=O)C(=O)N1
+SERTINDOLE,CHEMBL12713,Adrenergic receptor alpha-1 antagonist,O=C1NCCN1CCN1CCC(c2cn(-c3ccc(F)cc3)c3ccc(Cl)cc23)CC1
+VORINOSTAT,CHEMBL98,Histone deacetylase 1 inhibitor | Histone deacetylase 2 inhibitor | Histone deacetylase 3 inhibitor | Histone deacetylase 6 inhibitor,O=C(CCCCCCC(=O)Nc1ccccc1)NO
+POMALIDOMIDE,CHEMBL43452,CRL4(CRBN) E3 ubiquitin ligase inhibitor,Nc1cccc2c1C(=O)N(C1CCC(=O)NC1=O)C2=O
+LENALIDOMIDE,CHEMBL848,CRL4(CRBN) E3 ubiquitin ligase inhibitor,Nc1cccc2c1CN(C1CCC(=O)NC1=O)C2=O
+BUNAZOSIN,CHEMBL188185,Adrenergic receptor alpha-1 antagonist,CCCC(=O)N1CCCN(c2nc(N)c3cc(OC)c(OC)cc3n2)CC1
+MOCETINOSTAT,CHEMBL272980,Histone deacetylase 1 inhibitor | Histone deacetylase 2 inhibitor | Histone deacetylase 3 inhibitor,Nc1ccccc1NC(=O)c1ccc(CNc2nccc(-c3cccnc3)n2)cc1
+PRAZOSIN HYDROCHLORIDE,CHEMBL1558,Adrenergic receptor alpha-1 antagonist,COc1cc2nc(N3CCN(C(=O)c4ccco4)CC3)nc(N)c2cc1OC.Cl
+TAMSULOSIN HYDROCHLORIDE,CHEMBL1200914,Adrenergic receptor alpha-1 antagonist,CCOc1ccccc1OCCN[C@H](C)Cc1ccc(OC)c(S(N)(=O)=O)c1.Cl
+CARTEOLOL HYDROCHLORIDE,CHEMBL1201002,Adrenergic receptor beta antagonist,CC(C)(C)NCC(O)COc1cccc2c1CCC(=O)N2.Cl
+CARVEDILOL PHOSPHATE,CHEMBL1201167,Adrenergic receptor alpha-1 antagonist | Adrenergic receptor beta antagonist,COc1ccccc1OCCNCC(O)COc1cccc2[nH]c3ccccc3c12.O=P(O)(O)O
+DILEVALOL HYDROCHLORIDE,CHEMBL1204165,Adrenergic receptor beta antagonist,C[C@H](CCc1ccccc1)NC[C@H](O)c1ccc(O)c(C(N)=O)c1.Cl
+BUCINDOLOL HYDROCHLORIDE,CHEMBL2107546,Adrenergic receptor alpha-1 antagonist,CC(C)(Cc1c[nH]c2ccccc12)NCC(O)COc1ccccc1C#N.Cl
+RICOLINOSTAT,CHEMBL2364628,Histone deacetylase 6 inhibitor,O=C(CCCCCCNC(=O)c1cnc(N(c2ccccc2)c2ccccc2)nc1)NO
+TERAZOSIN HYDROCHLORIDE,CHEMBL3989562,Adrenergic receptor alpha-1 antagonist,COc1cc2nc(N3CCN(C(=O)C4CCCO4)CC3)nc(N)c2cc1OC.Cl.O.O

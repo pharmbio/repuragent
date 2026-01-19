@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Midostaurin,Kinase inhibitor (PKC/FLT3 inhibitor),Inhibits FLT3 and PKC signaling kinases to reduce proliferative signaling in AML cells,0.3,3.0,µM,Approved in AML; range given as 0.3 nM–3 µM (top 1–3 µM)
+Sorafenib,Multi-kinase inhibitor,Inhibits FLT3/RAF/VEGFR-family kinases to suppress oncogenic signaling,0.5,3.0,µM,Used off-label in FLT3-ITD AML; range given as 0.5 nM–3 µM
+Sunitinib,Multi-kinase inhibitor,Inhibits multiple receptor tyrosine kinases including FLT3,1.0,10.0,µM,Range given as 1 nM–10 µM
+Pazopanib,Multi-kinase inhibitor,Inhibits multiple tyrosine kinases involved in growth/survival signaling,3.0,30.0,µM,Text notes 'some AML activity reports'; range given as 3 nM–30 µM
+Dasatinib,Tyrosine kinase inhibitor (SRC/ABL family),"Inhibits SRC-family and ABL kinases, impacting AML signaling networks",0.3,3.0,µM,Range given as 0.3 nM–3 µM
+Ruxolitinib,JAK inhibitor (JAK1/2),Inhibits JAK1/2 to reduce JAK-STAT pathway signaling driven by cytokines,3.0,10.0,µM,Text notes combos often better; range given as 3 nM–10 µM
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases to alter chromatin/transcription and promote growth arrest/apoptosis,10.0,30.0,µM,Alternative name in text: SAHA; approved in CTCL; tested in AML; range given as 10 nM–30 µM
+Panobinostat,HDAC inhibitor,Pan-HDAC inhibition leading to epigenetic/transcriptional disruption and anti-proliferative effects,0.3,1.0,µM,Approved in myeloma; described as potent; range given as 0.3 nM–1 µM
+Valproic acid,HDAC inhibitor,Weak HDAC inhibition leading to epigenetic modulation,0.1,10.0,mM,Repurposed in AML trials historically; note in text: high range due to low in vitro potency
+Azacitidine,DNA hypomethylating agent (nucleoside analog),"Incorporates into nucleic acids and inhibits DNMTs, reducing DNA methylation",1.0,10.0,µM,Approved in AML/MDS; range given as 1 nM–10 µM; chemically unstable per notes (prepare fresh)
+Decitabine,DNA hypomethylating agent (nucleoside analog),"Inhibits DNMTs after incorporation into DNA, causing hypomethylation and cytotoxicity",1.0,10.0,µM,Approved in AML; range given as 1 nM–10 µM; chemically unstable per notes (prepare fresh)
+All-trans retinoic acid,Retinoid differentiation agent,Activates retinoic acid receptors to drive differentiation programs,1.0,30.0,µM,"Alternative names in text: ATRA, tretinoin; mostly APL but can affect subsets/combos; light/temperature sensitive"
+Venetoclax,BCL-2 inhibitor,Inhibits anti-apoptotic BCL-2 to promote mitochondrial apoptosis,0.01,1.0,µM,Approved in AML; text notes MOLM-13 sensitivity depends on conditions; range given as 0.01 nM–1 µM (often test up to 1 µM)
+Navitoclax,BCL-2 family inhibitor (BCL-2/BCL-XL),Inhibits BCL-2 and BCL-XL to promote apoptosis,0.1,3.0,µM,Alternative name in text: ABT-263; more toxic clinically but useful in vitro; range given as 0.1 nM–3 µM
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, causing proteotoxic stress and apoptosis",0.05,100.0,nM,Approved in myeloma; text notes rarely need >100 nM
+Carfilzomib,Proteasome inhibitor,"Irreversibly inhibits the proteasome, inducing proteostasis stress and apoptosis",0.1,300.0,nM,Described as potent
+Metformin,Biguanide; metabolic modulator,"Inhibits mitochondrial respiratory complex I, altering cellular energy metabolism",0.1,50.0,mM,Text notes variable AML effects; often needs mM
+Atovaquone,Mitochondrial electron transport inhibitor,Disrupts mitochondrial electron transport to impair bioenergetics,0.1,30.0,µM,Text notes reported anti-leukemia activity
+Disulfiram,ALDH inhibitor (repurposed agent),Inhibits aldehyde dehydrogenase; cytotoxicity often copper-dependent,10.0,10.0,µM,Practical note: consider testing ± CuCl2 (0.5–2 µM) condition
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increasing oxidative stress and promoting cell death",1.0,3.0,µM,Text notes leukemia activity reported; range given as 1 nM–3 µM

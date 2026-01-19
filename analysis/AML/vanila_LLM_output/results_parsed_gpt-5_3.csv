@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multi-kinase TKI,Inhibits FLT3 and RAF/VEGFR signaling to block AML proliferation,1.0,20.0,nM,FLT3-active; strong activity in FLT3-ITD AML including MOLM-13/MV4-11
+Sunitinib,Multi-kinase TKI,Inhibits FLT3 and related RTKs (VEGFR/PDGFR/KIT) reducing downstream signaling,10.0,100.0,nM,FLT3-active; active in FLT3-ITD AML
+Ponatinib,Multitargeted TKI (ABL/FLT3/VEGFR),Potently inhibits FLT3 (WT and mutants) and ABL family kinases,5.0,30.0,nM,Active in MOLM-13 and other FLT3-ITD lines
+Cabozantinib,Multi-kinase TKI (MET/VEGFR/FLT3),Inhibits MET/VEGFR and FLT3 signaling pathways,10.0,200.0,nM,Preclinical FLT3 activity in FLT3-ITD AML models
+Regorafenib,Multi-kinase TKI (VEGFR/RAF/FLT3),Blocks RAF/VEGFR and reported FLT3 signaling to reduce AML cell viability,0.1,1.0,µM,Submicromolar activity reported in FLT3-ITD AML assays
+Dasatinib,SRC/ABL/KIT TKI,"Inhibits SRC family kinases, ABL, and KIT to suppress oncogenic signaling",0.05,0.5,µM,Anti-AML activity; sensitivity varies by genotype
+Nilotinib,ABL/KIT TKI,Inhibits BCR-ABL and KIT signaling relevant to some AML subsets,0.1,1.0,µM,Preclinical anti-AML effects; activity context-dependent
+Pazopanib,Multi-kinase TKI (VEGFR/PDGFR; FLT3-active),Inhibits VEGFR/PDGFR and reported FLT3 signaling,0.1,1.0,µM,Submicromolar activity in some FLT3-ITD AML studies
+Trametinib,MEK inhibitor (MEK1/2),Blocks MEK1/2 to inhibit RAS/MAPK signaling downstream of FLT3,5.0,100.0,nM,Reported low- to mid-nanomolar activity in AML lines
+Cobimetinib,MEK inhibitor (MEK1),Inhibits MEK1 to reduce MAPK pathway signaling,20.0,300.0,nM,Tens to hundreds of nM potency in AML lines
+Everolimus,mTORC1 inhibitor,"Inhibits mTORC1 signaling, suppressing AML growth and survival pathways",0.1,1.0,µM,Cell viability effects often submicromolar; Temsirolimus is an alternative agent in the same class
+Ruxolitinib,JAK1/2 inhibitor,Blocks JAK/STAT signaling implicated in AML survival,0.1,3.0,µM,Activity is context-specific; can synergize with FLT3/BCL2 inhibitors
+Panobinostat,HDAC inhibitor (pan-HDAC),Inhibits histone deacetylases to induce apoptosis/differentiation,10.0,50.0,nM,Low-nanomolar viability effects in AML including FLT3-ITD
+Vorinostat,HDAC inhibitor,Broad HDAC inhibition leading to apoptosis and differentiation in AML cells,0.3,3.0,µM,Also known as SAHA; submicromolar to low micromolar activity reported
+Romidepsin,HDAC inhibitor (class I),Inhibits class I HDACs to trigger apoptosis in AML,10.0,100.0,nM,Tens of nM potency in AML viability assays
+Selinexor,XPO1 (nuclear export) inhibitor,Blocks XPO1-mediated nuclear export causing tumor suppressor retention in nucleus,0.1,0.5,µM,Robust preclinical AML activity including MOLM-13 and MV4-11
+Bortezomib,26S proteasome inhibitor,"Inhibits proteasomal degradation, inducing apoptosis in AML cells",5.0,20.0,nM,Strong activity in FLT3-ITD AML (MOLM-13/MV4-11)
+Carfilzomib,Proteasome inhibitor (irreversible),Irreversibly inhibits the 20S proteasome catalytic activity,5.0,50.0,nM,Low-nanomolar activity in AML lines
+Tigecycline,Antibiotic; mitochondrial translation inhibitor,"Inhibits mitochondrial protein synthesis, impairing OXPHOS-dependent AML cells",0.1,1.0,µM,Targets leukemic stem/progenitor mitochondrial translation; submicromolar activity
+Auranofin,Antirheumatic; thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increasing oxidative stress and inducing apoptosis",0.2,3.0,µM,Activity reported in FLT3-ITD models; submicromolar to low micromolar effects

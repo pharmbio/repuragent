@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Midostaurin,Kinase inhibitor (FLT3/PKC inhibitor),Inhibits FLT3 and PKC signaling to suppress proliferation in FLT3-driven AML models,0.001,1.0,µM,Described as approved in AML; benchmark FLT3 pathway inhibitor; MOLM-13 often sensitive
+Quizartinib,Kinase inhibitor (FLT3 inhibitor),Potent inhibition of FLT3 (noted for FLT3-ITD models),0.0003,0.3,µM,Listed as clinical/approved in some regions; strong activity in FLT3-ITD models
+Gilteritinib,Kinase inhibitor (FLT3/AXL inhibitor),Inhibits FLT3 and AXL signaling to reduce AML cell survival/proliferation,0.001,1.0,µM,Described as approved in AML; relevant comparator; MOLM-13 commonly responsive
+Sorafenib,Multi-kinase inhibitor (RAF/VEGFR/FLT3),Inhibits RAF kinases and receptor tyrosine kinases including VEGFR and FLT3,0.01,10.0,µM,Approved for solid tumors; noted off-label use in FLT3-ITD AML studies
+Sunitinib,Multi-kinase inhibitor (multi-TKI),"Inhibits multiple RTKs including FLT3, KIT, and VEGFR",0.01,10.0,µM,Approved; noted anti-proliferative in some AML contexts
+Dasatinib,Kinase inhibitor (SRC/ABL inhibitor),Inhibits SRC family kinases and ABL to disrupt survival signaling in some AML subsets,0.001,3.0,µM,Approved; text notes reported AML effects in subsets
+Ponatinib,Multi-kinase inhibitor (multi-TKI),Broad kinase inhibition including FLT3 variants,0.001,1.0,µM,Approved; noted experimental use in AML
+Idelalisib,PI3K inhibitor (PI3Kδ-selective),Inhibits PI3Kδ to reduce PI3K/AKT pathway signaling,0.01,10.0,µM,Approved; PI3K/AKT axis noted as often active in AML
+Copanlisib,PI3K inhibitor (PI3Kα/δ),Inhibits PI3Kα and PI3Kδ to block downstream PI3K/AKT signaling,0.003,3.0,µM,Approved; noted as sometimes more broadly cytotoxic than δ-selective PI3K inhibitors
+Ruxolitinib,JAK inhibitor (JAK1/2),Inhibits JAK1/2 to suppress JAK/STAT signaling,0.03,30.0,µM,Approved; JAK/STAT implicated in AML microenvironment and subsets
+Trametinib,MEK inhibitor (MEK1/2),Inhibits MEK1/2 to reduce MAPK pathway signaling downstream of FLT3/RAS,0.001,1.0,µM,Approved; MAPK pathway noted as engaged downstream of FLT3/RAS
+Everolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 to reduce growth/proliferation signaling,0.003,3.0,µM,Approved; noted modest single-agent effects but testable
+Temsirolimus,mTOR inhibitor,Inhibits mTOR signaling to reduce proliferation/survival pathways,0.003,3.0,µM,Approved; described as similar to everolimus with potentially different cellular potency
+Palbociclib,CDK inhibitor (CDK4/6),Inhibits CDK4/6 to block cell-cycle progression (G1 arrest),0.03,30.0,µM,Approved; AML sensitivity described as variable
+Abemaciclib,CDK inhibitor (CDK4/6),Inhibits CDK4/6; noted additional off-target CDK9/transcriptional effects,0.01,10.0,µM,Approved; text notes more CDK9/off-target transcriptional impact vs palbociclib; sometimes stronger cytotoxicity
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases to alter chromatin/transcription and promote anti-leukemic effects,0.0003,0.3,µM,Approved; noted often potent in vitro
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases to modulate gene expression,0.03,30.0,µM,Approved; described as broader HDAC inhibitor and typically less potent than panobinostat
+Valproic acid,HDAC-modulating agent (HDAC activity),Exhibits HDAC-inhibitory activity; used in differentiation/epigenetic regimens,0.1,10.0,mM,Approved; higher concentrations needed per text; widely tested in AML differentiation/epigenetic regimens
+Chloroquine,Autophagy inhibitor,Inhibits lysosomal acidification/autophagic flux to impair autophagy,1.0,100.0,µM,Approved; noted can sensitize AML; variable single-agent cytotoxicity
+Hydroxychloroquine,Autophagy inhibitor,Inhibits lysosomal function/autophagic flux similarly to chloroquine,3.0,150.0,µM,Approved; described as similar to chloroquine with typically slightly higher IC50s

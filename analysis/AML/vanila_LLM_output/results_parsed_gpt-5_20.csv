@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multi-kinase TKI,Inhibits FLT3-ITD signaling (multi-kinase inhibition),0.5,500.0,nM,Strong activity reported in MOLM13/MV4-11.
+Ponatinib,ABL/FLT3 TKI,Potent inhibitor of FLT3-ITD signaling,0.1,200.0,nM,Robust activity in MOLM13.
+Sunitinib,Multi-kinase TKI (includes FLT3),Inhibits FLT3 among other kinases; active in FLT3-ITD AML lines,1.0,3000.0,nM,
+Dasatinib,Src/Abl TKI,Disrupts FLT3-ITD downstream signaling,0.5,1000.0,nM,AML cell line activity reported.
+Bortezomib,Proteasome inhibitor,26S proteasome inhibition leading to cytotoxicity,0.5,100.0,nM,Nanomolar cytotoxicity in AML including MOLM13.
+Carfilzomib,Proteasome inhibitor,Proteasome inhibition (irreversible),1.0,200.0,nM,AML cell line activity reported.
+Selinexor,XPO1 (nuclear export) inhibitor,Inhibits exportin-1–mediated nuclear export,5.0,2000.0,nM,"AML lines, including FLT3-ITD, often sub-µM sensitive."
+Panobinostat,Pan-HDAC inhibitor,Histone deacetylase inhibition,2.0,200.0,nM,Potent sub-µM activity in AML lines.
+Vorinostat,HDAC inhibitor,Induces apoptosis/differentiation via HDAC inhibition,0.3,10.0,µM,Also known as SAHA.
+Tigecycline,Antibiotic (glycylcycline),Inhibits mitochondrial translation; targets AML stem/progenitor cells,0.2,20.0,µM,
+Mefloquine,Antimalarial,Lysosomotropic agent with reported AML selectivity (including LSCs),0.5,20.0,µM,
+Niclosamide,Anthelmintic,Uncouples OXPHOS and inhibits Wnt signaling,0.05,5.0,µM,AML line activity reported.
+Simvastatin,Statin (HMG-CoA reductase inhibitor),Mevalonate pathway blockade leading to antiproliferative effects,0.1,10.0,µM,Use the active hydroxy-acid form; test mevalonate rescue at 50–100 µM as a specificity control.
+Auranofin,Anti-rheumatic,Thioredoxin reductase inhibition,50.0,2000.0,nM,Potent in AML including FLT3-ITD.
+Disulfiram,ALDH inhibitor / proteostasis disruptor,Forms Cu–disulfiram complex that targets proteostasis/NPL4,10.0,1000.0,nM,Co-administer copper (0.5–2 µM CuCl2); optimize copper; include copper-alone controls.
+Pimozide,Antipsychotic (dopamine receptor antagonist),Modulates STAT5 and calmodulin,0.5,10.0,µM,Reported activity in FLT3-ITD AML.
+Thioridazine,Antipsychotic (phenothiazine),Functionally targets AML stem-like cells; antiproliferative effects,0.5,10.0,µM,
+Omacetaxine,Protein synthesis inhibitor,Inhibits translational elongation,1.0,100.0,nM,Also known as homoharringtonine; approved in CML; AML cell line cytotoxicity reported.
+Temsirolimus,mTORC1 inhibitor,Inhibits mTORC1 leading to cytostatic/antiproliferative effects,10.0,1000.0,nM,Sometimes pro-apoptotic at higher exposures or in combinations.
+Dihydroartemisinin,Antimalarial (artemisinin derivative),Induces ROS generation and ER stress,0.5,20.0,µM,AML line activity reported.

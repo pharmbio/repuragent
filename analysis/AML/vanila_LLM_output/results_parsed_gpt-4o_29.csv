@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,Targets BCL-2 protein to induce apoptosis in AML cells,10.0,1000.0,nM,Used for other types of leukemia
+Dasatinib,Kinase inhibitor,Inhibits multiple tyrosine kinases involved in AML cell proliferation,1.0,100.0,nM,Multi-targeted kinase inhibition
+Sorafenib,Kinase inhibitor,Inhibits FLT3-ITD and other kinases in AML mutants,1.0,10.0,µM,Initially developed for renal cancer
+Ruxolitinib,JAK inhibitor,Inhibits JAK1/2 pathways that are aberrantly activated in some AML cases,100.0,500.0,nM,Effective in diseases with JAK pathway activation
+Auranofin,Anti-inflammatory/Gold compound,"Exhibits anti-leukemic effects, possibly through oxidative stress induction",0.5,10.0,µM,Originally used for rheumatoid arthritis
+Arsenic Trioxide,Chemotherapy agent,Causes apoptosis through oxidative stress and disruption of cellular metabolism,0.5,5.0,µM,Used in acute promyelocytic leukemia
+Ibrutinib,Kinase inhibitor,Inhibits Bruton's tyrosine kinase (BTK) to impact AML cell proliferation,0.5,10.0,µM,Primarily used in lymphomas
+Vorinostat (SAHA),HDAC inhibitor,Inhibits histone deacetylases leading to altered gene expression and apoptosis,0.5,5.0,µM,Known for efficacy in leukemia cell lines
+Idelalisib,PI3K inhibitor,Targets PI3K pathways critical in AML progression,100.0,500.0,nM,Originally used in CLL
+Imatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase and similar targets in AML,0.1,1.0,µM,Known for its role in CML
+Metformin,Biguanide,Acts on metabolic pathways reducing AML cell proliferation,0.1,5.0,mM,Typically used for diabetes
+Nivolumab,Immune checkpoint inhibitor,Blocks PD-1 to enhance immune attack on AML,0.0,0.0,nM,Focus on combination strategies
+Olaparib,PARP inhibitor,Exploits DNA repair deficiencies to kill AML cells,0.1,1.0,µM,Targets DNA repair pathways
+Chloroquine,Antimalarial/Autophagy inhibitor,"Inhibits autophagy, potentially sensitizing AML cells to apoptosis",10.0,50.0,µM,Promising in inhibiting cancer cell autophagy
+Carfilzomib,Proteasome inhibitor,Disrupts protein degradation leading to cell death in AML,5.0,50.0,nM,Primarily used in multiple myeloma
+Rapamycin (Sirolimus),mTOR inhibitor,Blocks mTOR signaling reducing AML cell growth,1.0,10.0,nM,Targets mTOR pathway
+Sildenafil,PDE5 inhibitor,May disrupt cancer cell cycles through PDE5 inhibition,1.0,10.0,µM,Known for non-cancer indications
+Sunitinib,Kinase inhibitor,Inhibits multiple signaling pathways in AML cells,0.1,1.0,µM,Developed for renal carcinoma and GISTs
+Celecoxib,NSAID/COX-2 inhibitor,"Inhibits COX-2, potentially affecting AML inflammatory pathways",10.0,50.0,µM,Could be useful in modulating inflammation in AML
+Disulfiram,Aldehyde dehydrogenase inhibitor,Interferes with cellular detoxification leading to cancer cell stress and death,0.1,1.0,µM,Researched for anti-cancer properties

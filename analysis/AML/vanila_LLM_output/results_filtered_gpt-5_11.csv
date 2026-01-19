@@ -1,0 +1,18 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,Multikinase TKI (BCR-ABL/FLT3/VEGFR),"Inhibits BCR-ABL, FLT3, and VEGFR family kinases",0.03,300.0,nM,,ponatinib,False,CHEMBL2105708
+Sunitinib,Multi-kinase TKI,Inhibits multiple kinases including FLT3,3.0,3000.0,nM,FLT3 activity reported,sunitinib,False,CHEMBL597365
+Cabozantinib,Multi-kinase TKI (MET/VEGFR2),Inhibits MET and VEGFR2; reported FLT3 inhibitory activity,0.3,3000.0,nM,,cabozantinib,False,CHEMBL2105717
+Regorafenib,Multi-kinase TKI,Inhibits multiple kinases; reported FLT3 activity,3.0,3000.0,nM,,regorafenib,False,CHEMBL1946170
+Axitinib,VEGFR TKI,VEGFR inhibitor; reported FLT3 activity at low nM–µM,0.3,300.0,nM,,axitinib,False,CHEMBL1289926
+Lenvatinib,Multi-kinase TKI,Inhibits multiple receptor tyrosine kinases,1.0,3000.0,nM,,lenvatinib,False,CHEMBL1289601
+Dasatinib,ABL/SRC family TKI,Inhibits SRC and ABL kinases,0.3,300.0,nM,,dasatinib,False,CHEMBL1421
+Nilotinib,ABL TKI,ABL inhibitor; reported FLT3 activity,3.0,3000.0,nM,,nilotinib,False,CHEMBL255863
+Bosutinib,SRC/ABL family TKI,Inhibits SRC and ABL kinases,3.0,3000.0,nM,,bosutinib,False,CHEMBL2095206
+Ruxolitinib,JAK inhibitor,JAK1/2 inhibitor,10.0,10000.0,nM,,ruxolitinib,False,CHEMBL1287854
+Trametinib,MEK inhibitor,MEK1/2 inhibitor,0.1,100.0,nM,,trametinib,False,CHEMBL2103875
+Selumetinib,MEK inhibitor,MEK1/2 inhibitor,10.0,10000.0,nM,,selumetinib,False,CHEMBL2105684
+Everolimus,mTOR inhibitor,mTORC1 inhibitor,0.3,300.0,nM,,everolimus,False,CHEMBL1908360
+Temsirolimus,mTOR inhibitor,mTORC1 inhibitor,1.0,1000.0,nM,,temsirolimus,False,CHEMBL1201182
+Panobinostat,HDAC inhibitor,Histone deacetylase (HDAC) inhibition,1.0,300.0,nM,,panobinostat,False,CHEMBL483254
+Bortezomib,Proteasome inhibitor,26S proteasome inhibition (proteostasis disruption),1.0,100.0,nM,,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Irreversible 20S proteasome inhibitor,1.0,100.0,nM,,carfilzomib,False,CHEMBL451887

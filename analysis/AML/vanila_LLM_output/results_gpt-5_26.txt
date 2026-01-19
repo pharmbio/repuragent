@@ -1,0 +1,41 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved, on‑market drugs with published anti-AML activity (many with data in FLT3‑ITD models and/or MOLM13), plus practical concentration ranges to bracket likely potencies in a cell-proliferation IC50 assay. Ranges are chosen to cover reported activities while avoiding needless overexposure; adjust based on solubility and cell-line sensitivity. MOLM13 is FLT3‑ITD+, so FLT3/MAPK/STAT5 pathway blockers tend to be especially potent.
+
+- Sorafenib (multi-kinase; HCC/RCC/thyroid). Strong activity in FLT3‑ITD AML incl. MOLM13. Test range: 0.1 nM–1 µM.
+- Ponatinib (BCR‑ABL/FLT3; CML/Ph+ ALL). Very potent against FLT3‑ITD AML incl. MOLM13. Test range: 0.1 nM–1 µM.
+- Sunitinib (multi-kinase incl. FLT3; RCC/GIST). Active in FLT3‑ITD AML lines. Test range: 1 nM–10 µM.
+- Dasatinib (Src/Abl family; CML/Ph+ ALL). Inhibits AML signaling, often synergizes with FLT3 blockade; MOLM13 responsive. Test range: 0.5 nM–5 µM.
+- Regorafenib (multi-kinase incl. FLT3; CRC/GIST/HCC). Anti‑proliferative in FLT3‑ITD AML. Test range: 1 nM–10 µM.
+- Cabozantinib (MET/VEGFR/FLT3; RCC/thyroid). Reported FLT3 inhibition and AML cell suppression. Test range: 0.5 nM–5 µM.
+- Trametinib (MEK1/2; melanoma). Suppresses MAPK signaling downstream of FLT3; activity in AML lines. Test range: 0.5 nM–10 µM.
+- Everolimus (mTORC1; transplant/solid tumors). AML anti‑proliferative effects via mTOR blockade. Test range: 0.1 nM–10 µM.
+- Temsirolimus (mTORC1; RCC). Similar rationale to everolimus; AML line activity. Test range: 0.1 nM–10 µM.
+- Bortezomib (proteasome; MM/MCL). Potent cytotoxicity in AML lines incl. MOLM13. Test range: 0.05 nM–100 nM.
+- Carfilzomib (proteasome; MM). Strong AML line activity; complementary to bortezomib. Test range: 0.5 nM–1 µM.
+- Panobinostat (pan‑HDAC inhibitor; MM). Epigenetic suppression of AML proliferation; MOLM13 sensitive. Test range: 0.5 nM–1 µM.
+- Vorinostat/SAHA (HDAC inhibitor; CTCL). Broad AML cell‑line activity. Test range: 5 nM–50 µM.
+- Selinexor (XPO1 inhibitor; MM/DLBCL). Nuclear export blockade kills AML cells incl. FLT3‑ITD lines. Test range: 1 nM–5 µM.
+- Tipifarnib (farnesyltransferase inhibitor; HRAS‑mut HNSCC). Historical AML activity (RAS/MAPK dependence). Test range: 10 nM–50 µM.
+- Auranofin (thioredoxin reductase inhibitor; rheumatoid arthritis). Robust AML cytotoxicity, oxidative stress mechanism; MOLM13 reported sensitive. Test range: 1 nM–20 µM.
+- Tigecycline (mitochondrial translation inhibitor; antibiotic). Targets leukemic stem/progenitor metabolism; active in AML lines incl. MOLM13. Test range: 0.1 µM–100 µM.
+- Disulfiram (aldehyde dehydrogenase inhibitor; alcohol deterrent). Copper‑dependent cytotoxicity in AML incl. FLT3‑ITD. Test range: 1 nM–10 µM disulfiram; note activity is enhanced by low‑µM copper.
+- Mebendazole (anthelmintic; tubulin/HH pathway effects). AML line cytotoxicity including FLT3‑ITD contexts. Test range: 10 nM–20 µM.
+- Nelfinavir (HIV protease inhibitor; ER stress/PI3K‑Akt effects). Induces proteotoxic stress in AML lines. Test range: 0.5 µM–50 µM.
+
+Quick notes for screening:
+- Use a broad, logarithmic dilution series within the suggested ranges to capture full dose–response. Keep vehicle (e.g., DMSO) constant across doses.
+- Some agents show time‑dependent effects (e.g., mitochondrial or epigenetic drugs); pick an exposure time consistent with your readout and compare across compounds in parallel.
+- For disulfiram, cytotoxicity in AML is typically copper‑dependent; include a fixed, low‑micromolar copper condition when exploring activity.
+
+These compounds have published activity against AML cells, with many specifically effective in FLT3‑ITD models like MOLM13. Adjust ranges based on observed sensitivity and solubility, and confirm target engagement where relevant.

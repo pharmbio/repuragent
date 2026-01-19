@@ -1,0 +1,118 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a **shortlist of 20 clinically used drugs** with reported or plausible anti‑AML activity (many with data in MOLM‑13 or closely related FLT3‑ITD AML lines). For each, I include:
+
+- **Proposed 10‑point IC₅₀ assay range** (final concentrations, in standard 96‑well viability assays, 72 h typical).
+- **Notes** focused on MOLM‑13/AML relevance.
+
+Use DMSO ≤0.1% v/v, 2–3 technical replicates per plate, at least 3 independent experiments. A typical dilution scheme is 1:3 or 1:2.5 serial dilutions across the range.
+
+---
+
+## 1. Sorafenib  
+- **Range**: 0.5 nM – 10 μM  
+  (0.5, 1.5, 4.5, 13.5, 40, 120, 360, 1080, 3240, 9720 nM)  
+- **Notes**: Multi‑kinase inhibitor; strong activity in FLT3‑ITD AML including MOLM‑13.
+
+## 2. Midostaurin (PKC412)  
+- **Range**: 0.5 nM – 10 μM  
+- **Notes**: FLT3 inhibitor approved for FLT3‑mut AML; MOLM‑13 is a standard responsive line.
+
+## 3. Gilteritinib  
+- **Range**: 0.1 nM – 2 μM  
+  (0.1, 0.3, 1, 3, 10, 30, 100, 300, 1000, 2000 nM)  
+- **Notes**: Highly potent FLT3/AXL inhibitor; MOLM‑13 IC₅₀ often in low‑nM.
+
+## 4. Quizartinib (AC220)  
+- **Range**: 0.05 nM – 1 μM  
+  (0.05, 0.15, 0.45, 1.35, 4, 12, 36, 108, 324, 972 nM)  
+- **Notes**: Very potent FLT3 inhibitor; MOLM‑13 usually sub‑nanomolar to low‑nM.
+
+## 5. Venetoclax (ABT‑199)  
+- **Range**: 1 nM – 20 μM  
+- **Notes**: BCL‑2 inhibitor; strong single‑agent and combo activity in AML lines including MOLM‑13.
+
+## 6. Ruxolitinib  
+- **Range**: 10 nM – 30 μM  
+- **Notes**: JAK1/2 inhibitor; moderate anti‑proliferative effects, may synergize with FLT3 or BCL‑2 inhibition.
+
+## 7. Dasatinib  
+- **Range**: 0.5 nM – 10 μM  
+- **Notes**: SRC/ABL inhibitor with off‑target activity in AML; some MOLM‑13 sensitivity reported.
+
+## 8. Imatinib  
+- **Range**: 0.1 μM – 100 μM  
+  (0.1, 0.3, 1, 3, 10, 30, 100, 300, 1000, 10000 μM – you can truncate if toxicity obvious)  
+- **Notes**: Limited FLT3 activity; mainly exploratory/negative control in FLT3‑ITD AML.
+
+## 9. Nilotinib  
+- **Range**: 1 nM – 20 μM  
+- **Notes**: More potent than imatinib; some reported activity in FLT3‑mutant AML at μM range.
+
+## 10. Ponatinib  
+- **Range**: 0.1 nM – 5 μM  
+- **Notes**: Broad tyrosine kinase inhibitor (including FLT3); strong activity on FLT3‑ITD AML.
+
+## 11. Tofacitinib  
+- **Range**: 10 nM – 30 μM  
+- **Notes**: JAK inhibitor used for autoimmunity; modest direct antiproliferative effects, useful in combinations.
+
+## 12. Ibrutinib  
+- **Range**: 10 nM – 20 μM  
+- **Notes**: BTK inhibitor; AML cells may show variable BTK dependence; consider for repurposing screens.
+
+## 13. Everolimus  
+- **Range**: 0.5 nM – 10 μM  
+- **Notes**: mTORC1 inhibitor; AML, including MOLM‑13, often mTOR‑dependent; IC₅₀ usually low‑nM to low‑μM.
+
+## 14. Sirolimus (Rapamycin)  
+- **Range**: 0.5 nM – 10 μM  
+- **Notes**: Classic mTOR inhibitor; often cytostatic; use 72–96 h to see effects on cell number.
+
+## 15. Metformin  
+- **Range**: 0.1 mM – 50 mM  
+  (0.1, 0.3, 1, 3, 10, 15, 20, 30, 40, 50 mM)  
+- **Notes**: Indirect AMPK activator; in vitro effects generally at high mM; test for metabolic vulnerability.
+
+## 16. Chloroquine (or Hydroxychloroquine)  
+- **Range**: 1 μM – 100 μM  
+- **Notes**: Autophagy inhibitor; may sensitize AML cells to other agents; alone often μM‑range IC₅₀.
+
+## 17. Disulfiram  
+- **Range**: 10 nM – 20 μM  
+- **Notes**: ALDH inhibitor; AML stem‑like cells rely on ALDH; reported nanomolar–μM activity in AML lines.
+
+## 18. Niclosamide  
+- **Range**: 10 nM – 10 μM  
+- **Notes**: Anthelmintic; targets multiple signaling pathways (Wnt, STAT3, mTOR); AML data suggest low‑μM IC₅₀.
+
+## 19. Mebendazole  
+- **Range**: 0.1 μM – 50 μM  
+- **Notes**: Microtubule inhibitor; some preclinical AML data with μM IC₅₀s.
+
+## 20. Valproic Acid  
+- **Range**: 0.1 mM – 10 mM  
+- **Notes**: HDAC inhibitor used as antiepileptic; induces differentiation and growth arrest in AML, but requires mM levels.
+
+---
+
+### Practical assay setup (brief)
+
+- **Cells**: MOLM‑13, 3–5 × 10³ cells/well in 96‑well plates.  
+- **Duration**: 72 h for IC₅₀; 48 h if very potent compounds.  
+- **Readout**: CellTiter‑Glo, resazurin, or similar.  
+- **Controls**:  
+  - Vehicle (0.1% DMSO) as 100% viability.  
+  - Positive control: a known potent FLT3 inhibitor (e.g., quizartinib) on every plate.  
+
+If you tell me which subset (e.g., only FDA‑approved non‑oncology drugs, or only oral agents) you care most about, I can refine this list and narrow the ranges more tightly around likely IC₅₀s for MOLM‑13.

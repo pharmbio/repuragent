@@ -1,0 +1,51 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing, repurposable drugs with preclinical evidence of antiproliferative activity in AML cell lines (including FLT3-ITD–positive MOLM-13), plus practical concentration ranges to span likely IC50 values in a standard viability/proliferation readout. Use a log-scale concentration series that covers each range.
+
+FLT3 and multikinase inhibitors (MOLM-13 is FLT3-ITD and typically very sensitive)
+- Gilteritinib (FLT3/AXL inhibitor): 0.03–300 nM
+- Quizartinib/AC220 (FLT2/FLT3 inhibitor): 0.01–100 nM
+- Crenolanib (FLT3 inhibitor, including D835 mutants): 0.1–1000 nM
+- Midostaurin (multikinase incl. FLT3/PKC): 1–10,000 nM (0.001–10 μM)
+- Sorafenib (multikinase incl. FLT3/VEGFR/RAF): 0.1–1000 nM
+- Ponatinib (broad TK inhibitor incl. FLT3): 0.01–300 nM
+- Sunitinib (multikinase): 1–10,000 nM (0.001–10 μM)
+
+Apoptosis/protein homeostasis
+- Venetoclax (BCL-2 inhibitor): 1–10,000 nM (0.001–10 μM)
+- Bortezomib (proteasome inhibitor): 0.5–100 nM
+- Carfilzomib (proteasome inhibitor): 0.5–100 nM
+
+Epigenetic/translation/export
+- Panobinostat (HDAC inhibitor): 0.5–100 nM
+- Omacetaxine/homoharringtonine (protein translation inhibitor): 1–100 nM
+- Selinexor (XPO1 inhibitor): 10–1000 nM
+
+MAPK/mTOR/JAK pathway
+- Trametinib (MEK1/2 inhibitor): 0.1–1000 nM
+- Ruxolitinib (JAK1/2 inhibitor): 0.1–30 μM
+- Everolimus (mTORC1 inhibitor): 0.1–1000 nM
+
+Repurposed anti-infectives/metabolism-modulating agents with AML activity
+- Tigecycline (mitochondrial translation inhibitor): 0.05–50 μM
+- Auranofin (thioredoxin reductase inhibitor): 0.05–20 μM
+- Niclosamide (OXPHOS/Wnt/STAT3 modulator): 0.05–10 μM
+- Disulfiram (aldehyde dehydrogenase inhibitor; copper-dependent cytotoxicity): Disulfiram 0.01–10 μM; activity is enhanced by low-μM Cu2+ (e.g., 0.5–1 μM)
+
+Additional classic agent with AML activity
+- Arsenic trioxide (ROS modulation, PML-RARA targeting in APL; broader cytotoxicity at higher doses): 0.05–10 μM
+
+Notes
+- The ranges above are intended to bracket typical cellular potencies reported for AML lines; exact IC50s can vary with assay format and serum conditions. 
+- Compounds like niclosamide and disulfiram have solubility/stability nuances; ensure appropriate solvent and freshness when preparing stocks.
+- MOLM-13 (FLT3-ITD) is often most responsive to FLT3 inhibitors (gilteritinib, quizartinib, crenolanib, sorafenib, ponatinib); include those among your first-pass set.

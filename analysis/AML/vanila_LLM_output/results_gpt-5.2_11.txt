@@ -1,0 +1,69 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest *existing (approved/clinical)* drugs with published or plausible anti-AML activity and give **experimentally testable IC₅₀ assay concentration ranges** (i.e., what to plate in a dose–response). However, I can’t responsibly claim these will “inhibit MOLM13” without citing specific evidence per drug. Below are **20 practical repurposing candidates** that have **some preclinical AML rationale** (often including FLT3/epigenetic/metabolic dependencies relevant to MOLM13) and **workable starting concentration ranges** that are commonly used in MOLM13/AML viability assays.
+
+### How to use these concentrations
+- For each compound, run a **10–12 point serial dilution (1:3 or 1:2)** spanning the suggested range.
+- Keep **DMSO constant** (commonly 0.1% v/v max).
+- Readout: CellTiter-Glo / resazurin at **72 h** is typical for MOLM13 proliferation IC₅₀.
+
+---
+
+## Top 20 repurposable drugs (with IC₅₀ assay ranges to test)
+
+> **Ranges below are “dose–response plating ranges”** designed to *capture* an IC₅₀ if the line is sensitive. They’re not claimed IC₅₀ values.
+
+| Drug (status) | Primary rationale in AML/MOLM13 context | Suggested IC₅₀ assay range (µM) |
+|---|---|---|
+| **Atovaquone** (approved antimalarial) | Mitochondrial electron transport / OXPHOS stress; AML can be OXPHOS-dependent | **0.3–30** |
+| **Artemisinin / Artesunate** (approved in many regions) | ROS/iron-dependent cytotoxicity; AML often iron/ROS vulnerable | **0.05–10** |
+| **Disulfiram** (approved; alcoholism) | ALDH/proteasome/NF-κB; often potentiated by copper | **0.02–10** *(± CuCl₂ 0.1–1 µM as separate condition)* |
+| **Auranofin** (approved; RA) | Thioredoxin reductase inhibitor → redox collapse | **0.01–3** |
+| **Niclosamide** (approved anthelmintic) | Wnt/STAT3/mitochondrial uncoupling; multiple leukemia reports | **0.02–10** |
+| **Clotrimazole** (approved antifungal) | Metabolic disruption (glycolysis/hexokinase association), Ca²⁺ effects | **0.3–50** |
+| **Itraconazole** (approved antifungal) | Hedgehog/angiogenesis; also impacts mTOR/trafficking | **0.1–30** |
+| **Posaconazole** (approved antifungal) | Similar class; some anti-leukemia signals; also relevant clinically in AML | **0.1–30** |
+| **Mebendazole** (approved anthelmintic) | Microtubule disruption; anti-proliferative in cancers | **0.05–20** |
+| **Albendazole** (approved anthelmintic) | Tubulin binding; mitochondrial stress | **0.1–50** |
+| **Ribavirin** (approved antiviral) | eIF4E pathway interference; studied in AML | **0.5–200** |
+| **Mycophenolate mofetil / mycophenolic acid** (approved immunosuppressant) | IMPDH inhibition → guanine depletion; AML proliferation dependence | **0.05–30** |
+| **Leflunomide / Teriflunomide** (approved) | DHODH inhibition → differentiation/apoptosis in AML contexts | **0.2–200** |
+| **Hydroxychloroquine** (approved) | Autophagy/lysosome inhibition; often used in combinations | **1–100** |
+| **Chlorpromazine** (approved antipsychotic) | Clathrin-mediated endocytosis/lysosomal effects; reported anti-cancer | **0.2–30** |
+| **Sertraline** (approved SSRI) | Lysosomal dysfunction/mitochondrial effects; anti-cancer screens | **0.2–30** |
+| **Fluoxetine** (approved SSRI) | Similar rationale; membrane/lysosome stress | **0.2–30** |
+| **Valproic acid** (approved) | HDAC inhibitor (weak); used clinically in AML differentiation approaches | **100–5000** *(0.1–5 mM)* |
+| **Vorinostat (SAHA)** (approved) | HDAC inhibitor; established hematologic activity | **0.05–10** |
+| **Panobinostat** (approved) | Potent pan-HDAC inhibitor; strong anti-proliferative in many AML lines | **0.001–0.3** |
+
+---
+
+## Practical notes (so the assay actually works)
+
+### Solubility / handling flags
+- **Niclosamide, mebendazole, albendazole, itraconazole/posaconazole**: low aqueous solubility; make fresh DMSO stocks (often 10–50 mM) and avoid precipitation (warm, vortex, filter if needed).
+- **Valproic acid** is typically prepared in water or as sodium salt; mM testing is normal.
+
+### MOLM13-specific tip
+MOLM13 is **FLT3-ITD–driven** and often very sensitive to **FLT3 inhibitors**—but many FLT3 inhibitors are already “AML drugs” rather than repurposing candidates. If you want, I can add a separate list of **non-AML-approved kinase inhibitors** (originally for other cancers) that frequently show **low-nM to low-µM** MOLM13 activity.
+
+---
+
+## If you want a better-targeted list
+Reply with any constraints and I’ll tune the 20 drugs accordingly:
+1) Must be **FDA-approved only** vs include ex-US approvals  
+2) Prefer **oral bioavailable** drugs?  
+3) Single-agent only vs allow **synergy** (e.g., with cytarabine, venetoclax, FLT3 inhibitors)  
+4) Your assay conditions (serum %, 48 h vs 72 h, DMSO limit)
+
+If you share your **plate format (96/384), seeding density, and readout**, I can also propose **exact dilution series** for each drug (e.g., 12-point 1:3 series starting at a compound-specific top dose).

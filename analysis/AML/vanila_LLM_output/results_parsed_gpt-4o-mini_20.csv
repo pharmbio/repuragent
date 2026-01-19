@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Arsenic Trioxide,Chemotherapy agent,Inhibits cell proliferation and induces apoptosis,1.0,10.0,µM,Also known as ATO.
+Sirolimus,mTOR inhibitor,Inhibits mTOR signaling pathway,10.0,100.0,nM,Also known as Rapamycin.
+Lenalidomide,Immunomodulatory drug,Enhances immune response and inhibits tumor growth,100.0,1000.0,nM,
+Dexamethasone,Corticosteroid,Suppresses inflammation and immune response,1.0,100.0,µM,
+Gemcitabine,Antimetabolite,Inhibits DNA synthesis,1.0,10.0,µM,
+Hydroxyurea,Anticancer agent,"Inhibits ribonucleotide reductase, thereby blocking DNA synthesis",50.0,500.0,µM,
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylation leading to enhanced apoptosis,1.0,10.0,µM,Also known as SAHA.
+Bortezomib,Proteasome inhibitor,Induces apoptosis by disrupting protein catabolism,1.0,100.0,nM,
+Fludarabine,Antimetabolite,Interferes with DNA production and repair,0.1,10.0,µM,
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and stimulates immune response,100.0,1000.0,nM,
+Azacitidine,DNA methyltransferase inhibitor,Demethylates DNA to reactivate tumor suppressor genes,0.1,5.0,µM,
+Minocycline,Tetracycline antibiotic,"Inhibits protein synthesis in bacteria, potential anti-inflammatory effects",10.0,100.0,µM,
+Metformin,Biguanide,Inhibits hepatic glucose production and enhances insulin sensitivity,10.0,100.0,mM,
+Tamoxifen,Selective estrogen receptor modulator,Inhibits estrogen receptors,1.0,10.0,µM,
+Lapatinib,Tyrosine kinase inhibitor,Inhibits EGFR and HER2 signaling,0.1,10.0,µM,
+Dabrafenib,BRAF inhibitor,Inhibits mutated BRAF kinases,10.0,100.0,nM,
+Carfilzomib,Proteasome inhibitor,Induces apoptosis by blocking protein breakdown,1.0,10.0,µM,
+Nintedanib,Tyrosine kinase inhibitor,Inhibits multiple tyrosine kinases involved in angiogenesis,1.0,10.0,µM,
+Clofazimine,Antimycobacterial agent,"Interferes with bacterial lipid synthesis, potential anti-cancer effects",1.0,100.0,µM,
+Auranofin,Antirheumatic gold compound,"Inhibits thioredoxin reductase, leading to oxidative stress in cancer cells",1.0,10.0,µM,

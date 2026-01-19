@@ -1,0 +1,138 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or well‑characterized investigational agents) with published evidence or strong rationale for anti‑AML activity — many have demonstrated activity in FLT3‑ITD AML models or AML cell lines (MOLM13 and/or MOLM13 relatives such as MV4‑11). For each I give a short rationale and an experimentally practical concentration range and a recommended dilution scheme you can use to determine an IC50 in MOLM13 (or other AML) cell lines.
+
+General assay suggestions (apply to all compounds)
+- Plate format: 96‑well or 384‑well. For suspension AML lines like MOLM13, 96‑well is common.  
+- Seeding: 5–20 × 10^3 viable cells/well (96‑well) so cells are in log growth during the assay.  
+- Incubation: 72 hours is standard for proliferation/viability IC50; consider also 48 h and 96 h timepoints for kinetics.  
+- Vehicle: DMSO is usual; keep final DMSO ≤ 0.1% (ideally ≤ 0.05%). Prepare 1000× stock in DMSO then dilute. Check each drug’s solubility.  
+- Readout: ATP (CellTiter‑Glo) or resazurin/CellTiter‑Blue or flow cytometry/live‑dead stain. Include positive control (e.g., gilteritinib or cytarabine) and no‑drug control.  
+- Dilution series: I recommend an 11‑point 3‑fold serial dilution (or 10‑point 3‑fold) covering ~6 orders of magnitude, centered on the expected cellular IC50. This is stated per drug below. Run at least triplicate wells per concentration and perform ≥2 independent experiments.  
+- Notes for metal‑dependent compounds: disulfiram and others often require Cu2+ to be active; test ±Cu (e.g., 1:1 molar ratio or 1–5 µM CuSO4).
+
+Top 20 candidate drugs (short rationale + suggested IC50 testing range and dilution scheme)
+1) Gilteritinib (FLT3/AXL TKI)
+- Rationale: Approved FLT3 inhibitor with strong activity against FLT3‑ITD AML (MOLM13 is FLT3‑ITD).  
+- Expected cellular IC50 (MOLM13 range): ~1–10 nM.  
+- Test range: 0.01 nM – 1 µM (11‑point 3‑fold: 0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 100, 300, 1000 nM).
+
+2) Quizartinib (AC220; FLT3 inhibitor)
+- Rationale: Very potent FLT3 inhibitor active on FLT3‑ITD cells.  
+- Expected IC50: ~1–10 nM.  
+- Test range: 0.01 nM – 1 µM (same series as gilteritinib).
+
+3) Crenolanib (FLT3 inhibitor)
+- Rationale: Potent against FLT3‑ITD and some resistance alleles.  
+- Expected IC50: ~1–50 nM (cellular).  
+- Test range: 0.01 nM – 1 µM (11‑point 3‑fold).
+
+4) Midostaurin (multikinase, FLT3 inhibitor)
+- Rationale: Approved in combination for FLT3‑mutant AML.  
+- Expected IC50: ~10–200 nM.  
+- Test range: 0.1 nM – 10 µM (11‑point 3‑fold).
+
+5) Sorafenib (multikinase TKI)
+- Rationale: Off‑label/experimental activity against FLT3‑ITD models.  
+- Expected IC50: ~10–500 nM.  
+- Test range: 0.1 nM – 10 µM (11‑point 3‑fold).
+
+6) Ponatinib (multi‑TKI)
+- Rationale: Potent TKI with activity against FLT3 in some studies.  
+- Expected IC50: ~1–100 nM.  
+- Test range: 0.01 nM – 1 µM (11‑point 3‑fold).
+
+7) Venetoclax (BCL‑2 inhibitor)
+- Rationale: Highly active BCL‑2 inhibitor; approved combinations in AML; many AML lines (including FLT3‑mutant) are sensitive.  
+- Expected IC50: ~1–100 nM (line dependent).  
+- Test range: 0.01 nM – 1 µM (11‑point 3‑fold).
+
+8) Bortezomib (proteasome inhibitor)
+- Rationale: Proteasome inhibition can be cytotoxic to AML cells; single‑agent activity in cell lines.  
+- Expected IC50: ~1–100 nM.  
+- Test range: 0.01 nM – 1 µM (11‑point 3‑fold).
+
+9) Carfilzomib (proteasome inhibitor)
+- Rationale: More potent proteasome inhibitor; similar rationale to bortezomib.  
+- Expected IC50: ~1–100 nM.  
+- Test range: 0.01 nM – 1 µM.
+
+10) Auranofin (thioredoxin reductase inhibitor; anti‑rheumatic)
+- Rationale: Repositioned for multiple cancers; reported AML line activity including MOLM13/MV4‑11 in the low µM range.  
+- Expected IC50: ~0.1–5 µM.  
+- Test range: 1 nM – 50 µM (11‑point 3‑fold: 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 100 µM — adjust upper limit if insoluble; many labs use top 30–50 µM).
+
+11) Niclosamide (anthelmintic; mitochondrial uncoupler / Wnt/STAT3 inhibitor)
+- Rationale: Reported cytotoxicity in AML cell lines and stem‑like populations; active in low µM range.  
+- Expected IC50: ~0.2–5 µM.  
+- Test range: 0.01 nM – 50 µM (practically focus 1 nM–10 µM or 0.1 nM–50 µM to cover).
+
+12) Mebendazole (antihelmintic; microtubule inhibitor)
+- Rationale: Repurposing candidate with cytotoxicity in AML models (low µM to sub‑µM).  
+- Expected IC50: ~0.1–5 µM.  
+- Test range: 0.01 nM – 50 µM (practically 0.1 nM–10 µM covers expected).
+
+13) Mefloquine (antimalarial)
+- Rationale: Reported antileukemic effects in cell lines via multiple mechanisms.  
+- Expected IC50: ~1–20 µM.  
+- Test range: 0.01 nM – 50 µM (practically 1 nM–50 µM).
+
+14) Disulfiram (aldehyde dehydrogenase inhibitor) ± Cu
+- Rationale: Disulfiram complexed with copper shows proteotoxic / ubiquitin–proteasome effects and AML cell killing. Test ±Cu.  
+- Expected IC50 (with Cu): low µM (0.1–5 µM).  
+- Test range: 0.01 nM – 50 µM; run parallel sets with 1:1 molar CuSO4 (e.g., 1 µM Cu).
+
+15) Clofazimine (antileprosy diarylquinone)
+- Rationale: Disrupts mitochondrial function and NF‑κB/ER stress; reported AML cell activity.  
+- Expected IC50: ~0.1–10 µM.  
+- Test range: 0.01 nM – 50 µM (practically 0.1 nM–10 µM).
+
+16) Itraconazole (antifungal; hedgehog/VEGF pathway modulator)
+- Rationale: Reported anticancer activity via multiple mechanisms; some AML cell sensitivity reported.  
+- Expected IC50: ~0.5–10 µM (cell line dependent).  
+- Test range: 0.01 nM – 50 µM.
+
+17) Simvastatin (HMG‑CoA reductase inhibitor)
+- Rationale: Statins can induce apoptosis in AML by blocking prenylation; activity often in low to mid µM. Use the hydroxy acid form or activate the lactone.  
+- Expected IC50: ~1–50 µM (line dependent).  
+- Test range: 0.01 µM – 100 µM (try 10‑point 3‑fold: 0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30, 100 µM).
+
+18) Tamoxifen (SERM)
+- Rationale: Exhibit pro‑apoptotic effects in some AML lines via PKC/mitochondrial mechanisms.  
+- Expected IC50: ~1–20 µM.  
+- Test range: 0.01 nM – 50 µM (practically 0.1 nM–50 µM or 0.01–50 µM).
+
+19) Hydroxychloroquine / Chloroquine (autophagy inhibitors)
+- Rationale: May sensitize AML cells and show single‑agent effects at high concentrations. Often used in combination strategies.  
+- Expected IC50: ~10–100 µM (often higher).  
+- Test range: 0.1 µM – 200 µM (10‑point 3‑fold: 0.1, 0.3, 1, 3, 10, 30, 100, 300 µM — adjust to instrument limits).
+
+20) Metformin (biguanide)
+- Rationale: Alters mitochondrial metabolism/AMPK; single agent cytotoxicity often requires mM concentrations in vitro.  
+- Expected IC50: ~1–20 mM (cell line dependent).  
+- Test range: 0.01 mM – 50 mM (10‑point 3‑fold or 11‑point serial dilutions). Note: high concentrations may change media pH; include appropriate controls.
+
+Prioritization for MOLM13
+- Highest likelihood of single‑agent potency in MOLM13 (FLT3‑ITD): gilteritinib, quizartinib, crenolanib, midostaurin, ponatinib, sorafenib.  
+- High plausibility for single‑agent cytotoxicity (non‑TKIs): venetoclax, bortezomib/carfilzomib, auranofin, niclosamide, mebendazole, disulfiram+Cu, clofazimine.  
+- Drugs more likely to be effective in combinations or at higher concentrations: chloroquine, statins, itraconazole, tamoxifen, metformin.
+
+Practical tips
+- Start with a broad 11‑point 3‑fold series described above. If a compound shows no activity at the top concentration, you can increase the top concentration (subject to solubility/toxicity of vehicle). If the IC50 is very low (<lowest tested), rerun with a lower starting point.  
+- For metal‑enhanced drugs (disulfiram, disulfiram/copper), include controls with copper only and run molar‑ratio titrations.  
+- For prodrugs (simvastatin lactone), convert to active acid or use pravastatin/atorvastatin if preferred.  
+- For compounds that aggregate or are poorly soluble, include 0.01–0.1% Tween‑20 in stocks (careful with cell effects) or lower DMSO stocks; check precipitation visually.
+
+If you want, I can:
+- Provide ready‑to‑use concentration tables (numeric wells) for 96‑well plate layouts for any subset of these drugs (e.g., 11‑point 3‑fold series).  
+- Prioritize these 20 to a top 6–8 set optimized for single‑agent screening in MOLM13 with recommended positive controls and suggested cell seeding and readout parameters.

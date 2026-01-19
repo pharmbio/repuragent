@@ -1,0 +1,11 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and SRC family kinases,0.1,0.5,µM,,dasatinib,False,CHEMBL1421
+Bortezomib,Proteasome inhibitor,Inhibits proteasome and induces apoptosis,5.0,30.0,nM,,bortezomib,False,CHEMBL325041
+Metformin,Biguanide,Improves insulin sensitivity and reduces hepatic glucose production,500.0,1000.0,µM,,metformin,False,CHEMBL1431
+Ruxolitinib,JAK inhibitor,Inhibits Janus kinases (JAK1 and JAK2),1.0,5.0,µM,,ruxolitinib,False,CHEMBL1287854
+Thalidomide,Immunomodulatory drug,Inhibits TNF-α and promotes apoptosis in cancer cells,5.0,10.0,µM,,thalidomide,False,CHEMBL426123
+Lopinavir,Protease inhibitor,"Inhibits HIV protease, affects cell cycle",10.0,30.0,µM,,lopinavir,False,CHEMBL729
+Chlorambucil,Alkylating agent,Cross-links DNA and induces apoptosis,10.0,30.0,µM,,chlorambucil,False,CHEMBL515
+Cyclophosphamide,Alkylating agent,Cross-links DNA and prevents cell division,10.0,50.0,µM,,cyclophosphamide,False,CHEMBL1200796
+Topotecan,Topoisomerase inhibitor,Inhibits topoisomerase I causing DNA damage,10.0,100.0,nM,,topotecan,False,CHEMBL84
+Pazopanib,Tyrosine kinase inhibitor,Inhibits multiple receptor tyrosine kinases,1.0,5.0,µM,,pazopanib,False,CHEMBL477772

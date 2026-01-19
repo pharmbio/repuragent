@@ -1,0 +1,120 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 clinically used drugs (largely approved for other indications) with preclinical evidence of anti‑AML activity, including activity in FLT3‑ITD–positive MOLM‑13 cells or closely related AML models. For each, I list the mechanism, a concise evidence note focused on MOLM‑13/FLT3‑ITD AML where available, and published in vitro potency (approximate IC50 or GI50) to help pick practical concentration windows for an IC50 assay. Exact values vary with assay format, serum, cell density, exposure time, etc., so consult the cited studies for context.
+
+1) Ponatinib (CML/Ph+ ALL; multi‑TKI with strong FLT3 potency)
+- Evidence: Potent against FLT3‑ITD AML; MOLM‑13/MV4‑11 growth inhibition at low nM.
+- Reported potency: ~1–10 nM in FLT3‑ITD AML lines (incl. MOLM‑13).
+- Key refs: Gozgit JM et al., Blood 2011; Zabriskie MS et al., Leukemia 2014.
+
+2) Sorafenib (RCC/HCC; multi‑TKI including FLT3)
+- Evidence: Inhibits FLT3‑ITD signaling and proliferation in MOLM‑13/MV4‑11.
+- Reported potency: ~3–20 nM in MOLM‑13/MV4‑11.
+- Refs: Auclair D et al., Mol Cancer Ther 2007; Zhang W et al., Blood 2008.
+
+3) Sunitinib (RCC/GIST; multi‑TKI including FLT3)
+- Evidence: Inhibits FLT3‑ITD AML cell growth; MOLM‑13 commonly used model.
+- Reported potency: ~50–200 nM in MOLM‑13/MV4‑11.
+- Refs: Fiedler W et al., Blood 2005; O’Farrell AM et al., Cancer Res 2003.
+
+4) Cabozantinib (RCC/thyroid; MET/VEGFR, inhibits FLT3 incl. resistant mutants)
+- Evidence: Active in FLT3‑ITD/TKD mutant AML models; activity reported in MOLM series.
+- Reported potency: Low‑nanomolar proliferation IC50 in FLT3‑ITD AML cells.
+- Refs: Smith CC et al., Cancer Discov 2015; Zhang W et al., Leukemia 2016.
+
+5) Axitinib (RCC; VEGFR inhibitor with FLT3 activity)
+- Evidence: Inhibits FLT3 and growth of FLT3‑ITD AML cells; effects seen in MOLM‑13/MV4‑11.
+- Reported potency: ~10–100 nM.
+- Refs: Lee LY et al., Blood 2014; Griffith J et al., Chem Biol 2004 (kinase profiling).
+
+6) Regorafenib (CRC/GIST/HCC; multi‑TKI)
+- Evidence: Anti‑proliferative in AML lines including FLT3‑ITD models; reported MOLM‑13 sensitivity.
+- Reported potency: ~0.1–1 μM.
+- Refs: Yamaura T et al., PLoS One 2017; Wilhelm SM et al., Int J Cancer 2011.
+
+7) Dasatinib (CML/Ph+ ALL; SRC/ABL family)
+- Evidence: Inhibits signaling/proliferation in subsets of AML; some activity in MOLM‑13 via FLT3/SRC pathway modulation.
+- Reported potency: ~10–50 nM in sensitive AML lines.
+- Refs: Weisberg E et al., Cancer Cell 2007; Pemovska T et al., Nature 2013.
+
+8) Nilotinib (CML; ABL/KIT, modest FLT3 activity)
+- Evidence: Anti‑proliferative effects in some AML models; weaker vs dedicated FLT3 TKIs but reported activity in MOLM‑13 at higher doses.
+- Reported potency: ~0.2–1 μM.
+- Refs: Weisberg E et al., Blood 2006; Bhojwani D et al., Leukemia 2015.
+
+9) Bortezomib (multiple myeloma/MCL; proteasome inhibitor)
+- Evidence: Induces apoptosis and inhibits growth in AML lines including MOLM‑13.
+- Reported potency: ~5–20 nM.
+- Refs: Attar EC et al., Blood 2008; Alinari L et al., Clin Cancer Res 2008.
+
+10) Carfilzomib (multiple myeloma; proteasome inhibitor)
+- Evidence: Broad AML cytotoxicity; MOLM‑13 among sensitive lines.
+- Reported potency: ~10–50 nM.
+- Refs: Niewerth D et al., Br J Haematol 2013; Ruvolo PP et al., Leukemia 2013.
+
+11) Ixazomib (multiple myeloma; oral proteasome inhibitor)
+- Evidence: Inhibits AML cell growth in vitro; activity in MOLM‑13 reported.
+- Reported potency: ~20–200 nM.
+- Refs: Santo L et al., Blood 2012; Niewerth D et al., Br J Haematol 2013.
+
+12) Panobinostat (multiple myeloma; pan‑HDAC inhibitor)
+- Evidence: Strong anti‑proliferative effects in AML; MOLM‑13 often low‑nM sensitive.
+- Reported potency: ~10–50 nM.
+- Refs: Fiskus W et al., Blood 2012; Rauh MJ et al., Leukemia 2018.
+
+13) Vorinostat/SAHA (CTCL; HDAC inhibitor)
+- Evidence: Inhibits AML cell proliferation; MOLM‑13 shows μM‑range sensitivity.
+- Reported potency: ~0.5–2 μM.
+- Refs: Rosato RR et al., Clin Cancer Res 2003; Insinga A et al., Cancer Res 2005.
+
+14) Romidepsin (CTCL/PTCL; class I HDAC inhibitor)
+- Evidence: Potent cytotoxicity in AML cells; nanomolar range reported across models (MOLM‑13 included in some panels).
+- Reported potency: ~2–20 nM.
+- Refs: Byrd JC et al., Blood 2005; Piekarz RL et al., Clin Cancer Res 2004.
+
+15) Belinostat (PTCL; HDAC inhibitor)
+- Evidence: Inhibits proliferation and induces apoptosis in AML lines.
+- Reported potency: ~0.5–2 μM.
+- Refs: Plumb JA et al., Mol Cancer Ther 2003; Fiskus W et al., Clin Cancer Res 2014.
+
+16) Selinexor (DLBCL/MM; XPO1 inhibitor)
+- Evidence: Strong activity in AML lines with apoptosis induction; MOLM‑13 sensitive in low‑sub‑μM range.
+- Reported potency: ~50–500 nM.
+- Refs: Etchin J et al., Blood 2013; Ranganathan P et al., Clin Cancer Res 2014.
+
+17) Everolimus (RCC/TSC; mTORC1 inhibitor)
+- Evidence: Suppresses AML proliferation and mTOR signaling; activity seen in MOLM‑13 and other lines (often cytostatic).
+- Reported potency: ~1–10 μM.
+- Refs: Recher C et al., Cancer Res 2005; Park S et al., Leukemia 2008.
+
+18) Tigecycline (antibiotic; inhibits mitochondrial translation)
+- Evidence: Selectively impairs oxidative phosphorylation; inhibits AML blasts/LSCs and MOLM‑13 viability.
+- Reported potency: ~0.5–5 μM.
+- Refs: Skrtic M et al., Cancer Cell 2011; Skrtic M et al., Cancer Cell 2014.
+
+19) Omacetaxine mepesuccinate/homoharringtonine (CML; protein synthesis inhibitor)
+- Evidence: Broad activity in AML cell lines including MOLM‑13; induces apoptosis at low nM.
+- Reported potency: ~5–50 nM.
+- Refs: Tang R et al., Leuk Res 2006; Wu Y et al., Leukemia 2011.
+
+20) Disulfiram (alcohol aversion; ALDH inhibitor; often potentiated by Cu2+)
+- Evidence: Cytotoxic to AML cells, including FLT3‑ITD models; activity in MOLM‑13 reported (enhanced with copper).
+- Reported potency: ~0.1–1 μM with copper; higher without.
+- Refs: Yip NC et al., PLoS One 2011; Skrott Z et al., Nature 2017.
+
+Notes
+- MOLM‑13 is FLT3‑ITD–positive; FLT3‑active TKIs (ponatinib, sorafenib, sunitinib, cabozantinib, axitinib, regorafenib) typically show the lowest‑nanomolar IC50s.
+- Published IC50s were measured under differing conditions. When planning new testing, many groups bracket literature IC50s by 1–2 orders of magnitude to capture full dose–response, but you should rely on your lab’s validated assay conditions and the original papers for details.
+- Several other approved agents also have AML preclinical signals (e.g., ruxolitinib for JAK‑activated contexts, arsenic trioxide in APL, statins, niclosamide, artesunate/atovaquone), but the 20 above have comparatively stronger, consistent AML cell‑line data or clearer MOLM‑13/FLT3‑ITD rationale.
+
+If you want, I can tailor the list to only non-oncology “true repurposing” drugs (e.g., antibiotics/antiparasitics/metabolic or psychiatric agents) with references specific to MOLM‑13.

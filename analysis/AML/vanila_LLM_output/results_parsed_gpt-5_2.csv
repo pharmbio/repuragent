@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Ponatinib,Multikinase tyrosine kinase inhibitor,"Inhibits BCR-ABL, FLT3 (including ITD and resistant mutants), and FGFR kinases",1.0,50.0,nM,Approved for CML/Ph+ ALL; potent against FLT3-ITD; activity reported in MOLM-13/MOLM-14/MV4-11
+Sorafenib,Multikinase tyrosine kinase inhibitor,"Inhibits RAF, VEGFR, PDGFR, and FLT3 signaling",1.0,100.0,nM,Approved for HCC/RCC/thyroid; off-label precedent in FLT3-ITD AML; activity in MOLM-13/MV4-11
+Sunitinib,Multikinase tyrosine kinase inhibitor,"Inhibits FLT3, PDGFR, and VEGFR kinases",10.0,100.0,nM,Approved for RCC/GIST; AML growth inhibition via FLT3 blockade
+Regorafenib,Multikinase tyrosine kinase inhibitor,Broad kinase inhibition including FLT3,0.1,1.0,µM,Approved for CRC/GIST/HCC; reported AML cell activity
+Pazopanib,Multikinase tyrosine kinase inhibitor,Targets VEGFR/PDGFR with some FLT3 activity,1.0,5.0,µM,Approved for RCC/STS; preclinical AML activity
+Dasatinib,SRC/ABL/KIT tyrosine kinase inhibitor,"Broad tyrosine kinase blockade including SRC, ABL, and KIT",0.1,5.0,µM,Approved for CML/Ph+ ALL; activity variable in MOLM-13; sub- to low-micromolar in AML lines
+Selinexor,XPO1 (nuclear export) inhibitor,Blocks exportin-1 to retain tumor suppressors in nucleus,50.0,200.0,nM,Approved for MM/DLBCL; strong activity across AML lines including MOLM-13
+Bortezomib,Proteasome inhibitor,Reversibly inhibits 26S proteasome leading to proteotoxic stress and apoptosis,1.0,50.0,nM,Approved for MM/MCL; low-nanomolar activity in MOLM-13 and other AML lines
+Carfilzomib,Proteasome inhibitor,Irreversibly inhibits the 20S proteasome chymotrypsin-like activity,10.0,100.0,nM,Approved for MM; tens of nanomolar potency in AML lines
+Tigecycline,Antibiotic (glycylcycline); mitochondrial translation inhibitor,Inhibits mitochondrial protein synthesis reducing OXPHOS,1.0,5.0,µM,~1–5 µM in MOLM-13 and primary AML cells; targets leukemic stem/OXPHOS dependence
+Auranofin,Antirheumatic; redox modulator,Inhibits thioredoxin reductase inducing oxidative stress and apoptosis,0.5,2.0,µM,Active in FLT3-ITD AML including MOLM-13
+Artesunate,Antimalarial endoperoxide,Generates reactive oxygen species causing cytotoxicity,1.0,5.0,µM,Low-micromolar activity in MOLM-13 and other AML lines; synergy with other agents reported
+Niclosamide,Anthelmintic; mitochondrial uncoupler/signaling modulator,Disrupts mitochondrial function; inhibits Wnt/STAT3 signaling,0.1,5.0,µM,Sub- to low-micromolar activity in AML; MOLM-13 included in some studies
+Mebendazole,Anthelmintic; tubulin inhibitor,Disrupts microtubule polymerization causing mitotic stress,0.1,5.0,µM,Sub- to low-micromolar growth inhibition in AML lines
+Thioridazine,Antipsychotic; dopamine receptor antagonist,Dopamine D2 receptor antagonism; reported activity against leukemia stem/progenitor cells,1.0,5.0,µM,Low-micromolar AML activity; cardiotoxicity/QT prolongation is a concern
+Clofazimine,Antimycobacterial (riminophenazine),Modulates Kv1.3 potassium channels and mitochondrial ETC,0.1,5.0,µM,Sub- to low-micromolar activity in AML models
+Ruxolitinib,JAK1/2 inhibitor,Blocks JAK-STAT signaling pathway,1.0,5.0,µM,Approved for MF/PV; single-agent low-micromolar in AML; synergy with FLT3/MEK inhibitors reported
+Everolimus,mTORC1 inhibitor (rapalog),Inhibits mTORC1 to reduce cap-dependent translation and proliferation,1.0,5.0,µM,Pathway inhibition at low-nanomolar; AML viability effects often higher and assay-dependent
+Omacetaxine mepesuccinate,Protein synthesis inhibitor,Inhibits ribosomal elongation to suppress global translation,1.0,100.0,nM,Also known as homoharringtonine; approved for CML; strong activity in AML lines
+Ribavirin,Antiviral nucleoside analog,Functional inhibitor of eIF4E-mediated cap-dependent translation,1.0,5.0,µM,Low-micromolar activity in eIF4E-dependent AML; early clinical signals in AML

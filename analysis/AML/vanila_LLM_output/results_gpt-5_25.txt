@@ -1,0 +1,125 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing, clinically used drugs with literature support for inhibiting AML cell growth, including data in MOLM-13 (FLT3-ITD) or closely related FLT3-ITD AML models. For each, I list a concise rationale and the approximate literature-reported potency (viability/proliferation IC50) in MOLM-13 when available, or in similar FLT3-ITD AML cell lines (e.g., MV4-11) otherwise. These reported IC50 values can guide selection of concentration windows for your own IC50 assays, noting that exact potencies vary with assay format, serum, cell density, and readout.
+
+Important notes
+- MOLM-13 is FLT3-ITD; agents targeting FLT3, STAT5, proteasome, HDAC, nuclear export, and mitochondrial translation have shown activity.
+- Values below are approximate ranges compiled from peer-reviewed studies and public pharmacogenomic datasets (e.g., GDSC/CancerRXGene, DepMap/PRISM) and should be cross-checked against the specific protocols used in those sources.
+
+1) Ponatinib (CML/Ph+ ALL; multikinase including FLT3)
+- Rationale: Potent FLT3-ITD inhibitor; active against resistant FLT3 mutants.
+- Reported IC50 (MOLM-13/FLT3-ITD AML): low nanomolar (~1–10 nM).
+- Example sources: Pemovska T, Nature 2013; PRISM/DepMap drug response.
+
+2) Sorafenib (HCC/RCC; RAF/VEGFR/FLT3 inhibitor)
+- Rationale: Inhibits FLT3-ITD signaling; clinical activity in FLT3-ITD AML.
+- Reported IC50: submicromolar to low micromolar (~0.5–3 µM) in MOLM-13/MV4-11.
+- Example sources: Zhang W, Clin Cancer Res 2008; GDSC.
+
+3) Sunitinib (RCC; multikinase including FLT3)
+- Rationale: Early FLT3 inhibitor with activity in FLT3-ITD AML lines.
+- Reported IC50: tens to hundreds of nM (~50–300 nM).
+- Example sources: O’Farrell AM, Blood 2003; GDSC.
+
+4) Cabozantinib (RCC; MET/VEGFR; also inhibits FLT3)
+- Rationale: Inhibits FLT3 and some resistance mutants.
+- Reported IC50: low tens of nM (~10–60 nM) in FLT3-ITD AML lines.
+- Example sources: Levis group reports; Clin Cancer Res 2015.
+
+5) Dasatinib (CML; SRC/ABL family kinase inhibitor)
+- Rationale: Inhibits signaling pathways relevant to AML; synergy with other agents.
+- Reported IC50: ~0.2–1 µM in MOLM-13/AML panels.
+- Example sources: Schittenhelm MM, Blood 2006; GDSC.
+
+6) Selinexor (MM/PTCL; XPO1 inhibitor)
+- Rationale: Traps tumor suppressors in nucleus; strong AML preclinical data.
+- Reported IC50: ~50–200 nM in MOLM-13 and other AML lines.
+- Example sources: Etchin J, Blood 2013; PRISM/DepMap.
+
+7) Bortezomib (MM/MCL; proteasome inhibitor)
+- Rationale: Proteotoxic stress induction; AML cell line sensitivity shown.
+- Reported IC50: low nanomolar (~5–15 nM) in MOLM-13/AML lines.
+- Example sources: Hu J, Leukemia 2011; GDSC.
+
+8) Carfilzomib (MM; irreversible proteasome inhibitor)
+- Rationale: Potent proteasome blockade; AML lines show susceptibility.
+- Reported IC50: tens of nM (~20–100 nM).
+- Example sources: AML cell line screens; GDSC/PRISM.
+
+9) Panobinostat (MM; HDAC inhibitor)
+- Rationale: Epigenetic modulation; synergy with FLT3 inhibitors reported.
+- Reported IC50: single- to low–tens of nM (~5–20 nM) in AML lines including MOLM-13.
+- Example sources: Fiskus W, Clin Cancer Res 2012; GDSC.
+
+10) Vorinostat (CTCL; HDAC inhibitor)
+- Rationale: Broad epigenetic effects; AML growth inhibition documented.
+- Reported IC50: ~1–2 µM in AML lines including MOLM-13.
+- Example sources: AML preclinical studies; GDSC.
+
+11) Romidepsin (PTCL; HDAC inhibitor)
+- Rationale: Potent class I HDAC inhibitor; AML cytotoxicity shown.
+- Reported IC50: low nanomolar (~2–10 nM).
+- Example sources: AML preclinical studies; GDSC.
+
+12) Everolimus (RCC; mTORC1 inhibitor)
+- Rationale: mTOR pathway dependence in AML; often cytostatic but can be cytotoxic.
+- Reported IC50 (viability): ~1–5 µM in AML lines; nanomolar for pS6 signaling readouts.
+- Example sources: Recher C, Blood 2005; GDSC.
+
+13) Temsirolimus (RCC; mTOR inhibitor)
+- Rationale: Similar to everolimus; AML antiproliferative effects reported.
+- Reported IC50 (viability): ~0.5–2 µM.
+- Example sources: AML cell line studies; GDSC.
+
+14) Ruxolitinib (MF/PV; JAK1/2 inhibitor)
+- Rationale: JAK/STAT signaling supports AML survival; activity in subsets and combinations.
+- Reported IC50: ~1–5 µM in AML lines including MOLM-13.
+- Example sources: AML preclinical data; GDSC/PRISM.
+
+15) Fostamatinib (ITP; SYK inhibitor; active metabolite R406)
+- Rationale: SYK signaling implicated in AML survival; preclinical AML activity.
+- Reported IC50 (R406): ~1–3 µM in AML lines including FLT3-ITD contexts.
+- Example sources: Puissant A, Cancer Cell 2014; datasets.
+
+16) Tigecycline (antibiotic; mitochondrial translation inhibitor)
+- Rationale: Targets mitochondrial translation; selective toxicity to AML cells/stem cells.
+- Reported IC50: ~1–5 µM in AML lines including MOLM-13.
+- Example sources: Skrtic M, PNAS 2011; Cell Stem Cell follow-ups.
+
+17) Pimozide (antipsychotic; STAT5 pathway inhibitor)
+- Rationale: STAT5 is downstream of FLT3-ITD; pimozide reduces STAT5 signaling.
+- Reported IC50: low micromolar (~2–10 µM) in FLT3-ITD AML (MOLM-13/MV4-11).
+- Example sources: Nelson EA, Blood 2011.
+
+18) Ciclopirox (antifungal; iron chelator)
+- Rationale: Disrupts iron-dependent pathways; induces apoptosis in AML lines.
+- Reported IC50: ~1–5 µM.
+- Example sources: Eberhard Y, Blood 2009; AML preclinical reports.
+
+19) Disulfiram (alcohol aversion; aldehyde dehydrogenase inhibitor; Cu-dependent)
+- Rationale: Forms Cu–DDC complex that targets proteasome/NPL4; AML cytotoxicity shown.
+- Reported IC50: ~0.1–1 µM in the presence of physiological copper.
+- Example sources: Skrott Z, Nature 2017; AML-focused preclinical studies.
+
+20) Niclosamide (anthelmintic; multiple signaling effects incl. Wnt/mTOR)
+- Rationale: Reported anti-leukemia activity via metabolic and signaling disruption.
+- Reported IC50: submicromolar to low micromolar (~0.3–2 µM) in AML panels.
+- Example sources: Oncotarget/AML preclinical literature; PRISM.
+
+How to use these values
+- Treat the numbers above as literature benchmarks for expected potency in MOLM-13/FLT3-ITD AML contexts. For experimental planning and assay setup, consult the original papers or curated databases (GDSC/CancerRXGene, DepMap PRISM, CTRP) to match conditions (medium, serum, time, readout), as these factors can shift apparent potency by an order of magnitude.
+
+References and data resources
+- GDSC (CancerRXGene): dose–response data for MOLM-13 and many drugs (www.cancerrxgene.org).
+- DepMap PRISM Repurposing dataset: pooled cell line drug responses (depmap.org/portal).
+- Selected primary literature (examples): Zhang W et al., Clin Cancer Res 2008 (sorafenib in FLT3-ITD AML); Etchin J et al., Blood 2013 (selinexor in AML); Nelson EA et al., Blood 2011 (pimozide/STAT5 in FLT3-ITD AML); Skrtic M et al., PNAS 2011 (tigecycline in AML).

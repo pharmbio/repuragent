@@ -1,0 +1,139 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 clinically used (or late‑stage) drugs with evidence or strong rationale for repurposing in AML, especially FLT3‑mutant lines like MOLM‑13. For each, I include:
+
+- **Suggested IC₅₀ assay test range** (final concentration series in 96‑well proliferation/viability assays; e.g., CellTiter‑Glo, MTS, resazurin).
+- Ranges are chosen to:  
+  1) bracket reported in‑vitro potencies where available, and  
+  2) account for solubility and on‑target plasma levels seen in patients.
+
+Use a 10‑point half‑log or log dilution series across these ranges (e.g., 0.1 nM–1 µM, 1 nM–10 µM, etc.). All concentrations are **final** in culture.
+
+---
+
+## 1. Midostaurin  
+- **Type:** Multikinase inhibitor (FLT3, KIT, PKC), approved for FLT3‑mut+ AML.  
+- **AML relevance:** Inhibits FLT3‑ITD; active in MOLM‑13 and MV4‑11.  
+- **Suggested test range:** **0.5 nM – 5 µM**  
+  - Start: 0.5 nM, then 1.5, 4.5, 13.5, 40.5, 121, 364, 1,092, 3,276, 5,000 nM (for example).  
+
+## 2. Sorafenib  
+- **Type:** Multikinase inhibitor (FLT3, RAF, VEGFR, PDGFR).  
+- **AML relevance:** Widely used off‑label in FLT3‑ITD AML; strong data in MOLM‑13.  
+- **Suggested test range:** **1 nM – 10 µM**  
+
+## 3. Sunitinib  
+- **Type:** Multikinase inhibitor (FLT3, KIT, VEGFR).  
+- **AML relevance:** Reported activity in FLT3‑mutant AML cell lines.  
+- **Suggested test range:** **1 nM – 10 µM**  
+
+## 4. Dasatinib  
+- **Type:** Src/Abl kinase inhibitor (CML drug).  
+- **AML relevance:** Inhibits multiple kinases relevant in AML; activity reported in some FLT3‑mutant lines and other AML subsets.  
+- **Suggested test range:** **0.5 nM – 5 µM**  
+
+## 5. Nilotinib  
+- **Type:** BCR‑ABL / KIT inhibitor.  
+- **AML relevance:** Inhibits KIT and may target some oncogenic tyrosine kinases implicated in AML subtypes.  
+- **Suggested test range:** **1 nM – 10 µM**  
+
+## 6. Imatinib  
+- **Type:** BCR‑ABL / KIT / PDGFR inhibitor.  
+- **AML relevance:** Activity in AML with KIT or PDGFR rearrangements; repurposing interest for specific genetic contexts.  
+- **Suggested test range:** **10 nM – 20 µM**  
+
+## 7. Venetoclax  
+- **Type:** BCL‑2 inhibitor, approved for AML (in combination) and CLL.  
+- **AML relevance:** Strong activity in many AML lines, including FLT3‑mutants; synergistic with FLT3 inhibitors.  
+- **Suggested test range:** **0.1 nM – 2 µM**  
+
+## 8. Navitoclax (ABT‑263)  
+- **Type:** BCL‑2/BCL‑XL/BCL‑W inhibitor.  
+- **AML relevance:** Potent apoptosis inducer in AML cell lines; tool and repurposing candidate.  
+- **Suggested test range:** **0.5 nM – 5 µM**  
+
+## 9. Ruxolitinib  
+- **Type:** JAK1/2 inhibitor (myelofibrosis, PV).  
+- **AML relevance:** JAK‑STAT pathway is activated in subsets of AML; some preclinical data in AML lines.  
+- **Suggested test range:** **1 nM – 10 µM**  
+
+## 10. Tofacitinib  
+- **Type:** JAK inhibitor (rheumatoid arthritis).  
+- **AML relevance:** JAK/STAT signaling contributes to survival in some AML contexts; candidate for combinatorial or repurposing screens.  
+- **Suggested test range:** **10 nM – 20 µM**  
+
+## 11. Ibrutinib  
+- **Type:** BTK inhibitor (CLL, MCL).  
+- **AML relevance:** Off‑target kinome profile hits multiple kinases in myeloid cells; some reports of activity in myeloid malignancies and AML stem‑cell–like populations.  
+- **Suggested test range:** **10 nM – 20 µM**  
+
+## 12. Everolimus  
+- **Type:** mTORC1 inhibitor (solid tumors, TSC).  
+- **AML relevance:** mTOR signaling is often hyperactive in AML; everolimus has shown antiproliferative effects in AML cell lines.  
+- **Suggested test range:** **0.5 nM – 5 µM**  
+
+## 13. Temsirolimus  
+- **Type:** mTOR inhibitor (renal cell carcinoma).  
+- **AML relevance:** Similar rationale as everolimus; reported activity in AML cells, including combination strategies.  
+- **Suggested test range:** **1 nM – 10 µM**  
+
+## 14. Vorinostat (SAHA)  
+- **Type:** HDAC inhibitor (CTCL).  
+- **AML relevance:** HDAC inhibition promotes differentiation and apoptosis in AML cells; preclinical and early clinical AML data.  
+- **Suggested test range:** **10 nM – 20 µM**  
+
+## 15. Panobinostat  
+- **Type:** Pan‑HDAC inhibitor (multiple myeloma).  
+- **AML relevance:** Very potent; strong epigenetic effects in AML cell lines, synergizes with other agents.  
+- **Suggested test range:** **1 nM – 5 µM**  
+
+## 16. Decitabine  
+- **Type:** DNA hypomethylating agent (MDS, AML).  
+- **AML relevance:** Standard AML therapy; useful as a benchmark and combinatorial partner; can reduce proliferation in MOLM‑13 with longer exposure (≥48–72 h).  
+- **Suggested test range:** **10 nM – 10 µM**  
+
+## 17. Azacitidine  
+- **Type:** DNA/RNA hypomethylating agent (MDS, AML).  
+- **AML relevance:** Established AML drug; again a benchmark and combination partner.  
+- **Suggested test range:** **50 nM – 20 µM**  
+
+## 18. Bortezomib  
+- **Type:** Proteasome inhibitor (multiple myeloma).  
+- **AML relevance:** Induces apoptosis in AML cell lines, including FLT3‑mutant; affects NF‑κB and protein homeostasis.  
+- **Suggested test range:** **0.5 nM – 1 µM**  
+
+## 19. Carfilzomib  
+- **Type:** Irreversible proteasome inhibitor.  
+- **AML relevance:** Similar mechanistic rationale as bortezomib; reported cytotoxicity in AML preclinical models.  
+- **Suggested test range:** **1 nM – 2 µM**  
+
+## 20. Disulfiram (± copper)  
+- **Type:** ALDH inhibitor (alcohol aversion drug), also inhibits NF‑κB/proteasome and affects ROS.  
+- **AML relevance:** AML, including stem‑like cells, often ALDH‑high; disulfiram + Cu²⁺ has preclinical activity in AML cell lines.  
+- **Suggested test range:**  
+  - **Disulfiram:** **50 nM – 10 µM**  
+  - If using copper supplementation (e.g., CuCl₂): keep Cu²⁺ in a low µM range (∼0.5–2 µM) and constant across wells.
+
+---
+
+### Practical assay notes
+
+- **Exposure time:** For most kinase/anti‑apoptotic/proteasome/HDAC inhibitors, 48–72 h exposure in MOLM‑13 is typical for IC₅₀ determination. For hypomethylating agents (azacitidine, decitabine), 72 h or repeated low‑dose exposure more closely reflects their mechanism.
+- **Solvents:**  
+  - Stock most small‑molecule inhibitors and HDAC/proteasome/BCL‑2 drugs in DMSO (≤0.1% final DMSO in wells).  
+  - Azacitidine/decitabine are usually prepared fresh in aqueous buffer immediately prior to use.
+- **Initial screen design:**  
+  - Start with the broad ranges above. After a first run, refine to a narrower window around the observed IC₅₀ (typically spanning 1–2 logs around it).  
+  - Include a positive control known to kill MOLM‑13 (e.g., midostaurin or sorafenib) and a vehicle control.
+
+If you want, I can help you design a specific 96‑well or 384‑well plate map and a log‑dilution scheme for a subset of these drugs in MOLM‑13.

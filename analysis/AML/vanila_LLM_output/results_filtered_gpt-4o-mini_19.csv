@@ -1,0 +1,12 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response,1.0,3.0,µM,,thalidomide,False,CHEMBL426123
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, leading to accumulation of pro-apoptotic factors",5.0,50.0,nM,Also known as Velcade,bortezomib,False,CHEMBL325041
+Romidepsin,Histone deacetylase inhibitor,"Inhibits histone deacetylase, leading to increased expression of genes involved in cell cycle regulation",10.0,200.0,nM,,romidepsin,False,CHEMBL343448
+Histone deacetylase inhibitors (such as panobinostat),Histone deacetylase inhibitor,"Inhibits histone deacetylases, increasing acetylation of histones and leading to changes in gene expression",1.0,10.0,µM,,histone deacetylase inhibitors,False,CHEMBL483254
+Gleevec,Tyrosine kinase inhibitor,"Inhibits BCR-ABL tyrosine kinase, disrupting signaling pathways in cells",0.1,1.0,µM,Also known as Imatinib,gleevec,False,CHEMBL1642
+Topotecan,Topoisomerase inhibitor,"Inhibits topoisomerase I, preventing DNA relaxation required for replication",1.0,300.0,nM,,topotecan,False,CHEMBL84
+Carfilzomib,Proteasome inhibitor,"Irreversibly inhibits the proteasome, leading to cell death in malignant cells",50.0,500.0,nM,,carfilzomib,False,CHEMBL451887
+Pomalidomide,Immunomodulatory drug,Modulates tumor microenvironment and enhances immune response,0.5,5.0,µM,,pomalidomide,False,CHEMBL43452
+Sunitinib,Tyrosine kinase inhibitor,Inhibits multiple receptor tyrosine kinases involved in tumor growth and angiogenesis,1.0,10.0,µM,,sunitinib,False,CHEMBL597365
+Metformin,Biguanide antidiabetic drug,Improves insulin sensitivity and may exert anti-cancer effects through AMPK activation,500.0,1500.0,µM,,metformin,False,CHEMBL1431
+Auranofin,Gold compound,Has potential anti-inflammatory and cytotoxic effects in cancer cells,5.0,20.0,µM,,auranofin,False,CHEMBL1366

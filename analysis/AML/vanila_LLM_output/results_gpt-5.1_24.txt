@@ -1,0 +1,138 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a **shortlist of 20 clinically used drugs** with literature support or strong rationale for **repurposing in AML (especially FLT3-ITD+ lines like MOLM‑13)**, plus **practical IC₅₀ assay ranges**.
+
+**Important notes (read first):**  
+- Start with a **10‑point or 8‑point half‑log dilution series** centered around reported IC₅₀ or the mid‑range below.  
+- Final **DMSO ≤0.1–0.2%**.  
+- For MOLM13 or other AML cell lines, 72 h exposure is common for proliferation/viability IC₅₀ (e.g., CellTiter‑Glo, MTS, resazurin).  
+- Concentration ranges below are **starting suggestions** based on in vitro literature in leukemia and other cancers; always do a pilot to adjust.
+
+---
+
+## 1. Sorafenib  
+- Class: Multikinase inhibitor (FLT3, RAF, VEGFR, PDGFR).  
+- Rationale: Known activity in FLT3‑ITD AML; MOLM‑13 is FLT3‑ITD+.  
+- Suggested test range (MOLM13): **0.5 nM – 5 µM** (e.g., 0.5, 1, 2, 5, 10, 50, 100, 500, 1000, 5000 nM).  
+
+## 2. Sunitinib  
+- Class: Multikinase inhibitor (FLT3, KIT, PDGFR, VEGFR).  
+- Rationale: Inhibits FLT3; shown anti‑proliferative in AML lines.  
+- Range: **1 nM – 10 µM**.  
+
+## 3. Dasatinib  
+- Class: BCR‑ABL/Src family TKI.  
+- Rationale: SRC and related kinases relevant to AML survival signaling.  
+- Range: **0.5 nM – 5 µM**.  
+
+## 4. Nilotinib  
+- Class: BCR‑ABL TKI.  
+- Rationale: Off‑target inhibition of KIT/PDGFR; some AML data.  
+- Range: **1 nM – 10 µM**.  
+
+## 5. Imatinib  
+- Class: BCR‑ABL, KIT, PDGFR TKI.  
+- Rationale: Activity in KIT‑mutated myeloid disease; partial effects in some AML lines.  
+- Range: **10 nM – 20 µM**.  
+
+## 6. Crizotinib  
+- Class: ALK/MET/ROS1 inhibitor.  
+- Rationale: MET/ALK pathways can support AML survival; some preclinical AML data.  
+- Range: **10 nM – 20 µM**.  
+
+## 7. Ibrutinib  
+- Class: BTK inhibitor.  
+- Rationale: BTK and B‑cell receptor–like signaling implicated in some myeloid contexts; emerging AML data.  
+- Range: **10 nM – 20 µM**.  
+
+## 8. Venetoclax  
+- Class: BCL‑2 inhibitor.  
+- Rationale: Approved for AML (but originally CLL); strong activity in many AML lines, including MOLM13.  
+- Range: **0.1 nM – 1 µM** (MOLM13 is often very sensitive).  
+
+## 9. Ruxolitinib  
+- Class: JAK1/2 inhibitor.  
+- Rationale: JAK/STAT signaling important in subsets of AML, especially with cytokine‑driven growth.  
+- Range: **10 nM – 20 µM**.  
+
+## 10. Tofacitinib  
+- Class: JAK inhibitor.  
+- Rationale: Similar rationale as ruxolitinib for cytokine/JAK‑STAT dependence.  
+- Range: **10 nM – 20 µM**.  
+
+## 11. Disulfiram (± copper)  
+- Class: ALDH inhibitor; proteasome/NPL4 modulator (repurposed anticancer candidate).  
+- Rationale: ALDH and proteostasis relevant in AML stem/progenitor cells. Activity often enhanced with Cu²⁺.  
+- Range: **50 nM – 10 µM** disulfiram; if using copper, add **1–2 µM CuCl₂**.  
+
+## 12. Metformin  
+- Class: Biguanide antidiabetic.  
+- Rationale: AMPK activation, mTOR modulation; reported anti‑leukemic effects at higher in vitro doses.  
+- Range: **0.1 mM – 20 mM** (wide, because IC₅₀ often in the low‑mM region).  
+
+## 13. Chloroquine / Hydroxychloroquine  
+- Class: Autophagy inhibitor, antimalarial.  
+- Rationale: AML cells can depend on autophagy; CQ/HQ sensitize to other drugs and have direct effects at higher doses.  
+- Range: **0.5 µM – 50 µM**.  
+
+## 14. propranolol  
+- Class: Non‑selective β‑blocker.  
+- Rationale: Adrenergic signaling affects leukemia niche and cell survival; some direct antiproliferative data in hematologic malignancies.  
+- Range: **1 µM – 100 µM**.  
+
+## 15. Fluvastatin (or simvastatin/atorvastatin as alternatives)  
+- Class: HMG‑CoA reductase inhibitor (statin).  
+- Rationale: Mevalonate pathway crucial for leukemic cell survival; statins show AML cytotoxicity.  
+- Range (fluvastatin): **0.1 µM – 50 µM**.  
+  - For simvastatin or atorvastatin: **0.01 µM – 10 µM** is often sufficient.  
+
+## 16. Thalidomide / Lenalidomide  
+- Class: Immunomodulatory drugs (IMiDs).  
+- Rationale: Cereblon‑mediated degradation of transcription factors and microenvironment modulation; some direct AML line effects.  
+- Range:  
+  - Thalidomide: **1 µM – 100 µM**  
+  - Lenalidomide: **0.1 µM – 50 µM**  
+
+## 17. Auranofin  
+- Class: Gold compound, anti‑rheumatic.  
+- Rationale: Inhibits thioredoxin reductase; induces ROS and apoptosis in AML cells.  
+- Range: **5 nM – 10 µM**.  
+
+## 18. Mebendazole  
+- Class: Anthelmintic (microtubule disruptor).  
+- Rationale: Tubulin disruption, hedgehog pathway effects; preclinical AML and other cancer data.  
+- Range: **0.1 µM – 20 µM**.  
+
+## 19. Niclosamide  
+- Class: Anthelmintic; mitochondrial uncoupler, Wnt/STAT3 inhibitor.  
+- Rationale: Wnt and STAT3 active in AML; niclosamide has broad anti‑cancer activity.  
+- Range: **0.1 µM – 10 µM**.  
+
+## 20. Clofazimine  
+- Class: Leprosy drug; affects mitochondrial function, ROS, and ion channels.  
+- Rationale: Shown anti‑leukemic activity in preclinical models; targets oxidative metabolism.  
+- Range: **0.05 µM – 10 µM**.  
+
+---
+
+### Minimal experimental design suggestions
+
+- **Cells**: MOLM‑13 (plus at least one other AML line for comparison, e.g., OCI‑AML3).  
+- **Density**: 3–5×10³ cells/well in 96‑well plates.  
+- **Assay time**: 72 h for IC₅₀; include 24 and 48 h for kinetic insight if possible.  
+- **Readout**: ATP‑based (CellTiter‑Glo) or metabolic (MTS/WST‑1).  
+- **Controls**:  
+  - Vehicle (0.1% DMSO)  
+  - Positive control: known active AML drug at effective dose (e.g., mid‑nM venetoclax or low‑nM sorafenib).  
+
+If you tell me what you already have in your chemical library and whether you’re aiming more at single‑agent activity or combination testing (e.g., with cytarabine/venetoclax), I can narrow this list to a prioritized panel and give you exact dilution plates.

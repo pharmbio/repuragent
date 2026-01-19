@@ -1,0 +1,82 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is an area of significant interest since it can expedite the delivery of new therapies by leveraging compounds with established safety profiles. Here are some drugs that have shown promise in AML and particularly against the MOLM13 cell line, along with general guidance on IC50 assay concentrations based on typical experimental protocols. Note that individual optimization is necessary:
+
+1. **Venetoclax (ABT-199)**  
+   - Concentration Range: Start with 1 nM to 10 µM.
+   
+2. **Sorafenib**  
+   - Concentration Range: Start with 1 nM to 10 µM.
+   
+3. **Dasatinib**  
+   - Concentration Range: Start with 1 nM to 10 µM.
+   
+4. **Axitinib**  
+   - Concentration Range: Start with 1 nM to 10 µM.
+   
+5. **Ibrutinib**  
+   - Concentration Range: Start with 1 nM to 10 µM.
+   
+6. **Ruxolitinib**  
+   - Concentration Range: Start with 1 nM to 10 µM.
+   
+7. **Midostaurin**  
+   - Concentration Range: Start with 1 nM to 10 µM.
+   
+8. **Sunitinib**  
+   - Concentration Range: Start with 1 nM to 10 µM.
+   
+9. **Ponatinib**  
+   - Concentration Range: Start with 1 nM to 10 µM.
+   
+10. **Arsenic Trioxide**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+11. **Selinexor (KPT-330)**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+12. **Tofacitinib**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+13. **Gefitinib**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+14. **Imatinib**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+15. **Nilotinib**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+16. **Bafetinib**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+17. **Bosutinib**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+18. **Crizotinib**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+19. **Gilteritinib**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+    
+20. **Moxetumomab Pasudotox**  
+    - Concentration Range: Start with 1 nM to 10 µM.
+
+**Experimental Considerations:**
+- Start with a broad range of concentrations as suggested above and then narrow down based on initial results.
+- Perform serial dilutions to prepare a DMSO stock solution.
+- Conduct the assay in a 96-well plate format and include proper controls (positive, negative, and vehicle controls).
+- Calculate IC50 values using appropriate software with dose-response modeling.
+- Pay attention to drug solubility and stability in the experimental medium.
+
+This list is based on drugs that have shown either clinical or preclinical activity against AML. Conducting a deep dive into current literature can yield more specific data on individual sensitivities, particularly for the MOLM13 cell line. Always ensure adherence to lab safety and regulatory protocols when handling and disposing of these compounds.

@@ -1,0 +1,101 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing, non–AML-approved drugs with published activity against AML cell lines (including FLT3-ITD–dependent MOLM13) and suggested concentration ranges appropriate for generating IC50 curves in a standard cell-proliferation/viability assay. Ranges are chosen to bracket reported potencies while accounting for serum binding and cell-line variability. Use a multi-point serial dilution spanning these ranges; keep DMSO constant across conditions. Notes flag key caveats (e.g., cofactor requirement, solubility).
+
+- Ponatinib (CML/Ph+ ALL; multi-kinase/FLT3 inhibitor)
+  Rationale: Potent against FLT3-ITD; strong activity in MOLM13.
+  Suggested range: 0.03–300 nM.
+
+- Sorafenib (HCC/RCC; multi-kinase/FLT3 inhibitor)
+  Rationale: Inhibits FLT3-ITD signaling; inhibits MOLM13 proliferation.
+  Suggested range: 3–3000 nM.
+
+- Sunitinib (RCC; multi-kinase/FLT3 inhibitor)
+  Rationale: Reported anti-FLT3 activity; inhibits FLT3-ITD AML cells.
+  Suggested range: 10–10,000 nM.
+
+- Cabozantinib (RCC/thyroid; multi-kinase including FLT3)
+  Rationale: Inhibits FLT3 and downstream signaling in AML lines.
+  Suggested range: 1–1000 nM.
+
+- Regorafenib (CRC/GIST; multi-kinase similar to sorafenib)
+  Rationale: Targets FLT3 and related kinases; AML cell activity reported.
+  Suggested range: 10–3000 nM.
+
+- Dasatinib (CML/Ph+ ALL; SRC/ABL inhibitor)
+  Rationale: Inhibits SRC-family signaling and has activity in AML lines; can blunt FLT3 pathways.
+  Suggested range: 3–10,000 nM.
+
+- Fostamatinib (ITP; SYK inhibitor)
+  Rationale: SYK contributes to AML survival; activity in FLT3-ITD AML and MOLM13 reported.
+  Suggested range: 0.3–30 μM.
+
+- Bortezomib (multiple myeloma; proteasome inhibitor)
+  Rationale: Induces apoptosis in AML lines including MOLM13.
+  Suggested range: 0.5–100 nM.
+
+- Panobinostat (myeloma; pan-HDAC inhibitor)
+  Rationale: Broad transcriptional repression; potent anti-AML activity.
+  Suggested range: 0.3–100 nM.
+
+- Vorinostat/SAHA (CTCL; HDAC inhibitor)
+  Rationale: Induces differentiation/apoptosis; active in AML lines.
+  Suggested range: 0.3–30 μM.
+
+- Tigecycline (antibiotic)
+  Rationale: Inhibits mitochondrial translation; selectively impairs AML (including stem-like) cells; activity in MOLM13 reported.
+  Suggested range: 0.5–50 μM.
+
+- Auranofin (rheumatoid arthritis; thioredoxin reductase inhibitor)
+  Rationale: Induces ROS and apoptosis in AML lines including MOLM13.
+  Suggested range: 0.05–5 μM.
+
+- Disulfiram + copper (alcohol aversion; ALDH/proteasome; requires Cu2+)
+  Rationale: DSF-Cu complex is cytotoxic to AML including FLT3-ITD; stem-cell targeting reported.
+  Suggested range: Disulfiram 0.03–3 μM with 1 μM Cu2+ held constant.
+
+- Niclosamide (anthelmintic; Wnt/STAT3/OXPHOS modulator)
+  Rationale: Broad anti-leukemic signaling inhibition; activity in AML lines.
+  Suggested range: 0.1–10 μM. Note: low aqueous solubility; ensure adequate solubilization.
+
+- Mebendazole (anthelmintic; microtubule depolymerizer)
+  Rationale: Anti-mitotic effects in AML cells; reported MOLM13 sensitivity.
+  Suggested range: 0.1–10 μM. Note: solubility/serum binding considerations.
+
+- Thioridazine (antipsychotic; dopamine receptor antagonist)
+  Rationale: AML stem/progenitor targeting; induces AML cell death including MOLM13.
+  Suggested range: 0.3–30 μM. Note: cardiotoxicity risk clinically.
+
+- Pimozide (antipsychotic; STAT5/ion channels)
+  Rationale: Inhibits STAT5 downstream of FLT3-ITD; activity in MOLM13.
+  Suggested range: 0.1–10 μM.
+
+- Ciclopirox (antifungal; iron chelation/eIF5A hypusination blockade)
+  Rationale: Induces AML apoptosis; clinical-stage repositioning.
+  Suggested range: 0.1–10 μM.
+
+- Simvastatin (dyslipidemia; HMG-CoA reductase inhibitor)
+  Rationale: Mevalonate-pathway dependence in AML; reported activity in FLT3-ITD cells.
+  Suggested range: 0.3–30 μM. Note: use active acid form; serum lipids can reduce free drug.
+
+- Clofazimine (leprosy; redox/Kv1.3/Wnt modulation)
+  Rationale: Cytotoxic to AML lines; reported low-μM to sub-μM potency.
+  Suggested range: 0.03–3 μM. Note: highly lipophilic; adsorption to plastic/serum binding can affect free levels.
+
+Practical notes (high-level):
+- MOLM13 is FLT3-ITD–dependent; FLT3-targeting agents (e.g., ponatinib, sorafenib, sunitinib, cabozantinib, regorafenib) should show low-nanomolar to low-micromolar IC50s.
+- Use a broad, multi-log dilution series that spans each suggested range; keep vehicle constant across wells.
+- Some agents have solubility or binding constraints (niclosamide, mebendazole, clofazimine, simvastatin). Confirm compound handling and consider serum effects when interpreting apparent potency.
+- For disulfiram, include copper as indicated; without copper, activity in AML cells is markedly reduced.
+
+These ranges are intended to capture expected potencies across AML cell models and should be refined based on preliminary runs in your specific assay setup.

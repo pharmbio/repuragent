@@ -1,0 +1,122 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or well-characterized investigational agents) that have been reported or are mechanistically plausible as candidates for repurposing against AML — with special attention to MOLM‑13 (an FLT3‑ITD AML cell line). For each I give a short rationale and an experimentally testable IC50 concentration range and a recommended dilution scheme you can use directly in cell‑viability assays.
+
+Important general guidance (apply to all compounds)
+- MOLM‑13 is FLT3‑ITD positive, so FLT3 inhibitors and BCL‑2 inhibitors often show high potency; include FLT3 inhibitors as positive comparators.
+- Use a broad concentration range that spans at least 4–6 log10 to capture nM→µM potencies. Typical practical approach: 10‑point, 3‑fold serial dilution (covers ~4.3 logs) or 8–12 point, 2–3 fold dilutions. Below I give a suggested top concentration and range for each drug.
+- Assay conditions: seed MOLM‑13 at 5,000–20,000 cells/well in 96‑well plates (optimize for linear growth); incubate 72 h (many AML cell IC50s measured at 48–72 h); readout: CellTiter‑Glo or similar metabolic/cell‑viability assay. Keep final DMSO ≤0.5% (preferably ≤0.2%).
+- Run technical triplicates and at least two biological replicates. Include vehicle (DMSO) control and a positive control (e.g., cytarabine and a potent FLT3 inhibitor such as quizartinib/gilteritinib).
+- Some agents (decitabine/azacitidine) require longer exposure to see epigenetic effects — you can still run standard 72 h viability assays but interpret cautiously.
+
+List of 20 candidates (name — mechanism / rationale — suggested IC50 testing range and dilution)
+1) Gilteritinib (ASP2215)
+- Mechanism/rationale: FDA‑approved FLT3 inhibitor; active against FLT3‑ITD lines (MOLM‑13).
+- Test range: 10 µM → 0.1 nM. Suggested: 10‑point, 3‑fold serial dilution (10 µM, 3.33 µM, 1.11 µM … 0.1 nM).
+
+2) Quizartinib (AC220)
+- Mechanism/rationale: highly potent FLT3 inhibitor; known activity in FLT3‑ITD AML models.
+- Test range: 1 µM → 0.1 nM. Suggested: 10‑point, 3‑fold (1 µM to 0.1 nM).
+
+3) Midostaurin (PKC412)
+- Mechanism/rationale: multi‑kinase (FLT3) inhibitor approved in FLT3‑mutant AML.
+- Test range: 10 µM → 1 nM. Suggested: 10‑point, 3‑fold (10 µM to 1 nM).
+
+4) Sorafenib
+- Mechanism/rationale: multi‑kinase inhibitor with FLT3 activity; used off‑label in FLT3 AML.
+- Test range: 10 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+5) Ponatinib
+- Mechanism/rationale: multi‑kinase TKI with activity against FLT3; has activity in FLT3‑ITD models.
+- Test range: 1 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+6) Venetoclax (ABT‑199)
+- Mechanism/rationale: BCL‑2 inhibitor with strong single‑agent or combinatorial activity in AML; clinical activity in AML.
+- Test range: 10 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+7) Cytarabine (Ara‑C)
+- Mechanism/rationale: standard-of‑care antimetabolite for AML — good positive control.
+- Test range: 100 µM → 1 nM. Suggested: 10‑point, 3‑fold (100 µM to 1 nM).
+
+8) Decitabine
+- Mechanism/rationale: hypomethylating agent used in AML; may reduce proliferation over longer exposure.
+- Test range: 100 µM → 1 nM. Suggested: 10‑point, 3‑fold. Note: consider longer exposure (5–7 days) for epigenetic effects.
+
+9) Azacitidine
+- Mechanism/rationale: hypomethylating agent used in AML/MDS.
+- Test range: 100 µM → 1 nM. Suggested: 10‑point, 3‑fold. Longer exposures advisable for epigenetic endpoints.
+
+10) Bortezomib
+- Mechanism/rationale: proteasome inhibitor — reported activity/synergy in AML cell lines.
+- Test range: 1 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+11) Alvocidib (flavopiridol)
+- Mechanism/rationale: CDK inhibitor with activity in AML clinical research; can induce apoptosis in AML lines.
+- Test range: 10 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+12) Omacetaxine mepesuccinate (homoharringtonine)
+- Mechanism/rationale: protein‑synthesis inhibitor used in hematologic malignancies; cytotoxic to AML lines.
+- Test range: 10 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+13) Trametinib
+- Mechanism/rationale: MEK inhibitor — relevant if MOLM‑13 or patient samples have RAS pathway activation; some AML subsets sensitive.
+- Test range: 1 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+14) Everolimus (or temsirolimus)
+- Mechanism/rationale: mTOR inhibitors can reduce AML proliferation; used in combinations.
+- Test range: 10 µM → 1 nM. Suggested: 10‑point, 3‑fold.
+
+15) Dasatinib
+- Mechanism/rationale: multi‑kinase inhibitor (SRC/ABL) with some activity in AML cell lines; potential activity in combination.
+- Test range: 1 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+16) Niclosamide
+- Mechanism/rationale: antiparasitic compound repeatedly identified in repurposing screens for anti‑cancer activity (mitochondrial uncoupling / Wnt / STAT3 inhibition); reported AML activity in vitro.
+- Test range: 10 µM → 0.1 nM. Suggested: 10‑point, 3‑fold. Note: low solubility — ensure proper formulation.
+
+17) Mebendazole
+- Mechanism/rationale: antihelminth reported to have anti‑cancer effects (MT disruption); hits in repurposing screens for AML.
+- Test range: 10 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+18) Simvastatin (or other statins)
+- Mechanism/rationale: statins show pro‑apoptotic/anti‑proliferative effects in AML in vitro; potential adjuvant.
+- Test range: 50 µM → 10 nM. Suggested: 10‑point, 3‑fold (top 50 µM due to lower potency in many reports).
+
+19) Itraconazole
+- Mechanism/rationale: antifungal with Hh/VEGFR/mTOR modulation; found in repurposing screens with anticancer signals.
+- Test range: 10 µM → 0.1 nM. Suggested: 10‑point, 3‑fold.
+
+20) Disulfiram (± Cu2+)
+- Mechanism/rationale: ALDH inhibitor/metal‑dependent proteotoxicity in cancer cells; activity often copper‑dependent (test with ±CuCl2).
+- Test range: 10 µM → 0.1 nM (test both without and with low µM Cu2+). Suggested: 10‑point, 3‑fold. Note: cytotoxic mechanism is metal‑dependent; include metal control.
+
+Practical concentration/format recommendation (single standardized protocol)
+- Use 10‑point, 3‑fold serial dilution unless a narrower range is preferred.
+- Suggested top concentrations (one standard layout): Kinase inhibitors & potent targeted agents: start at 10 µM (or 1 µM for very potent TKIs such as quizartinib). Cytotoxics/hypomethylators: start at 100 µM. Natural products/repurposing hits: start 10 µM–50 µM depending on solubility/published potency.
+- Example universal 10‑point, 3‑fold series starting at 10 µM: 10, 3.33, 1.11, 0.37, 0.12, 0.041, 0.014, 0.0046, 0.0015, 0.0005 µM (500 pM).
+- For cytarabine/decitabine: a 100 µM top gives 100, 33.3, 11.1, 3.7, 1.23, 0.41, 0.14, 0.046, 0.015, 0.005 µM.
+
+Controls and combination notes
+- Positive controls: cytarabine and a potent FLT3 inhibitor (e.g., quizartinib or gilteritinib) to validate assay reliability on MOLM‑13.
+- Consider testing venetoclax in combination with FLT3 inhibitors (strong published synergy in FLT3‑ITD AML).
+- For agents like disulfiram, niclosamide, mebendazole and statins, test solubility and vehicle carefully and include vehicle‑only wells.
+
+Caveats
+- In vitro IC50 does not equal clinical efficacy; pharmacokinetics, toxicity, and target engagement in patients matter.
+- Some repurposed drugs act via aggregation or off‑target mechanisms in vitro; confirm mechanism with orthogonal assays (e.g., apoptosis markers, target phosphorylation, rescue experiments).
+- For epigenetic drugs (decitabine/azacitidine) and other agents with delayed kinetics, consider longer assays (5–7 days) or colony assays for accurate activity estimation.
+
+If you want, I can:
+- produce ready‑to‑print plate maps for a 96‑well IC50 run for any subset of these drugs (single‑agent or combos);
+- give example scripts or parameter sets for IC50 fitting (four‑parameter logistic) and quality‑control metrics (Z′, R2);
+- prioritize a shorter list (top 6–10) with stronger literature support specifically for MOLM‑13 and provide references.

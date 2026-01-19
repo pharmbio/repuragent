@@ -1,0 +1,112 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest **candidate repurposing drugs with plausible, experimentally testable IC50 assay ranges** for AML (incl. **MOLM-13**), but I can’t responsibly present this as a vetted “top 20 that *will* inhibit MOLM-13,” because activity is highly context-dependent (serum %, exposure time, assay type, FLT3 status, etc.). What I *can* do is provide a **prioritized, literature-plausible shortlist** of **approved/clinically used** drugs that have **reported AML/MOLM-13 antiproliferative activity or strong mechanistic rationale**, plus **starting concentration ranges** you can run in a standard 72‑h viability IC50 assay (e.g., CellTiter-Glo). You should verify hits under your exact conditions.
+
+## Practical IC50 assay setup (so the ranges make sense)
+- **Cells:** MOLM-13 (FLT3-ITD), optionally MV4-11 as a second FLT3-ITD line + an FLT3-WT line (e.g., THP‑1).
+- **Exposure:** 72 h (common for AML proliferation assays).
+- **Readout:** ATP-based viability (CellTiter-Glo) or resazurin.
+- **Plate:** 384‑well (1–3k cells/well) or 96‑well (10–50k/well).
+- **Dilution series:** 10–12 points, **3-fold** or **1:2** dilution.
+- **Top concentration:** pick from the “test range” below; **keep DMSO constant** (≤0.1–0.2%).
+- **Controls:** DMSO negative; **quizartinib** or **midostaurin** positive (for MOLM‑13).
+
+---
+
+## 20 repurposable existing drugs + experimentally testable IC50 ranges (MOLM‑13‑relevant)
+**Ranges below are suggested *test windows* for IC50 determination (not claimed IC50s).** Most are chosen so the IC50 (if present) falls inside the window without excessive precipitation/toxicity artifacts.
+
+### A) High-likelihood (AML/MOLM‑13 commonly sensitive; kinase / BCL2 axis)
+1) **Venetoclax** (BCL‑2 inhibitor; approved in AML combos)  
+   **Test range:** 0.1 nM – 3 µM
+
+2) **Midostaurin** (FLT3/KIT inhibitor; approved in FLT3+ AML)  
+   **Test range:** 1 nM – 10 µM
+
+3) **Gilteritinib** (FLT3/AXL inhibitor; approved)  
+   **Test range:** 0.3 nM – 3 µM
+
+4) **Quizartinib** (FLT3 inhibitor; approved in some regions)  
+   **Test range:** 0.1 nM – 1 µM
+
+5) **Sorafenib** (multikinase; used off-label in FLT3-ITD AML)  
+   **Test range:** 1 nM – 10 µM
+
+6) **Ponatinib** (BCR-ABL/FLT3 activity; approved CML/ALL)  
+   **Test range:** 0.3 nM – 3 µM
+
+7) **Dasatinib** (SRC/ABL; reported activity in subsets; combinations)  
+   **Test range:** 0.3 nM – 10 µM
+
+8) **Trametinib** (MEK1/2 inhibitor; approved melanoma; AML signaling node)  
+   **Test range:** 0.3 nM – 3 µM
+
+### B) Epigenetic / transcriptional vulnerability (often active in AML lines)
+9) **Panobinostat** (pan-HDAC inhibitor; approved multiple myeloma)  
+   **Test range:** 0.3 nM – 1 µM
+
+10) **Vorinostat (SAHA)** (HDAC inhibitor; approved CTCL)  
+   **Test range:** 10 nM – 10 µM
+
+11) **Valproic acid** (HDAC activity at high conc; used clinically as anticonvulsant)  
+   **Test range:** 0.1 mM – 10 mM
+
+12) **Azacitidine** (DNMT inhibitor; approved AML/MDS)  
+   **Test range:** 1 nM – 10 µM  
+   *(Note: nucleoside analogs depend strongly on exposure time/cell cycling.)*
+
+13) **Decitabine** (DNMT inhibitor; approved AML/MDS)  
+   **Test range:** 0.5 nM – 5 µM
+
+14) **Selinexor** (XPO1 inhibitor; approved myeloma/DLBCL)  
+   **Test range:** 1 nM – 3 µM
+
+### C) Proteostasis / stress pathways (often broadly cytotoxic to AML)
+15) **Bortezomib** (proteasome inhibitor; approved MM/MCL)  
+   **Test range:** 0.3 nM – 300 nM
+
+16) **Carfilzomib** (proteasome inhibitor; approved MM)  
+   **Test range:** 0.3 nM – 1 µM
+
+17) **Arsenic trioxide** (approved APL; broader AML activity in some contexts)  
+   **Test range:** 10 nM – 30 µM
+
+### D) Signal transduction / metabolism repurposing candidates (mixed but testable)
+18) **Metformin** (AMPK/mitochondrial complex I; epidemiology + preclinical AML data)  
+   **Test range:** 0.1 mM – 30 mM
+
+19) **Chloroquine or Hydroxychloroquine** (lysosomal/autophagy inhibitor; combos)  
+   **Test range:** 0.3 µM – 100 µM
+
+20) **Disulfiram** (ALDH/ROS; copper-dependent cytotoxicity reported in AML)  
+   **Test range:** 10 nM – 30 µM  
+   *(Tip: include ±1–5 µM CuCl₂ condition if you want to test copper dependence.)*
+
+---
+
+## Notes to improve your chance of finding real MOLM‑13 hits
+- **MOLM‑13 is FLT3‑ITD**, so **FLT3 inhibitors** are the most reliable positive class (quizartinib/gilteritinib/midostaurin/sorafenib).  
+- **Venetoclax sensitivity** varies by culture conditions and anti-apoptotic context; consider testing **venetoclax + azacitidine** or **+ midostaurin** if single-agent effect is modest.
+- Some drugs above have **solubility limits** (e.g., panobinostat, ponatinib). Don’t force top doses that visibly precipitate; cap where solutions stay clear in your media.
+- Consider running **24 h vs 72 h** for drugs with rapid cytotoxicity (kinase inhibitors) versus **time-dependent epigenetic agents** (azacitidine/decitabine).
+
+---
+
+## If you tell me these 5 details, I’ll tailor the list and ranges to your exact assay
+1) 96- or 384-well format and **cells/well**  
+2) **Serum %** and medium used (RPMI? added cytokines?)  
+3) **Assay duration** (48/72/96 h)  
+4) Readout (CellTiter-Glo vs flow apoptosis vs imaging)  
+5) Whether you want **only non-oncology drugs** (stricter “repurposing”) or oncology drugs allowed
+
+I can also provide a **plate-ready 10- or 12-point dilution scheme** (with top concentrations and dilution factors) for all 20 compounds once you confirm your DMSO limit and plate format.

@@ -1,0 +1,125 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest *repurposing candidates* with **experimentally testable starting concentration ranges** for an AML (esp. **MOLM-13**) proliferation IC₅₀ assay, but I can’t responsibly claim that each drug “should” inhibit MOLM-13 without citing specific evidence per drug (effects are context-, dose-, and assay-dependent). Below is a pragmatic list of **widely available, existing (approved/clinical) drugs** that have **published anti-AML / anti-leukemia activity or strong mechanistic rationale** (often with MOLM-13/FLT3-ITD sensitivity), plus **reasonable IC₅₀ screening ranges** you can run in vitro.
+
+### Practical assay guidance (so the ranges make sense)
+- **Run an 8–12 point dose–response**, 3-fold or 5-fold dilution series.
+- **Top concentration** depends on solubility/toxicity: often **10–30 µM** for many repurposed drugs; for targeted kinase inhibitors often **0.1–1 µM** is enough.
+- Report IC₅₀ after **72 h** (common for MOLM-13) using **CellTiter-Glo** or similar.
+- Keep **DMSO ≤0.1%** (ideally ≤0.05%).
+- Include controls: **quizartinib or gilteritinib** (FLT3) as positive controls in MOLM-13.
+
+---
+
+## Top 20 repurposing candidates (with testable IC₅₀ assay ranges)
+
+**Key:** “Suggested IC₅₀ assay range” = a practical concentration window to bracket potency in MOLM-13-like settings. Start with that window as your dilution series (not as a claimed IC₅₀).
+
+### A) High-priority targeted agents with strong MOLM-13 rationale (FLT3-ITD / signaling)
+1) **Midostaurin** (PKC/FLT3 inhibitor; approved in AML)  
+   - Suggested range: **0.3 nM – 3 µM** (top 1–3 µM)
+
+2) **Sorafenib** (multi-kinase; FLT3/RAF/VEGFR; used off-label in FLT3-ITD AML)  
+   - Suggested range: **0.5 nM – 3 µM**
+
+3) **Sunitinib** (multi-kinase including FLT3)  
+   - Suggested range: **1 nM – 10 µM**
+
+4) **Pazopanib** (multi-kinase; some AML activity reports)  
+   - Suggested range: **3 nM – 30 µM**
+
+5) **Dasatinib** (SRC/ABL family; can impact AML signaling networks)  
+   - Suggested range: **0.3 nM – 3 µM**
+
+6) **Ruxolitinib** (JAK1/2; cytokine/JAK-STAT dependence in subsets; combos often better)  
+   - Suggested range: **3 nM – 10 µM**
+
+---
+
+### B) Epigenetic / transcriptional dependencies (frequent AML vulnerabilities)
+7) **Vorinostat (SAHA)** (HDAC inhibitor; approved in CTCL; tested in AML)  
+   - Suggested range: **10 nM – 30 µM**
+
+8) **Panobinostat** (HDAC inhibitor; approved in myeloma; potent)  
+   - Suggested range: **0.3 nM – 1 µM**
+
+9) **Valproic acid** (HDAC inhibitor; repurposed in AML trials historically; weaker potency)  
+   - Suggested range: **0.1 mM – 10 mM** (note: high due to low in vitro potency)
+
+10) **Azacitidine** (DNA hypomethylating agent; approved in AML/MDS)  
+   - Suggested range: **1 nM – 10 µM**
+
+11) **Decitabine** (DNA hypomethylating agent; approved in AML)  
+   - Suggested range: **1 nM – 10 µM**
+
+12) **All-trans retinoic acid (ATRA, tretinoin)** (differentiation agent; mostly APL but can affect subsets/combos)  
+   - Suggested range: **1 nM – 30 µM**
+
+---
+
+### C) Mitochondria / apoptosis / proteostasis (often strong cytotoxicity in AML lines)
+13) **Venetoclax** (BCL-2 inhibitor; approved in AML; MOLM-13 can be sensitive depending on conditions)  
+   - Suggested range: **0.01 nM – 1 µM** (often test up to 1 µM)
+
+14) **Navitoclax (ABT-263)** (BCL-2/BCL-XL; more toxic clinically but useful in vitro)  
+   - Suggested range: **0.1 nM – 3 µM**
+
+15) **Bortezomib** (proteasome inhibitor; approved in myeloma; anti-AML activity in studies)  
+   - Suggested range: **0.05 nM – 100 nM** (rarely need >100 nM)
+
+16) **Carfilzomib** (proteasome inhibitor; potent)  
+   - Suggested range: **0.1 nM – 300 nM**
+
+---
+
+### D) Metabolic / stress pathway repurposing candidates (common “drug library hit” classes)
+17) **Metformin** (mitochondrial complex I; variable AML effects)  
+   - Suggested range: **0.1 mM – 50 mM** (often needs mM)
+
+18) **Atovaquone** (mitochondrial electron transport; reported anti-leukemia activity)  
+   - Suggested range: **0.1 µM – 30 µM**
+
+19) **Disulfiram** (ALDH inhibitor; copper-dependent cytotoxicity often reported)  
+   - Suggested range: **10 nM – 10 µM**  
+   - Practical note: consider testing **± CuCl₂ (0.5–2 µM)** as condition (many labs do).
+
+20) **Auranofin** (thioredoxin reductase inhibitor; induces oxidative stress; leukemia activity reported)  
+   - Suggested range: **1 nM – 3 µM**
+
+---
+
+## Suggested “one-plate” dose series templates (so you can implement quickly)
+
+### Template 1 (most small molecules; µM scale)
+- **Top = 30 µM**, 10 points, 3-fold dilution:  
+  30, 10, 3.33, 1.11, 0.37, 0.123, 0.041, 0.0137, 0.0046, 0.0015 µM
+
+### Template 2 (very potent targeted/proteasome; nM scale)
+- **Top = 1 µM**, 10 points, 3-fold dilution:  
+  1000, 333, 111, 37, 12.3, 4.1, 1.37, 0.46, 0.15, 0.05 nM (plus vehicle)
+
+### Template 3 (weak agents needing mM)
+- **Top = 50 mM**, 10 points, 2-fold dilution:  
+  50, 25, 12.5, 6.25, 3.13, 1.56, 0.78, 0.39, 0.20, 0.10 mM
+
+---
+
+## Important practical notes (to avoid misleading IC₅₀s)
+- **Media and serum** change apparent potency (e.g., venetoclax sensitivity shifts with metabolic context).  
+- **Cell density** strongly impacts AML drug response; keep consistent (e.g., 25–100k cells/mL start).  
+- Several drugs above are **light/temperature sensitive** (ATRA) or **chemically unstable** (azacitidine/decitabine); prepare fresh and minimize time in aqueous media.
+- Consider confirming with **orthogonal readouts** (Annexin V/PI apoptosis, cell cycle) for agents that cause differentiation or cytostasis.
+
+---
+
+If you tell me your **assay format** (96 vs 384 well), **readout** (CellTiter-Glo vs resazurin), **treatment duration**, and whether you want to **exclude drugs already used in AML (e.g., venetoclax/azacitidine/decitabine/midostaurin)**, I can tailor the list to “pure repurposing” (non-oncology drugs only) and provide a **plate map–ready** concentration scheme for each compound.

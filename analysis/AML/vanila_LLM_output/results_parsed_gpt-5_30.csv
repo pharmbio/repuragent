@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multikinase tyrosine kinase inhibitor (FLT3-active TKI),Inhibits FLT3 and multiple kinases to suppress FLT3-ITD AML cell proliferation,0.0,0.0,,Approved for RCC/HCC/THC; frequently used as a chemical FLT3 inhibitor benchmark in MOLM13 and MV4-11
+Sunitinib,Multikinase tyrosine kinase inhibitor (FLT3-active TKI),Inhibits FLT3 among other kinases to reduce proliferation in FLT3-ITD AML lines,0.0,0.0,,Approved for RCC/GIST
+Ponatinib,Tyrosine kinase inhibitor (FLT3-active),"Potently inhibits FLT3, including resistance mutations, leading to strong activity in FLT3-ITD AML",0.0,0.0,,Approved for Ph+ CML/ALL
+Cabozantinib,Multikinase tyrosine kinase inhibitor (FLT3-active),"Inhibits FLT3, including certain TKD mutants, to inhibit FLT3-ITD AML cell growth",0.0,0.0,,Approved for RCC/MTC
+Axitinib,Tyrosine kinase inhibitor (FLT3-active),"Inhibits FLT3, including D835/TKD mutants, active in FLT3-driven AML lines",0.0,0.0,,Approved for RCC
+Regorafenib,Multikinase tyrosine kinase inhibitor (FLT3-active),Broad kinase inhibition including FLT3 activity; shows preclinical efficacy in FLT3-ITD AML models,0.0,0.0,,Approved for CRC/GIST/HCC
+Dasatinib,SRC/ABL family tyrosine kinase inhibitor (with FLT3 activity),Inhibits SRC/ABL and has reported FLT3 activity; antiproliferative in some FLT3-ITD AML lines,0.0,0.0,,Approved for CML/ALL
+Bortezomib,Proteasome inhibitor,"Inhibits 26S proteasome, inducing apoptosis in AML cells including FLT3-ITD backgrounds",0.0,0.0,,Approved for MM/MCL
+Carfilzomib,Proteasome inhibitor,Irreversible proteasome inhibition leading to AML cytotoxicity; can synergize with FLT3 inhibitors,0.0,0.0,,Approved for MM
+Vorinostat,HDAC inhibitor,Histone deacetylase inhibition leading to transcriptional reprogramming and AML cell death,0.0,0.0,,Also known as SAHA; approved for CTCL
+Panobinostat,Pan-HDAC inhibitor,Broad HDAC inhibition producing antiproliferative effects in AML and synergy with TKIs,0.0,0.0,,Approved for MM
+Trametinib,MEK1/2 inhibitor,Blocks MEK1/2 in the MAPK pathway to suppress AML cell growth; often synergizes with FLT3 inhibitors,0.0,0.0,,Approved for melanoma and other indications
+Cobimetinib,MEK inhibitor,Inhibits MEK in the MAPK pathway; shows preclinical AML activity and synergy with FLT3 blockade,0.0,0.0,,Approved for melanoma
+Everolimus,mTORC1 inhibitor,Inhibits mTORC1 signaling to reduce AML cell viability,0.0,0.0,,Approved for various cancers and TSC
+Temsirolimus,mTOR inhibitor,"Inhibits mTOR signaling to block AML growth, with reported combination activity with TKIs",0.0,0.0,,Approved for RCC
+Selinexor,XPO1 (nuclear export) inhibitor,"Blocks exportin-1 (XPO1)–mediated nuclear export, inducing apoptosis in AML cells",0.0,0.0,,Approved for MM and DLBCL
+Fostamatinib,SYK inhibitor,Inhibits SYK signaling relevant to AML survival pathways,0.0,0.0,,Approved for ITP
+Vismodegib,SMO/Hedgehog pathway inhibitor,Inhibits Smoothened (SMO) to block Hedgehog signaling and suppress AML cell growth,0.0,0.0,,"Approved for BCC; glasdegib (related SMO inhibitor) is AML-approved, supporting pathway relevance"
+Tigecycline,Antibiotic; mitochondrial translation inhibitor,"Inhibits mitochondrial translation, selectively impairing AML blasts/LSCs",0.0,0.0,,"Preclinical activity in vitro and ex vivo, including FLT3-ITD AML lines such as MOLM13"
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, promoting ROS-mediated AML cell death",0.0,0.0,,Approved for rheumatoid arthritis; active in FLT3-ITD AML backgrounds

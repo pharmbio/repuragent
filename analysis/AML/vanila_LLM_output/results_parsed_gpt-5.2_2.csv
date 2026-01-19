@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,Inhibits the anti-apoptotic protein BCL-2 to promote apoptosis,0.1,10.0,µM,Approved in AML combinations; range given as 0.1 nM–10 µM.
+Navitoclax,BCL-2/BCL-XL inhibitor,Inhibits anti-apoptotic BCL-2 family proteins (BCL-2 and BCL-XL) to promote apoptosis,0.5,10.0,µM,Clinical-stage; range given as 0.5 nM–10 µM.
+Midostaurin,Multi-kinase inhibitor (FLT3-targeting),"Inhibits FLT3 and other kinases, reducing proliferative signaling in AML",1.0,10.0,µM,Approved; described as multi-kinase/FLT3 inhibitor; range given as 1 nM–10 µM.
+Gilteritinib,Kinase inhibitor (FLT3/AXL),Inhibits FLT3 and AXL kinases to block oncogenic signaling,0.1,3.0,µM,Approved; range given as 0.1 nM–3 µM.
+Quizartinib,Kinase inhibitor (FLT3),Inhibits FLT3 signaling (notably relevant to FLT3-ITD AML),0.05,1.0,µM,Approved in some regions; suggested as a positive control for MOLM-13; range given as 0.05 nM–1 µM.
+Sorafenib,Multi-kinase inhibitor,Inhibits multiple kinases (including FLT3 among others) to suppress growth signaling,1.0,10.0,µM,Mentioned as used off-label in FLT3-ITD AML; range given as 1 nM–10 µM.
+Dasatinib,Tyrosine kinase inhibitor (SRC/ABL family),"Inhibits SRC/ABL-family kinases, modulating AML signaling pathways",0.5,10.0,µM,Repurposing interest in AML signaling; range given as 0.5 nM–10 µM.
+Trametinib,MEK inhibitor,Inhibits MEK1/2 in the MAPK pathway to reduce proliferation signaling,0.1,1.0,µM,Approved; range given as 0.1 nM–1 µM.
+Cobimetinib,MEK inhibitor,Inhibits MEK1/2 to suppress MAPK/ERK pathway signaling,0.2,3.0,µM,Approved; range given as 0.2 nM–3 µM.
+Everolimus,mTOR inhibitor,Inhibits mTORC1 to reduce protein synthesis and cell growth signaling,0.5,10.0,µM,Approved; range given as 0.5 nM–10 µM.
+Temsirolimus,mTOR inhibitor,"Inhibits mTORC1, impairing cell growth and proliferation signaling",0.5,10.0,µM,Approved; range given as 0.5 nM–10 µM.
+Palbociclib,CDK4/6 inhibitor,Inhibits CDK4/6 to enforce G1 cell-cycle arrest,5.0,30.0,µM,Approved; range given as 5 nM–30 µM.
+Ribociclib,CDK4/6 inhibitor,"Inhibits CDK4/6, reducing RB phosphorylation and cell-cycle progression",10.0,30.0,µM,Approved; range given as 10 nM–30 µM.
+Abemaciclib,CDK4/6 inhibitor,Inhibits CDK4/6 causing cell-cycle arrest,10.0,30.0,µM,Approved; noted to have more CDK9 activity at higher doses; range given as 10 nM–30 µM.
+Panobinostat,Pan-HDAC inhibitor,Inhibits histone deacetylases to alter chromatin regulation and gene expression,0.2,3.0,µM,Approved; range given as 0.2 nM–3 µM.
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases, promoting transcriptional changes that can reduce proliferation",10.0,30.0,µM,Alternative name: SAHA; range given as 10 nM–30 µM.
+Valproic acid,HDAC inhibitor (weak; active at mM concentrations),Has HDAC-inhibitory activity at high (mM) concentrations; used in differentiation-focused AML trials,0.1,10.0,mM,Use aqueous salt; monitor osmolarity/pH; range given as 0.1 mM–10 mM.
+Azacitidine,DNA methyltransferase inhibitor (hypomethylating agent),"Nucleoside analog that inhibits DNA methylation via DNMT inhibition, affecting gene expression",1.0,30.0,µM,Approved; short half-life in solution—prepare fresh; range given as 1 nM–30 µM.
+Decitabine,DNA methyltransferase inhibitor (hypomethylating agent),Nucleoside analog that inhibits DNMT leading to DNA hypomethylation and altered transcription,0.5,30.0,µM,Approved; unstable—prepare fresh; range given as 0.5 nM–30 µM.
+Hydroxychloroquine,Autophagy/lysosome inhibitor,Raises lysosomal pH and impairs autophagy-lysosome function,0.1,100.0,µM,Approved; range given as 0.1 µM–100 µM.

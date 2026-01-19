@@ -1,0 +1,95 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for treating acute myeloid leukemia (AML) is a promising research approach, especially for targeting specific cell lines like MOLM13. Below is a list of some approved drugs that have been studied for potential repurposing for AML. While I can suggest these drugs based on their mechanisms and previous studies, it’s crucial to validate these suggestions through experimental assays to determine their effectiveness at inhibiting proliferation of AML cell lines.
+
+1. **Venetoclax (ABT-199)**
+   - Mechanism: BCL-2 inhibitor
+   - Suggested IC50 range: 10-100 nM
+
+2. **Ruxolitinib**
+   - Mechanism: JAK1/2 inhibitor
+   - Suggested IC50 range: 100-1000 nM
+
+3. **Sorafenib**
+   - Mechanism: Multi-kinase inhibitor
+   - Suggested IC50 range: 100-500 nM
+
+4. **Dasatinib**
+   - Mechanism: BCR-ABL/Src family kinase inhibitor
+   - Suggested IC50 range: 1-100 nM
+
+5. **Ponatinib**
+   - Mechanism: Multi-kinase inhibitor, particularly BCR-ABL
+   - Suggested IC50 range: 10-100 nM
+
+6. **Midostaurin**
+   - Mechanism: FLT3 kinase inhibitor
+   - Suggested IC50 range: 10-100 nM
+
+7. **Ibrutinib**
+   - Mechanism: BTK inhibitor
+   - Suggested IC50 range: 100-500 nM
+
+8. **Cerlutinib**
+   - Mechanism: ALK inhibitor
+   - Suggested IC50 range: 100-1000 nM
+
+9. **Idelalisib**
+   - Mechanism: PI3Kδ inhibitor
+   - Suggested IC50 range: 100-1000 nM
+
+10. **Nivolumab**
+    - Mechanism: PD-1 inhibitor
+    - Suggested IC50 range: Relevant for immune checkpoint inhibition rather than direct IC50.
+
+11. **Azacitidine**
+    - Mechanism: DNA methyltransferase inhibitor
+    - Suggested concentration range for experimental studies: 100-1000 nM
+
+12. **Decitabine**
+    - Mechanism: DNA methyltransferase inhibitor
+    - Suggested concentration range for experimental studies: 50-500 nM
+
+13. **Metformin**
+    - Mechanism: AMPK activator/anti-diabetic
+    - Suggested concentration range for experimental studies: 1-10 mM
+
+14. **Thalidomide**
+    - Mechanism: Immunomodulatory drug
+    - Suggested concentration range for experimental studies: 1-10 µM
+
+15. **Lenalidomide**
+    - Mechanism: Immunomodulatory agent
+    - Suggested concentration range for experimental studies: 1-10 µM
+
+16. **Auranofin**
+    - Mechanism: Thioredoxin reductase inhibitor
+    - Suggested IC50 range: 1-10 µM
+
+17. **Hydroxychloroquine**
+    - Mechanism: Autophagy inhibitor
+    - Suggested concentration range for experimental studies: 10-100 µM
+
+18. **ATRA (All-trans retinoic acid)**
+    - Mechanism: Induces differentiation of leukemic cells
+    - Suggested concentration range for experimental studies: 1-10 µM
+
+19. **Arsenic Trioxide**
+    - Mechanism: Induces apoptosis in malignant cells
+    - Suggested concentration range for experimental studies: 0.5-5 µM
+
+20. **Vorinostat**
+    - Mechanism: Histone deacetylase inhibitor
+    - Suggested IC50 range: 1-10 µM
+
+Keep in mind that these concentration ranges are generalized and specific experiments must be conducted to determine the most effective and safe concentrations for each particular drug when tested against the MOLM13 cell line. Also, clinical trials would be required to ascertain the effectiveness and safety of these drugs for AML patients. Always refer to in-depth pharmacological studies and consult clinical experts for further research directions.

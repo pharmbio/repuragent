@@ -1,0 +1,91 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved, on‑market drugs (originally indicated for other diseases) with literature support for anti‑proliferative activity in AML cell models, including FLT3‑ITD–driven lines like MOLM‑13. For each, a concise rationale and an assay screening window is provided to bracket typical cellular potencies observed in AML. Use these as starting windows and adjust based on your readout and assay conditions.
+
+FLT3/multikinase TKIs (strong relevance for FLT3‑ITD MOLM‑13)
+- Ponatinib (CML/Ph+ ALL; FLT3/BCR‑ABL/VEGFR)
+  Rationale: Very potent FLT3‑ITD inhibitor; robust activity in MOLM‑13/MV4‑11.
+  Suggested window: 0.1–300 nM
+- Sorafenib (HCC/RCC; RAF/VEGFR/PDGFR/FLT3)
+  Rationale: Inhibits FLT3‑ITD signaling; strong activity in MOLM‑13.
+  Suggested window: 0.5–500 nM
+- Sunitinib (RCC/GIST; FLT3/VEGFR/PDGFR)
+  Rationale: Inhibits FLT3 and downstream signaling; active in FLT3‑ITD AML lines.
+  Suggested window: 1–3,000 nM
+- Dasatinib (CML/Ph+ ALL; SRC/ABL, some FLT3)
+  Rationale: Inhibits SRC/ABL and can suppress FLT3‑ITD signaling; activity in MOLM‑13 reported.
+  Suggested window: 0.5–1,000 nM
+- Vandetanib (Medullary thyroid cancer; VEGFR/EGFR/RET, some FLT3)
+  Rationale: Multikinase activity; reported AML growth inhibition at sub‑µM–low‑µM.
+  Suggested window: 50–5,000 nM
+- Regorafenib (CRC/GIST/HCC; multikinase incl. KIT/VEGFR, some FLT3)
+  Rationale: Broad kinase blockade; AML cell line activity in low‑µM.
+  Suggested window: 50–5,000 nM
+
+MAPK pathway inhibitors
+- Trametinib (Melanoma; MEK1/2)
+  Rationale: FLT3‑ITD signals via MEK/ERK; MEK inhibition suppresses AML proliferation (incl. MOLM‑13).
+  Suggested window: 1–1,000 nM
+- Selumetinib (Melanoma/NF1; MEK1/2)
+  Rationale: Similar rationale; AML activity typically sub‑µM to low‑µM.
+  Suggested window: 10–10,000 nM
+
+PI3K/mTOR pathway inhibitors
+- Everolimus (RCC/TSC, etc.; mTORC1)
+  Rationale: mTOR signaling supports AML growth; cytostatic/anti‑proliferative effects in AML lines.
+  Suggested window: 50–10,000 nM
+- Temsirolimus (RCC; mTORC1)
+  Rationale: As above; activity in AML cell models.
+  Suggested window: 50–10,000 nM
+- Copanlisib (Lymphoma; PI3Kα/δ)
+  Rationale: PI3K pathway active in AML; reported sub‑µM activity in AML cells.
+  Suggested window: 10–3,000 nM
+
+Proteostasis/epigenetic modulators
+- Bortezomib (Multiple myeloma/MCL; proteasome)
+  Rationale: Broad AML cytotoxicity at low‑nM; active in MOLM‑13.
+  Suggested window: 0.5–300 nM
+- Carfilzomib (Multiple myeloma; proteasome)
+  Rationale: Similar to bortezomib; AML activity in low‑nM.
+  Suggested window: 1–1,000 nM
+- Panobinostat (Multiple myeloma; HDAC)
+  Rationale: Potent pan‑HDACi with strong AML activity at low‑nM.
+  Suggested window: 0.5–300 nM
+- Vorinostat (CTCL; HDAC)
+  Rationale: AML growth inhibition and differentiation effects.
+  Suggested window: 50–10,000 nM
+- Belinostat (PTCL; HDAC)
+  Rationale: Pan‑HDAC activity; AML cell inhibition in sub‑ to low‑µM.
+  Suggested window: 50–5,000 nM
+
+Nuclear export
+- Selinexor (Multiple myeloma/DLBCL; XPO1)
+  Rationale: Induces nuclear retention of tumor suppressors; active across AML lines incl. MOLM‑13.
+  Suggested window: 5–3,000 nM
+
+Mitochondrial/oxidative stress and other repurposed agents
+- Tigecycline (Antibiotic)
+  Rationale: Inhibits mitochondrial translation; impairs OXPHOS‑dependent AML cells, including MOLM‑13.
+  Suggested window: 50–20,000 nM
+- Auranofin (Antirheumatic)
+  Rationale: Inhibits thioredoxin reductase; promotes ROS‑mediated AML cytotoxicity.
+  Suggested window: 50–5,000 nM
+- Nelfinavir (HIV protease inhibitor)
+  Rationale: Induces ER stress/UPR; reported anti‑AML activity in low‑ to mid‑µM.
+  Suggested window: 500–20,000 nM
+
+Practical notes
+- The windows above are intended to bracket typical cellular potencies seen in AML; optimize around your readout and exposure time.
+- Potency can shift with serum, cell density, and timepoint; confirm in your assay format.
+- Include appropriate vehicle controls and consider a known AML‑targeted positive control (e.g., quizartinib or gilteritinib) to benchmark assay performance.
+- Many agents are DMSO‑soluble with solubility limits; verify compound handling and stability.

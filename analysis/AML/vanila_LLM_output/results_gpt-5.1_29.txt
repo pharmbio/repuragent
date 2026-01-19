@@ -1,0 +1,140 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 clinically used (or late‑stage) drugs with evidence or strong rationale for repurposing in acute myeloid leukemia (AML), especially FLT3‑ITD–positive lines like MOLM‑13. For each, I include:
+
+- **Suggested IC₅₀ assay test range**: a *starting* concentration series for in‑vitro proliferation/viability assays (e.g., 72‑hr CellTiter‑Glo) in MOLM‑13.  
+- These ranges are based on reported in‑vitro potencies (when available) plus typical cell‑based assay practice (log‑scale dilutions, often 8–10 points). Always re‑optimize for your specific setting.
+
+General note for all:  
+- Use serial 3‑fold or 10‑fold dilutions across the stated range.  
+- Include DMSO control at the highest vehicle concentration used.
+
+---
+
+## 1. Midostaurin  
+- **Original use**: Multikinase/FLT3 inhibitor; approved for FLT3‑mut+ AML.  
+- **Rationale**: Benchmark FLT3 inhibitor; strong activity in MOLM‑13.  
+- **Test range**: **0.1 nM – 3 µM**.
+
+## 2. Sorafenib  
+- **Original use**: Renal cell carcinoma, HCC, thyroid; multikinase inhibitor.  
+- **Rationale**: Off‑label in FLT3‑ITD AML; potent in MOLM‑13.  
+- **Test range**: **0.5 nM – 10 µM**.
+
+## 3. Sunitinib  
+- **Original use**: RCC, GIST; multikinase inhibitor.  
+- **Rationale**: Inhibits FLT3 and related kinases; preclinical AML data.  
+- **Test range**: **1 nM – 10 µM**.
+
+## 4. Dasatinib  
+- **Original use**: BCR‑ABL/Src inhibitor (CML, Ph+ ALL).  
+- **Rationale**: Broader Src/ABL/Kit inhibition; anti‑leukemic activity in some AML models.  
+- **Test range**: **0.5 nM – 5 µM**.
+
+## 5. Nilotinib  
+- **Original use**: BCR‑ABL inhibitor (CML).  
+- **Rationale**: Inhibits some FLT3 and KIT mutants; activity shown in AML cells in vitro.  
+- **Test range**: **1 nM – 10 µM**.
+
+## 6. Ponatinib  
+- **Original use**: Pan‑BCR‑ABL inhibitor (including T315I); multikinase inhibitor.  
+- **Rationale**: Potent inhibitor of FLT3‑ITD and other AML‑relevant kinases; strong MOLM‑13 activity reported.  
+- **Test range**: **0.05 nM – 1 µM**.
+
+## 7. Ibrutinib  
+- **Original use**: BTK inhibitor (CLL, MCL, etc.).  
+- **Rationale**: Off‑target inhibition and signaling disruption in myeloid leukemias; some preclinical AML data.  
+- **Test range**: **10 nM – 20 µM**.
+
+## 8. Venetoclax  
+- **Original use**: BCL‑2 inhibitor (CLL, AML in combination).  
+- **Rationale**: Strong pro‑apoptotic effects in AML including MOLM‑13; standard of care in combos.  
+- **Test range**: **0.1 nM – 3 µM**.
+
+## 9. Ruxolitinib  
+- **Original use**: JAK1/2 inhibitor (myelofibrosis, PV).  
+- **Rationale**: JAK/STAT pathway relevant in subsets of AML; shown to reduce growth in some AML cell lines.  
+- **Test range**: **10 nM – 20 µM**.
+
+## 10. Everolimus  
+- **Original use**: mTOR inhibitor (RCC, other solid tumors, transplantation).  
+- **Rationale**: mTOR pathway important in AML cell survival; everolimus shows anti‑proliferative effects in AML in vitro.  
+- **Test range**: **0.5 nM – 5 µM**.
+
+## 11. Temsirolimus  
+- **Original use**: mTOR inhibitor (RCC).  
+- **Rationale**: Similar to everolimus; tested in AML cell lines and clinical trials.  
+- **Test range**: **0.5 nM – 5 µM**.
+
+## 12. Metformin  
+- **Original use**: Type 2 diabetes (AMPK activator, mitochondrial complex I inhibitor).  
+- **Rationale**: Metabolic stressor; reported anti‑leukemic effects at higher in‑vitro doses (relative to plasma levels).  
+- **Test range**: **0.1 mM – 20 mM**.
+
+## 13. Disulfiram (+ Cu²⁺)  
+- **Original use**: Alcohol aversion therapy.  
+- **Rationale**: ALDH inhibition and copper‑dependent proteasome/NF‑κB effects; preclinical AML activity, including leukemic stem cells.  
+- **Test range**:  
+  - Disulfiram: **10 nM – 10 µM**  
+  - Copper (e.g., CuCl₂ or CuSO₄): fixed low micromolar (e.g., 0.5–1 µM) in all wells.
+
+## 14. Chloroquine / Hydroxychloroquine  
+- **Original use**: Antimalarial/antirheumatic; autophagy inhibitor.  
+- **Rationale**: Target survival/autophagy in AML; synergy with other agents reported.  
+- **Test range**: **0.5 µM – 50 µM**.
+
+## 15. Celecoxib  
+- **Original use**: COX‑2 inhibitor (anti‑inflammatory, pain).  
+- **Rationale**: COX‑2–independent PI3K/Akt and ER stress effects; some anti‑leukemia evidence in vitro.  
+- **Test range**: **1 µM – 80 µM**.
+
+## 16. Valproic acid  
+- **Original use**: Antiepileptic, mood stabilizer; HDAC inhibitor.  
+- **Rationale**: Differentiation and growth inhibition in AML; used in clinical differentiation protocols.  
+- **Test range**: **0.1 mM – 5 mM**.
+
+## 17. Vorinostat (SAHA)  
+- **Original use**: HDAC inhibitor (CTCL).  
+- **Rationale**: Potent HDACi with strong activity in AML lines including MOLM‑13; used in AML trials.  
+- **Test range**: **10 nM – 10 µM**.
+
+## 18. Thalidomide / Lenalidomide  
+- **Original use**: Immunomodulatory drugs (MM, MDS‑del(5q)).  
+- **Rationale**: Cereblon‑mediated degradation of IKZF1/3 and immune modulation; modest direct AML cytotoxicity but interesting in combinations.  
+- **Test range**:
+  - Thalidomide: **0.5 µM – 100 µM**  
+  - Lenalidomide: **0.1 µM – 30 µM**.
+
+## 19. Auranofin  
+- **Original use**: Oral gold compound for rheumatoid arthritis.  
+- **Rationale**: Thioredoxin reductase inhibitor; induces ROS and apoptosis in AML cell lines (including FLT3‑ITD); strong preclinical data.  
+- **Test range**: **5 nM – 5 µM**.
+
+## 20. Leflunomide / Teriflunomide  
+- **Original use**: Immunosuppressant (RA; MS for teriflunomide).  
+- **Rationale**: DHODH inhibition; blocks de novo pyrimidine synthesis and differentiation/proliferation in AML models.  
+- **Test range**:
+  - Teriflunomide: **0.5 µM – 100 µM**  
+  - If using leflunomide itself, expect to need mid‑ to high‑µM due to in‑vitro conversion.
+
+---
+
+### Practical assay notes for MOLM‑13
+
+- **Exposure time**: commonly 48–72 h for proliferation/viability readouts.  
+- **Readouts**:  
+  - ATP‑based (CellTiter‑Glo) or  
+  - Metabolic (MTS/XTT) plus confirm by annexin V/PI for apoptosis.  
+- **Plate layout**: 8–10‑point serial dilutions (e.g., 1:3) in triplicate for each drug; include medium‑only, DMSO vehicle, and positive‑control inhibitor (e.g., sorafenib or midostaurin).
+
+If you tell me what is already available in your lab (kinase inhibitors vs metabolic, HDAC, etc.), I can narrow this to a shorter, more focused panel with specific dilution schemes.

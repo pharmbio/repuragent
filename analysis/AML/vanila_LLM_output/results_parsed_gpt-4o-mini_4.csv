@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Azacitidine,Antimetabolite,"Inhibits DNA methyltransferase, leading to hypomethylation of DNA",0.1,1.0,µM,
+Decitabine,Antimetabolite,"Inhibits DNA methyltransferase, resulting in hypomethylation and reactivation of tumor suppressor genes",0.1,1.0,µM,
+Dexamethasone,Glucocorticoid,Inhibits inflammation and promotes apoptosis in lymphocytes,1.0,10.0,µM,
+Clofarabine,Antimetabolite,Interferes with DNA synthesis and repair,0.1,5.0,µM,
+Imatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase and other targets,0.1,1.0,µM,Also known as Gleevec.
+Nilotinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase with a greater potency than imatinib,0.1,1.0,µM,
+Midostaurin,Kinase inhibitor,"Inhibits FLT3 and other kinases, disrupting signaling pathways",0.1,1.0,µM,
+Venetoclax,BCL-2 inhibitor,"Inhibits the anti-apoptotic protein BCL-2, promoting apoptosis",1.0,10.0,µM,
+Sorafenib,Multi-kinase inhibitor,"Inhibits RAF kinase and others, impeding tumor cell proliferation",0.5,5.0,µM,
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits JAK1 and JAK2 signaling, affecting hematopoiesis and immune responses",0.1,1.0,µM,
+Sunitinib,Multi-kinase inhibitor,"Inhibits multiple receptor tyrosine kinases, affecting tumor growth and angiogenesis",0.1,1.0,µM,
+Thalidomide,Immunomodulator,Inhibits angiogenesis and modulates immune response,10.0,20.0,µM,
+Lenalidomide,Immunomodulator,Enhances immune response and inhibits tumor cell proliferation,1.0,10.0,µM,
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome activity, leading to apoptosis in malignant cells",10.0,50.0,nM,
+Hydroxyurea,Antimetabolite,"Inhibits ribonucleotide reductase, affecting DNA synthesis",50.0,100.0,µM,
+Tretinoin,Retinoid,Stimulates differentiation of myeloid cells and induces apoptosis,0.1,1.0,µM,Also known as All-trans retinoic acid.
+Metformin,Antidiabetic agent,Reduces gluconeogenesis and may have anti-cancer properties,1.0,10.0,mM,
+Quisinostat,HDAC inhibitor,"Inhibits histone deacetylases, leading to changes in gene expression",0.1,1.0,µM,
+Curcumin,Natural compound,Exhibits anti-inflammatory and anti-cancer properties,5.0,20.0,µM,
+Resveratrol,Natural compound,Exhibits antioxidant properties and may induce apoptosis,25.0,50.0,µM,

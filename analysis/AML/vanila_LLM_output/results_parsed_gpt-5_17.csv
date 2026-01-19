@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multikinase inhibitor (FLT3),"Inhibits FLT3, RAF, and VEGFR tyrosine kinases",0.5,5000.0,nM,"Indications noted: HCC/RCC; targets listed as FLT3, RAF, VEGFR"
+Ponatinib,Multikinase inhibitor (ABL/FLT3),"Inhibits ABL, FLT3, and KIT kinases",0.03,1000.0,nM,Indications noted: CML/ALL; potent against FLT3-ITD–positive AML lines
+Sunitinib,Multikinase inhibitor (FLT3),"Inhibits FLT3, KIT, and VEGFR kinases",1.0,10000.0,nM,"Indications noted: RCC/GIST; targets listed as FLT3, KIT, VEGFR"
+Regorafenib,Multikinase inhibitor (FLT3),"Inhibits FLT3, VEGFR, and TIE2 kinases",1.0,10000.0,nM,"Indications noted: CRC/GIST/HCC; targets listed as FLT3, VEGFR, TIE2"
+Cabozantinib,Multikinase inhibitor (MET/AXL/FLT3),"Inhibits MET, AXL, and FLT3 kinases",0.5,5000.0,nM,"Indications noted: RCC/HCC; targets listed as MET, AXL, FLT3"
+Axitinib,VEGFR inhibitor (reported FLT3 activity),Inhibits VEGFR kinases; reported to have FLT3 activity,0.5,5000.0,nM,Indication noted: RCC; primarily a VEGFR inhibitor; reported FLT3 activity
+Dasatinib,SRC/ABL family kinase inhibitor,"Inhibits SRC, ABL, and KIT kinases",1.0,5000.0,nM,Indications noted: CML/ALL; some AML activity reported
+Venetoclax,BCL2 inhibitor,Selective BCL2 inhibition to induce apoptosis,0.1,1000.0,nM,Indications noted: CLL/SLL; repurposed to AML
+Bortezomib,Proteasome inhibitor,Inhibits the proteasome to disrupt proteostasis,0.5,200.0,nM,Indications noted: MM/MCL; proteasome target
+Carfilzomib,Proteasome inhibitor,Irreversible proteasome inhibitor,0.5,200.0,nM,Indication noted: MM; proteasome target
+Omacetaxine,Protein synthesis inhibitor,Inhibits protein synthesis,1.0,500.0,nM,Indication noted: CML; protein synthesis inhibitor
+Panobinostat,HDAC inhibitor,Pan-HDAC inhibition,0.5,200.0,nM,Indication noted: MM; HDAC target
+Vorinostat,HDAC inhibitor,HDAC inhibition,50.0,15000.0,nM,Indication noted: CTCL; HDAC target
+Selinexor,XPO1 inhibitor (nuclear export),Inhibits nuclear export protein XPO1,5.0,2000.0,nM,"Indications noted: MM, DLBCL; XPO1 target"
+Trametinib,MEK inhibitor (MAPK pathway),Inhibits MEK1/2,0.1,1000.0,nM,Indication noted: melanoma; MEK1/2 target
+Selumetinib,MEK inhibitor (MAPK pathway),Inhibits MEK1/2,1.0,3000.0,nM,Indication noted: NF1 PN; MEK1/2 target
+Everolimus,mTOR inhibitor,mTORC1 inhibition,1.0,10000.0,nM,Indications noted: various solid tumors; mTORC1 target
+Leflunomide,DHODH inhibitor,Inhibits dihydroorotate dehydrogenase via active metabolite teriflunomide,1.0,200.0,µM,"Indication noted: RA; via teriflunomide, DHODH inhibition"
+Auranofin,Thioredoxin reductase inhibitor,Inhibits thioredoxin reductase to disrupt redox homeostasis,10.0,5000.0,nM,Indication noted: RA; thioredoxin reductase target
+Niclosamide,Mitochondrial/Wnt/STAT3 pathway modulator,"Disrupts Wnt signaling, mitochondrial function, and STAT3",10.0,5000.0,nM,Indication noted: anthelmintic; described as Wnt/mitochondrial/STAT3 disruptor

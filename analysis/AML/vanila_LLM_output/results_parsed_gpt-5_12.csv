@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multikinase inhibitor (includes FLT3),Inhibits multiple kinases including FLT3,0.1,3000.0,nM,Approved for HCC/RCC; FLT3-ITD AML often shows low-nM sensitivity.
+Ponatinib,Kinase inhibitor (ABL/FLT3),Inhibits ABL and FLT3 kinases,0.05,1000.0,nM,Approved for CML/ALL; frequently low-nM in FLT3-ITD lines (including MOLM13).
+Cabozantinib,Multikinase inhibitor (MET/FLT3/VEGFR),"Inhibits MET, FLT3, and VEGFR kinases",0.5,5000.0,nM,Approved for RCC/thyroid; reported activity in FLT3-ITD AML at low–mid nM.
+Sunitinib,Kinase inhibitor (FLT3/VEGFR),Inhibits FLT3 and VEGFR kinases,0.5,5000.0,nM,Approved for RCC; commonly tens of nM in FLT3-ITD AML.
+Regorafenib,Multikinase inhibitor (includes FLT3),Inhibits multiple kinases including FLT3,1.0,10000.0,nM,Approved for CRC/HCC; typically mid‑nM to sub‑µM in FLT3-ITD contexts.
+Dasatinib,Src/ABL kinase inhibitor (some FLT3 inhibition),Inhibits Src and ABL; some FLT3 inhibition,1.0,10000.0,nM,Approved for CML/ALL; often tens of nM to sub‑µM in AML.
+Osimertinib,EGFR tyrosine kinase inhibitor; also FLT3 inhibitor,Inhibits EGFR and FLT3 (including D835 mutants),0.5,5000.0,nM,Approved for NSCLC; frequently ~10–100 nM in FLT3‑ITD AML (MOLM13/MV4‑11).
+Trametinib,MEK1/2 inhibitor,Inhibits MEK1/2 to block MAPK signaling,0.5,5000.0,nM,Approved for melanoma; RAS/MAPK‑driven AML lines show ~10–300 nM single‑agent sensitivity; often synergizes with FLT3 inhibitors.
+Everolimus,mTORC1 inhibitor,Inhibits mTORC1 signaling,1.0,10000.0,nM,"Approved for RCC; AML lines commonly show 10–300 nM growth inhibition, context‑dependent."
+Bortezomib,Proteasome inhibitor,Inhibits the proteasome to disrupt proteostasis,0.5,1000.0,nM,Approved for myeloma/MCL; many AML lines respond in the 5–50 nM range.
+Selinexor,XPO1 inhibitor,Inhibits nuclear export protein XPO1 (CRM1),1.0,5000.0,nM,Approved for myeloma/DLBCL; AML lines (including MOLM13) often 10–200 nM.
+Auranofin,Thioredoxin reductase inhibitor,Inhibits thioredoxin reductase causing redox stress,10.0,10000.0,nM,Approved for rheumatoid arthritis; AML IC50s frequently 0.3–3 µM.
+Tigecycline,Antibiotic (glycylcycline); mitochondrial translation inhibitor,Inhibits mitochondrial protein synthesis,100.0,100000.0,nM,AML blasts/lines often 1–20 µM; targets leukemia stem cell metabolism.
+Pimozide,Antipsychotic,STAT5 pathway inhibition,50.0,20000.0,nM,FLT3‑ITD AML (STAT5‑dependent) typically 1–10 µM.
+Thioridazine,Antipsychotic,Dopamine receptor antagonist with ion channel effects; LSC‑active,100.0,30000.0,nM,Often low‑ to mid‑µM in AML.
+Mebendazole,Anthelmintic,Affects microtubules/other,10.0,30000.0,nM,AML IC50s commonly ~0.1–5 µM.
+Niclosamide,Anthelmintic,Modulates oxidative phosphorylation and Wnt/STAT pathways,10.0,10000.0,nM,Many leukemia models ~0.1–2 µM.
+Mefloquine,Antimalarial,Lysosomal permeabilization,100.0,50000.0,nM,AML lines including LSCs often 1–10 µM.
+Nelfinavir,Antiretroviral,Induces proteostasis/ER stress and affects Akt signaling,500.0,50000.0,nM,AML IC50s typically 3–15 µM.
+Ciclopirox,Antifungal,Iron chelation and inhibition of EIF5A hypusination,100.0,50000.0,nM,Leukemia IC50s commonly 0.5–5 µM.

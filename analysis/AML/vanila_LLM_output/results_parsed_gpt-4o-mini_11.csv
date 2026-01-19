@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Decitabine,Cytidine analog,Inhibits DNA methylation,0.1,1.0,µM,
+Azacitidine,Cytidine analog,Inhibits DNA methylation,0.1,2.0,µM,
+Mitoxantrone,Anthracenedione,Intercalates DNA and inhibits topoisomerase II,3.0,10.0,µM,
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases, leading to increased acetylation",1.0,5.0,µM,Also known as SAHA
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases,0.1,1.0,µM,
+Ruxolitinib,JAK inhibitor,Inhibits Janus kinases and downstream signaling,0.5,5.0,µM,
+Gilteritinib,FLT3 inhibitor,Inhibits FLT3 kinase activity,0.1,1.0,µM,
+Clofarabine,Purine analog,Inhibits DNA synthesis and induces apoptosis,0.1,1.0,µM,
+Hydroxyurea,Ribonucleotide reductase inhibitor,"Inhibits ribonucleotide reductase, reducing DNA synthesis",50.0,200.0,µM,
+Alvocidib,CDK inhibitor,"Inhibits cyclin-dependent kinases, promoting apoptosis",0.1,1.0,µM,Also known as flavopiridol
+Trametinib,MEK inhibitor,"Inhibits MEK1/2, blocking MAPK/ERK signaling",0.1,1.0,µM,
+Nilotinib,BCR-ABL inhibitor,Inhibits the BCR-ABL fusion protein,1.0,5.0,µM,
+Imatinib,BCR-ABL inhibitor,Inhibits BCR-ABL tyrosine kinase activity,1.0,5.0,µM,
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome, disrupting protein degradation",0.1,1.0,µM,
+Selinexor,XPO1 inhibitor,"Inhibits exportin 1, leading to accumulation of tumor suppressors",0.1,2.0,µM,
+L-asparaginase,Enzyme,"Hydrolyzes asparagine to aspartate, starving leukemic cells",1.0,3.0,U/mL,
+Aspirin,NSAID,"Inhibits cyclooxygenase enzymes, reducing inflammation",1.0,10.0,mM,
+Dexamethasone,Glucocorticoid,Suppresses immune response and inflammation,1.0,10.0,µM,
+Metformin,Biguanide,Decreases glucose production and improves insulin sensitivity,1.0,10.0,mM,
+Thalidomide,Immunomodulatory drug,Modulates immune response and inhibits angiogenesis,1.0,10.0,µM,

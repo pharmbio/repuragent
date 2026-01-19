@@ -1,0 +1,125 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest **repurposing candidates** with **experimentally reasonable, testable concentration ranges** for **IC₅₀ assays in AML cell lines (including MOLM-13)**, but I can’t responsibly claim that any specific existing drug *will* inhibit MOLM-13 proliferation or provide “IC₅₀ values” without citing specific experimental evidence. What I can do is:
+
+- list **high-priority, widely studied repurposing drugs** that have **published anti-AML (or hematologic malignancy) activity** in at least some contexts, often including FLT3-ITD models like MOLM-13, and  
+- give **practical screening ranges** you can run in a viability/proliferation IC₅₀ assay (e.g., CellTiter-Glo at 72 h), based on typical on-target potencies and what’s feasible in cell culture.
+
+Below are **20 repurposing candidates** plus **testable concentration ranges** (use a log-spaced dilution series). Ranges assume DMSO stocks unless otherwise noted; keep final DMSO constant (often ≤0.1%).
+
+---
+
+## 20 repurposing candidates + IC₅₀ assay concentration ranges (MOLM-13-compatible starting points)
+
+**1) Disulfiram (± copper supplementation)**  
+- Rationale: ALDH/ROS/proteostasis stress; multiple reports of leukemia cell cytotoxicity, often copper-dependent.  
+- **Test range:** **0.01–5 µM** (optionally test ± **CuCl₂ 0.1–1 µM** in a matrix)
+
+**2) Auranofin**  
+- Rationale: thioredoxin reductase inhibitor; strong redox vulnerability in AML.  
+- **Test range:** **0.002–1 µM**
+
+**3) Niclosamide**  
+- Rationale: Wnt/STAT3/mitochondrial uncoupling; reported activity in AML models.  
+- **Test range:** **0.05–10 µM** (solubility can be limiting; consider max 5–10 µM)
+
+**4) Tigecycline**  
+- Rationale: inhibits mitochondrial translation; leukemia stem cell metabolic vulnerability.  
+- **Test range:** **0.5–50 µM**
+
+**5) Doxycycline (or Minocycline)**  
+- Rationale: mitochondrial translation inhibition; can synergize with other stresses.  
+- **Test range:** **1–100 µM**
+
+**6) Atovaquone**  
+- Rationale: ETC complex III inhibition; OXPHOS-dependent AML subsets.  
+- **Test range:** **0.2–20 µM**
+
+**7) Metformin**  
+- Rationale: complex I inhibition; usually requires high concentrations in vitro.  
+- **Test range:** **0.1–20 mM** (yes, mM range is typical in culture)
+
+**8) Phenformin**  
+- Rationale: more potent biguanide than metformin in vitro.  
+- **Test range:** **1–500 µM**
+
+**9) Chloroquine**  
+- Rationale: lysosome/autophagy inhibition; can sensitize AML cells.  
+- **Test range:** **1–50 µM**
+
+**10) Hydroxychloroquine**  
+- Rationale: as above; sometimes less potent in vitro.  
+- **Test range:** **1–80 µM**
+
+**11) Mebendazole**  
+- Rationale: microtubule disruption; anticancer repurposing literature includes hematologic lines.  
+- **Test range:** **0.01–10 µM**
+
+**12) Albendazole**  
+- Rationale: tubulin binding; anticancer repurposing candidate.  
+- **Test range:** **0.05–20 µM**
+
+**13) Ivermectin**  
+- Rationale: ion flux/Cl⁻ channel modulation; reported leukemia cytotoxicity in some studies.  
+- **Test range:** **0.2–20 µM**
+
+**14) Sertraline**  
+- Rationale: lysosomal/membrane stress; some anti-leukemia reports.  
+- **Test range:** **0.2–30 µM**
+
+**15) Fluoxetine**  
+- Rationale: similar SSRI/lysosomotropic mechanisms explored in cancer repurposing.  
+- **Test range:** **0.5–50 µM**
+
+**16) Thioridazine**  
+- Rationale: dopamine receptor antagonist; reports of activity vs AML stem-like cells.  
+- **Test range:** **0.1–20 µM**
+
+**17) Pimozide**  
+- Rationale: STAT5 pathway modulation reported in some leukemias.  
+- **Test range:** **0.05–10 µM**
+
+**18) Valproic acid (VPA)**  
+- Rationale: HDAC inhibitor; used clinically in differentiation/epigenetic strategies.  
+- **Test range:** **0.1–5 mM**
+
+**19) All-trans retinoic acid (ATRA)**  
+- Rationale: differentiation agent; beyond APL, sometimes effects in subsets/combos.  
+- **Test range:** **0.001–10 µM** (light-sensitive; handle carefully)
+
+**20) Celecoxib**  
+- Rationale: COX-2–related and off-target effects; some AML/cancer cell line cytotoxicity reports.  
+- **Test range:** **1–100 µM**
+
+---
+
+## Practical IC₅₀ assay setup (so these ranges are “experimentally testable”)
+- **Cell line:** MOLM-13 (common seeding: **2–10k cells/well** in 96-well; optimize to stay in log growth over assay).  
+- **Readout:** CellTiter-Glo or resazurin after **72 h** (48–96 h depending on mechanism).  
+- **Dilution series:** 10–12 points, **1:3** or **1:2** serial dilutions.  
+- **Controls:**  
+  - DMSO vehicle control (constant % across wells; typically **0.1%**).  
+  - A known MOLM-13 active comparator if available in your lab (e.g., a FLT3 inhibitor) to validate assay performance.  
+- **Data:** Fit 4-parameter logistic curve; report IC₅₀ + Hill slope + top/bottom constraints; exclude precipitating concentrations.
+
+---
+
+## Notes to avoid common false negatives/positives
+- **Solubility/aggregation:** niclosamide, benzimidazoles, celecoxib can precipitate—cap top concentration to what stays clear in your medium.  
+- **Serum binding:** many hydrophobic drugs shift potency with FBS%; keep serum constant.  
+- **Copper dependence:** disulfiram often looks weak unless copper is present—test a small copper matrix.  
+- **mM drugs (metformin/VPA):** use sterile aqueous stocks; confirm osmolarity and pH effects with matched controls.
+
+---
+
+If you tell me your **assay conditions** (medium, %FBS, assay length, plate format, max DMSO, and whether you can add copper), I can convert the ranges above into a **ready-to-run 10- or 12-point dosing table** (exact concentrations per drug) optimized for MOLM-13.

@@ -1,0 +1,102 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new indications can provide a faster and potentially cost-effective approach to finding effective treatments for diseases like acute myeloid leukemia (AML). Below are twenty drugs that have shown promise in preclinical studies or have mechanisms that might inhibit the proliferation of AML cells, particularly the MOLM13 cell line. Keep in mind that the specific IC50 values can vary based on assay conditions and cell lines used, so these should be used as starting points for experimental validation.
+
+### Top 20 Repurposable Drugs for AML Treatment
+
+1. **Hydroxyurea**
+   - **Mechanism**: Inhibits ribonucleotide reductase, reducing DNA synthesis.
+   - **IC50**: ~50-100 μM
+
+2. **Pazopanib**
+   - **Mechanism**: Inhibits VEGFR, PDGFR, and c-KIT.
+   - **IC50**: ~10 μM
+
+3. **Vorinostat (SAHA)**
+   - **Mechanism**: HDAC inhibitor that promotes cell cycle arrest and apoptosis.
+   - **IC50**: ~0.5-4 μM
+
+4. **Decitabine**
+   - **Mechanism**: DNA methyltransferase inhibitor.
+   - **IC50**: ~0.1-1 μM
+
+5. **Clofarabine**
+   - **Mechanism**: Antimetabolite that inhibits DNA synthesis.
+   - **IC50**: ~0.1-1 μM
+
+6. **Thalidomide**
+   - **Mechanism**: Modulates immune response and inhibits angiogenesis.
+   - **IC50**: ~2-10 μM
+
+7. **Lenalidomide**
+   - **Mechanism**: Similar to thalidomide, but more potent.
+   - **IC50**: ~0.1-1 μM
+
+8. **Azacitidine**
+   - **Mechanism**: Also a DNA methyltransferase inhibitor.
+   - **IC50**: ~0.1-1 μM
+
+9. **Roxithromycin**
+   - **Mechanism**: Antibiotic that may induce apoptosis in leukemic cells.
+   - **IC50**: ~5-15 μM
+
+10. **Metformin**
+    - **Mechanism**: Alters cellular energy metabolism and may inhibit cell proliferation.
+    - **IC50**: ~1-5 mM
+
+11. **Bortezomib**
+    - **Mechanism**: Proteasome inhibitor that induces apoptosis in cancer cells.
+    - **IC50**: ~10-50 nM
+
+12. **Nelarabine**
+    - **Mechanism**: Nucleoside analog that disrupts DNA synthesis.
+    - **IC50**: ~0.1-1 μM
+
+13. **Carfilzomib**
+    - **Mechanism**: Second-generation proteasome inhibitor.
+    - **IC50**: ~1-10 nM
+
+14. **Auranofin**
+    - **Mechanism**: Gold compound that shows anti-cancer activity through multiple mechanisms.
+    - **IC50**: ~1-5 μM
+
+15. **Fingolimod (FTY720)**
+    - **Mechanism**: Sphingosine-1-phosphate receptor modulator.
+    - **IC50**: ~100 nM
+
+16. **Ruxolitinib**
+    - **Mechanism**: JAK1/JAK2 inhibitor, modulates immune response.
+    - **IC50**: ~1-5 μM
+
+17. **Dexamethasone**
+    - **Mechanism**: Corticosteroid that may enhance apoptosis in leukemic cells.
+    - **IC50**: ~1-10 μM
+
+18. **Sorafenib**
+    - **Mechanism**: Multi-kinase inhibitor with effects on cell survival.
+    - **IC50**: ~0.5-3 μM
+
+19. **Chlorambucil**
+    - **Mechanism**: Alkylating agent that disrupts DNA.
+    - **IC50**: ~10-50 μM
+
+20. **Imatinib**
+    - **Mechanism**: BCR-ABL tyrosine kinase inhibitor, also affects other pathways.
+    - **IC50**: ~0.1-1 μM
+
+### Considerations for Experimental Validation
+1. **Concentration Sensitivity**: The suggested IC50 values are estimations based on existing literature and should be experimentally confirmed using MOLM13 cell assays.
+2. **Combination Studies**: Consider testing these drugs both individually and in combination with other therapies to assess synergistic effects.
+3. **Mechanistic Studies**: Further studies should evaluate the mechanisms of action to understand how these drugs affect AML cell proliferation and apoptosis.
+
+As you proceed, you should pay close attention to the latest research and clinical trials involving these drugs and adjust testing protocols accordingly. Always verify with up-to-date literature and consult with pharmacology experts to ensure the viability of the repurposing strategy.

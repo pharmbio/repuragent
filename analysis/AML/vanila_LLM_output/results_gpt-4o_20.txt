@@ -1,0 +1,75 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic applications, such as treating acute myeloid leukemia (AML), is a promising strategy in drug development. When identifying candidates for repurposing, one typically considers known mechanisms of action, previous antiproliferative effects in other cancers, and potential pathways involved in AML. Here is a list of 20 drugs that might be considered for repurposing to treat AML, along with suggested experimentally testable concentrations for an IC50 assay. Please note that these suggestions are intended for experimental consideration and further validation through laboratory studies is essential.
+
+1. **Arsenic Trioxide**  
+   - Test Concentration Range: 0.5 - 10 µM
+
+2. **Dasatinib**  
+   - Test Concentration Range: 1 - 50 nM
+
+3. **Imatinib**  
+   - Test Concentration Range: 1 - 10 µM
+
+4. **Sorafenib**  
+   - Test Concentration Range: 0.1 - 10 µM
+
+5. **Ruxolitinib**  
+   - Test Concentration Range: 0.1 - 5 µM
+
+6. **Azacitidine**  
+   - Test Concentration Range: 0.1 - 5 µM
+
+7. **Decitabine**  
+   - Test Concentration Range: 0.1 - 5 µM
+
+8. **Auranofin**  
+   - Test Concentration Range: 0.1 - 5 µM
+
+9. **Ibrutinib**  
+   - Test Concentration Range: 0.1 - 10 µM
+
+10. **Venetoclax**  
+    - Test Concentration Range: 1 - 50 nM
+
+11. **Bortezomib**  
+    - Test Concentration Range: 1 - 50 nM
+
+12. **Vorinostat**  
+    - Test Concentration Range: 1 - 10 µM
+
+13. **Carfilzomib**  
+    - Test Concentration Range: 1 - 10 nM
+
+14. **Pazopanib**  
+    - Test Concentration Range: 0.1 - 10 µM
+
+15. **Lenalidomide**  
+    - Test Concentration Range: 0.1 - 10 µM
+
+16. **Erlotinib**  
+    - Test Concentration Range: 0.1 - 10 µM
+
+17. **Lapatinib**  
+    - Test Concentration Range: 0.1 - 10 µM
+
+18. **Nintedanib**  
+    - Test Concentration Range: 0.1 - 10 µM
+
+19. **Ponatinib**  
+    - Test Concentration Range: 0.1 - 10 µM
+
+20. **Ritonavir**  
+    - Test Concentration Range: 0.1 - 10 µM
+
+These concentrations are general guidelines to initiate IC50 assays and are typically optimized further based on preliminary results. Each drug's proposed repurposing requires rigorous validation through both in vitro studies using AML cell lines like MOLM-13 and subsequent in vivo models. Additionally, more focus on specific molecular targets and pathways relevant to MOLM-13 and AML would significantly enhance the success rate of these repurposed drugs.

@@ -1,0 +1,75 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is an active area of research due to the high unmet need in AML treatment. Below are some existing drugs that have been considered for repurposing in AML, particularly in the context of the MOLM-13 cell line. It is important to note that the concentrations provided for IC50 assays are approximate and should be experimentally verified under controlled conditions:
+
+1. **Ruxolitinib** - A JAK1/2 inhibitor often used in myeloproliferative diseases.
+   - IC50: ~100 nM
+
+2. **Venetoclax** - A BCL-2 inhibitor, already approved for certain AML cases.
+   - IC50: ~30 nM
+
+3. **Auranofin** - An anti-rheumatic agent that inhibits thioredoxin reductase.
+   - IC50: ~500 nM
+
+4. **Arsenic Trioxide** - Used in acute promyelocytic leukemia with proapoptotic effects on AML cells.
+   - IC50: ~500 nM
+
+5. **Vorinostat (SAHA)** - A histone deacetylase inhibitor.
+   - IC50: ~1 µM
+
+6. **Metformin** - Commonly used for type 2 diabetes, with proposed effects on cancer metabolism.
+   - IC50: ~5 mM
+
+7. **Itraconazole** - An antifungal with potential Hedgehog pathway inhibition.
+   - IC50: ~4 µM
+
+8. **Atorvastatin** - A cholesterol-lowering drug with potential anticancer effects.
+   - IC50: ~10 µM
+
+9. **Cisplatin** - A chemotherapeutic agent that could be combined with other treatments in AML.
+   - IC50: ~1 µM
+
+10. **Disulfiram** - An alcohol aversion drug with anticancer properties through proteasome inhibition.
+    - IC50: ~1 µM
+
+11. **Chloroquine** - An antimalarial drug with lysosomal inhibition effects.
+    - IC50: ~10 µM
+
+12. **Sirolimus (Rapamycin)** - An mTOR inhibitor initially used as an immunosuppressant.
+    - IC50: ~10 nM
+
+13. **Tamoxifen** - A selective estrogen receptor modulator with potential off-target effects in AML.
+    - IC50: ~1 µM
+
+14. **Celecoxib** - A COX-2 inhibitor with anti-inflammatory and potential anticancer properties.
+    - IC50: ~5 µM
+
+15. **Plerixafor** - A CXCR4 antagonist used in stem cell mobilization.
+    - IC50: ~1 µM
+
+16. **Sorafenib** - A multikinase inhibitor with activity in certain AML subtypes.
+    - IC50: ~5-10 µM
+
+17. **Thalidomide** - An immunomodulatory agent with anti-angiogenic effects.
+    - IC50: ~10 µM
+
+18. **Lenalidomide** - A thalidomide derivative with broader immunomodulatory effects.
+    - IC50: ~1 µM
+
+19. **Clofarabine** - A purine nucleoside antimetabolite.
+    - IC50: ~50 nM
+
+20. **Bortezomib** - A proteasome inhibitor used in multiple myeloma.
+    - IC50: ~10 nM
+
+These concentrations are starting points for IC50 assays, but extensive validation is required. Cells might respond differently in vitro, and optimal conditions must be tailored, involving factors like incubation times and cellular context. It's also essential to combine these drug candidates with the latest literature on the mechanisms and potential synergistic drug combinations for AML.

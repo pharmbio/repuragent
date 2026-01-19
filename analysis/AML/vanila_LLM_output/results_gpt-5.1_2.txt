@@ -1,0 +1,171 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 *already existing* (approved or late‑stage) drugs with evidence of activity in AML (often including FLT3‑ITD–positive lines such as MOLM13). For each, I include:  
+- **Primary relevant target(s)**  
+- **Typical in‑vitro IC₅₀ range in AML/MOLM13 (when available)**  
+- **Suggested assay concentration range** (for a standard 72‑h cell‑viability IC₅₀ assay in MOLM13).  
+
+Use these as starting points; you should always do a small pilot range‑finding experiment first, as sensitivity varies by lot, medium, serum, and readout.
+
+---
+
+## 1. Midostaurin (PKC412)
+- **Type/target**: Multi‑kinase inhibitor (FLT3, KIT, PDGFR, PKC). FDA‑approved for FLT3‑mut AML.  
+- **AML/MOLM13 IC₅₀**: ~1–10 nM for FLT3 phosphorylation; proliferation IC₅₀ typically ~5–50 nM.  
+- **Suggested test range**: **0.1 nM – 1 μM** (e.g., 0.1, 0.3, 1, 3, 10, 30, 100, 300, 1000 nM).
+
+---
+
+## 2. Gilteritinib (ASP2215)
+- **Type/target**: FLT3/AXL inhibitor. FDA‑approved for relapsed/refractory FLT3‑mut AML.  
+- **AML/MOLM13 IC₅₀**: Often ~1–10 nM for FLT3‑ITD AML cell lines including MOLM13.  
+- **Suggested range**: **0.1 nM – 1 μM**.
+
+---
+
+## 3. Quizartinib (AC220)
+- **Type/target**: Potent FLT3 inhibitor.  
+- **AML/MOLM13 IC₅₀**: Frequently reported ~0.1–10 nM in FLT3‑ITD lines (MOLM13, MV4‑11).  
+- **Suggested range**: **0.01 nM – 300 nM** (very potent; you can compress upper range to 100 nM).
+
+---
+
+## 4. Sorafenib
+- **Type/target**: Multi‑kinase inhibitor (FLT3, RAF, VEGFR, PDGFR). Approved for several solid tumors.  
+- **AML/MOLM13 IC₅₀**: FLT3‑ITD AML lines usually in the low‑nM to low‑100‑nM range.  
+- **Suggested range**: **1 nM – 10 μM**.
+
+---
+
+## 5. Decitabine
+- **Type/target**: DNA hypomethylating agent; FDA‑approved for MDS/AML.  
+- **AML/MOLM13 IC₅₀**: Typically ~0.1–5 μM (time‑dependent; cytostatic and cytotoxic).  
+- **Suggested range**: **10 nM – 20 μM**.
+
+---
+
+## 6. Azacitidine
+- **Type/target**: DNA/RNA hypomethylating agent; FDA‑approved for MDS/AML.  
+- **AML/MOLM13 IC₅₀**: Often in the ~0.1–10 μM range with 48–72 h exposure.  
+- **Suggested range**: **10 nM – 30 μM**.
+
+---
+
+## 7. Venetoclax (ABT‑199)
+- **Type/target**: BCL‑2 inhibitor; widely used in AML in combination with HMA or LDAC.  
+- **AML/MOLM13 IC₅₀**: Commonly ~1–100 nM in BCL‑2–dependent AML lines; MOLM13 shows strong sensitivity in many reports.  
+- **Suggested range**: **0.1 nM – 3 μM**.
+
+---
+
+## 8. Panobinostat (LBH589)
+- **Type/target**: Pan‑HDAC inhibitor (epigenetic modulator), approved for multiple myeloma.  
+- **AML/MOLM13 IC₅₀**: Typically ~5–100 nM in AML cell lines.  
+- **Suggested range**: **1 nM – 1 μM**.
+
+---
+
+## 9. Vorinostat (SAHA)
+- **Type/target**: HDAC inhibitor; approved for CTCL.  
+- **AML/MOLM13 IC₅₀**: Often in the 0.5–5 μM range for proliferation/viability.  
+- **Suggested range**: **0.1 μM – 20 μM**.
+
+---
+
+## 10. Romidepsin
+- **Type/target**: Class I HDAC inhibitor; approved for T‑cell lymphomas.  
+- **AML/MOLM13 IC₅₀**: Commonly ~2–50 nM in AML lines; strong pro‑apoptotic effect.  
+- **Suggested range**: **0.5 nM – 500 nM**.
+
+---
+
+## 11. Ruxolitinib
+- **Type/target**: JAK1/2 inhibitor; approved for myelofibrosis, PV, GVHD.  
+- **AML/MOLM13 IC₅₀**: AML sensitivity is variable; typically ~0.5–10 μM in vitro.  
+- **Suggested range**: **50 nM – 30 μM**.
+
+---
+
+## 12. Dasatinib
+- **Type/target**: Multi‑kinase inhibitor (BCR‑ABL, SRC, KIT). Approved for CML/ALL.  
+- **AML/MOLM13 IC₅₀**: Often ~10–200 nM for AML cells, depending on SRC/KIT dependence.  
+- **Suggested range**: **1 nM – 10 μM**.
+
+---
+
+## 13. Imatinib
+- **Type/target**: BCR‑ABL, KIT, PDGFR inhibitor; CML/GIST drug.  
+- **AML/MOLM13 IC₅₀**: Weak to moderate in unselected AML; IC₅₀ often in the **5–20 μM** range unless specific KIT/PDGFR lesions.  
+- **Suggested range**: **0.5 μM – 50 μM**.
+
+---
+
+## 14. Ibrutinib
+- **Type/target**: BTK inhibitor; approved for several B‑cell malignancies.  
+- **AML/MOLM13 IC₅₀**: Mixed data; some AML lines show proliferation IC₅₀ ~1–10 μM, often through off‑target TEC/SRC inhibition.  
+- **Suggested range**: **0.5 μM – 30 μM**.
+
+---
+
+## 15. Thalidomide / Lenalidomide
+(Prefer lenalidomide for in‑vitro work due to better solubility and potency.)  
+- **Type/target**: IMiD (CRBN‑dependent degradation of IKZF1/3 and others); approved for myeloma, MDS del(5q).  
+- **AML/MOLM13 IC₅₀**: Variable; often ~5–50 μM in AML lines.  
+- **Suggested range**: **1 μM – 100 μM**.
+
+---
+
+## 16. Bortezomib
+- **Type/target**: Proteasome inhibitor; approved for myeloma and mantle cell lymphoma.  
+- **AML/MOLM13 IC₅₀**: Frequently ~5–50 nM in AML cell lines for viability.  
+- **Suggested range**: **1 nM – 500 nM**.
+
+---
+
+## 17. Carfilzomib
+- **Type/target**: Irreversible proteasome inhibitor; approved for myeloma.  
+- **AML/MOLM13 IC₅₀**: Typically in the low‑nM to mid‑nM range (e.g., 5–50 nM).  
+- **Suggested range**: **0.5 nM – 300 nM**.
+
+---
+
+## 18. Everolimus (RAD001)
+- **Type/target**: mTORC1 inhibitor; approved for several solid tumors.  
+- **AML/MOLM13 IC₅₀**: Often 1–10 μM for proliferation; effects can be more cytostatic.  
+- **Suggested range**: **50 nM – 20 μM**.
+
+---
+
+## 19. Sunitinib
+- **Type/target**: Multi‑target RTK inhibitor (FLT3, KIT, VEGFR, PDGFR). Approved for RCC, GIST.  
+- **AML/MOLM13 IC₅₀**: FLT3‑ITD AML often in the ~10–300 nM range.  
+- **Suggested range**: **1 nM – 10 μM**.
+
+---
+
+## 20. Nilotinib
+- **Type/target**: BCR‑ABL and KIT inhibitor; approved for CML.  
+- **AML/MOLM13 IC₅₀**: Activity in AML is modest; proliferation IC₅₀ usually ~1–10 μM unless specific KIT/ABL lesions.  
+- **Suggested range**: **100 nM – 30 μM**.
+
+---
+
+### Practical notes for your IC₅₀ assay in MOLM13
+
+- **Assay duration**: 72 h recommended for most cytostatic/cytotoxic small molecules in AML; 48 h may be sufficient for fast‑acting kinase inhibitors.  
+- **Readout**: Standard luminescent ATP (e.g., CellTiter‑Glo) or resazurin (AlamarBlue) is suitable for MOLM13.  
+- **DMSO**: Keep final DMSO ≤0.1% (≤0.2% at most) in all wells, including controls.  
+- **Dilution plan**: Use ~8–10 half‑log (3.16‑fold) or 3‑fold serial dilutions spanning the suggested ranges.  
+- **Replicates**: At least triplicate wells per concentration; include positive control (e.g., quizartinib or gilteritinib) and vehicle control.
+
+If you want, I can help you design a concrete 96‑well plate layout and exact dilution scheme optimized around a subset of these drugs.

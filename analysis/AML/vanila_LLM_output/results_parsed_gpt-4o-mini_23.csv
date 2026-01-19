@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Dasatinib,Tyrosine Kinase Inhibitor,Inhibition of BCR-ABL oncogene tyrosine kinase.,0.1,1.0,µM,Also known as Sprycel.
+Venetoclax,BCL-2 Inhibitor,Selective inhibition of BCL-2 protein leading to apoptosis in malignant cells.,0.1,0.5,µM,Also known as Venclexta.
+Azacitidine,Cytidine Analogue,Inhibition of DNA methyltransferase leading to hypomethylation and restoration of normal gene expression.,1.0,5.0,µM,Also known as Vidaza.
+Decitabine,Cytidine Analogue,Inhibition of DNA methyltransferase causing hypomethylation and cell differentiation.,0.1,1.0,µM,Also known as Dacogen.
+Imatinib,Tyrosine Kinase Inhibitor,Inhibition of BCR-ABL tyrosine kinase activity.,0.5,5.0,µM,Also known as Gleevec.
+Ruxolitinib,JAK Inhibitor,Inhibition of Janus kinase signaling pathways.,0.5,3.0,µM,Also known as Jakafi.
+Quisinostat,HDAC Inhibitor,Inhibition of histone deacetylases leading to reactivation of silenced genes.,0.1,2.0,µM,
+Paclitaxel,Taxane,Stabilization of microtubules preventing cell division.,5.0,20.0,nM,Also known as Taxol.
+Sorafenib,Multikinase Inhibitor,Inhibition of multiple kinases involved in tumor cell proliferation and angiogenesis.,1.0,5.0,µM,Also known as Nexavar.
+Topotecan,Topoisomerase Inhibitor,Inhibition of topoisomerase I leading to DNA damage and apoptosis.,50.0,300.0,nM,
+Melflufen,Peptide-drug Conjugate,Alkylating agent that targets the aminopeptidase N on tumor cells.,10.0,100.0,nM,
+Thalidomide,Immunomodulatory Drug,Modulation of immune response and inhibition of angiogenesis.,10.0,20.0,µM,
+Clarithromycin,Macrolide Antibiotic,Inhibition of bacterial protein synthesis with potential anti-cancer effects.,1.0,10.0,µM,
+Chlorambucil,Alkylating Agent,Interference with DNA replication leading to cell death.,5.0,30.0,µM,
+Metformin,Biguanide,Reduction of hepatic glucose production and improvement of insulin sensitivity with potential anti-cancer properties.,1.0,10.0,mM,
+Heparin,Anticoagulant,Inhibition of thrombin and factor Xa leading to anticoagulation.,50.0,100.0,µg/mL,
+Dexamethasone,Glucocorticoid,Anti-inflammatory and immunosuppressive effects.,5.0,20.0,µM,
+L-asparaginase,Enzyme,"Depletion of asparagine, inhibiting protein synthesis in leukemia cells.",30.0,300.0,U/mL,
+Disulfiram,Aldehyde Dehydrogenase Inhibitor,Inhibition of aldehyde dehydrogenase leading to increased levels of reactive oxygen species.,5.0,15.0,µM,
+Nilotinib,Tyrosine Kinase Inhibitor,Inhibition of BCR-ABL kinase activity.,1.0,10.0,µM,Also known as Tasigna.

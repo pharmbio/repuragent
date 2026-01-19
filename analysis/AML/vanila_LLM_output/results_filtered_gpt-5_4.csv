@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,Tyrosine kinase inhibitor,Pan-ABL/FLT3 inhibitor active against FLT3-ITD and TKD mutants,1e-05,1.0,µM,Effective against resistant FLT3 TKD mutants including F691L,ponatinib,False,CHEMBL2105708
+Sunitinib,Multi-kinase inhibitor,"Inhibits FLT3, KIT, and VEGFR tyrosine kinases",0.0005,10.0,µM,Inhibits FLT3-ITD AML lines,sunitinib,False,CHEMBL597365
+Dasatinib,Tyrosine kinase inhibitor,Inhibits SRC and ABL family kinases,0.0005,10.0,µM,"Anti-proliferative in subsets of AML, including FLT3-ITD contexts",dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK inhibitor,Inhibits JAK1/2 to reduce JAK/STAT signaling,0.01,30.0,µM,Variable single-agent AML activity; useful benchmark in JAK/STAT–driven contexts,ruxolitinib,False,CHEMBL1287854
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases to modulate epigenetic transcription,0.0001,1.0,µM,Potent epigenetic inhibitor with strong AML cytotoxicity; potency can shift with serum protein binding,panobinostat,False,CHEMBL483254
+Belinostat,HDAC inhibitor,Inhibits histone deacetylases to promote acetylation and apoptosis,0.01,30.0,µM,Similar AML activity to vorinostat; consider serum protein binding effects,belinostat,False,CHEMBL408513
+Bortezomib,Proteasome inhibitor,Inhibits the 26S proteasome to disrupt protein turnover and induce apoptosis,5e-05,1.0,µM,Strong anti-AML effects including FLT3-ITD lines,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Irreversible 20S proteasome inhibitor causing proteotoxic stress,5e-05,1.0,µM,Potent; complementary to bortezomib,carfilzomib,False,CHEMBL451887
+Everolimus,mTOR inhibitor,Inhibits mTORC1 to reduce protein synthesis and cell growth,0.0005,10.0,µM,Cytostatic/cytotoxic activity in AML; context-dependent responses,everolimus,False,CHEMBL1908360
+Trametinib,MEK inhibitor,Inhibits MEK1/2 in the MAPK pathway,0.0001,10.0,µM,Inhibits MAPK-driven AML; some activity in MOLM-13; combine in panels,trametinib,False,CHEMBL2103875
+Auranofin,Thioredoxin reductase inhibitor,Inhibits thioredoxin reductase to increase oxidative stress,0.01,30.0,µM,Anti-rheumatic; consistent low-µM AML activity including MOLM-13,auranofin,False,CHEMBL1366
+Tigecycline,Antibiotic (mitochondrial translation inhibitor),"Inhibits mitochondrial protein synthesis, impairing leukemic metabolism",0.1,50.0,µM,Targets leukemic stem/progenitor metabolism; AML IC50 often low µM,tigecycline,False,CHEMBL376140
+Niclosamide,Anthelmintic; OXPHOS/Wnt/STAT3 modulator,Disrupts oxidative phosphorylation and inhibits Wnt/STAT3 signaling,0.001,10.0,µM,AML lines often sub-µM sensitive; check solubility limitations,niclosamide,False,CHEMBL1448
+Simvastatin,Statin (HMG-CoA reductase inhibitor),Inhibits HMG-CoA reductase to block the mevalonate pathway,0.1,50.0,µM,Mevalonate pathway dependence in AML; micromolar activity; protein binding can shift potency,simvastatin,False,CHEMBL1201391
+Arsenic trioxide,Arsenical; oxidative stress inducer,Induces oxidative stress and apoptosis,0.01,10.0,µM,APL drug; non-APL AML lines show µM-range sensitivity; include as a reference,arsenic trioxide,False,CHEMBL5483015
+Thioridazine,Antipsychotic (dopamine receptor antagonist),Antagonizes dopamine receptors; proposed selective toxicity to leukemic cells,0.1,50.0,µM,Selective toxicity to leukemic vs normal HSPCs reported; AML IC50 in low–mid µM,thioridazine,False,CHEMBL1200916

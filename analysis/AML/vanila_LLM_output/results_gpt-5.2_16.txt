@@ -1,0 +1,68 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest *candidates* that have published antiproliferative activity in AML models (often including MOLM‑13 or closely related FLT3‑ITD AML lines such as MV4‑11) and give **experimentally testable concentration ranges** to run IC₅₀ curves.  
+
+Important caveats:
+- **Not medical advice.** Repurposing requires substantial preclinical/clinical validation.
+- **IC₅₀ is context-dependent** (cell density, media/serum, exposure time, viability reagent, target engagement). The concentrations below are **practical starting ranges** for *in vitro* MOLM‑13 assays (typically 72 h viability readout).
+- To avoid giving you a misleading single number, I provide **suggested dose ranges** suitable for 8–12 point half‑log or 3‑fold dilution curves.
+
+## 20 existing drugs to consider (repurposing candidates) + IC₅₀ assay ranges (MOLM‑13)
+
+**Key:** “Range to test” = a workable span for a dose–response curve that should bracket IC₅₀ if the line is sensitive. Units are final concentration in well.
+
+| # | Drug (current use) | Rationale / AML relevance (brief) | Suggested range to test in MOLM‑13 |
+|---|---|---|---|
+| 1 | **Midostaurin** (FLT3 inhibitor; approved AML combo) | FLT3 signaling dependency in MOLM‑13 (FLT3‑ITD) | **0.001–10 µM** |
+| 2 | **Gilteritinib** (FLT3 inhibitor; approved AML) | Strong activity in FLT3‑ITD AML lines | **0.0003–3 µM** |
+| 3 | **Quizartinib** (FLT3 inhibitor; approved in some regions) | Highly potent vs FLT3‑ITD models | **0.0001–1 µM** |
+| 4 | **Sorafenib** (multi‑kinase; HCC/RCC) | Off‑label/repurpose history in FLT3‑ITD AML | **0.01–30 µM** |
+| 5 | **Ponatinib** (BCR‑ABL; multi‑kinase incl FLT3) | Reported activity in FLT3‑driven AML | **0.001–3 µM** |
+| 6 | **Dasatinib** (SRC/ABL) | Can suppress signaling nodes relevant in AML subsets | **0.001–10 µM** |
+| 7 | **Trametinib** (MEK inhibitor) | MAPK pathway inhibition can reduce proliferation | **0.0003–3 µM** |
+| 8 | **Venetoclax** (BCL‑2 inhibitor; approved AML combo) | MOLM‑13 often shows BCL‑2 family dependence (context dependent) | **0.0001–10 µM** |
+| 9 | **Navitoclax (ABT‑263)** (BCL‑2/BCL‑xL) | Broader BH3 mimetic; cytotoxic in AML lines | **0.001–10 µM** |
+| 10 | **Idasanutlin** (MDM2 inhibitor; clinical-stage) | p53 pathway activation in p53‑WT AML (verify TP53 status) | **0.01–30 µM** |
+| 11 | **Nutlin‑3a** (MDM2 inhibitor; tool/clinical precursor) | Common positive control for MDM2–p53 axis | **0.5–50 µM** |
+| 12 | **Panobinostat** (HDAC inhibitor; myeloma) | Epigenetic vulnerability in AML | **0.0003–1 µM** |
+| 13 | **Vorinostat (SAHA)** (HDAC inhibitor; CTCL) | Epigenetic modulation; variable single‑agent AML activity | **0.1–30 µM** |
+| 14 | **Decitabine** (DNA hypomethylating; MDS/AML) | Antiproliferative in AML cell lines (time‑dependent) | **0.01–10 µM** *(often needs 72–120 h)* |
+| 15 | **Azacitidine** (hypomethylating; MDS/AML) | Similar to decitabine; slower onset | **0.05–30 µM** *(often needs longer exposure)* |
+| 16 | **Bortezomib** (proteasome inhibitor; myeloma) | Proteostasis stress can kill AML cells | **0.001–0.3 µM** |
+| 17 | **Carfilzomib** (proteasome inhibitor; myeloma) | Potent; short half‑life but strong *in vitro* activity | **0.001–0.3 µM** |
+| 18 | **Tofacitinib** (JAK inhibitor; RA) | JAK/STAT signaling contributes to AML survival in some settings | **0.05–30 µM** |
+| 19 | **Ruxolitinib** (JAK1/2 inhibitor; MPN) | JAK/STAT pathway inhibition; can reduce AML proliferation in subsets | **0.01–20 µM** |
+| 20 | **Metformin** (T2D) | Mitochondrial/AMPK effects; antiproliferative at higher *in vitro* doses | **0.1–50 mM** |
+
+### Notes to make these ranges “experimentally testable”
+- For **kinase inhibitors / HDAC inhibitors / proteasome inhibitors**, a **10‑point half‑log curve** (e.g., 0.0003–10 µM) is usually sufficient.
+- For **metformin**, you generally need **millimolar** ranges in standard glucose media; consider also testing in **lower glucose** or with OXPHOS‑reliant conditions if relevant.
+- For **hypomethylating agents**, consider **longer exposure (96–144 h)** or **media/drug refresh** because effects can be delayed and S‑phase dependent.
+
+## Practical IC₅₀ setup (MOLM‑13) to increase chance of interpretable results
+- **Exposure time:** 72 h (standard) plus optional 96 h for azacitidine/decitabine.
+- **Curve design:** 10–12 points, 1:3 or 1:2.5 serial dilutions; include vehicle controls.
+- **Seeding density:** keep in log growth (commonly 5–20k cells/well in 96‑well; adjust to your lab norms).
+- **Readout:** CellTiter‑Glo (ATP) or resazurin; ensure no compound interference (e.g., redox‑active compounds).
+- **Controls:**  
+  - Positive cytotoxic control: staurosporine (e.g., 1 nM–1 µM) or bortezomib.  
+  - Pathway control: quizartinib/gilteritinib for FLT3‑ITD dependence.
+- **Confirm mechanism vs general toxicity:** follow-up with apoptosis (Annexin V/PI), cell cycle, and target engagement (e.g., p‑FLT3/p‑STAT5).
+
+## If you tell me 4 details, I can tailor this list to your exact assay
+1) 72 h vs 96/120 h exposure,  
+2) viability reagent (CTG vs resazurin),  
+3) serum % and glucose level,  
+4) whether you want **only non-oncology drugs** (true repurposing) or oncology drugs allowed.  
+
+Then I’ll adjust the 20 candidates and tighten the test ranges for each.

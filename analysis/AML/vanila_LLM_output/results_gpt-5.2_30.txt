@@ -1,0 +1,116 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest **existing (approved/clinical) drugs** with published or plausible **anti-AML activity**, including several reported to inhibit **FLT3-ITD AML lines (e.g., MOLM-13)**. However, I need to be careful about one point: **I can’t reliably provide “experimentally testable IC50 concentrations” as numeric targets for MOLM-13 for each drug without citing specific experimental sources**, because IC50s vary a lot with assay type (CellTiter-Glo vs MTS), exposure time (24/48/72 h), serum %, seeding density, and vehicle limits. Providing precise “IC50 concentrations” without vetted citations would be misleading.
+
+What I *can* do immediately is:
+- Provide a **ranked list of 20 repurposing candidates** with evidence/rationale for AML/MOLM-13 sensitivity, and  
+- Give **practical screening concentration ranges** (e.g., 8–12 point dose series) that are **experimentally testable** for IC50 determination and widely used in AML cell viability assays.  
+- If you want **specific MOLM-13 IC50 numbers**, tell me whether you accept **literature-derived values** (with citations) and what **assay conditions** you’ll use; I can then tailor and reference them.
+
+## Practical IC50 assay dose-series (recommended)
+For most small molecules, run an **8–12 point half-log or 3-fold dilution series**, e.g.:
+
+- **0.3 nM → 10 µM** (for potent kinase/epigenetic inhibitors)  
+- **3 nM → 30 µM** (broad default)  
+- **0.1 µM → 100 µM** (for metabolic/older repurposed agents)
+
+Below, I provide a **suggested top concentration and series** per drug class to make IC50 measurable while avoiding solubility/toxicity artifacts.
+
+---
+
+## Top 20 repurposable drugs to test in AML (focus MOLM-13/FLT3-ITD biology)
+
+### A) Directly relevant targeted kinase inhibitors (high probability in MOLM-13)
+1) **Midostaurin** (PKC/FLT3 multikinase; approved AML combo)  
+   - Test range: **0.3 nM – 3 µM** (top 3 µM)
+
+2) **Sorafenib** (RAF/VEGFR/FLT3; used off-label in FLT3-ITD AML)  
+   - Test range: **1 nM – 10 µM** (top 10 µM)
+
+3) **Sunitinib** (multikinase incl. FLT3; repurposing literature in AML)  
+   - Test range: **1 nM – 10 µM**
+
+4) **Pazopanib** (VEGFR/PDGFR; reported activity in some AML contexts)  
+   - Test range: **3 nM – 30 µM** (top 30 µM)
+
+5) **Dasatinib** (SRC/ABL; can suppress signaling in AML subsets)  
+   - Test range: **0.3 nM – 3 µM**
+
+6) **Ruxolitinib** (JAK1/2; targets cytokine/JAK-STAT reliance)  
+   - Test range: **3 nM – 30 µM**
+
+7) **Trametinib** (MEK1/2; downstream MAPK pathway)  
+   - Test range: **0.3 nM – 3 µM**
+
+8) **Everolimus** (mTORC1; AML pathway dependence in subsets)  
+   - Test range: **0.3 nM – 3 µM**
+
+### B) Epigenetic/transcriptional modulators (often active across AML lines)
+9) **Vorinostat (SAHA)** (HDAC inhibitor; anti-proliferative in AML lines)  
+   - Test range: **10 nM – 30 µM** (top 30 µM)
+
+10) **Panobinostat** (HDAC inhibitor; generally more potent than SAHA)  
+   - Test range: **0.3 nM – 300 nM** *plus* optional extension to **3 µM** if needed
+
+11) **Valproic acid** (HDAC activity at mM; classic AML repurposing)  
+   - Test range: **0.1 mM – 10 mM** (requires careful pH/vehicle control)
+
+12) **Disulfiram** (ALDH inhibitor; copper-dependent cytotoxicity reported in AML)  
+   - Test range: **10 nM – 10 µM**  
+   - Note: often tested **± 1–5 µM CuCl₂** in parallel (separate condition)
+
+13) **All-trans retinoic acid (ATRA)** (differentiation agent; subset activity outside APL)  
+   - Test range: **1 nM – 10 µM** (light sensitive)
+
+### C) Apoptosis / stress pathway modulators (good for AML viability readouts)
+14) **Venetoclax** (BCL-2 inhibitor; approved AML combo, strong in many lines)  
+   - Test range: **0.03 nM – 300 nM** (extend to 1 µM if resistant)
+
+15) **Navitoclax (ABT-263)** (BCL-2/BCL-XL; broader but more toxic)  
+   - Test range: **0.3 nM – 3 µM**
+
+16) **Arsenic trioxide** (oxidative stress/apoptosis; mainly APL but broader effects)  
+   - Test range: **10 nM – 30 µM**
+
+### D) Metabolic / “non-oncology” repurposing candidates with AML literature
+17) **Metformin** (AMPK/mitochondrial complex I; modest single-agent)  
+   - Test range: **0.1 mM – 50 mM** (commonly needs mM to see effects in vitro)
+
+18) **Atorvastatin** (HMG-CoA reductase; sensitization/anti-proliferation in AML reports)  
+   - Test range: **10 nM – 30 µM** (top 30 µM)
+
+19) **Mebendazole** (tubulin disruption; multiple cancer repurposing studies)  
+   - Test range: **1 nM – 10 µM** (solubility-limited; keep top ~10 µM)
+
+20) **Itraconazole** (Hedgehog/angiogenesis/traffic; anticancer repurposing)  
+   - Test range: **10 nM – 30 µM** (solubility-limited; top 10–30 µM)
+
+---
+
+## Notes specifically for MOLM-13
+- MOLM-13 is **FLT3-ITD** and is often **highly sensitive** to FLT3-pathway and apoptosis-axis drugs (e.g., **midostaurin/sorafenib** and **venetoclax**, depending on conditions).  
+- To increase the chance of clean IC50 curves, include **72 h exposure** (common for AML proliferation assays) and keep **DMSO ≤0.1%**.
+
+---
+
+## If you want, I can tailor this into a ready-to-run plate map
+Tell me:
+1) **Assay** (CellTiter-Glo, resazurin, MTS, Annexin/PI?)  
+2) **Exposure time** (48 vs 72 h)  
+3) **Top DMSO% allowed** and **max concentration** you can solubilize  
+4) Whether you’ll test **MOLM-13 only** or also MV4-11 / THP-1 / OCI-AML3  
+5) Whether you want **single-agent only** or also **combinations** (e.g., venetoclax + kinase/HDAC)
+
+And I’ll provide: exact **8–12 point dilution series per drug**, plate layout, controls, and recommended replicate strategy.
+
+If you also want **literature-based MOLM-13 IC50 values with citations**, say so and specify your assay conditions so the numbers are comparable.

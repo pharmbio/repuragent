@@ -1,0 +1,13 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Sunitinib,Multi-kinase inhibitor,"Inhibits FLT3, KIT, PDGFR, VEGFR family kinases",1.0,20.0,µM,,sunitinib,False,CHEMBL597365
+Dasatinib,SRC/ABL family kinase inhibitor,Inhibits SRC and ABL family kinases; reported activity in some AML models,0.5,10.0,µM,,dasatinib,False,CHEMBL1421
+Nilotinib,Second-generation ABL inhibitor,Inhibits BCR-ABL with additional activity against FLT3 and KIT-driven AML cells,1.0,20.0,µM,,nilotinib,False,CHEMBL255863
+Ponatinib,Multi-kinase inhibitor,"Potent inhibitor of BCR-ABL, FLT3, FGFR and others with strong in vitro AML activity",0.5,5.0,µM,,ponatinib,False,CHEMBL2105708
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits JAK1 and JAK2 signaling, impairing cytokine-dependent AML/myeloproliferative proliferation",10.0,20.0,µM,,ruxolitinib,False,CHEMBL1287854
+Trametinib,MEK1/2 inhibitor,"Inhibits MEK1 and MEK2 in the MAPK signaling pathway, often activated in AML",0.5,10.0,µM,,trametinib,False,CHEMBL2103875
+Selumetinib,MEK1/2 inhibitor,"Inhibits MEK1/2, blocking MAPK pathway signaling in leukemia and other hematologic models",1.0,20.0,µM,Also known as AZD6244,selumetinib,False,CHEMBL2105684
+Everolimus,mTOR inhibitor,"Inhibits mTOR, targeting the PI3K/AKT/mTOR pathway frequently active in AML",0.5,10.0,µM,Also known as RAD001,everolimus,False,CHEMBL1908360
+Temsirolimus,mTOR inhibitor,"Inhibits mTOR signaling, exerting anti-proliferative effects in AML cells",1.0,20.0,µM,,temsirolimus,False,CHEMBL1201182
+Bortezomib,Proteasome inhibitor,"Inhibits the 26S proteasome, inducing apoptosis in AML cell lines at low-nanomolar concentrations",0.5,2.0,µM,Core suggested range 0.5–500 nM; may extend to 1–2 µM for a full curve,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,"Second-generation irreversible proteasome inhibitor, cytotoxic against AML blasts and cell lines",0.5,2.0,µM,Core suggested range 0.5–500 nM; extend to 1–2 µM if needed,carfilzomib,False,CHEMBL451887
+Panobinostat,HDAC inhibitor,"Inhibits histone deacetylases, causing epigenetic modulation and cytotoxicity in AML cells",0.5,5.0,µM,Also known as LBH589,panobinostat,False,CHEMBL483254

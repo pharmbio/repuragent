@@ -1,0 +1,60 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing FDA-approved drugs for new indications like acute myeloid leukemia (AML) can be a rapid strategy to identify effective treatments due to their established safety profiles. Here are some drugs that have been considered for repurposing in AML treatment, particularly those that may inhibit the proliferation of AML cell lines like MOLM13:
+
+1. **Venetoclax** - Originally used for chronic lymphocytic leukemia.
+2. **Sorafenib** - A multi-kinase inhibitor used in liver, renal, and thyroid cancers.
+3. **Metformin** - Commonly used in diabetes, with reported anti-cancer properties.
+4. **Arsenic Trioxide** - Used in acute promyelocytic leukemia, with broader potential.
+5. **Auranofin** - An anti-rheumatic drug reported to have anti-leukemic activity.
+6. **Imatinib** - A tyrosine kinase inhibitor primarily used in CML.
+7. **Dasatinib** - Another tyrosine kinase inhibitor primarily used for CML.
+8. **Nivolumab** - An immune checkpoint inhibitor used in various solid tumors.
+9. **Ruxolitinib** - A JAK1/2 inhibitor used in myelofibrosis and polycythemia vera.
+10. **Ibrutinib** - Used primarily in CLL, with potential in AML.
+11. **Simvastatin** - A statin used for cholesterol regulation, with potential anti-cancer effects.
+12. **Disulfiram** - Known for treating chronic alcoholism, repurposed for various cancers.
+13. **Chloroquine** - An anti-malarial drug with potential anti-cancer properties.
+14. **Bedaquiline** - Used in multidrug-resistant tuberculosis, with emerging anti-cancer evidence.
+15. **Clofarabine** - An antimetabolite used in pediatric leukemias, with potential broader use.
+16. **Baricitinib** - A JAK inhibitor used in rheumatoid arthritis, with potential in leukemia.
+17. **Everolimus** - An mTOR inhibitor used in renal cell carcinoma and other cancers.
+18. **Itraconazole** - An antifungal with evidence of anti-cancer properties.
+19. **Thalidomide** - Used in multiple myeloma with potential in other hematologic malignancies.
+20. **Plerixafor** - Used to mobilize hematopoietic stem cells, with potential to disrupt chemokine signaling in AML.
+
+### Experimentally Testable Concentrations for IC50 Assays
+The following concentrations are generalized starting points for initial IC50 experiments and might need further optimization:
+
+- **Venetoclax:** 1 nM to 10 μM
+- **Sorafenib:** 0.1 μM to 10 μM
+- **Metformin:** 0.1 mM to 10 mM
+- **Arsenic Trioxide:** 0.01 μM to 10 μM
+- **Auranofin:** 0.01 μM to 10 μM
+- **Imatinib:** 0.01 μM to 10 μM
+- **Dasatinib:** 0.01 μM to 10 μM
+- **Nivolumab:** Not typically used in IC50 assays, as it is an antibody.
+- **Ruxolitinib:** 0.01 μM to 10 μM
+- **Ibrutinib:** 1 nM to 10 μM
+- **Simvastatin:** 0.1 μM to 10 μM
+- **Disulfiram:** 0.01 μM to 10 μM
+- **Chloroquine:** 0.1 μM to 100 μM
+- **Bedaquiline:** 0.001 μM to 10 μM
+- **Clofarabine:** 0.01 μM to 10 μM
+- **Baricitinib:** 0.01 μM to 10 μM
+- **Everolimus:** 0.1 nM to 10 μM
+- **Itraconazole:** 0.1 μM to 10 μM
+- **Thalidomide:** 0.1 μM to 10 μM
+- **Plerixafor:** 0.01 μM to 10 μM
+
+These ranges provide a starting framework for concentration gradients typically useful in determining IC50 values in cell line assays. It is important to adjust concentrations based on initial screenings, vehicle controls, and detailed protocol considerations. Further, validating each drug’s efficacy in a specific AML cell line context like MOLM13 would require experimentation and may involve testing combinations or sequential treatments to explore synergistic effects.

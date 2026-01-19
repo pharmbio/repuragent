@@ -1,0 +1,75 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new indications like acute myeloid leukemia (AML) is a promising area of research, especially for treatment-resistant subtypes or relapsed cases. Here is a list of 20 existing drugs that have shown potential in preclinical or early clinical studies for AML, especially in affecting cell lines like MOLM13. Additionally, I provide general guidance on concentrations for IC50 assays, though these should be confirmed and optimized through preliminary experiments:
+
+1. **Venetoclax**: Typically used for CLL, shows potential in AML.
+   - Starting concentration for IC50: 0.1 - 10 μM
+
+2. **Ruxolitinib**: A JAK1/2 inhibitor, with trial data supporting AML efficacy.
+   - Starting concentration for IC50: 0.1 - 10 μM
+
+3. **Auranofin**: Gold-containing drug typically used in rheumatoid arthritis, with anti-leukemic potential.
+   - Starting concentration for IC50: 0.1 - 10 μM
+
+4. **Ibrutinib**: A BTK inhibitor that has shown activity against AML cells.
+   - Starting concentration for IC50: 0.1 - 10 μM
+
+5. **Arsenic Trioxide**: Effective in APL and studies suggest potential in AML.
+   - Starting concentration for IC50: 0.1 - 10 μM
+
+6. **Idasanutlin**: MDM2 inhibitor with translational studies in AML.
+   - Starting concentration for IC50: 0.1 - 10 μM
+
+7. **Sorafenib**: A multi-kinase inhibitor, already used in trials for AML.
+   - Starting concentration for IC50: 0.1 - 10 μM
+
+8. **Simvastatin**: A statin with reported preclinical activity in AML models.
+   - Starting concentration for IC50: 0.1 - 10 μM
+
+9. **Dasatinib**: A multi-target kinase inhibitor, with efficacy in some AML studies.
+   - Starting concentration for IC50: 0.1 - 10 μM
+
+10. **Methotrexate**: Traditionally used in other cancers; potential interactions with AML pathways.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+11. **Midostaurin**: FLT3 inhibitor, already approved for FLT3-mutant AML.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+12. **Nivolumab**: An immune checkpoint inhibitor showing potential synergy in AML.
+    - Starting concentration for IC50: Varies, requires different assay
+
+13. **Decitabine**: While used in AML, repurposing looks at combination strategies.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+14. **Bortezomib**: Proteasome inhibitor with numerous studies in AML.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+15. **Chloroquine**: Has autophagy inhibition properties studied in AML.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+16. **Vorinostat**: An HDAC inhibitor with reports of activity in leukemia cells.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+17. **Selinexor**: Nuclear export inhibitor studied in AML clinical trials.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+18. **Clofarabine**: A chemotherapy agent, in repurposing context for relapsed AML.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+19. **Atorvastatin**: May have effects on leukemia via cholesterol pathway inhibition.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+20. **Carfilzomib**: Another proteasome inhibitor, showing some activity in AML.
+    - Starting concentration for IC50: 0.1 - 10 μM
+
+These concentrations are starting points and should be refined through experimentation. The goal in IC50 assays is to identify the concentration at which half-maximal inhibition of the AML cells' proliferation occurs. Be sure to consider each drug's pharmacokinetics, mechanism of action, and specific cellular pathways affected when setting up your assays. Moreover, always follow appropriate ethical guidelines and obtain necessary approvals for experimental work.

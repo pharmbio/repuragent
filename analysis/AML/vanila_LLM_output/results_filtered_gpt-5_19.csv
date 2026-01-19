@@ -1,0 +1,14 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,Tyrosine kinase inhibitor,Broad-spectrum TKI with activity against FLT3,0.01,300.0,nM,,ponatinib,False,CHEMBL2105708
+Sunitinib,Multikinase inhibitor,Inhibits multiple receptor tyrosine kinases,1.0,10000.0,nM,Equivalent range: 0.001–10 µM,sunitinib,False,CHEMBL597365
+Bortezomib,Proteasome inhibitor,Reversible inhibitor of the 26S proteasome,0.5,100.0,nM,,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Irreversible proteasome inhibitor (epoxyketone),0.5,100.0,nM,,carfilzomib,False,CHEMBL451887
+Panobinostat,HDAC inhibitor,Pan-HDAC inhibition leading to epigenetic modulation and apoptosis,0.5,100.0,nM,,panobinostat,False,CHEMBL483254
+Omacetaxine,Protein translation inhibitor,Inhibits protein synthesis by interfering with ribosomal elongation,1.0,100.0,nM,Also known as homoharringtonine (HHT),omacetaxine,False,CHEMBL46286
+Trametinib,MEK inhibitor,Selective inhibitor of MEK1/2 in the MAPK pathway,0.1,1000.0,nM,,trametinib,False,CHEMBL2103875
+Ruxolitinib,JAK inhibitor,Selective JAK1/2 inhibitor,0.1,30.0,µM,,ruxolitinib,False,CHEMBL1287854
+Everolimus,mTOR inhibitor,Selective mTORC1 (rapalog) inhibitor,0.1,1000.0,nM,,everolimus,False,CHEMBL1908360
+Tigecycline,Antibiotic (tetracycline class),Inhibits mitochondrial protein translation in leukemic cells,0.05,50.0,µM,,tigecycline,False,CHEMBL376140
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increasing oxidative stress",0.05,20.0,µM,Oral gold complex drug,auranofin,False,CHEMBL1366
+Niclosamide,Anthelmintic,Disrupts oxidative phosphorylation and modulates Wnt/STAT3 signaling,0.05,10.0,µM,,niclosamide,False,CHEMBL1448
+Disulfiram,ALDH inhibitor,Inhibits aldehyde dehydrogenase; copper-dependent cytotoxicity,0.01,10.0,µM,"Activity enhanced by low-µM Cu2+ (e.g., 0.5–1 µM)",disulfiram,False,CHEMBL964

@@ -1,0 +1,178 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a **shortlist of 20 clinically used drugs** that have published activity against AML (many with data in MOLM-13 or very similar FLT3-ITD AML lines). I’ll also suggest **experimentally testable concentration ranges** for in‑vitro IC₅₀ determination in MOLM‑13 proliferation/viability assays (e.g., CellTiter-Glo, MTS, resazurin).
+
+Notes and caveats first (important for design):
+- Use **log10 serial dilutions** (e.g., 8–10 points) spanning at least **3–4 orders of magnitude** to bracket the expected IC₅₀.
+- Suggested ranges are **starting ranges**, not exact IC₅₀ values. They’re based on typical in‑vitro potencies reported for AML or related cell lines, plus safety margins.
+- Work in **0.1% DMSO or less** in all wells, including vehicle controls.
+- For MOLM‑13, **48–72 h** drug exposure is standard for IC₅₀.
+
+---
+
+## 1. Sorafenib  
+Multi-kinase inhibitor (including FLT3); widely reported active in FLT3-ITD AML, including MOLM‑13.
+
+- Suggested IC₅₀ assay range: **0.5 nM – 10 μM**  
+  (e.g., 0.5, 1, 3, 10, 30, 100, 300, 1000, 3000, 10,000 nM)
+
+---
+
+## 2. Sunitinib  
+Multi-kinase inhibitor (FLT3, KIT, PDGFR, VEGFR).
+
+- Suggested range: **1 nM – 20 μM**
+
+---
+
+## 3. Dasatinib  
+SRC/ABL family inhibitor with reported activity in some AML models.
+
+- Suggested range: **0.5 nM – 10 μM**
+
+---
+
+## 4. Nilotinib  
+Second-generation ABL inhibitor; some data for FLT3 and KIT-driven AML cells.
+
+- Suggested range: **1 nM – 20 μM**
+
+---
+
+## 5. Imatinib  
+First-generation BCR-ABL inhibitor; weaker but sometimes used as reference.
+
+- Suggested range: **10 nM – 50 μM**
+
+---
+
+## 6. Midostaurin (PKC412)  
+Clinically used FLT3 inhibitor; directly relevant in FLT3‑ITD AML (including MOLM‑13).
+
+- Suggested range: **0.5 nM – 10 μM**
+
+---
+
+## 7. Quizartinib (AC220)  
+Highly potent and selective FLT3 inhibitor; strong activity in FLT3‑ITD AML cell lines.
+
+- Suggested range: **0.1 nM – 1 μM**  
+  (you can extend to 3–10 μM for a full curve)
+
+---
+
+## 8. Gilteritinib (ASP2215)  
+Clinically approved FLT3 inhibitor; active in MOLM‑13 and other FLT3‑ITD lines.
+
+- Suggested range: **0.1 nM – 2 μM**
+
+---
+
+## 9. Ponatinib  
+Potent multi-kinase inhibitor (BCR-ABL, FLT3, FGFR, etc.) with strong in‑vitro AML activity.
+
+- Suggested range: **0.5 nM – 5 μM**
+
+---
+
+## 10. Venetoclax (ABT-199)  
+BCL-2 inhibitor; strong synergistic and single-agent activity in many AML lines including FLT3‑ITD models.
+
+- Suggested range: **0.5 nM – 5 μM**
+
+---
+
+## 11. Ruxolitinib  
+JAK1/2 inhibitor; can impair proliferation in cytokine-dependent AML/myeloproliferative contexts.
+
+- Suggested range: **10 nM – 20 μM**
+
+---
+
+## 12. Trametinib  
+MEK1/2 inhibitor; targets MAPK signaling often activated in AML.
+
+- Suggested range: **0.5 nM – 10 μM**
+
+---
+
+## 13. Selumetinib (AZD6244)  
+Another MEK1/2 inhibitor; widely used in hematologic signaling studies.
+
+- Suggested range: **1 nM – 20 μM**
+
+---
+
+## 14. Everolimus (RAD001)  
+mTOR inhibitor; PI3K/AKT/mTOR pathway is frequently active in AML.
+
+- Suggested range: **0.5 nM – 10 μM**
+
+---
+
+## 15. Temsirolimus  
+mTOR inhibitor with clinical use in other cancers; reported anti‑proliferative effects in AML cells.
+
+- Suggested range: **1 nM – 20 μM**
+
+---
+
+## 16. Bortezomib  
+Proteasome inhibitor; induces apoptosis in AML cell lines, often at low‑nanomolar concentrations.
+
+- Suggested range: **0.5 nM – 500 nM**  
+  (may extend to 1–2 μM for full curve)
+
+---
+
+## 17. Carfilzomib  
+Second-generation proteasome inhibitor; also cytotoxic against AML blasts and lines.
+
+- Suggested range: **0.5 nM – 500 nM**  
+  (extend to 1–2 μM if needed)
+
+---
+
+## 18. Panobinostat (LBH589)  
+HDAC inhibitor; strong epigenetic modulation and cytotoxicity in AML cell lines.
+
+- Suggested range: **0.5 nM – 5 μM**
+
+---
+
+## 19. Vorinostat (SAHA)  
+Another HDAC inhibitor; broad anti‑proliferative activity in leukemia models.
+
+- Suggested range: **5 nM – 30 μM**
+
+---
+
+## 20. Thalidomide / Lenalidomide (pick one for initial tests)  
+Immunomodulatory drugs; reported anti‑leukemic and differentiation effects, especially in subsets of AML/MDS. Activity in MOLM‑13 may be modest but worth screening in a repurposing panel.
+
+- For **lenalidomide**: **10 nM – 50 μM**  
+- For **thalidomide**: **100 nM – 100 μM**
+
+---
+
+### Practical assay design (brief)
+
+- **Plate type**: 96‑ or 384‑well, white or clear-bottom depending on readout.  
+- **Cell density (MOLM‑13)**: typically **5–10 × 10³ cells/well (96‑well)** or **2–5 × 10³ cells/well (384‑well)** in 100 or 50 μL.  
+- **Exposure time**: **48 h** (often enough) and/or **72 h** (to capture delayed responses).  
+- **Controls**:
+  - Vehicle (0.1% DMSO).
+  - Positive control drug with known activity in MOLM‑13 (e.g., quizartinib, sorafenib, or venetoclax at ~100 nM–1 μM).
+- **Readout**: luminescent ATP (CellTiter-Glo) or similar metabolic assay; normalize to vehicle.
+
+If you want, I can prioritize a smaller panel (e.g., 6–8 drugs) optimized specifically for FLT3‑ITD/MCL1/BCL2 biology in MOLM‑13 and suggest combination pairs and synergy-testing layouts.

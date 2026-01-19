@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,Selective BCL-2 antagonist that promotes apoptosis by inhibiting anti-apoptotic BCL-2,1.0,100.0,nM,Clinically approved for AML combinations; active in BCL-2 dependent AML models.
+Gilteritinib,FLT3 inhibitor,Inhibits FLT3 receptor tyrosine kinase (active against FLT3-ITD),1.0,100.0,nM,Approved for FLT3-mutant AML; potent in FLT3-driven lines.
+Quizartinib,FLT3 inhibitor,Highly selective FLT3 inhibitor with strong activity against FLT3-ITD,1.0,100.0,nM,Developed for FLT3-ITD AML models; high selectivity for FLT3.
+Midostaurin,Multikinase / FLT3 inhibitor,Multikinase inhibitor including FLT3 inhibition,1.0,3000.0,nM,Approved in combination therapy for FLT3-mutant AML; activity varies from nanomolar to low micromolar.
+Crenolanib,FLT3 inhibitor,Inhibits FLT3 including some TKD and ITD mutants,1.0,100.0,nM,Potent against ITD and certain TKD FLT3 mutants in preclinical studies.
+Ponatinib,Multi-kinase inhibitor,Broad-spectrum kinase inhibitor with activity against FLT3 and other kinases,1.0,3000.0,nM,Originally developed as BCR-ABL inhibitor; shows preclinical activity in FLT3-ITD AML.
+Selinexor,XPO1 / CRM1 inhibitor,"Inhibits nuclear export (XPO1/CRM1), leading to nuclear retention of tumor suppressors and apoptosis",1.0,3000.0,nM,Clinical and preclinical AML activity; potency varies across cell lines.
+Pinometostat,DOT1L inhibitor,"Inhibits DOT1L histone methyltransferase, targeting MLL-rearranged leukemias",1.0,3000.0,nM,"Also known as EPZ-5676; rationale strongest in MLL-rearranged AML (e.g., MOLM-13)."
+S63845,MCL-1 inhibitor,Selective MCL-1 inhibitor that induces apoptosis in MCL-1 dependent cells,1.0,100.0,nM,Investigational compound; targets MCL-1-mediated venetoclax resistance in AML.
+Panobinostat,Pan-HDAC inhibitor,"Inhibits histone deacetylases, promoting differentiation and apoptosis",0.1,10.0,µM,Investigated in AML trials and combinations; typically micromolar activity in AML lines.
+Vorinostat,HDAC inhibitor,Histone deacetylase (HDAC) inhibition leading to altered gene expression and apoptosis,0.1,10.0,µM,Also known as SAHA; clinically used HDAC inhibitor with preclinical AML activity.
+Auranofin,Antirheumatic / thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increases oxidative stress and perturbs proteostasis",0.5,5.0,µM,Repurposing candidate identified in AML screens; often reported as low micromolar cytotoxic.
+Niclosamide,Antihelminthic,Pleiotropic modulator (Wnt/STAT/mTOR and other pathways) with reported anticancer effects,0.5,10.0,µM,Identified in phenotypic screens for anticancer activity; potency varies by cell line.
+Disulfiram,Antialcoholism drug,Multiple effects including proteasome inhibition and aldehyde dehydrogenase modulation; activity often enhanced with copper,0.5,10.0,µM,"Preclinical AML cytotoxicity reported; activity can be condition-dependent (e.g., copper co-treatment)."
+Itraconazole,Antifungal,Modulates Hedgehog and mTOR signaling and other pleiotropic effects,0.5,10.0,µM,Reported anticancer activity in some hematologic models and drug-repurposing screens.
+Mebendazole,Anthelmintic,"Disrupts microtubules, impairing mitosis",0.5,10.0,µM,Repurposing reports show activity across various cancer models including hematologic lines.
+Simvastatin,HMG-CoA reductase inhibitor (statin),"Inhibits the mevalonate pathway, impacting lipid biosynthesis and prenylation processes",1.0,50.0,µM,Statins can impair AML growth and sensitize cells to other agents; often require higher micromolar concentrations in vitro.
+Metformin,Antidiabetic,Alters cellular metabolism via AMPK activation and mTOR pathway modulation,0.01,10.0,mM,Reported AML growth inhibitory effects often observed at higher (micromolar to millimolar) in vitro concentrations.
+Sertraline,SSRI antidepressant,Reported lysosomal/mitochondrial perturbation leading to cytotoxicity in cancer screens,0.5,10.0,µM,Identified in drug screens for AML cytotoxicity; mechanism in cancer context is pleiotropic.
+Clofazimine,Anti-leprosy / immunomodulatory,Immunomodulatory and other anticancer activities reported in preclinical studies,0.5,10.0,µM,Reported in phenotypic screens and preclinical hematologic models as a repurposing candidate.

@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Thalidomide,Immunomodulatory drug,Modulates immune response and inhibits angiogenesis.,1.0,10.0,µM,Also known as Thalomid.,thalidomide,False,CHEMBL426123
+Panobinostat,HDAC inhibitor,"Inhibits histone deacetylases, enhancing tumor suppressor gene expression and cell apoptosis.",0.2,0.5,µM,Also known as Farydak.,panobinostat,False,CHEMBL483254
+Metformin,Biguanide,Reduces hepatic glucose production and increases insulin sensitivity; has anti-cancer effects.,1.0,10.0,mM,,metformin,False,CHEMBL1431
+Chloroquine,Antimalarial,Inhibits autophagy and promotes apoptosis in cancer cells.,10.0,20.0,µM,,chloroquine,False,CHEMBL76
+Fingolimod,Sphingosine-1-phosphate receptor modulator,Modulates immune response and prevents lymphocyte egress from lymph nodes.,50.0,100.0,nM,Also known as Gilenya.,fingolimod,False,CHEMBL314854
+Resveratrol,Natural polyphenol,Exhibits antioxidant properties and induces apoptosis in cancer cells.,5.0,15.0,µM,,resveratrol,False,CHEMBL165
+Disulfiram,Alcohol deterrent,Inhibits aldehyde dehydrogenase; promotes apoptosis in cancer cells.,1.0,10.0,µM,Also known as Antabuse.,disulfiram,False,CHEMBL964
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome function, leading to accumulation of pro-apoptotic factors.",5.0,20.0,nM,Also known as Velcade.,bortezomib,False,CHEMBL325041
+Camptothecin,Topoisomerase inhibitor,"Inhibits topoisomerase I, leading to DNA damage and apoptosis.",0.1,5.0,µM,,camptothecin,False,CHEMBL65
+Auranofin,Gold compound,"Inhibits thioredoxin reductase, inducing oxidative stress and apoptosis.",1.0,5.0,µM,,auranofin,False,CHEMBL1366
+Sunitinib,Multikinase inhibitor,Inhibits multiple receptor tyrosine kinases involved in tumor growth and angiogenesis.,0.1,1.0,µM,Also known as Sutent.,sunitinib,False,CHEMBL597365
+Valproic Acid,Anticonvulsant,Inhibits histone deacetylases and enhances gene expression; induces apoptosis.,1.0,5.0,mM,,valproic acid,False,CHEMBL109
+Celecoxib,COX-2 inhibitor,"Inhibits cyclooxygenase-2, reducing inflammation and potentially affecting tumor progression.",5.0,20.0,µM,,celecoxib,False,CHEMBL118
+Curcumin,Natural polyphenol,Exhibits anti-inflammatory and anti-cancer properties through multiple pathways.,5.0,10.0,µM,,curcumin,False,CHEMBL140

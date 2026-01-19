@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 Inhibitor,Inhibits BCL-2 protein to induce apoptosis in cancer cells,0.01,10.0,µM,Also known as ABT-199
+Decitabine,Antimetabolite,"Incorporates into DNA, causing hypomethylation and apoptosis",0.1,10.0,µM,Nucleoside analog used in chemotherapy
+Azacitidine,DNA Methyltransferase Inhibitor,Incorporates into RNA and DNA causing hypomethylation and apoptosis,0.1,10.0,µM,Used in treatment of myelodysplastic syndrome
+Auranofin,Gold compound,"Inhibits thioredoxin reductase, leads to oxidative stress",0.01,10.0,µM,Originally developed for rheumatoid arthritis
+Clofarabine,Antimetabolite,"Inhibits DNA synthesis, leading to apoptosis",0.1,10.0,µM,Purine nucleoside analog
+Dasatinib,Tyrosine Kinase Inhibitor,Inhibits BCR-ABL and SRC family kinases,0.01,1.0,µM,Used in chronic myeloid leukemia (CML)
+Imatinib,Tyrosine Kinase Inhibitor,Inhibits BCR-ABL tyrosine kinase,0.01,5.0,µM,First successful targeted therapy for CML
+Nilotinib,Tyrosine Kinase Inhibitor,BCR-ABL tyrosine kinase inhibitor,0.01,5.0,µM,Second-generation tyrosine kinase inhibitor
+Glasdegib,SMO Inhibitor,"Inhibits Smoothened receptor, blocking Hedgehog pathway",0.01,10.0,µM,FDA-approved for AML in combination therapies
+Midostaurin,Multi-target inhibitor,"Inhibits FLT3, KIT, and other kinases",0.01,10.0,µM,Used in FLT3-mutated AML
+Sorafenib,Multikinase Inhibitor,Inhibits RAF kinase and others,0.1,10.0,µM,Targets tumor cell proliferation and angiogenesis
+Crenolanib,Tyrosine Kinase Inhibitor,Inhibits PDGFRA/B and FLT3,0.01,5.0,µM,Investigational drug for FLT3-positive AML
+Ruxolitinib,JAK Inhibitor,Inhibits JAK1/2 leading to decreased signaling via the JAK-STAT pathway,0.01,5.0,µM,Used in myelofibrosis and polycythemia vera
+Selinexor,Selective Inhibitor of Nuclear Export (SINE),Inhibits exportin 1 (XPO1) preventing transport of tumor suppressor proteins,0.01,10.0,µM,Also known as KPT-330
+Idelalisib,PI3K Inhibitor,Targets PI3K-delta isoform leading to inhibition of cell survival pathways,0.01,10.0,µM,Used in chronic lymphocytic leukemia (CLL)
+Ibrutinib,BTK Inhibitor,Inhibits Bruton's tyrosine kinase leading to reduced B cell survival,0.01,10.0,µM,Used in various B-cell malignancies
+Ponatinib,Tyrosine Kinase Inhibitor,Inhibits BCR-ABL and others,0.01,5.0,µM,Effective against T315I mutant BCR-ABL
+Everolimus,mTOR Inhibitor,Inhibits mTOR pathway leading to reduced cell growth and proliferation,0.1,10.0,µM,Used in various cancers to inhibit angiogenesis
+Rigosertib,Ras-mimetic,"Inhibits PI3K and PLK1, affecting mitotic apparatus",0.01,10.0,µM,Investigational agent for myelodysplastic syndromes
+Vorinostat,HDAC Inhibitor,Inhibits histone deacetylases leading to apoptosis,0.1,10.0,µM,Used for cutaneous T-cell lymphoma (CTCL)

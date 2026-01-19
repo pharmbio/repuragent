@@ -1,0 +1,36 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML), especially targeting cell lines such as MOLM-13, is an active area of research. Below is a list of 20 drugs that have shown potential or are being researched for repurposing in AML treatment. For each, I suggest a starting concentration range for IC50 assays to test on MOLM-13 cells. Note that these concentrations should be refined based on initial experimental results:
+
+1. **Metformin** - Start with a concentration range of 1-10 mM.
+2. **Arsenic Trioxide** - Start with 0.1-10 µM.
+3. **Auranofin** - Start with 0.1-10 µM.
+4. **Dasatinib** - Start with 1-100 nM.
+5. **Sorafenib** - Start with 1-10 µM.
+6. **Venetoclax** - Start with 1-100 nM.
+7. **Ruxolitinib** - Start with 0.1-1 µM.
+8. **Ibrutinib** - Start with 0.1-10 µM.
+9. **Thalidomide** - Start with 1-50 µM.
+10. **Imatinib** - Start with 0.1-10 µM.
+11. **Chloroquine** - Start with 1-20 µM.
+12. **Hydroxychloroquine** - Start with 1-20 µM.
+13. **Clofazimine** - Start with 0.1-10 µM.
+14. **Itraconazole** - Start with 0.1-10 µM.
+15. **Sirolimus (Rapamycin)** - Start with 1-100 nM.
+16. **Everolimus** - Start with 1-100 nM.
+17. **Valproic Acid** - Start with 0.5-10 mM.
+18. **Vorinostat (SAHA)** - Start with 0.1-10 µM.
+19. **Fluoxetine** - Start with 1-20 µM.
+20. **Niclosamide** - Start with 0.1-10 µM.
+
+For each drug, it is crucial to conduct a series of experiments to determine the IC50 value accurately. The provided ranges are intended as starting points for setting up these assays. Factors such as solubility, stability, and cell viability should also be considered when designing these experiments. Additionally, it's important to consult the latest literature and clinical trials for updated findings and recommendations regarding these drugs' efficacy and safety profiles in AML treatment.

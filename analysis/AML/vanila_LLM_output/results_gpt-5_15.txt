@@ -1,0 +1,53 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved, “existing” drugs with published activity against AML cell lines (often including FLT3-ITD–dependent lines like MOLM13/MV4-11). For each, I list a practical 10-point, 3-fold serial dilution range to run an IC50 assay in MOLM13. Ranges are centered to bracket literature potencies and typical protein-binding effects in serum. Use DMSO ≤0.2% final unless noted.
+
+FLT3/MAPK and other targeted inhibitors (strong MOLM13 rationale)
+- Sorafenib (HCC/RCC; multi-kinase incl. FLT3): 10-point 3-fold from 1 µM down to 0.5 nM. Expect low-nM activity in MOLM13.
+- Sunitinib (RCC/GIST; FLT3): 3 µM to 1.5 nM. Expect ~10–100 nM.
+- Ponatinib (CML/ALL; FLT3 including TKD mutants): 300 nM to 0.15 nM. Expect single–low nM.
+- Cabozantinib (RCC/HCC; FLT3/MET/AXL): 3 µM to 1.5 nM. Expect ~10–100 nM.
+- Regorafenib (CRC/GIST/HCC; FLT3/RAF/VEGFR): 10 µM to 5 nM. Expect ~0.1–1 µM in cells.
+- Lenvatinib (DTC/HCC/EC; multi-kinase with reported FLT3 activity): 10 µM to 5 nM. Expect ~0.05–0.5 µM.
+- Axitinib (RCC; reported FLT3 activity): 10 µM to 5 nM. Expect ~0.3–3 µM.
+- Vandetanib (MTC; multi-kinase, reported FLT3 coverage): 30 µM to 15 nM. Expect ~0.3–3 µM.
+- Dasatinib (CML/ALL; SRC/SYK; anti-AML signaling): 1 µM to 0.5 nM. Expect ~10–100 nM.
+- Ruxolitinib (MF/PV; JAK1/2): 30 µM to 15 nM. Expect ~1–10 µM (context-dependent).
+- Everolimus (RCC/NET; mTOR): 3 µM to 1.5 nM. Expect ~10–100 nM anti-proliferative effects.
+
+Proteasome inhibitors (broad AML cytotoxicity)
+- Bortezomib (MM/MCL): 100 nM to 0.05 nM. Expect ~5–20 nM.
+- Carfilzomib (MM): 300 nM to 0.15 nM. Expect ~10–50 nM.
+
+Metabolism/mitochondria, redox, and other repurposing leads with AML data
+- Tigecycline (antibiotic; mitochondrial translation): 60 µM to 30 nM. Expect ~1–10 µM; prepare fresh; light-sensitive.
+- Auranofin (RA; thioredoxin reductase inhibitor): 10 µM to 5 nM. Expect ~0.2–2 µM.
+- Disulfiram + Cu (AUD; ALDH inhibition/redox; copper-dependent): Disulfiram 5 µM to 2.5 nM with 1–2 µM CuCl2 constant. Expect ~0.05–1 µM in presence of Cu. Note: add copper to reveal potency.
+- Mebendazole (anthelmintic; microtubules/HH): 10 µM to 5 nM. Expect ~0.1–1 µM; watch solubility.
+- Niclosamide (anthelmintic; Wnt/STAT3/oxidative phosphorylation): 10 µM to 5 nM. Expect ~0.2–2 µM; low aqueous solubility—use fresh DMSO stocks and ≤0.2% DMSO final.
+- Thioridazine (antipsychotic; dopamine receptor; leukemia stem cell targeting): 30 µM to 15 nM. Expect ~1–10 µM; QT liability—handle with care.
+- Artesunate (antimalarial; ROS/iron-dependent): 30 µM to 15 nM. Expect ~1–10 µM.
+
+Assay setup tips for MOLM13 IC50 determination
+- Cells: MOLM13 (FLT3-ITD). Seed 5,000–10,000 cells per well (96-well), 100 µL RPMI + 10% FBS, antibiotics optional.
+- Compound handling: 10 mM DMSO stocks; final DMSO ≤0.2%. Include vehicle controls on every plate.
+- Incubation: 72 h for viability (many TKIs show effects by 48 h; 72 h improves signal for slower-acting drugs).
+- Readout: ATP-based viability (e.g., CellTiter-Glo). Normalize to vehicle.
+- Controls: Positive control FLT3 inhibitor (e.g., gilteritinib 0.3–300 nM) to verify assay sensitivity; optional staurosporine for assay ceiling.
+- Notes:
+  - Protein binding can shift apparent potency upward; the ranges above already account for 10% FBS conditions.
+  - For disulfiram, include copper (1–2 µM CuCl2) in all wells for that series to reveal activity.
+  - Light/serum sensitivity: prepare tigecycline fresh, protect from light; mebendazole/niclosamide require careful solubilization.
+  - Run at least n=3 technical replicates; confirm with ≥2 biological replicates.
+
+If you want, I can tailor the list to specific pathways or supply literature citations for each agent’s activity in MOLM13/FLT3-ITD AML and help you generate plate maps and dilution spreadsheets.

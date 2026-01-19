@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,Multikinase inhibitor (ABL/FLT3),"Inhibits ABL, FLT3, and KIT kinases",0.03,1000.0,nM,Indications noted: CML/ALL; potent against FLT3-ITD–positive AML lines,ponatinib,False,CHEMBL2105708
+Sunitinib,Multikinase inhibitor (FLT3),"Inhibits FLT3, KIT, and VEGFR kinases",1.0,10000.0,nM,"Indications noted: RCC/GIST; targets listed as FLT3, KIT, VEGFR",sunitinib,False,CHEMBL597365
+Regorafenib,Multikinase inhibitor (FLT3),"Inhibits FLT3, VEGFR, and TIE2 kinases",1.0,10000.0,nM,"Indications noted: CRC/GIST/HCC; targets listed as FLT3, VEGFR, TIE2",regorafenib,False,CHEMBL1946170
+Cabozantinib,Multikinase inhibitor (MET/AXL/FLT3),"Inhibits MET, AXL, and FLT3 kinases",0.5,5000.0,nM,"Indications noted: RCC/HCC; targets listed as MET, AXL, FLT3",cabozantinib,False,CHEMBL2105717
+Axitinib,VEGFR inhibitor (reported FLT3 activity),Inhibits VEGFR kinases; reported to have FLT3 activity,0.5,5000.0,nM,Indication noted: RCC; primarily a VEGFR inhibitor; reported FLT3 activity,axitinib,False,CHEMBL1289926
+Dasatinib,SRC/ABL family kinase inhibitor,"Inhibits SRC, ABL, and KIT kinases",1.0,5000.0,nM,Indications noted: CML/ALL; some AML activity reported,dasatinib,False,CHEMBL1421
+Bortezomib,Proteasome inhibitor,Inhibits the proteasome to disrupt proteostasis,0.5,200.0,nM,Indications noted: MM/MCL; proteasome target,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Irreversible proteasome inhibitor,0.5,200.0,nM,Indication noted: MM; proteasome target,carfilzomib,False,CHEMBL451887
+Omacetaxine,Protein synthesis inhibitor,Inhibits protein synthesis,1.0,500.0,nM,Indication noted: CML; protein synthesis inhibitor,omacetaxine,False,CHEMBL46286
+Panobinostat,HDAC inhibitor,Pan-HDAC inhibition,0.5,200.0,nM,Indication noted: MM; HDAC target,panobinostat,False,CHEMBL483254
+Trametinib,MEK inhibitor (MAPK pathway),Inhibits MEK1/2,0.1,1000.0,nM,Indication noted: melanoma; MEK1/2 target,trametinib,False,CHEMBL2103875
+Selumetinib,MEK inhibitor (MAPK pathway),Inhibits MEK1/2,1.0,3000.0,nM,Indication noted: NF1 PN; MEK1/2 target,selumetinib,False,CHEMBL2105684
+Everolimus,mTOR inhibitor,mTORC1 inhibition,1.0,10000.0,nM,Indications noted: various solid tumors; mTORC1 target,everolimus,False,CHEMBL1908360
+Leflunomide,DHODH inhibitor,Inhibits dihydroorotate dehydrogenase via active metabolite teriflunomide,1.0,200.0,µM,"Indication noted: RA; via teriflunomide, DHODH inhibition",leflunomide,False,CHEMBL960
+Auranofin,Thioredoxin reductase inhibitor,Inhibits thioredoxin reductase to disrupt redox homeostasis,10.0,5000.0,nM,Indication noted: RA; thioredoxin reductase target,auranofin,False,CHEMBL1366
+Niclosamide,Mitochondrial/Wnt/STAT3 pathway modulator,"Disrupts Wnt signaling, mitochondrial function, and STAT3",10.0,5000.0,nM,Indication noted: anthelmintic; described as Wnt/mitochondrial/STAT3 disruptor,niclosamide,False,CHEMBL1448

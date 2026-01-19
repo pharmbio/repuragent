@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,Inhibits BCL-2 to promote mitochondrial apoptosis in AML cells,0.001,1.0,µM,Listed as CLL/AML combination-use drug; rationale noted as apoptosis priming in AML
+Midostaurin,FLT3/multikinase inhibitor,Inhibits FLT3 and other kinases to disrupt FLT3-driven signaling,0.001,1.0,µM,Notes MOLM-13 is FLT3-ITD driven; described as FLT3+ AML drug
+Gilteritinib,FLT3/AXL inhibitor,Inhibits FLT3 (and AXL) signaling to suppress proliferation in FLT3-driven AML,0.001,1.0,µM,Described as potent FLT3 inhibition; indicated for FLT3+ AML
+Sorafenib,Multikinase inhibitor,Inhibits multiple kinases including FLT3 and RAF pathway components,0.01,10.0,µM,Rationale mentions FLT3/RAF pathway effects in FLT3-ITD AML
+Ponatinib,Tyrosine kinase inhibitor (BCR-ABL/FLT3),Broad kinase inhibition including FLT3 (and BCR-ABL) to block oncogenic signaling,0.001,1.0,µM,Stated as explored in AML; broad kinase inhibition incl. FLT3
+Dasatinib,SRC/ABL kinase inhibitor,Inhibits SRC-family kinases and ABL to interfere with survival signaling,0.01,10.0,µM,Rationale: SRC-family signaling implicated in AML survival
+Ruxolitinib,JAK1/2 inhibitor,Inhibits JAK1/2 to suppress JAK/STAT pathway signaling,0.05,20.0,µM,Existing use mentioned: myelofibrosis; noted for subset activity and combination rationale
+Trametinib,MEK1/2 inhibitor,Inhibits MEK1/2 in the RAS/MAPK pathway to reduce proliferation,0.001,1.0,µM,Rationale references RAS/MAPK axis suppression in AML contexts
+Everolimus,mTORC1 inhibitor,Inhibits mTORC1 to dampen PI3K/AKT/mTOR signaling and growth,0.01,10.0,µM,Rationale: PI3K/AKT/mTOR pathway in AML
+Idelalisib,PI3Kδ inhibitor,Selectively inhibits PI3K delta to reduce downstream survival signaling,0.05,20.0,µM,Rationale: PI3K signaling in hematologic malignancies
+Bortezomib,Proteasome inhibitor,Inhibits the proteasome leading to proteostasis stress and apoptosis,0.001,0.5,µM,Note: synergy reported with chemotherapy in AML
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases to alter chromatin/epigenetic programs,0.001,1.0,µM,Rationale: epigenetic dysregulation in AML
+Vorinostat,HDAC inhibitor,Inhibits HDACs to induce differentiation and apoptosis programs,0.05,20.0,µM,Alternative name given in text: SAHA
+Valproic acid,HDAC modulator (weak HDAC inhibitor at high concentration),At high concentrations has HDAC-inhibitory activity leading to differentiation/epigenetic modulation,100.0,3000.0,µM,Text notes weak potency and 'HDAC activity at high conc.'; range presented in µM though described as needing mM windows
+Decitabine,DNA hypomethylating agent,"Incorporates into DNA and inhibits DNA methyltransferases, promoting hypomethylation/epigenetic reprogramming",0.001,10.0,µM,Existing use: AML/MDS; noted time-dependent effects and may need 96–120 h or repeated dosing for maximal effect
+Azacitidine,Hypomethylating agent,Nucleoside analog that reduces DNA methylation (via DNMT inhibition after incorporation) affecting gene expression,0.01,30.0,µM,Existing use: AML/MDS; noted schedule sensitivity and longer assay duration may show clearer effects
+Hydroxychloroquine,Autophagy/lysosomal inhibitor,Raises lysosomal pH and impairs autophagic flux,1.0,100.0,µM,Rationale: autophagy dependence and combination rationale
+Disulfiram,ALDH/ROS-modulating drug (repurposed; alcoholism drug),Targets ALDH-related vulnerabilities and increases oxidative stress; activity often enhanced with copper,0.05,20.0,µM,Text notes often used with Cu2+; specifies ± copper: 0.1–1 µM CuCl2
+Metformin,Mitochondrial complex I inhibitor (antidiabetic),Inhibits mitochondrial respiratory chain complex I causing energetic stress and altered metabolism,100.0,10000.0,µM,Rationale: can impair AML metabolism in vitro; described as weak metabolic drug needing mM windows
+Niclosamide,Antihelminthic (repurposing candidate),Reported to affect WNT/STAT3 signaling and act as a mitochondrial uncoupler in cancer contexts,0.05,20.0,µM,Text notes WNT/STAT3/mitochondrial uncoupling; solubility/precipitation caution mentioned elsewhere in notes

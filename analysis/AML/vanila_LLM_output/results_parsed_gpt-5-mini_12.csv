@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,"Selective BCL-2 inhibition, promotes apoptosis",5.0,100.0,nM,Very potent in BCL2-dependent AML; clinical use in AML
+Quizartinib,FLT3 inhibitor,FLT3 (FLT3-ITD) tyrosine kinase inhibition,0.1,10.0,nM,Also known as AC220; highly potent against FLT3-ITD
+Gilteritinib,FLT3/AXL inhibitor,Inhibits FLT3 and AXL tyrosine kinases,1.0,10.0,nM,Approved for FLT3-mutant relapsed AML
+Midostaurin,Multi-kinase / FLT3 inhibitor,Multi-kinase inhibition including FLT3,1.0,50.0,nM,Approved in combination therapy for FLT3-mutant AML; less potent than quizartinib/gilteritinib
+Sorafenib,Multi-kinase inhibitor,"Inhibits multiple kinases including RAF, VEGFR, and FLT3",1.0,1000.0,nM,Activity in some FLT3-ITD AMLs; reported ranges span low nM to low µM
+Cytarabine,Nucleoside analog chemotherapy,Incorporates into DNA and inhibits DNA synthesis,0.1,10.0,µM,Also called Ara-C; standard AML chemotherapy backbone
+Decitabine,Hypomethylating agent,DNA methyltransferase inhibition leading to hypomethylation,0.5,10.0,µM,Used clinically in older/unfit AML patients; exposure-dependent potency
+Azacitidine,Hypomethylating agent,Incorporates into RNA/DNA and inhibits DNA methyltransferases,0.5,10.0,µM,Similar clinical use and potency profile to decitabine
+Bortezomib,Proteasome inhibitor,"Inhibits the 26S proteasome, inducing proteotoxic stress and apoptosis",1.0,100.0,nM,Shows activity in some AML models; clinical combination studies exist
+Panobinostat,HDAC inhibitor,Histone deacetylase inhibition leading to altered chromatin and gene expression,1.0,100.0,nM,Potent pan-HDAC inhibitor with AML preclinical activity
+Vorinostat,HDAC inhibitor,Histone deacetylase inhibition (broad HDAC profile),0.5,5.0,µM,Also known as SAHA; activity variable by cell line
+Trametinib,MEK1/2 inhibitor,"Allosteric inhibition of MEK1/2, blocking MAPK pathway signaling",1.0,100.0,nM,Effective where MAPK signaling drives proliferation or in combinations
+Dinaciclib,CDK inhibitor,"Inhibits CDK1/2/5/9, disrupting cell cycle and transcriptional CDK functions",1.0,50.0,nM,Potent CDK inhibitor that induces apoptosis in AML models
+Palbociclib,CDK4/6 inhibitor,"Selective CDK4/6 inhibition, causing G1 cell-cycle arrest",200.0,1000.0,nM,Activity in AML is cell-context dependent; many AML lines less dependent on CDK4/6
+Dasatinib,Multi-kinase inhibitor (SRC/ABL),Inhibits SRC family kinases and ABL among others,1.0,1000.0,nM,Repurposed in subsets of AML and in combination studies; activity line-dependent
+Auranofin,Thioredoxin reductase inhibitor / repurposed anti-rheumatic,"Inhibits thioredoxin reductase, increasing oxidative stress",0.2,5.0,µM,Repurposing candidate with oxidative-stress–mediated cytotoxicity in AML
+Niclosamide,Anthelmintic (repurposing candidate),"Multiple reported mechanisms (mitochondrial uncoupling, Wnt/STAT3 inhibition reported)",0.5,5.0,µM,Repurposing candidate shown to inhibit AML proliferation in vitro
+Ibrutinib,BTK inhibitor,"Covalent inhibition of BTK, affecting BCR and related signaling pathways",0.1,2.0,µM,Activity in AML is variable and often subset- or combination-dependent
+Omacetaxine mepesuccinate,Protein synthesis inhibitor,Inhibits protein synthesis (elongation) leading to decreased oncoprotein levels,1.0,1000.0,nM,Also known as homoharringtonine; approved for CML and shows AML activity
+BET inhibitors,BET bromodomain inhibitors (epigenetic),"Inhibit BET family bromodomains (e.g., BRD4), altering transcriptional programs",0.1,2.0,µM,Examples include birabresib (OTX015) and JQ1 (JQ1 often ~0.1–1 µM in AML)

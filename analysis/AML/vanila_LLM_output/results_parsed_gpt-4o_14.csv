@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,"Inhibits BCL-2, preventing cancer cell survival",10.0,100.0,nM,"Promising activity in AML, especially in combination therapies."
+Auranofin,Gold compound,Induces oxidative stress in cancer cells,0.5,5.0,μM,Traditionally used for rheumatoid arthritis.
+Metformin,Antidiabetic drug,Modulates metabolic pathways with cancer inhibitory effects,1.0,10.0,mM,"Effective in multiple cancer models, including AML."
+Arsenic trioxide,Chemotherapeutic agent,Promotes apoptosis and differentiation in leukemic cells,0.1,1.0,μM,Used in acute promyelocytic leukemia; potential in AML subsets.
+Ibrutinib,BTK inhibitor,"Inhibits Bruton’s tyrosine kinase, delaying cancer growth",0.5,5.0,μM,"Primarily for chronic lymphocytic leukemia, but potential AML impact."
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits multiple kinases, blocking cancer cell growth",5.0,20.0,nM,Approved for chronic myeloid leukemia; shows AML activity.
+Leflunomide,Immunomodulatory drug,Inhibits pyrimidine synthesis affecting cell proliferation,10.0,50.0,μM,Potential for synergistic effects with other anticancer drugs.
+Thalidomide,Immunomodulatory drug,Exhibits anti-angiogenic and potential direct tumor effects,0.5,5.0,μM,Known for anti-tumor properties in certain cancers.
+Celecoxib,COX-2 inhibitor,Anti-inflammatory effects with potential cancer inhibition,5.0,25.0,μM,Assessed for anticancer effects beyond inflammation pain relief.
+Disulfiram,Aldehyde dehydrogenase inhibitor,Inhibits cancer cell detoxification pathways,0.1,1.0,μM,Used in alcoholism treatment; identified for anticancer potential.
+Riluzole,Neuroprotective drug,Modulates glutamate signaling pathways in cancer cells,10.0,50.0,μM,Potential impact on malignancies involving glutamate pathways.
+Chloroquine,"Antimalarial, autophagy inhibitor","Inhibits autophagy, reducing tumor cell survival",10.0,50.0,μM,Potential repurposing for cancer types harnessing autophagy.
+Dexamethasone,Corticosteroid,Induces apoptosis and anti-proliferative effects,1.0,10.0,μM,Apoptotic effects in certain leukemic populations.
+Nelfinavir,"Antiretroviral, protease inhibitor",Inhibition of protease activity affecting cancer cell survival,10.0,50.0,μM,Explored for the anticancer potential beyond antiviral use.
+Minocycline,Antibiotic,Anti-inflammatory and potential direct tumor growth inhibition,10.0,50.0,μM,Under exploration for a broader anticancer application.
+Amiodarone,Antiarrhythmic agent,Induces apoptosis via disrupting cardiac pathways,10.0,50.0,μM,Potential repurposing in oncology targeting cell survival pathways.
+Vorinostat (SAHA),HDAC inhibitor,"Inhibits histone deacetylases, impacting cell cycle progression",0.5,5.0,μM,Synergistic effects noted in AML with specific combinations.
+Cyclosporine,Immunosuppressant,Modulates apoptosis and drug resistance mechanisms,2.0,10.0,μM,Implicated in investigations of drug resistance modulation.
+Doxycycline,Antibiotic,"Disrupts mitochondrial function, affecting cancer cell viability",10.0,50.0,μM,Potential pathway in disrupting mitochondrial biogenesis in cancer.
+Simvastatin,Statin,"Inhibits cholesterol biosynthesis, potentially affecting cell growth",0.1,1.0,μM,Anti-proliferative effects noted beyond cholesterol reduction.

@@ -1,0 +1,113 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest *repurposing candidates* with **experimentally testable IC50 assay concentration ranges** for AML (with emphasis on **MOLM-13**, an FLT3‑ITD AML line). However, I can’t reliably claim that each drug *will* inhibit MOLM‑13 without citing specific evidence for that exact line/assay. What I *can* do is provide (1) drugs with strong mechanistic rationale and published anti‑AML activity (often including FLT3‑ITD contexts), and (2) **practical concentration ranges** to run an IC50 curve in MOLM‑13 (and other AML lines) that are realistic vs known on‑target potencies and cell permeability.
+
+Below are **20 existing (approved/clinical) drugs** commonly considered “repurposable” in oncology/AML and a **starting concentration range** for an IC50 assay (e.g., CellTiter‑Glo at 72 h). Ranges are designed so you can run a **10‑point, 3‑fold** dilution series that is likely to bracket the IC50 if there is one.
+
+---
+
+## Suggested repurposing drugs (top 20) + testable IC50 ranges (MOLM‑13)
+
+**Assay range guidance:** if not otherwise specified, a good default is **0.3 nM → 30 µM** (10 points, 3‑fold). For very potent kinase inhibitors, use **0.01 nM → 1 µM**.
+
+### A) Targeted kinase / signaling drugs (high prior probability in MOLM‑13)
+1) **Midostaurin** (multi‑kinase; FLT3)  
+   **Range:** 0.3 nM – 3 µM
+
+2) **Sorafenib** (multi‑kinase; FLT3/RAF/VEGFR)  
+   **Range:** 0.3 nM – 3 µM
+
+3) **Sunitinib** (RTK inhibitor; includes FLT3 activity)  
+   **Range:** 0.3 nM – 3 µM
+
+4) **Dasatinib** (SRC/ABL family; broader signaling suppression)  
+   **Range:** 0.1 nM – 1 µM
+
+5) **Bosutinib** (SRC/ABL; signaling)  
+   **Range:** 0.3 nM – 3 µM
+
+6) **Ruxolitinib** (JAK1/2; cytokine/JAK‑STAT axis)  
+   **Range:** 1 nM – 10 µM
+
+7) **Trametinib** (MEK1/2; MAPK pathway)  
+   **Range:** 0.03 nM – 300 nM
+
+8) **Everolimus** (mTORC1)  
+   **Range:** 0.1 nM – 1 µM
+
+9) **Temsirolimus** (mTORC1)  
+   **Range:** 0.1 nM – 1 µM
+
+10) **Sirolimus (Rapamycin)** (mTORC1)  
+   **Range:** 0.1 nM – 1 µM
+
+### B) Epigenetic / transcriptional modulation (frequently active in AML)
+11) **Panobinostat** (HDAC inhibitor)  
+   **Range:** 0.1 nM – 1 µM
+
+12) **Vorinostat (SAHA)** (HDAC inhibitor)  
+   **Range:** 3 nM – 30 µM
+
+13) **Valproic acid** (HDAC effects at high µM–mM)  
+   **Range:** 0.05 mM – 5 mM
+
+14) **ATRA (Tretinoin)** (RAR agonist; differentiation)  
+   **Range:** 1 nM – 10 µM
+
+### C) Metabolism / redox / stress pathway drugs (often hit AML vulnerabilities)
+15) **Metformin** (mitochondrial complex I stress; metabolic)  
+   **Range:** 0.1 mM – 50 mM
+
+16) **Disulfiram** (ALDH/metal‑dependent proteotoxic stress; often Cu‑dependent)  
+   **Range:** 1 nM – 10 µM *(consider ± 0.1–1 µM CuSO₄ arm)*
+
+17) **Auranofin** (thioredoxin reductase; oxidative stress)  
+   **Range:** 1 nM – 3 µM
+
+18) **Artesunate** (ROS/iron‑dependent stress)  
+   **Range:** 10 nM – 30 µM
+
+### D) “Non-oncology” drugs with repeated AML screening hits
+19) **Niclosamide** (WNT/STAT/mitochondrial uncoupling reported)  
+   **Range:** 10 nM – 10 µM
+
+20) **Mebendazole** (microtubules; antiproliferative in multiple cancers)  
+   **Range:** 10 nM – 30 µM
+
+---
+
+## Practical IC50 assay setup (so the ranges above are usable)
+- **Cells:** MOLM‑13 (and optionally MV4‑11 as another FLT3‑ITD comparator).  
+- **Readout:** CellTiter‑Glo (ATP) at **72 h** (common for AML proliferation).  
+- **Seeding:** often **2,000–10,000 cells/well** in 96‑well (optimize for log growth and no nutrient depletion).  
+- **DMSO:** keep constant (e.g., **0.1%**).  
+- **Curve design:** 10 points, **3‑fold** dilution; include **top/bottom controls** (DMSO vs a known active control such as midostaurin or sorafenib).  
+- **Replicates:** technical triplicates; repeat on ≥2 days.
+
+---
+
+## Notes/caveats that matter for interpretation
+- Some drugs above (e.g., **metformin, valproate**) often require **high concentrations** in vitro that may exceed clinically achievable free plasma levels; they’re still useful as mechanistic probes or for combination screens.
+- **Niclosamide, mebendazole, disulfiram** can have **solubility/stability** issues; confirm solubility, avoid precipitation, and consider shorter pre-dilution times.
+- For **disulfiram**, activity is frequently **copper‑dependent**; consider testing with and without added copper.
+- MOLM‑13 is **FLT3‑ITD** and frequently shows sensitivity to FLT3-pathway suppression; targeted inhibitors often show steep curves and low‑nM IC50s.
+
+---
+
+## If you want, I can tailor this list to your exact constraints
+If you tell me:
+1) **Which assay duration** (48/72/96 h),  
+2) **Max DMSO%**,  
+3) Whether you want **FDA‑approved only** vs include clinical-stage,  
+4) Whether you want to avoid **classic AML drugs** (e.g., cytarabine/daunorubicin) and focus strictly on “non-AML” repurposing,  
+I can refine the 20 to those with the best evidence in **MOLM‑13 specifically**, and propose **exact 10-point concentration series** for each (e.g., 0.01–1000 nM vs 0.1–100 µM) plus suggested positive/negative controls and combination arms.

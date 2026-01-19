@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Midostaurin,Multi-kinase inhibitor (FLT3),Inhibits FLT3 and other kinases to suppress FLT3-driven AML proliferation,0.0,0.0,nM,AML-approved; highlighted as relevant for FLT3-ITD MOLM-13 sensitivity
+Gilteritinib,Kinase inhibitor (FLT3/AXL),Inhibits FLT3 and AXL signaling to reduce AML cell growth,0.0,0.0,nM,AML-approved; noted as showing strong MOLM-13 activity in many datasets
+Quizartinib,Kinase inhibitor (FLT3),"Selective FLT3 inhibition, often potent in FLT3-ITD AML lines",0.0,0.0,nM,Clinical/approved in some regions; often potent in FLT3-ITD lines
+Sorafenib,Multi-kinase inhibitor (RAF/VEGFR/FLT3),"Inhibits RAF and receptor tyrosine kinases including FLT3, impacting proliferation signaling",0.0,0.0,nM,Repurposed clinically in FLT3-ITD AML settings
+Ponatinib,Multi-kinase inhibitor (BCR-ABL/FLT3),Inhibits ABL and multiple kinases including FLT3; can suppress FLT3-mutant AML signaling,0.0,0.0,nM,Reported activity in FLT3-mut AML models
+Dasatinib,Tyrosine kinase inhibitor (SRC/ABL family),Inhibits SRC-family and ABL kinases to suppress AML signaling pathways,0.0,0.0,nM,Sometimes used for synergy in AML contexts
+Ruxolitinib,JAK inhibitor (JAK1/2),Inhibits JAK1/2 to reduce JAK-STAT signaling in cytokine-driven contexts,0.0,0.0,nM,Rationale in cytokine/JAK-STAT driven AML contexts
+Trametinib,MEK inhibitor (MEK1/2),Inhibits MEK1/2 to block MAPK/ERK pathway signaling,0.0,0.0,nM,Relevant in RAS-pathway AML subsets
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases to alter chromatin acetylation and gene expression, promoting growth arrest/apoptosis",0.0,0.0,µM,Alternative name noted: SAHA; broad AML antiproliferative literature
+Panobinostat,HDAC inhibitor,Potent pan-HDAC inhibition leading to epigenetic reprogramming and antiproliferative effects,0.0,0.0,nM,Described as often stronger than vorinostat (SAHA) in AML models
+Valproic acid,HDAC inhibitor (weak),Weak HDAC inhibition associated with differentiation and apoptosis effects,0.0,0.0,mM,Clinically used; noted as weaker HDAC inhibitor with differentiation/apoptosis reports
+Azacitidine,DNA hypomethylating agent (nucleoside analog),Incorporates into nucleic acids and inhibits DNA methylation to alter gene expression and inhibit growth,0.0,0.0,µM,AML/MDS standard; in-vitro growth inhibition mentioned
+Decitabine,DNA hypomethylating agent (nucleoside analog),"Inhibits DNA methyltransferases after incorporation into DNA, causing hypomethylation and cytotoxicity",0.0,0.0,µM,AML standard; cytotoxicity noted as schedule/exposure dependent
+All-trans retinoic acid,Differentiation agent (retinoid),Activates retinoic acid receptors to induce differentiation programs in leukemic cells,0.0,0.0,µM,Alternative name noted: ATRA; explored in non-APL AML combinations
+Arsenic trioxide,Redox/proteostasis modulator,"Induces oxidative stress and disrupts proteostasis, impairing leukemic cell viability",0.0,0.0,µM,Explored beyond APL; noted can impair AML viability in vitro
+Bortezomib,Proteasome inhibitor,"Inhibits the 26S proteasome, causing accumulation of misfolded proteins and apoptosis",0.0,0.0,nM,Mentioned combo rationale with HDAC inhibitors
+Carfilzomib,Proteasome inhibitor,"Irreversibly inhibits the proteasome, disrupting protein degradation and promoting apoptosis",0.0,0.0,nM,Sometimes more potent in vitro than bortezomib (as noted)
+Venetoclax,BCL-2 inhibitor,Selectively inhibits BCL-2 to trigger mitochondrial apoptosis,0.0,0.0,nM,AML-approved; activity varies by cell line; noted MOLM-13 can show sensitivity to BCL-2 axis
+Chloroquine / Hydroxychloroquine,Autophagy/lysosome inhibitor (antimalarial),"Accumulates in lysosomes and raises lysosomal pH, impairing autophagy flux",0.0,0.0,µM,Two alternative drugs listed together; reported AML sensitization; modest as single agents
+Disulfiram,Repurposed aldehyde dehydrogenase (ALDH) inhibitor / pleiotropic (proteasome/NF-κB-related),Reported to inhibit ALDH and affect proteasome/NF-κB-related pathways; anticancer effects often enhanced by copper,0.0,0.0,µM,Alternative condition noted: ± copper; copper dependence often noted in AML studies

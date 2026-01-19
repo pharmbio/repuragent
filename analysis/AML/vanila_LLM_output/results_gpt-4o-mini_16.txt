@@ -1,0 +1,84 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of Acute Myeloid Leukemia (AML), particularly for the MOLM13 cell line, can be a promising strategy in cancer therapy. Below is a list of 20 drugs that have shown potential in various studies or clinical applications that could possibly be repurposed for AML treatment. The drug concentrations suggested are based on available literature; however, exact IC50 values can vary based on specific conditions, so experimental validation is crucial.
+
+### List of Repurposed Drugs for AML Treatment
+
+1. **Azacitidine (Vidaza)**  
+   - **IC50:** 0.1 - 1 µM
+
+2. **Decitabine (Dacogen)**  
+   - **IC50:** 0.1 - 2 µM
+
+3. **Lenalidomide (Revlimid)**  
+   - **IC50:** 0.1 - 1 µM
+
+4. **Thalidomide (Thalomid)**  
+   - **IC50:** 1 - 10 µM
+
+5. **Vorinostat (Zolinza)**  
+   - **IC50:** 0.5 - 1.5 µM
+
+6. **Panobinostat (Farydak)**  
+   - **IC50:** 0.2 - 0.5 µM
+
+7. **Metformin**  
+   - **IC50:** 1 - 10 mM
+
+8. **Chloroquine**  
+   - **IC50:** 10 - 20 µM
+
+9. **Fingolimod (Gilenya)**  
+   - **IC50:** 50 - 100 nM
+
+10. **Resveratrol**  
+   - **IC50:** 5 - 15 µM
+
+11. **Disulfiram (Antabuse)**  
+   - **IC50:** 1 - 10 µM
+
+12. **Bortezomib (Velcade)**  
+   - **IC50:** 5 - 20 nM
+
+13. **Dexamethasone**  
+   - **IC50:** 10 - 100 nM
+
+14. **Clofarabine**  
+   - **IC50:** 0.05 - 0.5 µM
+
+15. **Camptothecin**  
+   - **IC50:** 0.1 - 5 µM
+
+16. **Auranofin**  
+   - **IC50:** 1 - 5 µM
+
+17. **Sunitinib (Sutent)**  
+   - **IC50:** 0.1 - 1 µM
+
+18. **Valproic Acid**  
+   - **IC50:** 1 - 5 mM
+
+19. **Celecoxib**  
+   - **IC50:** 5 - 20 µM
+
+20. **Curcumin**  
+   - **IC50:** 5 - 10 µM
+
+### Note on Experimentation
+When planning to test these drugs:
+- Make sure to use multiple concentrations to generate a solid dose-response curve.
+- It's essential to have proper controls and to consider cell viability assays like MTT, XTT, or others suitable for measuring cell proliferation and cytotoxic effects accurately.
+- The specific IC50 values may need confirmation as they can vary significantly depending on assay conditions, the genetic background of the cell line, and the presence of other treatment regimens.
+
+### Conclusion
+The repurposing of these drugs for the treatment of AML is a worthwhile avenue, but detailed preclinical studies are necessary to establish efficacy and safety before considering any clinical applications. Always consult the latest research literature to confirm and optimize drug concentrations based on current findings.

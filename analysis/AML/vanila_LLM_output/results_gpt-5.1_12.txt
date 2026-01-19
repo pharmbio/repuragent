@@ -1,0 +1,137 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 clinically used (or late‑stage) drugs with evidence or strong rationale for repurposing in AML, especially FLT3‑ITD–positive lines like MOLM‑13. For each, I list a reasonable **IC₅₀ assay concentration range** to test in vitro. These ranges are based on published in vitro IC₅₀ values (where available) or on usual screening practice (e.g., covering 0.01–50 μM on a log scale). Final optimization should be done empirically.
+
+**General assay note**
+
+- Use a broad **10‑point, half‑log dilution** series (e.g., 0.01–30 or 0.03–100 μM), then refine around the active window.
+- For potent kinase/epigenetic inhibitors, start in the **low‑nM to low‑μM** range.
+- For metabolic or CNS drugs with weaker reported antiproliferative effects, allow up to **30–100 μM** (watch DMSO <0.1–0.2%).
+
+---
+
+## 1. Sorafenib  
+- **Primary use:** Multi‑kinase inhibitor (RAF, VEGFR, PDGFR); approved for HCC, RCC, thyroid cancer.  
+- **Rationale in AML:** Known off‑label activity against **FLT3‑ITD AML**; multiple reports of activity in MOLM‑13.  
+- **Suggested test range:** **1 nM – 10 μM** (e.g., 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, 3, 10 μM).  
+- Expect IC₅₀ on MOLM‑13 typically in **low‑nM to sub‑μM** range.
+
+## 2. Sunitinib  
+- **Use:** Multi‑target RTK inhibitor (VEGFR, PDGFR, KIT, FLT3).  
+- **Rationale:** Inhibits **FLT3**; reported antiproliferative effects in FLT3‑ITD AML cell lines.  
+- **Range:** **1 nM – 10 μM.**
+
+## 3. Midostaurin (PKC412)  
+- **Use:** FLT3 inhibitor; approved in combination therapy for FLT3‑mutated AML.  
+- **Rationale:** Directly relevant; strong activity in MOLM‑13.  
+- **Range:** **0.1 nM – 3 μM** (mid‑nM IC₅₀ expected).
+
+## 4. Dasatinib  
+- **Use:** BCR‑ABL/Src family TKI (CML, Ph+ ALL).  
+- **Rationale:** Inhibits multiple kinases; documented cytotoxicity in some AML lines, including FLT3‑mutant contexts and LSC‑like populations.  
+- **Range:** **0.1 nM – 3 μM.**
+
+## 5. Nilotinib  
+- **Use:** BCR‑ABL TKI (CML).  
+- **Rationale:** Shows activity in some AML subsets; may affect KIT/PDGFR‑dependent signaling.  
+- **Range:** **1 nM – 10 μM.**
+
+## 6. Imatinib  
+- **Use:** BCR‑ABL, KIT, PDGFR inhibitor (CML, GIST).  
+- **Rationale:** Limited broadly in AML, but can be active in **KIT‑dependent** AML subsets; useful as a comparator.  
+- **Range:** **0.1 – 30 μM** (activity usually in the higher μM in non‑BCR‑ABL cells).
+
+## 7. Pazopanib  
+- **Use:** Multi‑TKI (VEGFR, PDGFR, c‑KIT).  
+- **Rationale:** Some data in leukemias; antiangiogenic and direct tumor cell effects.  
+- **Range:** **0.03 – 30 μM.**
+
+## 8. Ponatinib  
+- **Use:** Multi‑kinase TKI (BCR‑ABL, FLT3, KIT, FGFR, VEGFR); approved for resistant CML/Ph+ ALL.  
+- **Rationale:** Strong **FLT3 inhibition**; reported potent activity in FLT3‑ITD AML cell lines including MOLM‑13.  
+- **Range:** **0.1 nM – 1 μM** (expect low‑nM IC₅₀).
+
+## 9. Vandetanib  
+- **Use:** RET, VEGFR2, EGFR inhibitor (medullary thyroid carcinoma).  
+- **Rationale:** Multi‑targeted TKI with some hematologic preclinical data.  
+- **Range:** **0.03 – 30 μM.**
+
+## 10. Belinostat  
+- **Use:** HDAC inhibitor (peripheral T‑cell lymphoma).  
+- **Rationale:** Epigenetic modulation; HDAC inhibitors reduce AML proliferation, alter differentiation, including in MOLM‑13.  
+- **Range:** **0.01 – 10 μM** (IC₅₀ often ~0.1–1 μM).
+
+## 11. Vorinostat (SAHA)  
+- **Use:** Pan‑HDAC inhibitor (CTCL).  
+- **Rationale:** Extensively studied in AML cell lines; induces apoptosis and differentiation.  
+- **Range:** **0.1 – 20 μM** (typical IC₅₀ around 1–5 μM in AML lines).
+
+## 12. Panobinostat  
+- **Use:** HDAC inhibitor (multiple myeloma).  
+- **Rationale:** Potent epigenetic agent with activity in AML preclinically.  
+- **Range:** **0.001 – 1 μM** (very potent; IC₅₀ often low‑nM).
+
+## 13. Decitabine  
+- **Use:** DNA hypomethylating agent; standard in MDS/AML.  
+- **Rationale:** Epigenetic reprogramming, antiproliferative at clinically relevant exposures.  
+- **Range:** **0.03 – 10 μM** (consider 24–72 h exposure with fresh medium ± drug).
+
+## 14. Azacitidine  
+- **Use:** Hypomethylating agent (MDS, AML).  
+- **Rationale:** Similar to decitabine; affects DNA and RNA, killing proliferating blasts.  
+- **Range:** **0.1 – 30 μM** (longer exposure often required).
+
+## 15. Venetoclax  
+- **Use:** BCL‑2 inhibitor (CLL, AML in combination regimens).  
+- **Rationale:** Established activity in AML; MOLM‑13 is generally BCL‑2–dependent, though sensitivity can vary.  
+- **Range:** **0.001 – 3 μM** (nM potency; use low DMSO).
+
+## 16. Chloroquine or Hydroxychloroquine  
+- **Use:** Antimalarial/antirheumatic; autophagy inhibitor.  
+- **Rationale:** Autophagy inhibition can sensitize AML cells, including FLT3‑mutant lines, to stress and TKIs.  
+- **Range:** **1 – 50 μM** (higher μM often needed; monitor off‑target toxicity).
+
+## 17. Metformin  
+- **Use:** Type 2 diabetes; AMPK activator, mitochondrial complex I inhibitor.  
+- **Rationale:** Reported antiproliferative and pro‑apoptotic effects in AML via metabolic stress.  
+- **Range:** **0.1 – 30 mM** (in vitro activity is typically in the mM range; consider physiologic relevance).
+
+## 18. Simvastatin (or Atorvastatin)  
+- **Use:** HMG‑CoA reductase inhibitors (hyperlipidemia).  
+- **Rationale:** Mevalonate‑pathway blockade impairs prenylation; reported to induce apoptosis in AML cell lines.  
+- **Range:** **0.1 – 30 μM** (statins often show effects in 1–20 μM).
+
+## 19. Disulfiram (± Copper)  
+- **Use:** Alcohol aversion; ALDH inhibitor, copper ionophore.  
+- **Rationale:** Targets ALDH‑high leukemic cells, proteasome/ROS pathways; preclinical AML data exist. Copper (CuCl₂ ~0.5–1 μM) often enhances effect.  
+- **Range:** **0.01 – 10 μM** disulfiram ± fixed low μM copper.
+
+## 20. Thioridazine  
+- **Use:** Antipsychotic (phenothiazine).  
+- **Rationale:** Reported selective toxicity to leukemia stem‑like cells via dopamine receptor and mitochondrial effects.  
+- **Range:** **0.1 – 20 μM** (above ~10–20 μM risk of nonspecific cytotoxicity).
+
+---
+
+### Practical concentration‑setting strategy (for a 72‑h proliferation/viability assay)
+
+For each drug:
+
+1. **Design a 10‑point dilution series** around the ranges above (half‑log or log₁₀ steps).  
+2. Include:
+   - Vehicle control (DMSO at highest % used).
+   - Positive control (e.g., a known FLT3 inhibitor like sorafenib or midostaurin).  
+3. Use **MOLM‑13** and optionally a second AML line with different genetics (e.g., OCI‑AML3) to gauge selectivity.  
+4. Readout: ATP‑based (CellTiter‑Glo), resazurin, or similar, at 48–72 h; fit a 4‑parameter logistic curve to derive IC₅₀.
+
+If you’d like, I can propose specific 10‑point concentration series (exact values) for a subset of these drugs tailored to your plate layout and detection method.

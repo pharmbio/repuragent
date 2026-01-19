@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multi-kinase inhibitor,Inhibits FLT3 and other kinases (RAF/VEGFR) to block proliferation signaling,0.5,1000.0,nM,Approved for HCC/RCC; reported low-nM activity in MOLM13
+Sunitinib,Multi-kinase inhibitor,Inhibits FLT3 and receptor tyrosine kinases (VEGFR/PDGFR),1.5,3000.0,nM,Approved for RCC/GIST; expected ~10–100 nM potency in AML cells
+Ponatinib,Tyrosine kinase inhibitor,Inhibits FLT3 (including TKD mutants) and BCR-ABL,0.15,300.0,nM,Approved for CML/Ph+ ALL; often single–low nM potency in FLT3-ITD AML
+Cabozantinib,Multi-kinase inhibitor,"Inhibits FLT3, MET, and AXL signaling pathways",1.5,3000.0,nM,Approved for RCC/HCC; expected ~10–100 nM in AML cells
+Regorafenib,Multi-kinase inhibitor,"Inhibits FLT3, RAF, and VEGFR family kinases",5.0,10000.0,nM,Approved for CRC/GIST/HCC; expected ~0.1–1 µM in cells
+Lenvatinib,Multi-kinase inhibitor,Inhibits VEGFR/FGFR and has reported FLT3 activity,5.0,10000.0,nM,Approved for DTC/HCC/EC; expected ~0.05–0.5 µM
+Axitinib,Tyrosine kinase inhibitor,VEGFR inhibitor with reported FLT3 activity,5.0,10000.0,nM,Approved for RCC; expected ~0.3–3 µM in AML cells
+Vandetanib,Multi-kinase inhibitor,Inhibits EGFR/VEGFR/RET with reported FLT3 coverage,15.0,30000.0,nM,Approved for MTC; expected ~0.3–3 µM in AML cells
+Dasatinib,Tyrosine kinase inhibitor,SRC/SYK family kinase inhibitor that disrupts AML signaling,0.5,1000.0,nM,Approved for CML/ALL; expected ~10–100 nM
+Ruxolitinib,JAK inhibitor,Selective JAK1/2 inhibition reduces cytokine-driven survival signaling,15.0,30000.0,nM,Approved for MF/PV; context-dependent potency (~1–10 µM)
+Everolimus,mTOR inhibitor,mTORC1 inhibition reduces protein synthesis and proliferation,1.5,3000.0,nM,Approved for RCC/NET; expected ~10–100 nM anti-proliferative effects
+Bortezomib,Proteasome inhibitor,Reversible 26S proteasome inhibition induces apoptosis,0.05,100.0,nM,Approved for MM/MCL; expected ~5–20 nM in AML cells
+Carfilzomib,Proteasome inhibitor,Irreversible epoxyketone inhibitor of the 20S proteasome,0.15,300.0,nM,Approved for MM; expected ~10–50 nM in AML cells
+Tigecycline,Antibiotic (glycylcycline),Inhibits mitochondrial translation in leukemia cells,30.0,60000.0,nM,Prepare fresh; light-sensitive; expected ~1–10 µM
+Auranofin,Anti-rheumatic (gold compound),Thioredoxin reductase inhibition leading to redox stress,5.0,10000.0,nM,Approved for RA; expected ~0.2–2 µM
+Disulfiram,ALDH inhibitor,ALDH inhibition and copper-dependent redox toxicity,2.5,5000.0,nM,For activity include 1–2 µM CuCl2 constant; approved for AUD; also known as Antabuse
+Mebendazole,Anthelmintic (benzimidazole),Microtubule polymerization inhibitor; disrupts mitosis,5.0,10000.0,nM,Watch solubility; expected ~0.1–1 µM
+Niclosamide,Anthelmintic,Mitochondrial uncoupler; inhibits Wnt/STAT3/oxidative phosphorylation,5.0,10000.0,nM,Low aqueous solubility; use fresh DMSO stocks; ≤0.2% DMSO final; expected ~0.2–2 µM
+Thioridazine,Antipsychotic (phenothiazine),Dopamine D2 receptor antagonist; reported leukemia stem cell targeting,15.0,30000.0,nM,QT liability—handle with care; expected ~1–10 µM
+Artesunate,Antimalarial (artemisinin derivative),Generates ROS in an iron-dependent manner,15.0,30000.0,nM,Expected ~1–10 µM in AML cells

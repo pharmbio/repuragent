@@ -1,0 +1,16 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ruxolitinib,JAK1/2 inhibitor,Targets pathways relevant in AML,0.1,10.0,μM,,ruxolitinib,False,CHEMBL1287854
+Dasatinib,Kinase inhibitor,Affects BCR-ABL and SRC family kinases,0.01,5.0,μM,,dasatinib,False,CHEMBL1421
+Ibrutinib,BTK inhibitor,Potential in AML,0.01,10.0,μM,,ibrutinib,False,CHEMBL1873475
+Axitinib,Tyrosine kinase inhibitor,Targets vascular endothelial growth factor receptors,0.01,10.0,μM,,axitinib,False,CHEMBL1289926
+Lapatinib,EGFR/HER2 inhibitor,Potentially influences AML pathways,0.01,10.0,μM,,lapatinib,False,CHEMBL554
+Carfilzomib,Proteasome inhibitor,Possible activity in AML,0.01,10.0,μM,,carfilzomib,False,CHEMBL451887
+Arsenic Trioxide,Treatment for acute promyelocytic leukemia,Under investigation for AML,0.01,10.0,μM,,arsenic trioxide,False,CHEMBL5483015
+Olaparib,PARP inhibitor,Potential beyond BRCA-mutated cancers,0.01,10.0,μM,,olaparib,False,CHEMBL521686
+Trametinib,MEK inhibitor,Could interfere with AML survival pathways,0.1,10.0,μM,,trametinib,False,CHEMBL2103875
+Everolimus,mTOR inhibitor,Might impair AML cell growth,0.1,10.0,μM,,everolimus,False,CHEMBL1908360
+Palbociclib,CDK4/6 inhibitor,Could arrest cell cycle progression in AML,0.01,10.0,μM,,palbociclib,False,CHEMBL2364621
+Bortezomib,Proteasome inhibitor,May show efficacy against AML cells,0.01,10.0,μM,,bortezomib,False,CHEMBL325041
+Pazopanib,Multi-kinase inhibitor,Potentially relevant in AML treatment,0.01,10.0,μM,,pazopanib,False,CHEMBL477772
+Crizotinib,ALK/ROS1 inhibitor,Might have off-target activity in AML,0.01,10.0,μM,,crizotinib,False,CHEMBL601719
+Repaglinide,Insulin secretagogue,Potential anti-AML activity under investigation,0.1,10.0,μM,,repaglinide,False,CHEMBL1272

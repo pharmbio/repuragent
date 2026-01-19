@@ -1,0 +1,11 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Arsenic Trioxide,Trisenox (Arsenic derivative),Induces apoptosis by promoting degradation of specific proteins in APL cells.,0.1,10.0,μM,Traditionally used in acute promyelocytic leukemia (APL).,arsenic trioxide,False,CHEMBL5483015
+Auranofin,Anti-rheumatic drug,"Inhibits thioredoxin reductase, leading to oxidative stress and apoptosis in cancer cells.",0.5,5.0,μM,Originally used for rheumatoid arthritis.,auranofin,False,CHEMBL1366
+Ruxolitinib,JAK inhibitor,"Inhibits JAK1 and JAK2 kinases, reducing pro-inflammatory cytokine signaling.",1.0,10.0,μM,Used for myelofibrosis.,ruxolitinib,False,CHEMBL1287854
+Thalidomide,Immunomodulatory drug,Reduces TNF-alpha production and modulates immune response.,0.5,10.0,μM,Used in multiple myeloma.,thalidomide,False,CHEMBL426123
+Metformin,Antidiabetic drug,"Activates AMPK pathway, inhibiting mTOR, and reducing cell proliferation.",0.5,5.0,mM,Shows potential anti-tumor activity.,metformin,False,CHEMBL1431
+Itraconazole,Antifungal,"Interferes with cytochrome P450, disrupting fungal cell wall and showed some leukemia activity.",1.0,10.0,μM,Examined against some leukemia cell lines.,itraconazole,False,CHEMBL5483033
+Disulfiram,Alcohol aversion drug,"Inhibits aldehyde dehydrogenase causing accumulation of acetaldehyde, suggested antineoplastic potential.",0.5,5.0,μM,Shows potential antineoplastic effects.,disulfiram,False,CHEMBL964
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome, leading to accumulation of proteins causing cell cycle arrest and apoptosis.",5.0,50.0,nM,Used in multiple myeloma.,bortezomib,False,CHEMBL325041
+Dactinomycin,Antineoplastic antibiotic,"Intercalates into DNA, preventing RNA synthesis.",0.1,1000.0,nM,Shows efficacy in multiple cancer types.,dactinomycin,False,CHEMBL4748391
+Valproic Acid,HDAC inhibitor,"Inhibits histone deacetylase, leading to increased gene expression and apoptosis in cancer cells.",0.5,5.0,mM,Primarily used for epilepsy but shows potential in malignancies.,valproic acid,False,CHEMBL109

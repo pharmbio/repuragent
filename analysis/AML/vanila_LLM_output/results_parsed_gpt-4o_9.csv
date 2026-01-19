@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,Inhibits the BCL-2 protein and promotes apoptosis in cancer cells,0.01,1.0,µM,Known activity in hematological malignancies.
+Auranofin,Anti-rheumatic agent,Employs oxidative stress to exert anti-cancer effects,0.5,10.0,µM,Potential activity against cancer cells.
+Arsenic Trioxide,Chemotherapy agent,Induces apoptosis in leukemia cells,0.5,5.0,µM,"Used in acute promyelocytic leukemia, potential in AML."
+Ibrutinib,BTK inhibitor,"Blocks BTK signaling, inhibiting growth of cancer cells",0.1,10.0,µM,Used in B-cell malignancies with some anti-AML activity.
+Ixazomib,Proteasome inhibitor,"Inhibition of protein degradation, inducing apoptosis",0.1,10.0,µM,"Used in multiple myeloma, potential effectiveness against AML."
+Decitabine,Demethylating agent,"Inhibits DNA methylation, altering gene expression",0.1,10.0,µM,Already used for certain types of AML.
+Dasatinib,BCR-ABL inhibitor,Inhibits multiple kinases including BCR-ABL,0.1,5.0,µM,Potential broader kinase inhibition in AML.
+Tamoxifen,Selective estrogen receptor modulator,"Blocks estrogen receptors, inhibiting cell proliferation",1.0,10.0,µM,Shown to inhibit various cancer cell lines.
+Metformin,Anti-diabetic agent,Lowers blood glucose and has anti-cancer effects,0.1,10.0,mM,Indicated in studies for anti-cancer properties.
+Ruxolitinib,JAK inhibitor,"Inhibits JAK signaling, reducing proliferation",0.1,10.0,µM,"Used in myeloproliferative neoplasms, investigated for AML."
+Simvastatin,Statin,"Inhibits cholesterol production, showing anti-leukemic effects",1.0,10.0,µM,Effects through cholesterol pathway inhibition.
+Chloroquine,Anti-malarial,"Alters lysosomal pH, affecting cancer proliferation",1.0,10.0,µM,Shown to enhance chemotherapy actions.
+Carfilzomib,Proteasome inhibitor,"Disrupts protein degradation, inducing apoptosis",0.1,5.0,µM,Effects on protein degradation pathways in AML.
+Rapamycin,mTOR inhibitor,"Blocks mTOR pathway, suppressing cell proliferation",1.0,10.0,nM,Known as Sirolimus; anti-leukemic potential shown in studies.
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, leading to apoptosis",0.1,10.0,µM,"Used in multiple myeloma, with AML potential."
+Itraconazole,Antifungal,Inhibits Hedgehog signaling pathway,1.0,10.0,µM,Possible Hedgehog signaling pathway inhibition.
+Mebendazole,Anti-helminthic,"Interferes with cell division, exhibiting anti-cancer effects",0.1,10.0,µM,Documented off-target anti-cancer effects.
+Sulfasalazine,Anti-inflammatory,"Inhibits the glutamate antiporter (xCT), affecting tumor growth",1.0,50.0,µM,Used for inflammatory diseases.
+Disulfiram,Aldehyde dehydrogenase inhibitor,"Inhibits ALDH, inducing oxidative stress in cancer cells",0.1,10.0,µM,Used for alcohol dependency; interesting for ALDH inhibition.
+Celecoxib,COX-2 inhibitor,"Inhibits cyclooxygenase-2, reducing proliferation",1.0,10.0,µM,Shown anti-proliferative effects in cancer cells.

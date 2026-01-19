@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,BCL-2 inhibitor,10.0,100.0,nM,Also known as ABT-199
+Ruxolitinib,JAK1/2 inhibitor,JAK1/2 inhibitor,100.0,1000.0,nM,
+Sorafenib,Multi-kinase inhibitor,Multi-kinase inhibitor,100.0,500.0,nM,
+Dasatinib,BCR-ABL/Src family kinase inhibitor,BCR-ABL/Src family kinase inhibitor,1.0,100.0,nM,
+Ponatinib,Multi-kinase inhibitor,"Multi-kinase inhibitor, particularly BCR-ABL",10.0,100.0,nM,
+Midostaurin,FLT3 kinase inhibitor,FLT3 kinase inhibitor,10.0,100.0,nM,
+Ibrutinib,BTK inhibitor,BTK inhibitor,100.0,500.0,nM,
+Cerlutinib,ALK inhibitor,ALK inhibitor,100.0,1000.0,nM,
+Idelalisib,PI3Kδ inhibitor,PI3Kδ inhibitor,100.0,1000.0,nM,
+Nivolumab,PD-1 inhibitor,PD-1 inhibitor,100.0,1000.0,nM,Relevant for immune checkpoint inhibition rather than direct IC50
+Azacitidine,DNA methyltransferase inhibitor,DNA methyltransferase inhibitor,100.0,1000.0,nM,
+Decitabine,DNA methyltransferase inhibitor,DNA methyltransferase inhibitor,50.0,500.0,nM,
+Metformin,AMPK activator/anti-diabetic,AMPK activator/anti-diabetic,1.0,10.0,mM,
+Thalidomide,Immunomodulatory drug,Immunomodulatory drug,1.0,10.0,µM,
+Lenalidomide,Immunomodulatory agent,Immunomodulatory agent,1.0,10.0,µM,
+Auranofin,Thioredoxin reductase inhibitor,Thioredoxin reductase inhibitor,1.0,10.0,µM,
+Hydroxychloroquine,Autophagy inhibitor,Autophagy inhibitor,10.0,100.0,µM,
+ATRA (All-trans retinoic acid),Differentiation inducer,Induces differentiation of leukemic cells,1.0,10.0,µM,All-trans retinoic acid
+Arsenic Trioxide,Apoptosis inducer,Induces apoptosis in malignant cells,0.5,5.0,µM,
+Vorinostat,Histone deacetylase inhibitor,Histone deacetylase inhibitor,1.0,10.0,µM,

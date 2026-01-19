@@ -1,0 +1,13 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,Kinase / signaling inhibitor,SRC/ABL tyrosine kinase inhibitor,0.0,0.0,nM,Text gives only qualitative range: nM to sub-µM; approved for CML/ALL.,dasatinib,False,CHEMBL1421
+Trametinib,Kinase / signaling inhibitor,MEK1/2 inhibitor (MAPK pathway),0.0,0.0,nM,Text gives only qualitative range: low-nM to nM.,trametinib,False,CHEMBL2103875
+Everolimus,Kinase / signaling inhibitor,mTORC1 inhibitor,0.0,0.0,nM,Text gives only qualitative range: nM to sub-µM; used in oncology/transplant.,everolimus,False,CHEMBL1908360
+Idelalisib,Kinase / signaling inhibitor,PI3Kδ inhibitor,0.0,0.0,µM,Text gives only qualitative range: sub-µM to µM; approved for CLL/lymphoma.,idelalisib,False,CHEMBL4095008
+Panobinostat,Epigenetic regulator (HDAC inhibitor),Pan-HDAC inhibitor,0.0,0.0,nM,Text gives only qualitative range: low-nM to nM; approved for multiple myeloma.,panobinostat,False,CHEMBL483254
+Romidepsin,Epigenetic regulator (HDAC inhibitor),Class I HDAC inhibitor,0.0,0.0,nM,Text gives only qualitative range: low-nM to nM; approved for T-cell lymphoma.,romidepsin,False,CHEMBL343448
+Navitoclax,Apoptosis regulator (BH3 mimetic),BCL-XL/BCL-2 inhibitor,0.0,0.0,nM,Alternative name in text: ABT-263; qualitative range: nM to sub-µM; clinical-stage with toxicity limitations.,navitoclax,False,CHEMBL2105690
+Bortezomib,Proteostasis / stress pathway drug (proteasome inhibitor),Proteasome inhibitor inducing ER stress and apoptosis,0.0,0.0,nM,Qualitative range: low-nM to nM; approved for multiple myeloma.,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteostasis / stress pathway drug (proteasome inhibitor),Irreversible proteasome inhibitor,0.0,0.0,nM,Qualitative range: low-nM to nM; approved for multiple myeloma.,carfilzomib,False,CHEMBL451887
+All-trans retinoic acid,Differentiation / lineage program agent (retinoid),RAR agonist promoting myeloid differentiation,0.0,0.0,µM,Abbreviation in text: ATRA; qualitative range: sub-µM to µM; approved for APL; effects beyond APL are context-dependent.,all trans retinoic acid,False,CHEMBL1235644
+Arsenic trioxide,Differentiation / cytotoxic agent,Induces oxidative stress and proteotoxicity; promotes degradation of oncogenic programs in APL contexts,0.0,0.0,µM,Qualitative range: sub-µM to low-µM; approved for APL; broader AML effects reported in subsets.,arsenic trioxide,False,CHEMBL5483015
+Disulfiram,Metabolism / non-oncology repurposing agent,ALDH inhibition; reported copper-dependent cytotoxicity in AML models,0.0,0.0,µM,Qualitative range: sub-µM to µM; activity often reported with copper (Cu); approved for alcohol use disorder.,disulfiram,False,CHEMBL964

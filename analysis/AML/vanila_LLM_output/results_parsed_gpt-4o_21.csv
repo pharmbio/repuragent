@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Arsenic Trioxide,Metabolic interference,Induces apoptosis by disrupting cell redox state,0.1,1.0,µM,Used primarily in APL but shows promise in other AML subsets.
+Auranofin,Gold compound,"Inhibits thioredoxin reductase, disrupting redox homeostasis",1.0,5.0,µM,Has anti-rheumatic properties; shows potential in cancer therapy.
+Chloroquine,Autophagy inhibitor,"Inhibits lysosomal acidification, disrupting autophagy",5.0,15.0,µM,Originally an anti-malarial drug.
+Disulfiram,Aldehyde dehydrogenase inhibitor,"Inhibits MET receptor tyrosine kinase, impacting cell survival pathways",0.5,2.0,µM,Commonly known as a treatment for alcoholism.
+Metformin,Anti-diabetic,"AMPK pathway activation, inhibits mTOR, reducing cancer cell proliferation",1.0,10.0,mM,First-line therapy for type 2 diabetes; potential in oncology.
+Clofazimine,Antimicrobial agent,Disrupts bacterial DNA replication and repair; also impacts cancer cell apoptosis,1.0,5.0,µM,Previously used to treat leprosy.
+Itraconazole,Antifungal,"Inhibits hedgehog pathway, reducing tumor growth",1.0,10.0,µM,May also inhibit angiogenesis.
+Nitroxoline,Quinoxaline antibiotic,Metal chelation disrupts normal cellular functions,1.0,10.0,µM,Used primarily for urinary tract infections.
+Verapamil,Calcium channel blocker,"Inhibits influx of calcium ions, impacting cellular contraction and proliferation",10.0,30.0,µM,Used for heart-related conditions.
+Captopril,ACE inhibitor,"Prevents angiotensin I conversion, reducing cell proliferation and migration",50.0,100.0,µM,Primarily used to treat hypertension.
+Thalidomide,Immunomodulatory drug,Reduces angiogenesis and tumor necrosis factor production,1.0,10.0,µM,"Originally withdrawn for teratogenic effects, now used in MM."
+Valproic acid,HDAC inhibitor,"Modulates epigenetic regulatory mechanisms, affecting gene expression",0.5,2.0,mM,Also used to treat epilepsy and bipolar disorder.
+Amiodarone,Antiarrhythmic agent,Affects ion channels and abnormal electrical activity,1.0,10.0,µM,Primarily used for heart arrhythmias.
+Riluzole,Neuroprotective agent,Inhibits glutamatergic neurotransmission,10.0,30.0,µM,Approved for amyotrophic lateral sclerosis.
+Sorafenib,Kinase inhibitor,Targets multiple kinases involved in tumor growth and angiogenesis,1.0,5.0,µM,Used primarily for renal and liver cancers.
+Minocycline,Tetracycline antibiotic,Inhibits protein synthesis and exhibits anti-apoptotic properties,5.0,20.0,µM,Has neuroprotective effects.
+Ketoconazole,Antifungal,"Inhibits synthesis of ergosterol, disrupting cellular membranes",1.0,10.0,µM,Previously used for fungal infections.
+Lovastatin,Statin,"Inhibits HMG-CoA reductase, impacting cholesterol synthesis and showing anticancer properties",1.0,10.0,µM,Common cholesterol-lowering drug.
+Pioglitazone,Thiazolidinedione,"Targets PPARγ, influencing metabolism and cell proliferation",10.0,50.0,µM,Used for type 2 diabetes management.
+Quinacrine,Antiprotozoal,Interferes with nucleic acid synthesis,0.5,5.0,µM,Historically used for malaria.

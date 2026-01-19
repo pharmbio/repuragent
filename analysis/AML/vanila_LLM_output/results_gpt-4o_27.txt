@@ -1,0 +1,55 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML), such as the MOLM-13 cell line, is a strategy that leverages known safety profiles and mechanisms of action to potentially provide new therapeutic options. Here's a list of known drugs that have shown potential in preclinical studies or are being investigated for AML. Suggested concentrations are based on those typically used in preclinical settings, and actual IC50 values would need to be determined experimentally in the specific MOLM-13 cell line.
+
+1. **Arsenic Trioxide**: Traditionally used in acute promyelocytic leukemia (APL), arsenic trioxide can be tested at concentrations starting from 0.1 μM to 10 μM.
+
+2. **Auranofin**: Originally an anti-rheumatic agent, auranofin has demonstrated cytotoxic effects against AML cells at concentrations around 0.5 μM to 5 μM.
+
+3. **Sorafenib**: A multikinase inhibitor approved for renal cancer, shown to impact AML cells. Concentrations may range from 0.5 μM to 10 μM.
+
+4. **Ruxolitinib**: Used for myelofibrosis, JAK inhibitors like this one may be used at 1 μM to 10 μM in AML studies.
+
+5. **Venetoclax**: A BCL-2 inhibitor, effective in combination treatments for AML, can be tested at concentrations between 10 nM and 1 μM.
+
+6. **Decitabine**: A DNA methylation inhibitor used for myelodysplastic syndromes, typically tested between 0.01 μM and 5 μM.
+
+7. **Vorinostat**: An HDAC inhibitor with activity in hematologic malignancies, with effective concentrations ranging from 0.25 μM to 10 μM.
+
+8. **Thalidomide**: Used in multiple myeloma, preliminary studies suggest thalidomide at concentrations of 0.5 μM to 10 μM in AML.
+
+9. **Metformin**: An antidiabetic drug shown to have potential anti-tumor activity at 0.5 mM to 5 mM.
+
+10. **Itraconazole**: An antifungal agent, it has activity against some leukemia cell lines at concentrations of 1 μM to 10 μM.
+
+11. **Disulfiram**: An alcohol aversion drug showing antineoplastic effects at 0.5 μM to 5 μM.
+
+12. **Bortezomib**: A proteasome inhibitor used in multiple myeloma, effective at 5 nM to 50 nM.
+
+13. **Selinexor**: An oral selective inhibitor of nuclear export, at concentrations from 0.1 μM to 1 μM.
+
+14. **Imatinib**: A tyrosine kinase inhibitor for CML, could be tested in AML at about 0.5 μM to 5 μM.
+
+15. **Lenalidomide**: Used in multiple myeloma with potential AML activity, at concentrations ranging from 0.1 μM to 10 μM.
+
+16. **Hydroxyurea**: An antineoplastic agent known for its role in sickle cell anemia, test from 0.01 mM to 0.5 mM.
+
+17. **Dactinomycin**: An antibiotic with antineoplastic activity, effective in cell lines at 0.1 nM to 1 μM.
+
+18. **Clofarabine**: A purine nucleoside analog with activity against AML, typically tested from 1 nM to 1 μM.
+
+19. **Idarubicin**: An anthracycline antibiotic that intercalates DNA, commonly used at 0.01 μM to 1 μM.
+
+20. **Valproic Acid**: Primarily used for epilepsy, also an HDAC inhibitor, active at 0.5 mM to 5 mM.
+
+For experimental setups, care must be taken to determine cell viability using IC50 values specifically for MOLM-13, and these concentrations are only starting points based on existing literature. Further validation and studies would be necessary to ascertain the therapeutic potential within a clinical setting.

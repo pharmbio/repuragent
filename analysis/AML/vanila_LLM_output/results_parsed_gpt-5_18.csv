@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multikinase inhibitor (RAF/FLT3),"Inhibits RAF kinases and FLT3, suppressing FLT3-ITD–driven signaling and proliferation",1.0,10.0,nM,"Highly protein-bound; strong single-agent activity in FLT3-ITD AML (e.g., MOLM-13/MV4-11)"
+Ponatinib,Tyrosine kinase inhibitor (ABL/FLT3),Potent ABL/FLT3 inhibitor active against FLT3-ITD and resistant FLT3 mutants,1.0,10.0,nM,Active on FLT3-ITD and various resistant FLT3 mutants
+Cabozantinib,Multikinase inhibitor (MET/VEGFR2/FLT3),"Inhibits MET, VEGFR2, and FLT3 signaling pathways",5.0,20.0,nM,Demonstrated activity in FLT3-ITD AML models (MOLM-13/MV4-11)
+Sunitinib,Multikinase inhibitor (VEGFR/PDGFR/FLT3),"Blocks multiple receptor tyrosine kinases including FLT3, VEGFR, and PDGFR",10.0,50.0,nM,Reported activity across AML lines including FLT3-ITD models
+Regorafenib,Multikinase inhibitor (includes FLT3),"Inhibits multiple kinases including FLT3, VEGFRs, and others",0.1,1.0,µM,Active in FLT3-ITD AML models though less potent than dedicated FLT3 TKIs
+Dasatinib,SRC/ABL tyrosine kinase inhibitor (some FLT3 activity),Inhibits SRC/ABL family kinases; exhibits inhibitory activity in FLT3-driven contexts,0.05,0.2,µM,Shows activity in MOLM-13; sometimes enhanced in combinations
+Pazopanib,Multikinase inhibitor,"Inhibits VEGFR, PDGFR and other kinases; indirect/weak activity vs FLT3",0.5,3.0,µM,Generally weaker single-agent potency versus dedicated FLT3 inhibitors
+Auranofin,Thioredoxin reductase inhibitor,Inhibits thioredoxin reductase leading to elevated ROS and oxidative stress–mediated apoptosis,0.5,2.0,µM,Approved for rheumatoid arthritis; strong activity reported in MOLM-13
+Tigecycline,Antibiotic; mitochondrial translation inhibitor,"Blocks mitochondrial protein synthesis, impairing oxidative phosphorylation and leukemia cell survival",2.0,7.0,µM,Selective impact on leukemia cells’ mitochondrial dependency
+Bortezomib,Proteasome inhibitor,Inhibits 26S proteasome leading to accumulation of misfolded proteins and apoptosis,5.0,20.0,nM,Potent activity in FLT3-ITD AML lines (MOLM-13/MV4-11)
+Omacetaxine mepesuccinate,Protein synthesis inhibitor,"Inhibits translation elongation, depleting short-lived oncoproteins",10.0,50.0,nM,Also known as homoharringtonine (HHT)
+Pimozide,Antipsychotic; STAT pathway inhibitor,"Inhibits STAT5 signaling, reducing survival signaling in FLT3-ITD AML",3.0,10.0,µM,Repurposed for STAT5 pathway inhibition in AML models
+Ruxolitinib,JAK1/2 inhibitor,Blocks JAK-STAT signaling downstream of cytokine receptors,1.0,5.0,µM,Often shows stronger effects in combinations in AML contexts
+Trametinib,MEK1/2 inhibitor,Inhibits MEK1/2 to suppress MAPK/ERK signaling,10.0,100.0,nM,Single-agent sensitivity in MOLM-13 is modest; enhanced activity in combinations or RAS/MAPK-activated contexts
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases leading to chromatin relaxation and apoptosis,0.5,2.0,µM,Also known as SAHA; reported activity in MOLM-13
+Panobinostat,HDAC inhibitor,Potent pan-HDAC inhibition causing transcriptional reprogramming and apoptosis,10.0,30.0,nM,Highly potent across AML lines including MOLM-13/MV4-11
+Arsenic trioxide,Oxidative stress–inducing agent; multi-target,Induces oxidative stress and mitochondrial damage; multiple cellular targets,1.0,5.0,µM,Non-APL AML shows activity; often synergistic with FLT3 inhibitors
+Simvastatin,HMG-CoA reductase inhibitor (statin),"Blocks mevalonate pathway and protein prenylation, impairing oncogenic signaling",1.0,10.0,µM,Lovastatin shows similar activity; potency can be reversed by mevalonate rescue
+Niclosamide,Anthelmintic; Wnt/STAT3/OXPHOS modulator,Disrupts Wnt/β-catenin and STAT3 signaling and uncouples mitochondrial oxidative phosphorylation,0.2,1.0,µM,Demonstrated activity in FLT3-ITD AML models
+Thioridazine,Antipsychotic; dopamine receptor antagonist/lysosomotropic agent,"Disrupts lysosomal function and signaling, affecting leukemia stem/progenitor cells",1.0,5.0,µM,Reported activity against leukemia stem/progenitor populations

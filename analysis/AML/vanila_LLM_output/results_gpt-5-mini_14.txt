@@ -1,0 +1,122 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or clinically developed) that have documented or plausible activity against AML — especially FLT3-ITD AML lines such as MOLM‑13 — together with a practical, experimentally testable concentration range and a recommended dilution scheme for an IC50/proliferation assay. For each drug I give a short rationale (mechanism and why it’s relevant to MOLM‑13), a suggested top concentration for the assay, a simple dilution series (so an IC50 is likely to be captured), and a note when special handling is needed.
+
+General assay notes (apply to all compounds)
+- Cell line: MOLM‑13 (suspension). Seed density: typically 0.5–2 × 10^5 cells/mL; adjust to keep exponential growth over the assay period.  
+- Readout: viable cell/proliferation assay (CellTiter‑Glo, resazurin, MTS/WST) or flow cytometric live/dead.  
+- Exposure time: 48–72 h is standard for proliferation/IC50. For apoptosis‑inducing drugs (venetoclax) 24–48 h can be informative; for epigenetic drugs (azacitidine, decitabine) longer exposures may be required. Keep DMSO ≤0.1% final.  
+- Dilution scheme: I recommend a 10‑point, 1:3 serial dilution from the indicated top concentration (or an 8–10 point series with 1:2 if you expect a narrow window). This covers ~4–6 log units and will usually capture IC50s from low nM to low µM. Include positive controls (e.g., midostaurin, cytarabine) and negative (vehicle) controls. Validate compound solubility and stability in assay medium.
+
+Top 20 candidate drugs (mechanism → rationale → suggested assay concentrations)
+1) Gilteritinib (FLT3 inhibitor; approved for FLT3‑mutant AML)  
+- Rationale: potent against FLT3‑ITD cell lines such as MOLM‑13.  
+- Top concentration: 1 μM. Recommended series: 1 μM → 1/3 dilutions (10 points: 1 μM down to ~0.0005 μM).  
+- Expect IC50 in low nM for FLT3‑ITD lines.
+
+2) Quizartinib (AC220; FLT3 inhibitor)  
+- Rationale: potent type II FLT3 inhibitor active in FLT3‑ITD AML. MOLM‑13 sensitive.  
+- Top concentration: 0.1 μM (100 nM). Series: 100 nM → 1/3 dilutions (10 points down to ~0.05 nM).  
+- Expected IC50: low‑to‑sub‑100 nM.
+
+3) Crenolanib (FLT3 inhibitor)  
+- Rationale: FLT3 inhibitor with activity against FLT3‑ITD/D835; active in MOLM lines.  
+- Top concentration: 1 μM. Series: 1 μM → 1/3 dilutions (10 pts).
+
+4) Midostaurin (PKC/FLT3 multi‑kinase inhibitor; approved)  
+- Rationale: clinically used in FLT3‑mutated AML; activity in MOLM‑13.  
+- Top concentration: 1 μM. Series: 1 μM → 1/3 dilutions (10 pts).
+
+5) Sorafenib (multikinase inhibitor)  
+- Rationale: has off‑target FLT3 activity and has shown activity in FLT3‑ITD AML.  
+- Top concentration: 5 μM. Series: 5 μM → 1/3 dilutions (10 pts).  
+- Use higher top conc because in some AML cells potency is lower.
+
+6) Ponatinib (multi‑TKI, hits FLT3)  
+- Rationale: potent TKI with activity against FLT3 variants.  
+- Top concentration: 1 μM. Series: 1 μM → 1/3 dilutions (10 pts).
+
+7) Venetoclax (BCL‑2 inhibitor; approved for AML combinations)  
+- Rationale: BCL‑2 inhibition induces apoptosis in many AML lines including MOLM‑13; often synergizes with other agents.  
+- Top concentration: 1 μM. Series: 1 μM → 1/3 dilutions (10 pts).  
+- Expected IC50 often in the 10s of nM in sensitive lines.
+
+8) Bortezomib (proteasome inhibitor)  
+- Rationale: proteasome inhibition can kill AML cells; some AML lines including MOLM‑13 show sensitivity.  
+- Top concentration: 100 nM. Series: 100 nM → 1/3 dilutions (10 pts).
+
+9) Carfilzomib (proteasome inhibitor)  
+- Rationale: irreversible proteasome inhibitor with activity in leukemia models.  
+- Top concentration: 100 nM. Series: 100 nM → 1/3 dilutions (10 pts).
+
+10) Dinaciclib (CDK1/2/5/9 inhibitor)  
+- Rationale: CDK9 inhibition downregulates short‑lived survival proteins (MCL‑1); AML cells frequently sensitive.  
+- Top concentration: 100 nM. Series: 100 nM → 1/3 dilutions (10 pts).  
+- Expected IC50 often in low‑to‑tens of nM.
+
+11) Alvocidib / Flavopiridol (CDK inhibitor)  
+- Rationale: clinical history in AML; targets transcriptional CDKs and can lower MCL‑1.  
+- Top concentration: 1 μM. Series: 1 μM → 1/3 dilutions (10 pts).
+
+12) Panobinostat (HDAC inhibitor)  
+- Rationale: HDAC inhibitors show anti‑proliferative effects in AML cell lines.  
+- Top concentration: 1 μM. Series: 1 μM → 1/3 dilutions (10 pts).
+
+13) Vorinostat / SAHA (HDAC inhibitor)  
+- Rationale: clinically used HDAC inhibitor, showing activity in some AML contexts.  
+- Top concentration: 10 μM. Series: 10 μM → 1/3 dilutions (10 pts).
+
+14) OTX015 / MK‑8628 (BET bromodomain inhibitor)  
+- Rationale: BET inhibition can downregulate MYC and other drivers in AML; active in preclinical AML models.  
+- Top concentration: 1 μM. Series: 1 μM → 1/3 dilutions (10 pts).
+
+15) 17‑AAG / Tanespimycin (HSP90 inhibitor)  
+- Rationale: destabilizes multiple oncogenic client proteins including FLT3; preclinical AML activity reported.  
+- Top concentration: 1 μM. Series: 1 μM → 1/3 dilutions (10 pts).
+
+16) Auranofin (gold compound; thioredoxin reductase inhibitor, repurposing candidate)  
+- Rationale: pro‑oxidant stress agent that has shown activity across AML lines including reports in MOLM‑13.  
+- Top concentration: 5 μM. Series: 5 μM → 1/3 dilutions (10 pts).
+
+17) Niclosamide (anthelmintic repurposing candidate)  
+- Rationale: mitochondrial uncoupler / multiple pathway modulator with reported anti‑AML activity in vitro.  
+- Top concentration: 5 μM. Series: 5 μM → 1/3 dilutions (10 pts).
+
+18) Mebendazole (anthelmintic repurposing candidate)  
+- Rationale: microtubule disruptor that has shown anti‑leukemia activity in preclinical models.  
+- Top concentration: 5 μM. Series: 5 μM → 1/3 dilutions (10 pts).
+
+19) Disulfiram (with copper; repurposing candidate)  
+- Rationale: forms complexes (Cu2+ required) that inhibit proteasome/aldehyde dehydrogenases causing AML cell death in vitro. Requires co‑treatment with copper (e.g., 1–10 μM CuCl2).  
+- Top concentration: 5 μM disulfiram (with 1–10 μM Cu2+). Series: 5 μM → 1/3 dilutions (10 pts).  
+- Note: test ±Cu to confirm copper dependence.
+
+20) Hydroxychloroquine (autophagy inhibitor)  
+- Rationale: blocks autophagy and can sensitize AML cells to other agents; single‑agent effects modest but testable.  
+- Top concentration: 20 μM. Series: 20 μM → 1/3 dilutions (10 pts).
+
+Practical implementation tips
+- Start with the recommended top concentration and a 10‑point 1:3 series. If a compound shows no activity at the top concentration, repeat with a higher top (while checking solubility/toxicity). If activity is confined to the highest two wells, repeat with a higher top concentration or smaller dilution factor. If activity is complete below the lowest conc, repeat with lower top conc / finer dilution.  
+- For agents requiring co‑factors (e.g., disulfiram + Cu), include the cofactor in all assay wells.  
+- For hydrophobic compounds, ensure proper DMSO stock preparation and keep final DMSO ≤0.1–0.2% to avoid vehicle toxicity.  
+- For slow‑acting epigenetic drugs (azacitidine/decitabine) or agents affecting differentiation, consider longer exposures or sequential dosing.  
+- Include at least 3 biological replicates and technical triplicates per concentration to estimate IC50 reliably; fit data to a 4‑parameter logistic curve.
+
+Caveats and references
+- Cell‑line sensitivity can vary by clone, culture conditions, and assay readout. MOLM‑13 is FLT3‑ITD positive and is typically sensitive to FLT3 inhibitors and BCL‑2/CDK9 pathway perturbation, but verify activity empirically.  
+- This list mixes approved therapies and investigational compounds; some (OTX015, dinaciclib, alvocidib) are not approved for general use but have clinical data. The anthelmintics and auranofin are repurposing candidates with preclinical support.  
+- Before running experiments, check primary literature for reported IC50s in MOLM‑13 (to set expectations) and confirm compound sourcing/purity.
+
+If you want, I can:
+- Provide a single‑plate layout for 10‑point 1:3 serial dilutions for up to 8 compounds per 96‑well plate (optimized for MOLM‑13), or  
+- Pull literature IC50 values reported specifically for MOLM‑13 for a selected subset (e.g., gilteritinib, quizartinib, venetoclax, dinaciclib) to refine starting concentrations. Which would you prefer?

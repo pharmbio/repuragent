@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Azacitidine,Cytidine analog,"Inhibits DNA methyltransferase, leading to hypomethylation and activation of tumor suppressor genes",0.1,1.0,µM,Also known as Vidaza.
+Decitabine,Cytidine analog,"Inhibits DNA methyltransferase, resulting in hypomethylation and reactivation of silenced genes",0.1,1.0,µM,Also known as Dacogen.
+Dexamethasone,Glucocorticoid,Induces apoptosis in cancer cells through glucocorticoid receptor activation,100.0,1000.0,nM,
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases, leading to altered gene expression and induction of apoptosis in cancer cells",0.5,5.0,µM,Also known as Zolinza.
+Panobinostat,HDAC inhibitor,"Blocks histone deacetylation, resulting in increased histone acetylation and apoptosis in neoplastic cells",5.0,50.0,nM,Also known as Farydak.
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome activity, leading to the accumulation of pro-apoptotic factors",10.0,100.0,nM,Also known as Velcade.
+Lenalidomide,Immunomodulatory drug,"Modulates T-cell response, enhancing immune-mediated actions against tumor cells",0.1,1.0,µM,Also known as Revlimid.
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and has immunomodulatory effects,0.1,60.0,µM,
+Ruxolitinib,JAK inhibitor,"Inhibits Janus kinase (JAK) pathways, leading to reduced tumor cell proliferation",1.0,10.0,µM,Also known as Jakafi.
+Imatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL fusion protein, blocking cell proliferation",0.1,5.0,µM,Also known as Gleevec.
+Dasatinib,Tyrosine kinase inhibitor,Inhibits multiple tyrosine kinases involved in signaling pathways for cell growth and survival,10.0,100.0,nM,Also known as Sprycel.
+Atrial Fibrillation (Sodium Channel Blockers like Lidocaine),Antiarrhythmic agent,"Blocks sodium channels, affecting cardiac action potentials and contractility",10.0,100.0,µM,General term for sodium channel blockers; specific testing required.
+Metformin,Biguanide,Reduces hepatic glucose production and has potential antitumor effects through AMPK activation,1.0,10.0,mM,
+SB202190,p38 MAPK inhibitor,"Inhibits p38 MAPK signaling pathway, leading to reduced cell proliferation and survival",1.0,10.0,µM,
+Perifosine,AKT inhibitor,"Inhibits the AKT signaling pathway, promoting apoptosis in cancer cells",1.0,10.0,µM,
+Quercetin,Flavonoid,Exerts antioxidant effects and modulates signaling pathways related to cell survival and apoptosis,10.0,50.0,µM,
+Curcumin,Curcuminoid,Inhibits multiple signaling pathways involved in cancer cell proliferation and survival,5.0,20.0,µM,
+Resveratrol,Polyphenol,Activates sirtuins and has anti-inflammatory and antitumoral effects,5.0,50.0,µM,
+Cladribine,Purine analog,"Inhibits DNA synthesis and repair, leading to cell death",0.5,5.0,µM,Also known as Leustatin.
+Cyclophosphamide,Alkylating agent,"Cross-links DNA, preventing cell division and leading to apoptosis",1.0,10.0,µM,

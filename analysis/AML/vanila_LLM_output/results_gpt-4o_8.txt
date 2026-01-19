@@ -1,0 +1,55 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs can be a promising strategy for finding new treatments for acute myeloid leukemia (AML), including the MOLM-13 cell line. Below is a list of 20 drugs that could potentially be repurposed for AML, along with suggested experimentally testable concentrations for IC50 assays:
+
+1. **Venetoclax** - A BCL-2 inhibitor, used in CLL. Test concentrations: 0.01 - 10 µM.
+
+2. **Sorafenib** - A multi-kinase inhibitor, used in liver and kidney cancer. Test concentrations: 0.1 - 10 µM.
+
+3. **Dasatinib** - A BCR-ABL tyrosine kinase inhibitor, used in CML. Test concentrations: 0.1 - 5 µM.
+
+4. **Ruxolitinib** - A JAK1/2 inhibitor, used in myelofibrosis. Test concentrations: 0.1 - 10 µM.
+
+5. **Idelalisib** - A PI3Kδ inhibitor, used in CLL and follicular lymphoma. Test concentrations: 0.01 - 10 µM.
+
+6. **Imatinib** - A BCR-ABL kinase inhibitor, used in CML. Test concentrations: 0.1 - 10 µM.
+
+7. **Ibrutinib** - A Bruton's Tyrosine Kinase (BTK) inhibitor, used in CLL. Test concentrations: 0.01 - 10 µM.
+
+8. **Olaparib** - A PARP inhibitor, used in ovarian cancer. Test concentrations: 0.1 - 10 µM.
+
+9. **Vorinostat** - A histone deacetylase inhibitor, used in cutaneous T-cell lymphoma. Test concentrations: 0.1 - 5 µM.
+
+10. **Clofarabine** - A nucleoside analog, used in pediatric ALL. Test concentrations: 0.01 - 10 µM.
+
+11. **Lenalidomide** - An immunomodulatory drug, used in multiple myeloma. Test concentrations: 0.1 - 10 µM.
+
+12. **Bortezomib** - A proteasome inhibitor, used in multiple myeloma. Test concentrations: 0.01 - 10 µM.
+
+13. **Azacitidine** - A DNA methyltransferase inhibitor, used in myelodysplastic syndromes. Test concentrations: 0.1 - 10 µM.
+
+14. **Palbociclib** - A CDK4/6 inhibitor, used in breast cancer. Test concentrations: 0.01 - 10 µM.
+
+15. **Celecoxib** - A COX-2 inhibitor, used in arthritis and as an anti-inflammatory. Test concentrations: 0.1 - 10 µM.
+
+16. **Disulfiram** - Used for alcohol dependence, has potential anti-cancer properties. Test concentrations: 0.1 - 10 µM.
+
+17. **Metformin** - An anti-diabetic drug, investigated for anti-cancer properties. Test concentrations: 0.1 - 10 mM.
+
+18. **Arsenic Trioxide** - Used in APL, investigated for broader anti-cancer properties. Test concentrations: 0.1 - 10 µM.
+
+19. **Doxycycline** - A tetracycline antibiotic, has shown anti-cancer properties at high doses. Test concentrations: 1 - 100 µM.
+
+20. **Statins (e.g., Simvastatin)** - Cholesterol-lowering drugs, investigated for anti-cancer properties. Test concentrations: 0.1 - 10 µM.
+
+These concentrations are general guidelines; actual effective concentrations can vary based on experimental conditions. Each drug may require a range of concentrations for accurate IC50 determination in MOLM-13 cells, starting from low to potential cytotoxic levels. It’s essential to validate the assays under controlled, reproducible conditions and corroborate with clinical relevance whenever possible.

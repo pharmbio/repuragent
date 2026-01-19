@@ -1,0 +1,212 @@
+## Executive Summary
+- **Objective**: Identify **top 20 existing drugs** with plausible **mechanistic relevance to acute myeloid leukemia (AML)** (with emphasis on **MOLM13 proliferation inhibition**) using a **knowledge-graph (KG) repurposing approach**, and provide **experimentally testable IC50 assay concentration series**.
+- **Approach**: Built an AML KG (EFO_0000222) integrating **disease→gene/protein→pathway/MoA→drug** relationships; expanded to drugs connected to AML-associated **proteins, pathways, and mechanisms of action**; merged and **filtered out KG-known AML drugs** to focus on repurposing novelty; ran a battery of **ADMET predictions**; computed **mechanistic-first ranking** (ADMET secondary); generated visualizations; produced **MOLM13-ready 10-point dilution series** for the top 20 novel candidates.
+- **Key Results**:
+  1. Constructed AML KG with **5,314 nodes / 11,712 edges** and extracted **40 proteins**, **20 pathways**, **67 MoAs**, **80 KG-known AML drugs**.
+  2. Assembled a **master candidate list of 563 unique drugs**, then created a **novel set of 483** by filtering out the 80 KG-known AML drugs.
+  3. Generated **master_ranked** (all compounds) and **master_ranked_novel** (novel-only), with **mechanistic score as the primary ranking factor**.
+  4. Produced **top 20 novel repurposing candidates** and **MOLM13 IC50 assay concentration series** (10-point, 3-fold).
+- **Recommendations**:
+  - Start with the **Top 20 novel list** from `top20_candidates.csv` and run **CellTiter-Glo (or equivalent) viability IC50 assays in MOLM13** using the provided dilution series.
+  - For more potency-optimized dosing, add a follow-up step to retrieve **compound-specific IC50/Ki** from **ChEMBL** and tune top concentrations (e.g., 30–100× target IC50, capped).
+  - Use ADMET predictions only as **secondary deprioritization** (e.g., strong hERG/AMES flags) rather than primary selection, consistent with the workflow design.
+
+---
+
+## Workflow Overview
+- **Task Breakdown**
+  1. **KG creation & querying** (proteins, pathways, MoAs, drugs; then drugs linked to all entities)
+  2. **Data merging + filtering** (remove KG-known AML drugs to accelerate novel discovery)
+  3. **ADMET prediction** (secondary ranking factor)
+  4. **Integrated scoring + ranking + visualization** (mechanistic score primary)
+  5. **IC50 assay concentration generation** (placed after ranking, as requested)
+  6. **Reporting**
+
+- **Agent Coordination**
+  - **Research Agent**: KG creation and entity/drug extraction; generated entity-to-drug mapping files.
+  - **Data Agent**: Merged datasets; filtered known AML drugs; engineered mechanistic features; consolidated ADMET outputs; computed rankings; generated figures; produced assay concentrations.
+  - **Prediction Agent**: Executed ADMET models (CYPs, hERG, AMES, PGP, PAMPA, BBB, solubility, lipophilicity).
+
+- **Process Flow**
+  - AML → KG → (proteins/pathways/MoAs/drugs) → expand drugs for entities → merge & de-duplicate → filter known AML drugs → ADMET predictions → mechanistic-first rank → visualize → output top 20 + IC50 assay series.
+
+---
+
+## Detailed Findings: raw results from sub-agents
+
+### Research Context
+- **Literature/Database Insights (KG-based)**
+  - Disease node: **acute myeloid leukemia** (**EFO_0000222**)
+  - KG constructed with a target association threshold (**protein_threshold = 0.6**) and clinical trial phase cutoff (**≥ 3**) for the initial KG drug layer.
+
+- **Knowledge Graph Analysis**
+  - KG stats: **5,314 nodes**, **11,712 edges**
+  - Key extracted entity sets:
+    - **Proteins**: 40  
+      `associated_genes.csv`
+    - **Pathways**: 20  
+      `pathways.csv`
+    - **Mechanisms of Action**: 67  
+      `mechanism_of_actions.csv`
+    - **Known AML drugs in KG**: 80  
+      `known_drugs.csv`
+  - KG-derived drug expansions:
+    - **Drug–protein pairs**: 309 (178 unique drugs)  
+      `protein_drug_candidates.csv`
+    - **Drug–pathway pairs**: 1,288 (93 unique drugs)  
+      `pathway_drug_candidates.csv`
+    - **Drug–MoA pairs**: 463  
+      `mechanism_drug_candidate.csv`
+
+- **Domain Knowledge Used**
+  - MOLM13 is a commonly used AML line (FLT3-ITD positive) and responds to signaling-pathway inhibitors (e.g., kinase inhibitors). The KG approach prioritizes drugs with multiple AML-relevant mechanistic linkages (proteins/pathways/MoAs).
+
+### Prediction Results
+- **Models Executed (Prediction Agent)**
+  - Lipophilicity: `Lipophilicity_regressor`
+  - Solubility: `Solubility_regressor`
+  - CYP inhibition: `CYP3A4`, `CYP2D6`, `CYP2C9`, `CYP2C19`, `CYP1A2`
+  - Cardiotoxicity proxy: `hERG_classifier`
+  - Mutagenicity proxy: `AMES_classifier`
+  - Transport/permeability: `PGP_classifier`, `PAMPA_classifier`
+  - Exposure proxy: `BBB_classifier`
+
+- **ADMET Output Files**
+  - Stored in the same results folder (paths listed below). Consolidated into:
+  - `ADMET_summary.csv` (563 rows)
+
+- **Data Quality**
+  - **SMILES gaps**: 50 missing SMILES in master; 29 missing in novel set. Predictions run where SMILES were present; consolidation filled missing scores with neutral defaults when needed.
+
+### Analysis Outcomes
+- **Statistical Insights**
+  - Master candidate set: **563 drugs**
+  - Filtered novel set: **483 drugs** (after removing 80 KG-known AML drugs)
+  - Many compounds lacked phase metadata (phase missing for **385**), so phase was not used in ranking.
+
+- **Ranking Results**
+  - Outputs:
+    - `master_ranked.csv` (all 563, mechanistic-first)
+    - `master_ranked_novel.csv` (483, mechanistic-first)
+    - `top20_candidates.csv` (top 20 novel)
+
+- **Visualizations Generated**
+  - Mechanistic top 30 barplot
+  - Mechanistic vs ADMET scatter (top20 highlighted)
+  - ADMET flag heatmap (top20)
+  - Score distribution plot
+  - Simplified KG subnetwork for top20 + edge list
+
+---
+
+## Integration and Synthesis: combining and interpreting findings
+- **Cross-Agent Insights**
+  - Research Agent provided entity/drug networks; Data Agent quantified evidence strength via **link counts** and **entity breadth**; Prediction Agent contributed **secondary risk/permeability/solubility indicators**.
+
+- **Validation**
+  - Internal cross-check: top candidates are those with high **KG linkage density** (protein/pathway/MoA coverage). ADMET used as secondary filter, not driver.
+
+- **Limitations**
+  1. **No numeric bioactivity (IC50/Ki) values** were present in the exported KG mapping tables, so assay concentrations could not be potency-calibrated from ChEMBL within this run.
+  2. The “known AML drug” filter is based on membership in `known_drugs.csv` (KG-derived). Some AML-used but not explicitly captured drugs may remain.
+  3. “MOLM13-specific” efficacy is not directly modeled; it is inferred mechanistically. Wet-lab validation is required.
+
+---
+
+## Conclusions and Impact: final scientific meaning
+- **Primary Conclusions**
+  - A KG-driven expansion from AML-associated **proteins/pathways/MoAs** yields a tractable repurposing candidate set and highlights drugs with **high mechanistic connectivity** to AML biology.
+  - The workflow produces a **reproducible master ranking** and a **top 20 novel shortlist**, with practical IC50 assay dosing suggestions for MOLM13.
+
+- **Scientific Significance**
+  - This demonstrates an interpretable repurposing approach where candidates are justified by **explicit mechanistic links** (targets/pathways/MoAs), supporting hypothesis-driven AML screening.
+
+- **Practical Applications**
+  - Immediate use: order top candidates, run **MOLM13 viability IC50** with suggested 10-point dilution series, then expand to AML panel lines and combination testing (e.g., with venetoclax/azacitidine) if desired.
+
+---
+
+## Next Steps and Recommendations
+- **Immediate Actions**
+  - Execute MOLM13 IC50 assays using `assay_concentrations_top20_MOLM13_final.csv`.
+  - Use a viability readout aligned with your platform (e.g., CellTiter-Glo at 72h) and include DMSO controls and a known cytotoxic positive control.
+
+- **Further Investigation**
+  - Add an automated step to retrieve **ChEMBL bioactivities** for each top compound against its implicated AML targets (and any AML cell-line data), then refine dosing.
+  - Validate mechanism: phospho-FLT3/STAT5/ERK, apoptosis markers, cell cycle profiling, etc., guided by the KG edges.
+
+- **Methodology Improvements**
+  - Incorporate **target relevance weighting** (e.g., FLT3/IDH1/2/MEN1/DOT1L/BCL2 axes) rather than purely link-count-based mechanistic scoring.
+  - Strengthen “filter known AML drugs” by integrating **formal indication labels** from OpenTargets/ChEMBL indications.
+
+---
+
+# Key Output Inventory (files)
+All files are in:
+`/home/repuragent/app/persistence/results/7b87215a-cefd-46b5-be7b-ab162989611b/de5d38cc-3bb0-486c-87a2-6b81683b18f8/`
+
+## Knowledge Graph + entity tables
+- `kg_EFO_0000222.pkl`
+- `associated_genes.csv`
+- `pathways.csv`
+- `mechanism_of_actions.csv`
+- `known_drugs.csv`
+- `protein_drug_candidates.csv`
+- `pathway_drug_candidates.csv`
+- `mechanism_drug_candidate.csv`
+
+## Merged datasets / features
+- `master_candidates.csv`
+- `filtered_novel_candidates.csv`
+- `mechanistic_features.csv`
+
+## ADMET outputs
+- `Lipophilicity_results.csv`, `Solubility_results.csv`
+- `CYP3A4_results.csv`, `CYP2D6_results.csv`, `CYP2C9_results.csv`, `CYP2C19_results.csv`, `CYP1A2_results.csv`
+- `hERG_results.csv`, `AMES_results.csv`, `PGP_results.csv`, `PAMPA_results.csv`, `BBB_results.csv`
+- `ADMET_summary.csv`
+
+## Ranking outputs
+- `master_ranked.csv`
+- `master_ranked_novel.csv`
+- `top20_candidates.csv`
+
+## Visualizations
+- `fig_top30_mechanistic_bar.png`
+- `fig_mech_vs_admet_scatter.png`
+- `fig_top20_admet_heatmap.png`
+- `fig_score_distributions.png`
+- `fig_top20_network.png`
+- `top20_network_edges.csv`
+
+## Assay concentrations
+- `assay_concentrations_top20_MOLM13_final.csv`
+
+---
+
+# Top 20 novel repurposing candidates + IC50 assay dosing (MOLM13)
+The workflow’s **top 20** are provided in `top20_candidates.csv`. Below is a compact, experiment-focused view (IDs and dosing sourced from the generated outputs).
+
+| Rank (novel) | Drug (from ranking) | ChEMBL ID | Mechanistic score (primary) | ADMET score (secondary) | Recommended top conc (µM) | 10-pt 3-fold series (µM) |
+|---:|---|---|---:|---:|---:|---|
+| 1 | FAMITINIB | CHEMBL1278146 | See `top20_candidates.csv` | See `top20_candidates.csv` | 30 | 30, 10, 3.333, 1.111, 0.3704, 0.1235, 0.04115, 0.01372, 0.004572, 0.001524 |
+| 2 | SUNITINIB MALATE | CHEMBL1567 | See file | See file | 50 | 50, 16.67, 5.556, 1.852, 0.6173, 0.2058, 0.06859, 0.02286, 0.007621, 0.00254 |
+| 3 | DOVITINIB | CHEMBL522892 | See file | See file | 50 | 50, 16.67, 5.556, 1.852, 0.6173, 0.2058, 0.06859, 0.02286, 0.007621, 0.00254 |
+| 4 | SUNITINIB | CHEMBL535 | See file | See file | 50 | 50, 16.67, 5.556, 1.852, 0.6173, 0.2058, 0.06859, 0.02286, 0.007621, 0.00254 |
+| 5 | SU-014813 | CHEMBL1721885 | See file | See file | See final CSV | See final CSV |
+| 6 | … | … | … | … | … | … |
+| 20 | … | … | … | … | … | … |
+
+Full per-drug concentration guidance (all top 20), with rationales/constraints, is in:
+- `assay_concentrations_top20_MOLM13_final.csv`
+
+**Interpretation note:** The dosing tops are **solubility-guided defaults** (plus safety caps if predicted hERG/AMES positive), not potency-calibrated. This is suitable for initial screening but should be refined after first-pass IC50 curves.
+
+---
+
+## SOPs and protocols referenced
+- **REMEDI4All SOP: In silico repurposing tools and resources** (Reactome, OpenTargets, DisGeNET, ChEMBL workflow)
+- **Drug combination screening SOP** (for downstream combination matrix screening; not executed here)
+- **HCS phospholipidosis SOP** (safety profiling context; not executed here)
+
+If you want, I can also output a “clean” **Top 20 table** directly populated from `top20_candidates.csv` + `assay_concentrations_top20_MOLM13_final.csv` (mechanistic_score, ADMET flags, and concentration series) in the exact Markdown table format for direct inclusion in a lab report.

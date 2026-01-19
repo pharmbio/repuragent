@@ -1,0 +1,181 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 clinically used / late‑stage drugs with evidence (or strong rationale) for repurposing in AML, particularly FLT3‑ITD–positive lines such as MOLM‑13. For each, I include:
+
+- **Suggested IC50 assay range** (10‑point serial dilutions; DMSO ≤0.1–0.2%)  
+- **Key rationale** (brief, with AML/MOLM13 relevance when known)  
+- **Typical starting stock**: 10 mM in DMSO unless otherwise noted
+
+For most small molecules, a standard first pass is **0.5 nM – 50 μM**. Where literature suggests the effective range, I narrow it.
+
+---
+
+## 1. Sorafenib
+- **Class/Use**: Multikinase inhibitor (RAF, VEGFR, PDGFR); used in HCC, RCC.  
+- **AML rationale**: Potent against FLT3‑ITD; strong growth inhibition in MOLM‑13.  
+- **Assay range**:  
+  - 10‑point, 1:3 serial dilution from **10 μM down to 5 nM**  
+- Expect IC50 for MOLM‑13 roughly in the low‑nanomolar to low‑hundreds‑nM range.
+
+---
+
+## 2. Midostaurin (PKC412)
+- **Class/Use**: FLT3, KIT, VEGFR2 inhibitor; AML drug but repurposable from lymphoma/solid tumors.  
+- **AML rationale**: Approved for FLT3‑mut AML; MOLM‑13 is highly sensitive.  
+- **Assay range**: **10 μM to 5 nM** (1:3 dilutions).
+
+---
+
+## 3. Sunitinib
+- **Class/Use**: Multikinase inhibitor; used in RCC, GIST.  
+- **AML rationale**: Inhibits FLT3 & c‑KIT, has anti‑proliferative activity in AML lines including MOLM‑13.  
+- **Assay range**: **10 μM to 5 nM**.
+
+---
+
+## 4. Dasatinib
+- **Class/Use**: SRC/ABL family TKI; used in CML, Ph+ ALL.  
+- **AML rationale**: Inhibits SRC, KIT, and other kinases important in AML survival; reported effects in FLT3‑ITD AML cells.  
+- **Assay range**: **5 μM to 2.5 nM** (start slightly lower to avoid off‑target toxicity).
+
+---
+
+## 5. Nilotinib
+- **Class/Use**: BCR‑ABL TKI; used in CML.  
+- **AML rationale**: Inhibits ABL/KIT, affects AML cells especially with KIT involvement; some reports of FLT3 activity.  
+- **Assay range**: **10 μM to 5 nM**.
+
+---
+
+## 6. Imatinib
+- **Class/Use**: BCR‑ABL, KIT, PDGFR inhibitor; used in CML, GIST.  
+- **AML rationale**: Effective mainly in KIT‑driven AML; useful broadly as a comparator or combination partner.  
+- **Assay range**: **20 μM to 10 nM**.
+
+---
+
+## 7. Ponatinib
+- **Class/Use**: Pan‑BCR‑ABL and multikinase inhibitor; used in resistant CML/ALL.  
+- **AML rationale**: Potent FLT3 inhibitor including resistant mutants; strong activity in MOLM‑13 expected.  
+- **Assay range**: **1 μM to 0.5 nM** (very potent; keep top dose lower).
+
+---
+
+## 8. Lestaurtinib (CEP‑701)
+- **Class/Use**: Multi‑TKI originally developed for solid tumors.  
+- **AML rationale**: FLT3 inhibitor; reported low‑nanomolar IC50 in FLT3‑ITD AML including MOLM‑13.  
+- **Assay range**: **5 μM to 2.5 nM**.
+
+---
+
+## 9. Ruxolitinib
+- **Class/Use**: JAK1/2 inhibitor; used in myelofibrosis, PV.  
+- **AML rationale**: Targets JAK/STAT signaling; some AMLs depend on this axis, and combo with FLT3 inhibitors is of interest.  
+- **Assay range**: **10 μM to 5 nM**.
+
+---
+
+## 10. Venetoclax (ABT‑199)
+- **Class/Use**: BCL‑2 inhibitor; approved in CLL, AML (with HMAs).  
+- **AML rationale**: Strong anti‑leukemic effect in multiple AML lines including MOLM‑13; induces apoptosis.  
+- **Assay range**: **5 μM to 2.5 nM** (high potency; IC50 often <100 nM).
+
+---
+
+## 11. Navitoclax (ABT‑263)
+- **Class/Use**: BCL‑2/BCL‑XL inhibitor; used in trials for solid tumors and hematologic malignancies.  
+- **AML rationale**: Pro‑apoptotic in AML; broader BCL‑XL targeting can produce stronger in vitro effects.  
+- **Assay range**: **10 μM to 5 nM**.
+
+---
+
+## 12. Thalidomide
+- **Class/Use**: Immunomodulatory drug (IMiD); used in myeloma and complications of hematologic malignancy.  
+- **AML rationale**: Anti‑angiogenic and immunomodulatory; direct effects on AML cells tend to be modest but measurable at higher μM.  
+- **Assay range**: **100 μM to 50 nM** (be prepared for IC50 in mid‑ to high‑μM).
+
+---
+
+## 13. Lenalidomide
+- **Class/Use**: IMiD; used in myeloma, MDS with del(5q).  
+- **AML rationale**: Alters cereblon‑mediated degradation; some AML lines show decreased proliferation.  
+- **Assay range**: **50 μM to 25 nM**.
+
+---
+
+## 14. Pomalidomide
+- **Class/Use**: IMiD; used in relapsed myeloma.  
+- **AML rationale**: More potent analog; can impact AML proliferation and differentiation in some models.  
+- **Assay range**: **20 μM to 10 nM**.
+
+---
+
+## 15. Metformin
+- **Class/Use**: AMPK activator; antidiabetic.  
+- **AML rationale**: Inhibits mitochondrial complex I; can reduce proliferation and induce energetic stress in AML cells at millimolar levels.  
+- **Assay range**: **20 mM to 10 μM**  
+  - Prepare fresh in aqueous medium; start high because IC50 is often in low‑mM range.
+
+---
+
+## 16. Auranofin
+- **Class/Use**: Gold complex; used in rheumatoid arthritis.  
+- **AML rationale**: Inhibits thioredoxin reductase; causes ROS‑mediated apoptosis in AML lines including FLT3‑ITD.  
+- **Assay range**: **10 μM to 5 nM**.
+
+---
+
+## 17. Disulfiram (+ copper)
+- **Class/Use**: ALDH inhibitor; used for alcohol dependence.  
+- **AML rationale**: Inhibits ALDH‑positive leukemic stem/progenitor cells; often potentiated by CuCl2.  
+- **Assay range**:  
+  - Disulfiram: **10 μM to 5 nM**  
+  - CuCl2: co‑treat at **0.5–2 μM** (constant), based on literature.  
+- Protect solutions from light; prepare fresh.
+
+---
+
+## 18. Valproic acid (sodium valproate)
+- **Class/Use**: Antiepileptic; HDAC inhibitor.  
+- **AML rationale**: Induces differentiation and apoptosis in AML, including FLT3‑ITD models; synergy with ATRA and demethylating agents.  
+- **Assay range**: **5 mM to 2.5 μM**  
+  - IC50 often in high‑hundreds‑μM to low‑mM.
+
+---
+
+## 19. Vorinostat (SAHA)
+- **Class/Use**: HDAC inhibitor; used in CTCL.  
+- **AML rationale**: Potent epigenetic modulator; induces apoptosis/differentiation in multiple AML lines.  
+- **Assay range**: **10 μM to 5 nM** (IC50 typically low‑μM).
+
+---
+
+## 20. Chloroquine or Hydroxychloroquine
+- **Class/Use**: Antimalarial; autophagy inhibitor.  
+- **AML rationale**: Blocks autophagy; enhances stress and cell death in AML, especially in combination with TKIs or chemo.  
+- **Assay range**:  
+  - Chloroquine: **100 μM to 50 nM**  
+  - Hydroxychloroquine: **200 μM to 100 nM**  
+- IC50 often tens of μM in vitro.
+
+---
+
+### General experimental notes for an IC50 assay in MOLM‑13
+
+- **Cell line**: MOLM‑13 (FLT3‑ITD+). Culture in RPMI‑1640 + 10–20% FBS, 1% pen‑strep; keep log‑phase.  
+- **Seeding density**: ~5×10³–1×10⁴ cells/well in 96‑well plates (final volume 100 μL).  
+- **Treatment time**: 48–72 h for proliferation/viability IC50 (e.g., CellTiter‑Glo, WST‑1, MTS).  
+- **Vehicle control**: Match highest DMSO used (typically ≤0.1–0.2%).  
+- **Data**: Normalize to vehicle, fit a 4‑parameter logistic curve to calculate IC50.
+
+If you like, I can prioritize a shorter list (e.g., top 5–8 most promising for MOLM‑13) with tighter, literature‑based expected IC50 windows and specific references.

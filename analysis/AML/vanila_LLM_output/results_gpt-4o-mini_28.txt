@@ -1,0 +1,87 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for acute myeloid leukemia (AML) is a promising strategy that can lead to accelerated clinical application. Below are 20 drugs that have been explored for potential use in AML, along with suggested experimentally testable concentrations for IC50 assays. Note that actual IC50 values can vary based on experimental conditions, specific AML subtypes, and cell lines used, so adjustments may be needed based on preliminary screening results.
+
+### Top 20 Drugs for Repurposing in AML
+
+1. **Azacitidine (Vidaza)**
+   - Suggested Concentration: 0.1 - 10 µM
+
+2. **Decitabine (Dacogen)**
+   - Suggested Concentration: 0.1 - 10 µM
+
+3. **Venetoclax (Venclexta)**
+   - Suggested Concentration: 1 - 10 µM
+
+4. **Midostaurin (Rydapt)**
+   - Suggested Concentration: 0.1 - 1 µM
+
+5. **Dexamethasone**
+   - Suggested Concentration: 0.1 - 5 µM
+
+6. **Laspogintuzumab (B-cell maturation antigen antibody)**
+   - Suggested Concentration: 0.1 - 5 µg/mL
+
+7. **Clofarabine**
+   - Suggested Concentration: 0.1 - 10 µM
+
+8. **Rapamycin (Sirolimus)**
+   - Suggested Concentration: 0.1 - 1 µM
+
+9. **Tocilizumab (Actemra)**
+   - Suggested Concentration: 1 - 10 µg/mL
+
+10. **Thalidomide**
+    - Suggested Concentration: 1 - 10 µM
+
+11. **Lenalidomide (Revlimid)**
+    - Suggested Concentration: 0.1 - 10 µM
+
+12. **Bortezomib (Velcade)**
+    - Suggested Concentration: 1 - 10 nM
+
+13. **Histone Deacetylase Inhibitors (Vorinostat)**
+    - Suggested Concentration: 0.1 - 5 µM
+
+14. **Curcumin**
+    - Suggested Concentration: 1 - 10 µM
+
+15. **Sunitinib (Sutent)**
+    - Suggested Concentration: 0.1 - 1 µM
+
+16. **Bosutinib (Bosulif)**
+    - Suggested Concentration: 0.1 - 1 µM
+
+17. **Ponatinib (Iclusig)**
+    - Suggested Concentration: 0.1 - 1 µM
+
+18. **Aspirin**
+    - Suggested Concentration: 0.1 - 5 mM
+
+19. **Metformin**
+    - Suggested Concentration: 0.1 - 10 mM
+
+20. **Imatinib (Gleevec)**
+    - Suggested Concentration: 0.1 - 5 µM
+
+### Experimental Notes
+
+- **Cell Line**: The MOLM13 cell line should be maintained under appropriate culture conditions as specified in literature, and all assays should be performed in multiplate formats (e.g., 96-well plates) suitable for high-throughput screening.
+
+- **Assay Conditions**: Typically, a 72-hour incubation period is recommended for IC50 assays, with the drugs administered in a serial dilution format. The viability can be assessed using assays such as MTT, CellTiter-Glo, or similar metabolism-based assays.
+
+- **Control and Replication**: Include appropriate controls and replicate each concentration to ensure statistical validity and reliability.
+
+- **Dose-Response Curves**: Generate dose-response curves from the concentration data to accurately determine the IC50 for each compound in MOLM13 cells.
+
+As always, confirm findings through comprehensive methodologies and consider further downstream effects in the context of AML treatment.

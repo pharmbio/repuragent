@@ -1,0 +1,20 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Atovaquone,Antimalarial,Disrupts mitochondrial electron transport leading to OXPHOS stress,0.3,30.0,µM,Approved antimalarial; suggested for OXPHOS-dependent AML contexts,atovaquone,False,CHEMBL1450
+Artemisinin / Artesunate,Antimalarial,Induces ROS/iron-dependent cytotoxicity,0.05,10.0,µM,Approved in many regions; artesunate referenced as alternative,artemisinin artesunate,False,CHEMBL361497
+Disulfiram,Aldehyde dehydrogenase (ALDH) inhibitor / alcoholism drug,Impacts ALDH/proteasome/NF-κB pathways; activity often enhanced by copper,0.02,10.0,µM,Test with optional CuCl₂ co-treatment 0.1–1 µM as a separate condition,disulfiram,False,CHEMBL964
+Auranofin,Anti-rheumatic (gold compound),Inhibits thioredoxin reductase causing redox collapse,0.01,3.0,µM,Approved for rheumatoid arthritis (RA),auranofin,False,CHEMBL1366
+Niclosamide,Anthelmintic,Modulates Wnt/STAT3 and acts as a mitochondrial uncoupler,0.02,10.0,µM,Multiple leukemia reports noted; low aqueous solubility (DMSO stocks often needed),niclosamide,False,CHEMBL1448
+Clotrimazole,Antifungal (azole),Metabolic disruption (glycolysis/hexokinase association) and Ca²⁺ effects,0.3,50.0,µM,Approved antifungal,clotrimazole,False,CHEMBL104
+Itraconazole,Antifungal (azole),Inhibits Hedgehog/angiogenesis; also affects mTOR/trafficking,0.1,30.0,µM,Low aqueous solubility; prepare fresh DMSO stocks,itraconazole,False,CHEMBL5483033
+Posaconazole,Antifungal (azole),Azole-class antifungal; anti-leukemia signals reported (mechanism not specified in text),0.1,30.0,µM,Clinically relevant in AML as antifungal prophylaxis; low aqueous solubility noted,posaconazole,False,CHEMBL1397
+Mebendazole,Anthelmintic (benzimidazole),Microtubule disruption via tubulin targeting,0.05,20.0,µM,Low aqueous solubility; DMSO stocks often used,mebendazole,False,CHEMBL685
+Albendazole,Anthelmintic (benzimidazole),Tubulin binding and mitochondrial stress,0.1,50.0,µM,Low aqueous solubility; DMSO stocks often used,albendazole,False,CHEMBL1483
+Ribavirin,Antiviral,Interferes with the eIF4E pathway,0.5,200.0,µM,Studied in AML per text,ribavirin,False,CHEMBL1643
+Mycophenolate mofetil / mycophenolic acid,Immunosuppressant,IMPDH inhibition causing guanine nucleotide depletion,0.05,30.0,µM,Alternative/active form noted: mycophenolic acid,mycophenolate mofetil mycophenolic acid,False,CHEMBL1456
+Leflunomide / Teriflunomide,Immunomodulatory / anti-rheumatic,DHODH inhibition promoting differentiation/apoptosis in AML contexts,0.2,200.0,µM,Teriflunomide referenced as related/active metabolite,leflunomide teriflunomide,False,CHEMBL960
+Hydroxychloroquine,Antimalarial / immunomodulatory,Inhibits autophagy via lysosomal inhibition,1.0,100.0,µM,Often used in combinations per text,hydroxychloroquine,False,CHEMBL1535
+Chlorpromazine,Antipsychotic (typical),Inhibits clathrin-mediated endocytosis and affects lysosomal function,0.2,30.0,µM,Reported anti-cancer activity in screens,chlorpromazine,False,CHEMBL71
+Sertraline,SSRI antidepressant,Induces lysosomal dysfunction/mitochondrial effects (as described in text),0.2,30.0,µM,Referenced as SSRI hit from anti-cancer screens,sertraline,False,CHEMBL809
+Fluoxetine,SSRI antidepressant,Membrane/lysosome stress (similar rationale to sertraline),0.2,30.0,µM,SSRI; similar rationale stated,fluoxetine,False,CHEMBL1201082
+Valproic acid,HDAC inhibitor (weak) / anticonvulsant,Weak histone deacetylase (HDAC) inhibition; used in AML differentiation approaches,100.0,5000.0,µM,Also expressed as 0.1–5 mM; typically prepared in water or as sodium salt,valproic acid,False,CHEMBL109
+Panobinostat,Pan-HDAC inhibitor,Potent pan-histone deacetylase inhibition,0.001,0.3,µM,Described as potent with strong anti-proliferative activity in many AML lines,panobinostat,False,CHEMBL483254

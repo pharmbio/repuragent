@@ -1,0 +1,83 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new indications, such as acute myeloid leukemia (AML), is an exciting area of research. Below is a list of 20 existing drugs that have been explored or suggested for repurposing in the context of AML. Please note that the specific IC50 concentrations can vary based on the experimental conditions and the specific AML cell line. The IC50 should be experimentally determined for each specific drug and cell line, including MOLM13.
+
+While I can provide some existing literature mentions and suggested concentrations based on similar studies, specific IC50 values should always be confirmed in your own experimental settings.
+
+### Potentially Repurposable Drugs for AML
+1. **Venetoclax** (BCL-2 Inhibitor)
+   - IC50: 0.1-1 µM
+
+2. **Azacitidine** (DNA Methyltransferase Inhibitor)
+   - IC50: ~0.5-5 µM
+
+3. **Decitabine** (DNA Methyltransferase Inhibitor)
+   - IC50: ~0.1-1 µM
+
+4. **Clofarabine** (Antineoplastic Agent)
+   - IC50: ~5-10 nM
+
+5. **Ruxolitinib** (JAK1/2 Inhibitor)
+   - IC50: ~3-10 nM
+
+6. **Sunitinib** (Tyrosine Kinase Inhibitor)
+   - IC50: ~50-200 nM
+
+7. **Dasatinib** (BCR-ABL Inhibitor)
+   - IC50: ~1-100 nM
+
+8. **Nilotinib** (BCR-ABL Inhibitor)
+   - IC50: ~10-100 nM
+
+9. **Metformin** (Antidiabetic Drug)
+   - IC50: ~1-10 mM
+
+10. **Thalidomide** (Immunomodulator)
+    - IC50: ~1-10 µM
+
+11. **Lenalidomide** (Immunomodulatory Drug)
+    - IC50: ~1-10 µM
+
+12. **Hydroxyurea** (Antineoplastic Agent)
+    - IC50: ~50-100 µM
+
+13. **Nelarabine** (Nucleoside Replacing Agent)
+    - IC50: ~5-50 µM
+
+14. **Bortezomib** (Proteasome Inhibitor)
+    - IC50: ~10-30 nM
+
+15. **Kitruda (Pembrolizumab)** (PD-1 Inhibitor)
+    - IC50: ~1-100 nM
+
+16. **Rapamycin** (mTOR Inhibitor)
+    - IC50: ~0.5-5 nM
+
+17. **Chloroquine** (Antimalarial, lysosomal stabilizer)
+    - IC50: ~10-30 µM
+
+18. **Arsenic Trioxide** (Promotes apoptosis in AML)
+    - IC50: ~0.5-5 µM
+
+19. **Trametinib** (MEK Inhibitor)
+    - IC50: ~1-100 nM
+
+20. **VEGF inhibitors (Bevacizumab)** (Anti-angiogenic)
+    - IC50: ~0.1-1 µg/mL
+
+### Important Considerations:
+- **In Vitro Conditions:** The IC50 values may change based on the experimental conditions, including media, culture duration, and specific molecular characteristics of the cell line (MOLM13).
+- **Combination Therapies:** Some of these drugs may exhibit enhanced effects when used as part of combination therapies, which is common in cancer treatment.
+- **Clinical Evidence:** There is a need for clinical trials to verify the effectiveness and safety of repurposed drugs when treating AML, especially in the context of resistant forms of the disease.
+
+Please validate these suggestions with up-to-date literature and perform your own assay for more accurate and reliable IC50 values specific to your experiments.

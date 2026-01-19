@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multikinase inhibitor (FLT3/MAPK pathway),"Inhibits FLT3 and other kinases (e.g., RAF/VEGFR)",0.1,3000.0,nM,"Multi-kinase; inhibits FLT3; relevant to FLT3-ITD AML (e.g., MOLM13)"
+Ponatinib,Multikinase inhibitor,"Inhibits ABL, FLT3, and other kinases",0.1,3000.0,nM,BCR-ABL/FLT3 active; relevant to FLT3-ITD AML models
+Sunitinib,Multikinase inhibitor,Inhibits FLT3 and multiple receptor tyrosine kinases,0.5,10000.0,nM,Multi-kinase; FLT3 activity
+Cabozantinib,RTK inhibitor (MET/AXL/VEGFR),"Inhibits MET, AXL, VEGFR; reported FLT3/AXL activity in AML",0.5,10000.0,nM,Reported FLT3/AXL activity in AML
+Regorafenib,Multikinase inhibitor,Inhibits multiple kinases including reported FLT3 and TIE2,0.5,10000.0,nM,Reported FLT3/TIE2 activity
+Dasatinib,SRC/ABL family kinase inhibitor,Inhibits SRC and ABL family kinases; AML activity via SRC/KIT signaling,0.5,10000.0,nM,Targets SRC/ABL; impacts KIT signaling in AML
+Trametinib,MEK inhibitor,MEK1/2 inhibition,0.1,3000.0,nM,MEK1/2 inhibitor
+Selumetinib,MEK inhibitor,MEK1/2 inhibition,1.0,10000.0,nM,MEK1/2 inhibitor
+Everolimus,mTOR inhibitor,mTORC1 inhibition,1.0,30000.0,nM,mTORC1 inhibitor
+Copanlisib,PI3K inhibitor,Pan-PI3K inhibition,1.0,30000.0,nM,Pan-PI3K inhibitor
+Bortezomib,Proteasome inhibitor,26S proteasome inhibition,0.5,100.0,nM,Reversible proteasome inhibitor
+Carfilzomib,Proteasome inhibitor,Irreversible proteasome inhibition,0.5,300.0,nM,Epoxyketone; irreversible proteasome inhibitor
+Ixazomib,Proteasome inhibitor,Proteasome inhibition (oral agent),1.0,1000.0,nM,Oral proteasome inhibitor
+Panobinostat,HDAC inhibitor (epigenetic modulator),Pan-HDAC inhibition,0.5,1000.0,nM,Pan-HDAC inhibitor
+Vorinostat,HDAC inhibitor (epigenetic modulator),HDAC inhibition,0.05,20.0,µM,Also known as SAHA (suberoylanilide hydroxamic acid)
+Romidepsin,HDAC inhibitor (epigenetic modulator),Class I HDAC inhibition,0.1,500.0,nM,Class I selective HDAC inhibitor
+Selinexor,Nuclear export inhibitor,XPO1/CRM1 inhibition,1.0,5000.0,nM,Selective inhibitor of nuclear export (SINE)
+Tigecycline,Mitochondrial translation inhibitor (antibiotic),Inhibits mitochondrial protein synthesis,0.1,30.0,µM,Antibiotic; mitochondrial translation inhibitor
+Atovaquone,OxPhos inhibitor (antimalarial),Inhibits mitochondrial electron transport chain complex III,0.1,30.0,µM,Antimalarial; complex III inhibitor; note potential solubility limits in assay medium
+Niclosamide,Anthelmintic; mitochondrial/Metabolic modulator,Disrupts oxidative phosphorylation; modulates Wnt/STAT3 signaling,0.01,10.0,µM,Anthelmintic; affects OxPhos/Wnt/STAT3; limited solubility—monitor for precipitation

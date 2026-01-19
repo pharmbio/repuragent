@@ -1,0 +1,42 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is a promising strategy due to the existing safety profiles and known pharmacokinetics of these drugs. Here, I will suggest a list of 20 existing drugs that could potentially be repurposed for AML treatment, particularly targeting MOLM13 cell lines, and provide a starting point for experimentally testable concentrations for an IC50 assay. However, please note that these suggestions are based on known mechanisms of action, preclinical studies, or existing repurposing efforts and should be experimentally validated in the laboratory:
+
+1. **Arsenic Trioxide** - 1-2 µM
+2. **Vorinostat (SAHA)** - 1-5 µM
+3. **Venetoclax** - 10-100 nM
+4. **Vorinostat** - 1-5 µM
+5. **Vitamin C** - 100-500 µM
+6. **Idasanutlin** - 0.1-1 µM
+7. **Auranofin** - 0.5-5 µM
+8. **Disulfiram** - 0.5-5 µM
+9. **Chloroquine** - 5-15 µM
+10. **Metformin** - 1-10 mM
+11. **Simvastatin** - 1-5 µM
+12. **Ibrutinib** - 1-5 µM
+13. **Imatinib** - 0.1-5 µM
+14. **Sunitinib** - 0.1-1 µM
+15. **Zileuton** - 5-20 µM
+16. **Nifuroxazide** - 5-15 µM
+17. **Niclosamide** - 0.1-1 µM
+18. **Thioridazine** - 1-10 µM
+19. **Ruxolitinib** - 0.1-1 µM
+20. **Bendamustine** - 1-10 µM
+
+Please note:
+- The concentrations mentioned are general starting ranges for experimentation, and proper titration should be performed to determine precise IC50 values for MOLM13 and other AML cell lines.
+- These drugs have mechanisms such as induction of apoptosis, inhibition of survival pathways, autophagy modulation, or inhibition of specific signaling pathways relevant to AML.
+- The effectiveness and safety should be rigorously tested through preclinical and clinical studies.
+- Collaborations with medical researchers and adherence to ethical study designs are essential for advancing these potential repurposing candidates.
+
+Remember, it is crucial to approach drug repurposing with careful preclinical validation and engage with appropriate regulatory frameworks before progressing to clinical studies.

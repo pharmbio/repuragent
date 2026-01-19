@@ -1,0 +1,129 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or clinical-stage) that have published or plausible activity against AML cell proliferation — with emphasis on agents known to be active against FLT3-ITD AML models (MOLM‑13 or related lines) or that have shown single‑agent activity in AML screens. For each drug I give (A) short rationale, (B) a recommended concentration series for an IC50/proliferation assay (a 10‑point 3‑fold dilution is suggested for most compounds), and (C) an approximate expected IC50 range you can use to center the curve. These are suggestions to generate experimentally testable curves; actual IC50 values depend on assay format, serum, exposure time and cell density.
+
+Common assay notes (recommended):
+- Use a 10‑point, 3‑fold serial dilution (C0, C0/3, C0/32, … C0/3^9) unless otherwise noted. Prepare concentrated stocks in DMSO (or water for hydrophilic drugs) and keep final DMSO ≤0.1% in wells. Include vehicle controls.
+- Typical readout: 72‑hour viability/proliferation (CellTiter‑Glo or equivalent) for MOLM‑13 suspension cells. Seeding: ~20–50k cells/well in 96‑well plates (optimize).
+- For drugs requiring cofactors (e.g., disulfiram), include the cofactor (Cu2+) at a low fixed concentration if testing that mechanism.
+- For drugs needing very high concentrations (metformin), use a wider top concentration and be mindful of osmolarity and vehicle effects.
+
+1) Gilteritinib (FLT3 inhibitor)
+- Rationale: FDA‑approved FLT3 inhibitor; potent versus FLT3‑ITD lines (e.g., MOLM‑13).
+- Assay series: start 1.0 µM (10‑point 3‑fold → 1.0 µM to ~0.05 pM).
+- Expected IC50 (MOLM‑13/FLT3‑ITD): ~1–30 nM (approx).
+
+2) Quizartinib (AC220; potent FLT3 inhibitor)
+- Rationale: Highly potent against FLT3‑ITD cell lines.
+- Assay series: start 1.0 µM (10‑point 3‑fold).
+- Expected IC50: ~1–10 nM.
+
+3) Crenolanib (FLT3 inhibitor)
+- Rationale: Active against FLT3 variants; clinical FLT3 inhibitor.
+- Assay series: start 1.0 µM (10‑point 3‑fold).
+- Expected IC50: ~5–100 nM.
+
+4) Midostaurin (PKC/FLT3 multi‑kinase inhibitor)
+- Rationale: FDA‑approved for FLT3‑mutant AML; moderate potency.
+- Assay series: start 3.0 µM (10‑point 3‑fold → 3 µM to ~0.15 nM).
+- Expected IC50: ~50–500 nM.
+
+5) Sorafenib (multi‑kinase TKI)
+- Rationale: Reported activity in FLT3‑ITD AML models.
+- Assay series: start 3.0 µM (10‑point 3‑fold).
+- Expected IC50: ~100–1000 nM.
+
+6) Ponatinib (multi‑kinase TKI)
+- Rationale: Potent TKI with activity against FLT3 in some reports.
+- Assay series: start 1.0 µM (10‑point 3‑fold).
+- Expected IC50: ~1–100 nM.
+
+7) Venetoclax (BCL‑2 inhibitor)
+- Rationale: Approved for AML in combination; single‑agent activity in many AML lines.
+- Assay series: start 1.0 µM (10‑point 3‑fold).
+- Expected IC50: ~1–100 nM (line dependent).
+
+8) Bortezomib (proteasome inhibitor)
+- Rationale: Proteasome inhibition induces apoptosis in AML lines; tested in MOLM‑13.
+- Assay series: start 1.0 µM (10‑point 3‑fold).
+- Expected IC50: ~1–100 nM.
+
+9) Panobinostat (HDAC inhibitor)
+- Rationale: Epigenetic modulator with activity in AML cells.
+- Assay series: start 1.0 µM (10‑point 3‑fold).
+- Expected IC50: ~5–200 nM.
+
+10) OTX015 / Birabresib (BET inhibitor)
+- Rationale: BET inhibition reduces MYC and decreases proliferation in AML models.
+- Assay series: start 3.0 µM (10‑point 3‑fold).
+- Expected IC50: ~50–500 nM.
+
+11) 17‑AAG / Tanespimycin (HSP90 inhibitor)
+- Rationale: Destabilizes FLT3 and other oncogenic kinases in FLT3‑ITD AML.
+- Assay series: start 1.0 µM (10‑point 3‑fold).
+- Expected IC50: ~10–200 nM.
+
+12) Trametinib (MEK inhibitor)
+- Rationale: Targeting MAPK pathway can reduce proliferation; sometimes synergistic with FLT3 inhibitors.
+- Assay series: start 1.0 µM (10‑point 3‑fold).
+- Expected IC50: ~1–100 nM (cell line dependent).
+
+13) Niclosamide (anti‑helminth; STAT3/Wnt/mitochondrial effects)
+- Rationale: Repurposing candidate showing anti‑leukemic activity in screens.
+- Assay series: start 30 µM (10‑point 3‑fold → 30 µM to ~0.0015 µM).
+- Expected IC50: ~0.2–10 µM.
+
+14) Disulfiram (with Cu2+) (aldehyde dehydrogenase inhibitor; proteotoxic stress)
+- Rationale: Anti‑cancer activity in vitro (often requires Cu).
+- Assay series: start 30 µM disulfiram + 1 µM CuCl2 (fixed), 10‑point 3‑fold.
+- Expected IC50: ~0.5–10 µM (with Cu).
+
+15) Mebendazole (anthelmintic)
+- Rationale: Microtubule disruption and other effects; AML cytotoxicity reported.
+- Assay series: start 30 µM (10‑point 3‑fold).
+- Expected IC50: ~0.5–10 µM.
+
+16) Itraconazole (antifungal; hedgehog/angiogenesis/mTOR effects)
+- Rationale: Repurposing candidate with anti‑cancer activity in vitro.
+- Assay series: start 30 µM (10‑point 3‑fold).
+- Expected IC50: ~1–20 µM.
+
+17) Metformin (biguanide; mitochondrial complex I inhibitor)
+- Rationale: Anti‑proliferative effects at high concentrations in vitro; often used as adjuvant.
+- Assay series: start 20 mM (10‑point 3‑fold → 20 mM down to ~10 µM).
+- Expected IC50: ~1–20 mM (often high; interpret with caution).
+
+18) Arsenic trioxide (ATO)
+- Rationale: Effective in APL; has cytotoxic activity in non‑APL AML at micromolar concentrations.
+- Assay series: start 10 µM (10‑point 3‑fold).
+- Expected IC50: ~0.5–5 µM (cell line dependent).
+
+19) Simvastatin (HMG‑CoA reductase inhibitor)
+- Rationale: Statins show anti‑proliferative effects in some AML models.
+- Assay series: start 30 µM (10‑point 3‑fold).
+- Expected IC50: ~1–20 µM.
+
+20) Clofazimine (leprosy drug)
+- Rationale: Shown to induce apoptosis/ROS and to target leukemia stem cells in some studies.
+- Assay series: start 30 µM (10‑point 3‑fold).
+- Expected IC50: ~0.5–10 µM.
+
+Practical tips for running the curves
+- Centering the curve: choose the top concentration so the expected IC50 is ~1/3 to 1/30 of the top—this ensures you capture the slope. If you have no prior data, a broad top (e.g., 10 µM for many drugs, 30 µM for repurposed non‑oncotics, 20 mM for metformin) is conservative.
+- Replicates: use at least triplicate wells per concentration and include vehicle-only and positive‑control cytotoxic compounds (e.g., staurosporine or benzethonium chloride) to verify assay performance.
+- Exposure time: 72 h is commonly used for MOLM‑13 proliferation; some drugs (e.g., venetoclax) may show earlier effects (24–48 h) and others require longer.
+- Solubility/toxicity: watch for precipitation at high concentrations; include a DMSO control at the highest vehicle concentration used.
+
+If you want, I can:
+- Provide ready‑to‑print 10‑point dilution tables (µL transfers) for 96‑well plate setup for any selected drugs and stock concentrations.
+- Prioritize a smaller subset (e.g., top 6–8) with suggested combination pairs to test synergy with a FLT3 inhibitor in MOLM‑13.

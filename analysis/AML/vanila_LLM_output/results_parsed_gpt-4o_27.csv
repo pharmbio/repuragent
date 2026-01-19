@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Arsenic Trioxide,Trisenox (Arsenic derivative),Induces apoptosis by promoting degradation of specific proteins in APL cells.,0.1,10.0,μM,Traditionally used in acute promyelocytic leukemia (APL).
+Auranofin,Anti-rheumatic drug,"Inhibits thioredoxin reductase, leading to oxidative stress and apoptosis in cancer cells.",0.5,5.0,μM,Originally used for rheumatoid arthritis.
+Sorafenib,Multikinase inhibitor,"Inhibits RAF kinase and other receptor tyrosine kinases, blocking cell proliferation.",0.5,10.0,μM,Approved for renal cancer.
+Ruxolitinib,JAK inhibitor,"Inhibits JAK1 and JAK2 kinases, reducing pro-inflammatory cytokine signaling.",1.0,10.0,μM,Used for myelofibrosis.
+Venetoclax,BCL-2 inhibitor,"Selectively binds to BCL-2, inducing apoptosis in cancer cells.",10.0,1000.0,nM,Effective in combination treatments for AML.
+Decitabine,DNA methylation inhibitor,"Incorporates into DNA, inhibiting DNA methyltransferase leading to hypomethylation.",0.01,5.0,μM,Used for myelodysplastic syndromes.
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases, causing increased acetylation and apoptosis.",0.25,10.0,μM,Shows activity in hematologic malignancies.
+Thalidomide,Immunomodulatory drug,Reduces TNF-alpha production and modulates immune response.,0.5,10.0,μM,Used in multiple myeloma.
+Metformin,Antidiabetic drug,"Activates AMPK pathway, inhibiting mTOR, and reducing cell proliferation.",0.5,5.0,mM,Shows potential anti-tumor activity.
+Itraconazole,Antifungal,"Interferes with cytochrome P450, disrupting fungal cell wall and showed some leukemia activity.",1.0,10.0,μM,Examined against some leukemia cell lines.
+Disulfiram,Alcohol aversion drug,"Inhibits aldehyde dehydrogenase causing accumulation of acetaldehyde, suggested antineoplastic potential.",0.5,5.0,μM,Shows potential antineoplastic effects.
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome, leading to accumulation of proteins causing cell cycle arrest and apoptosis.",5.0,50.0,nM,Used in multiple myeloma.
+Selinexor,Selective inhibitor of nuclear export,"Blocks XPO1, preventing the export of tumor suppressor proteins from the nucleus.",0.1,1.0,μM,Examined in oral formulation for cancer.
+Imatinib,Tyrosine kinase inhibitor,Binds to BCR-ABL kinase active site inhibiting cell proliferation in CML.,0.5,5.0,μM,Could show activity in AML.
+Lenalidomide,Immunomodulatory agent,"Enhances T-cell and NK-cell activity, targets multiple signaling pathways affecting cell survival.",0.1,10.0,μM,Used in multiple myeloma.
+Hydroxyurea,Antineoplastic agent,"Inhibits ribonucleotide reductase, interfering with DNA synthesis.",0.01,0.5,mM,Known for role in sickle cell anemia.
+Dactinomycin,Antineoplastic antibiotic,"Intercalates into DNA, preventing RNA synthesis.",0.1,1000.0,nM,Shows efficacy in multiple cancer types.
+Clofarabine,Purine nucleoside analog,"Inhibits DNA polymerase and ribonucleotide reductase, impairing DNA repair and synthesis.",1.0,1000.0,nM,Demonstrates activity against AML.
+Idarubicin,Anthracycline antibiotic,"Intercalates DNA and inhibits topoisomerase II, impairing DNA replication.",0.01,1.0,μM,Used in various leukemias.
+Valproic Acid,HDAC inhibitor,"Inhibits histone deacetylase, leading to increased gene expression and apoptosis in cancer cells.",0.5,5.0,mM,Primarily used for epilepsy but shows potential in malignancies.

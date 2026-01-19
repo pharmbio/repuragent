@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,"Inhibits BCL-2, a protein preventing apoptosis of cancer cells",10.0,100.0,nM,Primarily used for chronic lymphocytic leukemia (CLL)
+Sorafenib,Multi-kinase inhibitor,"Inhibits multiple kinases including FLT3, a mutation in AML",1.0,10.0,µM,FDA-approved for renal and hepatocellular carcinoma
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis and differentiation of leukemic cells,0.1,2.0,µM,Approved for acute promyelocytic leukemia (APL)
+Dasatinib,Tyrosine kinase inhibitor,Inhibits SRC family kinases and FLT3,1.0,5.0,µM,Primarily used in chronic myeloid leukemia (CML)
+Imatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL fusion protein kinase and FLT3,1.0,10.0,µM,Known for use in CML
+Metformin,Antidiabetic agent,"Lowers blood sugar levels, cytotoxic effects in cancer",0.1,10.0,mM,Primarily used for type 2 diabetes management
+Bortezomib,Proteasome inhibitor,Blocks proteasome activity leading to apoptosis of cancer cells,5.0,10.0,nM,Approved for multiple myeloma
+Auranofin,Gold compound,Inhibits thioredoxin reductase leading to oxidative stress,1.0,5.0,µM,Approved for rheumatoid arthritis
+Itraconazole,Antifungal agent,Inhibits hedgehog signaling pathway and angiogenesis,0.1,1.0,µM,Reported anti-cancer properties
+Thalidomide/Lenalidomide,Immunomodulatory drugs,"Modulates the immune response, anti-angiogenic",1.0,100.0,µM,Used in multiple myeloma
+Midostaurin,Kinase inhibitor,"Inhibits FLT3, a receptor tyrosine kinase",1.0,10.0,nM,Approved for FLT3-mutant AML
+Rapamycin (Sirolimus),mTOR inhibitor,"Inhibits mTOR, suppressing cell growth and proliferation",10.0,50.0,nM,Used as an immunosuppressant
+Celecoxib,COX-2 inhibitor,Inhibits COX-2 enzyme reducing inflammation and proliferation,10.0,100.0,µM,"Used for arthritis, reported anti-cancer activity"
+Vorinostat (SAHA),HDAC inhibitor,"Inhibits histone deacetylase, affecting gene expression",0.5,2.0,µM,Approved for cutaneous T-cell lymphoma
+Parthenolide,Sesquiterpene lactone,Inhibits NF-kB signaling pathway,5.0,10.0,µM,Derived from Tanacetum parthenium
+Bevacizumab,Monoclonal antibody,"Inhibits VEGF, reducing blood vessel formation",0.1,1.0,nM,"Used in various cancers, including AML"
+Paclitaxel,Antimicrotubule agent,"Disrupts microtubule function, stopping cell division",0.1,10.0,µM,Commonly used in solid tumor treatments
+Azacitidine,DNA methyltransferase inhibitor,Induces hypomethylation of DNA leading to gene reactivation,0.1,5.0,µM,Approved for myelodysplastic syndromes
+Chloroquine,Antimalarial drug,"Inhibits autophagy, enhancing cancer cell death",10.0,30.0,µM,Explored for various cancers including leukemia
+EGCG (Epigallocatechin gallate),Polyphenol,"Exhibits antioxidant properties, induces apoptosis",10.0,50.0,µM,Component of green tea

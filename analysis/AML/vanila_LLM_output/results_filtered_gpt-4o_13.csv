@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and SRC family kinases,1.0,100.0,nM,Primarily used in CML,dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits JAK1 and JAK2, interrupting signaling that promotes cell proliferation",0.1,5.0,µM,Used in myeloproliferative disorders,ruxolitinib,False,CHEMBL1287854
+Metformin,Biguanide (antidiabetic agent),"Activates AMP-activated protein kinase, inhibiting cancer cell proliferation",1.0,10.0,mM,"Commonly used for diabetes, potential antiproliferative effects",metformin,False,CHEMBL1431
+Arsenic Trioxide,Chemotherapeutic,Induces apoptosis through mitochondrial pathway,0.1,5.0,µM,Used in APL; activity in other AML subtypes,arsenic trioxide,False,CHEMBL5483015
+Auranofin,Gold drug,Inhibits thioredoxin reductase leading to increased oxidative stress,0.1,10.0,µM,Traditionally used for rheumatoid arthritis,auranofin,False,CHEMBL1366
+Chloroquine,Antimalarial,Inhibits autophagy in tumor cells,1.0,20.0,µM,Might be effective in AML,chloroquine,False,CHEMBL76
+Ibrutinib,Bruton's tyrosine kinase inhibitor,Blocks B-cell receptor signaling,0.1,10.0,µM,Primarily used in CLL,ibrutinib,False,CHEMBL1873475
+Everolimus,mTOR inhibitor,"Inhibits mTOR, impairing cell growth and proliferation",10.0,100.0,nM,,everolimus,False,CHEMBL1908360
+Simvastatin,Statin,Inhibits HMG-CoA reductase with potential anti-cancer properties,1.0,10.0,µM,,simvastatin,False,CHEMBL1201391
+Thalidomide,Immunomodulatory agent,Inhibits angiogenesis and affects immune modulation,2.0,5.0,µM,Known for use in multiple myeloma,thalidomide,False,CHEMBL426123
+Carfilzomib,Proteasome inhibitor,Inhibits 20S proteasome leading to accumulation of protein substrates,10.0,100.0,nM,Used in multiple myeloma,carfilzomib,False,CHEMBL451887
+Idelalisib,PI3K inhibitor,"Inhibits delta isoform of PI3K, reducing proliferation of malignant B cells",0.1,10.0,µM,Primarily used in CLL,idelalisib,False,CHEMBL4095008
+Bosutinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and SRC kinase families,1.0,10.0,µM,May show activity against AML cell proliferation,bosutinib,False,CHEMBL2095206
+Celecoxib,COX-2 inhibitor,"Inhibits COX-2, potentially affecting cancer cell growth",1.0,20.0,µM,Might have anti-leukemic properties,celecoxib,False,CHEMBL118

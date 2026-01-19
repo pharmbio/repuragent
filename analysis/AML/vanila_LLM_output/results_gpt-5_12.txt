@@ -1,0 +1,42 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved, “existing” drugs with published anti-AML activity (many with activity in FLT3-ITD models such as MOLM13). For each, I list a practical screening range for an in vitro IC50 assay that spans 3–4 logs around typical reported potencies in serum-containing media. These are starting points—optimize based on solubility, protein binding, and observed curve shape.
+
+FLT3/MAPK/mTOR and other kinase inhibitors (highly relevant to MOLM13, which is FLT3-ITD)
+- Sorafenib (HCC/RCC; multikinase including FLT3): Suggested range 0.1 nM to 3 µM. FLT3-ITD AML often shows low-nM sensitivity.
+- Ponatinib (CML/ALL; ABL/FLT3): 0.05 nM to 1 µM. Frequently low-nM in FLT3-ITD lines (including MOLM13).
+- Cabozantinib (RCC/thyroid; MET/FLT3/VEGFR): 0.5 nM to 5 µM. Reported activity in FLT3-ITD AML at low–mid nM.
+- Sunitinib (RCC; FLT3/VEGFR): 0.5 nM to 5 µM. Commonly tens of nM in FLT3-ITD AML.
+- Regorafenib (CRC/HCC; multikinase incl. FLT3): 1 nM to 10 µM. Typically mid‑nM to sub‑µM in FLT3-ITD contexts.
+- Dasatinib (CML/ALL; Src/ABL; some FLT3 inhibition): 1 nM to 10 µM. Often tens of nM to sub‑µM in AML.
+- Osimertinib (NSCLC; EGFR TKI; also inhibits FLT3, incl. D835 mutants): 0.5 nM to 5 µM. Frequently ~10–100 nM in FLT3‑ITD AML (MOLM13/MV4‑11).
+- Trametinib (melanoma; MEK1/2): 0.5 nM to 5 µM. RAS/MAPK‑driven AML lines show ~10–300 nM single‑agent sensitivity; often synergizes with FLT3 inhibitors.
+- Everolimus (RCC; mTORC1 inhibitor): 1 nM to 10 µM. AML lines commonly show 10–300 nM growth inhibition, context‑dependent.
+- Bortezomib (myeloma/MCL; proteasome inhibitor): 0.5 nM to 1 µM. Many AML lines respond in the 5–50 nM range.
+- Selinexor (myeloma/DLBCL; XPO1 inhibitor): 1 nM to 5 µM. AML lines (incl. MOLM13) often 10–200 nM.
+
+Redox/mitochondrial/lysosomal and other repurposed agents with AML activity
+- Auranofin (rheumatoid arthritis; thioredoxin reductase inhibitor): 10 nM to 10 µM. AML IC50s frequently 0.3–3 µM.
+- Tigecycline (antibiotic; mitochondrial translation inhibitor): 0.1 µM to 100 µM. AML blasts/lines often 1–20 µM; targets leukemia stem cell metabolism.
+- Pimozide (antipsychotic; STAT5 pathway inhibition): 0.05 µM to 20 µM. FLT3‑ITD AML (STAT5‑dependent) typically 1–10 µM.
+- Thioridazine (antipsychotic; LSC‑active, dopamine receptor antagonist/ion channel effects): 0.1 µM to 30 µM. Often low‑ to mid‑µM in AML.
+- Mebendazole (anthelmintic; microtubules/other): 0.01 µM to 30 µM. AML IC50s commonly ~0.1–5 µM.
+- Niclosamide (anthelmintic; OxPhos/Wnt/STAT): 0.01 µM to 10 µM. Many leukemia models ~0.1–2 µM.
+- Mefloquine (antimalarial; lysosomal permeabilization): 0.1 µM to 50 µM. AML lines including LSCs often 1–10 µM.
+- Nelfinavir (antiretroviral; proteostasis/ER stress/Akt): 0.5 µM to 50 µM. AML IC50s typically 3–15 µM.
+- Ciclopirox (topical antifungal; iron chelation/EIF5A hypusination block): 0.1 µM to 50 µM. Leukemia IC50s commonly 0.5–5 µM.
+
+Practical notes
+- Use a 10–12 point, ~3-fold serial dilution across the suggested range; widen or shift if the curve does not bracket 0–100% effect.
+- Upper bounds reflect common solubility/protein-binding limits in 10% FBS; keep vehicle constant across doses.
+- For MOLM13 (FLT3-ITD), FLT3-active TKIs (ponatinib, sorafenib, cabozantinib, sunitinib, regorafenib, osimertinib) are expected to be among the most potent. Consider including a FLT3‑WT AML line (e.g., HL‑60) as a selectivity control.

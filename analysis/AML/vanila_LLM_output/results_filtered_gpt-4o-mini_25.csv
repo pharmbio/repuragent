@@ -1,0 +1,9 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Mitozantrone,Anthracenedione,"Intercalates within DNA and inhibits topoisomerase II, causing DNA damage in cancer cells.",1.0,10.0,µM,,mitozantrone,False,CHEMBL58
+Bortezomib,Proteasome inhibitor,"Inhibits proteasomal degradation of pro-apoptotic factors, inducing apoptosis in cancer cells.",1.0,10.0,nM,,bortezomib,False,CHEMBL325041
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL and SRC family kinases, disrupting signaling pathways in leukemia.",0.1,1.0,µM,,dasatinib,False,CHEMBL1421
+Lopinavir,Protease inhibitor,Inhibits HIV protease; has potential effects on cancer through induction of apoptosis.,10.0,50.0,µM,,lopinavir,False,CHEMBL729
+Thalidomide,Immune modulator,Enhances immune response and induces apoptosis in myeloma and leukemia cells.,1.0,10.0,µM,,thalidomide,False,CHEMBL426123
+Ruxolitinib,JAK inhibitor,"Inhibits JAK1 and JAK2, modulating cytokine signaling and promoting apoptosis in malignant cells.",0.1,1.0,µM,,ruxolitinib,False,CHEMBL1287854
+Cisplatin,Alkylating agent,"Forms DNA cross-links, inhibiting DNA replication and transcription in cancer cells.",0.1,10.0,µM,,cisplatin,False,CHEMBL197201
+Auranofin,Gold compound,"Exhibits cytotoxic effects in tumor cells, possibly through mitochondrial dysfunction and ROS generation.",0.1,5.0,µM,,auranofin,False,CHEMBL1366

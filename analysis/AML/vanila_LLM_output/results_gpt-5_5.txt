@@ -1,0 +1,98 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved, non-AML drugs with published anti-AML activity (many specifically reported in FLT3-ITD lines such as MOLM-13/MV4-11). For each, I list a concise rationale and a concentration window that typically brackets reported cellular IC50/GI50 values and is suitable as a first-pass range when determining an IC50 in MOLM-13. Actual potency can vary with assay format and conditions; verify solubility and adjust as needed.
+
+- Sorafenib (multi-kinase; FLT3-ITD active)
+  Suggested test range: 0.1–100 nM
+  Note: MOLM-13/MV4-11 often show low-nM sensitivity.
+
+- Ponatinib (multi-kinase; FLT3-ITD active)
+  Suggested test range: 0.5–200 nM
+  Note: Frequently single-digit to tens of nM in FLT3-ITD AML cells.
+
+- Cabozantinib (multi-kinase; FLT3 inhibition reported)
+  Suggested test range: 0.5–500 nM
+  Note: Low-nM activity reported in FLT3-ITD AML lines.
+
+- Sunitinib (multi-kinase; FLT3 inhibition)
+  Suggested test range: 1–5,000 nM
+  Note: Typically tens to low hundreds of nM in FLT3-ITD AML.
+
+- Regorafenib (multi-kinase; FLT3 inhibition)
+  Suggested test range: 1–5,000 nM
+  Note: Often low- to mid-nM activity versus FLT3-ITD AML cells.
+
+- Dasatinib (SRC/ABL family; reported AML activity)
+  Suggested test range: 10–5,000 nM
+  Note: Activity reported in subsets of AML lines, including MLL- or SRC-dependent contexts.
+
+- Trametinib (MEK1/2 inhibitor)
+  Suggested test range: 1–1,000 nM
+  Note: RAS/MAPK-driven AML models are more responsive; may be cytostatic.
+
+- Panobinostat (HDAC inhibitor)
+  Suggested test range: 0.5–100 nM
+  Note: Broad AML potency commonly in low-nM.
+
+- Vorinostat/SAHA (HDAC inhibitor)
+  Suggested test range: 0.1–20 μM
+  Note: AML lines typically respond in sub- to low-μM.
+
+- Bortezomib (proteasome inhibitor)
+  Suggested test range: 0.5–100 nM
+  Note: AML cell viability often inhibited at low-nM.
+
+- Selinexor (XPO1 inhibitor)
+  Suggested test range: 10–5,000 nM
+  Note: Many AML lines show IC50 in tens–hundreds of nM.
+
+- Auranofin (thioredoxin reductase inhibitor)
+  Suggested test range: 0.1–5 μM
+  Note: Reported sub- to low-μM activity in AML (incl. FLT3-ITD models).
+
+- Tigecycline (mitochondrial translation inhibitor)
+  Suggested test range: 0.1–50 μM
+  Note: Targets leukemia stem/OXPHOS dependence; low-μM in AML lines.
+
+- Atovaquone (ETC inhibitor; OXPHOS)
+  Suggested test range: 0.1–50 μM
+  Note: Low- to mid-μM growth inhibition in AML cells, including FLT3-ITD.
+
+- Nelfinavir (HIV protease inhibitor; ER stress/PI3K-AKT effects)
+  Suggested test range: 0.2–50 μM
+  Note: Typically low- to mid-μM in AML.
+
+- Niclosamide (anthelmintic; Wnt/STAT3/OXPHOS)
+  Suggested test range: 0.01–10 μM
+  Note: Often sub-μM in leukemia cells; watch solubility.
+
+- Disulfiram (ALDH inhibitor; proteasome/copper-dependent oxidative stress)
+  Suggested test range: 0.01–10 μM
+  Note: AML activity commonly sub- to low-μM in vitro.
+
+- Leflunomide (DHODH inhibitor prodrug)
+  Suggested test range: 1–300 μM
+  Note: Differentiation/anti-proliferative effects; AML cell IC50s often in tens of μM.
+
+- Pitavastatin (HMG-CoA reductase inhibitor)
+  Suggested test range: 0.1–50 μM
+  Note: Statins show low-μM AML cytotoxicity via mevalonate-pathway dependence.
+
+- Ruxolitinib (JAK1/2 inhibitor)
+  Suggested test range: 0.1–50 μM
+  Note: Stronger effects in JAK/STAT–dependent contexts; single-agent potency in MOLM-13 may be modest but useful in combinations.
+
+Notes
+- MOLM-13 is FLT3-ITD–driven; FLT3-active TKIs (sorafenib, ponatinib, cabozantinib, sunitinib, regorafenib) are often among the most potent single agents.
+- The suggested ranges span roughly 0.1× to 100× typical reported cellular IC50s to capture full dose–response curves in MOLM-13–like systems.
+- Assay results depend on medium, serum, exposure time, and readout; confirm compound solubility and stability in your conditions and include an internal positive control known to kill MOLM-13 (for example, a potent FLT3 inhibitor).

@@ -1,0 +1,75 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new indications is an active area of research, especially in conditions like acute myeloid leukemia (AML), where new treatments are urgently needed. Below is a list of potential drugs that have shown promise in preclinical studies or early-phase clinical trials for AML. The experimentally testable concentrations for IC50 assays generally range from 0.01 μM to 100 μM, but the specific concentration for each drug would ideally be based on literature or experimental data where available. Each drug's potential involvement in AML is supported by different mechanisms of action, such as inhibition of specific kinases or pathways that are involved in AML cell proliferation. For MOLM13, a frequently studied AML cell line, these drugs might have specific activity. Always ensure to verify these findings with the latest experimental research and clinical data.
+
+1. **Venetoclax** - A BCL-2 inhibitor showing efficacy in combination with hypomethylating agents in AML.
+   - Suggested concentration range for IC50: 0.01 - 10 μM
+
+2. **Midostaurin** - A multi-targeted kinase inhibitor already approved for FLT3-mutated AML.
+   - Suggested concentration range for IC50: 0.1 - 5 μM
+
+3. **Sorafenib** - A multi-kinase inhibitor tested in FLT3-ITD-positive AML.
+   - Suggested concentration range for IC50: 0.1 - 10 μM
+
+4. **Ruxolitinib** - A JAK1/2 inhibitor, possibly targeting pathways relevant in AML.
+   - Suggested concentration range for IC50: 0.1 - 10 μM
+
+5. **Dasatinib** - A kinase inhibitor that affects BCR-ABL and SRC family kinases.
+   - Suggested concentration range for IC50: 0.01 - 5 μM
+
+6. **Ibrutinib** - A Bruton's tyrosine kinase (BTK) inhibitor with potential in AML.
+   - Suggested concentration range for IC50: 0.01 - 10 μM
+
+7. **Imatinib** - Originally developed for CML and might show activity in some AML subtypes.
+   - Suggested concentration range for IC50: 0.1 - 10 μM
+
+8. **Axitinib** - A tyrosine kinase inhibitor for vascular endothelial growth factor receptors.
+   - Suggested concentration range for IC50: 0.01 - 10 μM
+
+9. **Lapatinib** - An EGFR and HER2/neu inhibitor potentially influencing AML pathways.
+   - Suggested concentration range for IC50: 0.01 - 10 μM
+
+10. **Carfilzomib** - A proteasome inhibitor with possible activity in AML.
+    - Suggested concentration range for IC50: 0.01 - 10 μM
+
+11. **Arsenic Trioxide** - Used in acute promyelocytic leukemia, under investigation for other AML.
+    - Suggested concentration range for IC50: 0.01 - 10 μM
+
+12. **Vorinostat** - A histone deacetylase inhibitor that may inhibit AML cell proliferation.
+    - Suggested concentration range for IC50: 0.1 - 10 μM
+
+13. **Olaparib** - A PARP inhibitor with potential beyond BRCA-mutated cancers.
+    - Suggested concentration range for IC50: 0.01 - 10 μM
+
+14. **Trametinib** - A MEK inhibitor that could interfere with AML survival pathways.
+    - Suggested concentration range for IC50: 0.1 - 10 μM
+
+15. **Everolimus** - An mTOR inhibitor that might impair AML cell growth.
+    - Suggested concentration range for IC50: 0.1 - 10 μM
+
+16. **Palbociclib** - A CDK4/6 inhibitor that could arrest cell cycle progression in AML.
+    - Suggested concentration range for IC50: 0.01 - 10 μM
+
+17. **Bortezomib** - A proteasome inhibitor that may show efficacy against AML cells.
+    - Suggested concentration range for IC50: 0.01 - 10 μM
+
+18. **Pazopanib** - A multi-kinase inhibitor potentially relevant in AML treatment.
+    - Suggested concentration range for IC50: 0.01 - 10 μM
+
+19. **Crizotinib** - An ALK and ROS1 inhibitor that might have off-target activity in AML.
+    - Suggested concentration range for IC50: 0.01 - 10 μM
+
+20. **Repaglinide** - Primarily an insulin secretagogue, but potential anti-AML activity is under investigation.
+    - Suggested concentration range for IC50: 0.1 - 10 μM
+
+Before proceeding with experimental validations, it's crucial to review the latest literature for the most effective concentrations and any known responses of MOLM13 or other AML cell lines to these drugs. Additionally, combining these drugs with other treatments might reveal synergistic effects for greater efficacy against AML.

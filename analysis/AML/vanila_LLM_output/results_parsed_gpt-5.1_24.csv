@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multikinase inhibitor,"Inhibits FLT3, RAF, VEGFR, and PDGFR kinases to block proliferative signaling",0.5,5000.0,nM,Particularly relevant for FLT3-ITD+ AML such as MOLM13
+Sunitinib,Multikinase inhibitor,"Inhibits FLT3, KIT, PDGFR, and VEGFR kinases",1.0,10000.0,nM,Has anti-proliferative effects in AML cell lines
+Dasatinib,BCR-ABL/Src family tyrosine kinase inhibitor,"Inhibits BCR-ABL and Src family kinases, disrupting survival signaling",0.5,5000.0,nM,
+Nilotinib,BCR-ABL tyrosine kinase inhibitor,Inhibits BCR-ABL with off-target inhibition of KIT and PDGFR,1.0,10000.0,nM,Some reported activity in AML models
+Imatinib,"BCR-ABL, KIT, PDGFR tyrosine kinase inhibitor","Inhibits BCR-ABL, KIT, and PDGFR signaling pathways",10.0,20000.0,nM,Active in KIT-mutated myeloid disease; partial effects in some AML lines
+Crizotinib,ALK/MET/ROS1 inhibitor,"Inhibits ALK, MET, and ROS1 receptor tyrosine kinases",10.0,20000.0,nM,Targets MET/ALK pathways that can support AML cell survival
+Ibrutinib,BTK inhibitor,"Irreversibly inhibits Bruton’s tyrosine kinase, blocking BCR-like signaling",10.0,20000.0,nM,Emerging data for activity in some myeloid/AML contexts
+Venetoclax,BCL-2 inhibitor,Selectively inhibits anti-apoptotic protein BCL-2 to induce apoptosis,0.1,1000.0,nM,Approved for AML; MOLM13 is often highly sensitive
+Ruxolitinib,JAK1/2 inhibitor,Inhibits JAK1 and JAK2 to block JAK/STAT cytokine signaling,10.0,20000.0,nM,Relevant for cytokine-driven or JAK/STAT-dependent AML subsets
+Tofacitinib,JAK inhibitor,Inhibits JAK family kinases to reduce JAK/STAT pathway signaling,10.0,20000.0,nM,
+Disulfiram,ALDH inhibitor; proteasome/NPL4 modulator,"Inhibits aldehyde dehydrogenase and disrupts NPL4/proteasome function, affecting proteostasis",50.0,10000.0,nM,Activity often enhanced with 1–2 µM CuCl2; repurposed anticancer candidate
+Metformin,Biguanide antidiabetic,Activates AMPK and modulates mTOR and cellular metabolism,0.1,20.0,mM,Anti-leukemic effects typically at low-mM in vitro concentrations
+Chloroquine,Autophagy inhibitor; antimalarial,Inhibits lysosomal acidification and autophagic flux,0.5,50.0,µM,Hydroxychloroquine is an alternative with similar autophagy-inhibiting mechanism
+Propranolol,Non-selective β-adrenergic receptor blocker,"Blocks β1 and β2 adrenergic receptors, altering adrenergic signaling",1.0,100.0,µM,Adrenergic signaling can influence leukemia cell survival and niche interactions
+Fluvastatin,HMG-CoA reductase inhibitor (statin),"Inhibits HMG-CoA reductase, disrupting mevalonate pathway and prenylation",0.1,50.0,µM,"Simvastatin or atorvastatin can be used as alternatives, often effective at 0.01–10 µM"
+Thalidomide,Immunomodulatory drug (IMiD),"Binds cereblon, altering ubiquitination and degradation of transcription factors and modulating immune/microenvironmental signaling",1.0,100.0,µM,Used with lenalidomide as related IMiDs
+Auranofin,Gold compound; anti-rheumatic,"Inhibits thioredoxin reductase, increasing ROS and inducing apoptosis",5.0,10000.0,nM,Reported pro-oxidant and cytotoxic effects in AML cells
+Mebendazole,Anthelmintic; microtubule disruptor,Binds tubulin and disrupts microtubule polymerization,0.1,20.0,µM,Also reported to affect hedgehog signaling; preclinical AML data exist
+Niclosamide,Anthelmintic; mitochondrial uncoupler,Acts as a mitochondrial uncoupler and inhibits Wnt/β-catenin and STAT3 signaling,0.1,10.0,µM,Has broad anti-cancer activity in vitro
+Clofazimine,Antimycobacterial (leprosy drug),"Disrupts mitochondrial function, increases ROS, and affects ion channels",0.05,10.0,µM,"Demonstrated anti-leukemic activity in preclinical models, targeting oxidative metabolism"

@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,,Targets BCL-2,10.0,1000.0,nM,Originally for chronic lymphocytic leukemia
+Sorafenib,Multi-kinase inhibitor,,0.01,10.0,μM,Used in liver and kidney cancer
+Dasatinib,BCR-ABL inhibitor,,1.0,1000.0,nM,Used in CML
+Midostaurin,FLT3 inhibitor,,0.01,10.0,μM,Approved for AML with FLT3 mutation
+Ruxolitinib,JAK1/2 inhibitor,,0.1,10.0,μM,For myelofibrosis
+Idelalisib,PI3Kδ inhibitor,,0.01,10.0,μM,For chronic lymphocytic leukemia
+Ibrutinib,,Targets BTK,0.01,10.0,μM,For B-cell malignancies
+Arsenic trioxide,,,0.1,10.0,μM,Used for acute promyelocytic leukemia
+Auranofin,,Modulates redox status,0.1,10.0,μM,An anti-rheumatic drug
+Thioridazine,Antipsychotic,Targets leukemia stem cells,1.0,20.0,μM,
+Carfilzomib,Proteasome inhibitor,,0.01,5.0,μM,Approved for multiple myeloma
+Everolimus,mTOR inhibitor,,1.0,1000.0,nM,Used in cancer treatment
+Clofarabine,Purine nucleoside analog,,0.01,10.0,μM,For pediatric ALL
+"Statins (e.g., Simvastatin)",Cholesterol-lowering drugs,Antiproliferative effects,0.01,10.0,μM,
+Metformin,Diabetes drug,Potential anti-leukemic activity,0.1,10.0,mM,
+Gilteritinib,FLT3 inhibitor,,0.01,10.0,μM,For refractory AML
+Olaparib,PARP inhibitor,,0.1,10.0,μM,For BRCA-mutated cancer
+Pomalidomide,Immunomodulatory drug,,0.01,10.0,μM,For multiple myeloma
+Lapatinib,HER2/EGFR inhibitor,,0.1,10.0,μM,In breast cancer therapy
+"Repurposed antibiotics (e.g., Doxycycline)",,Modulates mitochondrial function,1.0,100.0,μM,

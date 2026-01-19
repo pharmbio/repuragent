@@ -1,0 +1,136 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 clinically used (or late‑stage) drugs with published or strongly suggested activity against AML cell lines, including MOLM‑13, plus practical concentration ranges to test in an in‑vitro IC₅₀ assay.
+
+**How to use these ranges**  
+- For each compound, I give:  
+  • A suggested **working range** for a 72‑h proliferation/viability IC₅₀ assay in MOLM‑13.  
+  • A **starting stock** suggestion (usually 10 mM in DMSO).  
+- When you first test a drug in your own lab, use **a wide log range** (e.g., 9–10 points, 1:3 or 1:2 dilutions) that brackets the range below, then refine around the observed IC₅₀.  
+- All drugs below are used **off‑label/repurposing** for AML in this context; they are not all standard-of-care for AML.
+
+---
+
+## 1. Midostaurin (PKC412) – FLT3 & multi‑kinase inhibitor
+- **Rationale**: Approved for FLT3‑mutated AML; MOLM‑13 is FLT3‑ITD–positive and highly sensitive.
+- **Test range (MOLM‑13)**: 0.5 nM – 1 µM (log‑scale); expect IC₅₀ ~5–50 nM.
+- **Stock**: 10 mM in DMSO.
+
+## 2. Gilteritinib (ASP2215) – FLT3 inhibitor
+- **Rationale**: Approved for relapsed/refractory FLT3‑mut AML; strong activity in MOLM‑13.
+- **Test range**: 0.1 nM – 300 nM; IC₅₀ often ~1–10 nM.
+- **Stock**: 10 mM in DMSO.
+
+## 3. Quizartinib (AC220) – FLT3 inhibitor
+- **Rationale**: Potent FLT3‑ITD inhibitor; MOLM‑13 is a classic sensitive line.
+- **Test range**: 0.1 nM – 300 nM; IC₅₀ frequently <10 nM.
+- **Stock**: 10 mM in DMSO.
+
+## 4. Sorafenib – multikinase (incl. FLT3)
+- **Rationale**: Approved for solid tumors; off‑label use and many preclinical AML data, especially FLT3‑ITD.
+- **Test range**: 10 nM – 10 µM; MOLM‑13 usually shows IC₅₀ ~50–300 nM.
+- **Stock**: 10 mM in DMSO.
+
+## 5. Dasatinib – SRC/ABL multikinase inhibitor
+- **Rationale**: Approved for CML/ALL; reported to inhibit proliferation and signaling in some AML lines.
+- **Test range**: 1 nM – 10 µM; IC₅₀ in sensitive AML cells often ~10–200 nM.
+- **Stock**: 10 mM in DMSO.
+
+## 6. Nilotinib – BCR‑ABL / KIT inhibitor
+- **Rationale**: CML drug with activity against KIT/FLT3; some AML cell data (especially KIT/FLT3 dependent).
+- **Test range**: 10 nM – 10 µM; look for IC₅₀ in low µM or sub‑µM range in MOLM‑13.
+- **Stock**: 10 mM in DMSO.
+
+## 7. Ponatinib – pan‑BCR‑ABL / multikinase inhibitor
+- **Rationale**: Very broad tyrosine kinase inhibitor with FLT3 and other targets; shown to kill FLT3‑ITD AML cells.
+- **Test range**: 0.5 nM – 1 µM; expect IC₅₀ ~5–50 nM in MOLM‑13.
+- **Stock**: 10 mM in DMSO.
+
+## 8. Venetoclax (ABT‑199) – BCL‑2 inhibitor
+- **Rationale**: Approved (with HMA) for AML; MOLM‑13 is BCL‑2–dependent and usually very sensitive.
+- **Test range**: 0.1 nM – 1 µM; IC₅₀ commonly 1–20 nM in BCL‑2‑high AML cells.
+- **Stock**: 10 mM in DMSO.
+
+## 9. Navitoclax (ABT‑263) – BCL‑2/BCL‑xL inhibitor
+- **Rationale**: Clinical‑stage; strong apoptosis induction in many AML lines.
+- **Test range**: 1 nM – 3 µM; IC₅₀ often ~30–300 nM in sensitive lines.
+- **Stock**: 10 mM in DMSO.
+
+## 10. Panobinostat (LBH589) – pan‑HDAC inhibitor
+- **Rationale**: Approved for multiple myeloma; numerous reports of potent anti‑AML activity.
+- **Test range**: 0.5 nM – 1 µM; AML IC₅₀s often ~5–50 nM.
+- **Stock**: 10 mM in DMSO.
+
+## 11. Vorinostat (SAHA) – HDAC inhibitor
+- **Rationale**: Approved for CTCL; widely used in AML preclinical studies.
+- **Test range**: 0.1 µM – 20 µM; AML IC₅₀ typically 0.5–5 µM.
+- **Stock**: 100 mM in DMSO.
+
+## 12. Decitabine – DNA hypomethylating agent
+- **Rationale**: Approved for AML/MDS; low‑nM DNA incorporation but functional cytotoxic IC₅₀ in vitro is higher.
+- **Test range**: 10 nM – 10 µM (refresh daily if >48 h due to instability); many AML lines show IC₅₀ ~0.1–2 µM.
+- **Stock**: 10–50 mM in aqueous solution prepared fresh or frozen aliquots.
+
+## 13. Azacitidine – DNA/RNA hypomethylating agent
+- **Rationale**: Approved for AML/MDS; cytotoxic in AML lines at low‑µM.
+- **Test range**: 100 nM – 20 µM (refresh daily); IC₅₀ usually ~1–10 µM.
+- **Stock**: 10–50 mM in aqueous solution, prepared fresh.
+
+## 14. Ruxolitinib – JAK1/2 inhibitor
+- **Rationale**: Approved for myelofibrosis; some AML (esp. with activated cytokine/JAK signaling) show sensitivity.
+- **Test range**: 10 nM – 10 µM; AML IC₅₀ commonly 0.5–5 µM.
+- **Stock**: 10 mM in DMSO.
+
+## 15. Idelalisib – PI3Kδ inhibitor
+- **Rationale**: Approved for CLL/lymphoma; PI3K/AKT pathway is active in AML; some AML cell data exist.
+- **Test range**: 10 nM – 10 µM; expect IC₅₀ in mid‑nM to low‑µM range if sensitive.
+- **Stock**: 10 mM in DMSO.
+
+## 16. Everolimus (RAD001) – mTORC1 inhibitor
+- **Rationale**: Approved for various solid tumors; mTOR inhibition can suppress AML proliferation.
+- **Test range**: 1 nM – 10 µM; AML IC₅₀s often ~10–500 nM.
+- **Stock**: 10 mM in DMSO.
+
+## 17. Sirolimus (Rapamycin) – mTORC1 inhibitor
+- **Rationale**: Immunosuppressant; similar rationale as everolimus with extensive AML cell data.
+- **Test range**: 0.5 nM – 5 µM; typical AML IC₅₀ ~1–100 nM.
+- **Stock**: 10 mM in DMSO.
+
+## 18. Metformin – AMPK activator / mitochondrial complex I inhibitor
+- **Rationale**: Widely used antidiabetic; high‑µM–mM anti‑proliferative effects in AML and other cancers.
+- **Test range**: 0.5 mM – 20 mM; AML lines often require 1–10 mM for measurable inhibition.
+- **Stock**: 1–2 M in sterile water.
+
+## 19. Disulfiram – ALDH inhibitor / proteasome‑related effects (often with Cu²⁺)
+- **Rationale**: Alcohol‑aversion drug; reported to kill AML stem/progenitor cells, especially in presence of copper.
+- **Test range** (without enforced copper supplementation, using serum‑containing media):  
+  10 nM – 10 µM; many cancer lines show IC₅₀ ~0.1–2 µM.
+- **Stock**: 100 mM in DMSO, protect from light; prepare fresh working dilutions.
+
+## 20. Niclosamide – mitochondrial uncoupler / multi‑pathway inhibitor
+- **Rationale**: Anthelmintic; preclinical activity reported in AML via Wnt/STAT3 and mitochondrial disruption.
+- **Test range**: 50 nM – 10 µM; AML IC₅₀ often ~0.2–2 µM.
+- **Stock**: 10 mM in DMSO; low aqueous solubility, ensure good mixing.
+
+---
+
+### Practical IC₅₀ assay setup for MOLM‑13 (summary)
+
+- **Cells**: MOLM‑13 in log‑phase, viability >90%.  
+- **Seeding density**: ~5×10³ cells/well in 96‑well plates (100 µL), adjust if cells overgrow by 72 h.  
+- **Drug dilution**: 10‑point, half‑log or 3‑fold serial dilutions spanning the suggested range. Keep DMSO ≤0.1–0.2% v/v.  
+- **Incubation**: 72 h is standard for proliferation/viability IC₅₀; 48 h if compounds are unstable.  
+- **Readout**: CellTiter‑Glo / MTS / resazurin, or trypan blue counting.  
+- **Analysis**: Fit a 4‑parameter logistic curve (nonlinear regression) to calculate IC₅₀.
+
+If you’d like, I can narrow this to a smaller focused panel (e.g., top 5–8 with highest likelihood of low‑nM activity in MOLM‑13) and design an exact concentration series for each (e.g., specific µM/nM values for a 96‑well layout).

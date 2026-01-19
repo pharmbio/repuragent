@@ -1,0 +1,10 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Auranofin,Gold compound,"Inhibits thioredoxin reductase, leads to oxidative stress",0.01,10.0,µM,Originally developed for rheumatoid arthritis,auranofin,False,CHEMBL1366
+Dasatinib,Tyrosine Kinase Inhibitor,Inhibits BCR-ABL and SRC family kinases,0.01,1.0,µM,Used in chronic myeloid leukemia (CML),dasatinib,False,CHEMBL1421
+Nilotinib,Tyrosine Kinase Inhibitor,BCR-ABL tyrosine kinase inhibitor,0.01,5.0,µM,Second-generation tyrosine kinase inhibitor,nilotinib,False,CHEMBL255863
+Ruxolitinib,JAK Inhibitor,Inhibits JAK1/2 leading to decreased signaling via the JAK-STAT pathway,0.01,5.0,µM,Used in myelofibrosis and polycythemia vera,ruxolitinib,False,CHEMBL1287854
+Idelalisib,PI3K Inhibitor,Targets PI3K-delta isoform leading to inhibition of cell survival pathways,0.01,10.0,µM,Used in chronic lymphocytic leukemia (CLL),idelalisib,False,CHEMBL4095008
+Ibrutinib,BTK Inhibitor,Inhibits Bruton's tyrosine kinase leading to reduced B cell survival,0.01,10.0,µM,Used in various B-cell malignancies,ibrutinib,False,CHEMBL1873475
+Ponatinib,Tyrosine Kinase Inhibitor,Inhibits BCR-ABL and others,0.01,5.0,µM,Effective against T315I mutant BCR-ABL,ponatinib,False,CHEMBL2105708
+Everolimus,mTOR Inhibitor,Inhibits mTOR pathway leading to reduced cell growth and proliferation,0.1,10.0,µM,Used in various cancers to inhibit angiogenesis,everolimus,False,CHEMBL1908360
+Rigosertib,Ras-mimetic,"Inhibits PI3K and PLK1, affecting mitotic apparatus",0.01,10.0,µM,Investigational agent for myelodysplastic syndromes,rigosertib,False,CHEMBL2013119

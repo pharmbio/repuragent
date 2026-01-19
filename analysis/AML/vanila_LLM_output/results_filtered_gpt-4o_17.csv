@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Metformin,Biguanide,"Ampk activator, anti-proliferative effects",1.0,10.0,mM,Commonly used Type 2 Diabetes medication.,metformin,False,CHEMBL1431
+Arsenic Trioxide,Antineoplastic agent,Induces apoptosis via ROS generation,0.1,10.0,µM,FDA-approved for APL.,arsenic trioxide,False,CHEMBL5483015
+Auranofin,"Gold compound, anti-rheumatic",Inhibits thioredoxin reductase,0.1,10.0,µM,Potential anti-cancer properties.,auranofin,False,CHEMBL1366
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL, Src family kinases",1.0,100.0,nM,Used in CML treatment.,dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK1/2 inhibitor,Inhibits JAK-STAT signaling,0.1,1.0,µM,Approved for myelofibrosis.,ruxolitinib,False,CHEMBL1287854
+Ibrutinib,BTK inhibitor,Inhibits B-cell receptor signaling,0.1,10.0,µM,Approved for B-cell malignancies.,ibrutinib,False,CHEMBL1873475
+Thalidomide,Immunomodulatory agent,"Inhibits angiogenesis, modulates cytokine production",1.0,50.0,µM,"Known teratogen, approved for multiple myeloma.",thalidomide,False,CHEMBL426123
+Chloroquine,"Antimalarial, autophagy inhibitor",Inhibits autophagy by lysosomal trapping,1.0,20.0,µM,Also used in Lupus and RA.,chloroquine,False,CHEMBL76
+Hydroxychloroquine,"Antimalarial, autophagy inhibitor","Inhibits autophagy, immunosuppression",1.0,20.0,µM,Nonproprietary anti-inflammatory features.,hydroxychloroquine,False,CHEMBL1535
+Clofazimine,Antimycobacterial,"Inhibit bacterial proliferation, immune modulation in cancer",0.1,10.0,µM,Approved for leprosy treatment.,clofazimine,False,CHEMBL1292
+Itraconazole,Antifungal agent,"Inhibits ergosterol synthesis, impacts Hedgehog pathway",0.1,10.0,µM,Potential off-label use in cancer.,itraconazole,False,CHEMBL5483033
+Sirolimus,mTOR inhibitor,"Inhibits mTORC1, arrests cell cycle at G1 phase",1.0,100.0,nM,Used for transplant rejection prophylaxis.,sirolimus,False,CHEMBL263427
+Everolimus,mTOR inhibitor,Specific mTORC1 inhibition,1.0,100.0,nM,Used for various cancers and organ transplantation.,everolimus,False,CHEMBL1908360
+Valproic Acid,HDAC inhibitor,Modulates gene expression by inhibiting HDAC,0.5,10.0,mM,Well-known anticonvulsant.,valproic acid,False,CHEMBL109
+Fluoxetine,Selective serotonin reuptake inhibitor,"ERK phosphorylation, possible autophagy in cancer",1.0,20.0,µM,"Common antidepressant, SSRI.",fluoxetine,False,CHEMBL1201082
+Niclosamide,"Anthelmintic, Wnt pathway inhibitor",Inhibits mitochondrial uncoupling and various signaling pathways,0.1,10.0,µM,Investigated for multiple cancer types.,niclosamide,False,CHEMBL1448

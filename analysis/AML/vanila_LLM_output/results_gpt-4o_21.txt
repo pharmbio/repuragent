@@ -1,0 +1,36 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is a strategy that leverages the established safety profiles and pharmacokinetics of known compounds. Here are some drugs that have shown potential in AML treatment through preclinical or clinical studies. It's important to note that specific IC50 concentrations can vary based on the experimental setup and cell line conditions, so the concentrations suggested below should be further validated in a laboratory setting. 
+
+1. **Arsenic Trioxide** - ~0.1-1 µM
+2. **Auranofin** - ~1-5 µM
+3. **Chloroquine** - ~5-15 µM
+4. **Disulfiram** - ~0.5-2 µM
+5. **Metformin** - ~1-10 mM
+6. **Clofazimine** - ~1-5 µM
+7. **Itraconazole** - ~1-10 µM
+8. **Nitroxoline** - ~1-10 µM
+9. **Verapamil** - ~10-30 µM
+10. **Captopril** - ~50-100 µM
+11. **Thalidomide** - ~1-10 µM
+12. **Valproic acid** - ~0.5-2 mM
+13. **Amiodarone** - ~1-10 µM
+14. **Riluzole** - ~10-30 µM
+15. **Sorafenib** - ~1-5 µM
+16. **Minocycline** - ~5-20 µM
+17. **Ketoconazole** - ~1-10 µM
+18. **Lovastatin** - ~1-10 µM
+19. **Pioglitazone** - ~10-50 µM
+20. **Quinacrine** - ~0.5-5 µM
+
+These drugs have varying mechanisms of action, including metabolic interference, kinase inhibition, proteasome inhibition, autophagy modulation, or altering redox homeostasis, which might contribute to their anti-leukemic effects. It's crucial that these compounds be tested under controlled laboratory conditions on MOLM-13 cell lines using appropriate cell culture growth media and environmental conditions to determine precise and effective IC50 values. Collaborations with pharmacological and clinical experts can help refine these estimates and design appropriate preclinical studies.

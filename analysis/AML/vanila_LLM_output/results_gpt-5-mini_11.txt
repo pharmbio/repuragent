@@ -1,0 +1,133 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or clinically‑developed) that have credible rationale or published preclinical evidence for activity against AML cell lines — many specifically against FLT3‑ITD lines such as MOLM13. For each I give a short rationale and an experimentally practical IC50 testing scheme (a recommended top concentration and a 10‑point 3‑fold serial dilution that will usually encompass the inhibitory range). I also give an approximate expected IC50 range (based on literature for AML/FLT3‑ITD cells or typical potency) so you can adjust the top concentration if you prefer a narrower window.
+
+Important common assay notes (apply unless you have different SOPs):
+- Use vehicle (DMSO) ≤0.5% final. Prepare drugs in DMSO except hydrophilic drugs as appropriate.  
+- Standard readout: 72 hr viability/proliferation assay (CellTiter‑Glo or similar) for most small molecules. Some agents (e.g., decitabine/azacitidine) require longer exposure or repeat dosing (see notes).  
+- Plate MOLM13 as suspension cells at ~5–20 × 10^3 cells/well in 96‑well plates (optimize for your assay). Use ≥3 technical replicates and biological repeats. Include positive control (e.g., known FLT3 inhibitor) and untreated/vehicle controls.  
+- Use 10‑point 3‑fold serial dilutions unless otherwise noted.
+
+1) Gilteritinib (FLT3/AXL inhibitor)  
+- Rationale: approved FLT3 inhibitor, active in FLT3‑ITD cell lines (e.g., MOLM13).  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM (1.0 µM → ~0.5 pM).  
+- Expected IC50 (MOLM13): ~1–50 nM.
+
+2) Quizartinib (AC220, FLT3 inhibitor)  
+- Rationale: highly potent FLT3 inhibitor, strong activity in FLT3‑ITD AML lines.  
+- Dilution scheme: 10‑point 3‑fold from 100 nM.  
+- Expected IC50: ~0.5–10 nM.
+
+3) Midostaurin (PKC/FLT3 multi‑kinase inhibitor)  
+- Rationale: FLT3 inhibitor approved in AML (in combination therapy), active in FLT3‑ITD lines.  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM.  
+- Expected IC50: ~50–300 nM.
+
+4) Sorafenib (multikinase inhibitor)  
+- Rationale: shows activity in FLT3‑ITD AML preclinically and in some clinical settings.  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM.  
+- Expected IC50: ~10–300 nM (line dependent).
+
+5) Venetoclax (BCL2 inhibitor)  
+- Rationale: approved for AML combinations; many AML cell lines including some MOLM13 cultures are venetoclax‑sensitive or synergize with other agents.  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM.  
+- Expected IC50: ~5–200 nM (often low nM in dependent lines).
+
+6) Bortezomib (proteasome inhibitor)  
+- Rationale: proteasome inhibition can trigger apoptosis in AML; studied in trials/combinations.  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM.  
+- Expected IC50: ~5–200 nM.
+
+7) Decitabine (DNA hypomethylating agent)  
+- Rationale: standard in AML therapy; in vitro effects require DNA incorporation and longer exposure.  
+- Dilution scheme: 10‑point 3‑fold from 50 µM. For proliferation IC50 test, treat cells continuously 72–120 hr or use repeated daily dosing.  
+- Expected IC50: ~0.1–5 µM (time‑dependent).
+
+8) Azacitidine (DNA hypomethylating agent)  
+- Rationale: as above (in vitro needs appropriate exposure).  
+- Dilution scheme: 10‑point 3‑fold from 50 µM; treat 72–120 hr or daily.  
+- Expected IC50: ~1–10 µM (time‑dependent).
+
+9) Vorinostat (SAHA, HDAC inhibitor)  
+- Rationale: HDAC inhibition induces differentiation/apoptosis in AML; investigated in combinations.  
+- Dilution scheme: 10‑point 3‑fold from 10 µM.  
+- Expected IC50: ~0.3–5 µM.
+
+10) Panobinostat (HDAC inhibitor)  
+- Rationale: potent HDAC inhibitor with AML activity preclinically and in combination trials.  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM.  
+- Expected IC50: ~5–200 nM.
+
+11) Dinaciclib (broad CDK inhibitor: CDK1/2/5/9)  
+- Rationale: CDK9/other CDK inhibition downregulates anti‑apoptotic proteins (e.g., MCL1) and is active in AML.  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM.  
+- Expected IC50: ~1–100 nM.
+
+12) Palbociclib (CDK4/6 inhibitor)  
+- Rationale: cell‑cycle targeting; activity in subset of AMLs and potential combinations.  
+- Dilution scheme: 10‑point 3‑fold from 10 µM.  
+- Expected IC50: ~0.2–5 µM (often less potent in AML).
+
+13) Trametinib (MEK1/2 inhibitor)  
+- Rationale: MAPK pathway involvement in AML; MEK inhibition can be active in some AML contexts.  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM.  
+- Expected IC50: ~1–50 nM (line dependent).
+
+14) Everolimus (mTORC1 inhibitor)  
+- Rationale: PI3K/AKT/mTOR pathway is commonly activated in AML; mTOR inhibitors show activity in combinations.  
+- Dilution scheme: 10‑point 3‑fold from 10 µM.  
+- Expected IC50: ~10–1000 nM.
+
+15) Ruxolitinib (JAK1/2 inhibitor)  
+- Rationale: JAK/STAT signaling contributes in some AML subsets; ruxolitinib active in certain contexts or combinations.  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM.  
+- Expected IC50: ~50–500 nM.
+
+16) 17‑AAG / Tanespimycin (HSP90 inhibitor)  
+- Rationale: HSP90 inhibition destabilizes multiple oncogenic client proteins (FLT3, etc.).  
+- Dilution scheme: 10‑point 3‑fold from 1.0 µM.  
+- Expected IC50: ~50–500 nM.
+
+17) Etoposide (topoisomerase II inhibitor)  
+- Rationale: topoisomerase inhibitors have cytotoxic activity in AML (used clinically).  
+- Dilution scheme: 10‑point 3‑fold from 50 µM.  
+- Expected IC50: ~1–20 µM.
+
+18) Simvastatin (HMG‑CoA reductase inhibitor)  
+- Rationale: statins can induce apoptosis and potentiate other agents in AML in vitro; repurposing candidate.  
+- Dilution scheme: 10‑point 3‑fold from 20 µM. (Simvastatin is a prodrug—use active form or confirm activation protocol.)  
+- Expected IC50: ~5–20 µM (context dependent).
+
+19) Niclosamide (antihelminthic)  
+- Rationale: multiple anticancer mechanisms reported (Wnt/STAT/mitochondria); active in some leukemia models.  
+- Dilution scheme: 10‑point 3‑fold from 10 µM.  
+- Expected IC50: ~0.5–5 µM.
+
+20) Mebendazole (antihelminthic)  
+- Rationale: reported microtubule‑targeting and anti‑leukemia activity in preclinical studies; good repurposing candidate.  
+- Dilution scheme: 10‑point 3‑fold from 10 µM.  
+- Expected IC50: ~0.5–5 µM.
+
+Additional practical tips
+- If you expect very potent activity (low nM), start the top concentration at 1 µM or 100 nM to avoid wasting compound and to ensure the assay captures the sigmoidal region. If activity is weak/unknown, start higher (10 µM or 50 µM for nucleoside/hypomethylating agents).  
+- For BH3 mimetics (venetoclax), consider co‑testing with MCL1 inhibitors or measure BCL2 family dependencies (BH3 profiling) if you encounter resistance.  
+- For decitabine/azacitidine, because they are S‑phase dependent and require incorporation, longer exposure (72–120 hr) and possibly daily medium/dose refresh gives more interpretable IC50s.  
+- For combination studies (e.g., FLT3 inhibitor + venetoclax), run matrix dose–response or fixed‑ratio combination assays to look for synergy.
+
+Caveats
+- These are suggestions for in vitro screening; activity in MOLM13 in vitro does not imply clinical efficacy. Some listed agents are approved for other indications and some are investigational/clinical agents (use appropriate handling and approvals).  
+- MOLM13 is FLT3‑ITD positive, so FLT3 inhibitors will often be the most potent. If you want a focused screen, prioritize FLT3 inhibitors, venetoclax, proteasome, CDK9 (dinaciclib), HDAC inhibitors, and HSP90 inhibitors.
+
+If you want, I can:
+- Provide downloadable 10‑point dilution tables (concentrations in µM/nM) for each drug; or  
+- Prioritize a smaller panel (e.g., top 6–10) for an initial screen and propose combination matrices (e.g., venetoclax + quizartinib) with suggested dose ranges.

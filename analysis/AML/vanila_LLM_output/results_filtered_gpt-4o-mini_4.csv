@@ -1,0 +1,10 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Nilotinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase with a greater potency than imatinib,0.1,1.0,µM,,nilotinib,False,CHEMBL255863
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits JAK1 and JAK2 signaling, affecting hematopoiesis and immune responses",0.1,1.0,µM,,ruxolitinib,False,CHEMBL1287854
+Sunitinib,Multi-kinase inhibitor,"Inhibits multiple receptor tyrosine kinases, affecting tumor growth and angiogenesis",0.1,1.0,µM,,sunitinib,False,CHEMBL597365
+Thalidomide,Immunomodulator,Inhibits angiogenesis and modulates immune response,10.0,20.0,µM,,thalidomide,False,CHEMBL426123
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome activity, leading to apoptosis in malignant cells",10.0,50.0,nM,,bortezomib,False,CHEMBL325041
+Metformin,Antidiabetic agent,Reduces gluconeogenesis and may have anti-cancer properties,1.0,10.0,mM,,metformin,False,CHEMBL1431
+Quisinostat,HDAC inhibitor,"Inhibits histone deacetylases, leading to changes in gene expression",0.1,1.0,µM,,quisinostat,False,CHEMBL2105763
+Curcumin,Natural compound,Exhibits anti-inflammatory and anti-cancer properties,5.0,20.0,µM,,curcumin,False,CHEMBL140
+Resveratrol,Natural compound,Exhibits antioxidant properties and may induce apoptosis,25.0,50.0,µM,,resveratrol,False,CHEMBL165

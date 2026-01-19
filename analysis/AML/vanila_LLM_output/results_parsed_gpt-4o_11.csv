@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,Selective inhibitor of B-cell lymphoma-2 protein leading to apoptosis of cancer cells.,1.0,10.0,µM,Also known as ABT-199. Approved for CLL.
+Sorafenib,Multi-kinase inhibitor,Inhibits cell surface tyrosine kinases and intracellular serine/threonine kinases.,1.0,10.0,µM,"Targets RAF kinase, KIT, FLT-3, RET, VEGFR-1, VEGFR-2, VEGFR-3, and PDGFR."
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL and SRC family kinases, along with c-KIT, EPHA2, PDGFRB.",1.0,10.0,µM,Effective in cases of resistance to imatinib.
+Axitinib,RTK inhibitor,"Inhibits vascular endothelial growth factor receptors (VEGFR-1, -2, -3).",1.0,10.0,µM,Used in advanced renal cell carcinoma.
+Ibrutinib,BTK inhibitor,"Irreversible inhibitor of Bruton's tyrosine kinase (BTK), disrupting B-cell receptor signaling pathways.",1.0,10.0,µM,Clinically approved for mantle cell lymphoma.
+Ruxolitinib,JAK inhibitor,"Inhibits Janus kinase JAK1 and JAK2, interfering with the JAK-STAT signaling pathway.",1.0,10.0,µM,Approved for myelofibrosis and polycythemia vera.
+Midostaurin,Multi-targeted kinase inhibitor,"Inhibits FLT3, KIT, PDGFR, VEGFR2.",1.0,10.0,µM,FDA approved for FLT3-mutated AML.
+Sunitinib,Multi-targeted receptor tyrosine kinase inhibitor,"Targets PDGFR, VEGFR, and other receptor tyrosine kinases.",1.0,10.0,µM,Used for renal cell carcinoma and GIST.
+Ponatinib,Tyrosine kinase inhibitor,"Targets BCR-ABL including the T315I mutation, and other kinases like VEGFR, FGFR.",1.0,10.0,µM,Effective against CML and ALL with T315I mutation.
+Arsenic Trioxide,Chemotherapeutic agent,"Induces apoptosis and hepatic differentiation in leukemic cells, particularly effective in APL.",1.0,10.0,µM,Approved for APL treatment.
+Selinexor,XPO1 inhibitor,"Inhibits exportin 1 (XPO1), leading to the accumulation of tumor suppressor proteins.",1.0,10.0,µM,Also known as KPT-330.
+Tofacitinib,JAK inhibitor,"Inhibits JAK1 and JAK3, affecting hematopoiesis and immune cell function.",1.0,10.0,µM,Used in rheumatoid arthritis and PsA.
+Gefitinib,EGFR inhibitor,"Blocks tyrosine kinase of EGFR, interrupting downstream signaling pathways.",1.0,10.0,µM,Primarily used in NSCLC.
+Imatinib,Tyrosine kinase inhibitor,"Targets BCR-ABL, PDGFR, and KIT.",1.0,10.0,µM,Used for CML and GIST.
+Nilotinib,Tyrosine kinase inhibitor,Targets BCR-ABL and KIT.,1.0,10.0,µM,Approved for CML.
+Bafetinib,Tyrosine kinase inhibitor,"Targets BCR-ABL, LYMPHO-SELECTIVE TK, SRC-family kinases.",1.0,10.0,µM,Potential use in B-cell malignancies.
+Bosutinib,Tyrosine kinase inhibitor,Targets BCR-ABL1 and SRC family kinases.,1.0,10.0,µM,Used for Ph+ CML.
+Crizotinib,ALK inhibitor,"Inhibits ALK, ROS1, and c-MET kinases.",1.0,10.0,µM,Used in NSCLC with ALK fusion.
+Gilteritinib,Tyrosine kinase inhibitor,"Inhibits FLT3 and AXL, addressing FLT3 mutations in AML.",1.0,10.0,µM,Approved for relapsed/refractory FLT3+ AML.
+Moxetumomab Pasudotox,Immunotoxin,"Targets CD22 found on B-cells, inducing apoptosis.",1.0,10.0,µM,Used for hairy cell leukemia.

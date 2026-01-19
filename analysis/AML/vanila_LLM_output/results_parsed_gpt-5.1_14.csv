@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multi-kinase inhibitor,Inhibits multiple kinases including FLT3; reported active in FLT3-ITD AML including MOLM-13,0.5,10.0,µM,"Use log10 serial dilutions; example points given in nM (0.5–10,000 nM)"
+Sunitinib,Multi-kinase inhibitor,"Inhibits FLT3, KIT, PDGFR, VEGFR family kinases",1.0,20.0,µM,
+Dasatinib,SRC/ABL family kinase inhibitor,Inhibits SRC and ABL family kinases; reported activity in some AML models,0.5,10.0,µM,
+Nilotinib,Second-generation ABL inhibitor,Inhibits BCR-ABL with additional activity against FLT3 and KIT-driven AML cells,1.0,20.0,µM,
+Imatinib,First-generation BCR-ABL inhibitor,Inhibits BCR-ABL tyrosine kinase; weaker activity in AML but used as reference compound,10.0,50.0,µM,
+Midostaurin,FLT3 inhibitor,Clinically used FLT3 inhibitor relevant to FLT3-ITD AML including MOLM-13,0.5,10.0,µM,Also known as PKC412
+Quizartinib,FLT3 inhibitor,Highly potent and selective FLT3 inhibitor; strong activity in FLT3-ITD AML cell lines,0.1,10.0,µM,"Also known as AC220; core suggested range 0.1 nM–1 µM, extend to 3–10 µM for full curve"
+Gilteritinib,FLT3 inhibitor,Clinically approved FLT3 inhibitor; active in MOLM-13 and other FLT3-ITD lines,0.1,2.0,µM,Also known as ASP2215
+Ponatinib,Multi-kinase inhibitor,"Potent inhibitor of BCR-ABL, FLT3, FGFR and others with strong in vitro AML activity",0.5,5.0,µM,
+Venetoclax,BCL-2 inhibitor,"Selectively inhibits anti-apoptotic protein BCL-2, promoting apoptosis in AML cells",0.5,5.0,µM,"Also known as ABT-199; strong single-agent and synergistic activity in AML, including FLT3-ITD models"
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits JAK1 and JAK2 signaling, impairing cytokine-dependent AML/myeloproliferative proliferation",10.0,20.0,µM,
+Trametinib,MEK1/2 inhibitor,"Inhibits MEK1 and MEK2 in the MAPK signaling pathway, often activated in AML",0.5,10.0,µM,
+Selumetinib,MEK1/2 inhibitor,"Inhibits MEK1/2, blocking MAPK pathway signaling in leukemia and other hematologic models",1.0,20.0,µM,Also known as AZD6244
+Everolimus,mTOR inhibitor,"Inhibits mTOR, targeting the PI3K/AKT/mTOR pathway frequently active in AML",0.5,10.0,µM,Also known as RAD001
+Temsirolimus,mTOR inhibitor,"Inhibits mTOR signaling, exerting anti-proliferative effects in AML cells",1.0,20.0,µM,
+Bortezomib,Proteasome inhibitor,"Inhibits the 26S proteasome, inducing apoptosis in AML cell lines at low-nanomolar concentrations",0.5,2.0,µM,Core suggested range 0.5–500 nM; may extend to 1–2 µM for a full curve
+Carfilzomib,Proteasome inhibitor,"Second-generation irreversible proteasome inhibitor, cytotoxic against AML blasts and cell lines",0.5,2.0,µM,Core suggested range 0.5–500 nM; extend to 1–2 µM if needed
+Panobinostat,HDAC inhibitor,"Inhibits histone deacetylases, causing epigenetic modulation and cytotoxicity in AML cells",0.5,5.0,µM,Also known as LBH589
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases, producing broad anti-proliferative activity in leukemia models",5.0,30.0,µM,Also known as SAHA
+Lenalidomide,Immunomodulatory drug (IMiD),"Immunomodulatory and anti-leukemic effects, including differentiation in subsets of AML/MDS",10.0,50.0,µM,"Thalidomide / lenalidomide suggested; lenalidomide range 10 nM–50 µM, thalidomide 100 nM–100 µM; activity in MOLM-13 may be modest but of interest for screening"

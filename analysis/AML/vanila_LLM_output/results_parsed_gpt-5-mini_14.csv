@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Gilteritinib,FLT3 inhibitor,Inhibits FLT3 tyrosine kinase (targets FLT3‑ITD),5.0805e-05,1.0,µM,Approved for FLT3‑mutant AML; expected IC50 in low nM for FLT3‑ITD lines (MOLM‑13). Recommended 10‑point 1:3 dilution series.
+Quizartinib,FLT3 inhibitor,Type II FLT3 tyrosine kinase inhibitor,0.0050805,100.0,nM,Also known as AC220; potent against FLT3‑ITD; expected IC50 low‑to‑sub‑100 nM in sensitive lines.
+Crenolanib,FLT3 inhibitor,Inhibits FLT3 including D835 mutants,5.0805e-05,1.0,µM,Activity reported against FLT3‑ITD/D835; active in MOLM lines.
+Midostaurin,Multi‑kinase inhibitor (PKC/FLT3),Multikinase inhibitor including FLT3 and PKC,5.0805e-05,1.0,µM,Clinically used in FLT3‑mutated AML; activity in MOLM‑13.
+Sorafenib,Multi‑kinase inhibitor,Inhibits multiple kinases (including off‑target FLT3),0.00025403,5.0,µM,Higher top concentration recommended due to lower potency in some AML cells; multikinase activity.
+Ponatinib,Multi‑TKI,Tyrosine kinase inhibitor active against BCR‑ABL and FLT3 variants,5.0805e-05,1.0,µM,Potent TKI with reported activity against FLT3 variants.
+Venetoclax,BCL‑2 inhibitor,Selective BCL‑2 inhibitor inducing apoptosis,5.0805e-05,1.0,µM,Approved in AML combinations; expected IC50 often in the tens of nM in sensitive lines; can be synergistic with other agents.
+Bortezomib,Proteasome inhibitor,Reversible proteasome (26S) inhibitor,0.0050805,100.0,nM,Proteasome inhibition can kill AML cells; some MOLM‑13 sensitivity reported.
+Carfilzomib,Proteasome inhibitor,Irreversible proteasome inhibitor (chymotrypsin‑like activity),0.0050805,100.0,nM,Irreversible inhibitor with leukemia model activity.
+Dinaciclib,CDK inhibitor,"Inhibits CDK1/2/5/9, suppressing transcriptional CDKs (CDK9) and lowering short‑lived survival proteins such as MCL‑1",0.0050805,100.0,nM,Expected IC50 often in low‑to‑tens of nM in AML lines.
+Alvocidib,CDK inhibitor,"Transcriptional CDK inhibitor (targets CDK9 and others), reduces MCL‑1",5.0805e-05,1.0,µM,Also known as flavopiridol; clinical history in AML.
+Panobinostat,HDAC inhibitor,"Pan‑histone deacetylase inhibitor, modulates chromatin and gene expression",5.0805e-05,1.0,µM,Epigenetic agent; may require longer exposures for some effects.
+Vorinostat,HDAC inhibitor,Histone deacetylase inhibitor (HDAC),0.00050805,10.0,µM,Also known as SAHA; clinically used HDAC inhibitor with activity in some AML contexts.
+OTX015,BET bromodomain inhibitor,"Inhibits BET bromodomains (BRD proteins), downregulates MYC and other transcriptional drivers",5.0805e-05,1.0,µM,Also known as MK‑8628; preclinical activity in AML models.
+17‑AAG,HSP90 inhibitor,"HSP90 inhibitor that destabilizes client oncoproteins (e.g., FLT3)",5.0805e-05,1.0,µM,Also called tanespimycin; reported preclinical AML activity.
+Auranofin,Thioredoxin reductase inhibitor / repurposing candidate,"Inhibits thioredoxin reductase, inducing oxidative/pro‑oxidant stress",0.00025403,5.0,µM,Gold compound with reported activity in AML including MOLM‑13; repurposing candidate.
+Niclosamide,Anthelmintic / mitochondrial uncoupler (repurposing candidate),Disrupts mitochondrial function and modulates multiple signaling pathways,0.00025403,5.0,µM,"Reported in vitro anti‑AML activity; multi‑pathway effects, repurposing candidate."
+Mebendazole,Anthelmintic / microtubule disruptor (repurposing candidate),Microtubule destabilizer (binds tubulin),0.00025403,5.0,µM,Has shown anti‑leukemia activity in preclinical models.
+Disulfiram,Repurposing candidate (aldehyde dehydrogenase/proteasome modulation),"Forms complexes with copper that inhibit proteasome/other targets and aldehyde dehydrogenases, causing cell death",0.00025403,5.0,µM,"Requires copper co‑treatment (e.g., 1–10 µM CuCl2) for activity in many assays; test ±Cu to confirm dependence."
+Hydroxychloroquine,Autophagy inhibitor,"Lysosomal/autophagy inhibitor (raises lysosomal pH, blocks autophagic flux)",0.0010161,20.0,µM,Single‑agent effects modest; can sensitize AML cells to other agents; higher top conc recommended (20 µM).

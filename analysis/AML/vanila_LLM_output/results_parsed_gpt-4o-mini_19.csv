@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,Inhibits BCL-2 to induce apoptosis in cancer cells,10.0,100.0,nM,
+Azacitidine,Hypomethylating agent,"Inhibits DNA methyltransferase, leading to reactivation of silenced genes",0.5,5.0,µM,Also known as Vidaza
+Decitabine,Hypomethylating agent,Inhibits DNA methyltransferase to prevent DNA methylation,0.4,10.0,µM,Also known as Dacogen
+Clofarabine,Antimetabolite,Disrupts DNA synthesis and repair processes,0.2,1.0,µM,
+Hydroxyurea,Antimetabolic agent,"Inhibits ribonucleotide reductase, affecting DNA synthesis",50.0,200.0,µM,
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response,1.0,3.0,µM,
+Lenalidomide,Immunomodulatory drug,Enhances immune response against tumor cells,1.0,10.0,µM,Also known as Revlimid
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, leading to accumulation of pro-apoptotic factors",5.0,50.0,nM,Also known as Velcade
+Romidepsin,Histone deacetylase inhibitor,"Inhibits histone deacetylase, leading to increased expression of genes involved in cell cycle regulation",10.0,200.0,nM,
+Histone deacetylase inhibitors (such as panobinostat),Histone deacetylase inhibitor,"Inhibits histone deacetylases, increasing acetylation of histones and leading to changes in gene expression",1.0,10.0,µM,
+Gleevec,Tyrosine kinase inhibitor,"Inhibits BCR-ABL tyrosine kinase, disrupting signaling pathways in cells",0.1,1.0,µM,Also known as Imatinib
+Topotecan,Topoisomerase inhibitor,"Inhibits topoisomerase I, preventing DNA relaxation required for replication",1.0,300.0,nM,
+Doxorubicin,Anthracycline chemotherapeutic,"Intercalates DNA and inhibits topoisomerase II, thereby blocking DNA and RNA synthesis",0.1,1.0,µM,
+Carfilzomib,Proteasome inhibitor,"Irreversibly inhibits the proteasome, leading to cell death in malignant cells",50.0,500.0,nM,
+Pomalidomide,Immunomodulatory drug,Modulates tumor microenvironment and enhances immune response,0.5,5.0,µM,
+Sunitinib,Tyrosine kinase inhibitor,Inhibits multiple receptor tyrosine kinases involved in tumor growth and angiogenesis,1.0,10.0,µM,
+Sorafenib,Multi-kinase inhibitor,Inhibits Raf kinase and vascular endothelial growth factor (VEGF) receptor signaling,0.5,5.0,µM,
+Selinexor,Exportin 1 inhibitor,Inhibits nuclear export of tumor suppressor proteins,100.0,1000.0,nM,
+Metformin,Biguanide antidiabetic drug,Improves insulin sensitivity and may exert anti-cancer effects through AMPK activation,500.0,1500.0,µM,
+Auranofin,Gold compound,Has potential anti-inflammatory and cytotoxic effects in cancer cells,5.0,20.0,µM,

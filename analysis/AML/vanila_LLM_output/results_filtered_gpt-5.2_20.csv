@@ -1,0 +1,19 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Navitoclax,BCL-2/BCL-XL inhibitor,Inhibits anti-apoptotic BCL-2 family proteins (BCL-2 and BCL-XL) to promote apoptosis,1.0,10.0,µM,Also referred to as ABT-263; range given as 1 nM–10 µM.,navitoclax,False,CHEMBL2105690
+Dasatinib,SRC/ABL kinase inhibitor,Inhibits Src family kinases and ABL to block oncogenic signaling,0.5,10.0,µM,Range given as 0.5 nM–10 µM; described as a CML/ALL drug.,dasatinib,False,CHEMBL1421
+Ponatinib,Multi-kinase inhibitor,Inhibits multiple kinases including BCR-ABL; FLT3 activity reported,0.5,5.0,µM,Range given as 0.5 nM–5 µM; notes mention solubility/cytotoxicity can be limiting.,ponatinib,False,CHEMBL2105708
+Sunitinib,Multi-kinase inhibitor,Inhibits multiple receptor tyrosine kinases to reduce growth/survival signaling,1.0,20.0,µM,Range given as 1 nM–20 µM.,sunitinib,False,CHEMBL597365
+Regorafenib,Multi-kinase inhibitor,Inhibits multiple kinases involved in tumor growth and angiogenesis signaling,1.0,20.0,µM,Range given as 1 nM–20 µM.,regorafenib,False,CHEMBL1946170
+Crizotinib,ALK/ROS1/MET inhibitor,"Inhibits ALK, ROS1, and MET kinase signaling",1.0,20.0,µM,Also reported to hit other kinases; range given as 1 nM–20 µM.,crizotinib,False,CHEMBL601719
+Erlotinib,EGFR inhibitor,Inhibits EGFR tyrosine kinase signaling,10.0,50.0,µM,Notes: multiple reports of AML cell effects at µM range; solubility warning—consider 20–30 µM if precipitation occurs; range given as 10 nM–50 µM.,erlotinib,False,CHEMBL1079742
+Gefitinib,EGFR inhibitor,Inhibits EGFR tyrosine kinase signaling,10.0,50.0,µM,Range given as 10 nM–50 µM.,gefitinib,False,CHEMBL939
+Trametinib,MEK1/2 inhibitor,Inhibits MEK1/2 in the MAPK pathway to block downstream ERK signaling,0.1,1.0,µM,Range given as 0.1 nM–1 µM; note suggests keeping top low due to potency.,trametinib,False,CHEMBL2103875
+Cobimetinib,MEK inhibitor,Inhibits MEK to suppress MAPK/ERK signaling,0.1,2.0,µM,Range given as 0.1 nM–2 µM.,cobimetinib,False,CHEMBL4538425
+Everolimus,mTOR inhibitor,Inhibits mTOR signaling to reduce protein synthesis and cell growth,0.1,10.0,µM,Range given as 0.1 nM–10 µM.,everolimus,False,CHEMBL1908360
+Temsirolimus,mTOR inhibitor,Inhibits mTOR signaling to reduce growth and proliferation,0.1,10.0,µM,Range given as 0.1 nM–10 µM.,temsirolimus,False,CHEMBL1201182
+Palbociclib,CDK4/6 inhibitor,Inhibits CDK4/6 to block G1→S cell-cycle progression,1.0,20.0,µM,Range given as 1 nM–20 µM; note says many AML lines aren’t classic CDK4/6-dependent but it’s often tested.,palbociclib,False,CHEMBL2364621
+Ribociclib,CDK4/6 inhibitor,Inhibits CDK4/6 to arrest the cell cycle in G1,1.0,20.0,µM,Range given as 1 nM–20 µM.,ribociclib,False,CHEMBL3545110
+Abemaciclib,CDK4/6 inhibitor,Inhibits CDK4/6 (with broader CDK activity noted) to block cell-cycle progression,1.0,20.0,µM,Described as having broader CDK activity; range given as 1 nM–20 µM.,abemaciclib,False,CHEMBL3301610
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, disrupting protein degradation and inducing stress/apoptosis",0.1,1.0,µM,Approved for myeloma; range given as 0.1 nM–1 µM; note: often very potent—avoid unnecessarily high doses.,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Inhibits the proteasome to impair protein turnover and promote apoptosis,0.1,1.0,µM,Range given as 0.1 nM–1 µM.,carfilzomib,False,CHEMBL451887
+Chloroquine / Hydroxychloroquine,Autophagy-lysosome inhibitors,Raises lysosomal pH and impairs autophagosome-lysosome function to inhibit autophagy,0.5,200.0,µM,Two related drugs listed together (chloroquine and hydroxychloroquine); note: high in-vitro concentrations often needed for autophagy blockade; monitor general toxicity.,chloroquine hydroxychloroquine,False,CHEMBL1535

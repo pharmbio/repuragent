@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Azacitidine,Cytidine analogue,"Inhibits DNA methyltransferase, leading to hypomethylation of DNA",0.5,2.0,µM,Also known as Vidaza.
+Decitabine,Cytidine analogue,"Inhibits DNA methyltransferase, leading to increased expression of tumor suppressor genes",1.0,5.0,µM,Also known as Dacogen.
+Dexamethasone,Glucocorticoid,"Induces apoptosis in lymphoid cells, inhibits inflammation",0.01,1.0,µM,
+Panobinostat,HDAC inhibitor,"Inhibits histone deacetylases, leading to cell cycle arrest and apoptosis",1.0,10.0,nM,Also known as Farydak.
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome activity, leading to accumulation of pro-apoptotic factors",5.0,20.0,nM,Also known as Velcade.
+Gabapentin,Anticonvulsant,"Inhibits voltage-gated calcium channels, reducing excitatory neurotransmitter release",5.0,50.0,µM,
+Valproic Acid,HDAC inhibitor,"Inhibits histone deacetylases and promotes histone acetylation, leading to gene expression changes",0.5,5.0,mM,
+Sirolimus,mTOR inhibitor,Inhibits mTOR signaling pathway which regulates cell growth and proliferation,1.0,10.0,nM,Also known as Rapamycin.
+Clofarabine,Chemotherapeutic agent,Incorporates into DNA causing apoptosis,0.01,0.1,µM,
+Methotrexate,Antimetabolite,"Inhibits dihydrofolate reductase, blocking DNA synthesis",0.1,1.0,µM,
+Ruxolitinib,JAK inhibitor,"Inhibits JAK2 signaling pathway, reducing cytokine signaling and tumor growth",1.0,10.0,nM,Also known as Jakafi.
+Lomustine,Alkylating agent,"Causes DNA cross-linking, disrupting DNA replication and transcription",10.0,50.0,µM,Also known as CCNU.
+Staurosporine,Protein kinase inhibitor,Inhibits a range of protein kinases leading to apoptosis,0.1,1.0,µM,
+Sorafenib,Kinase inhibitor,Inhibits multiple kinases involved in tumor growth and angiogenesis,1.0,5.0,µM,
+Milciclib,Cyclin-dependent kinase inhibitor,"Inhibits CDK activity, leading to cell cycle arrest",0.1,1.0,µM,
+Curcumin,Natural polyphenol,Exhibits anti-inflammatory and pro-apoptotic effects,10.0,20.0,µM,
+Sunitinib,Tyrosine kinase inhibitor,Inhibits multiple receptor tyrosine kinases involved in tumor growth,1.0,5.0,µM,
+Topotecan,Topoisomerase inhibitor,"Inhibits topoisomerase I, leading to DNA strand breaks",1.0,10.0,µM,
+Nilotinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase activity,0.1,1.0,µM,Also known as Tasigna.
+Etoposide,Topoisomerase inhibitor,"Inhibits topoisomerase II, preventing DNA replication",0.5,10.0,µM,

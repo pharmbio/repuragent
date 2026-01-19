@@ -1,0 +1,95 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for acute myeloid leukemia (AML) can be a promising strategy due to the reduced time and cost compared to discovering new drugs. Below is a list of drugs that have shown potential in preclinical studies or have been identified as candidates for repurposing in AML. Suggested concentrations for IC50 assays are based on existing literature or typical concentrations used in such assays. However, specific experimental validation is required to determine the precise IC50 for MOLM-13 cells.
+
+1. **Venetoclax**: 
+   - Suggested IC50 concentration: ~0.01-1 µM
+   - Mechanism: BCL-2 inhibitor
+
+2. **Sorafenib**:
+   - Suggested IC50 concentration: ~1-10 µM
+   - Mechanism: Multi-kinase inhibitor
+
+3. **Dasatinib**:
+   - Suggested IC50 concentration: ~0.01-1 µM
+   - Mechanism: BCR-ABL and Src family kinase inhibitor
+
+4. **Imatinib**:
+   - Suggested IC50 concentration: ~0.1-10 µM
+   - Mechanism: BCR-ABL inhibitor
+
+5. **Lenalidomide**:
+   - Suggested IC50 concentration: ~0.1-10 µM
+   - Mechanism: Immunomodulatory drug
+
+6. **Ruxolitinib**:
+   - Suggested IC50 concentration: ~0.1-10 µM
+   - Mechanism: JAK1/2 inhibitor
+
+7. **Ibrutinib**:
+   - Suggested IC50 concentration: ~0.01-1 µM
+   - Mechanism: BTK inhibitor
+
+8. **Metformin**:
+   - Suggested IC50 concentration: ~1-10 mM
+   - Mechanism: AMPK activator
+
+9. **Arsenic Trioxide**:
+   - Suggested IC50 concentration: ~0.1-10 µM
+   - Mechanism: Induces apoptosis and differentiation in leukemic cells
+
+10. **Chloroquine**:
+    - Suggested IC50 concentration: ~10-100 µM
+    - Mechanism: Autophagy inhibitor
+
+11. **Auranofin**:
+    - Suggested IC50 concentration: ~0.1-10 µM
+    - Mechanism: Inhibition of thioredoxin reductase 
+
+12. **Dactinomycin**:
+    - Suggested IC50 concentration: ~0.01-1 µM
+    - Mechanism: RNA synthesis inhibitor
+
+13. **Vorinostat**:
+    - Suggested IC50 concentration: ~0.1-10 µM
+    - Mechanism: HDAC inhibitor
+
+14. **Clofarabine**:
+    - Suggested IC50 concentration: ~0.01-1 µM
+    - Mechanism: DNA synthesis inhibitor
+
+15. **Tigecycline**:
+    - Suggested IC50 concentration: ~1-10 µM
+    - Mechanism: Mitochondrial translation inhibitor
+
+16. **Bortezomib**:
+    - Suggested IC50 concentration: ~0.01-1 µM
+    - Mechanism: Proteasome inhibitor
+
+17. **Hydroxychloroquine**:
+    - Suggested IC50 concentration: ~10-100 µM
+    - Mechanism: Autophagy inhibitor
+
+18. **Statins (e.g., simvastatin)**:
+    - Suggested IC50 concentration: ~0.1-10 µM
+    - Mechanism: HMG-CoA reductase inhibitor 
+
+19. **Valproic Acid**:
+    - Suggested IC50 concentration: ~100-1000 µM
+    - Mechanism: HDAC inhibitor
+
+20. **Thalidomide**:
+    - Suggested IC50 concentration: ~0.1-10 µM
+    - Mechanism: Immunomodulatory drug
+
+These concentrations are starting points, and optimization may be necessary depending on assay conditions and cell lines. It's important to perform detailed pharmacokinetic and dynamic studies and validate them in preclinical models before moving forward. Always refer to the latest research and consult with experts in AML research for further insights into mechanistic studies and clinical applicability.

@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ruxolitinib,JAK1/2 inhibitor,Inhibits JAK1/2 preventing cytokine signaling,0.5,100.0,nM,,ruxolitinib,False,CHEMBL1287854
+Dasatinib,BCR-ABL/Src family kinase inhibitor,Inhibits BCR-ABL and Src family kinases involved in cell division and survival,5.0,250.0,nM,,dasatinib,False,CHEMBL1421
+Auranofin,Anti-rheumatic agent,"Inhibits redox balance, affecting cancer cell survival",0.1,10.0,µM,,auranofin,False,CHEMBL1366
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis and inhibits vascular cell proliferation,0.1,2.0,µM,,arsenic trioxide,False,CHEMBL5483015
+Ibrutinib,Bruton's tyrosine kinase inhibitor,"Blocks BTK, disrupting B-cell receptor signaling",0.1,10.0,µM,,ibrutinib,False,CHEMBL1873475
+Itraconazole,Antifungal agent,Disrupts sterol synthesis affecting cell membrane integrity,1.0,10.0,µM,,itraconazole,False,CHEMBL5483033
+Metformin,AMPK activator/antidiabetic,"Activates AMPK, inhibiting mTOR pathway and cancer cell energy metabolism",1.0,10.0,mM,,metformin,False,CHEMBL1431
+Lovastatin,HMG-CoA reductase inhibitor,"Inhibits HMG-CoA reductase, reducing cholesterol synthesis impacting cancer cell survival",0.1,10.0,µM,,lovastatin,False,CHEMBL1201373
+Disulfiram,Alcohol aversion agent,Inhibits aldehyde dehydrogenase and other pathways affecting cancer cell viability,0.1,10.0,µM,,disulfiram,False,CHEMBL964
+Tamoxifen,Selective estrogen receptor modulator,Blocks estrogen receptors preventing cancer cell growth,0.1,10.0,µM,,tamoxifen,False,CHEMBL83
+Nifuroxazide,Antimicrobial agent,Inhibits STAT3 signaling pathway in cancer cells,0.1,10.0,µM,,nifuroxazide,False,CHEMBL244888
+Chloroquine,Antimalarial,Disrupts autophagy and lysosomal activity in cancer cells,1.0,10.0,µM,,chloroquine,False,CHEMBL76
+Bortezomib,Proteasome inhibitor,Inhibits 26S proteasome affecting protein degradation in cancer cells,1.0,100.0,nM,,bortezomib,False,CHEMBL325041
+Celecoxib,COX-2 inhibitor,"Inhibits COX-2 reducing prostaglandin synthesis, affecting cancer growth and survival",1.0,10.0,µM,,celecoxib,False,CHEMBL118
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response,0.1,10.0,µM,,thalidomide,False,CHEMBL426123
+Omeprazole,Proton pump inhibitor,Inhibits gastric acid secretion by blocking H+/K+ ATPase activity,1.0,50.0,µM,,omeprazole,False,CHEMBL1503

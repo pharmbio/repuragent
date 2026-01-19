@@ -1,0 +1,12 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+L-asparaginase,Enzyme,Breaks down asparagine to deprive leukemia cells of this amino acid,0.1,1.0,IU/mL,,l asparaginase,False,CHEMBL2108989
+Dasatinib,Tyrosine kinase inhibitor,Inhibits Bcr-Abl and other kinases involved in cell signaling,0.1,1.0,µM,,dasatinib,False,CHEMBL1421
+Sunitinib,Multi-kinase inhibitor,Inhibits receptor tyrosine kinases to prevent tumor growth,0.1,5.0,µM,,sunitinib,False,CHEMBL597365
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome function, leading to accumulation of pro-apoptotic factors",0.1,1.0,µM,,bortezomib,False,CHEMBL325041
+Ruxolitinib,Jak1/2 inhibitor,Inhibits Janus kinases to reduce signaling in malignancies,0.1,1.0,µM,,ruxolitinib,False,CHEMBL1287854
+Thalidomide,Immunomodulatory drug,Modulates immune response and inhibits angiogenesis,1.0,10.0,µM,,thalidomide,False,CHEMBL426123
+Pomalidomide,Immunomodulatory drug,"Similar to lenalidomide, with enhanced anti-tumor activity",1.0,10.0,µM,,pomalidomide,False,CHEMBL43452
+Cisplatin,Platinum-based chemotherapy,Alkylates DNA to prevent replication in cancer cells,1.0,10.0,µM,,cisplatin,False,CHEMBL197201
+Amodiaquine,Antimalarial,Inhibits heme polymerization in malaria and shows anti-cancer properties,1.0,10.0,µM,,amodiaquine,False,CHEMBL682
+Metformin,Biguanide,Reduces hepatic glucose production and may influence cancer metabolism,5.0,15.0,mM,,metformin,False,CHEMBL1431
+Curcumin,Natural product,Exhibits anti-inflammatory and anti-cancer properties through various mechanisms,10.0,30.0,µM,,curcumin,False,CHEMBL140

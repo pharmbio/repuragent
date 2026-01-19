@@ -1,0 +1,146 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a *starting set* of 20 clinically used drugs with published or plausible activity in AML (often including MOLM‑13 or closely related FLT3‑ITD AML lines). For each, I list:
+
+- **Primary oncology‑relevant target(s)**
+- **Evidence/notes in AML**
+- **Suggested IC₅₀ assay concentration range** for MOLM‑13 proliferation (e.g., CellTiter‑Glo, MTS, etc.)
+
+Use these as *screening ranges*; you will refine based on your own data. All concentrations are for in‑vitro use in standard 72‑h viability/proliferation assays unless noted.
+
+---
+
+## 1. Sorafenib  
+- **Type**: Multikinase inhibitor (FLT3, RAF, VEGFR, PDGFR)  
+- **Evidence**: Strong FLT3‑ITD AML activity; widely used in preclinical MOLM‑13 studies.  
+- **Assay range**: **1 nM – 10 µM** (1:3 or 1:5 serial dilutions; expect IC₅₀ in low‑nM to low‑100‑nM range).
+
+## 2. Midostaurin (PKC412)  
+- **Type**: Multikinase inhibitor (FLT3, KIT, PKC)  
+- **Evidence**: Approved for FLT3‑mutant AML; active in MOLM‑13.  
+- **Assay range**: **1 nM – 10 µM** (IC₅₀ typically ~10–100 nM in FLT3‑ITD lines).
+
+## 3. Quizartinib (AC220)  
+- **Type**: Selective FLT3 inhibitor  
+- **Evidence**: Potently kills FLT3‑ITD lines (MOLM‑13, MV4‑11).  
+- **Assay range**: **0.1 nM – 1 µM** (IC₅₀ often <5 nM).
+
+## 4. Gilteritinib (ASP2215)  
+- **Type**: FLT3/AXL inhibitor  
+- **Evidence**: Approved for relapsed/refractory FLT3‑mutant AML; robust activity in MOLM‑13.  
+- **Assay range**: **0.1 nM – 3 µM**.
+
+## 5. Dasatinib  
+- **Type**: SRC/ABL, KIT, PDGFR inhibitor  
+- **Evidence**: Reported anti‑proliferative effects in subsets of AML; some lines including FLT3‑ITD show sensitivity.  
+- **Assay range**: **1 nM – 10 µM** (IC₅₀ often ~10–200 nM for sensitive lines).
+
+## 6. Nilotinib  
+- **Type**: BCR‑ABL/KIT inhibitor  
+- **Evidence**: Modest activity in some AML models (esp. KIT or ABL‑dependent); may synergize with other agents.  
+- **Assay range**: **10 nM – 20 µM**.
+
+## 7. Venetoclax (ABT‑199)  
+- **Type**: BCL‑2 inhibitor  
+- **Evidence**: Approved in AML (with HMA or LDAC); potent activity in MOLM‑13; often sub‑µM IC₅₀.  
+- **Assay range**: **1 nM – 5 µM** (IC₅₀ frequently 5–200 nM in BCL‑2–dependent AML).
+
+## 8. Idelalisib  
+- **Type**: PI3Kδ inhibitor  
+- **Evidence**: PI3K/AKT signaling is active in AML; idelalisib has shown preclinical anti‑AML activity.  
+- **Assay range**: **10 nM – 20 µM** (start broad; expect µM‑range effects).
+
+## 9. Ibrutinib  
+- **Type**: BTK inhibitor  
+- **Evidence**: BTK involvement in AML signaling; reported to reduce proliferation in some AML lines and stem/progenitor cells.  
+- **Assay range**: **10 nM – 20 µM**.
+
+## 10. Ruxolitinib  
+- **Type**: JAK1/2 inhibitor  
+- **Evidence**: JAK/STAT hyperactivation in some AML subsets; preclinical suppression of AML proliferation and cytokine‑driven survival.  
+- **Assay range**: **10 nM – 20 µM**.
+
+## 11. Trametinib  
+- **Type**: MEK1/2 inhibitor  
+- **Evidence**: RAS/RAF/MEK pathway active in many AMLs; MEK inhibition can impair proliferation and sensitize to other agents (including FLT3 inhibitors).  
+- **Assay range**: **0.5 nM – 5 µM** (IC₅₀ often in low‑nM to 100‑nM range).
+
+## 12. Everolimus (RAD001)  
+- **Type**: mTORC1 inhibitor  
+- **Evidence**: mTOR signaling drives AML proliferation; everolimus inhibits growth of several AML lines and leukemic stem cells.  
+- **Assay range**: **1 nM – 10 µM**.
+
+## 13. Panobinostat (LBH589)  
+- **Type**: Pan‑HDAC inhibitor  
+- **Evidence**: Strong pro‑apoptotic/anti‑proliferative activity in AML lines including FLT3‑ITD; often synergistic with FLT3/BCL‑2 inhibitors.  
+- **Assay range**: **0.5 nM – 1 µM** (IC₅₀ typically 5–100 nM).
+
+## 14. Vorinostat (SAHA)  
+- **Type**: HDAC inhibitor  
+- **Evidence**: Broad anti‑AML activity; differentiation and apoptosis induction in multiple lines.  
+- **Assay range**: **50 nM – 20 µM** (IC₅₀ frequently ~0.5–5 µM).
+
+## 15. Azacitidine  
+- **Type**: DNA methyltransferase inhibitor (nucleoside analog)  
+- **Evidence**: Standard of care in AML/MDS; in vitro anti‑proliferative and differentiation effects in AML cells, including FLT3‑ITD lines.  
+- **Assay range**: **0.1 µM – 50 µM** (longer exposure, e.g., 72–120 h, needed due to incorporation mechanism).
+
+## 16. Decitabine  
+- **Type**: DNMT inhibitor  
+- **Evidence**: Similar to azacitidine; widely used AML drug; reduces proliferation and induces apoptosis/differentiation.  
+- **Assay range**: **0.01 µM – 10 µM** (72–120 h exposure).
+
+## 17. Thalidomide  
+- **Type**: IMiD; affects cereblon, TNF‑α, angiogenesis  
+- **Evidence**: Limited clinical AML efficacy, but preclinical data show effects on AML cell survival and microenvironment; more useful in combo.  
+- **Assay range**: **0.1 µM – 100 µM** (wide range; expect higher µM needed).
+
+## 18. Lenalidomide  
+- **Type**: IMiD (cereblon‑modulating)  
+- **Evidence**: Some activity in AML/MDS with specific genetic contexts (e.g., del(5q)); moderate direct cytotoxicity in vitro.  
+- **Assay range**: **0.01 µM – 50 µM**.
+
+## 19. Metformin  
+- **Type**: Biguanide; AMPK activator, mitochondrial complex I inhibitor  
+- **Evidence**: Multiple reports of anti‑leukemic effects via metabolic stress and mTOR inhibition; often requires higher µM–mM concentrations in vitro.  
+- **Assay range**: **0.1 mM – 20 mM** (consider 0.1, 0.3, 1, 3, 10, 20 mM).
+
+## 20. Atorvastatin (or Simvastatin)  
+- **Type**: HMG‑CoA reductase inhibitor (statin)  
+- **Evidence**: Mevalonate pathway crucial for leukemic cell survival; statins show anti‑AML activity in vitro and synergy with cytotoxics.  
+- **Assay range**:  
+  - Atorvastatin: **0.1 µM – 50 µM**  
+  - Simvastatin (active acid form): **0.1 µM – 20 µM**  
+
+---
+
+### Practical notes for IC₅₀ assays in MOLM‑13
+
+1. **Dose spacing**  
+   - Use 8–12 concentrations per drug (e.g., 1:3 or 1:5 dilutions) spanning at least 3–4 orders of magnitude around the expected IC₅₀.
+   - Include DMSO‑only control; keep final DMSO ≤0.1–0.2%.
+
+2. **Exposure time**  
+   - 72 h is standard for proliferation/viability IC₅₀ in AML lines.  
+   - For hypomethylating agents (azacitidine/decitabine), you may also test 96–120 h.
+
+3. **Readouts**  
+   - CellTiter‑Glo or similar ATP‑based assay is common for MOLM‑13.  
+   - Confirm selected hits with annexin V/7‑AAD or PI and optionally cell‑cycle analysis.
+
+4. **Replicates**  
+   - At least triplicate wells per concentration; perform ≥2 independent experiments.
+
+---
+
+If you tell me which pathways or combinations you’re especially interested in (e.g., FLT3 + BCL‑2 co‑targeting, metabolism, epigenetics), I can narrow this list to a smaller, more focused panel with tighter concentration ranges and suggested combinations.

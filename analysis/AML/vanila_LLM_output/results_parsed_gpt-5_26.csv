@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multi-kinase inhibitor,Inhibits RAF/VEGFR/PDGFR/FLT3 signaling to block proliferation,0.0001,1.0,µM,Approved for HCC/RCC/thyroid; strong activity in FLT3‑ITD AML including MOLM13.
+Ponatinib,Tyrosine kinase inhibitor,"Inhibits BCR‑ABL and FLT3, including ITD mutants",0.0001,1.0,µM,Approved for CML/Ph+ ALL; very potent in FLT3‑ITD AML and MOLM13.
+Sunitinib,Multi-kinase inhibitor,"Inhibits FLT3, VEGFR, PDGFR and KIT to suppress oncogenic signaling",0.001,10.0,µM,Approved for RCC/GIST; active in FLT3‑ITD AML lines.
+Dasatinib,Src/Abl tyrosine kinase inhibitor,Inhibits BCR‑ABL and Src-family kinases to blunt AML signaling,0.0005,5.0,µM,Approved for CML/Ph+ ALL; often synergizes with FLT3 blockade; MOLM13 responsive.
+Regorafenib,Multi-kinase inhibitor,Inhibits VEGFR/PDGFR/RAF and FLT3 to reduce proliferation,0.001,10.0,µM,Approved for CRC/GIST/HCC; anti‑proliferative in FLT3‑ITD AML.
+Cabozantinib,Tyrosine kinase inhibitor,"Inhibits MET, VEGFR2 and FLT3",0.0005,5.0,µM,Approved for RCC/thyroid; reported FLT3 inhibition and AML cell suppression.
+Trametinib,MEK inhibitor,"Inhibits MEK1/2, suppressing MAPK signaling downstream of FLT3",0.0005,10.0,µM,Approved for melanoma; activity in AML lines.
+Everolimus,mTOR inhibitor (mTORC1),"Inhibits mTORC1, reducing protein synthesis and growth signaling",0.0001,10.0,µM,Approved in transplant/solid tumors; anti‑proliferative in AML via mTOR blockade.
+Temsirolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 to block mTOR pathway signaling,0.0001,10.0,µM,Approved for RCC; shows AML line activity.
+Bortezomib,Proteasome inhibitor,Inhibits the 26S proteasome leading to apoptotic cell death,0.05,100.0,nM,Approved for MM/MCL; potent cytotoxicity in AML lines including MOLM13.
+Carfilzomib,Proteasome inhibitor,Irreversibly inhibits the 20S proteasome,0.0005,1.0,µM,Approved for MM; strong AML line activity; complementary to bortezomib.
+Panobinostat,Pan‑HDAC inhibitor,Inhibits histone deacetylases causing epigenetic repression of AML growth,0.0005,1.0,µM,Approved for MM; MOLM13 reported sensitive.
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases to alter transcription and induce apoptosis,0.005,50.0,µM,Also known as SAHA; approved for CTCL; broad AML cell‑line activity.
+Selinexor,XPO1 (nuclear export) inhibitor,Blocks exportin‑1 (XPO1)–mediated nuclear export of tumor suppressors,0.001,5.0,µM,Approved for MM/DLBCL; active in AML including FLT3‑ITD lines.
+Tipifarnib,Farnesyltransferase inhibitor,Blocks farnesylation of RAS and other targets to inhibit MAPK‑dependent signaling,0.01,50.0,µM,Approved for HRAS‑mutant HNSCC; historical AML activity.
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits TrxR, inducing oxidative stress and cytotoxicity",0.001,20.0,µM,Approved for rheumatoid arthritis; robust AML cytotoxicity; MOLM13 reported sensitive.
+Tigecycline,Mitochondrial translation inhibitor (antibiotic),"Inhibits mitochondrial protein synthesis, impairing leukemic stem/progenitor metabolism",0.1,100.0,µM,Active in AML lines including MOLM13.
+Disulfiram,Aldehyde dehydrogenase inhibitor,ALDH inhibition with copper‑dependent cytotoxicity in AML cells,0.001,10.0,µM,Include low‑micromolar copper; activity is copper‑dependent.
+Mebendazole,Anthelmintic; tubulin/hedgehog pathway modulator,Disrupts microtubules and hedgehog signaling to inhibit proliferation,0.01,20.0,µM,Shows AML cytotoxicity including in FLT3‑ITD contexts.
+Nelfinavir,HIV protease inhibitor,"Induces ER stress and inhibits PI3K–Akt signaling, causing proteotoxic stress",0.5,50.0,µM,Induces proteotoxic stress in AML lines.

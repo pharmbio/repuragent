@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Disulfiram,ALDH inhibitor / redox-modulating repurposing agent,Induces ALDH inhibition and oxidative/proteostasis stress; activity often copper-dependent,0.01,5.0,µM,Often tested with copper supplementation; text suggests ±CuCl2 0.1–1 µM matrix. Listed as “Disulfiram (± copper supplementation)”.
+Auranofin,Thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, disrupting cellular redox homeostasis",0.002,1.0,µM,
+Niclosamide,Wnt/STAT3 pathway modulator / mitochondrial uncoupler,Reported to affect Wnt/STAT3 signaling and act as a mitochondrial uncoupler,0.05,10.0,µM,Solubility can be limiting; consider max 5–10 µM per text.
+Tigecycline,Mitochondrial translation inhibitor (antibiotic),"Inhibits mitochondrial translation, targeting metabolic vulnerabilities",0.5,50.0,µM,
+Doxycycline,Tetracycline antibiotic / mitochondrial translation inhibitor,Inhibits mitochondrial translation; may synergize with other cellular stresses,1.0,100.0,µM,Alternative mentioned: Minocycline (in parentheses as an option).
+Atovaquone,Mitochondrial electron transport chain inhibitor,"Inhibits ETC complex III, impacting OXPHOS-dependent cells",0.2,20.0,µM,
+Metformin,Biguanide / mitochondrial complex I inhibitor,Inhibits mitochondrial complex I; typically requires high in-vitro concentrations,0.1,20.0,mM,Text notes mM range is typical in culture; often prepared as aqueous stock.
+Phenformin,Biguanide / mitochondrial complex I inhibitor,More potent biguanide than metformin; suppresses mitochondrial respiration (complex I),1.0,500.0,µM,Described as more potent than metformin in vitro.
+Chloroquine,Autophagy/lysosome inhibitor (lysosomotropic agent),"Raises lysosomal pH and inhibits autophagy/lysosomal function, potentially sensitizing AML cells",1.0,50.0,µM,
+Hydroxychloroquine,Autophagy/lysosome inhibitor (lysosomotropic agent),Similar to chloroquine; disrupts lysosomal function/autophagy,1.0,80.0,µM,Text notes it is sometimes less potent in vitro than chloroquine.
+Mebendazole,Benzimidazole anthelmintic / microtubule inhibitor,Disrupts microtubules via tubulin binding,0.01,10.0,µM,Included in anticancer repurposing literature including hematologic lines.
+Albendazole,Benzimidazole anthelmintic / microtubule inhibitor,Binds tubulin and disrupts microtubule dynamics,0.05,20.0,µM,
+Ivermectin,Antiparasitic / ion channel modulator,Modulates ion flux (noted as Cl− channel modulation) with reported leukemia cytotoxicity in some studies,0.2,20.0,µM,Mechanism described in text as ion flux/Cl− channel modulation.
+Sertraline,SSRI / lysosomotropic stress-inducing agent (repurposing),Induces lysosomal/membrane stress (beyond SSRI activity) in repurposing context,0.2,30.0,µM,Primary clinical class is SSRI antidepressant; anti-leukemia reports noted.
+Fluoxetine,SSRI / lysosomotropic agent (repurposing),SSRI with lysosomotropic/related stress mechanisms explored in cancer repurposing,0.5,50.0,µM,Text notes “similar SSRI/lysosomotropic mechanisms” to sertraline.
+Thioridazine,Antipsychotic / dopamine receptor antagonist,Dopamine receptor antagonism; reported activity against AML stem-like cells,0.1,20.0,µM,
+Pimozide,Antipsychotic; STAT5 pathway modulator (repurposing),Reported modulation/inhibition of STAT5 pathway in some leukemias,0.05,10.0,µM,
+Valproic acid,HDAC inhibitor (epigenetic modulator),"Inhibits histone deacetylases, supporting differentiation/epigenetic strategies",0.1,5.0,mM,Also referred to as VPA (alternative name/abbreviation).
+All-trans retinoic acid,Retinoid / differentiation agent,Activates retinoic acid signaling to promote differentiation,0.001,10.0,µM,Also referred to as ATRA (abbreviation). Light-sensitive; handle carefully per text.
+Celecoxib,COX-2 inhibitor (NSAID),Inhibits COX-2 with possible additional off-target cytotoxic effects in cancer cells,1.0,100.0,µM,Text mentions COX-2–related and off-target effects; precipitation/solubility risk noted elsewhere in text.

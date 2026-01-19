@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Auranofin,Gold compound,Induces oxidative stress in cancer cells,0.5,5.0,μM,Traditionally used for rheumatoid arthritis.,auranofin,False,CHEMBL1366
+Metformin,Antidiabetic drug,Modulates metabolic pathways with cancer inhibitory effects,1.0,10.0,mM,"Effective in multiple cancer models, including AML.",metformin,False,CHEMBL1431
+Arsenic trioxide,Chemotherapeutic agent,Promotes apoptosis and differentiation in leukemic cells,0.1,1.0,μM,Used in acute promyelocytic leukemia; potential in AML subsets.,arsenic trioxide,False,CHEMBL5483015
+Ibrutinib,BTK inhibitor,"Inhibits Bruton’s tyrosine kinase, delaying cancer growth",0.5,5.0,μM,"Primarily for chronic lymphocytic leukemia, but potential AML impact.",ibrutinib,False,CHEMBL1873475
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits multiple kinases, blocking cancer cell growth",5.0,20.0,nM,Approved for chronic myeloid leukemia; shows AML activity.,dasatinib,False,CHEMBL1421
+Leflunomide,Immunomodulatory drug,Inhibits pyrimidine synthesis affecting cell proliferation,10.0,50.0,μM,Potential for synergistic effects with other anticancer drugs.,leflunomide,False,CHEMBL960
+Thalidomide,Immunomodulatory drug,Exhibits anti-angiogenic and potential direct tumor effects,0.5,5.0,μM,Known for anti-tumor properties in certain cancers.,thalidomide,False,CHEMBL426123
+Celecoxib,COX-2 inhibitor,Anti-inflammatory effects with potential cancer inhibition,5.0,25.0,μM,Assessed for anticancer effects beyond inflammation pain relief.,celecoxib,False,CHEMBL118
+Disulfiram,Aldehyde dehydrogenase inhibitor,Inhibits cancer cell detoxification pathways,0.1,1.0,μM,Used in alcoholism treatment; identified for anticancer potential.,disulfiram,False,CHEMBL964
+Riluzole,Neuroprotective drug,Modulates glutamate signaling pathways in cancer cells,10.0,50.0,μM,Potential impact on malignancies involving glutamate pathways.,riluzole,False,CHEMBL744
+Chloroquine,"Antimalarial, autophagy inhibitor","Inhibits autophagy, reducing tumor cell survival",10.0,50.0,μM,Potential repurposing for cancer types harnessing autophagy.,chloroquine,False,CHEMBL76
+Nelfinavir,"Antiretroviral, protease inhibitor",Inhibition of protease activity affecting cancer cell survival,10.0,50.0,μM,Explored for the anticancer potential beyond antiviral use.,nelfinavir,False,CHEMBL365442
+Minocycline,Antibiotic,Anti-inflammatory and potential direct tumor growth inhibition,10.0,50.0,μM,Under exploration for a broader anticancer application.,minocycline,False,CHEMBL1200881
+Amiodarone,Antiarrhythmic agent,Induces apoptosis via disrupting cardiac pathways,10.0,50.0,μM,Potential repurposing in oncology targeting cell survival pathways.,amiodarone,False,CHEMBL1083993
+Doxycycline,Antibiotic,"Disrupts mitochondrial function, affecting cancer cell viability",10.0,50.0,μM,Potential pathway in disrupting mitochondrial biogenesis in cancer.,doxycycline,False,CHEMBL1256723
+Simvastatin,Statin,"Inhibits cholesterol biosynthesis, potentially affecting cell growth",0.1,1.0,μM,Anti-proliferative effects noted beyond cholesterol reduction.,simvastatin,False,CHEMBL1201391

@@ -1,0 +1,175 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a focused list of 20 existing, non‑chemotherapy drugs (or drugs already in/near clinical use) with evidence or strong rationale for repurposing in AML, especially FLT3‑ITD–positive lines such as MOLM‑13. For each, I give:
+
+- **Primary mechanism / rationale**
+- **Suggested IC₅₀ assay test range** (final concentrations in culture medium, e.g., RPMI + 10% FBS)
+- Notes on MOLM‑13 or AML data when available
+
+For small‑molecule drugs, a **10‑point half‑log dilution** (or similar) within the suggested range is typically appropriate. Always verify solubility and vehicle (usually DMSO ≤0.1% v/v).
+
+---
+
+## 1. Midostaurin (PKC412)  
+- **Mechanism:** Multikinase inhibitor; FLT3, PKC, KIT, VEGFR. FDA‑approved for FLT3‑mut AML.  
+- **Suggested range:** **0.1 nM – 5 µM**  
+- **AML/MOLM‑13:** Active against FLT3‑ITD AML; MOLM‑13 is a standard sensitive model. Expect IC₅₀ in the low‑ to mid‑nanomolar range.
+
+---
+
+## 2. Sorafenib  
+- **Mechanism:** RAF/VEGFR/PDGFR/FLT3 inhibitor; approved for hepatocellular and renal carcinoma.  
+- **Suggested range:** **1 nM – 10 µM**  
+- **AML/MOLM‑13:** Strong preclinical data in FLT3‑ITD AML, including MOLM‑13; typical IC₅₀ in the low‑hundreds of nM.
+
+---
+
+## 3. Ponatinib  
+- **Mechanism:** Pan‑tyrosine kinase inhibitor (BCR‑ABL, FLT3, KIT, FGFR, etc.); approved for CML/Ph+ ALL.  
+- **Suggested range:** **0.1 nM – 2 µM**  
+- **AML/MOLM‑13:** Potent against FLT3‑ITD; MOLM‑13 often shows IC₅₀ in the low‑nanomolar range.
+
+---
+
+## 4. Dasatinib  
+- **Mechanism:** Src/ABL family inhibitor; CML/ALL drug. Also inhibits KIT, some FLT3 signaling.  
+- **Suggested range:** **1 nM – 5 µM**  
+- **AML/MOLM‑13:** Reported anti‑AML activity, especially in some kinase‑driven contexts; MOLM‑13 viability often reduced in 10–100 nM range.
+
+---
+
+## 5. Nintedanib  
+- **Mechanism:** Triple angiokinase inhibitor (VEGFR/FGFR/PDGFR); approved for idiopathic pulmonary fibrosis and NSCLC.  
+- **Suggested range:** **1 nM – 10 µM**  
+- **AML/MOLM‑13:** Shown to impair AML blast proliferation and angiocrine support; typical AML IC₅₀ in the sub‑ to low‑µM range.
+
+---
+
+## 6. Venetoclax (ABT‑199)  
+- **Mechanism:** BCL‑2 inhibitor; approved in AML combos, CLL.  
+- **Suggested range:** **0.1 nM – 2 µM**  
+- **AML/MOLM‑13:** Very common AML model drug; MOLM‑13 often highly sensitive, IC₅₀ ≈ 1–50 nM.
+
+---
+
+## 7. Navitoclax (ABT‑263)  
+- **Mechanism:** BCL‑2/BCL‑XL/BCL‑W inhibitor; clinical‑stage molecule.  
+- **Suggested range:** **1 nM – 5 µM**  
+- **AML/MOLM‑13:** Broad anti‑leukemic activity; IC₅₀ in AML lines typically tens of nM to low‑µM.
+
+---
+
+## 8. Ruxolitinib  
+- **Mechanism:** JAK1/2 inhibitor; approved for myelofibrosis, PV, GVHD.  
+- **Suggested range:** **1 nM – 10 µM**  
+- **AML/MOLM‑13:** Synergistic with FLT3/BCL2 inhibitors and cytokine‑driven AML; IC₅₀ often in mid‑nM to low‑µM.
+
+---
+
+## 9. Ibrutinib  
+- **Mechanism:** BTK inhibitor; FDA‑approved for multiple B‑cell malignancies. Some off‑target ITK, TEC, EGFR.  
+- **Suggested range:** **10 nM – 20 µM**  
+- **AML/MOLM‑13:** Limited but positive reports of AML activity and signaling interference; expect IC₅₀ in high‑nM to µM.
+
+---
+
+## 10. Auranofin  
+- **Mechanism:** Oral gold complex; thioredoxin reductase inhibitor; approved for rheumatoid arthritis. Induces oxidative stress.  
+- **Suggested range:** **5 nM – 10 µM**  
+- **AML/MOLM‑13:** Preclinical AML data show apoptosis induction; AML IC₅₀ commonly ~0.1–2 µM.
+
+---
+
+## 11. Disulfiram (± copper)  
+- **Mechanism:** ALDH inhibitor; forms Cu‑complexes inhibiting proteasome/NPL4; alcoholism treatment.  
+- **Suggested range:**  
+  - **Disulfiram alone:** **50 nM – 5 µM**  
+  - **With Cu²⁺:** 0.5–2 µM DSF + 0.5–2 µM CuCl₂ (1:1–1:2 molar)  
+- **AML/MOLM‑13:** Robust literature in AML; MOLM‑13 typically sensitive in low‑µM range, especially with copper.
+
+---
+
+## 12. Metformin  
+- **Mechanism:** AMPK activator; complex I inhibitor; diabetes drug.  
+- **Suggested range:** **0.1 mM – 20 mM**  
+- **AML/MOLM‑13:** Several AML lines respond at 1–10 mM; use as metabolic stressor or combo agent.
+
+---
+
+## 13. Niclosamide  
+- **Mechanism:** Anti‑helminthic; uncouples oxidative phosphorylation; modulates Wnt/STAT3/mTOR.  
+- **Suggested range:** **50 nM – 10 µM**  
+- **AML/MOLM‑13:** Reported anti‑AML activity via Wnt and mitochondrial disruption; IC₅₀ usually sub‑ to low‑µM.
+
+---
+
+## 14. Mebendazole  
+- **Mechanism:** Anti‑helminthic; tubulin polymerization inhibitor, hedgehog pathway modulator.  
+- **Suggested range:** **50 nM – 20 µM**  
+- **AML/MOLM‑13:** Broad anti‑cancer data; AML lines generally respond around 1–10 µM.
+
+---
+
+## 15. Clofazimine  
+- **Mechanism:** Leprosy drug; redox‑cycling, ROS generation, membrane effects.  
+- **Suggested range:** **10 nM – 10 µM**  
+- **AML/MOLM‑13:** Reported to induce apoptosis and inhibit proliferation in leukemia models; expect IC₅₀ in sub‑ to low‑µM.
+
+---
+
+## 16. Chloroquine / Hydroxychloroquine  
+- **Mechanism:** Lysosomotropic autophagy inhibitor; antimalarial/anti‑rheumatic.  
+- **Suggested range:** **0.5 µM – 50 µM**  
+- **AML/MOLM‑13:** Often used to block autophagy in AML and tested in combos; single‑agent IC₅₀ usually 10–30 µM.
+
+---
+
+## 17. Bortezomib  
+- **Mechanism:** 26S proteasome inhibitor; approved for multiple myeloma and mantle cell lymphoma.  
+- **Suggested range:** **0.5 nM – 500 nM**  
+- **AML/MOLM‑13:** Well‑documented anti‑AML effect; most AML lines (incl. MOLM‑13) show IC₅₀ ~5–50 nM.
+
+---
+
+## 18. Carfilzomib  
+- **Mechanism:** Irreversible proteasome inhibitor; multiple myeloma drug.  
+- **Suggested range:** **0.5 nM – 500 nM**  
+- **AML/MOLM‑13:** Potent in AML preclinical models; IC₅₀ usually in low‑ to mid‑nM.
+
+---
+
+## 19. Panobinostat  
+- **Mechanism:** Pan‑HDAC inhibitor; approved for multiple myeloma.  
+- **Suggested range:** **0.5 nM – 1 µM**  
+- **AML/MOLM‑13:** Strong pro‑apoptotic effect in AML; typical IC₅₀ for AML lines in 5–100 nM range.
+
+---
+
+## 20. Vorinostat (SAHA)  
+- **Mechanism:** HDAC inhibitor; approved for CTCL.  
+- **Suggested range:** **10 nM – 10 µM**  
+- **AML/MOLM‑13:** Extensively tested in AML; IC₅₀ usually ~0.5–5 µM in cell lines, lower in combinations.
+
+---
+
+### Practical IC₅₀ Assay Notes (for MOLM‑13)
+
+- **Cell density:** 2–5 × 10⁴ cells/well in 96‑well plates in RPMI‑1640 + 10% FBS (or your standard medium).  
+- **Exposure time:** 48–72 h is common for proliferation/viability readouts (e.g., CellTiter‑Glo, MTS, resazurin).  
+- **Vehicle:** Keep DMSO or ethanol at constant final concentration (≤0.1%) across all wells, including controls.  
+- **Controls:**  
+  - Positive control for cytotoxicity (e.g., high‑dose bortezomib or staurosporine).  
+  - Untreated and vehicle controls.  
+- **Curve design:** 8–10 serial dilutions (half‑log or 3‑fold) spanning the ranges above should allow robust IC₅₀ fitting.
+
+If you specify which subset is most interesting (e.g., kinase inhibitors vs metabolic vs autophagy), I can refine this to 4–6 top candidates and design a minimal, statistically powered IC₅₀ experiment around MOLM‑13 (including plate layout and data analysis approach).

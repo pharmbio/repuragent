@@ -1,0 +1,73 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest plausible repurposing candidates and **starting-point in‑vitro IC50 assay concentration ranges** for AML (incl. **MOLM‑13**, a FLT3‑ITD AML line), but I can’t reliably claim that each will inhibit MOLM‑13 specifically without you cross‑checking against published MOLM‑13 data (because sensitivity can vary by lab conditions and subclones). Below is a **prioritized list of existing/approved drugs** with AML‑relevant mechanisms and **experimentally testable dose ranges** suitable for an initial 8–12 point IC50 curve.
+
+### Practical assay defaults (so the ranges below make sense)
+- **Cell line**: MOLM‑13 (and ideally a panel: MV4‑11, THP‑1, HL‑60, OCI‑AML3)
+- **Readout**: CellTiter‑Glo or Resazurin; **72 h** and/or **96 h**
+- **Curve**: 8–12 points, **3‑fold serial dilution**, top dose as listed
+- **Vehicle**: DMSO (keep constant, typically **≤0.1%**)
+- **Replicates**: ≥3 technical, ≥3 biological
+- **Note**: Some are **prodrugs** or require metabolic activation; I flag those.
+
+---
+
+## Top 20 repurposable existing drugs for AML (with IC50 assay starting ranges)
+
+> Concentration ranges are **starting test windows** (not claimed true IC50s). In many cases, AML IC50s land in the low nM–low µM range, but you want a wide bracket first.
+
+| # | Drug (status / common use) | Target / rationale in AML | Suggested IC50 curve range (top → bottom) |
+|---|---|---|---|
+| 1 | **Midostaurin** (approved for FLT3+ AML) | Multikinase incl. **FLT3**; MOLM‑13 often responsive | **1 µM → 0.3 nM** |
+| 2 | **Gilteritinib** (approved for FLT3+ AML) | **FLT3/AXL**; strong activity in FLT3‑ITD lines (e.g., MOLM‑13) | **300 nM → 0.1 nM** |
+| 3 | **Quizartinib** (approved in some regions; FLT3) | Potent **FLT3** inhibitor; classic MOLM‑13 tool/therapy | **300 nM → 0.1 nM** |
+| 4 | **Sorafenib** (approved for RCC/HCC) | Multikinase; **FLT3** inhibition; used off‑label in AML | **10 µM → 3 nM** |
+| 5 | **Ponatinib** (approved for CML/ALL) | Potent multikinase (incl. FLT3 variants); resistance contexts | **1 µM → 0.3 nM** |
+| 6 | **Dasatinib** (approved for CML/ALL) | SRC/ABL family; can suppress AML signaling in subsets | **10 µM → 3 nM** |
+| 7 | **Trametinib** (approved melanoma) | **MEK1/2**; RAS/MAPK‑driven AML subsets | **1 µM → 0.3 nM** |
+| 8 | **Everolimus** (approved cancers/transplant) | **mTORC1**; PI3K/AKT/mTOR axis common in AML | **10 µM → 3 nM** |
+| 9 | **Temsirolimus** (approved RCC) | **mTORC1**; similar rationale | **10 µM → 3 nM** |
+|10 | **Venetoclax** (approved CLL/AML combos) | **BCL‑2** inhibitor; strong anti‑AML in many contexts | **10 µM → 3 nM** |
+|11 | **Navitoclax (ABT‑263)** (clinical stage) | BCL‑XL/BCL‑2; can hit venetoclax‑resistant states | **10 µM → 3 nM** |
+|12 | **Pimozide** (approved antipsychotic) | Reported STAT5/STAT signaling interference; AML repurposing literature | **30 µM → 10 nM** |
+|13 | **Mebendazole** (approved anthelmintic) | Microtubule effects; reported anti‑leukemia activity | **30 µM → 10 nM** |
+|14 | **Niclosamide** (approved anthelmintic) | WNT/β‑catenin, STAT3, mitochondrial uncoupling; AML activity reports | **10 µM → 3 nM** |
+|15 | **Disulfiram** (approved for alcoholism) | ALDH/proteostasis stress; often **Cu²⁺‑dependent** cytotoxicity | **30 µM → 10 nM** *(± copper condition)* |
+|16 | **Auranofin** (approved RA) | **Thioredoxin reductase** inhibition → ROS stress; AML sensitivity reports | **10 µM → 3 nM** |
+|17 | **Arsenic trioxide** (approved APL) | Redox/proteotoxic stress; broader AML effects at higher doses | **30 µM → 10 nM** |
+|18 | **Valproic acid** (approved antiepileptic) | HDAC inhibition (weak); differentiation/epigenetic modulation | **10 mM → 3 µM** |
+|19 | **Hydroxychloroquine** (approved antimalarial) | Autophagy inhibition (lysosomal); combination potential in AML | **200 µM → 60 nM** |
+|20 | **Metformin** (approved T2D) | Mitochondrial complex I/AMPK; anti‑proliferative in some AML models | **50 mM → 15 µM** |
+
+---
+
+## Notes that matter for making these “experimentally testable”
+1. **Solubility/handling**
+   - Niclosamide, mebendazole, pimozide can have solubility limits; you may need lower top doses or careful DMSO stocks.
+2. **Prodrug/activation caveats**
+   - Some drugs show weaker in‑vitro effects unless the active form is present or metabolism is mimicked (less of an issue for most above, but always verify).
+3. **MOLM‑13 specifics**
+   - MOLM‑13 is typically **FLT3‑ITD** and tends to show strong responses to FLT3 inhibitors (gilteritinib/quizartinib/midostaurin/sorafenib), but resistance can emerge depending on culture conditions.
+4. **Choose your curve top dose strategically**
+   - For targeted kinase inhibitors: a **top of 0.3–1 µM** often brackets IC50 cleanly while avoiding off‑target toxicity.
+   - For “repurposed non‑oncology” agents: **10–30 µM** top is common for initial screening, but watch solubility and DMSO.
+
+---
+
+## If you want this tuned to MOLM‑13 specifically
+Tell me:
+- Assay duration (48/72/96 h), readout (CTG vs flow apoptosis), serum %, and whether you want **clinically achievable** concentration windows only.
+- Whether you want **only FDA‑approved** drugs (excluding navitoclax, etc.).
+- Whether you want to **exclude AML‑approved agents** (e.g., venetoclax, gilteritinib) and focus strictly on “true repurposing.”
+
+I can then refine the list to “most likely to hit MOLM‑13” and tighten the proposed concentration ranges (including suggested top doses that stay within solubility and typical on‑target exposure).

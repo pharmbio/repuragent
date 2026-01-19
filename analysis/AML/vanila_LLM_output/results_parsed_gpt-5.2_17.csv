@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Midostaurin,Kinase inhibitor (PKC/FLT3 inhibitor),Inhibits FLT3 and PKC signaling to reduce AML cell proliferation,0.3,300.0,nM,Approved in FLT3+ AML; listed as PKC/FLT3 inhibitor
+Gilteritinib,Kinase inhibitor (FLT3/AXL inhibitor),Inhibits FLT3 and AXL kinases to suppress FLT3-driven AML growth,0.1,100.0,nM,Approved for relapsed/refractory FLT3+ AML
+Quizartinib,Kinase inhibitor (FLT3 inhibitor),Selective FLT3 inhibition to block FLT3-ITD signaling,0.03,30.0,nM,Approved in some regions/late-stage use; strong MOLM-13 relevance
+Crenolanib,Kinase inhibitor (FLT3/PDGFR inhibitor),Inhibits FLT3 and PDGFR to reduce proliferative signaling,0.3,300.0,nM,Investigational/clinical
+Sorafenib,Multi-kinase inhibitor (includes FLT3 activity),Broad kinase inhibition including FLT3 to impair AML cell growth,3.0,3000.0,nM,Also expressed as 0.003–3 µM in text; used off-label in AML contexts
+Ponatinib,Multi-kinase inhibitor (includes FLT3),Inhibits multiple kinases including FLT3 to suppress oncogenic signaling,0.3,300.0,nM,Approved for CML/ALL; noted to include FLT3 activity
+Dasatinib,Kinase inhibitor (SRC/ABL inhibitor),Inhibits SRC-family and ABL kinases; may suppress subsets of AML and work in combinations,1.0,1000.0,nM,Combinations reported in AML subsets
+Ruxolitinib,Kinase inhibitor (JAK1/2 inhibitor),Inhibits JAK-STAT signaling to impact cytokine-driven AML growth,30.0,10.0,µM,Range given as 30 nM–10 µM; converted here to µM (0.03–10 µM equivalent)
+Venetoclax,BCL-2 inhibitor (apoptosis regulator),Inhibits BCL-2 to promote apoptosis in AML cells,0.3,300.0,nM,Approved in AML combinations; MOLM-13 often sensitive
+Panobinostat,HDAC inhibitor (epigenetic regulator),Inhibits histone deacetylases to alter transcription and induce anti-leukemic effects,0.3,300.0,nM,Approved in multiple myeloma; AML activity noted
+Vorinostat,HDAC inhibitor (epigenetic regulator),Inhibits histone deacetylases to modulate gene expression and reduce proliferation,30.0,10.0,µM,Also listed as SAHA (alternative name); approved for CTCL
+Decitabine,DNMT inhibitor (hypomethylating agent),Inhibits DNA methyltransferase leading to DNA hypomethylation and altered gene expression,10.0,10.0,µM,Range given as 10 nM–10 µM; effect depends on schedule and may require longer exposure
+Azacitidine,Hypomethylating agent (DNMT/RNA effects),"Incorporates into RNA/DNA and inhibits DNMT, affecting methylation and RNA processing",30.0,30.0,µM,Range given as 30 nM–30 µM; often needs longer exposure for maximal effect
+Alisertib,Aurora kinase inhibitor (Aurora A inhibitor),Inhibits Aurora A kinase to disrupt mitosis and reduce AML cell viability,3.0,3.0,µM,Range given as 3 nM–3 µM; clinical oncology drug with AML activity reported
+Bortezomib,Proteasome inhibitor,Inhibits the 26S proteasome causing proteotoxic stress and apoptosis,0.3,30.0,nM,Approved in multiple myeloma; AML activity in subsets
+Carfilzomib,Proteasome inhibitor,Irreversibly inhibits the proteasome leading to accumulation of misfolded proteins and apoptosis,1.0,100.0,nM,Approved proteasome inhibitor
+Selinexor,Nuclear export inhibitor (XPO1 inhibitor),"Inhibits XPO1/CRM1-mediated nuclear export, retaining tumor suppressors in nucleus and inducing apoptosis",3.0,1.0,µM,Range given as 3 nM–1 µM; approved in myeloma/DLBCL; AML trials mentioned
+Arsenic trioxide,Differentiation/apoptosis agent (arsenic compound),Induces apoptosis and differentiation (classically in APL) and can exert broader AML cytotoxicity in vitro,0.1,10.0,µM,Also abbreviated ATO; approved in APL
+Metformin,Antidiabetic biguanide (metabolic modulator),Inhibits mitochondrial complex I causing energetic stress and downstream growth inhibition (variable in AML),0.1,30.0,mM,Text notes millimolar concentrations are common in vitro
+Chloroquine,Autophagy/lysosomal inhibitor (antimalarial),Raises lysosomal pH and inhibits autophagy/lysosomal function; often explored in combination therapies,0.3,50.0,µM,Text lists 'Chloroquine or Hydroxychloroquine' as alternatives; combo potential noted

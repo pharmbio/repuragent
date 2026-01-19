@@ -1,0 +1,38 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is an exciting area of research, as it can potentially lead to new therapeutic options by using drugs that are already approved for other indications. When looking at existing drugs that might be repurposed, several factors such as existing evidence of activity against AML cells, mechanism of action, safety, and pharmacokinetics are considered. Below is a list of drugs that have been studied for potential repurposing for AML, specifically targeting proliferation in AML cell lines like MOLM13, along with typical experimentally testable concentrations for IC50 assays:
+
+1. **Venetoclax**: An inhibitor of BCL-2, tested in the nanomolar range (usually around 1-10 nM).
+2. **Auranofin**: A rheumatoid arthritis treatment with inhibition of thioredoxin reductase, tested around 1-2 µM.
+3. **Arsenic trioxide**: Used in acute promyelocytic leukemia (APL), typically tested around 1-2 µM.
+4. **Itraconazole**: An antifungal agent with modulation of the Hedgehog pathway, tested around 1-10 µM.
+5. **Chloroquine or Hydroxychloroquine**: Used for malaria and other conditions, these lysosomotropic agents can be tested at 5-20 µM.
+6. **Celecoxib**: A COX-2 inhibitor (anti-inflammatory), tested around 10-50 µM.
+7. **Disulfiram**: An alcohol dehydrogenase inhibitor, tested at 1-10 µM.
+8. **Ruxolitinib**: A JAK1/2 inhibitor used in myelofibrosis, tested around 1-10 µM.
+9. **Metformin**: An antidiabetic drug shown to impact cancer metabolism, tested at 1-10 mM.
+10. **Lovastatin**: A cholesterol-lowering agent targeting HMG-CoA reductase, tested at 1-10 µM.
+11. **Thalidomide**: Used in multiple myeloma, can be tested around 1-10 µM.
+12. **Minocycline**: An antibiotic with anti-apoptotic properties tested at 10-20 µM.
+13. **Clofazimine**: An anti-leprosy drug with potential anti-cancer effects, tested around 1-10 µM.
+14. **Promethazine**: An antihistamine, shown to have cytotoxic effects on cancer cells, tested at around 10-30 µM.
+15. **Fenretinide (4-HPR)**: A synthetic retinoid studied in various cancers, tested at 1-10 µM.
+16. **Quinacrine**: An antimalarial drug, tested at 1-10 µM.
+17. **Albendazole**: An anti-parasitic agent, tested at 1-10 µM.
+18. **Riluzole**: Used in ALS with actions on glutamate release, tested at 1-10 µM.
+19. **Ciclopirox**: An antifungal agent, tested at 1-10 µM.
+20. **Propranolol**: A beta-blocker with anti-proliferative effects, tested at 10-50 µM.
+
+Please note that the IC50 values can vary significantly depending on the experimental setup, such as cell line differences, assay type, and conditions. Thus, initial testing around the suggested concentrations with a wider range may be warranted to accurately determine the IC50 in MOLM13 cells or other AML cell lines.
+
+Moreover, these suggestions are based on available literature and do not replace the need for thorough preclinical and clinical investigations to ascertain efficacy and safety in the context of AML.

@@ -1,0 +1,123 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or well‑characterized clinical compounds) that have been reported to inhibit AML cell proliferation (many specifically active in FLT3‑ITD AML or lines related to MOLM13). For each I give a short rationale and an experimentally testable IC50 dilution scheme (a recommended top concentration and a 10‑point 3‑fold serial dilution). I also include a brief note about expected potency where available and practical assay tips (incubation, seeding, controls). These suggestions are intended as starting points for in‑vitro IC50 determination on MOLM13 (adjust after pilot experiments).
+
+Assay format recommended (general)
+- Readout: viability assay (CellTiter‑Glo preferred for suspension cells) at 72 hours for most inhibitors. Note: DNA‑hypomethylating agents (azacitidine/decitabine) often need longer exposures or repeated dosing to show maximal effect.  
+- MOLM13 seeding (96‑well): 5,000–25,000 cells/well in 100 μL (adjust to ensure exponential growth over assay period).  
+- Vehicle: keep final DMSO ≤0.1–0.2%.  
+- Dilution series: 10 concentrations, 3‑fold serial dilutions unless stated otherwise. Generate IC50 curves and fit with a 4‑parameter logistic model.  
+- Controls: untreated, vehicle, and a positive control such as cytarabine (Ara‑C) or a known FLT3 inhibitor (gilteritinib) on each plate.
+
+Top concentration and dilution scheme notation: “Top conc / 3‑fold x10” means a 10‑point 3‑fold serial dilution starting at the stated top concentration.
+
+Drugs (ranked by relevance to MOLM13 / FLT3‑ITD sensitivity and broader AML activity)
+
+1) Gilteritinib (FLT3/AXL inhibitor)  
+- Rationale: Approved FLT3 inhibitor active in FLT3‑ITD AML; MOLM13 is FLT3‑ITD positive and typically sensitive.  
+- Test series: 1 μM / 3‑fold x10 (gives range 1 μM → ~1 pM)  
+- Expected IC50 (guide): low nM (often 1–50 nM in FLT3‑driven lines)
+
+2) Quizartinib (FLT3 inhibitor)  
+- Rationale: Potent FLT3 inhibitor with activity against FLT3‑ITD cell lines.  
+- Test series: 1 μM / 3‑fold x10  
+- Expected IC50: low nM
+
+3) Midostaurin (multi‑kinase, FLT3 inhibitor)  
+- Rationale: Approved FLT3‑targeting multi‑kinase inhibitor used in AML.  
+- Test series: 5 μM / 3‑fold x10 (range 5 μM → ~5 pM)  
+- Expected IC50: low‑to‑mid nM to low μM depending on context
+
+4) Sorafenib (multi‑kinase, includes FLT3)  
+- Rationale: Multi‑kinase inhibitor with activity in FLT3‑ITD AML preclinical models.  
+- Test series: 5 μM / 3‑fold x10  
+- Expected IC50: nM–low μM range
+
+5) Ponatinib (pan‑TKI including FLT3)  
+- Rationale: Potent TKI with activity against FLT3 and other kinases; reported activity in FLT3‑driven AML lines.  
+- Test series: 1 μM / 3‑fold x10
+
+6) Dasatinib (SRC/ABL multi‑kinase inhibitor)  
+- Rationale: Broad TKI; has shown cytotoxicity in some AML cell lines and can be active in combination settings.  
+- Test series: 1 μM / 3‑fold x10
+
+7) Venetoclax (BCL2 inhibitor)  
+- Rationale: BCL2 inhibition produces apoptosis in many AML contexts; venetoclax is clinically active in AML combinations. MOLM13 line may be variably sensitive.  
+- Test series: 1 μM / 3‑fold x10  
+- Expected IC50: low nM to sub‑micromolar depending on BCL2 dependence
+
+8) Navitoclax (ABT‑263; BCL2/BCL‑XL inhibitor)  
+- Rationale: Broad BCL‑2 family inhibitor; potent apoptosis inducer in some AML models.  
+- Test series: 1 μM / 3‑fold x10
+
+9) Bortezomib (proteasome inhibitor)  
+- Rationale: Induces proteotoxic stress/apoptosis in leukemia cells; has preclinical activity in AML lines.  
+- Test series: 1 μM / 3‑fold x10 (you may also run a lower top conc e.g., 100 nM for high sensitivity)  
+- Note: proteasome inhibitors often show activity in the low‑nM to sub‑μM range.
+
+10) Carfilzomib (proteasome inhibitor)  
+- Rationale: Second‑generation proteasome inhibitor with potent activity in some hematologic malignancies.  
+- Test series: 500 nM / 3‑fold x10
+
+11) Panobinostat (pan‑HDAC inhibitor)  
+- Rationale: HDAC inhibitors show anti‑proliferative activity in AML cell lines including MOLM13 in many studies.  
+- Test series: 500 nM / 3‑fold x10  
+- Expected IC50: low‑to‑mid nM to sub‑μM for sensitive lines
+
+12) Vorinostat (SAHA; HDAC inhibitor)  
+- Rationale: Clinically used HDAC inhibitor with reported AML activity.  
+- Test series: 5 μM / 3‑fold x10
+
+13) Decitabine (DNA methyltransferase inhibitor)  
+- Rationale: Hypomethylating agent used in AML therapy; antiproliferative effects may require longer exposure.  
+- Test series: 10 μM / 3‑fold x10  
+- Note: For decitabine/azacitidine, consider extended exposure (5–7 days) or repeated dosing to capture epigenetic effects.
+
+14) Azacitidine (hypomethylating agent)  
+- Rationale: Standard agent in AML — can reduce proliferation and induce differentiation/apoptosis in vitro.  
+- Test series: 10 μM / 3‑fold x10
+
+15) Selinexor (XPO1 nuclear export inhibitor)  
+- Rationale: Approved for other hematologic malignancies; XPO1 inhibition causes nuclear retention of tumor suppressors and has activity in AML models.  
+- Test series: 1 μM / 3‑fold x10
+
+16) Trametinib (MEK inhibitor)  
+- Rationale: MAPK pathway inhibition can reduce proliferation; may be useful in combination where MAPK is active. Some AML lines respond.  
+- Test series: 1 μM / 3‑fold x10
+
+17) Everolimus (mTORC1 inhibitor)  
+- Rationale: PI3K/AKT/mTOR pathway is frequently active in AML; mTOR inhibitors show antiproliferative effects.  
+- Test series: 10 μM / 3‑fold x10
+
+18) Idelalisib (PI3Kδ inhibitor)  
+- Rationale: PI3K pathway modulates survival; idelalisib has shown activity in some AML contexts (may be more active in lymphoid malignancies).  
+- Test series: 10 μM / 3‑fold x10
+
+19) Alvocidib (flavopiridol; CDK9/CDK inhibitor)  
+- Rationale: CDK inhibitors (alvocidib) induce transcriptional suppression of short‑half‑life survival proteins (e.g., MCL1) — tested in AML clinical studies.  
+- Test series: 1 μM / 3‑fold x10
+
+20) 17‑AAG (tanespimycin; HSP90 inhibitor)  
+- Rationale: HSP90 inhibition degrades many oncogenic kinases (including FLT3) and is cytotoxic in AML cell lines.  
+- Test series: 1 μM / 3‑fold x10
+
+Practical notes and tips
+- Use parallel vehicle controls and at least triplicate wells per concentration.  
+- For very potent targeted inhibitors (expected nM IC50), you can run a tighter top concentration (e.g., 100–1,000 nM) to get good curve fitting; for compounds with uncertain potency use 10 μM top conc.  
+- If solubility limits appear, reduce top concentration and ensure compound fully soluble in vehicle.  
+- For combination experiments (common in AML), it’s useful to run single‑agent IC50s first.  
+- If you particularly want MOLM13‑specific literature values, MV4‑11 (another FLT3‑ITD line) is commonly reported and often shows similar sensitivity to many FLT3 inhibitors; results for MOLM13 are often in the same potency ballpark but pilot testing is essential.
+
+If you want, I can:
+- Provide a ready‑to‑use plate map and pipetting plan for 96‑well IC50 assays using the 10‑point 3‑fold series for any subset of these drugs.  
+- Narrow the list to only FDA‑approved non‑oncology drugs with reported AML activity (true drug‑repurposing candidates) if that’s your goal.

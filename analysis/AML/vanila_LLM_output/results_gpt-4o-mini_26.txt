@@ -1,0 +1,80 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic applications is a promising approach in cancer treatment, including acute myeloid leukemia (AML). Below is a list of 20 drugs that have been suggested for potential repurposing in AML treatment, along with experimentally relevant concentrations for IC50 assays. Please note that the suggested concentrations are indicative and may require optimization based on specific experimental conditions.
+
+1. **Azacitidine (Vidaza)**
+   - IC50 range: 0.1 - 10 µM
+
+2. **Decitabine (Dacogen)**
+   - IC50 range: 0.05 - 5 µM
+
+3. **Valproic Acid (Depakote)**
+   - IC50 range: 0.5 - 10 mM
+
+4. **Ascorbic Acid (Vitamin C)**
+   - IC50 range: 1 - 6 mM
+
+5. **Vorinostat (Zolinza)**
+   - IC50 range: 1 - 7 µM
+
+6. **Entinostat (SNDX-275)**
+   - IC50 range: 0.1 - 5 µM
+
+7. **Dasatinib (Sprycel)**
+   - IC50 range: 0.1 - 1 µM
+
+8. **Imatinib (Gleevec)**
+   - IC50 range: 0.5 - 5 µM
+
+9. **Tariquidar (XR9576)**
+   - IC50 range: 0.5 - 6 µM
+
+10. **Dexamethasone**
+    - IC50 range: 0.03 - 1 µM
+
+11. **Cyclophosphamide**
+    - IC50 range: 50 - 500 µM
+
+12. **Methotrexate**
+    - IC50 range: 0.1 - 10 µM
+
+13. **Tamoxifen**
+    - IC50 range: 1 - 10 µM
+
+14. **Ruxolitinib (Jakafi)**
+    - IC50 range: 0.5 - 5 µM
+
+15. **Aspirin**
+    - IC50 range: 0.5 - 5 mM
+
+16. **Metformin**
+    - IC50 range: 1 - 10 mM
+
+17. **Curcumin**
+    - IC50 range: 1 - 10 µM
+
+18. **Quercetin**
+    - IC50 range: 5 - 25 µM
+
+19. **N-acetylcysteine (NAC)**
+    - IC50 range: 0.5 - 5 mM
+
+20. **Rapamycin (Sirolimus)**
+    - IC50 range: 0.1 - 1 µM
+
+****Note:**** 
+1. **Validation Required**: The effective concentrations for IC50 assays should be validated in specific AML cell lines including MOLM13, as the responses can vary based on the cell line and culture conditions.
+2. **Synergistic Effects**: Combination assays with other agents may also be beneficial to explore potential synergistic effects.
+3. **Further Research Needed**: All proposed repurposing strategies should be supported by rigorous experimental data before considering clinical applications.
+
+Always consult with relevant literature and conduct the necessary preclinical studies to ensure efficacy and safety in AML treatment regimens.

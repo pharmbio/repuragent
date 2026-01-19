@@ -1,0 +1,65 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest *plausible* repurposing candidates for AML (with emphasis on MOLM-13/FLT3-ITD biology) and give **experimentally testable IC50 assay concentration ranges**.  
+However, I can’t responsibly claim these will inhibit MOLM-13 without citing specific evidence, and **IC50s vary a lot** by assay format (72 h vs 96 h, serum %, CellTiter-Glo vs trypan blue, seeding density, etc.). So below I provide **practical screening ranges** that are commonly used to *measure* IC50s in AML cell lines (including MOLM-13), plus a “typical potency tier” to help you plan plate layouts. You should confirm with a viability assay and include positive controls (e.g., quizartinib/gilteritinib for MOLM-13).
+
+## Suggested 20 repurposable (existing) drugs + IC50-testing concentration ranges (MOLM-13-friendly panel)
+
+**How to use the ranges:** run a **10-point, 3-fold dilution series** spanning the “Suggested IC50 range to test”. If you want one standard series for all compounds, use **0.3 nM–30 µM** (covers most).
+
+| # | Drug (approved/clinical use) | Primary target / rationale for AML | Suggested IC50 range to test in MOLM-13 (final conc.) | Typical potency tier (expectation) |
+|---|---|---|---|---|
+| 1 | **Midostaurin** | Multi-kinase incl. **FLT3**; AML precedent | **0.3–300 nM** | High (nM–low nM) |
+| 2 | **Sunitinib** | Multi-kinase incl. FLT3/KIT/VEGFR | **1–1000 nM** | High–mid |
+| 3 | **Sorafenib** | RAF + FLT3 inhibition; used off-label in FLT3-ITD AML | **1–1000 nM** | High–mid |
+| 4 | **Dasatinib** | SRC/ABL; can hit kinases relevant to AML signaling | **0.3–300 nM** | High |
+| 5 | **Bosutinib** | SRC/ABL; potential AML cytostatic effects | **3–3000 nM** | Mid |
+| 6 | **Ponatinib** | Broad kinase; reported activity in FLT3-mut AML contexts | **0.3–300 nM** | High |
+| 7 | **Nilotinib** | ABL/KIT/PDGFR; can affect AML subsets | **10 nM–10 µM** | Mid–low |
+| 8 | **Imatinib** | ABL/KIT/PDGFR; limited but testable in panels | **0.1–30 µM** | Low |
+| 9 | **Ruxolitinib** | **JAK1/2**; AML cytokine/JAK-STAT dependence in some settings | **10 nM–10 µM** | Mid |
+| 10 | **Tofacitinib** | JAK pathway; repurposing angle | **30 nM–30 µM** | Mid–low |
+| 11 | **Trametinib** | **MEK1/2**; MAPK pathway in AML | **0.3–300 nM** | High |
+| 12 | **Selumetinib** | MEK1/2 (older MEKi) | **3 nM–3 µM** | High–mid |
+| 13 | **Everolimus** | **mTORC1**; PI3K/AKT/mTOR common in AML | **1 nM–1 µM** | Mid |
+| 14 | **Temsirolimus** | mTORC1 | **1 nM–3 µM** | Mid |
+| 15 | **Sirolimus (rapamycin)** | mTORC1 | **0.3 nM–300 nM** | High–mid |
+| 16 | **Panobinostat** | **HDAC** inhibitor; AML epigenetic vulnerability | **0.3–300 nM** | High |
+| 17 | **Vorinostat** | HDAC inhibitor | **30 nM–30 µM** | Mid |
+| 18 | **Valproic acid** | Weak HDAC inhibition; differentiation/epigenetic effects | **0.1–10 mM** | Low (mM) |
+| 19 | **Disulfiram** (± copper) | ALDH/proteostasis/ROS; reported leukemia cell toxicity esp. with Cu | **0.01–10 µM** | Mid (often µM; Cu shifts lower) |
+| 20 | **Mebendazole** | Microtubules; anticancer repurposing literature | **10 nM–10 µM** | Mid |
+
+### Notes to make these ranges “assay-ready”
+- **Default screening series (recommended):** 10 points, 3-fold dilutions: **30 µM → 0.0015 µM (1.5 nM)**.  
+  - For ultra-potent kinase inhibitors (midostaurin/ponatinib/trametinib/panobinostat), also consider adding a **0.3 nM** point.  
+  - For **valproic acid**, use a separate series: **10 mM → 0.02 mM**.
+- **Vehicle:** most are DMSO-soluble; keep **DMSO constant** across wells (often ≤0.1% v/v for MOLM-13).
+- **Exposure time:** IC50s for AML viability are commonly measured at **72 h** (sometimes 96 h).
+- **Readout:** CellTiter-Glo is common for suspension AML lines like MOLM-13.
+
+## If you want a MOLM-13–optimized “positive control” set (not counted above)
+For FLT3-ITD MOLM-13, include at least one of these as assay controls (they are AML drugs, not just repurposing): **quizartinib, gilteritinib, crenolanib**. These often produce clean nM IC50 curves in MOLM-13 and validate assay performance.
+
+## Important caveats (so your data are interpretable)
+- **Repurposing ≠ guaranteed activity:** some compounds above may show weak/no effect in MOLM-13 under your conditions; the provided ranges are meant to *detect* activity if present.
+- **Serum binding & stability** can shift apparent IC50s by >10×.
+- **MOLM-13 is FLT3-ITD driven:** FLT3/MAPK/mTOR/HDAC-directed agents tend to be more enriched for activity than random repurposing lists.
+
+## If you answer these 4 items, I can tailor the concentration series and prioritize the most likely hits
+1) Assay duration (48/72/96 h)?  
+2) Readout (CellTiter-Glo, resazurin, flow viability)?  
+3) Max DMSO % you allow?  
+4) Are you testing **single agents only** or also combos (e.g., with venetoclax/azacitidine)?
+
+If you want, I can also provide a **plate map** (controls + dilution scheme) and a **second list focused on non-oncology approved drugs** (e.g., antimicrobials, antipsychotics, metabolic drugs) that have reported AML cell line activity.

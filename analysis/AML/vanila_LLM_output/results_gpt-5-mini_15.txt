@@ -1,0 +1,94 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or well-studied) that have documented or plausible activity against AML cell lines — especially FLT3-ITD positive models like MOLM13 — with a short rationale and a practical, experimentally testable IC50 concentration series for each. I give one convenient 8‑point serial-dilution scheme for each drug (3‑fold dilutions are common and work well for IC50 curve fitting). Use these as starting conditions and adapt if you observe the IC50 is outside the tested range.
+
+General assay notes (recommended):
+- Cell line: MOLM13 (suspension). Plate 96‑well: 5,000–15,000 cells/well in 100 µL (optimize for your assay).  
+- Incubation: 72 hours (many AML drug responses are evident by 72 h; for nucleoside analogues you may want 96 h).  
+- Readout: CellTiter‑Glo or equivalent viability assay.  
+- Diluent: DMSO (keep final DMSO ≤0.1% v/v). Prepare stock solutions appropriately.  
+- Serial dilution: 8 points, 3‑fold dilution series from the indicated top concentration. Include vehicle control and a positive control (e.g., cytarabine or a known FLT3 inhibitor).  
+- Special: Disulfiram is active in many systems only in presence of copper — include CuCl2 (1 µM final) where indicated.
+
+Drugs, rationale and recommended 8‑point 3‑fold IC50 series
+
+1) Gilteritinib (FLT3 inhibitor) — potent against FLT3‑ITD AML (MOLM13 typically FLT3‑ITD).  
+- Top conc.: 1 µM. 8‑point 3× series (µM): 1, 0.333, 0.111, 0.037, 0.0123, 0.0041, 0.00137, 0.00046.
+
+2) Quizartinib (AC220, FLT3 inhibitor) — highly potent in FLT3‑ITD lines.  
+- Top conc.: 1 µM. Series (µM): same as #1.
+
+3) Midostaurin (PKC/FLT3 inhibitor, approved in FLT3 AML) — active in FLT3‑ITD models.  
+- Top conc.: 1 µM. Series (µM): same as #1.
+
+4) Crenolanib (FLT3/PDGFR inhibitor) — activity against FLT3‑ITD and some resistant alleles.  
+- Top conc.: 1 µM. Series (µM): same as #1.
+
+5) Sorafenib (multikinase inhibitor with FLT3 activity) — used off‑label in FLT3 AML.  
+- Top conc.: 1 µM. Series (µM): same as #1.
+
+6) Ponatinib (multi‑TKI with FLT3 activity) — reported activity in FLT3 AML lines.  
+- Top conc.: 1 µM. Series (µM): same as #1.
+
+7) Venetoclax (BCL‑2 inhibitor) — potent single‑agent activity in many AML lines; synergizes with azacitidine/decitabine.  
+- Top conc.: 1 µM. Series (µM): same as #1.
+
+8) Bortezomib (proteasome inhibitor) — reported anti‑proliferative effects in AML models.  
+- Top conc.: 0.1 µM (100 nM). 8‑point 3× series (µM): 0.1, 0.0333, 0.0111, 0.0037, 0.00123, 0.00041, 0.000137, 0.000046 (or in nM: 100, 33.3, 11.1, 3.7, 1.23, 0.41, 0.137, 0.046).
+
+9) Carfilzomib (proteasome inhibitor) — similar intent as bortezomib; potent in low nM.  
+- Top conc.: 0.1 µM. Series: same as #8.
+
+10) Vorinostat (HDAC inhibitor) — epigenetic modulator with AML activity in vitro.  
+- Top conc.: 10 µM. Series (µM): 10, 3.33, 1.11, 0.37, 0.123, 0.041, 0.0137, 0.0046.
+
+11) Panobinostat (pan‑HDAC inhibitor) — more potent HDAC inhibitor; active in AML preclinical studies.  
+- Top conc.: 10 µM. Series: same as #10.
+
+12) Alvocidib (flavopiridol, CDK9/CDK inhibitor) — induces apoptosis in AML lines (clinical trials in AML).  
+- Top conc.: 10 µM. Series: same as #10.
+
+13) Alisertib (MLN8237, Aurora A inhibitor) — mitotic kinase inhibitor with AML cell activity.  
+- Top conc.: 10 µM. Series: same as #10.
+
+14) Azacitidine (DNA hypomethylating agent) — standard AML therapy; kills dividing AML cells in vitro (incorporation required).  
+- Top conc.: 100 µM. Series (µM): 100, 33.3, 11.1, 3.7, 1.23, 0.41, 0.137, 0.046. (Consider 96 h exposure for incorporation-dependent drugs.)
+
+15) Decitabine (hypomethylating nucleoside) — similar to azacitidine; incorporation-dependent.  
+- Top conc.: 100 µM. Series: same as #14.
+
+16) Metformin (biguanide, widely studied for anti‑cancer metabolic effects) — often requires mM concentrations in vitro.  
+- Top conc.: 20 mM (20,000 µM). Series (mM): 20, 6.67, 2.22, 0.741, 0.247, 0.082, 0.027, 0.0091 (equivalently µM values are 20000 → 9.1 µM lowest). Expect effects (if any) in high µM–mM range.
+
+17) Mebendazole (anti‑helminth with tubulin/anticancer activity) — reported activity against AML and other cancers.  
+- Top conc.: 50 µM. Series (µM): 50, 16.7, 5.56, 1.85, 0.617, 0.206, 0.0687, 0.0229.
+
+18) Itraconazole (antifungal repurposing candidate; Hedgehog/PI3K/mTOR effects reported) — shows anti‑cancer effects in several models.  
+- Top conc.: 50 µM. Series: same as #17.
+
+19) Disulfiram (antialcoholism drug; anticancer activity often copper‑dependent) — reported AML activity when combined with copper.  
+- Top conc.: 10 µM + CuCl2 1 µM (final). Series (µM): 10, 3.33, 1.11, 0.37, 0.123, 0.041, 0.0137, 0.0046. (Run parallel without copper as control.)
+
+20) Artesunate (artemisinin derivative; pro‑oxidant/anti‑cancer effects in AML) — active in AML lines at low-to-mid µM.  
+- Top conc.: 50 µM. Series (µM): 50, 16.7, 5.56, 1.85, 0.617, 0.206, 0.0687, 0.0229.
+
+Practical tips and follow-up experiments
+- If a compound’s IC50 is at or near your top concentration, repeat with a higher top concentration or use a finer dilution (e.g., 2‑fold series). If IC50 is below your lowest concentration, add lower points.  
+- For drugs that induce cytostasis rather than cell death, extend incubation or run apoptosis markers (Annexin V/PI, caspase assays) to confirm mechanism.  
+- For combinations (e.g., venetoclax + azacitidine), consider fixed‑ratio combination matrices. MOLM13 is commonly sensitive to BCL‑2 inhibition + hypomethylating agents.  
+- Maintain final solvent (DMSO) constant across wells. Include growth controls, vehicle controls, and at least one cytotoxic positive control (e.g., high‑dose cytarabine).
+
+If you want, I can:
+- Provide these same concentration series in a CSV/plate map format for direct pipetting.  
+- Prioritize a shorter top‑10 list specifically for MOLM13 based on the strongest literature support.  
+- Propose companion assays (apoptosis markers, colony formation, phospho‑FLT3 readout) to confirm on‑target activity.

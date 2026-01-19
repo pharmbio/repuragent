@@ -1,0 +1,75 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) can provide a faster route to finding new therapeutic options, as these drugs have already been tested for safety and bioavailability in humans. Here is a list of promising existing drugs that could be explored for repurposing in AML, particularly for inhibiting proliferation in cell lines like MOLM-13. The experimentally testable concentrations for an IC50 assay are suggested based on existing literature or estimated doses used for similar purposes:
+
+1. **Venetoclax** - Previously used for other types of leukemia, it targets BCL-2, which can be effective in AML.
+   - **IC50 Testing Concentration:** Start with 10-1000 nM.
+
+2. **Dasatinib** - A multi-targeted kinase inhibitor that has shown some effect on AML cells.
+   - **IC50 Testing Concentration:** Start with 1-100 nM.
+
+3. **Sorafenib** - Initially developed for renal cancer, also inhibits FLT3-ITD AML mutants.
+   - **IC50 Testing Concentration:** Start with 1-10 μM.
+
+4. **Ruxolitinib** - A JAK1/2 inhibitor useful for diseases with aberrant activation of these pathways.
+   - **IC50 Testing Concentration:** Start with 100-500 nM.
+
+5. **Auranofin** - Originally used for rheumatoid arthritis and shows potential in targeting leukemia cells.
+   - **IC50 Testing Concentration:** Start with 0.5-10 μM.
+
+6. **Arsenic Trioxide** - Used in acute promyelocytic leukemia, it's worth testing in AML.
+   - **IC50 Testing Concentration:** Start with 0.5-5 μM.
+
+7. **Ibrutinib** - Primarily used in certain lymphomas; it might also impact AML cell proliferation.
+   - **IC50 Testing Concentration:** Start with 0.5-10 μM.
+
+8. **Vorinostat (SAHA)** - An HDAC inhibitor that has shown efficacy in some leukemia cell lines.
+   - **IC50 Testing Concentration:** Start with 0.5-5 μM.
+
+9. **Idelalisib** - Originally used in CLL, targeting PI3K pathways that could be relevant in AML.
+   - **IC50 Testing Concentration:** Start with 100-500 nM.
+
+10. **Imatinib** - Known for its role in CML, may be effective against certain AML subtypes.
+    - **IC50 Testing Concentration:** Start with 0.1-1 μM.
+
+11. **Metformin** - Typically for diabetes but shows potential anti-cancer properties.
+    - **IC50 Testing Concentration:** Start with 0.1-5 mM.
+
+12. **Nivolumab** - An immune checkpoint inhibitor, could be of interest for testing immune effects in AML.
+    - **IC50 Testing Concentration:** Focus more on combination strategies.
+
+13. **Olaparib** - A PARP inhibitor that might show efficacy in DNA repair-deficient AML.
+    - **IC50 Testing Concentration:** Start with 0.1-1 μM.
+
+14. **Chloroquine** - Known for malaria, has shown promise in inhibiting autophagy in cancer cells.
+    - **IC50 Testing Concentration:** Start with 10-50 μM.
+
+15. **Carfilzomib** - A proteasome inhibitor primarily used in multiple myeloma.
+    - **IC50 Testing Concentration:** Start with 5-50 nM.
+
+16. **Rapamycin (Sirolimus)** - An mTOR inhibitor with potential in targeting AML pathways.
+    - **IC50 Testing Concentration:** Start with 1-10 nM.
+
+17. **Sildenafil** - Known for other uses but can affect cancer cell cycles.
+    - **IC50 Testing Concentration:** Start with 1-10 μM.
+
+18. **Sunitinib** - Initially for renal cell carcinoma and GISTs, it might inhibit AML proliferative signals.
+    - **IC50 Testing Concentration:** Start with 0.1-1 μM.
+
+19. **Celecoxib** - An NSAID with known COX-2 inhibition properties that can be useful in AML.
+    - **IC50 Testing Concentration:** Start with 10-50 μM.
+
+20. **Disulfiram** - Known for alcohol dependence, has been researched for anti-cancer properties.
+    - **IC50 Testing Concentration:** Start with 0.1-1 μM.
+
+Keep in mind that the effectiveness of each drug for treating AML, specifically in the MOLM-13 cell line, will vary. Further preclinical testing and validation are essential to identify the most promising candidates. Also, combinations of these drugs with standard AML treatments could enhance efficacy and should be considered in experimental designs.

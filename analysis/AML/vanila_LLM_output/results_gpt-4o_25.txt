@@ -1,0 +1,75 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of diseases like acute myeloid leukemia (AML) is an appealing strategy, given the time and cost involved in developing new drugs from scratch. While experimental validation is crucial, here are some drugs that have shown potential in preliminary studies or preclinical models for AML, especially for cell lines like MOLM13. Along with each drug, I suggest a starting concentration range for IC50 assays. These concentrations are based on typical ranges used in the literature for cancer cell line studies, but should be optimized further in the lab.
+
+1. **Venetoclax (ABT-199)**
+   - Concentration: 0.01 to 10 µM
+
+2. **Decitabine**
+   - Concentration: 0.1 to 10 µM
+
+3. **Azacitidine**
+   - Concentration: 0.1 to 10 µM
+
+4. **Auranofin**
+   - Concentration: 0.01 to 10 µM
+
+5. **Clofarabine**
+   - Concentration: 0.1 to 10 µM
+
+6. **Dasatinib**
+   - Concentration: 0.01 to 1 µM
+
+7. **Imatinib**
+   - Concentration: 0.01 to 5 µM
+
+8. **Nilotinib**
+   - Concentration: 0.01 to 5 µM
+
+9. **Glasdegib**
+   - Concentration: 0.01 to 10 µM
+
+10. **Midostaurin**
+    - Concentration: 0.01 to 10 µM
+
+11. **Sorafenib**
+    - Concentration: 0.1 to 10 µM
+
+12. **Crenolanib**
+    - Concentration: 0.01 to 5 µM
+
+13. **Ruxolitinib**
+    - Concentration: 0.01 to 5 µM
+
+14. **Selinexor (KPT-330)**
+    - Concentration: 0.01 to 10 µM
+
+15. **Idelalisib**
+    - Concentration: 0.01 to 10 µM
+
+16. **Ibrutinib**
+    - Concentration: 0.01 to 10 µM
+
+17. **Ponatinib**
+    - Concentration: 0.01 to 5 µM
+
+18. **Everolimus**
+    - Concentration: 0.1 to 10 µM
+
+19. **Rigosertib**
+    - Concentration: 0.01 to 10 µM
+
+20. **Vorinostat**
+    - Concentration: 0.1 to 10 µM
+
+Please note that these drugs have different mechanisms of action and the given concentrations are starting points. It is important to conduct preliminarily assays to identify the precise IC50 values, as these can vary based on cell line and assay conditions. Additionally, these studies should consider the effects on non-cancerous cell lines to determine therapeutic window and potential toxicity. Always consider consulting the latest literature for updates on drug repurposing studies and precise assay conditions.

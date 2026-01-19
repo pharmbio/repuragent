@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Metformin,Antidiabetic,May exert anti-cancer effects,5.0,25.0,mM,,metformin,False,CHEMBL1431
+Ruxolitinib,JAK1/2 inhibitor,Inhibitor used in myelofibrosis,0.1,1.0,µM,,ruxolitinib,False,CHEMBL1287854
+Nilotinib,Tyrosine kinase inhibitor,Primarily used in CML,0.1,0.5,µM,,nilotinib,False,CHEMBL255863
+Thalidomide,Immunomodulatory drug,Anti-angiogenic properties,1.0,10.0,µM,,thalidomide,False,CHEMBL426123
+Celecoxib,COX-2 inhibitor,Potential antitumor activity,1.0,10.0,µM,,celecoxib,False,CHEMBL118
+Meclizine,Antihistamine,Has shown anti-cancer properties,1.0,10.0,µM,,meclizine,False,CHEMBL1623
+Carbendazim,Benzimidazole fungicide,Can affect cancer cell growth,1.0,10.0,µM,,carbendazim,False,CHEMBL70971
+Resveratrol,Natural compound,Has anticancer potential,1.0,10.0,µM,Found in grapes.,resveratrol,False,CHEMBL165
+Quercetin,Flavonoid,Has antioxidant properties,1.0,20.0,µM,,quercetin,False,CHEMBL50
+Curcumin,Natural compound,Anti-inflammatory and anti-cancer effects,5.0,15.0,µM,Active component of turmeric.,curcumin,False,CHEMBL140
+Loperamide,Opioid,May affect tumor growth,5.0,15.0,µM,,loperamide,False,CHEMBL1707
+Thioridazine,Antipsychotic,May have anticancer activities,1.0,10.0,µM,,thioridazine,False,CHEMBL1200916
+Atovaquone,Antiprotozoal,Reported anti-cancer effects,1.0,10.0,µM,,atovaquone,False,CHEMBL1450
+Sildenafil,Phosphodiesterase inhibitor,May have anticancer applications,1.0,10.0,µM,,sildenafil,False,CHEMBL1737
+Chloroquine,Antimalarial drug,Can inhibit autophagy,5.0,20.0,µM,,chloroquine,False,CHEMBL76
+Propranolol,Beta-blocker,Has shown potential anti-cancer effects,1.0,10.0,µM,,propranolol,False,CHEMBL1671

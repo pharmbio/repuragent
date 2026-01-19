@@ -1,0 +1,82 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic roles, such as in treating acute myeloid leukemia (AML), has gained significant interest in recent years. Below is a list of 20 drugs that have been investigated or could be investigated for potential efficacy against AML, particularly the MOLM13 cell line. The suggested concentrations for IC50 assays are based on available literature and typical ranges used in such assays, but it’s crucial to conduct preliminary experiments to determine the exact concentration ranges suitable for your specific experimental conditions.
+
+### Suggested Drugs for Repurposing in AML Treatment
+
+1. **Azacitidine (Vidaza)**
+   - IC50 concentration: 0.1 to 5 µM
+
+2. **Decitabine (Dacogen)**
+   - IC50 concentration: 0.1 to 1 µM 
+
+3. **Lenalidomide (Revlimid)**
+   - IC50 concentration: 1 to 10 µM
+
+4. **Thalidomide**
+   - IC50 concentration: 10 to 20 µM
+
+5. **Vorinostat (Zolinza)**
+   - IC50 concentration: 0.5 to 5 µM
+
+6. **Romidepsin (Istodax)**
+   - IC50 concentration: 0.1 to 1 µM
+
+7. **Bortezomib (Velcade)**
+   - IC50 concentration: 1 to 10 nM
+
+8. **Carfilzomib (Kyprolis)**
+   - IC50 concentration: 1 to 10 nM
+
+9. **Chlorambucil**
+   - IC50 concentration: 1 to 10 µM
+
+10. **Imatinib (Gleevec)**
+    - IC50 concentration: 0.1 to 5 µM
+
+11. **Nilotinib (Tasigna)**
+    - IC50 concentration: 0.1 to 10 µM
+
+12. **Dasatinib (Sprycel)**
+    - IC50 concentration: 0.1 to 8 µM
+
+13. **Dexamethasone**
+    - IC50 concentration: 0.1 to 10 µM
+
+14. **Asparaginase**
+    - IC50 concentration: 0.5 to 2 U/mL
+
+15. **Trametinib (Mekinist)**
+    - IC50 concentration: 1 to 10 nM
+
+16. **Everolimus (Afinitor)**
+    - IC50 concentration: 1 to 10 µM
+
+17. **Clofarabine**
+    - IC50 concentration: 0.1 to 1 µM
+
+18. **5-Fluorouracil (5-FU)**
+    - IC50 concentration: 1 to 20 µM
+
+19. **Metformin**
+    - IC50 concentration: 1 to 10 mM
+
+20. **SB202190**
+    - IC50 concentration: 1 to 10 µM
+ 
+### Important Notes:
+- The IC50 values provided are estimates and should be validated in the context of MOLM13 or other relevant AML cell lines, as they can vary based on experimental conditions, including culture media, duration of exposure, and specific assay formats.
+- Prior literature should be consulted for each drug as certain concentrations might show variable results depending on cellular context and combinations with other treatments.
+- Consideration for combination therapies may enhance efficacy and should also be explored.
+
+Before proceeding with experiments, be sure to perform proper controls and confirm drug availability and safety profiles.

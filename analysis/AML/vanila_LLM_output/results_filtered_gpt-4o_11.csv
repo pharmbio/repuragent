@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL and SRC family kinases, along with c-KIT, EPHA2, PDGFRB.",1.0,10.0,µM,Effective in cases of resistance to imatinib.,dasatinib,False,CHEMBL1421
+Axitinib,RTK inhibitor,"Inhibits vascular endothelial growth factor receptors (VEGFR-1, -2, -3).",1.0,10.0,µM,Used in advanced renal cell carcinoma.,axitinib,False,CHEMBL1289926
+Ibrutinib,BTK inhibitor,"Irreversible inhibitor of Bruton's tyrosine kinase (BTK), disrupting B-cell receptor signaling pathways.",1.0,10.0,µM,Clinically approved for mantle cell lymphoma.,ibrutinib,False,CHEMBL1873475
+Ruxolitinib,JAK inhibitor,"Inhibits Janus kinase JAK1 and JAK2, interfering with the JAK-STAT signaling pathway.",1.0,10.0,µM,Approved for myelofibrosis and polycythemia vera.,ruxolitinib,False,CHEMBL1287854
+Sunitinib,Multi-targeted receptor tyrosine kinase inhibitor,"Targets PDGFR, VEGFR, and other receptor tyrosine kinases.",1.0,10.0,µM,Used for renal cell carcinoma and GIST.,sunitinib,False,CHEMBL597365
+Ponatinib,Tyrosine kinase inhibitor,"Targets BCR-ABL including the T315I mutation, and other kinases like VEGFR, FGFR.",1.0,10.0,µM,Effective against CML and ALL with T315I mutation.,ponatinib,False,CHEMBL2105708
+Arsenic Trioxide,Chemotherapeutic agent,"Induces apoptosis and hepatic differentiation in leukemic cells, particularly effective in APL.",1.0,10.0,µM,Approved for APL treatment.,arsenic trioxide,False,CHEMBL5483015
+Tofacitinib,JAK inhibitor,"Inhibits JAK1 and JAK3, affecting hematopoiesis and immune cell function.",1.0,10.0,µM,Used in rheumatoid arthritis and PsA.,tofacitinib,False,CHEMBL2103743
+Gefitinib,EGFR inhibitor,"Blocks tyrosine kinase of EGFR, interrupting downstream signaling pathways.",1.0,10.0,µM,Primarily used in NSCLC.,gefitinib,False,CHEMBL939
+Nilotinib,Tyrosine kinase inhibitor,Targets BCR-ABL and KIT.,1.0,10.0,µM,Approved for CML.,nilotinib,False,CHEMBL255863
+Bafetinib,Tyrosine kinase inhibitor,"Targets BCR-ABL, LYMPHO-SELECTIVE TK, SRC-family kinases.",1.0,10.0,µM,Potential use in B-cell malignancies.,bafetinib,False,CHEMBL4303396
+Bosutinib,Tyrosine kinase inhibitor,Targets BCR-ABL1 and SRC family kinases.,1.0,10.0,µM,Used for Ph+ CML.,bosutinib,False,CHEMBL2095206
+Crizotinib,ALK inhibitor,"Inhibits ALK, ROS1, and c-MET kinases.",1.0,10.0,µM,Used in NSCLC with ALK fusion.,crizotinib,False,CHEMBL601719
+Moxetumomab Pasudotox,Immunotoxin,"Targets CD22 found on B-cells, inducing apoptosis.",1.0,10.0,µM,Used for hairy cell leukemia.,moxetumomab pasudotox,False,CHEMBL1743043

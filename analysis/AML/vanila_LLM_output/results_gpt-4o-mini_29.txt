@@ -1,0 +1,42 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) can offer a faster path to potential treatments. Here’s a list of 20 drugs that have been investigated for their effects on AML or similar conditions, including possible concentrations for IC50 assays. Note that specific concentrations can vary based on experimental conditions, so it's essential to validate in the context of your own assay.
+
+1. **Venetoclax** - IC50 ~0.1-1 µM
+2. **Azacitidine** - IC50 ~0.5-5 µM
+3. **Decitabine** - IC50 ~0.1-1 µM
+4. **Dexamethasone** - IC50 ~1-10 µM
+5. **Clofarabine** - IC50 ~0.01-0.5 µM
+6. **L-asparaginase** - IC50 ~0.1-1 IU/mL
+7. **Imatinib** - IC50 ~0.1-5 µM
+8. **Dasatinib** - IC50 ~0.1-1 µM
+9. **Sorafenib** - IC50 ~0.1-5 µM
+10. **Sunitinib** - IC50 ~0.1-5 µM
+11. **Bortezomib** - IC50 ~0.1-1 µM
+12. **Ruxolitinib** - IC50 ~0.1-1 µM
+13. **Thalidomide** - IC50 ~1-10 µM
+14. **Lenalidomide** - IC50 ~1-10 µM
+15. **Pomalidomide** - IC50 ~1-10 µM
+16. **Cisplatin** - IC50 ~1-10 µM
+17. **Hydroxyurea** - IC50 ~50-150 µM
+18. **Amodiaquine** - IC50 ~1-10 µM
+19. **Metformin** - IC50 ~5-15 mM
+20. **Curcumin** - IC50 ~10-30 µM
+
+### Notes:
+- **Cell Line Specificity**: It's critical to confirm that these concentrations are effective against the specific AML cell line (MOLM13 in your case) as responses can vary significantly between cell lines.
+- **Assay Conditions**: Be sure to establish the appropriate assay conditions (e.g., media composition, incubation time) and perform dose-response experiments to derive accurate IC50 values.
+- **Drug Interactions**: Some of these drugs may have synergistic or antagonistic effects when used in combination; consider testing combinations in addition to single-agent assays.
+- **Toxicity and Off-Target Effects**: When repurposing drugs, be cognizant of their toxicity profiles and potential off-target effects that may complicate their use in AML treatment.
+
+Research in this area is highly dynamic, and new findings may continue to emerge, so it’s advisable to consult recent literature and databases for updated information regarding drug repurposing and their effects on AML.

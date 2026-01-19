@@ -1,0 +1,12 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+All-trans retinoic acid,Retinoid,Regulates gene expression,0.5,5.0,µM,,all trans retinoic acid,False,CHEMBL1235644
+Metformin,Biguanide,Inhibits mitochondrial complex I,1.0,5.0,mM,,metformin,False,CHEMBL1431
+Quercetin,Flavonoid,"Antioxidant properties, cell cycle arrest",10.0,30.0,µM,,quercetin,False,CHEMBL50
+Tamoxifen,Selective estrogen receptor modulator,Estrogen receptor antagonist,1.0,10.0,µM,,tamoxifen,False,CHEMBL83
+Bortezomib,Proteasome inhibitor,Inhibits proteasome function,1.0,10.0,nM,,bortezomib,False,CHEMBL325041
+Sunitinib,Tyrosine kinase inhibitor,Inhibits vascular endothelial growth factor receptors,1.0,10.0,µM,,sunitinib,False,CHEMBL597365
+Nelarabine,Antineoplastic agent,Inhibits DNA synthesis and repair,0.1,1.0,µM,,nelarabine,False,CHEMBL1201112
+Celecoxib,COX-2 inhibitor,Inhibits cyclooxygenase-2,3.0,10.0,µM,,celecoxib,False,CHEMBL118
+L-asparaginase,Enzyme therapy,"Depletes asparagine, inhibiting protein synthesis",1.0,10.0,IU/mL,,l asparaginase,False,CHEMBL2108989
+Dactinomycin,Antitumor antibiotic,Inhibits DNA-dependent RNA synthesis,0.1,1.0,µM,,dactinomycin,False,CHEMBL4748391
+Bosutinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and SRC family kinases,50.0,200.0,nM,,bosutinib,False,CHEMBL2095206

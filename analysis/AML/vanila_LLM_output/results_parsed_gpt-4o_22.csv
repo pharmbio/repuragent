@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 inhibitor,Inhibition of BCL-2 proteins leading to apoptosis of leukemic cells,300.0,500.0,nM,Initially used for chronic lymphocytic leukemia (CLL)
+Dasatinib,Tyrosine kinase inhibitor,Targets SRC family kinases and BCR-ABL,10.0,100.0,nM,Used for chronic myeloid leukemia
+Imatinib,Tyrosine kinase inhibitor,"Blocks BCR-ABL kinase activity, inhibiting leukemia cell proliferation",1.0,5.0,μM,Used in chronic myeloid leukemia (CML)
+Sorafenib,Multikinase inhibitor,Inhibits RAF kinase and several receptor tyrosine kinases,1.0,10.0,μM,Used in various cancers including liver and renal cancer
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits JAK1/2 signaling, reducing cytokine signaling and proliferation",1.0,10.0,μM,Used for myelofibrosis and polycythemia vera
+Etoposide,Topoisomerase inhibitor,"Inhibits topoisomerase II, leading to DNA damage and apoptosis",1.0,10.0,μM,Used in various cancers including small cell lung cancer
+Vorinostat,Histone deacetylase inhibitor,Induces cell cycle arrest and apoptosis by increasing acetylation of histones,1.0,5.0,μM,"Also known as SAHA, used in cutaneous T-cell lymphoma"
+Arsenic Trioxide,Chemotherapeutic agent,Induces differentiation and apoptosis of leukemia cells,0.5,2.0,μM,Used in acute promyelocytic leukemia
+Bortezomib,Proteasome inhibitor,"Inhibits 26S proteasome activity, promoting apoptosis of myeloma cells",5.0,20.0,nM,Used for multiple myeloma
+Tamoxifen,Selective estrogen receptor modulator (SERM),"Competes with estrogen for binding estrogen receptors, inhibiting transcription of estrogen-responsive genes",5.0,10.0,μM,Used mainly for breast cancer treatment
+Chloroquine,"Antimalarial, autophagy inhibitor",Interferes with lysosomal degradation and autophagy,5.0,20.0,μM,Shows anticancer potential beyond malaria treatment
+Metformin,"Biguanide, antidiabetic",Lowers hepatic glucose production and has an emerging role in cancer metabolism alteration,1.0,10.0,mM,Commonly used for type 2 diabetes
+Celecoxib,COX-2 inhibitor,Blocks COX-2 enzyme involved in inflammation and apoptosis,5.0,20.0,μM,Used for arthritis pain and inflammation
+Itraconazole,Antifungal,Inhibits the hedgehog signaling and abnormal angiogenesis,1.0,10.0,μM,Shows potential as an anticancer agent beyond antifungal use
+Rifampicin,Antibiotic,Inhibits bacterial DNA-dependent RNA synthesis; potential antiproliferative effects,10.0,50.0,μM,Primarily used for tuberculosis
+Simvastatin,Statin (HMG-CoA reductase inhibitor),"Decreases cholesterol production, with emerging cancer therapy potential",1.0,10.0,μM,Typically used as a cholesterol-lowering medication
+Hydroxychloroquine,"Antimalarial, autophagy inhibitor",Inhibits lysosomal function and autophagy similar to chloroquine,5.0,20.0,μM,Shows promise in cancer therapy
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and modulates immune response,5.0,20.0,μM,Used in multiple myeloma and has a controversial history
+Dimethyl fumarate,"Antioxidant, anti-inflammatory","Activates the NRF2 pathway, leading to enhanced cellular defense",5.0,20.0,μM,Used for multiple sclerosis
+Disulfiram,Aldehyde dehydrogenase inhibitor,"Inhibits acetaldehyde dehydrogenase, with emerging anticancer properties",0.1,1.0,μM,Previously used for alcohol dependency treatment

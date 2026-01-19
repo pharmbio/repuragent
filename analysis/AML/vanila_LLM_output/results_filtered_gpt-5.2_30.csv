@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Sunitinib,Multikinase inhibitor (includes FLT3),Inhibits multiple receptor tyrosine kinases including FLT3,1.0,10.0,µM,Mentioned with repurposing literature in AML.,sunitinib,False,CHEMBL597365
+Pazopanib,Tyrosine kinase inhibitor (VEGFR/PDGFR),Inhibits VEGFR and PDGFR signaling,3.0,30.0,µM,Reported activity in some AML contexts.,pazopanib,False,CHEMBL477772
+Dasatinib,Tyrosine kinase inhibitor (SRC/ABL),Inhibits SRC family kinases and ABL to suppress signaling in AML subsets,0.3,3.0,µM,,dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK inhibitor (JAK1/2),Blocks JAK-STAT pathway signaling driven by cytokine dependence,3.0,30.0,µM,Targets cytokine/JAK-STAT reliance.,ruxolitinib,False,CHEMBL1287854
+Trametinib,MEK inhibitor (MEK1/2),Inhibits MEK1/2 in the MAPK pathway,0.3,3.0,µM,Described as downstream MAPK pathway targeting.,trametinib,False,CHEMBL2103875
+Everolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 signaling affecting growth/survival pathways,0.3,3.0,µM,AML pathway dependence noted in subsets.,everolimus,False,CHEMBL1908360
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases; generally more potent HDAC inhibitor,0.3,300.0,nM,Text notes optional extension up to 3 µM if needed.,panobinostat,False,CHEMBL483254
+Valproic acid,HDAC modulator (weak HDAC inhibitor; active at mM),Exerts HDAC-related epigenetic effects at millimolar concentrations,0.1,10.0,mM,Requires careful pH/vehicle control.,valproic acid,False,CHEMBL109
+Disulfiram,ALDH inhibitor,Inhibits ALDH; reported copper-dependent cytotoxicity in AML,10.0,10.0,µM,Often tested ± 1–5 µM CuCl2 as a parallel condition.,disulfiram,False,CHEMBL964
+All-trans retinoic acid,Retinoid / differentiation agent,Activates retinoic acid receptors to induce differentiation programs,1.0,10.0,µM,Alternative name: ATRA; noted as light sensitive; subset activity outside APL.,all trans retinoic acid,False,CHEMBL1235644
+Navitoclax,BCL-2/BCL-XL inhibitor,Inhibits anti-apoptotic BCL-2 family proteins BCL-2 and BCL-XL,0.3,3.0,µM,Alternative name mentioned: ABT-263; noted broader but more toxic.,navitoclax,False,CHEMBL2105690
+Arsenic trioxide,Pro-oxidant / apoptosis inducer,Induces oxidative stress and apoptosis,10.0,30.0,µM,Noted mainly for APL but with broader effects.,arsenic trioxide,False,CHEMBL5483015
+Metformin,Antidiabetic biguanide / metabolic modulator,Impairs mitochondrial complex I and activates AMPK-related metabolic stress,0.1,50.0,mM,Commonly requires mM concentrations to see in vitro effects; modest single-agent.,metformin,False,CHEMBL1431
+Atorvastatin,Statin (HMG-CoA reductase inhibitor),"Inhibits HMG-CoA reductase, affecting mevalonate/cholesterol biosynthesis and signaling",10.0,30.0,µM,Noted sensitization/anti-proliferation reports in AML; top 30 µM.,atorvastatin,False,CHEMBL1487
+Mebendazole,Anthelmintic / microtubule (tubulin) disruptor,Disrupts tubulin polymerization affecting mitosis,1.0,10.0,µM,Solubility-limited; keep top ~10 µM.,mebendazole,False,CHEMBL685
+Itraconazole,Azole antifungal; Hedgehog/angiogenesis/trafficking modulator (repurposing),Reported to modulate Hedgehog signaling/angiogenesis and cellular trafficking in cancer repurposing contexts,10.0,30.0,µM,Solubility-limited; suggested top 10–30 µM.,itraconazole,False,CHEMBL5483033

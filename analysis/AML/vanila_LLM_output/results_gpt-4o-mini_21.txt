@@ -1,0 +1,83 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) can offer a faster route to therapy development, leveraging known safety profiles. Here are 20 existing drugs that have been studied for their anticancer effects and could potentially be repurposed for AML treatment. For each drug, concentrations that have shown potential inhibitory effects in related cancer types primarily in vitro are suggested for preliminary IC50 assays. Keep in mind that actual concentrations can vary significantly based on specific cell line sensitivities, and experimental validation is essential.
+
+### Suggested Drugs for Repurposing in AML
+
+1. **Hydroxyurea**
+   - IC50: 50-150 µM
+
+2. **Azacitidine**
+   - IC50: 0.1-1 µM
+
+3. **Decitabine**
+   - IC50: 0.01-0.1 µM
+
+4. **All-trans retinoic acid (ATRA)**
+   - IC50: 0.5-5 µM
+
+5. **Metformin**
+   - IC50: 1-5 mM
+
+6. **Quercetin**
+   - IC50: 10-30 µM
+
+7. **Lenalidomide**
+   - IC50: 1-5 µM
+
+8. **Tamoxifen**
+   - IC50: 1-10 µM
+
+9. **Imatinib (Gleevec)**
+   - IC50: 0.1-1 µM (inhibition of BCR-ABL positive cells)
+
+10. **Vorinostat (SAHA)**
+    - IC50: 1-5 µM
+
+11. **Bortezomib**
+    - IC50: 1-10 nM
+
+12. **Dexamethasone**
+    - IC50: 100-500 nM
+
+13. **Prednisone**
+    - IC50: 1-5 µM
+
+14. **Sunitinib**
+    - IC50: 1-10 µM
+
+15. **Nelarabine**
+    - IC50: 0.1-1 µM
+
+16. **Celecoxib**
+    - IC50: 3-10 µM
+
+17. **L-asparaginase**
+    - IC50: 1-10 IU/mL
+
+18. **Selinexor**
+    - IC50: 50-100 nM
+
+19. **Dactinomycin**
+    - IC50: 0.1-1 µM
+
+20. **Bosutinib**
+    - IC50: 50-200 nM
+
+### Experimental Considerations
+- When performing IC50 assays, it is important to use a range of concentrations to accurately determine the IC50 value.
+- The concentrations suggested are based on literature values for related malignancies and in vitro studies. Each cell line may respond differently, so optimization is key.
+- Consideration of the drug's pharmacokinetics and dynamics should influence how doses are selected, both for the in vitro assays and potential translation to in vivo settings.
+- It's important to ensure that cytotoxic concentrations do not lead to excessive induction of cellular stress responses or compensatory survival pathways.
+
+As always, consultation with relevant pharmacological references and recent research studies is advisable for the most up-to-date information on these compounds.

@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Ponatinib,Multi-kinase FLT3 inhibitor,Inhibits FLT3-ITD and other kinases; suppresses AML cell proliferation,0.03,300.0,nM,Approved for CML/Ph+ ALL; strong activity reported in MOLM13
+Sorafenib,Multi-kinase FLT3 inhibitor,Inhibits FLT3-ITD signaling pathways,3.0,3000.0,nM,Approved for HCC/RCC; inhibits MOLM13 proliferation
+Sunitinib,Multi-kinase FLT3 inhibitor,Anti-FLT3 activity in FLT3-ITD AML cells,10.0,10000.0,nM,Reported activity in FLT3-ITD AML lines
+Cabozantinib,Multi-kinase inhibitor (includes FLT3),Inhibits FLT3 and downstream signaling in AML lines,1.0,1000.0,nM,Approved for RCC/thyroid; AML activity reported
+Regorafenib,Multi-kinase inhibitor,Targets FLT3 and related kinases,10.0,3000.0,nM,Similar profile to sorafenib; AML cell activity reported
+Dasatinib,SRC/ABL tyrosine kinase inhibitor,Inhibits SRC-family and ABL kinases; can blunt FLT3 pathways,3.0,10000.0,nM,Approved for CML/Ph+ ALL; activity reported in AML lines
+Fostamatinib,SYK inhibitor,Inhibits spleen tyrosine kinase (SYK); reduces survival of FLT3-ITD AML cells,0.3,30.0,µM,Approved for ITP; activity in MOLM13 reported
+Bortezomib,Proteasome inhibitor,26S proteasome inhibition leading to apoptosis,0.5,100.0,nM,Induces apoptosis in AML lines including MOLM13
+Panobinostat,Pan-HDAC inhibitor,Histone deacetylase inhibition causing broad transcriptional repression,0.3,100.0,nM,Potent anti-AML activity reported
+Vorinostat,HDAC inhibitor,Histone deacetylase inhibition; induces differentiation and apoptosis,0.3,30.0,µM,Also known as SAHA; approved for CTCL
+Tigecycline,Antibiotic; mitochondrial translation inhibitor,Inhibits mitochondrial protein synthesis; impairs AML and stem-like cells,0.5,50.0,µM,Activity in MOLM13 reported
+Auranofin,Thioredoxin reductase inhibitor,Inhibits TrxR; induces ROS and apoptosis,0.05,5.0,µM,Approved for rheumatoid arthritis; active in MOLM13
+Disulfiram,ALDH inhibitor/proteasome modulator (copper-dependent),Forms a cytotoxic DSF–Cu2+ complex; ALDH/proteasome targeting,0.03,3.0,µM,Requires copper; include 1 µM Cu2+ constant; cytotoxic to FLT3-ITD AML; stem-cell targeting reported
+Niclosamide,Anthelmintic; signaling modulator,Modulates Wnt/STAT3/OXPHOS pathways,0.1,10.0,µM,Low aqueous solubility; ensure adequate solubilization; AML activity reported
+Mebendazole,Anthelmintic; microtubule depolymerizer,Disrupts microtubules causing mitotic arrest,0.1,10.0,µM,Reported MOLM13 sensitivity; consider solubility/serum binding
+Thioridazine,Antipsychotic; dopamine receptor antagonist,D2 receptor antagonism; targets AML stem/progenitors and induces cell death,0.3,30.0,µM,Cardiotoxicity risk clinically
+Pimozide,Antipsychotic,Inhibits STAT5 signaling downstream of FLT3-ITD; ion channel blockade,0.1,10.0,µM,Activity in MOLM13 reported
+Ciclopirox,Antifungal; iron chelator,Iron chelation and blockade of eIF5A hypusination; induces apoptosis,0.1,10.0,µM,Clinical-stage repositioning for oncology
+Simvastatin,HMG-CoA reductase inhibitor (statin),Inhibits the mevalonate pathway,0.3,30.0,µM,Use active acid form; serum lipids can reduce free drug; activity in FLT3-ITD AML reported
+Clofazimine,Antimycobacterial; redox/Kv1.3/Wnt modulator,Redox cycling with modulation of Kv1.3 and Wnt signaling,0.03,3.0,µM,Highly lipophilic; adsorption to plastic/serum binding can affect free levels; reported sub-µM to low-µM potency

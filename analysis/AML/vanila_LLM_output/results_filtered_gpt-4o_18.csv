@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis and differentiation of leukemic cells,0.1,2.0,µM,Approved for acute promyelocytic leukemia (APL),arsenic trioxide,False,CHEMBL5483015
+Dasatinib,Tyrosine kinase inhibitor,Inhibits SRC family kinases and FLT3,1.0,5.0,µM,Primarily used in chronic myeloid leukemia (CML),dasatinib,False,CHEMBL1421
+Metformin,Antidiabetic agent,"Lowers blood sugar levels, cytotoxic effects in cancer",0.1,10.0,mM,Primarily used for type 2 diabetes management,metformin,False,CHEMBL1431
+Bortezomib,Proteasome inhibitor,Blocks proteasome activity leading to apoptosis of cancer cells,5.0,10.0,nM,Approved for multiple myeloma,bortezomib,False,CHEMBL325041
+Auranofin,Gold compound,Inhibits thioredoxin reductase leading to oxidative stress,1.0,5.0,µM,Approved for rheumatoid arthritis,auranofin,False,CHEMBL1366
+Itraconazole,Antifungal agent,Inhibits hedgehog signaling pathway and angiogenesis,0.1,1.0,µM,Reported anti-cancer properties,itraconazole,False,CHEMBL5483033
+Thalidomide/Lenalidomide,Immunomodulatory drugs,"Modulates the immune response, anti-angiogenic",1.0,100.0,µM,Used in multiple myeloma,thalidomide lenalidomide,False,CHEMBL426123
+Rapamycin (Sirolimus),mTOR inhibitor,"Inhibits mTOR, suppressing cell growth and proliferation",10.0,50.0,nM,Used as an immunosuppressant,rapamycin,False,CHEMBL413
+Celecoxib,COX-2 inhibitor,Inhibits COX-2 enzyme reducing inflammation and proliferation,10.0,100.0,µM,"Used for arthritis, reported anti-cancer activity",celecoxib,False,CHEMBL118
+Parthenolide,Sesquiterpene lactone,Inhibits NF-kB signaling pathway,5.0,10.0,µM,Derived from Tanacetum parthenium,parthenolide,False,CHEMBL4298697
+Bevacizumab,Monoclonal antibody,"Inhibits VEGF, reducing blood vessel formation",0.1,1.0,nM,"Used in various cancers, including AML",bevacizumab,False,CHEMBL1201583
+Paclitaxel,Antimicrotubule agent,"Disrupts microtubule function, stopping cell division",0.1,10.0,µM,Commonly used in solid tumor treatments,paclitaxel,False,CHEMBL428647
+Chloroquine,Antimalarial drug,"Inhibits autophagy, enhancing cancer cell death",10.0,30.0,µM,Explored for various cancers including leukemia,chloroquine,False,CHEMBL76
+EGCG (Epigallocatechin gallate),Polyphenol,"Exhibits antioxidant properties, induces apoptosis",10.0,50.0,µM,Component of green tea,egcg,False,CHEMBL297453

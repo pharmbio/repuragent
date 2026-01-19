@@ -1,0 +1,16 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits Janus kinases (JAK1 and JAK2), disrupting signaling pathways associated with cell proliferation and survival.",0.1,5.0,µM,,ruxolitinib,False,CHEMBL1287854
+Busulfan,Alkylating agent,"Alkylates DNA, leading to cross-linking and subsequent cell death.",10.0,200.0,µM,,busulfan,False,CHEMBL820
+Nitroxoline,Antibiotic,Inhibits bacterial DNA synthesis; potential antigrowth effects in cancer cells.,1.0,50.0,µM,,nitroxoline,False,CHEMBL1454910
+Metformin,Antidiabetic agent,"Activates AMP-activated protein kinase (AMPK), inhibiting gluconeogenesis and promoting apoptosis in cancer cells.",0.5,10.0,mM,,metformin,False,CHEMBL1431
+Quinacrine,Antimalarial,"Inhibits DNA and RNA synthesis, with potential apoptotic effects in tumor cells.",1.0,20.0,µM,,quinacrine,False,CHEMBL2105615
+Thalidomide,Immunomodulatory agent,Inhibits angiogenesis and has immune-modulating effects that can promote apoptosis in cancer cells.,1.0,30.0,µM,,thalidomide,False,CHEMBL426123
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome activity, leading to accumulation of pro-apoptotic factors and cell cycle arrest.",1.0,20.0,nM,,bortezomib,False,CHEMBL325041
+Olaparib,PARP inhibitor,"Inhibits poly(ADP-ribose) polymerase (PARP), leading to impaired DNA repair and increased cell death in BRCA-deficient cells.",0.1,10.0,µM,,olaparib,False,CHEMBL521686
+Lapatinib,HER2 inhibitor,"Inhibits the receptor tyrosine kinases HER2 and EGFR, disrupting pathways involved in cell proliferation.",0.1,5.0,µM,,lapatinib,False,CHEMBL554
+Gemcitabine,Antimetabolite,"Inhibits DNA synthesis and repair, leading to apoptosis in rapidly dividing cells.",0.1,10.0,µM,,gemcitabine,False,CHEMBL3039516
+Pazopanib,Tyrosine kinase inhibitor,"Inhibits vascular endothelial growth factor receptors (VEGFRs), disrupting angiogenesis and tumor growth.",1.0,10.0,µM,,pazopanib,False,CHEMBL477772
+Citrulline,Amino acid,May have roles in promoting nitric oxide production and influencing metabolic pathways.,1.0,10.0,mM,,citrulline,False,CHEMBL444814
+Cyclosporine A,Immunosuppressant,"Inhibits calcineurin, leading to decreased production of interleukin-2 and other cytokines.",0.1,5.0,µM,,cyclosporine a,False,CHEMBL406352
+Sunitinib,Tyrosine kinase inhibitor,"Inhibits multiple receptor tyrosine kinases, blocking pathways that promote cancer cell proliferation and angiogenesis.",0.1,10.0,µM,,sunitinib,False,CHEMBL597365
+Parthenolide,Natural product,Induces apoptosis through NF-kB inhibition and generation of reactive oxygen species (ROS).,0.1,5.0,µM,,parthenolide,False,CHEMBL4298697

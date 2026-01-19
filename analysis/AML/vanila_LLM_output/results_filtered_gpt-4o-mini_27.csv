@@ -1,0 +1,14 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Baricitinib,JAK inhibitor,Inhibits JAK1 and JAK2 signaling pathways,1.0,5.0,µM,,baricitinib,False,CHEMBL2105759
+Ruxolitinib,JAK inhibitor,Selective inhibitor of JAK1 and JAK2,0.1,1.0,µM,,ruxolitinib,False,CHEMBL1287854
+Metformin,Biguanide,Reduces hepatic glucose production and improves insulin sensitivity,5.0,15.0,mM,,metformin,False,CHEMBL1431
+Nilotinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase activity,0.1,0.5,µM,,nilotinib,False,CHEMBL255863
+Trabectedin,Alkaloids,Binds to DNA and alters transcription processes,1.0,10.0,nM,Also known as Yondelis,trabectedin,False,CHEMBL450449
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, leading to apoptosis in cancer cells",0.1,1.0,µM,,bortezomib,False,CHEMBL325041
+Thalidomide,Immunomodulatory agent,Modulates immune response and inhibits angiogenesis,1.0,5.0,µM,,thalidomide,False,CHEMBL426123
+Rifampicin,Antibiotic,Inhibits bacterial RNA synthesis,1.0,10.0,µM,,rifampicin,False,CHEMBL374478
+Quinacrine,Antimalarial/Antiparasitic,Inhibits nucleic acid synthesis,5.0,20.0,µM,,quinacrine,False,CHEMBL2105615
+Cisplatin,Alkylating agent,Causes DNA cross-linking leading to apoptosis,1.0,5.0,µM,,cisplatin,False,CHEMBL197201
+Citarabine,Nucleoside analog,Inhibits DNA synthesis,0.1,1.0,µM,Also known as Ara-C,citarabine,False,CHEMBL803
+Tocilizumab,Monoclonal antibody,Inhibits IL-6 receptor signaling,3.3,13.3,nM,Approx. conversion from 5-20 µg/mL,tocilizumab,False,CHEMBL1237022
+Aspirin,Nonsteroidal anti-inflammatory drug (NSAID),"Inhibits cyclooxygenase enzymes, reducing inflammation",1.0,5.0,mM,,aspirin,False,CHEMBL25

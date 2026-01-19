@@ -1,0 +1,82 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is an area of active research. Here is a list of 20 drugs that have been investigated or proposed for repurposing in AML, along with suggested concentrations for testing their efficacy in inhibiting the proliferation of AML cell lines such as MOLM13 in IC50 assays. Please note that experimental testing and validation are necessary to confirm efficacy.
+
+### 20 Drugs for Repurposing in AML Treatment
+1. **Venetoclax** (BCL-2 inhibitor)
+   - Suggested Concentration: 0.1 - 10 µM
+
+2. **Azacitidine** (DNA methyltransferase inhibitor)
+   - Suggested Concentration: 0.1 - 10 µM
+
+3. **Decitabine** (DNA methyltransferase inhibitor)
+   - Suggested Concentration: 0.1 - 10 µM
+
+4. **Dexamethasone** (corticosteroid)
+   - Suggested Concentration: 1 - 100 µM
+
+5. **Thalidomide** (immunomodulatory drug)
+   - Suggested Concentration: 0.1 - 10 µM
+
+6. **Lenalidomide** (immunomodulatory drug)
+   - Suggested Concentration: 0.1 - 10 µM
+
+7. **Sunitinib** (tyrosine kinase inhibitor)
+   - Suggested Concentration: 0.1 - 5 µM
+
+8. **Sorafenib** (tyrosine kinase inhibitor)
+   - Suggested Concentration: 0.1 - 5 µM
+
+9. **Imatinib** (tyrosine kinase inhibitor)
+   - Suggested Concentration: 0.1 - 10 µM
+
+10. **Dasatinib** (tyrosine kinase inhibitor)
+    - Suggested Concentration: 0.1 - 10 µM
+
+11. **Auranofin** (gold compound, inhibition of thioredoxin reductase)
+    - Suggested Concentration: 0.1 - 5 µM
+
+12. **Metformin** (biguanide, AMPK activator)
+    - Suggested Concentration: 1 - 10 mM
+
+13. **Hydroxyurea** (ribonucleotide reductase inhibitor)
+    - Suggested Concentration: 10 - 100 µM
+
+14. **Vorinostat** (histone deacetylase inhibitor)
+    - Suggested Concentration: 0.1 - 10 µM
+
+15. **Panobinostat** (histone deacetylase inhibitor)
+    - Suggested Concentration: 0.1 - 5 µM
+
+16. **Resveratrol** (natural polyphenol)
+    - Suggested Concentration: 10 - 100 µM
+
+17. **Curcumin** (natural polyphenol)
+    - Suggested Concentration: 10 - 50 µM
+
+18. **Quercetin** (flavonoid)
+    - Suggested Concentration: 1 - 10 µM
+
+19. **Ruxolitinib** (JAK1/JAK2 inhibitor)
+    - Suggested Concentration: 0.1 - 5 µM
+
+20. **Clofarabine** (antimetabolite)
+    - Suggested Concentration: 0.1 - 10 µM
+
+### Important Notes:
+- Concentrations listed are suggestions based on common experimental ranges used in preclinical studies. Testing should adhere to established protocols and be adjusted according to specific experimental conditions.
+- Prior to using any repurposed drug, it’s important to review current literature to ensure the drug’s activity against MOLM13 and its mechanisms relating to AML.
+- Consideration of potential side effects, drug interactions, and pharmacokinetics is crucial during repurposing.
+- Validation in further in vivo models will be necessary before clinical application. 
+
+Always consult with relevant pharmacology and oncology experts during the drug repurposing process, and ensure compliance with ethical guidelines when conducting experiments.

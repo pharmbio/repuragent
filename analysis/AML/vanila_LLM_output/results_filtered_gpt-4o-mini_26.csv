@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Valproic Acid,Histone deacetylase inhibitor,Increases histone acetylation leading to changes in gene expression,0.5,10.0,mM,Also known as Depakote.,valproic acid,False,CHEMBL109
+Ascorbic Acid,Antioxidant,Acts as a reducing agent to enhance oxidative stress in cancer cells,1.0,6.0,mM,Commonly known as Vitamin C.,ascorbic acid,False,CHEMBL196
+Entinostat,Histone deacetylase inhibitor,"Inhibits specific class I HDACs, promoting apoptosis and growth arrest",0.1,5.0,µM,Also known as SNDX-275.,entinostat,False,CHEMBL27759
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and several other tyrosine kinases,0.1,1.0,µM,Also known as Sprycel.,dasatinib,False,CHEMBL1421
+Tariquidar,P-glycoprotein inhibitor,"Inhibits P-glycoprotein, which can promote drug accumulation in cells",0.5,6.0,µM,Also known as XR9576.,tariquidar,False,CHEMBL348475
+Cyclophosphamide,Alkylating agent,"Cross-links DNA, leading to cell death",50.0,500.0,µM,,cyclophosphamide,False,CHEMBL1200796
+Tamoxifen,Selective estrogen receptor modulator,"Blocks estrogen receptors, can induce apoptosis in certain cells",1.0,10.0,µM,,tamoxifen,False,CHEMBL83
+Ruxolitinib,Janus kinase inhibitor,"Inhibits JAK1 and JAK2, affecting signaling pathways",0.5,5.0,µM,Also known as Jakafi.,ruxolitinib,False,CHEMBL1287854
+Aspirin,Non-steroidal anti-inflammatory drug,"Irreversibly inhibits COX enzymes, reducing inflammation and proliferation",0.5,5.0,mM,,aspirin,False,CHEMBL25
+Metformin,Biguanide,Decreases glucose production and may influence cancer metabolism,1.0,10.0,mM,,metformin,False,CHEMBL1431
+Curcumin,Natural product,Exhibits anti-inflammatory properties and induces apoptosis,1.0,10.0,µM,,curcumin,False,CHEMBL140
+Quercetin,Flavonoid,Exhibits antioxidant properties and can induce apoptosis,5.0,25.0,µM,,quercetin,False,CHEMBL50
+N-acetylcysteine,Antioxidant,Acts as a precursor to glutathione and exerts antioxidant activity,0.5,5.0,mM,Also known as NAC.,n acetylcysteine,False,CHEMBL600
+Rapamycin,mTOR inhibitor,"Inhibits mTOR signaling pathway, leading to cell cycle arrest",0.1,1.0,µM,Also known as Sirolimus.,rapamycin,False,CHEMBL413

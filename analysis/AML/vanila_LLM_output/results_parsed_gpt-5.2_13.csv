@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Midostaurin,Kinase / signaling inhibitor (multi-kinase),"Multi-kinase inhibitor including FLT3, KIT, and PKC",0.0,0.0,nM,Text gives only qualitative range: low-nM to sub-µM; approved for FLT3+ AML.
+Gilteritinib,Kinase / signaling inhibitor,FLT3/AXL tyrosine kinase inhibitor,0.0,0.0,nM,Text gives only qualitative range: low-nM to nM; approved for relapsed FLT3+ AML.
+Quizartinib,Kinase / signaling inhibitor,Potent FLT3 inhibitor,0.0,0.0,nM,Text gives only qualitative range: low-nM to nM; approved in some regions/clinical elsewhere.
+Sorafenib,Kinase / signaling inhibitor (multi-kinase),"Multi-kinase inhibitor targeting FLT3, RAF, and VEGFR",0.0,0.0,nM,Text gives only qualitative range: nM to sub-µM; used off-label in FLT3-ITD AML.
+Dasatinib,Kinase / signaling inhibitor,SRC/ABL tyrosine kinase inhibitor,0.0,0.0,nM,Text gives only qualitative range: nM to sub-µM; approved for CML/ALL.
+Trametinib,Kinase / signaling inhibitor,MEK1/2 inhibitor (MAPK pathway),0.0,0.0,nM,Text gives only qualitative range: low-nM to nM.
+Everolimus,Kinase / signaling inhibitor,mTORC1 inhibitor,0.0,0.0,nM,Text gives only qualitative range: nM to sub-µM; used in oncology/transplant.
+Idelalisib,Kinase / signaling inhibitor,PI3Kδ inhibitor,0.0,0.0,µM,Text gives only qualitative range: sub-µM to µM; approved for CLL/lymphoma.
+Panobinostat,Epigenetic regulator (HDAC inhibitor),Pan-HDAC inhibitor,0.0,0.0,nM,Text gives only qualitative range: low-nM to nM; approved for multiple myeloma.
+Vorinostat,Epigenetic regulator (HDAC inhibitor),HDAC inhibitor,0.0,0.0,µM,Alternative name in text: SAHA; qualitative range: sub-µM to low-µM; approved for CTCL.
+Romidepsin,Epigenetic regulator (HDAC inhibitor),Class I HDAC inhibitor,0.0,0.0,nM,Text gives only qualitative range: low-nM to nM; approved for T-cell lymphoma.
+Decitabine,Epigenetic regulator (DNA hypomethylating agent),Nucleoside analog that inhibits DNA methylation (DNMT inhibition via incorporation),0.0,0.0,nM,Qualitative range: nM to low-µM; often requires multi-day exposure; approved in MDS/AML regimens.
+Azacitidine,Epigenetic regulator (DNA hypomethylating agent),Hypomethylating nucleoside (DNA/RNA incorporation leading to DNMT inhibition),0.0,0.0,nM,Qualitative range: nM to low-µM; schedule/multi-day dependent; approved in MDS/AML regimens.
+Venetoclax,Apoptosis regulator (BH3 mimetic),BCL-2 inhibitor,0.0,0.0,nM,Qualitative range: nM to sub-µM; approved in AML combinations and CLL.
+Navitoclax,Apoptosis regulator (BH3 mimetic),BCL-XL/BCL-2 inhibitor,0.0,0.0,nM,Alternative name in text: ABT-263; qualitative range: nM to sub-µM; clinical-stage with toxicity limitations.
+Bortezomib,Proteostasis / stress pathway drug (proteasome inhibitor),Proteasome inhibitor inducing ER stress and apoptosis,0.0,0.0,nM,Qualitative range: low-nM to nM; approved for multiple myeloma.
+Carfilzomib,Proteostasis / stress pathway drug (proteasome inhibitor),Irreversible proteasome inhibitor,0.0,0.0,nM,Qualitative range: low-nM to nM; approved for multiple myeloma.
+All-trans retinoic acid,Differentiation / lineage program agent (retinoid),RAR agonist promoting myeloid differentiation,0.0,0.0,µM,Abbreviation in text: ATRA; qualitative range: sub-µM to µM; approved for APL; effects beyond APL are context-dependent.
+Arsenic trioxide,Differentiation / cytotoxic agent,Induces oxidative stress and proteotoxicity; promotes degradation of oncogenic programs in APL contexts,0.0,0.0,µM,Qualitative range: sub-µM to low-µM; approved for APL; broader AML effects reported in subsets.
+Disulfiram,Metabolism / non-oncology repurposing agent,ALDH inhibition; reported copper-dependent cytotoxicity in AML models,0.0,0.0,µM,Qualitative range: sub-µM to µM; activity often reported with copper (Cu); approved for alcohol use disorder.

@@ -1,0 +1,16 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,BCR-ABL inhibitor,Inhibits the BCR-ABL kinase,0.01,0.5,µM,Approved for chronic myeloid leukemia (CML),dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK1/2 inhibitor,Inhibits JAK1 and JAK2 kinases,0.1,5.0,µM,Approved for myelofibrosis,ruxolitinib,False,CHEMBL1287854
+Ibrutinib,BTK inhibitor,Irreversibly binds and inhibits Bruton's tyrosine kinase (BTK),0.5,5.0,µM,Used in CLL and mantle cell lymphoma,ibrutinib,False,CHEMBL1873475
+Tofacitinib,JAK inhibitor,Inhibits JAK kinases,1.0,10.0,µM,Used in rheumatoid arthritis,tofacitinib,False,CHEMBL2103743
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis and partial differentiation,0.1,2.0,µM,Used in acute promyelocytic leukemia (APL),arsenic trioxide,False,CHEMBL5483015
+Metformin,Biguanide,Reduces hepatic glucose production and improves insulin sensitivity,1.0,10.0,mM,Originally a diabetes medication,metformin,False,CHEMBL1431
+Chloroquine,Antimalarial agent,Inhibits autophagy and disrupts lysosomal function,5.0,25.0,µM,Used originally as an anti-malarial medication,chloroquine,False,CHEMBL76
+Celecoxib,COX-2 inhibitor,Selective inhibition of COX-2 enzyme,5.0,20.0,µM,Used for inflammation,celecoxib,False,CHEMBL118
+Atorvastatin,Statin,Inhibits HMG-CoA reductase,1.0,10.0,µM,Used for lowering cholesterol,atorvastatin,False,CHEMBL1487
+Simvastatin,Statin,Inhibits HMG-CoA reductase,0.1,5.0,µM,Another cholesterol-lowering statin,simvastatin,False,CHEMBL1201391
+Bortezomib,Proteasome inhibitor,Induces apoptosis by inhibiting the 26S proteasome,1.0,10.0,nM,Used in multiple myeloma,bortezomib,False,CHEMBL325041
+Panobinostat,Pan-HDAC inhibitor,Inhibits multiple histone deacetylases,0.01,0.2,µM,Potent HDAC inhibitor,panobinostat,False,CHEMBL483254
+Thalidomide,Immunomodulatory drug,Inhibits TNF-α and modulates immune response,5.0,20.0,µM,Used in multiple myeloma,thalidomide,False,CHEMBL426123
+Rapamycin,mTOR inhibitor,Inhibits mTORC1 complex,1.0,10.0,nM,Also known as Sirolimus,rapamycin,False,CHEMBL413
+Auranofin,Gold compound,Inhibits thioredoxin reductase leading to increased oxidative stress,0.1,5.0,µM,Originally used for rheumatoid arthritis,auranofin,False,CHEMBL1366

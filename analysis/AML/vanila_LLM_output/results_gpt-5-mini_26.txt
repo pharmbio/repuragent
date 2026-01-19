@@ -1,0 +1,116 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or in late-stage development) with rationale for testing in AML and experimentally actionable suggestions for IC50 experiments in MOLM13 (an FLT3‑ITD AML cell line). For each drug I give a short rationale and a practical concentration plan (recommended top concentration and a suggested dilution scheme). The dilution scheme I recommend by default is a 10‑point, 3‑fold serial dilution from the listed top concentration (this covers ~4 logs and is appropriate for determining IC50s for most compounds). Adjust the top concentration downward if you observe solubility or cytotoxicity issues.
+
+General assay notes (keeps assays comparable):
+- Use a vehicle (DMSO) control; keep final DMSO ≤0.1% (ideally ≤0.05%) across all wells.
+- Use biological replicates (≥3) and at least technical triplicates per concentration.
+- Typical exposure time for proliferation assays: 48–72 h (72 h is common for small-molecule IC50s in AML); some drugs (e.g., nucleoside analogs, hypomethylating agents) may require different exposure schemes—see notes below.
+- Readout: ATP (CellTiter‑Glo) or other viability assays validated for MOLM13.
+- Check compound solubility and stability in assay medium. For agents that need cofactors (e.g., disulfiram + Cu), add the cofactor as indicated.
+
+1) Venetoclax (BCL‑2 inhibitor)
+- Rationale: potently induces apoptosis in AML, active in many AML lines including MOLM13 (often low‑nM to sub‑100 nM range).
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution (1 µM → ~1.7 pM).
+
+2) Gilteritinib (FLT3/AXL inhibitor)
+- Rationale: potent FLT3 inhibitor clinically active in FLT3‑mutant AML; MOLM13 is FLT3‑ITD positive and typically sensitive.
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution (1 µM → ~1.7 pM). If high potency observed, consider repeating with top 100 nM.
+
+3) Quizartinib (AC220; FLT3 inhibitor)
+- Rationale: highly potent against FLT3‑ITD AML (very low‑nM activity in many FLT3‑ITD lines).
+- Test plan: top 100 nM; 10‑point 3‑fold serial dilution (100 nM → ~0.17 pM). If no effect, repeat with top 1 µM.
+
+4) Crenolanib (FLT3 inhibitor)
+- Rationale: FLT3 inhibitor with activity against ITD and some TKD mutants; active in MOLM13 models.
+- Test plan: top 100 nM; 10‑point 3‑fold serial dilution (100 nM → ~0.17 pM).
+
+5) Midostaurin (multi‑kinase/FLT3 inhibitor)
+- Rationale: FLT3 inhibitor approved in AML in combination; moderate potency in cell lines.
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution (1 µM → ~1.7 pM).
+
+6) Sorafenib (multi‑kinase inhibitor)
+- Rationale: has activity in FLT3‑ITD AML in vitro and in some clinical contexts; broader kinase profile.
+- Test plan: top 10 µM; 10‑point 3‑fold serial dilution (10 µM → ~17 pM).
+
+7) Ponatinib (multi‑kinase inhibitor including FLT3)
+- Rationale: potent multi‑kinase TKI with FLT3 activity; reported in vitro AML activity.
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution (1 µM → ~1.7 pM).
+
+8) Dasatinib (SRC/ABL multi‑kinase inhibitor)
+- Rationale: broad kinase inhibitor; has shown activity in some AML contexts and synergy with other agents.
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution.
+
+9) Sunitinib (multi‑kinase inhibitor)
+- Rationale: multi‑kinase inhibitor with some activity in AML cell lines.
+- Test plan: top 10 µM; 10‑point 3‑fold serial dilution.
+
+10) Cabozantinib (multi‑kinase inhibitor)
+- Rationale: potent multi‑kinase inhibitor with activity against RET/VEGFR/MET; reported AML cytotoxicity in some lines.
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution.
+
+11) Bortezomib (proteasome inhibitor)
+- Rationale: proteasome inhibition can be cytotoxic to AML cells; bortezomib shows activity in AML models.
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution.
+
+12) Carfilzomib (next‑gen proteasome inhibitor)
+- Rationale: more potent proteasome inhibitor with in vitro AML activity.
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution.
+
+13) Auranofin (thioredoxin reductase inhibitor; anti‑rheumatic)
+- Rationale: repurposing candidate with reported AML cytotoxicity (often sub‑µM to low‑µM IC50s).
+- Test plan: top 10 µM; 10‑point 3‑fold serial dilution (10 µM → ~17 pM). If strongly active, repeat with top 1 µM.
+
+14) Niclosamide (anti‑helminthic)
+- Rationale: repurposing candidate reported to inhibit multiple cancer pathways and reduce AML cell proliferation at low‑µM concentrations.
+- Test plan: top 10 µM; 10‑point 3‑fold serial dilution.
+
+15) Disulfiram (antialcoholism drug; often tested with copper)
+- Rationale: repurposing candidate; cytotoxic activity in some cancer cell lines is copper‑dependent.
+- Test plan: top 10 µM disulfiram + 1 µM CuCl2 (maintain same copper in all wells); 10‑point 3‑fold serial dilution of disulfiram. If testing without copper, expect reduced activity.
+
+16) Simvastatin (HMG‑CoA reductase inhibitor/statin)
+- Rationale: statins show antiproliferative effects on AML cells at µM levels and can sensitize to other agents.
+- Test plan: top 50 µM; 10‑point 3‑fold serial dilution (50 µM → ~8 nM). Note: statins can be lipophilic—check formulation.
+
+17) Metformin (biguanide antidiabetic)
+- Rationale: metabolic modulator with anti‑proliferative effects in vitro at high (mM) concentrations; sometimes synergizes with other drugs.
+- Test plan: top 10 mM; 10‑point 3‑fold serial dilution (10 mM → ~1.7 µM). Expect activity at high mM range; interpret carefully.
+
+18) Panobinostat (HDAC inhibitor)
+- Rationale: HDAC inhibition can induce cell death in AML cell lines; panobinostat has shown activity in AML models.
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution.
+
+19) Trametinib (MEK1/2 inhibitor)
+- Rationale: MEK inhibition can affect downstream MAPK signaling; activity seen in some AML contexts and can synergize with other agents.
+- Test plan: top 100 nM; 10‑point 3‑fold serial dilution (100 nM → ~0.17 pM). If no effect, repeat with top 1 µM.
+
+20) Idasanutlin (RG7388; MDM2 inhibitor)
+- Rationale: MDM2 inhibitors can activate p53 and induce apoptosis in p53 wild‑type AML lines; test if MOLM13 p53 status is appropriate (MOLM13 is typically p53 wild type).
+- Test plan: top 1 µM; 10‑point 3‑fold serial dilution.
+
+Practical examples of produced concentration series (10 points, 3‑fold):
+- If top = 1 µM: 1000000 nM, 333333 nM, 111111 nM, 37037 nM, 12346 nM, 4115 nM, 1372 nM, 457 nM, 152 nM, 51 nM (approx)
+- If top = 100 nM: 100, 33.3, 11.1, 3.70, 1.23, 0.41, 0.14, 0.0457, 0.0152, 0.0051 nM
+(You can generate exact values in your plate‑layout software or spreadsheet; many labs prefer converting to µM values directly.)
+
+Additional assay considerations:
+- MOLM13 specifics: MOLM13 is FLT3‑ITD positive and often sensitive to FLT3 and BCL‑2 inhibitors; consider testing combinations (e.g., venetoclax + FLT3 inhibitor) after single‑agent profiling.
+- For nucleoside analogs/hypomethylating agents (e.g., azacitidine, decitabine), standard short‑term proliferation assays are less informative—use different treatment schedules (repeated dosing or longer exposure) and appropriate concentrations.
+- For compounds requiring co‑factors (e.g., disulfiram + copper), maintain cofactor across all wells including controls.
+- If a compound precipitates at the top concentration, lower the top concentration and re‑run the dilution series.
+- Always confirm reversible vs irreversible binding and whether readout time needs adjustment (some targeted agents show rapid cell death, others require longer incubations to manifest effects).
+
+If you want, I can:
+- Produce exact 10‑point concentration tables for each compound in µM (and nM) for direct use in plate setup.
+- Prioritize a shorter list (top 6–10) with more detailed literature IC50 ranges and suggested combination partners for MOLM13.

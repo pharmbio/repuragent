@@ -1,0 +1,91 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing, non-AML–approved drugs with published activity against AML cell lines (many with data in FLT3-ITD models such as MOLM13 and/or MV4-11). For each, I list a brief rationale and an experimentally testable concentration window suitable for deriving an IC50 in a 72-hour viability assay (e.g., CellTiter-Glo) using 8–12 serial dilutions. Unless noted, dissolve in DMSO and keep final DMSO ≤0.1–0.2%.
+
+FLT3/kinase-targeting oncology drugs (repurposing within oncology)
+1) Sorafenib (multi-kinase; inhibits FLT3-ITD signaling; strong activity in MOLM13/MV4-11)
+   - Suggested range: 0.5–500 nM (e.g., 10-point, 3-fold dilution starting at 500 nM)
+
+2) Ponatinib (ABL/FLT3; potent vs FLT3-ITD; robust MOLM13 activity)
+   - Suggested range: 0.1–200 nM
+
+3) Sunitinib (multi-kinase including FLT3; active in FLT3-ITD AML lines)
+   - Suggested range: 1–3000 nM
+
+4) Dasatinib (Src/Abl; disrupts FLT3-ITD downstream signaling; AML cell line activity reported)
+   - Suggested range: 0.5–1000 nM
+
+Proteostasis/export inhibitors (approved for other cancers)
+5) Bortezomib (proteasome inhibitor; nanomolar cytotoxicity in AML including MOLM13)
+   - Suggested range: 0.5–100 nM
+
+6) Carfilzomib (proteasome inhibitor; AML cell line activity)
+   - Suggested range: 1–200 nM
+
+7) Selinexor (XPO1 inhibitor; AML lines, including FLT3-ITD, often sub-µM sensitive)
+   - Suggested range: 5–2000 nM
+
+Epigenetic modulators (approved for other cancers)
+8) Panobinostat (pan-HDAC inhibitor; potent sub-µM activity in AML lines)
+   - Suggested range: 2–200 nM
+
+9) Vorinostat/SAHA (HDAC inhibitor; induces apoptosis/differentiation in AML lines)
+   - Suggested range: 0.3–10 µM
+
+Mitochondrial/metabolic and lysosomal disruptors (non-oncology approvals)
+10) Tigecycline (antibiotic; inhibits mitochondrial translation; kills AML stem/progenitor cells)
+    - Suggested range: 0.2–20 µM
+
+11) Mefloquine (antimalarial; lysosomotropic; reported AML selectivity including LSCs)
+    - Suggested range: 0.5–20 µM
+
+12) Niclosamide (anthelmintic; uncouples OXPHOS/Wnt; AML line activity)
+    - Suggested range: 0.05–5 µM
+
+13) Simvastatin (use the active hydroxy-acid form; mevalonate pathway blockade; AML antiproliferative)
+    - Suggested range: 0.1–10 µM
+    - Note: test mevalonate rescue (50–100 µM) as a specificity control.
+
+Redox and proteostasis disruptors (non-oncology approvals)
+14) Auranofin (anti-rheumatic; thioredoxin reductase inhibitor; potent in AML including FLT3-ITD)
+    - Suggested range: 50–2000 nM
+
+15) Disulfiram + copper (ALDH inhibitor; forms Cu–DSF complex targeting proteostasis/NPL4; AML active)
+    - Suggested range: 10–1000 nM disulfiram at a fixed 0.5–2 µM CuCl2 (optimize copper; include copper-alone controls)
+
+Ion channel/calmodulin/STAT pathway modulators (non-oncology approvals)
+16) Pimozide (antipsychotic; STAT5 and calmodulin modulation; reported activity in FLT3-ITD AML)
+    - Suggested range: 0.5–10 µM
+
+17) Thioridazine (antipsychotic; functionally targets AML stem-like cells; antiproliferative)
+    - Suggested range: 0.5–10 µM
+
+Protein synthesis/mTOR axis
+18) Omacetaxine (homoharringtonine; protein synthesis inhibitor; approved in CML; AML cell line cytotoxicity)
+    - Suggested range: 1–100 nM
+
+19) Temsirolimus (mTORC1 inhibitor; cytostatic/antiproliferative in AML, sometimes pro-apoptotic at higher exposures or in combinations)
+    - Suggested range: 10–1000 nM
+
+Oxidative stress inducers/antimalarials
+20) Dihydroartemisinin (antimalarial; ROS generation/ER stress; AML line activity)
+    - Suggested range: 0.5–20 µM
+
+Practical assay notes
+- Use half-log or 3-fold serial dilutions spanning the ranges above; 72-hour exposure commonly gives robust IC50s for MOLM13.
+- Keep vehicle controls matched; maintain DMSO ≤0.1–0.2%.
+- MOLM13 are FLT3-ITD–driven; expect greatest potency from FLT3-directed TKIs (sorafenib, ponatinib, sunitinib, dasatinib), proteasome inhibitors, and some redox/proteostasis agents.
+- For disulfiram, include copper; for simvastatin, use the hydroxy-acid form; serum protein binding may shift apparent potency (consider 0–10% FBS comparisons).
+- Confirm hits with an orthogonal readout (e.g., Annexin V/PI or caspase activation) and, if possible, with a second FLT3-ITD line (MV4-11) and a FLT3-wildtype AML line to gauge selectivity.
+
+These concentration windows are based on published AML cell line sensitivities (including MOLM13/MV4-11 where available) and should allow you to capture full sigmoidal dose–response curves for IC50 fitting.

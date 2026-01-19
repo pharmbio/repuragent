@@ -1,0 +1,77 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic indications, such as acute myeloid leukemia (AML), is a promising approach. While specific concentrations for IC50 values can depend on the exact experimental conditions, cell lines, and methodologies used, I can provide a list of drugs that have shown potential in preclinical studies or have rationale for testing in AML, along with generally tested concentrations. It's essential to carry out specific experiments to confirm the effective concentration range for each drug, as well as possible side effects and complex interactions. 
+
+Here’s a list of 20 drugs that could potentially be repurposed for AML treatment, along with suggested concentration ranges for IC50 assays. Note that the IC50 values should ultimately be determined through empirical testing, but the suggested concentrations can serve as a starting point for such assays.
+
+1. **Arsenic Trioxide (ATO)**
+   - Concentration range: 1-10 µM
+
+2. **Sirolimus (Rapamycin)**
+   - Concentration range: 10-100 nM
+
+3. **Lenalidomide**
+   - Concentration range: 100-1000 nM
+
+4. **Dexamethasone**
+   - Concentration range: 1-100 µM
+
+5. **Gemcitabine**
+   - Concentration range: 1-10 µM
+
+6. **Hydroxyurea**
+   - Concentration range: 50-500 µM
+
+7. **Vorinostat (SAHA)**
+   - Concentration range: 1-10 µM
+
+8. **Bortezomib**
+   - Concentration range: 1-100 nM
+
+9. **Fludarabine**
+   - Concentration range: 0.1-10 µM
+
+10. **Thalidomide**
+    - Concentration range: 100-1000 nM
+
+11. **Azacitidine**
+    - Concentration range: 0.1-5 µM
+
+12. **Minocycline**
+    - Concentration range: 10-100 µM
+
+13. **Metformin**
+    - Concentration range: 10-100 mM
+
+14. **Tamoxifen**
+    - Concentration range: 1-10 µM
+
+15. **Lapatinib**
+    - Concentration range: 0.1-10 µM
+
+16. **Dabrafenib**
+    - Concentration range: 10-100 nM
+
+17. **Carfilzomib**
+    - Concentration range: 1-10 µM
+
+18. **Nintedanib**
+    - Concentration range: 1-10 µM
+
+19. **Clofazimine**
+    - Concentration range: 1-100 µM
+
+20. **Auranofin**
+    - Concentration range: 1-10 µM
+
+Before proceeding with any assays, collaborations with clinical researchers and proper ethical oversight are crucial. Additionally, literature searches for existing combination studies and ongoing clinical trials can provide further insights into effective regimes and criteria for testing. Experimental validations will be necessary to establish definitive IC50 values in the MOLM13 cell line.

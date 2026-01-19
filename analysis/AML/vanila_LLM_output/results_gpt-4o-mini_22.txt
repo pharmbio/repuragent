@@ -1,0 +1,81 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of Acute Myeloid Leukemia (AML) can be a promising approach for developing new therapy options. Below is a list of 20 existing drugs that have potential for repurposing against AML, specifically targeting the proliferation of AML cell lines such as MOLM13. Please note that the effectiveness of these drugs can vary based on specific experimental conditions and AML subtype, and concentration ranges for IC50 assays should be validated experimentally.
+
+1. **Hydroxyurea**
+   - Suggested Concentration: 100 - 500 µM
+
+2. **Azacitidine**
+   - Suggested Concentration: 0.1 - 5 µM
+
+3. **Decitabine**
+   - Suggested Concentration: 0.1 - 5 µM
+
+4. **Vorinostat**
+   - Suggested Concentration: 0.5 - 5 µM
+
+5. **Romidepsin**
+   - Suggested Concentration: 1 - 10 nM
+
+6. **Panobinostat**
+   - Suggested Concentration: 1 - 10 µM
+
+7. **Imatinib**
+   - Suggested Concentration: 0.1 - 10 µM
+
+8. **Dasatinib**
+   - Suggested Concentration: 0.1 - 1 µM
+
+9. **Nilotinib**
+   - Suggested Concentration: 0.1 - 1 µM
+
+10. **Bortezomib**
+    - Suggested Concentration: 0.01 - 1 µM
+
+11. **Thalidomide**
+    - Suggested Concentration: 1 - 10 µM
+
+12. **Lenalidomide**
+    - Suggested Concentration: 0.1 - 5 µM
+
+13. **Dexamethasone**
+    - Suggested Concentration: 0.1 - 10 µM
+
+14. **Methotrexate**
+    - Suggested Concentration: 1 - 100 µM
+
+15. **Sunitinib**
+    - Suggested Concentration: 0.1 - 1 µM
+
+16. **Beclomethasone**
+    - Suggested Concentration: 10 - 100 nM
+
+17. **Cladribine**
+    - Suggested Concentration: 0.1 - 1 µM
+
+18. **Clofarabine**
+    - Suggested Concentration: 0.01 - 1 µM
+
+19. **Auranofin**
+    - Suggested Concentration: 1 - 10 µM
+
+20. **Trametinib**
+    - Suggested Concentration: 5 - 50 nM
+
+### Considerations:
+- **Biological Validation**: Each drug should be evaluated in preclinical studies to validate its efficacy against MOLM13 and other relevant AML cell lines before considering clinical applications.
+- **Synergistic Effects**: Combination treatments may enhance effectiveness; thus, testing combinations with other chemotherapeutics could yield beneficial results.
+- **Mechanism Exploration**: Understanding how these drugs affect cell signaling pathways involved in AML can provide insights into their potential as therapeutic agents.
+- **IC50 Testing**: The provided concentrations are a starting point, but IC50 determination should be performed through dose-response experiments specific to MOLM13.
+
+Before pursuing these drugs for clinical trials, it is essential to ensure proper ethical approvals and guidance from regulatory authorities.

@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Gilteritinib,FLT3 inhibitor,Inhibits FLT3 tyrosine kinase (effective against FLT3‑ITD),0.1,10.0,nM,Potent in FLT3‑driven AML (including MOLM13); expect sub‑ to low‑nM activity.
+Quizartinib,FLT3 inhibitor,Selective FLT3 tyrosine kinase inhibition (very potent vs FLT3‑ITD),1.0,10.0,nM,Also known as AC220; often single‑digit nM IC50 in FLT3‑ITD models.
+Ponatinib,Multi-kinase inhibitor,Broad tyrosine kinase inhibition including FLT3 (and BCR‑ABL),1.0,50.0,nM,Activity reported in some FLT3‑ITD AML lines; multi‑target profile.
+Midostaurin,PKC/FLT3 inhibitor,Inhibits FLT3 and PKC family kinases,5.0,500.0,nM,Clinically used in AML; potency can range from low‑mid nM to sub‑µM depending on assay.
+Dasatinib,Src/Abl multi-kinase inhibitor,"Inhibits Src, Abl and other kinases relevant to AML survival pathways",20.0,500.0,nM,Reported activity in some AML lines; potency often low‑tens nM to sub‑µM.
+Auranofin,Antirheumatic; thioredoxin reductase inhibitor,Inhibits thioredoxin reductase causing oxidative stress and cell death,0.1,5.0,µM,Reported AML activity; typically sub‑ to low‑µM.
+Niclosamide,Anthelmintic,Mitochondrial uncoupling and modulation of WNT/STAT3 and other pathways,0.1,5.0,µM,Reported anti‑leukemia activity; often sub‑ to low‑µM in cancer models.
+Disulfiram,Alcohol‑aversion agent / metal‑dependent cytotoxic agent,Proteasome and aldehyde dehydrogenase modulation; copper‑dependent cytotoxicity,1.0,10.0,µM,Activity frequently requires copper (Cu(II)) for maximal effect; reported low‑µM potency.
+Mebendazole,Anthelmintic,Disrupts microtubules and affects multiple cancer pathways,1.0,10.0,µM,Reported antileukemia activity; typically low‑µM range.
+Ibrutinib,BTK inhibitor,Inhibits BTK (and some off‑target kinases) affecting survival signaling in subsets of AML,1.0,10.0,µM,Some AML lines show sensitivity; potency is line‑dependent and generally low‑µM.
+Palbociclib,CDK4/6 inhibitor,Inhibits CDK4/6 causing G1 cell‑cycle arrest,0.1,5.0,µM,Reported activity in some AML contexts; typically sub‑ to low‑µM.
+Trametinib,MEK inhibitor,"Inhibits MEK1/2, blocking MAPK signaling",0.1,100.0,nM,Very potent (low nM) in MAPK‑addicted contexts; higher IC50s if MAPK not driving.
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases, altering epigenetic regulation and inducing cytotoxicity",0.1,5.0,µM,Also known as SAHA; typically sub‑ to low‑µM activity in AML models.
+Bortezomib,Proteasome inhibitor,"Inhibits the 26S proteasome, disrupting proteostasis and inducing apoptosis",1.0,500.0,nM,Reported activity in AML cell lines; potency ranges low nM to sub‑µM.
+17-AAG,HSP90 inhibitor,"Inhibits HSP90, leading to destabilization of multiple oncoproteins",1.0,500.0,nM,Also known as Tanespimycin (17‑AAG); reported low nM to sub‑µM potency in AML.
+FK866,NAMPT inhibitor,"Inhibits NAMPT, depleting cellular NAD and causing cytotoxicity",1.0,50.0,nM,Also called APO866; potent cytotoxicity reported in AML and leukemic stem cells.
+Everolimus,mTOR inhibitor,"Inhibits mTORC1, blocking mTOR signaling",1.0,500.0,nM,Activity in AML subsets; potency context dependent (low nM to sub‑µM).
+Chloroquine,Autophagy inhibitor,Raises lysosomal pH and blocks autophagy/lysosomal degradation,10.0,200.0,µM,Also referenced: hydroxychloroquine; mid‑ to high‑µM needed for single‑agent effects in vitro.
+Metformin,Biguanide antidiabetic,Inhibits mitochondrial complex I and induces metabolic stress,0.5,10.0,mM,Reported anti‑leukemic effects at millimolar concentrations in vitro.
+Simvastatin,HMG‑CoA reductase inhibitor (statin),"Inhibits HMG‑CoA reductase, affecting cholesterol synthesis, prenylation, and apoptosis pathways",1.0,30.0,µM,Reported anti‑AML activity in vitro (low to mid‑µM).

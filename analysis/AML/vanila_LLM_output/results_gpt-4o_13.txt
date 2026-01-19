@@ -1,0 +1,55 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs offers a valuable strategy for developing new treatments for acute myeloid leukemia (AML), given that these compounds have already undergone safety testing. Below is a list of drugs that have shown potential in preclinical studies or have mechanisms of action suggesting they might be effective against AML, particularly the MOLM13 cell line. I will also mention typical concentration ranges for IC50 assays where applicable, but these should be verified experimentally.
+
+1. **Sorafenib**: A multikinase inhibitor that has shown efficacy in AML. Concentrations in IC50 assays typically range from 0.1 to 10 µM.
+
+2. **Dasatinib**: A tyrosine kinase inhibitor primarily used in CML but has shown potential against AML. Range: 1 to 100 nM.
+
+3. **Ruxolitinib**: A JAK1/2 inhibitor used in myeloproliferative disorders, showing some promise against AML. Range: 0.1 to 5 µM.
+
+4. **Venetoclax**: A BCL-2 inhibitor with emerging data supporting its use in AML. Range: 0.01 to 10 µM.
+
+5. **Midostaurin**: Approved for FLT3-mutated AML, could be tested in various concentrations. Range: 1 to 100 nM.
+
+6. **Metformin**: Commonly used for diabetes, it may have antiproliferative effects against cancer cells. Range: 1 to 10 mM.
+
+7. **Arsenic Trioxide**: Used in APL; may have activity in other AML subtypes. Range: 0.1 to 5 µM.
+
+8. **Vorinostat (SAHA)**: An HDAC inhibitor, under investigation for AML. Range: 0.1 to 5 µM.
+
+9. **Selinexor**: An XPO1 inhibitor with potential benefits in leukemias. Range: 0.1 to 1 µM.
+
+10. **Auranofin**: A gold-containing drug traditionally for rheumatoid arthritis, has shown some anti-leukemia activity. Range: 0.1 to 10 µM.
+
+11. **Chloroquine**: An antimalarial with autophagy-inhibiting properties that might be effective in AML. Range: 1 to 20 µM.
+
+12. **Ibrutinib**: Primarily used in CLL but has shown activity in other hematological malignancies. Range: 0.1 to 10 µM.
+
+13. **Everolimus**: An mTOR inhibitor with potential applications in AML due to its role in cell growth pathways. Range: 10 to 100 nM.
+
+14. **Simvastatin**: A statin with possible anti-cancer properties. Range: 1 to 10 µM.
+
+15. **Thalidomide**: Known for its immunomodulatory effects in multiple myeloma and under investigation for AML. Range: A few micromolar concentrations.
+
+16. **Carfilzomib**: A proteasome inhibitor used in multiple myeloma, potentially beneficial in AML. Range: 10 to 100 nM.
+
+17. **Idelalisib**: A PI3K inhibitor primarily used in CLL, might be active in AML cell lines. Range: 0.1 to 10 µM.
+
+18. **Bosutinib**: A tyrosine kinase inhibitor that may show activity against AML cell proliferation. Range: 1 to 10 µM.
+
+19. **Clofarabine**: Antineoplastic agent used in pediatric ALL with some application in AML. Range: 0.1 to 100 µM.
+
+20. **Celecoxib**: A COX-2 inhibitor which might have anti-leukemic properties. Range: 1 to 20 µM.
+
+When planning experiments, consider that the efficacy of these drugs in AML, particularly against the MOLM13 cell line, could vary based on multiple factors, including genetic mutations and cell culture conditions. Always begin with a literature review to assess previous experimental data and adjust concentrations as necessary based on pilot assays and cell viability outcomes.

@@ -1,0 +1,128 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or clinically characterized) that have either documented anti‑AML activity or a plausible mechanism to inhibit proliferation of AML cells — including FLT3‑ITD positive lines such as MOLM13. For each I give a short rationale and an experimentally testable concentration scheme suitable for IC50 determination (recommended top concentration + serial dilution plan). I do not provide culture or assay procedural steps — only concentration ranges/series for dose–response testing. Use an appropriate vehicle control and keep vehicle concentration constant across wells.
+
+Common testing format suggested: 10‑point, 3‑fold (or 2‑fold where noted) serial dilution series from the listed top concentration — this gives a broad dynamic range and is routinely used to derive IC50 values. If you prefer explicit concentration points I can expand any item into the exact µM/nM values produced by the dilution series.
+
+1) Gilteritinib (FLT3/AXL inhibitor)
+- Rationale: Approved for FLT3‑mutant AML; potent vs FLT3‑ITD lines (e.g., MOLM13).
+- Expected potency: low nM.
+- Test scheme: start 1 µM; 10‑point 3‑fold dilutions (1 µM → ~0.5 pM).
+
+2) Quizartinib (FLT3 inhibitor)
+- Rationale: Highly potent FLT3 inhibitor; active in FLT3‑ITD cell lines.
+- Expected potency: sub‑ to low‑nM.
+- Test scheme: start 100 nM; 10‑point 3‑fold dilutions (100 nM → ~50 pM).
+
+3) Midostaurin (multikinase / FLT3)
+- Rationale: Approved in FLT3‑mutant AML combinations; multikinase activity.
+- Expected potency: ~100 nM–µM range in cell viability assays.
+- Test scheme: start 10 µM; 10‑point 3‑fold dilutions (10 µM → ~5 nM).
+
+4) Sorafenib (multi‑kinase inhibitor)
+- Rationale: Has FLT3 inhibitory activity and reported activity in FLT3‑ITD AML.
+- Expected potency: ~100 nM–µM.
+- Test scheme: start 10 µM; 10‑point 3‑fold dilutions.
+
+5) Ponatinib (multi‑kinase, including FLT3)
+- Rationale: Clinically used multi‑kinase inhibitor with FLT3 activity; potent in some AML lines.
+- Expected potency: low nM.
+- Test scheme: start 1 µM; 10‑point 3‑fold dilutions.
+
+6) Venetoclax (BCL‑2 inhibitor)
+- Rationale: Approved/used in AML combinations; strongly pro‑apoptotic in many AML cell lines.
+- Expected potency: low nM.
+- Test scheme: start 1 µM; 10‑point 3‑fold dilutions.
+
+7) Bortezomib (proteasome inhibitor)
+- Rationale: Proteasome inhibition reduces survival of AML blasts in vitro; activity reported in AML lines.
+- Expected potency: low‑nM.
+- Test scheme: start 1 µM; 10‑point 3‑fold dilutions.
+
+8) Auranofin (thioredoxin reductase inhibitor)
+- Rationale: Repurposed anti‑rheumatic with oxidative‑stress–mediated cytotoxicity in AML lines.
+- Expected potency: ~0.1–2 µM.
+- Test scheme: start 10 µM; 10‑point 3‑fold dilutions.
+
+9) Niclosamide (anti‑helminthic; multiple anticancer mechanisms)
+- Rationale: Inhibits mitochondrial/STAT3/other pathways; reported anti‑AML activity.
+- Expected potency: ~0.5–5 µM.
+- Test scheme: start 20 µM; 10‑point 3‑fold dilutions.
+
+10) Disulfiram (antialcoholism drug; activity often copper‑dependent)
+- Rationale: When complexed with copper, forms cytotoxic complexes that kill cancer cells; reported AML activity.
+- Expected potency: ~0.05–1 µM (with Cu).
+- Test scheme: start 10 µM (test ±Cu as separate arms); 10‑point 3‑fold dilutions.
+- Note: Disulfiram activity in vitro often requires addition of copper(II); treat the Cu condition as a separate experimental arm.
+
+11) Selinexor (XPO1/CRM1 inhibitor)
+- Rationale: Nuclear export inhibitor with reported single‑agent and combination activity in AML preclinical models.
+- Expected potency: ~0.1–2 µM.
+- Test scheme: start 10 µM; 10‑point 3‑fold dilutions.
+
+12) Trametinib (MEK1/2 inhibitor)
+- Rationale: MAPK pathway inhibition can affect AML proliferation in some contexts and in combination; test sensitivity in MOLM13.
+- Expected potency: low nM (cell‑line dependent).
+- Test scheme: start 1 µM; 10‑point 3‑fold dilutions.
+
+13) Everolimus (mTORC1 inhibitor)
+- Rationale: mTOR pathway is relevant to AML metabolism/growth; everolimus has reported AML effects.
+- Expected potency: ~10–500 nM.
+- Test scheme: start 10 µM; 10‑point 3‑fold dilutions.
+
+14) Vorinostat / SAHA (pan‑HDAC inhibitor)
+- Rationale: Epigenetic modifier with reported synergy and single‑agent activity in AML cell lines.
+- Expected potency: ~0.2–5 µM.
+- Test scheme: start 10 µM; 10‑point 3‑fold dilutions.
+
+15) Panobinostat (pan‑HDAC inhibitor; more potent than SAHA)
+- Rationale: Strong HDAC inhibition; potent growth inhibition reported in some AML lines.
+- Expected potency: low‑ to mid‑nM.
+- Test scheme: start 1 µM; 10‑point 3‑fold dilutions.
+
+16) Alvocidib / Flavopiridol (CDK9/ pan‑CDK inhibitor)
+- Rationale: Inhibits transcriptional CDKs and downregulates MCL‑1; has AML clinical history.
+- Expected potency: ~10–500 nM.
+- Test scheme: start 1 µM; 10‑point 3‑fold dilutions.
+
+17) Ibrutinib (BTK inhibitor)
+- Rationale: BTK pathway inhibition has variable effects in AML; some AML lines are sensitive and it can synergize with other agents.
+- Expected potency: ~0.5–5 µM (cell‑line dependent).
+- Test scheme: start 10 µM; 10‑point 3‑fold dilutions.
+
+18) Mebendazole (anti‑helminthic microtubule inhibitor)
+- Rationale: Repurposed anticancer agent with reported activity against leukemia cells via microtubule disruption and other mechanisms.
+- Expected potency: ~0.2–5 µM.
+- Test scheme: start 20 µM; 10‑point 3‑fold dilutions.
+
+19) Metformin (biguanide)
+- Rationale: Alters cellular metabolism; in vitro cytotoxicity usually requires high mM concentrations (canonical caveat: in vitro concentrations needed are much higher than therapeutic plasma levels).
+- Expected potency: mM range.
+- Test scheme: start 20 mM; 10‑point 3‑fold dilutions (20 mM → ~10 µM).
+
+20) Simvastatin (HMG‑CoA reductase inhibitor)
+- Rationale: Statins induce apoptosis and sensitize AML cells via mevalonate pathway inhibition in some reports.
+- Expected potency: ~1–10 µM (cell‑line dependent).
+- Test scheme: start 20 µM; 10‑point 3‑fold dilutions.
+
+General notes and suggestions
+- For potent targeted drugs (expected nM IC50), starting at 1 µM (or 100 nM for extremely potent agents) with 10‑point 3‑fold dilutions should reliably include the IC50. For compounds known to require µM–tens‑µM (or mM) concentrations, start proportionally higher (10–20 µM or 20 mM for metformin).
+- If you want explicit concentration series (exact µM or nM values for each of the 10 wells for any specific drug), tell me which drug(s) and I will expand the list into the exact concentrations.
+- Solubility: adjust top concentration depending on solubility limits in your assay solvent (most kinase inhibitors/DMSO‑soluble drugs handle 1–10 µM; for drugs with poor solubility you may need lower top concentrations or co‑solvents). Keep final DMSO % constant across wells (commonly ≤0.5–1%).
+- For agents that require cofactors (e.g., disulfiram with copper), test both with and without the cofactor as separate treatment arms.
+- Combination testing: many of these drugs are most active in combinations (e.g., venetoclax + hypomethylating agent), so single‑agent IC50s can underestimate therapeutic potential. Consider follow‑up combination matrices after single‑agent profiling.
+
+If you want, I can:
+- Convert any of the above test schemes into an explicit 10‑point concentration list (µM/nM).
+- Prioritize a smaller subset tailored specifically to MOLM13 based on published MOLM13 sensitivity data.
+- Suggest a two‑stage screening cascade (broad single‑agent screen at two concentrations, then full IC50 series for hits).

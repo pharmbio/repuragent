@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multikinase inhibitor,"Inhibits multiple kinases involved in cellular signaling, proliferation, and survival",0.1,10.0,µM,
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and SRC family kinases,1.0,100.0,nM,Primarily used in CML
+Ruxolitinib,JAK1/2 inhibitor,"Inhibits JAK1 and JAK2, interrupting signaling that promotes cell proliferation",0.1,5.0,µM,Used in myeloproliferative disorders
+Venetoclax,BCL-2 inhibitor,"Selectively inhibits the BCL-2 protein, promoting apoptosis",0.01,10.0,µM,Emerging data supports use in AML
+Midostaurin,FLT3 inhibitor,Inhibits FLT3 and other kinases like PKC,1.0,100.0,nM,Approved for FLT3-mutated AML
+Metformin,Biguanide (antidiabetic agent),"Activates AMP-activated protein kinase, inhibiting cancer cell proliferation",1.0,10.0,mM,"Commonly used for diabetes, potential antiproliferative effects"
+Arsenic Trioxide,Chemotherapeutic,Induces apoptosis through mitochondrial pathway,0.1,5.0,µM,Used in APL; activity in other AML subtypes
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases, affecting gene expression and cell cycle arrest",0.1,5.0,µM,Also known as SAHA
+Selinexor,XPO1 inhibitor,"Blocks nuclear export, leading to apoptosis",0.1,1.0,µM,
+Auranofin,Gold drug,Inhibits thioredoxin reductase leading to increased oxidative stress,0.1,10.0,µM,Traditionally used for rheumatoid arthritis
+Chloroquine,Antimalarial,Inhibits autophagy in tumor cells,1.0,20.0,µM,Might be effective in AML
+Ibrutinib,Bruton's tyrosine kinase inhibitor,Blocks B-cell receptor signaling,0.1,10.0,µM,Primarily used in CLL
+Everolimus,mTOR inhibitor,"Inhibits mTOR, impairing cell growth and proliferation",10.0,100.0,nM,
+Simvastatin,Statin,Inhibits HMG-CoA reductase with potential anti-cancer properties,1.0,10.0,µM,
+Thalidomide,Immunomodulatory agent,Inhibits angiogenesis and affects immune modulation,2.0,5.0,µM,Known for use in multiple myeloma
+Carfilzomib,Proteasome inhibitor,Inhibits 20S proteasome leading to accumulation of protein substrates,10.0,100.0,nM,Used in multiple myeloma
+Idelalisib,PI3K inhibitor,"Inhibits delta isoform of PI3K, reducing proliferation of malignant B cells",0.1,10.0,µM,Primarily used in CLL
+Bosutinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and SRC kinase families,1.0,10.0,µM,May show activity against AML cell proliferation
+Clofarabine,Antineoplastic agent,Interferes with DNA synthesis and function,0.1,100.0,µM,"Used in pediatric ALL, some application in AML"
+Celecoxib,COX-2 inhibitor,"Inhibits COX-2, potentially affecting cancer cell growth",1.0,20.0,µM,Might have anti-leukemic properties

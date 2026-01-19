@@ -1,0 +1,12 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,BCR-ABL / multi-kinase inhibitor,Inhibits multiple kinases including FLT3; suppresses signaling in FLT3-driven AML models,0.001,3.0,µM,Listed as BCR-ABL; multi-kinase including FLT3,ponatinib,False,CHEMBL2105708
+Dasatinib,SRC/ABL kinase inhibitor,Inhibits SRC/ABL-family kinases; can suppress signaling nodes relevant in subsets of AML,0.001,10.0,µM,,dasatinib,False,CHEMBL1421
+Trametinib,MEK inhibitor (MAPK pathway inhibitor),"Inhibits MEK, blocking MAPK signaling to reduce proliferation",0.0003,3.0,µM,Rationale notes MAPK pathway dependence,trametinib,False,CHEMBL2103875
+Navitoclax,BCL-2/BCL-xL inhibitor (BH3 mimetic),Inhibits BCL-2 and BCL-xL to induce apoptosis,0.001,10.0,µM,Alternative name: ABT-263; described as broader BH3 mimetic,navitoclax,False,CHEMBL2105690
+Nutlin-3a,MDM2 inhibitor,Blocks MDM2–p53 interaction to activate p53 signaling,0.5,50.0,µM,Described as tool/clinical precursor; common positive control for MDM2–p53 axis,nutlin 3a,False,CHEMBL191334
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases causing epigenetic modulation and growth arrest/apoptosis,0.0003,1.0,µM,Current use noted as myeloma; cited for epigenetic vulnerability in AML,panobinostat,False,CHEMBL483254
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, inducing proteotoxic stress and apoptosis",0.001,0.3,µM,Current use: myeloma; also suggested as a positive control option,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,"Irreversibly inhibits the proteasome, inducing proteostasis stress and cytotoxicity",0.001,0.3,µM,Described as potent with short half-life but strong in vitro activity,carfilzomib,False,CHEMBL451887
+Tofacitinib,JAK inhibitor,Inhibits JAK/STAT pathway signaling contributing to AML survival in some settings,0.05,30.0,µM,Current use: rheumatoid arthritis (RA),tofacitinib,False,CHEMBL2103743
+Ruxolitinib,JAK1/2 inhibitor,Inhibits JAK1/2 to reduce JAK/STAT signaling and proliferation in susceptible AML subsets,0.01,20.0,µM,Current use: MPN; activity noted as subset-dependent,ruxolitinib,False,CHEMBL1287854
+Metformin,Biguanide antidiabetic (metabolic modulator),Modulates mitochondrial metabolism/AMPK-related pathways; antiproliferative effects at higher in vitro doses,0.1,50.0,mM,Current use: type 2 diabetes; note that millimolar ranges are typically needed in standard glucose media; consider lower-glucose/OXPHOS-reliant conditions,metformin,False,CHEMBL1431

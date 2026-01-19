@@ -1,0 +1,83 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic indications can be a promising approach, especially in diseases like acute myeloid leukemia (AML). For an IC50 assay against AML cell lines such as MOLM13, the drugs chosen should demonstrate activity against cancer cells at clinically achievable concentrations. Below is a list of 20 existing drugs that have been explored for their potential to inhibit AML cell proliferation, along with suggested concentrations for testing in an IC50 assay.
+
+### Top 20 Existing Drugs for Potential Repurposing in AML Treatment
+
+1. **Azacitidine**  
+   Suggested Concentration: 0.1 - 5 µM
+
+2. **Decitabine**  
+   Suggested Concentration: 0.1 - 5 µM
+
+3. **Venetoclax**  
+   Suggested Concentration: 1 - 10 µM
+
+4. **Lenalidomide**  
+   Suggested Concentration: 1 - 10 µM
+
+5. **Thalidomide**  
+   Suggested Concentration: 1 - 10 µM
+
+6. **Clofarabine**  
+   Suggested Concentration: 0.01 - 1 µM
+
+7. **Sorafenib**  
+   Suggested Concentration: 0.1 - 5 µM
+
+8. **Dasatinib**  
+   Suggested Concentration: 0.1 - 5 µM
+
+9. **Imatinib**  
+   Suggested Concentration: 0.1 - 5 µM
+
+10. **Hydroxyurea**  
+    Suggested Concentration: 10 - 100 µM
+
+11. **Auranofin**  
+    Suggested Concentration: 0.1 - 5 µM
+
+12. **Metformin**  
+    Suggested Concentration: 0.1 - 5 mM
+
+13. **Dexamethasone**  
+    Suggested Concentration: 0.1 - 5 µM
+
+14. **Bortezomib**  
+    Suggested Concentration: 1 - 50 nM
+
+15. **Curcumin**  
+    Suggested Concentration: 1 - 20 µM
+
+16. **Quercetin**  
+    Suggested Concentration: 1 - 20 µM
+
+17. **Resveratrol**  
+    Suggested Concentration: 1 - 20 µM
+
+18. **Chloroquine**  
+    Suggested Concentration: 1 - 10 µM
+
+19. **Statins (e.g., Atorvastatin)**  
+    Suggested Concentration: 1 - 10 µM
+
+20. **Sildenafil**  
+    Suggested Concentration: 1 - 20 µM
+
+### Important Notes:
+- **Experimental Validation:** The suggested concentrations are based on literature values, previous experimental results, and pharmacokinetic data. It is crucial to experimentally validate these concentrations in your specific context.
+- **Cell Viability Assay:** For IC50 determination, assays such as MTT, CellTiter-Glo, or other suitable viability assays can be employed to measure cell proliferation or viability after drug treatment.
+- **Combination Therapies:** Investigating combinations of these drugs with standard AML treatments or other agents might yield additional therapeutic benefits.
+- **Ethical Considerations:** Ensure all experimental protocols adhere to appropriate ethical guidelines and regulations.
+
+This information serves as a foundation for further exploration into drug repurposing for AML treatment, specifically targeting proliferation in MOLM13 cell lines. Always consult the latest research literature to refine drug choice and concentration strategies.

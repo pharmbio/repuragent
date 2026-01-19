@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Ponatinib,Tyrosine kinase inhibitor (multi-target),Inhibits FLT3 (including ITD mutants) and multiple tyrosine kinases,1.0,10.0,nM,Approved for CML/Ph+ ALL; potent against FLT3‑ITD AML; MOLM‑13 growth inhibition at low nM
+Sorafenib,Tyrosine kinase inhibitor (multi-target),Inhibits FLT3 along with RAF/VEGFR and other kinases,3.0,20.0,nM,Approved for RCC/HCC; inhibits FLT3‑ITD signaling and proliferation in MOLM‑13/MV4‑11
+Sunitinib,Tyrosine kinase inhibitor (multi-target),"Inhibits FLT3, VEGFR, PDGFR and other kinases",50.0,200.0,nM,Approved for RCC/GIST; inhibits FLT3‑ITD AML cell growth; MOLM‑13 commonly used model
+Cabozantinib,Tyrosine kinase inhibitor (MET/VEGFR/FLT3),Inhibits MET and VEGFR; inhibits FLT3 including resistant mutants,1.0,20.0,nM,Active in FLT3‑ITD/TKD mutant AML models; activity reported in MOLM series
+Axitinib,Tyrosine kinase inhibitor (VEGFR),VEGFR inhibitor with additional FLT3 inhibitory activity,10.0,100.0,nM,Inhibits FLT3 and growth of FLT3‑ITD AML cells; effects seen in MOLM‑13/MV4‑11
+Regorafenib,Tyrosine kinase inhibitor (multi-target),Multi-kinase inhibitor with FLT3 activity,0.1,1.0,µM,Anti‑proliferative in AML lines including FLT3‑ITD models; reported MOLM‑13 sensitivity
+Dasatinib,Tyrosine kinase inhibitor (SRC/ABL family),SRC/ABL family kinase inhibitor; modulates FLT3/SRC pathway signaling,10.0,50.0,nM,Inhibits signaling/proliferation in subsets of AML; activity noted in MOLM‑13
+Nilotinib,Tyrosine kinase inhibitor (ABL/KIT),ABL/KIT inhibitor with modest FLT3 activity,0.2,1.0,µM,Anti‑proliferative effects in some AML models; reported activity in MOLM‑13 at higher doses
+Bortezomib,Proteasome inhibitor,Reversibly inhibits the 26S proteasome (20S catalytic core),5.0,20.0,nM,Induces apoptosis and inhibits growth in AML lines including MOLM‑13
+Carfilzomib,Proteasome inhibitor,Irreversible proteasome inhibitor (20S catalytic core),10.0,50.0,nM,Broad AML cytotoxicity; MOLM‑13 among sensitive lines
+Ixazomib,Proteasome inhibitor,Oral reversible proteasome inhibitor,20.0,200.0,nM,Inhibits AML cell growth in vitro; activity in MOLM‑13 reported
+Panobinostat,HDAC inhibitor (pan-HDAC),Inhibits histone deacetylases to promote histone acetylation and apoptosis,10.0,50.0,nM,Strong anti‑proliferative effects in AML; MOLM‑13 often low‑nM sensitive
+Vorinostat,HDAC inhibitor,Inhibits histone deacetylases,0.5,2.0,µM,Also known as SAHA; inhibits AML cell proliferation; MOLM‑13 shows µM‑range sensitivity
+Romidepsin,HDAC inhibitor (class I),Selective class I histone deacetylase inhibitor,2.0,20.0,nM,Potent cytotoxicity in AML cells; nanomolar range across models (MOLM‑13 included in some panels)
+Belinostat,HDAC inhibitor,Inhibits histone deacetylases,0.5,2.0,µM,Inhibits proliferation and induces apoptosis in AML lines
+Selinexor,XPO1 (nuclear export) inhibitor,Blocks exportin 1 (XPO1/CRM1)–mediated nuclear export,50.0,500.0,nM,Strong activity in AML lines with apoptosis induction; MOLM‑13 sensitive in low‑sub‑µM range
+Everolimus,mTOR inhibitor (mTORC1),Inhibits mTORC1 signaling to suppress cell growth/proliferation,1.0,10.0,µM,Suppresses AML proliferation and mTOR signaling; activity seen in MOLM‑13 (often cytostatic)
+Tigecycline,Antibiotic (glycylcycline),"Inhibits mitochondrial translation, impairing oxidative phosphorylation",0.5,5.0,µM,Selectively impairs OXPHOS; inhibits AML blasts/LSCs and MOLM‑13 viability
+Omacetaxine mepesuccinate,Protein synthesis inhibitor,Inhibits protein synthesis elongation at the ribosome,5.0,50.0,nM,Also known as homoharringtonine; broad activity in AML cell lines including MOLM‑13
+Disulfiram,ALDH inhibitor,Inhibits aldehyde dehydrogenase; cytotoxicity potentiated by Cu2+,0.1,1.0,µM,Cytotoxic to AML cells including FLT3‑ITD models; activity in MOLM‑13 reported; higher effective concentrations without copper

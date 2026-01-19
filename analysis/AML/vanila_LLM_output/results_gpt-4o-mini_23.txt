@@ -1,0 +1,95 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs is a promising strategy for discovering new treatments for diseases like acute myeloid leukemia (AML). Below are 20 existing drugs that have shown potential in experimental settings or theoretical considerations for AML treatment. The suggested concentrations for IC50 assays are based on literature or known pharmacological data, but it's crucial to validate these experimentally in your specific context. 
+
+Please note: Actual IC50 values can vary considerably based on multiple factors including drug formulation, methods of administration, cell line characteristics, and assay conditions. It is necessary to perform dose-response studies to confirm these suggested concentrations.
+
+### Top 20 Existing Drugs for AML Repurposing:
+
+1. **Dasatinib (Sprycel)**
+   - Suggested IC50: 0.1 - 1.0 µM
+
+2. **Venetoclax (Venclexta)**
+   - Suggested IC50: 0.1 - 0.5 µM
+
+3. **Azacitidine (Vidaza)**
+   - Suggested IC50: 1 - 5 µM
+
+4. **Decitabine (Dacogen)**
+   - Suggested IC50: 0.1 - 1.0 µM
+
+5. **Imatinib (Gleevec)**
+   - Suggested IC50: 0.5 - 5 µM
+
+6. **Ruxolitinib (Jakafi)**
+   - Suggested IC50: 0.5 - 3.0 µM
+
+7. **Quisinostat**
+   - Suggested IC50: 0.1 - 2.0 µM
+
+8. **Paclitaxel (Taxol)**
+   - Suggested IC50: 5 - 20 nM
+
+9. **Sorafenib (Nexavar)**
+   - Suggested IC50: 1 - 5 µM
+
+10. **Topotecan**
+    - Suggested IC50: 50 - 300 nM
+
+11. **Melflufen**
+    - Suggested IC50: 10 - 100 nM
+
+12. **Thalidomide**
+    - Suggested IC50: 10 - 20 µM
+
+13. **Clarithromycin**
+    - Suggested IC50: 1 - 10 µM
+
+14. **Chlorambucil**
+    - Suggested IC50: 5 - 30 µM
+
+15. **Metformin**
+    - Suggested IC50: 1 - 10 mM
+
+16. **Heparin**
+    - Suggested IC50: 50 - 100 µg/mL
+
+17. **Dexamethasone**
+    - Suggested IC50: 5 - 20 µM
+
+18. **L-asparaginase**
+    - Suggested IC50: 30 - 300 U/mL
+
+19. **Disulfiram**
+    - Suggested IC50: 5 - 15 µM
+
+20. **Nilotinib (Tasigna)**
+    - Suggested IC50: 1 - 10 µM
+
+### Experimental Considerations:
+
+1. **Cell Line Validation:** Use the MOLM13 cell line for testing. Confirm that the cell line is authentically characterized, as variations in cell line strains can lead to different responses to drugs.
+
+2. **Assay Conditions:** Establish your IC50 assays under consistent conditions — including cell density, time of exposure, and media composition.
+
+3. **Dose-Response Curves:** Generate dose-response curves for each drug. Determine IC50 values by fitting the data to a suitable model, typically a sigmoidal dose-response curve.
+
+4. **Replicates and Controls:** Include appropriate positive and negative controls for validation purposes, along with biological replicates to ensure reproducibility of results.
+
+5. **Mechanistic Studies:** Following initial screening, consider conducting mechanistic studies to understand how these drugs affect AML cell pathways.
+
+6. **Safety and Pharmacokinetics:** Consider the safety profiles and pharmacokinetics of these drugs, especially if there’s potential for combined therapies.
+
+7. **Ethical Considerations and Approvals:** Ensure all experimental protocols are approved by your institution's ethical review board and comply with regulatory standards.
+
+Before starting any experiments, consult the latest literature on the drugs listed and perform preliminary studies to assess their efficacy and safety in the specific context of AML.

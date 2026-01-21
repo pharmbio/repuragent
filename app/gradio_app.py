@@ -82,20 +82,8 @@ FILES_ROUTER = APIRouter(prefix="/api/files")
 FILE_LIST_REFRESH_INTERVAL_SECONDS = 1.0
 _SELECTED_THREAD_ID: Optional[str] = None
 
-INTRO_MARKDOWN = (
-    """Hello! I'm **Repuragent** - your AI Agent for Drug Repurposing. My team includes:
-
-    - **Planning Agent:** Decomposes given task into sub-tasks using knowledge from Standard Operating Procedures (SOPs) and biomedical literatures. 
-    - **Supervisor Agent:** Keeps track and coordinates agent's plan. 
-    - **Prediction Agent:** Makes ADMET predictions using pre-trained models.
-    - **Research Agent:** Retrieves relevant Standard Operating Procedures (SOPs), biomedical data from multiple database, and knowledge graph analysis.
-    - **Data Agent:** Performs data manipulation, preprocessing, and analysis.
-    - **Report Agent:** Summarizes agent workflow and wrtie final report. 
-
-    How can I assist you today?"""
-)
-
-INTRO_SKIP_TEXTS = {INTRO_MARKDOWN.strip()}
+INTRO_IMAGE_PATH = "images/agent_illustration.png"
+INTRO_IMAGE_ALT = "Repuragent agent illustration"
 HEADER_LINKS_HTML = f"""
 <div class="header-links-content">
     <a class="header-link" href="{escape(GITHUB_URL, quote=True)}" target="_blank" rel="noopener noreferrer">
@@ -163,6 +151,17 @@ def _inline_image_src(path: Path, *, log_missing: bool = True) -> Optional[str]:
     data = base64.b64encode(path.read_bytes()).decode("ascii")
     mime, _ = mimetypes.guess_type(str(path))
     return f"data:{mime or 'image/png'};base64,{data}"
+
+
+def _intro_markdown() -> str:
+    image_src = _inline_image_src(Path(INTRO_IMAGE_PATH), log_missing=False)
+    if not image_src:
+        return ""
+    return f"![{INTRO_IMAGE_ALT}]({image_src})"
+
+
+INTRO_MARKDOWN = _intro_markdown()
+INTRO_SKIP_TEXTS = {INTRO_MARKDOWN.strip()}
 
 
 def _logo_html() -> str:
@@ -1463,10 +1462,19 @@ def build_demo():
         color: var(--header-link-hover-color);
         text-decoration: underline;
     }
-    #intro-text,
-    #intro-text p {
-        margin-top: 0 !important;
-        margin-bottom: 0.2rem !important;
+    #intro-text {
+        margin: 0 0 0.75rem 0 !important;
+        padding: 0;
+        width: 100%;
+    }
+    #intro-text img {
+        width: 100%;
+        max-width: 840px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 14px;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
     }
     #layout-row {
         gap: 1rem;

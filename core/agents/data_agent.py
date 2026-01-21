@@ -41,6 +41,7 @@ DEFAULT_AUTHORIZED_IMPORTS = [
     'Bio',
     'posixpath',
     'ntpath',
+    'pybel'
 ]
 authorized_imports = sorted(set(BASE_BUILTIN_MODULES) | set(DEFAULT_AUTHORIZED_IMPORTS))
 

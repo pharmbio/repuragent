@@ -795,6 +795,26 @@ def protein_annotation_druggability(graph):
             nx.set_node_attributes(graph,{Protein(namespace="HGNC",name=protein):'No'},'Druggability')          
     return(graph)
 
+def protein_annotation_disease_score(graph, dis2prot_df):
+    """Add disease association scores from Open Targets to HGNC protein nodes."""
+    if dis2prot_df is None or dis2prot_df.empty:
+        return graph
+    score_map = (
+        dis2prot_df[['Protein', 'Score']]
+        .dropna(subset=['Protein'])
+        .groupby('Protein', as_index=True)['Score']
+        .max()
+        .to_dict()
+    )
+    if not score_map:
+        return graph
+    for node in graph.nodes():
+        if isinstance(node, pybel.dsl.Protein) and node.namespace == 'HGNC':
+            score = score_map.get(node.name)
+            if score is not None:
+                nx.set_node_attributes(graph, {node: score}, 'DiseaseAssociationScore')
+    return graph
+
 def getProtfromKG(mainGraph):
     prot_list = []
     for u, v, data in tqdm(mainGraph.edges(data=True),desc='Filtering Proteins/Genes'):        
@@ -1066,6 +1086,9 @@ def createKG(disease_id: str, clinical_trial_phase: int, protein_threshold: floa
         logger.warning("No drug data found for the given parameters")
     kg = uniprot_rel(uprot_ext, 'HGNC', kg)
     logger.info(f"Added UniProt relationships to KG with {len(kg.nodes())} nodes and {len(kg.edges())} edges")    
+    if dis2prot_df is not None:
+        kg = protein_annotation_disease_score(kg, uprot_df)
+        logger.info("Added disease association scores to protein nodes")
     kg = gene_ontology_annotation(kg,uprot_ext)
     logger.info("Added Gene Ontology annotations to KG")
     kg = protein_annotation_druggability(kg)

@@ -108,7 +108,7 @@ def create_knowledge_graph(
     
     Args:
         disease_id: EFO/MONDO disease ID (e.g., "EFO_0000685", "MONDO_0004975")
-        clinical_trial_phase: Minimum clinical trial phase (1-4, prefer 3)
+        clinical_trial_phase: Minimum clinical trial phase (1-4)
         protein_threshold: Minimum protein association score (0.0-1.0)
     
     Returns:
@@ -429,7 +429,8 @@ def extract_proteins_from_kg(
             'gene_symbol': [],
             'druggability': [],
             'uniprot_url': [],
-            'opentargets_url': []
+            'opentargets_url': [],
+            'disease_association_score': []
         }
         
         proteins_processed = 0
@@ -449,6 +450,7 @@ def extract_proteins_from_kg(
                 protein_info['druggability'].append(druggability)
                 protein_info['uniprot_url'].append(attrs.get('UniProt', ''))
                 protein_info['opentargets_url'].append(attrs.get('OpenTargets', ''))
+                protein_info['disease_association_score'].append(attrs.get('DiseaseAssociationScore'))
                 
                 proteins_processed += 1
                 
@@ -1111,6 +1113,20 @@ KNOWN_DRUGS_ROWS_QUERY = """
     }
 """
 
+ASSOCIATED_DISEASES_QUERY = """
+    query AssociatedDiseases($ensgId: String!, $index: Int!, $size: Int!) {
+      target(ensemblId: $ensgId) {
+        associatedDiseases(page: {index: $index, size: $size}) {
+          count
+          rows {
+            score
+            disease { id }
+          }
+        }
+      }
+    }
+"""
+
 MAP_TARGET_IDS_QUERY = """
     query MapTargets($terms: [String!]!) {
       mapIds(queryTerms: $terms, entityNames: ["target"]) {
@@ -1125,6 +1141,66 @@ MAP_TARGET_IDS_QUERY = """
       }
     }
 """
+
+_target_association_score_cache: Dict[Tuple[str, str], Optional[float]] = {}
+
+
+def _fetch_target_association_score_for_disease(
+    ensg_id: str,
+    disease_id: str,
+    page_size: int = 500,
+) -> Optional[float]:
+    score_value: Optional[float] = None
+    index = 0
+    while True:
+        variables = {"ensgId": ensg_id, "index": index, "size": page_size}
+        try:
+            response = requests.post(
+                OPENTARGETS_GRAPHQL_URL,
+                json={"query": ASSOCIATED_DISEASES_QUERY, "variables": variables},
+                timeout=60,
+            )
+            payload = response.json()
+        except Exception as exc:
+            logger.debug(
+                "OpenTargets associatedDiseases query failed for %s: %s", ensg_id, exc
+            )
+            return score_value
+
+        assoc = (((payload.get("data") or {}).get("target") or {}).get("associatedDiseases") or {})
+        rows = assoc.get("rows") or []
+        count = assoc.get("count")
+        for row in rows:
+            row_disease_id = (row.get("disease") or {}).get("id")
+            if row_disease_id != disease_id:
+                continue
+            score = row.get("score")
+            if score is None:
+                continue
+            if score_value is None or score > score_value:
+                score_value = score
+
+        if not rows:
+            break
+        index += 1
+        if count is not None and index * page_size >= count:
+            break
+        if count is None and len(rows) < page_size:
+            break
+    return score_value
+
+
+def _get_target_association_score_for_disease(
+    ensg_id: str,
+    disease_id: str,
+) -> Optional[float]:
+    cache_key = (ensg_id, disease_id)
+    cached = _target_association_score_cache.get(cache_key)
+    if cache_key in _target_association_score_cache:
+        return cached
+    score_value = _fetch_target_association_score_for_disease(ensg_id, disease_id)
+    _target_association_score_cache[cache_key] = score_value
+    return score_value
 
 
 def _normalize_pathway_key(name: str) -> str:
@@ -1226,6 +1302,7 @@ def getDrugsforProteins_count(ensg):
 @tool
 def getDrugsforProteins(
     proteins: Union[str, List[str]],
+    disease_id: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Get known drugs that are associated with given proteins.
     
@@ -1238,6 +1315,7 @@ def getDrugsforProteins(
             - File path returned by previous tools (preferred when available)
             - Comma-separated string (e.g., 'TP53,BRCA1,EGFR')  
             - List of gene symbols
+        disease_id: disease ID (EFO/MONDO) to score relevance against.
             
     Returns:
         Standardized dictionary with:
@@ -1320,7 +1398,44 @@ def getDrugsforProteins(
     chembl_to_smiles = fetch_smiles_batch(unique_ids, chunk_size=200)
     api_response["smiles"] = api_response["drug.id"].map(chembl_to_smiles)
 
-    api_response.columns = ['phase','status','disease_id','disease_name', 'chembl_id','drug_name','gene_symbol','smiles']
+    api_response = api_response.rename(
+        columns={
+            "disease.id": "disease_id",
+            "disease.name": "disease_name",
+            "drug.id": "chembl_id",
+            "drug.name": "drug_name",
+            "Protein": "gene_symbol",
+        }
+    )
+
+    if disease_id and not api_response.empty:
+        score_cache: Dict[str, Optional[float]] = {}
+        for gene_symbol in api_response["gene_symbol"].dropna().unique():
+            ensg_id = mapping_dict_id_symbol.get(gene_symbol)
+            if not ensg_id:
+                continue
+            score_cache[gene_symbol] = _get_target_association_score_for_disease(
+                ensg_id,
+                disease_id,
+            )
+        api_response["associated_score"] = api_response["gene_symbol"].map(score_cache)
+
+    output_columns = [
+        "phase",
+        "status",
+        "disease_id",
+        "disease_name",
+        "chembl_id",
+        "drug_name",
+        "gene_symbol",
+    ]
+    if disease_id:
+        output_columns.append("associated_score")
+    output_columns.append("smiles")
+    for col in output_columns:
+        if col not in api_response.columns:
+            api_response[col] = None
+    api_response = api_response[output_columns]
     
     output_file = _output_file('protein_drug_candidates.csv')
     api_response.to_csv(output_file, index=False)
@@ -1345,6 +1460,7 @@ def getDrugsforProteins(
             "total_input_proteins": len(prot_list),
             "total_drug_protein_pairs": len(api_response),
             "unique_drugs_found": len(api_response['chembl_id'].unique()),
+            "associated_score_disease_id": disease_id,
             "csv_exported": output_str,
             "usage_note": "This filtered dataset should be used for subsequent ADMET predictions instead of the original drug database"
         }

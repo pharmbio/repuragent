@@ -154,6 +154,32 @@ def route_from_planning(state) -> Literal["human_chat", "supervisor"]:
         # Only the original request exists, no approval possible yet
         logger.info("Only original request exists, routing to human_chat for plan review")
         return "human_chat"
+
+    # Treat a follow-up user message right after supervisor/report output as a fresh request
+    last_human_idx = None
+    for idx in range(len(messages) - 1, -1, -1):
+        msg = messages[idx]
+        is_human = (
+            (hasattr(msg, "type") and msg.type == "human")
+            or (isinstance(msg, dict) and msg.get("role") == "user")
+            or (hasattr(msg, "role") and msg.role == "user")
+        )
+        if is_human:
+            last_human_idx = idx
+            break
+
+    if last_human_idx is not None:
+        prev_idx = last_human_idx - 1
+        if prev_idx >= 0:
+            prev_msg = messages[prev_idx]
+            prev_name = None
+            if hasattr(prev_msg, "name"):
+                prev_name = prev_msg.name
+            elif isinstance(prev_msg, dict):
+                prev_name = prev_msg.get("name")
+            if prev_name in {"supervisor", "report_agent"}:
+                logger.info("Detected follow-up after %s, routing to human_chat for plan review", prev_name)
+                return "human_chat"
     
     # Check the most recent human message (excluding the first) for approval terms
     most_recent_feedback = human_messages[-1]

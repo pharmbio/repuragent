@@ -10,7 +10,7 @@ import os
 import shutil
 import time
 from contextlib import suppress
-from datetime import datetime
+from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -254,10 +254,32 @@ def _apply_stream_event(event_type: str, payload: Any, state: UIState) -> bool:
     if event_type == "chunk":
         return process_chunk(state, payload)
     if event_type == "complete":
-        state.waiting_for_approval = bool(payload)
-        state.approval_interrupted = bool(payload)
+        interrupted, _ = _parse_complete_payload(payload)
+        state.waiting_for_approval = interrupted
+        state.approval_interrupted = interrupted
         return True
     return False
+
+
+def _parse_complete_payload(payload: Any) -> Tuple[bool, Optional[datetime]]:
+    """Return (interrupted, completed_at) from a completion payload."""
+    if isinstance(payload, dict):
+        interrupted = bool(payload.get("interrupted"))
+        completed_at = payload.get("completed_at")
+    else:
+        interrupted = bool(payload)
+        completed_at = None
+
+    completed_dt = None
+    if isinstance(completed_at, (int, float)):
+        completed_dt = datetime.fromtimestamp(completed_at, tz=timezone.utc)
+    elif isinstance(completed_at, str):
+        try:
+            completed_dt = datetime.fromisoformat(completed_at)
+        except ValueError:
+            completed_dt = None
+
+    return interrupted, completed_dt
 
 
 def _drain_pending_stream_events(state: UIState, thread_id: Optional[str]) -> bool:
@@ -392,11 +414,16 @@ def _hydrate_input_files(state: UIState, thread_id: str) -> None:
             file_hash = _hash_file(path)
         except OSError:
             continue
+        try:
+            uploaded_at = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+        except OSError:
+            uploaded_at = None
         records.append(
             FileRecord(
                 path=str(path),
                 hash=file_hash,
                 name=path.name,
+                uploaded_at=uploaded_at,
             )
         )
     state.thread_files[thread_id] = records
@@ -1009,6 +1036,7 @@ async def _delete_thread(thread_id: Optional[str], state: UIState):
     state.thread_ids = load_thread_ids()
     state.thread_files.pop(thread_id, None)
     state.thread_output_files.pop(thread_id, None)
+    state.last_run_at.pop(thread_id, None)
     if state.current_thread_id == thread_id and state.thread_ids:
         state.current_thread_id = state.thread_ids[-1]["thread_id"]
         await _refresh_conversation(state, state.current_thread_id)
@@ -1119,6 +1147,16 @@ def _append_file_paths(prompt: str, state: UIState) -> str:
     files = state.uploaded_files
     if not files:
         return prompt
+    thread_id = state.current_thread_id
+    last_run_at = state.last_run_at.get(thread_id) if thread_id else None
+    if last_run_at:
+        files = [
+            file
+            for file in files
+            if file.uploaded_at and file.uploaded_at > last_run_at
+        ]
+        if not files:
+            return prompt
     if len(files) == 1:
         return f"{prompt}\n\nUploaded file: {files[0].path}"
     addition = "\n\nUploaded files:\n" + "\n".join(f"- {file.path}" for file in files)
@@ -1241,6 +1279,13 @@ async def _run_user_message(prompt: str, state: UIState, *, approve_signal: Opti
                     except StopAsyncIteration:
                         stream_task = None
                         break
+
+                    if event_type == "complete" and watch_thread_id:
+                        interrupted, completed_at = _parse_complete_payload(payload)
+                        if not interrupted:
+                            state.last_run_at[watch_thread_id] = completed_at or datetime.now(
+                                timezone.utc
+                            )
 
                     if not ui_attached:
                         buffer.append((event_type, payload))

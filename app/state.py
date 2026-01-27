@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from datetime import datetime
 from typing import Dict, List, Optional, Set
 
 from gradio.components.chatbot import ChatMessage
@@ -13,6 +14,7 @@ class FileRecord:
     path: str
     hash: Optional[str]
     name: str
+    uploaded_at: Optional[datetime] = None
     record_id: Optional[str] = None
 
 
@@ -40,6 +42,7 @@ class UIState:
     use_episodic_learning: bool = True
     thread_files: Dict[str, List[FileRecord]] = field(default_factory=dict)
     uploaded_files: List[FileRecord] = field(default_factory=list)
+    last_run_at: Dict[str, datetime] = field(default_factory=dict)
     thread_output_files: Dict[str, List[FileRecord]] = field(default_factory=dict)
     current_app_config: Optional[AppRunConfig] = None
     stop_signals: Dict[str, bool] = field(default_factory=dict)

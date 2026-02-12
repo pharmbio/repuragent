@@ -21,7 +21,7 @@ from backend.utils.output_paths import resolve_output_folder
 def annotate_chemicals(
     input_file,
     output_prefix,
-    format_type='SMILES',
+    format_type='AUTO',
     confidence_threshold=8,
     assay_type_in='B,F',
     pchembl_value_gte=6.0,
@@ -37,7 +37,8 @@ def annotate_chemicals(
     output_prefix : str
         Prefix for output CSV files
     format_type : str
-        Type of chemical notation to use as query ('SMILES', 'InChI', or 'InChIKey'); column matching is case-insensitive.
+        Type of chemical notation to use as query ('SMILES', 'InChI', 'InChIKey', or 'ANY'/'AUTO'); column matching is case-insensitive.
+        'ANY'/'AUTO' will attempt to resolve arbitrary identifiers to SMILES before querying.
     confidence_threshold : int, optional
         Minimum confidence score value (default: 8)
     assay_type_in : str, optional

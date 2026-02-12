@@ -14,6 +14,12 @@ Year: 2025
 
 import pandas as pd
 import re
+import time
+import requests
+import pubchempy as pcp
+from functools import lru_cache
+from urllib.parse import quote
+from chembl_webresource_client.new_client import new_client
 from tqdm import tqdm
 from .chembl_utils import chembl_get_id
 from .chembl_utils import chembl_drug_annotations
@@ -22,6 +28,9 @@ from .chembl_utils import chembl_assay_information
 from .chembl_utils import chembl_mechanism_of_action
 from .chembl_utils import surechembl_get_id
 from .pubchem_utils import pubchem_get_cid
+
+molecule = new_client.molecule
+CACTUS_BASE = "https://cactus.nci.nih.gov/chemical/structure"
 
 # %%
 def _normalize_header(value) -> str:
@@ -125,6 +134,100 @@ def resolve_identifier_column(compounds_list: pd.DataFrame, identifier: str) -> 
     return best, requested_type
 
 
+def _clean_identifier(value):
+    if value is None:
+        return None
+    s = str(value).strip()
+    return s if s else None
+
+
+def _is_chembl_id(value: str) -> bool:
+    return bool(re.fullmatch(r"CHEMBL\d+", value.upper()))
+
+
+def _looks_like_inchikey(value: str) -> bool:
+    return bool(re.fullmatch(r"[A-Z]{14}-[A-Z]{10}-[A-Z]", value))
+
+
+@lru_cache(maxsize=50_000)
+def resolve_smiles_any(identifier: str, *, pause_s: float = 0.0, timeout_s: float = 15.0) -> str | None:
+    """
+    Resolve many identifier types to canonical SMILES.
+    Order:
+      1) ChEMBL IDs via ChEMBL API
+      2) CACTUS resolver
+      3) PubChem (CID / InChIKey / name)
+    """
+    ident = _clean_identifier(identifier)
+    if not ident:
+        return None
+
+    ident_u = ident.upper()
+
+    # 1) ChEMBL
+    if _is_chembl_id(ident_u):
+        try:
+            mol = molecule.get(ident_u)
+            s = mol.get("molecule_structures", {}).get("canonical_smiles")
+            if s:
+                if pause_s:
+                    time.sleep(pause_s)
+                return s
+        except Exception:
+            pass
+
+    # 2) CACTUS
+    try:
+        url = f"{CACTUS_BASE}/{quote(ident)}/smiles"
+        r = requests.get(url, timeout=timeout_s, headers={"User-Agent": "smiles-resolver/1.0"})
+        if r.ok:
+            txt = r.text.strip()
+            if txt and "not found" not in txt.lower() and "<html" not in txt.lower():
+                if pause_s:
+                    time.sleep(pause_s)
+                return txt
+    except requests.RequestException:
+        pass
+
+    # 3) PubChem fallback
+    try:
+        if ident.isdigit():
+            c = pcp.Compound.from_cid(int(ident))
+            return getattr(c, "canonical_smiles", None)
+
+        if _looks_like_inchikey(ident_u):
+            comps = pcp.get_compounds(ident_u, namespace="inchikey")
+        else:
+            comps = pcp.get_compounds(ident, namespace="name")
+
+        if comps:
+            return getattr(comps[0], "canonical_smiles", None)
+    except Exception:
+        pass
+
+    return None
+
+
+def _select_any_identifier_column(compounds_list: pd.DataFrame) -> str:
+    for key in ("smiles", "inchi", "inchikey"):
+        try:
+            col, _ = resolve_identifier_column(compounds_list, key)
+            return col
+        except ValueError:
+            continue
+    return str(compounds_list.columns[0])
+
+
+def _match_column_case_insensitive(compounds_list: pd.DataFrame, name: str) -> str | None:
+    target = str(name).strip().lower()
+    if not target:
+        return None
+    for col in compounds_list.columns:
+        if str(col).strip().lower() == target:
+            return col
+    return None
+
+
 def process_compounds(compounds_list, identifier, confidence_threshold=8, assay_type_in=['B', 'F'], pchembl_value_gte=6):
     """
     Process a list of compounds by retrieving drug annotations, indications, assay information,
@@ -151,7 +254,25 @@ def process_compounds(compounds_list, identifier, confidence_threshold=8, assay_
             - all_drug_assay: Merged assay information
             - all_MoA: Merged mechanisms of action
     """
-    identifier_column, identifier_type = resolve_identifier_column(compounds_list, identifier)
+    if isinstance(identifier, str) and identifier.strip().lower() in {"any", "auto"}:
+        source_column = _select_any_identifier_column(compounds_list)
+        compounds_list = compounds_list.copy()
+        compounds_list["resolved_smiles"] = compounds_list[source_column].apply(resolve_smiles_any)
+        identifier_column, identifier_type = "resolved_smiles", "smiles"
+    else:
+        explicit_column = _match_column_case_insensitive(compounds_list, identifier)
+        if explicit_column is not None and identifier.strip().lower() not in {"smiles", "inchi", "inchikey"}:
+            compounds_list = compounds_list.copy()
+            compounds_list["resolved_smiles"] = compounds_list[explicit_column].apply(resolve_smiles_any)
+            identifier_column, identifier_type = "resolved_smiles", "smiles"
+        else:
+            try:
+                identifier_column, identifier_type = resolve_identifier_column(compounds_list, identifier)
+            except ValueError:
+                source_column = _select_any_identifier_column(compounds_list)
+                compounds_list = compounds_list.copy()
+                compounds_list["resolved_smiles"] = compounds_list[source_column].apply(resolve_smiles_any)
+                identifier_column, identifier_type = "resolved_smiles", "smiles"
     # Define an empty DataFrame to store all drug information
     all_drug_info = pd.DataFrame()
     all_drug_assay = pd.DataFrame()
@@ -164,6 +285,10 @@ def process_compounds(compounds_list, identifier, confidence_threshold=8, assay_
     for i, (index, row) in enumerate (compounds_list.iterrows(), start=1):
         try:
             compound = row[identifier_column]
+            if pd.isna(compound):
+                print(f"Warning: compound {i} is empty after identifier resolution")
+                pbar.update(1)
+                continue
             chembl_id = chembl_get_id(compound, identifier_type)
             drug_cid = pubchem_get_cid(compound, identifier_type)
             drug_schembl = surechembl_get_id(compound, identifier_type)

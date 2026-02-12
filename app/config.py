@@ -35,6 +35,13 @@ UI_QUEUE_MAX_SIZE = int(os.environ.get("UI_QUEUE_MAX_SIZE", "32"))
 UI_CONCURRENCY_LIMIT = int(os.environ.get("UI_CONCURRENCY_LIMIT", "8"))
 GRADIO_SERVER_NAME = os.environ.get("GRADIO_SERVER_NAME", "0.0.0.0")
 GRADIO_SERVER_PORT = int(os.environ.get("GRADIO_SERVER_PORT", "7860"))
+SUPERVISOR_OUTPUT_MODE = os.environ.get("SUPERVISOR_OUTPUT_MODE", "full_history").strip().lower()
+if SUPERVISOR_OUTPUT_MODE not in {"full_history", "last_message"}:
+    logger.warning(
+        "Invalid SUPERVISOR_OUTPUT_MODE=%s; falling back to full_history",
+        SUPERVISOR_OUTPUT_MODE,
+    )
+    SUPERVISOR_OUTPUT_MODE = "full_history"
 GITHUB_URL = os.environ.get("GITHUB_URL", "https://github.com/pharmbio/repuragent")
 USER_GUIDE_URL = os.environ.get("USER_GUIDE_URL", "https://repuragent.readthedocs.io/")
 

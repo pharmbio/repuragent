@@ -19,7 +19,7 @@ from backend.utils.chemical_annotator.tools import annotate_chemicals
 logger.info("Using KGG-based modular tools")
 KGG_AVAILABLE = True
 
-def build_research_agent(llm):
+def build_research_agent(llm, *, pre_model_hook=None):
     # Build tools list based on availability
     tools = [
         literature_search_pubmed,
@@ -38,9 +38,11 @@ def build_research_agent(llm):
 
 
     research_agent = create_react_agent(
-        model = llm, 
-        tools = tools, 
+        model=llm,
+        tools=tools,
         name='research_agent',
-        prompt = RESEARCH_SYSTEM_PROMPT_ver3)
+        prompt=RESEARCH_SYSTEM_PROMPT_ver3,
+        pre_model_hook=pre_model_hook,
+    )
     
     return research_agent

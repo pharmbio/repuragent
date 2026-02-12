@@ -99,7 +99,8 @@ def create_agent_builder(
     interrupt_before: Optional[List[str]] = None,
     interrupt_after: Optional[List[str]] = None,
     debug: bool = False,
-    name: Optional[str] = None
+    name: Optional[str] = None,
+    message_trimmer=None,
 ) -> CompiledStateGraph:
     """Creates an agent graph that calls tools in a loop until a stopping condition is met.
     
@@ -147,6 +148,8 @@ def create_agent_builder(
     def call_model(state: AgentState, config: RunnableConfig) -> AgentState:
         """Call the model with the current state."""
         messages = state["messages"]
+        if message_trimmer is not None:
+            messages = message_trimmer(messages)
         payload = [SystemMessage(content=prompt), _context_message()] + messages
         response = model_with_tools.invoke(payload, config)
         # Add agent name if provided
@@ -157,6 +160,8 @@ def create_agent_builder(
     async def acall_model(state: AgentState, config: RunnableConfig) -> AgentState:
         """Async version of call_model."""
         messages = state["messages"]
+        if message_trimmer is not None:
+            messages = message_trimmer(messages)
         payload = [SystemMessage(content=prompt), _context_message()] + messages
         response = await model_with_tools.ainvoke(payload, config)
         if name:
@@ -217,5 +222,11 @@ __all__ = [
 ]
 
 
-def build_data_agent(llm):
-    return create_agent_builder(model=llm, tools=[python_executor, reset_python_state, prompt_with_file_path], prompt = DATA_SYSTEM_PROMPT_ver3, name="data_agent")
+def build_data_agent(llm, *, message_trimmer=None):
+    return create_agent_builder(
+        model=llm,
+        tools=[python_executor, reset_python_state, prompt_with_file_path],
+        prompt=DATA_SYSTEM_PROMPT_ver3,
+        name="data_agent",
+        message_trimmer=message_trimmer,
+    )

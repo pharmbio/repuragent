@@ -8,7 +8,12 @@ from backend.memory.episodic_memory.episodic_learning import get_orchestrator
 from backend.utils.research_tools import literature_search_pubmed, protocol_search_sop
 
 
-def build_planning_agent_core(llm, user_request: Optional[str] = None, use_episodic_learning: bool = True):
+def build_planning_agent_core(
+    llm,
+    user_request: Optional[str] = None,
+    use_episodic_learning: bool = True,
+    pre_model_hook=None,
+):
     """
     Create core planning agent with optional episodic learning enhancement.
     
@@ -23,10 +28,11 @@ def build_planning_agent_core(llm, user_request: Optional[str] = None, use_episo
     if not use_episodic_learning or not user_request:
         tools = [literature_search_pubmed, protocol_search_sop]
         planning_agent = create_react_agent(
-            model=llm, 
-            tools=tools, 
+            model=llm,
+            tools=tools,
             name='planning_agent',
-            prompt=PLANNING_SYSTEM_PROMPT_ver3
+            prompt=PLANNING_SYSTEM_PROMPT_ver3,
+            pre_model_hook=pre_model_hook,
         )
         return planning_agent
     
@@ -40,10 +46,11 @@ def build_planning_agent_core(llm, user_request: Optional[str] = None, use_episo
         # Create planning agent with enhanced prompt
         tools = [literature_search_pubmed, protocol_search_sop]
         planning_agent = create_react_agent(
-            model=llm, 
-            tools=tools, 
+            model=llm,
+            tools=tools,
             name='planning_agent',
-            prompt=enhanced_prompt
+            prompt=enhanced_prompt,
+            pre_model_hook=pre_model_hook,
         )
         
         logger.info(f"Enhanced planning agent created for request: {user_request[:50]}...")
@@ -53,17 +60,23 @@ def build_planning_agent_core(llm, user_request: Optional[str] = None, use_episo
         logger.warning(f"Error creating enhanced planning agent, falling back to standard: {e}")
         tools = [literature_search_pubmed, protocol_search_sop]
         planning_agent = create_react_agent(
-            model=llm, 
-            tools=tools, 
+            model=llm,
+            tools=tools,
             name='planning_agent',
-            prompt=PLANNING_SYSTEM_PROMPT_ver3
+            prompt=PLANNING_SYSTEM_PROMPT_ver3,
+            pre_model_hook=pre_model_hook,
         )
         
         return planning_agent
 
 
-def build_planning_agent(llm, user_request: Optional[str] = None, use_episodic_learning: bool = True):
+def build_planning_agent(
+    llm,
+    user_request: Optional[str] = None,
+    use_episodic_learning: bool = True,
+    pre_model_hook=None,
+):
     """
     Main entry point for building planning agent.
     """
-    return build_planning_agent_core(llm, user_request, use_episodic_learning)
+    return build_planning_agent_core(llm, user_request, use_episodic_learning, pre_model_hook)

@@ -18,9 +18,10 @@ AGENT_TITLES = {
     "prediction_agent": "Prediction Agent",
     "report_agent": "Report Agent",
     "planning_agent": "Planning Agent",
+    "summary": "Summary",
 }
 
-IGNORED_NODES = {"human_chat", "__start__", "__end__"}
+IGNORED_NODES = {"human_chat", "__start__", "__end__", "summary"}
 
 
 def reset_chat_messages(state: UIState) -> None:

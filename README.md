@@ -14,7 +14,6 @@ Drug repurposing offers an efficient strategy to accelerate therapeutic discover
 This repository contains a local application that you can clone and run on your own machine. As a result, all data files, database and chat memory remain on your device. Additionally, we offer several alternative versions:
 
 - [Repuragent Web](https://repuragent.serve.scilifelab.se): This is the web version of Repuragent, which can be used without installation. Simply register for an account to access the app.
-- [Repuragent Demo Page](https://repuragent.streamlit.app): This is a static demo of Repuragent designed for viewing purposes only. You cannot interact with the agent in this mode.
 - [Documentation](https://repuragent.readthedocs.io/): User guides and technical details.
 
 

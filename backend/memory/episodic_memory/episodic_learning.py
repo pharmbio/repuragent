@@ -74,13 +74,13 @@ class EpisodicLearningSystem:
                 self.config['extraction_model'],
                 schemas=[TaskDecompositionEpisode],
                 instructions="""Extract examples of successful task planning interactions. Include 
-                the context and how the supervisor decomposed the task. The task 
+                the context and how the plannign agent decomposed the task. The task 
                 breakdown must be presented in this format: [Step 1] → [Step 2] → [Step 
                 3]  → ... without any comments or additional information. These information will be used as examples in the system prompt of supervisor for further invocation.
                 
                 Focus on episodes where:
                 - The task was complex and required multi-step planning
-                - The supervisor provided clear step-by-step decomposition
+                - The plannign agent provided clear step-by-step decomposition
                 - The interaction was successful and produced actionable results
                 - There were valuable lessons learned during execution
                 

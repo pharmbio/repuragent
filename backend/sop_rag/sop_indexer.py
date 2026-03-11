@@ -118,7 +118,7 @@ def create_multi_vector_retriever():
     # Create vector store for summaries (search)
     vectorstore = Chroma(
         collection_name=COLLECTION_NAME,
-        embedding_function=OpenAIEmbeddings(),
+        embedding_function=OpenAIEmbeddings(model = "text-embedding-3-small"),
         persist_directory=str(CHROMA_PERSIST_PATH)
     )
     
@@ -183,7 +183,7 @@ def clear_existing_collection():
     try:
         vectorstore = Chroma(
             collection_name=COLLECTION_NAME,
-            embedding_function=OpenAIEmbeddings(),
+            embedding_function=OpenAIEmbeddings(model = "text-embedding-3-small"),
             persist_directory=str(CHROMA_PERSIST_PATH)
         )
         vectorstore.delete_collection()

@@ -30,9 +30,9 @@ PDF_PROCESSING_CONFIG = {
 
 # LLM configuration
 LLM_CONFIG = {
-    'summarization_model': 'gpt-4o-mini',
-    'image_description_model': 'gpt-4o-mini',
-    'rag_response_model': 'gpt-4o-mini'
+    'summarization_model': 'gpt-5.1',
+    'image_description_model': 'gpt-5.1',
+    'rag_response_model': 'gpt-5.1'
 }
 
 # Retrieval configuration

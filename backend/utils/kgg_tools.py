@@ -1372,26 +1372,63 @@ def getDrugsforProteins(
 
     # Main
     api_response = pd.DataFrame()
-    df = pd.read_csv('data/api_related_data/DruggableProtein_annotation_OT.csv')
+    df = pd.read_csv("data/api_related_data/DruggableProtein_annotation_OT.csv")
     mapping_dict_id_symbol = dict(df[['approvedSymbol','ENSG']].values)
+    unresolved_proteins: List[str] = []
+    proteins_without_annotated_drugs: List[str] = []
+    request_failures: List[Dict[str, str]] = []
 
     for prot in tqdm(prot_list):
+        ensg_id = mapping_dict_id_symbol.get(prot)
+        if not ensg_id:
+            unresolved_proteins.append(prot)
+            continue
+
         try:
-            count = getDrugsforProteins_count(mapping_dict_id_symbol[prot])
-            variables = {"ensgId": mapping_dict_id_symbol[prot], "size": count}
+            count = getDrugsforProteins_count(ensg_id)
+            if not count:
+                proteins_without_annotated_drugs.append(prot)
+                continue
+
+            variables = {"ensgId": ensg_id, "size": count}
             r = requests.post(
                 OPENTARGETS_GRAPHQL_URL,
                 json={"query": KNOWN_DRUGS_ROWS_QUERY, "variables": variables},
                 timeout=60,
             )
-            rows = r.json()['data']['target']['knownDrugs']['rows']
+            r.raise_for_status()
+            payload = r.json()
+            rows = (
+                payload.get("data", {})
+                .get("target", {})
+                .get("knownDrugs", {})
+                .get("rows")
+                or []
+            )
+            if not rows:
+                proteins_without_annotated_drugs.append(prot)
+                continue
+
             df_temp = pd.json_normalize(rows)
+            if df_temp.empty:
+                proteins_without_annotated_drugs.append(prot)
+                continue
+
             df_temp['Protein'] = prot
-            api_response = pd.concat([api_response, df_temp])
-        except Exception:
-            continue
+            api_response = pd.concat([api_response, df_temp], ignore_index=True)
+        except Exception as exc:
+            request_failures.append(
+                {
+                    "protein": prot,
+                    "error_type": type(exc).__name__,
+                    "error": str(exc),
+                }
+            )
 
     api_response.reset_index(drop=True, inplace=True)
+    for col in ["Protein", "drug.id", "drug.name", "disease.id", "disease.name", "phase", "status"]:
+        if col not in api_response.columns:
+            api_response[col] = None
     api_response.drop_duplicates(subset=['Protein', 'drug.id'], inplace=True)
 
     unique_ids = api_response["drug.id"].dropna().unique().tolist()
@@ -1441,28 +1478,49 @@ def getDrugsforProteins(
     api_response.to_csv(output_file, index=False)
     output_str = str(output_file)
 
+    total_candidates = len(api_response)
+    unique_drugs_found = api_response["chembl_id"].nunique(dropna=True)
+    unique_proteins_found = api_response["gene_symbol"].nunique(dropna=True)
+
+    if total_candidates == 0:
+        if proteins_without_annotated_drugs and not unresolved_proteins and not request_failures:
+            message = "There are no annotated drugs for this protein."
+            if len(prot_list) > 1:
+                message = "There are no annotated drugs for the provided proteins."
+        elif unresolved_proteins and not request_failures:
+            message = "No drug annotations could be retrieved for the provided proteins."
+        else:
+            message = "No drug-protein pairs were retrieved."
+    else:
+        message = (
+            f"Successfully found {total_candidates} drug-protein pairs. "
+        )
+
     return {
-        "success": True,
+        "success": len(request_failures) == 0,
         "data": {
             "summary": {
-                "total_candidates": len(api_response),
-                "showing_in_data": min(len(api_response), 10),
-                "data_truncated": len(api_response) > 10,
+                "total_candidates": total_candidates,
+                "showing_in_data": min(total_candidates, 10),
+                "data_truncated": total_candidates > 10,
                 "complete_data_location": output_str,
-                "unique_drugs": len(api_response['chembl_id'].unique()),
-                "unique_proteins": len(api_response['gene_symbol'].unique())
+                "unique_drugs": unique_drugs_found,
+                "unique_proteins": unique_proteins_found
             },
-            "analysis_recommendation": f"For complete analysis, use the full dataset at {output_str} which contains all {len(api_response)} drug-protein pairs"
+            "analysis_recommendation": f"For complete analysis, use the full dataset at {output_str} which contains all {total_candidates} drug-protein pairs"
         },
         "output_file": output_str,
-        "message": f"Successfully found {len(api_response)} drug-protein pairs. Showing 10 sample records in response data, complete dataset saved to {output_str}",
+        "message": message,
         "metadata": {
             "total_input_proteins": len(prot_list),
-            "total_drug_protein_pairs": len(api_response),
-            "unique_drugs_found": len(api_response['chembl_id'].unique()),
+            "total_drug_protein_pairs": total_candidates,
+            "unique_drugs_found": unique_drugs_found,
+            "proteins_without_annotated_drugs": proteins_without_annotated_drugs,
+            "unresolved_proteins": unresolved_proteins,
+            "request_failures": request_failures[:10],
+            "request_failures_truncated": len(request_failures) > 10,
             "associated_score_disease_id": disease_id,
             "csv_exported": output_str,
-            "usage_note": "This filtered dataset should be used for subsequent ADMET predictions instead of the original drug database"
         }
     }
 

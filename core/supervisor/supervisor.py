@@ -27,7 +27,6 @@ from core.supervisor.context import (
 
 
 def initialize_agents(
-    llm,
     user_request: Optional[str] = None,
     use_episodic_learning: bool = True,
     pre_model_hook=None,
@@ -504,7 +503,7 @@ async def create_app(user_request: Optional[str] = None, use_episodic_learning: 
 
     # Build agents with episodic learning for planning agent
     research_agent, data_agent, prediction_agent, planning_agent, report_agent = initialize_agents(
-        llm, user_request, use_episodic_learning, pre_model_hook
+        user_request, use_episodic_learning, pre_model_hook
     )
 
     # Initialize memory

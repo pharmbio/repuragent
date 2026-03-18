@@ -54,4 +54,4 @@ PyYAML==6.0.2
 click==8.2.0
 typing-extensions==4.13.2
 huggingface-hub==0.34.3
-setuptools>=65
+setuptools<=75

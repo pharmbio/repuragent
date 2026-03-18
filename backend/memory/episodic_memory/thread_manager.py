@@ -5,6 +5,15 @@ from datetime import datetime
 from typing import List, Dict, Optional
 from app.config import THREAD_IDS_FILE, SQLITE_DB_PATH, logger
 
+UI_TIMELINE_TABLE = "ui_timeline_snapshots"
+UI_TIMELINE_TABLE_SQL = f"""
+CREATE TABLE IF NOT EXISTS {UI_TIMELINE_TABLE} (
+    thread_id TEXT PRIMARY KEY,
+    snapshot_json TEXT NOT NULL,
+    updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+"""
+
 
 def load_thread_ids() -> List[Dict]:
     """Load thread IDs from JSON file."""
@@ -51,6 +60,7 @@ def delete_thread_from_database(thread_id: str) -> bool:
     try:
         connection = sqlite3.connect(str(SQLITE_DB_PATH), check_same_thread=False)
         cursor = connection.cursor()
+        cursor.execute(UI_TIMELINE_TABLE_SQL)
         
         # Delete from writes table first (due to potential foreign key constraints)
         cursor.execute("DELETE FROM writes WHERE thread_id = ?", (thread_id,))
@@ -59,6 +69,10 @@ def delete_thread_from_database(thread_id: str) -> bool:
         # Delete from checkpoints table
         cursor.execute("DELETE FROM checkpoints WHERE thread_id = ?", (thread_id,))
         checkpoints_deleted = cursor.rowcount
+
+        # Delete persisted UI timeline snapshot, if one exists.
+        cursor.execute(f"DELETE FROM {UI_TIMELINE_TABLE} WHERE thread_id = ?", (thread_id,))
+        timeline_deleted = cursor.rowcount
         
         connection.commit()
         
@@ -67,7 +81,13 @@ def delete_thread_from_database(thread_id: str) -> bool:
         
         connection.close()
         
-        logger.info(f"Deleted {checkpoints_deleted} checkpoints and {writes_deleted} writes for thread {thread_id}, database vacuumed")
+        logger.info(
+            "Deleted %s checkpoints, %s writes, and %s UI timeline snapshots for thread %s; database vacuumed",
+            checkpoints_deleted,
+            writes_deleted,
+            timeline_deleted,
+            thread_id,
+        )
         return True
         
     except Exception as e:

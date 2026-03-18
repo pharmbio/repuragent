@@ -1,8 +1,16 @@
+import json
 from typing import List, Dict, Set, Any, Optional
 from datetime import datetime
+import aiosqlite
 from app.config import logger
+from app.config import SQLITE_DB_PATH
 from app.ui.formatters import reconstruct_assistant_response
-from backend.memory.episodic_memory.thread_manager import add_thread_id, generate_new_thread_id
+from backend.memory.episodic_memory.thread_manager import (
+    UI_TIMELINE_TABLE,
+    UI_TIMELINE_TABLE_SQL,
+    add_thread_id,
+    generate_new_thread_id,
+)
 
 
 async def get_conversation_history_from_sqlite(thread_id: str, app) -> List[Dict]:
@@ -144,6 +152,63 @@ def create_new_conversation() -> Dict[str, Any]:
     return conversation_data
 
 
+async def _ensure_ui_timeline_table(connection: aiosqlite.Connection) -> None:
+    await connection.execute(UI_TIMELINE_TABLE_SQL)
+    await connection.commit()
+
+
+async def load_ui_timeline(thread_id: str) -> Optional[Dict[str, Any]]:
+    """Load the persisted UI timeline snapshot for a thread."""
+    if not thread_id:
+        return None
+    try:
+        async with aiosqlite.connect(str(SQLITE_DB_PATH), timeout=30) as connection:
+            await connection.execute("PRAGMA busy_timeout = 5000")
+            await _ensure_ui_timeline_table(connection)
+            async with connection.execute(
+                f"SELECT snapshot_json FROM {UI_TIMELINE_TABLE} WHERE thread_id = ?",
+                (thread_id,),
+            ) as cursor:
+                row = await cursor.fetchone()
+    except Exception as exc:
+        logger.warning("Unable to load UI timeline for %s: %s", thread_id, exc)
+        return None
+
+    if not row or not row[0]:
+        return None
+    try:
+        snapshot = json.loads(row[0])
+    except json.JSONDecodeError as exc:
+        logger.warning("Invalid UI timeline snapshot for %s: %s", thread_id, exc)
+        return None
+    return snapshot if isinstance(snapshot, dict) else None
+
+
+async def save_ui_timeline(thread_id: str, snapshot: Dict[str, Any]) -> None:
+    """Persist the UI timeline snapshot for a thread."""
+    if not thread_id or not isinstance(snapshot, dict):
+        return
+
+    payload = json.dumps(snapshot, ensure_ascii=True)
+    try:
+        async with aiosqlite.connect(str(SQLITE_DB_PATH), timeout=30) as connection:
+            await connection.execute("PRAGMA busy_timeout = 5000")
+            await _ensure_ui_timeline_table(connection)
+            await connection.execute(
+                f"""
+                INSERT INTO {UI_TIMELINE_TABLE} (thread_id, snapshot_json, updated_at)
+                VALUES (?, ?, CURRENT_TIMESTAMP)
+                ON CONFLICT(thread_id) DO UPDATE
+                SET snapshot_json = excluded.snapshot_json,
+                    updated_at = CURRENT_TIMESTAMP
+                """,
+                (thread_id, payload),
+            )
+            await connection.commit()
+    except Exception as exc:
+        logger.warning("Unable to save UI timeline for %s: %s", thread_id, exc)
+
+
 async def load_conversation(thread_id: str, app) -> Dict[str, Any]:
     """Load a conversation from persistent storage with formatting preserved."""
     try:
@@ -155,6 +220,7 @@ async def load_conversation(thread_id: str, app) -> Dict[str, Any]:
                 "raw_messages": [],
                 "processed_message_ids": set(),
                 "has_progress_content": False,
+                "timeline_snapshot": None,
             }
             
         config = {"configurable": {"thread_id": thread_id}}
@@ -170,6 +236,7 @@ async def load_conversation(thread_id: str, app) -> Dict[str, Any]:
             messages = []
         
         processed_message_ids = await get_processed_message_ids_from_sqlite(thread_id, app)
+        timeline_snapshot = await load_ui_timeline(thread_id)
         
         has_progress_content = any(
             msg.get("role") == "assistant" and any(
@@ -185,6 +252,7 @@ async def load_conversation(thread_id: str, app) -> Dict[str, Any]:
             "raw_messages": raw_messages,
             "processed_message_ids": processed_message_ids,
             "has_progress_content": has_progress_content,
+            "timeline_snapshot": timeline_snapshot,
         }
         
     except Exception as e:
@@ -198,6 +266,7 @@ async def load_conversation(thread_id: str, app) -> Dict[str, Any]:
             "raw_messages": [],
             "processed_message_ids": set(),
             "has_progress_content": False,
+            "timeline_snapshot": await load_ui_timeline(thread_id),
         }
 
 

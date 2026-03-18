@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
 
 from html import escape
@@ -22,6 +23,7 @@ AGENT_TITLES = {
 }
 
 IGNORED_NODES = {"human_chat", "__start__", "__end__", "summary"}
+TIMELINE_SNAPSHOT_VERSION = 1
 
 
 def reset_chat_messages(state: UIState) -> None:
@@ -94,6 +96,112 @@ def rebuild_from_raw_messages(
                 state.processed_message_ids.add(msg_id)
             continue
         _ingest_message(state, raw, agent_name=agent_name)
+
+
+def export_timeline_snapshot(state: UIState) -> Dict[str, Any]:
+    """Serialize the rendered UI timeline so reloads don't depend on raw worker history."""
+    entries: List[Dict[str, Any]] = []
+    for message in state.messages:
+        if message.role == "user":
+            entries.append(
+                {
+                    "kind": "user",
+                    "content": str(message.content or ""),
+                }
+            )
+            continue
+
+        metadata = deepcopy(message.metadata) if isinstance(message.metadata, dict) else {}
+        block_id = metadata.get("id")
+        block = state.agent_blocks.get(block_id) if block_id else None
+        if block:
+            entries.append(
+                {
+                    "kind": "agent_block",
+                    "block_id": block["block_id"],
+                    "agent_name": block["agent_name"],
+                    "metadata": metadata or _build_metadata(block["agent_name"], block["block_id"]),
+                    "items": deepcopy(block["items"]),
+                }
+            )
+            continue
+
+        entries.append(
+            {
+                "kind": "assistant_plain",
+                "content": str(message.content or ""),
+                "metadata": metadata,
+            }
+        )
+
+    return {
+        "version": TIMELINE_SNAPSHOT_VERSION,
+        "message_seq": state.message_seq,
+        "entries": entries,
+    }
+
+
+def rebuild_from_timeline_snapshot(state: UIState, snapshot: Dict[str, Any]) -> bool:
+    """Rebuild the UI from a persisted snapshot of rendered timeline blocks."""
+    if not isinstance(snapshot, dict):
+        return False
+
+    entries = snapshot.get("entries")
+    if not isinstance(entries, list):
+        return False
+
+    reset_chat_messages(state)
+    max_seq = 0
+
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+
+        kind = entry.get("kind")
+        if kind == "user":
+            content = str(entry.get("content", "")).strip()
+            if content:
+                append_user_message(state, content)
+            continue
+
+        if kind == "assistant_plain":
+            metadata = deepcopy(entry.get("metadata")) if isinstance(entry.get("metadata"), dict) else {}
+            block_id = metadata.get("id")
+            state.messages.append(
+                ChatMessage(
+                    role="assistant",
+                    content=str(entry.get("content", "")),
+                    metadata=metadata or None,
+                )
+            )
+            if block_id:
+                state.message_lookup[str(block_id)] = len(state.messages) - 1
+                max_seq = max(max_seq, _extract_message_seq(block_id))
+            state.last_agent_block_id = None
+            continue
+
+        if kind != "agent_block":
+            continue
+
+        agent_name = str(entry.get("agent_name") or "assistant").lower()
+        block_id = str(entry.get("block_id") or state.next_message_id(agent_name))
+        metadata = deepcopy(entry.get("metadata")) if isinstance(entry.get("metadata"), dict) else {}
+        metadata.setdefault("id", block_id)
+
+        state.messages.append(ChatMessage(role="assistant", content="", metadata=metadata))
+        state.message_lookup[block_id] = len(state.messages) - 1
+
+        items = deepcopy(entry.get("items")) if isinstance(entry.get("items"), list) else []
+        block = {"agent_name": agent_name, "block_id": block_id, "items": items}
+        state.agent_blocks[block_id] = block
+        state.last_agent_block_id = block_id
+        _restore_tool_lookup_for_block(state, block)
+        _refresh_block_message(state, block_id)
+        max_seq = max(max_seq, _extract_message_seq(block_id))
+
+    stored_seq = snapshot.get("message_seq")
+    state.message_seq = max(max_seq, stored_seq if isinstance(stored_seq, int) else 0)
+    return bool(entries)
 
 
 def process_chunk(state: UIState, chunk: Dict[str, Any]) -> bool:
@@ -349,6 +457,7 @@ def _ingest_tool_result_raw(state: UIState, raw_msg: Any) -> bool:
     block["items"].append(
         {
             "type": "tool_result",
+            "id": str(tool_call_id) if tool_call_id is not None else None,
             "tool_name": tool_name,
             "content": content,
             "content_is_html": is_html,
@@ -445,6 +554,23 @@ def _refresh_block_message(state: UIState, block_id: str) -> None:
     state.messages[idx].content = _render_block_content(block["items"])
 
 
+def _restore_tool_lookup_for_block(state: UIState, block: Dict[str, Any]) -> None:
+    completed = {
+        str(item.get("id"))
+        for item in block["items"]
+        if item.get("type") == "tool_result" and item.get("id")
+    }
+    for item in block["items"]:
+        if item.get("type") != "tool_call":
+            continue
+        call_id = item.get("id")
+        if not call_id:
+            continue
+        if str(call_id) in completed:
+            continue
+        state.tool_call_block_lookup[str(call_id)] = block["block_id"]
+
+
 def _render_block_content(items: List[Dict[str, str]]) -> str:
     sections: List[str] = []
     for item in items:
@@ -453,7 +579,7 @@ def _render_block_content(items: List[Dict[str, str]]) -> str:
         elif item["type"] == "tool_call":
             sections.append(
                 _render_tool_section(
-                    "Tool call",
+                    "Tools Calling",
                     item["content"],
                     item.get("tool_name"),
                     body_is_html=item.get("content_is_html", False),
@@ -462,7 +588,7 @@ def _render_block_content(items: List[Dict[str, str]]) -> str:
         elif item["type"] == "tool_result":
             sections.append(
                 _render_tool_section(
-                    "Tool result",
+                    "Tools Result",
                     item["content"],
                     item.get("tool_name"),
                     body_is_html=item.get("content_is_html", False),
@@ -599,3 +725,10 @@ def _render_code_block(code: str, *, language: str = "python") -> str:
     lang_label = language.upper() if language else ""
     label = f"<div class='tool-code-label'>{lang_label}</div>" if lang_label else ""
     return f"<div class='tool-code-block'>{label}<pre><code>{escaped}</code></pre></div>"
+
+
+def _extract_message_seq(value: Any) -> int:
+    if not isinstance(value, str) or ":" not in value:
+        return 0
+    suffix = value.rsplit(":", 1)[-1]
+    return int(suffix) if suffix.isdigit() else 0

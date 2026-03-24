@@ -4,7 +4,6 @@ import math
 import os
 import re
 import sys
-import threading
 from datetime import datetime
 from functools import lru_cache
 from typing import Any, Dict, List, Optional, Tuple, Union
@@ -21,9 +20,11 @@ from tqdm import tqdm
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 from app.config import logger  # noqa E402
-from backend.utils.output_paths import resolve_output_folder, task_file_path  # noqa E402
+from backend.utils.output_paths import get_results_root, resolve_output_folder, task_file_path
+from backend.utils.storage_paths import get_data_root  # noqa E402
 from kgg.kgg_apiutils import createKG, searchDisease  # noqa E402
 
+DATA_ROOT = get_data_root()
 
 def _output_dir():
     """Resolve the writable directory for KGG artifacts."""
@@ -100,14 +101,14 @@ def search_disease_id(disease_name: str) -> Dict[str, Any]:
 def create_knowledge_graph(
     disease_id: str, 
     clinical_trial_phase: int = 3,
-    protein_threshold: float = 0.5,
+    protein_threshold: float = 0.3,
 ) -> Dict[str, Any]:
     """
     Create a disease-specific knowledge graph using KGG.
     This is the FIRST step - create the graph before extracting information.
     
     Args:
-        disease_id: EFO/MONDO disease ID (e.g., "EFO_0000685", "MONDO_0004975")
+        disease_id: disease ID (provided id or first match id from search)
         clinical_trial_phase: Minimum clinical trial phase (1-4)
         protein_threshold: Minimum protein association score (0.0-1.0)
     
@@ -194,13 +195,12 @@ def create_knowledge_graph(
 # ========== Tool 3: Extract Drugs from KG ==========
 
 @tool
-def extract_drugs_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
+def extract_drugs_from_kg(kg_path: str) -> Dict[str, Any]:
     """
     Extract drug information from a previously created knowledge graph.
     
     Args:
         kg_path: Path to the saved knowledge graph
-        limit: Maximum number of drugs to return
     
     Returns:
         Standardized dictionary with:
@@ -244,9 +244,6 @@ def extract_drugs_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
                 
                 drugs.append(drug_info)
                 
-                if len(drugs) >= limit:
-                    break
-        
         # Convert drugs list to pandas DataFrame and export as CSV
         if drugs:
             # Create DataFrame from drugs list
@@ -280,7 +277,6 @@ def extract_drugs_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
                 "message": f"Successfully extracted {len(drugs)} known drugs. Showing 10 sample records in response data, complete dataset saved to {csv_str}",
                 "metadata": {
                     "kg_path": kg_path,
-                    "limit_requested": limit,
                     "drugs_found": len(drugs),
                     "csv_exported": csv_str,
                     "data_completeness": "sample_only_use_csv_for_full_analysis"
@@ -302,7 +298,6 @@ def extract_drugs_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
                 "message": "No drugs found in the knowledge graph",
                 "metadata": {
                     "kg_path": kg_path,
-                    "limit_requested": limit,
                     "drugs_found": 0,
                 }
             }
@@ -512,13 +507,12 @@ def extract_proteins_from_kg(
 # ========== Tool 6: Extract Pathways from KG ==========
 
 @tool
-def extract_pathways_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
+def extract_pathways_from_kg(kg_path: str) -> Dict[str, Any]:
     """
     Extract pathway information from a knowledge graph.
     
     Args:
         kg_path: Path to the saved knowledge graph
-        limit: Maximum number of pathways to return
     
     Returns:
         Dictionary containing pathway information
@@ -552,9 +546,6 @@ def extract_pathways_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
                 
                 pathways.append(pathway_info)
                 
-                if len(pathways) >= limit:
-                    break
-        
         # Convert pathways list to pandas DataFrame and export as CSV
         if pathways:
             # Create DataFrame from pathways list
@@ -585,7 +576,6 @@ def extract_pathways_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
                 "message": f"Successfully extracted {len(pathways)} pathways. Showing {min(len(pathways), 10)} sample records in response data, complete dataset saved to {csv_str}",
                 "metadata": {
                     "kg_path": kg_path,
-                    "limit_requested": limit,
                     "pathways_found": len(pathways),
                     "csv_exported": csv_str,
                 }
@@ -606,7 +596,6 @@ def extract_pathways_from_kg(kg_path: str, limit: int = 20) -> Dict[str, Any]:
                 "message": "No pathways found in knowledge graph",
                 "metadata": {
                     "kg_path": kg_path,
-                    "limit_requested": limit,
                     "pathways_found": 0,
                     "extraction_time": datetime.now().isoformat()
                 }
@@ -758,26 +747,6 @@ def extract_side_effects_from_kg(
             }
         }
 
-
-
-
-def get_smiles_from_chembl(chembl_id):
-    """
-    Retrieve SMILES structure from ChEMBL API using ChEMBL ID
-    """
-    try:
-        chembl_url = f"https://www.ebi.ac.uk/chembl/api/data/molecule/{chembl_id}.json"
-        r = requests.get(chembl_url, timeout=30)
-        if r.status_code == 200:
-            data = r.json()
-            if data.get('molecule_structures'):
-                return data['molecule_structures'].get('canonical_smiles')
-        print(f'No SMILES found for {chembl_id}')
-        return None
-    except Exception as e:
-        print(f"Error retrieving SMILES for {chembl_id}: {str(e)}")
-        return None
-
 CHEMBL_BATCH_URL = "https://www.ebi.ac.uk/chembl/api/data/molecule.json"
 CHEMBL_MOLECULE_SEARCH_URL = "https://www.ebi.ac.uk/chembl/api/data/molecule/search"
 OPENFDA_EVENT_ENDPOINT = "https://api.fda.gov/drug/event.json"
@@ -787,36 +756,6 @@ OPENFDA_MAX_CONCURRENCY = 6
 CHEMBL_MAX_CONCURRENCY = 6
 RETRY_BACKOFF_SECONDS = 2.0
 
-
-def _run_async_task(coro: "asyncio.Future[Any]") -> Any:
-    """
-    Execute an async coroutine from synchronous code with graceful fallback
-    when an event loop is already running.
-    """
-    try:
-        running_loop = asyncio.get_running_loop()
-    except RuntimeError:
-        running_loop = None
-
-    if running_loop and running_loop.is_running():
-        result_container: Dict[str, Any] = {}
-        error_container: Dict[str, BaseException] = {}
-
-        def _thread_runner() -> None:
-            try:
-                result_container["value"] = asyncio.run(coro)
-            except BaseException as exc:  # propagate later
-                error_container["error"] = exc
-
-        thread = threading.Thread(target=_thread_runner, daemon=True)
-        thread.start()
-        thread.join()
-
-        if "error" in error_container:
-            raise error_container["error"]
-        return result_container.get("value")
-
-    return asyncio.run(coro)
 
 def fetch_smiles_batch(chembl_ids, chunk_size=200):
     """
@@ -988,125 +927,22 @@ async def _retrieve_chembl_match(
     return result
 
 
-async def _fetch_openfda_counts(
-    side_effect: str,
-    limit: int,
-    client: httpx.AsyncClient,
-    semaphore: asyncio.Semaphore,
-) -> List[Dict[str, Any]]:
-    params = {
-        "search": f'patient.reaction.reactionmeddrapt:"{side_effect.upper()}"',
-        "count": "patient.drug.medicinalproduct.exact",
-        "limit": max(1, min(limit, 100)),
-    }
-    try:
-        async with semaphore:
-            response = await client.get(OPENFDA_EVENT_ENDPOINT, params=params)
-        if response.status_code == 404:
-            return []
-        response.raise_for_status()
-        data = response.json()
-        return data.get("results", [])
-    except httpx.HTTPError as exc:
-        logger.debug("OpenFDA query failed for side effect '%s': %s", side_effect, exc)
-        await asyncio.sleep(RETRY_BACKOFF_SECONDS)
-        return []
-
-
-def _parse_side_effect_inputs(side_effects: Union[str, List[str]]) -> Tuple[List[str], Dict[str, Any]]:
-    metadata: Dict[str, Any] = {}
-
-    if isinstance(side_effects, str) and os.path.isfile(side_effects):
-        path = side_effects
-        ext = os.path.splitext(path)[-1].lower()
-        if ext not in [".csv", ".tsv"]:
-            raise ValueError("Only CSV or TSV files are supported for side effect inputs.")
-        sep = "\\t" if ext == ".tsv" else ","
-        df = pd.read_csv(path, sep=sep)
-        if df.empty:
-            raise ValueError(f"Input file '{path}' is empty.")
-        lowercase_cols = {col.lower(): col for col in df.columns}
-        candidate_columns = [
-            "side_effect",
-            "side effects",
-            "sideeffect",
-            "side_effects",
-            "side effect",
-            "adverse_event",
-            "adverse events",
-            "event",
-            "events",
-            "reaction",
-            "reactions",
-            "meddra_term",
-            "meddra",
-        ]
-        chosen_col: Optional[str] = None
-        for candidate in candidate_columns:
-            if candidate in lowercase_cols:
-                chosen_col = lowercase_cols[candidate]
-                break
-        if not chosen_col:
-            raise ValueError(
-                "No side effect column found. Expected one of "
-                "['side_effect', 'adverse_event', 'event', 'reaction', 'meddra_term']."
-            )
-        values = (
-            df[chosen_col]
-            .dropna()
-            .astype(str)
-            .map(lambda x: x.strip())
-        )
-        side_effect_list = [val for val in values if val]
-        metadata["input_file"] = path
-        metadata["detected_column"] = chosen_col
-    elif isinstance(side_effects, str):
-        fragments = re.split(r"[\\n;,]", side_effects)
-        side_effect_list = [frag.strip() for frag in fragments if frag.strip()]
-        metadata["input_mode"] = "string"
-    elif isinstance(side_effects, list):
-        side_effect_list = [str(item).strip() for item in side_effects if isinstance(item, str) and item.strip()]
-        metadata["input_mode"] = "list"
-    else:
-        raise ValueError("Input must be a file path, a string of side effects, or a list of strings.")
-
-    seen: set[str] = set()
-    deduped: List[str] = []
-    for effect in side_effect_list:
-        key = effect.lower()
-        if key and key not in seen:
-            deduped.append(effect)
-            seen.add(key)
-
-    if not deduped:
-        raise ValueError("No valid side effect terms found in the input.")
-
-    metadata["unique_side_effects"] = len(deduped)
-    metadata["total_raw_entries"] = len(side_effect_list)
-    return deduped, metadata
-
-
 REACTOME_SEARCH_URL = "https://reactome.org/ContentService/search/query"
 REACTOME_BROWSER_BASE = "https://reactome.org/PathwayBrowser/#/"
 OPENTARGETS_GRAPHQL_URL = "https://api.platform.opentargets.org/api/v4/graphql"
 
 KNOWN_DRUGS_ROWS_QUERY = """
-    query KnownDrugsQuery(
-      $ensgId: String!
-      $cursor: String
-      $freeTextQuery: String
-      $size: Int!
-    ) {
+    query DrugAndClinicalCandidatesQuery($ensgId: String!) {
       target(ensemblId: $ensgId) {
         id
-        knownDrugs(cursor: $cursor, freeTextQuery: $freeTextQuery, size: $size) {
+        drugAndClinicalCandidates {
           count
-          cursor
           rows {
-            phase
-            status
-            disease { id name }
+            id
+            maxClinicalStage
             drug { id name }
+            diseases { disease { id name } }
+            clinicalReports { id source clinicalStage phaseFromSource }
           }
         }
       }
@@ -1145,6 +981,68 @@ MAP_TARGET_IDS_QUERY = """
 _target_association_score_cache: Dict[Tuple[str, str], Optional[float]] = {}
 
 
+def _opentargets_graphql(query: str, variables: Dict[str, Any]) -> Dict[str, Any]:
+    response = requests.post(
+        OPENTARGETS_GRAPHQL_URL,
+        json={"query": query, "variables": variables},
+        timeout=60,
+    )
+    response.raise_for_status()
+    payload = response.json()
+    errors = payload.get("errors") or []
+    if errors:
+        raise ValueError(errors[0].get("message") or "Open Targets GraphQL query failed")
+    data = payload.get("data")
+    if data is None:
+        raise ValueError("Open Targets GraphQL response did not include data")
+    return data
+
+
+def _clinical_stage_to_phase(value: Any) -> Optional[int]:
+    if value is None:
+        return None
+    stage = str(value).strip().upper()
+    if not stage:
+        return None
+    if "APPROVED" in stage:
+        return 4
+    matches = [int(match) for match in re.findall(r"PHASE[_ ]?(\d)", stage)]
+    if not matches:
+        return None
+    return max(matches)
+
+
+def _normalize_drug_and_clinical_candidate_rows(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    normalized: List[Dict[str, Any]] = []
+    for row in rows or []:
+        drug = row.get("drug") or {}
+        drug_id = drug.get("id")
+        if not drug_id:
+            continue
+        disease_entries = []
+        for disease_entry in row.get("diseases") or []:
+            disease = (disease_entry or {}).get("disease") or {}
+            disease_entries.append(
+                {
+                    "disease.id": disease.get("id"),
+                    "disease.name": disease.get("name"),
+                }
+            )
+        if not disease_entries:
+            disease_entries = [{"disease.id": None, "disease.name": None}]
+        for disease_entry in disease_entries:
+            normalized.append(
+                {
+                    "phase": _clinical_stage_to_phase(row.get("maxClinicalStage")),
+                    "status": row.get("maxClinicalStage"),
+                    "drug.id": drug_id,
+                    "drug.name": drug.get("name"),
+                    **disease_entry,
+                }
+            )
+    return normalized
+
+
 def _fetch_target_association_score_for_disease(
     ensg_id: str,
     disease_id: str,
@@ -1160,7 +1058,10 @@ def _fetch_target_association_score_for_disease(
                 json={"query": ASSOCIATED_DISEASES_QUERY, "variables": variables},
                 timeout=60,
             )
+            response.raise_for_status()
             payload = response.json()
+            if payload.get("errors"):
+                raise ValueError(payload["errors"][0].get("message") or "Open Targets associatedDiseases query failed")
         except Exception as exc:
             logger.debug(
                 "OpenTargets associatedDiseases query failed for %s: %s", ensg_id, exc
@@ -1279,25 +1180,18 @@ def _resolve_reactome_pathway_id(pathway_name: str) -> Optional[str]:
 
 def getDrugsforProteins_count(ensg):
     query_string = """
-        query KnownDrugsQuery(
-          $ensgId: String!
-          $cursor: String
-          $freeTextQuery: String
-          $size: Int = 10
-        ) {
+        query DrugAndClinicalCandidatesQuery($ensgId: String!) {
           target(ensemblId: $ensgId) {
             id
-            knownDrugs(cursor: $cursor, freeTextQuery: $freeTextQuery, size: $size) {
+            drugAndClinicalCandidates {
               count
             }
           }
         }
     """
     variables = {"ensgId": ensg}
-    base_url = "https://api.platform.opentargets.org/api/v4/graphql"
-    r = requests.post(base_url, json={"query": query_string, "variables": variables}, timeout=60)
-    api_response = r.json()
-    return api_response['data']['target']['knownDrugs']['count']
+    data = _opentargets_graphql(query_string, variables)
+    return (((data.get("target") or {}).get("drugAndClinicalCandidates")) or {}).get("count", 0)
 
 @tool
 def getDrugsforProteins(
@@ -1372,7 +1266,7 @@ def getDrugsforProteins(
 
     # Main
     api_response = pd.DataFrame()
-    df = pd.read_csv("data/api_related_data/DruggableProtein_annotation_OT.csv")
+    df = pd.read_csv(DATA_ROOT / "api_related_data" / "DruggableProtein_annotation_OT.csv")
     mapping_dict_id_symbol = dict(df[['approvedSymbol','ENSG']].values)
     unresolved_proteins: List[str] = []
     proteins_without_annotated_drugs: List[str] = []
@@ -1390,20 +1284,10 @@ def getDrugsforProteins(
                 proteins_without_annotated_drugs.append(prot)
                 continue
 
-            variables = {"ensgId": ensg_id, "size": count}
-            r = requests.post(
-                OPENTARGETS_GRAPHQL_URL,
-                json={"query": KNOWN_DRUGS_ROWS_QUERY, "variables": variables},
-                timeout=60,
-            )
-            r.raise_for_status()
-            payload = r.json()
-            rows = (
-                payload.get("data", {})
-                .get("target", {})
-                .get("knownDrugs", {})
-                .get("rows")
-                or []
+            variables = {"ensgId": ensg_id}
+            data = _opentargets_graphql(KNOWN_DRUGS_ROWS_QUERY, variables)
+            rows = _normalize_drug_and_clinical_candidate_rows(
+                (((data.get("target") or {}).get("drugAndClinicalCandidates")) or {}).get("rows") or []
             )
             if not rows:
                 proteins_without_annotated_drugs.append(prot)
@@ -1827,8 +1711,8 @@ def getDrugsforPathways(
 
     # Load fallback pathways from canonical extraction output if available
     fallback_pathways: Dict[str, Dict[str, Any]] = {}
-    fallback_path = os.path.join("results", "pathways.csv")
-    if os.path.isfile(fallback_path):
+    fallback_path = get_results_root() / "pathways.csv"
+    if fallback_path.is_file():
         try:
             fb_df, fb_cols = _load_pathway_frame(fallback_path)
             fb_name_col = None
@@ -1892,7 +1776,7 @@ def getDrugsforPathways(
 
     # Load gene symbol to ENSG mapping
     try:
-        protein_map_df = pd.read_csv("data/api_related_data/DruggableProtein_annotation_OT.csv")
+        protein_map_df = pd.read_csv(DATA_ROOT / "api_related_data" / "DruggableProtein_annotation_OT.csv")
         symbol_to_ensg = dict(protein_map_df[["approvedSymbol", "ENSG"]].values)
     except Exception as exc:
         return {
@@ -1901,7 +1785,7 @@ def getDrugsforPathways(
             "output_file": None,
             "message": f"Error loading protein mapping file: {exc}",
             "metadata": {
-                "mapping_file": "data/api_related_data/DruggableProtein_annotation_OT.csv",
+                "mapping_file": str(DATA_ROOT / "api_related_data" / "DruggableProtein_annotation_OT.csv"),
                 "error_type": type(exc).__name__,
             },
         }
@@ -1951,16 +1835,12 @@ def getDrugsforPathways(
         if not count:
             gene_drug_cache[symbol] = pd.DataFrame()
             return pd.DataFrame()
-        variables = {"ensgId": ensg_id, "size": int(count)}
+        variables = {"ensgId": ensg_id}
         try:
-            response = requests.post(
-                OPENTARGETS_GRAPHQL_URL,
-                json={"query": KNOWN_DRUGS_ROWS_QUERY, "variables": variables},
-                timeout=90,
+            data = _opentargets_graphql(KNOWN_DRUGS_ROWS_QUERY, variables)
+            rows = _normalize_drug_and_clinical_candidate_rows(
+                (((data.get("target") or {}).get("drugAndClinicalCandidates")) or {}).get("rows") or []
             )
-            response.raise_for_status()
-            payload = response.json()
-            rows = (((payload.get("data") or {}).get("target") or {}).get("knownDrugs") or {}).get("rows", [])
             df_gene = pd.json_normalize(rows)
             if not df_gene.empty:
                 df_gene["gene_symbol"] = symbol

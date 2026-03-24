@@ -20,11 +20,8 @@ from tqdm import tqdm
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 from app.config import logger  # noqa E402
-from backend.utils.output_paths import get_results_root, resolve_output_folder, task_file_path
-from backend.utils.storage_paths import get_data_root  # noqa E402
+from backend.utils.output_paths import resolve_output_folder, task_file_path
 from kgg.kgg_apiutils import createKG, searchDisease  # noqa E402
-
-DATA_ROOT = get_data_root()
 
 def _output_dir():
     """Resolve the writable directory for KGG artifacts."""
@@ -1266,7 +1263,7 @@ def getDrugsforProteins(
 
     # Main
     api_response = pd.DataFrame()
-    df = pd.read_csv(DATA_ROOT / "api_related_data" / "DruggableProtein_annotation_OT.csv")
+    df = pd.read_csv("data/api_related_data/DruggableProtein_annotation_OT.csv")
     mapping_dict_id_symbol = dict(df[['approvedSymbol','ENSG']].values)
     unresolved_proteins: List[str] = []
     proteins_without_annotated_drugs: List[str] = []
@@ -1711,8 +1708,8 @@ def getDrugsforPathways(
 
     # Load fallback pathways from canonical extraction output if available
     fallback_pathways: Dict[str, Dict[str, Any]] = {}
-    fallback_path = get_results_root() / "pathways.csv"
-    if fallback_path.is_file():
+    fallback_path = os.path.join("results", "pathways.csv")
+    if os.path.isfile(fallback_path):
         try:
             fb_df, fb_cols = _load_pathway_frame(fallback_path)
             fb_name_col = None
@@ -1776,7 +1773,7 @@ def getDrugsforPathways(
 
     # Load gene symbol to ENSG mapping
     try:
-        protein_map_df = pd.read_csv(DATA_ROOT / "api_related_data" / "DruggableProtein_annotation_OT.csv")
+        protein_map_df = pd.read_csv("data/api_related_data/DruggableProtein_annotation_OT.csv")
         symbol_to_ensg = dict(protein_map_df[["approvedSymbol", "ENSG"]].values)
     except Exception as exc:
         return {
@@ -1785,7 +1782,7 @@ def getDrugsforPathways(
             "output_file": None,
             "message": f"Error loading protein mapping file: {exc}",
             "metadata": {
-                "mapping_file": str(DATA_ROOT / "api_related_data" / "DruggableProtein_annotation_OT.csv"),
+                "mapping_file": str("data/api_related_data/DruggableProtein_annotation_OT.csv"),
                 "error_type": type(exc).__name__,
             },
         }

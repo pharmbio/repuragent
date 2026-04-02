@@ -1,10 +1,13 @@
 # This script contains some functions utils_v2.py, kg_gen_v5.py modified explicitly for the KGG RestAPI.
 import logging
+import random
+import time
 from collections import defaultdict
 import networkx as nx
 import pandas as pd
 import requests
 from chembl_webresource_client.new_client import new_client
+from chembl_webresource_client.http_errors import BaseHttpException, HttpApplicationError
 from pybel import BELGraph
 from pybel.dsl import Protein, Abundance, Pathology, BiologicalProcess, Gene
 from tqdm.auto import tqdm
@@ -14,8 +17,117 @@ import requests
 import pandas as pd
 from tqdm.auto import tqdm
 from pandasgwas.get_variants import get_variants_by_efo_id
+import re
+
+from backend.utils.storage_paths import get_data_root
+
+DATA_ROOT = get_data_root()
 
 logger = logging.getLogger(__name__)
+OPENTARGETS_GRAPHQL_URL = "https://api.platform.opentargets.org/api/v4/graphql"
+
+
+def _opentargets_query(query_string, variables):
+    response = requests.post(
+        OPENTARGETS_GRAPHQL_URL,
+        json={"query": query_string, "variables": variables},
+        timeout=60,
+    )
+    response.raise_for_status()
+    payload = response.json()
+    errors = payload.get("errors") or []
+    if errors:
+        raise ValueError(errors[0].get("message") or "Open Targets GraphQL query failed")
+    data = payload.get("data")
+    if data is None:
+        raise ValueError("Open Targets GraphQL response did not include data")
+    return data
+
+
+def _clinical_stage_to_phase(value):
+    if value is None:
+        return None
+    stage = str(value).strip().upper()
+    if not stage:
+        return None
+    if "APPROVED" in stage:
+        return 4
+    matches = [int(match) for match in re.findall(r"PHASE[_ ]?(\d)", stage)]
+    if not matches:
+        return None
+    return max(matches)
+
+
+def _normalize_disease_candidate_rows(disease_id, disease_name, rows):
+    normalized_rows = []
+    for row in rows or []:
+        drug = row.get("drug") or {}
+        drug_id = drug.get("id")
+        if not drug_id:
+            continue
+        normalized_rows.append(
+            {
+                "approvedSymbol": None,
+                "approvedName": None,
+                "prefName": drug.get("name"),
+                "drugType": drug.get("drugType"),
+                "drugId": drug_id,
+                "phase": _clinical_stage_to_phase(row.get("maxClinicalStage")),
+                "ctIds": [
+                    report.get("id")
+                    for report in (row.get("clinicalReports") or [])
+                    if report.get("id")
+                ],
+                "status": row.get("maxClinicalStage"),
+                "id": disease_id,
+                "disease": disease_name,
+            }
+        )
+    return normalized_rows
+
+
+def _normalize_target_candidate_rows(rows):
+    normalized_rows = []
+    for row in rows or []:
+        drug = row.get("drug") or {}
+        drug_id = drug.get("id")
+        if not drug_id:
+            continue
+        disease_entries = []
+        for disease_entry in row.get("diseases") or []:
+            disease = (disease_entry or {}).get("disease") or {}
+            disease_entries.append(
+                {
+                    "disease.id": disease.get("id"),
+                    "disease.name": disease.get("name"),
+                }
+            )
+        if not disease_entries:
+            disease_entries = [{"disease.id": None, "disease.name": None}]
+        for disease_entry in disease_entries:
+            normalized_rows.append(
+                {
+                    "phase": _clinical_stage_to_phase(row.get("maxClinicalStage")),
+                    "status": row.get("maxClinicalStage"),
+                    "drug.id": drug_id,
+                    "drug.name": drug.get("name"),
+                    **disease_entry,
+                }
+            )
+    return normalized_rows
+
+
+def _retry_chembl_request(func, *, max_attempts=3, base_delay=1.0, jitter=0.25, context=""):
+    for attempt in range(1, max_attempts + 1):
+        try:
+            return func()
+        except (HttpApplicationError, BaseHttpException, requests.exceptions.RequestException) as exc:
+            if attempt == max_attempts:
+                raise
+            delay = base_delay * (2 ** (attempt - 1)) + random.uniform(0, jitter)
+            suffix = f" [{context}]" if context else ""
+            logger.warning("ChEMBL request failed%s (attempt %s/%s): %s", suffix, attempt, max_attempts, exc)
+            time.sleep(delay)
 
 
 def getDrugCount(disease_id):
@@ -28,13 +140,11 @@ def getDrugCount(disease_id):
     """
     efo_id = disease_id
     query_string = """
-        query associatedTargets($my_efo_id: String!){
+        query ClinicalCandidatesFromDisease($my_efo_id: String!){
           disease(efoId: $my_efo_id){
             id
             name
-            knownDrugs{
-                uniqueTargets
-                uniqueDrugs
+            drugAndClinicalCandidates{
                 count
             }
           }
@@ -42,11 +152,8 @@ def getDrugCount(disease_id):
 
     """
     variables = {"my_efo_id": efo_id}
-    base_url = "https://api.platform.opentargets.org/api/v4/graphql"
-    r = requests.post(base_url, json={"query": query_string, "variables": variables})
-    api_response = json.loads(r.text)
-    api_response = api_response['data']['disease']['knownDrugs']['count']
-    return(api_response)
+    data = _opentargets_query(query_string, variables)
+    return (((data.get("disease") or {}).get("drugAndClinicalCandidates")) or {}).get("count", 0)
 
 
 def GetDiseaseAssociatedDrugs(disease_id,CT_phase):
@@ -63,40 +170,43 @@ def GetDiseaseAssociatedDrugs(disease_id,CT_phase):
     efo_id = disease_id
     size = getDrugCount(efo_id)
     query_string = """
-        query associatedTargets($my_efo_id: String!, $my_size: Int){
+        query ClinicalCandidatesFromDisease($my_efo_id: String!){
           disease(efoId: $my_efo_id){
             id
             name
-            knownDrugs(size:$my_size){
-                uniqueTargets
-                uniqueDrugs
+            drugAndClinicalCandidates{
                 count
                 rows{
-                    approvedSymbol
-                    approvedName
-                    prefName
-                    drugType
-                    drugId
-                    phase
-                    ctIds
+                    id
+                    maxClinicalStage
+                    drug{
+                        id
+                        name
+                        drugType
+                    }
+                    clinicalReports{
+                        id
+                    }
                 }
-
             }
           }
         }
 
     """
-    variables = {"my_efo_id": efo_id, "my_size": size}
-    base_url = "https://api.platform.opentargets.org/api/v4/graphql"
+    variables = {"my_efo_id": efo_id}
     if size > 10000:
         return None
-    r = requests.post(base_url, json={"query": query_string, "variables": variables})
-    api_response = json.loads(r.text)
-    df = pd.DataFrame(api_response['data']['disease']['knownDrugs']['rows'])
+    data = _opentargets_query(query_string, variables)
+    disease = data.get("disease") or {}
+    candidate_rows = _normalize_disease_candidate_rows(
+        disease_id=efo_id,
+        disease_name=disease.get("name"),
+        rows=((disease.get("drugAndClinicalCandidates") or {}).get("rows") or []),
+    )
+    df = pd.DataFrame(candidate_rows)
     if not df.empty:
-        df = df.loc[df['phase'] >= int(CT_phase),:]
-        df['id'] = efo_id
-        df['disease'] = api_response['data']['disease']['name']
+        df["phase"] = pd.to_numeric(df["phase"], errors="coerce")
+        df = df.loc[df["phase"].fillna(-1) >= int(CT_phase), :]
         return(df)    
     else:
         return None
@@ -123,7 +233,7 @@ def GetDiseaseSNPs(disease_id):
         return None
 
 
-def GetDiseaseAssociatedProteins(disease_id,index_counter=0,merged_list= []):
+def GetDiseaseAssociatedProteins(disease_id,index_counter=0,merged_list=None):
     """
     Fetches disease-associated proteins from the Open Targets API.
     
@@ -159,11 +269,11 @@ def GetDiseaseAssociatedProteins(disease_id,index_counter=0,merged_list= []):
         }
 
     """
+    if merged_list is None:
+        merged_list = []
     variables = {"efoId":efo_id,"index":index_counter}
-    base_url = "https://api.platform.opentargets.org/api/v4/graphql"
-    r = requests.post(base_url, json={"query": query_string, "variables": variables})
-    api_response = json.loads(r.text)
-    result = api_response['data']['disease']['associatedTargets']['rows']
+    data = _opentargets_query(query_string, variables)
+    result = (((data.get("disease") or {}).get("associatedTargets")) or {}).get("rows") or []
     merged_list.extend(result)    
     if result:
         counter = index_counter+1
@@ -181,24 +291,6 @@ def GetDiseaseAssociatedProteins(disease_id,index_counter=0,merged_list= []):
                 temp_list.append(temp)
     df = pd.DataFrame(temp_list)
     df['disease_id'] = efo_id
-    return(df)
-
-
-
-def GetDiseaseAssociatedProteinsPlot(df):
-    score = input('We recommend taking a threshold above 0.3 to exclude loosely associated proteins. ' + '\n' +'Please enter your desired threshold: ')
-    
-    df = df.loc[df['Score'] >= float(score),:]
-    
-    print('\n')
-    print('Alright, we are good to go now. Your KG is now being generated! Sit back and relax!!')
-    
-    
-    print('\n','Total no. of proteins: ',len(df))
-   
-    #display(HTML(df.to_html(index=False)))
-    print('\n',df)
-    #print('\n')
     return(df)
 
 def ExtractFromUniProt(uniprot_id) -> dict:
@@ -265,11 +357,12 @@ def RetMech(chemblIds) -> dict:
     getMech = new_client.mechanism
     mechList = []
     for chemblid in tqdm(chemblIds, desc='Retrieving mechanisms from ChEMBL'):
-        mechs = getMech.filter(
-            molecule_chembl_id=chemblid
-        ).only(['mechanism_of_action', 'target_chembl_id','action_type'])
-        
-        mechList.append(list(mechs))
+        def _fetch_mechs():
+            return list(getMech.filter(
+                molecule_chembl_id=chemblid
+            ).only(['mechanism_of_action', 'target_chembl_id', 'action_type']))
+
+        mechList.append(_retry_chembl_request(_fetch_mechs, context=f"mechanism {chemblid}"))
 
     named_mechList = dict(zip(chemblIds, mechList))
     named_mechList = {
@@ -291,12 +384,15 @@ def RetAct(chemblIds) -> dict:
     filtered_list=['assay_chembl_id','assay_type','pchembl_value','target_chembl_id',
                    'target_organism','bao_label','target_type']
     for chembl in tqdm(chemblIds, desc='Retrieving bioassays from ChEMBL'):
-        acts = GetAct.filter(
-            molecule_chembl_id=chembl,
-            pchembl_value__isnull=False,
-            assay_type_iregex='(B|F)',
-            target_organism='Homo sapiens'
-        ).only(filtered_list)
+        def _fetch_acts():
+            return list(GetAct.filter(
+                molecule_chembl_id=chembl,
+                pchembl_value__isnull=False,
+                assay_type_iregex='(B|F)',
+                target_organism='Homo sapiens'
+            ).only(filtered_list))
+
+        acts = _retry_chembl_request(_fetch_acts, context=f"activity {chembl}")
         data = []
         for d in acts:
             if float(d.get('pchembl_value')) < 6:
@@ -304,7 +400,7 @@ def RetAct(chemblIds) -> dict:
             if (d.get('bao_label') != 'single protein format'):
                 continue
             tar = d.get('target_chembl_id')   
-            tar_dict = getTar.get(tar)
+            tar_dict = _retry_chembl_request(lambda: getTar.get(tar), context=f"target {tar}")
             try:
                 if tar_dict['target_type'] in ('CELL-LINE', 'UNCHECKED'):
                     continue
@@ -561,11 +657,8 @@ def getAdverseEffectCount(chembl_id):
 
     """
     variables = {"chemblId": get_id}
-    base_url = "https://api.platform.opentargets.org/api/v4/graphql"
-    r = requests.post(base_url, json={"query": query_string, "variables": variables})
-    api_response = json.loads(r.text)
-    api_response = api_response['data']['drug']['adverseEvents']['count']
-    return(api_response)
+    data = _opentargets_query(query_string, variables)
+    return (((data.get("drug") or {}).get("adverseEvents")) or {}).get("count", 0)
 
 def GetAdverseEvents(chem_list):
     api_response = pd.DataFrame()
@@ -601,10 +694,8 @@ def GetAdverseEvents(chem_list):
 
         """
             variables = {"chemblId": chembl_id, "size": count}
-            base_url = "https://api.platform.opentargets.org/api/v4/graphql"
-            r = requests.post(base_url, json={"query": query_string, "variables": variables})
-            api_response_temp = json.loads(r.text)
-            api_response_temp = api_response_temp['data']['drug']['adverseEvents']['rows']
+            data = _opentargets_query(query_string, variables)
+            api_response_temp = (((data.get("drug") or {}).get("adverseEvents")) or {}).get("rows") or []
             api_response_temp = pd.DataFrame(api_response_temp)
             api_response_temp ['chembl_id'] = chembl_id
             api_response = pd.concat([api_response,api_response_temp])
@@ -775,7 +866,7 @@ def gene_ontology_annotation(graph,uprotDict):
     return(graph)
     
 def protein_annotation_druggability(graph):
-    df = pd.read_csv('data/api_related_data/DruggableProtein_annotation_OT.csv')
+    df = pd.read_csv(DATA_ROOT / "api_related_data" / "DruggableProtein_annotation_OT.csv")
     protein_list = []
     for node in graph.nodes():
         if isinstance(node,pybel.dsl.Protein):
@@ -862,10 +953,8 @@ def searchDisease(keyword,logger=None):
         }
         """
     variables = {"disname": disease_name}
-    base_url = "https://api.platform.opentargets.org/api/v4/graphql"
-    r = requests.post(base_url, json={"query": query_string, "variables": variables})
-    api_response = json.loads(r.text)
-    df = pd.DataFrame(api_response["data"]["search"]["hits"])
+    data = _opentargets_query(query_string, variables)
+    df = pd.DataFrame(((data.get("search") or {}).get("hits")) or [])
     if not df.empty:
         df = df[df["entity"] == "disease"]
         df.drop(columns=["entity"], inplace=True)
@@ -879,15 +968,10 @@ def getDrugsforProteins_count(ensg):
 
     query_string = """
             
-        query KnownDrugsQuery(
-          $ensgId: String!
-          $cursor: String
-          $freeTextQuery: String
-          $size: Int = 10
-        ) {
+        query DrugAndClinicalCandidatesQuery($ensgId: String!) {
           target(ensemblId: $ensgId) {
             id
-            knownDrugs(cursor: $cursor, freeTextQuery: $freeTextQuery, size: $size) {
+            drugAndClinicalCandidates {
               count
               }
             }
@@ -897,27 +981,15 @@ def getDrugsforProteins_count(ensg):
 
     # Set variables object of arguments to be passed to endpoint
     variables = {"ensgId": ensg}
-
-    # Set base URL of GraphQL API endpoint
-    base_url = "https://api.platform.opentargets.org/api/v4/graphql"
-
-    # Perform POST request and check status code of response
-    r = requests.post(base_url, json={"query": query_string, "variables": variables})
-
-    # Transform API response from JSON into Python dictionary and print in console
-    api_response = json.loads(r.text)
-    
-    
-    #get the count value from api_repsonse dict 
-    api_response = api_response['data']['target']['knownDrugs']['count']
-    return(api_response)
+    data = _opentargets_query(query_string, variables)
+    return (((data.get("target") or {}).get("drugAndClinicalCandidates")) or {}).get("count", 0)
 
 
 def getDrugsforProteins(prot_list):
 
     api_response = pd.DataFrame()
         
-    df = pd.read_csv('data/api_related_data/DruggableProtein_annotation_OT.csv')
+    df = pd.read_csv(DATA_ROOT / "api_related_data" / "DruggableProtein_annotation_OT.csv")
     
     mapping_dict_id_symbol = {}
     for k,v in df[['approvedSymbol','ENSG']].values:
@@ -936,27 +1008,23 @@ def getDrugsforProteins(prot_list):
 
             query_string = """
 
-                query KnownDrugsQuery(
-                  $ensgId: String!
-                  $cursor: String
-                  $freeTextQuery: String
-                  $size: Int!
-                ) {
+                query DrugAndClinicalCandidatesQuery($ensgId: String!) {
                   target(ensemblId: $ensgId) {
                     id
-                    knownDrugs(cursor: $cursor, freeTextQuery: $freeTextQuery, size: $size) {
+                    drugAndClinicalCandidates {
                       count
-                      cursor
                       rows {
-                        phase
-                        status
-                        disease {
-                          id
-                          name
-                        }
+                        id
+                        maxClinicalStage
                         drug {
                           id
                           name
+                        }
+                        diseases {
+                          disease {
+                            id
+                            name
+                          }
                         }
                       }
                     }
@@ -967,22 +1035,10 @@ def getDrugsforProteins(prot_list):
             """
 
             # Set variables object of arguments to be passed to endpoint
-            variables = {"ensgId": mapping_dict_id_symbol[prot], "size": count}
-
-            # Set base URL of GraphQL API endpoint
-            base_url = "https://api.platform.opentargets.org/api/v4/graphql"
-
-            # Perform POST request and check status code of response
-            r = requests.post(base_url, json={"query": query_string, "variables": variables})
-            #r = requests.post(base_url, json={"query": query_string})
-            #print(r.status_code)
-
-            # Transform API response from JSON into Python dictionary and print in console
-            api_response_temp = json.loads(r.text)
-            api_response_temp = api_response_temp['data']['target']['knownDrugs']['rows']
-            #return(api_response_temp)
-            
-            api_response_temp=pd.json_normalize(api_response_temp)
+            variables = {"ensgId": mapping_dict_id_symbol[prot]}
+            data = _opentargets_query(query_string, variables)
+            rows = (((data.get("target") or {}).get("drugAndClinicalCandidates")) or {}).get("rows") or []
+            api_response_temp = pd.json_normalize(_normalize_target_candidate_rows(rows))
             #return(df)
             api_response_temp['Protein'] = prot
             
@@ -1026,7 +1082,7 @@ def createKG(disease_id: str, clinical_trial_phase: int, protein_threshold: floa
         logger.info(f"Shape of drugs DataFrame: {drugs_df.shape}")
     
     dis2prot_df = GetDiseaseAssociatedProteins(disease_id=disease_id)
-    if drugs_df is not None:
+    if dis2prot_df is not None:
         logger.info(f"Shape of disease-associated proteins DataFrame: {dis2prot_df.shape}")
     
     dis2snp_df = GetDiseaseSNPs(disease_id=disease_id)
@@ -1034,9 +1090,11 @@ def createKG(disease_id: str, clinical_trial_phase: int, protein_threshold: floa
         logger.info(f"Shape of disease-associated SNPs DataFrame: {dis2snp_df.shape}")
     
     # Thresholding on dis2prot_df
-    if dis2prot_df is not None:
+    if dis2prot_df is not None and not dis2prot_df.empty:
         uprot_df = dis2prot_df.loc[dis2prot_df['Score'] >= float(protein_threshold),:]
         logger.info(f"Filtered disease-associated proteins DataFrame shape: {uprot_df.shape}")
+    else:
+        uprot_df = pd.DataFrame(columns=['UniProt', 'Score'])
 
     adv_effect = pd.DataFrame()
           

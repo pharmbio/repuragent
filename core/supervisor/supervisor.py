@@ -36,7 +36,7 @@ def initialize_agents(
     data_llm = init_chat_model('gpt-5.2', model_provider='openai', streaming=True)
     research_llm = init_chat_model('gpt-5-mini', model_provider='openai', streaming=True)
     prediction_llm = init_chat_model('gpt-5-mini', model_provider='openai', streaming=True)
-    report_llm = init_chat_model('gpt-5.2', model_provider='openai', streaming=True)
+    report_llm = init_chat_model('gpt-5-mini', model_provider='openai', streaming=True)
 
     research_agent = build_research_agent(research_llm, pre_model_hook=pre_model_hook)
     data_agent = build_data_agent(data_llm, message_trimmer=build_llm_input_messages)

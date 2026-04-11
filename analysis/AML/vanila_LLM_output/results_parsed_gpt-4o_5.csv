@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Venetoclax,BCL-2 Inhibitor,"Inhibits BCL-2, leading to apoptosis",1.0,10000.0,nM,Primarily for chronic lymphocytic leukemia
+Sorafenib,Multi-Kinase Inhibitor,Inhibits tumor growth and angiogenesis,0.1,10.0,μM,"Used in liver, renal, and thyroid cancers"
+Metformin,Biguanide,Activates AMP-activated protein kinase,0.1,10.0,mM,"Commonly used in diabetes, with reported anti-cancer properties"
+Arsenic Trioxide,Chemotherapeutic Agent,Induces apoptosis through ROS generation,0.01,10.0,μM,Used in acute promyelocytic leukemia
+Auranofin,Gold Compound,Inhibits thioredoxin reductase,0.01,10.0,μM,An anti-rheumatic drug reported to have anti-leukemic activity
+Imatinib,Tyrosine Kinase Inhibitor,Inhibits BCR-ABL tyrosine kinase,0.01,10.0,μM,Primarily used in chronic myeloid leukemia (CML)
+Dasatinib,Tyrosine Kinase Inhibitor,Inhibits multiple tyrosine kinases including BCR-ABL,0.01,10.0,μM,Also used for CML
+Nivolumab,Immune Checkpoint Inhibitor,Inhibits PD-1 to enhance immune response,0.0,0.0,nM,"Not typically used in IC50 assays, as it is an antibody"
+Ruxolitinib,JAK1/2 Inhibitor,"Inhibits Janus kinases, reducing cytokine signaling",0.01,10.0,μM,Used in myelofibrosis and polycythemia vera
+Ibrutinib,BTK Inhibitor,Inhibits Bruton's tyrosine kinase,1.0,10000.0,nM,Used primarily in chronic lymphocytic leukemia (CLL)
+Simvastatin,Statin,Inhibits HMG-CoA reductase,0.1,10.0,μM,Used for cholesterol regulation with potential anti-cancer effects
+Disulfiram,Aldehyde Dehydrogenase Inhibitor,"Inhibits aldehyde dehydrogenase, possibly affecting cancer stem cells",0.01,10.0,μM,"Known for treating chronic alcoholism, repurposed for various cancers"
+Chloroquine,Antimalarial,Inhibits autophagy,0.1,100.0,μM,Anti-malarial drug with potential anti-cancer properties
+Bedaquiline,ATP Synthase Inhibitor,"Disrupts ATP synthesis, leading to cell death",0.001,10.0,μM,"Used in multidrug-resistant tuberculosis, with emerging anti-cancer evidence"
+Clofarabine,Antimetabolite,Inhibits DNA polymerases and ribonucleotide reductase,0.01,10.0,μM,"Used in pediatric leukemias, with potential broader use"
+Baricitinib,JAK Inhibitor,"Inhibits Janus kinases, impacting cytokine-driven diseases",0.01,10.0,μM,"Used in rheumatoid arthritis, with potential in leukemia"
+Everolimus,mTOR Inhibitor,"Inhibits mTOR, blocking cell growth and proliferation",0.1,10000.0,nM,Used in renal cell carcinoma and other cancers
+Itraconazole,Antifungal,Inhibits angiogenesis and Hedgehog pathway,0.1,10.0,μM,Antifungal with anti-cancer properties
+Thalidomide,Immunomodulatory Drug,Modulates immune response and inhibits angiogenesis,0.1,10.0,μM,Used in multiple myeloma with potential in other hematologic malignancies
+Plerixafor,CXCR4 Antagonist,Mobilizes hematopoietic stem cells and disrupts chemokine signaling,0.01,10.0,μM,"Used for mobilizing stem cells, with potential in AML treatment"

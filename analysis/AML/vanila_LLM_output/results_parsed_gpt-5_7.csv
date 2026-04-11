@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multi-kinase inhibitor,Inhibits FLT3 and other kinases to suppress FLT3-ITD signaling,1.0,50.0,nM,"Strong activity reported in FLT3-ITD AML lines (e.g., MOLM-13, MV4-11)"
+Ponatinib,Tyrosine kinase inhibitor,"Potent FLT3 inhibitor, including resistant FLT3 mutants",1.0,50.0,nM,Preclinical activity in MOLM-13/MOLM-14/MV4-11
+Sunitinib,Multi-kinase inhibitor,Inhibits FLT3 and related receptor tyrosine kinases,1.0,300.0,nM,Sensitivity observed in FLT3-ITD AML models
+Cabozantinib,Multi-kinase inhibitor,Inhibits MET/AXL and FLT3,1.0,100.0,nM,Active in FLT3-ITD AML models
+Dasatinib,Tyrosine kinase inhibitor,Inhibits Src/ABL/KIT and can inhibit FLT3 signaling,10.0,500.0,nM,Context-dependent potency; activity seen in FLT3-ITD AML lines
+Regorafenib,Multi-kinase inhibitor,Inhibits multiple kinases including FLT3,300.0,2000.0,nM,AML cell growth inhibition reported
+Trametinib,MEK inhibitor,Inhibits MEK1/2 to suppress FLT3-ITD–driven MAPK signaling,10.0,500.0,nM,AML preclinical data; MOLM-13 sensitivity reported
+Selumetinib,MEK inhibitor,Inhibits MEK1/2 to block MAPK pathway,100.0,900.0,nM,AML lines show in vitro sensitivity
+Everolimus,mTOR inhibitor,Inhibits mTORC1 signaling,1.0,900.0,nM,Pathway inhibition at low–mid nM; viability effects can extend to sub-µM
+Selinexor,Nuclear export inhibitor,Inhibits XPO1-mediated nuclear export,1.0,300.0,nM,Broad AML cytotoxicity including MOLM-13
+Bortezomib,Proteasome inhibitor,Inhibits 26S proteasome catalytic activity,1.0,50.0,nM,Strong activity in AML lines including MOLM-13
+Carfilzomib,Proteasome inhibitor,Irreversibly inhibits the proteasome (β5 subunit),1.0,50.0,nM,AML cell-line activity reported
+Panobinostat,HDAC inhibitor,Pan-HDAC inhibition causing epigenetic modulation and apoptosis,1.0,50.0,nM,"Very potent in AML lines, including MOLM-13"
+Vorinostat,HDAC inhibitor,HDAC inhibition leading to apoptosis/differentiation,0.1,5.0,µM,Also known as SAHA; active in AML cell lines
+Tipifarnib,Farnesyltransferase inhibitor,Inhibits FTase to block RAS and other farnesylated proteins,1.0,5.0,µM,"Historical AML activity, enriched in certain transcriptional subsets"
+Ruxolitinib,JAK inhibitor,Inhibits JAK1/2 signaling,1.0,5.0,µM,Modest single-agent AML activity; can impact FLT3/JAK crosstalk and combinations
+Auranofin,Redox pathway inhibitor,"Inhibits thioredoxin reductase, inducing ROS and apoptosis",0.1,5.0,µM,Cytotoxic in FLT3-ITD AML cells including MOLM-13
+Disulfiram,ALDH inhibitor (cofactor-dependent),ALDH inhibition; with Cu(II) forms a proteotoxic/ROS-inducing complex,1.0,50.0,nM,Requires copper cofactor for potent activity; weaker without copper
+Niclosamide,Multi-pathway modulator,Modulates STAT3/Wnt and mitochondrial function,0.1,5.0,µM,AML cell-line cytotoxicity reported
+Mebendazole,Microtubule depolymerizer,Disrupts microtubules leading to mitotic arrest,1.0,5.0,µM,Anthelmintic with in vitro anti-leukemic activity

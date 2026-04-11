@@ -1,0 +1,40 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing, clinically used drugs with evidence of anti-AML activity (many with specific activity in FLT3-ITD–positive lines like MOLM-13). For each, I list a practical single-agent concentration range to screen in an IC50 viability/proliferation assay. Use a logarithmic dilution series that spans the full range to capture both highly sensitive and resistant responses; adjust based on solubility and observed curves.
+
+- Sorafenib (multi-kinase; FLT3, RAF): Very active in FLT3-ITD AML (MOLM-13, MV4-11). Test 0.1 nM – 3 µM.
+- Ponatinib (pan-ABL/FLT3): Potent vs FLT3-ITD and TKD mutants (including F691L). Test 0.01 nM – 1 µM.
+- Sunitinib (multi-kinase; FLT3/KIT/VEGFR): Inhibits FLT3-ITD AML lines. Test 0.5 nM – 10 µM.
+- Dasatinib (SRC/ABL family): Anti-proliferative in subsets of AML, including FLT3-ITD contexts. Test 0.5 nM – 10 µM.
+- Ruxolitinib (JAK1/2): Variable single-agent AML activity; stronger in JAK/STAT–driven signaling; useful benchmark. Test 10 nM – 30 µM.
+- Venetoclax (BCL-2): Many AML lines sensitive; potency varies by BCL2/MCL1 balance; include for MOLM-13. Test 0.05 nM – 5 µM.
+- Selinexor (XPO1): Broad activity across AML cell lines, including MOLM-13. Test 1 nM – 10 µM.
+- Panobinostat (HDAC): Potent epigenetic inhibitor; strong AML cytotoxicity. Test 0.1 nM – 1 µM.
+- Vorinostat/SAHA (HDAC): AML activity across lines; MOLM-13 typically micromolar IC50. Test 10 nM – 30 µM.
+- Belinostat (HDAC): Similar AML activity to vorinostat. Test 10 nM – 30 µM.
+- Bortezomib (proteasome): Strong anti-AML effects including in FLT3-ITD lines. Test 0.05 nM – 1 µM.
+- Carfilzomib (proteasome): Potent; complementary to bortezomib. Test 0.05 nM – 1 µM.
+- Everolimus (mTORC1): Cytostatic/cytotoxic activity in AML; test broad due to context-dependence. Test 0.5 nM – 10 µM.
+- Trametinib (MEK1/2): Inhibits MAPK-driven AML; some activity in MOLM-13; combine in panels. Test 0.1 nM – 10 µM.
+- Auranofin (thioredoxin reductase inhibitor; anti-rheumatic): Consistent low-µM AML activity, including MOLM-13. Test 10 nM – 30 µM.
+- Tigecycline (mitochondrial translation inhibitor; antibiotic): Targets leukemic stem/progenitor metabolism; AML IC50 often low µM. Test 0.1 µM – 50 µM.
+- Niclosamide (OXPHOS/Wnt/STAT3 modulator; anthelmintic): AML lines often sub-µM sensitive; check solubility. Test 1 nM – 10 µM.
+- Simvastatin (HMG‑CoA reductase): Mevalonate pathway dependence in AML; micromolar activity. Test 0.1 µM – 50 µM.
+- Arsenic trioxide (APL drug; oxidative stress): Non-APL AML lines show µM-range sensitivity; include as a reference. Test 10 nM – 10 µM.
+- Thioridazine (dopamine receptor antagonist; antipsychotic): Selective toxicity to leukemic vs normal HSPCs reported; AML IC50 in low–mid µM. Test 0.1 µM – 50 µM.
+
+Practical notes
+- MOLM-13 is FLT3-ITD; FLT3 inhibitors (sorafenib, ponatinib, sunitinib) and BCL2-pathway agents (venetoclax) are often the most potent single agents.
+- Use a wide dynamic range initially (e.g., 8–10 points over 4–6 logs); refine around the observed midpoint for follow-ups.
+- Account for protein binding and solubility (HDAC inhibitors, niclosamide, and statins can shift potency with serum).
+- Include AML comparators like MV4-11 (FLT3-ITD) and a non-FLT3-ITD line to contextualize MOLM-13 sensitivity.

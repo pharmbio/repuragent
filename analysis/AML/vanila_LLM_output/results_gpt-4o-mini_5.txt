@@ -1,0 +1,43 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) presents an opportunity to utilize compounds that have already been proven safe in humans, thereby potentially accelerating the development process for new treatments. Below is a list of 20 drugs that have been explored for use in AML, along with hypothetical experimentally testable concentrations for IC50 assays targeting the MOLM13 cell line. 
+
+Note: Please ensure any experimental work involving these compounds is done in compliance with institutional and regulatory guidelines, and IC50 values should be validated through robust experimental studies.
+
+1. **Azacitidine** - 0.1 to 10 µM
+2. **Decitabine** - 0.1 to 10 µM
+3. **Venetoclax** - 0.1 to 10 µM
+4. **Ruxolitinib** - 0.5 to 5 µM
+5. **Dasatinib** - 0.5 to 5 µM
+6. **Imatinib** - 1 to 10 µM
+7. **Sunitinib** - 0.1 to 5 µM
+8. **Hydroxyurea** - 10 to 100 µM
+9. **Arsenic trioxide** - 0.1 to 1 µM
+10. **Thalidomide** - 5 to 50 µM
+11. **Lenalidomide** - 0.1 to 5 µM
+12. **Sorafenib** - 0.1 to 5 µM
+13. **Tocilizumab** - 1 to 10 µM
+14. **Clofarabine** - 0.1 to 1 µM
+15. **Bortezomib** - 0.1 to 10 nM
+16. **Pomalidomide** - 0.1 to 5 µM
+17. **Vorinostat** - 0.5 to 5 µM
+18. **P53 reactivation compounds** (e.g., PRIMA-1) - 1 to 10 µM
+19. **Metformin** - 1 to 10 mM
+20. **Cristine** - 0.1 to 10 µM
+
+### Important Considerations
+- **Concentration Ranges**: The concentrations provided are ranges based on existing literature. Exact IC50 values will vary based on experimental conditions (e.g., cell line growth conditions, measurement techniques).
+- **Cell Line Characteristics**: MOLM13 is characterized by high expression of certain surface markers, and the effectiveness of these drugs may depend on genetic backgrounds and molecular characteristics.
+- **Synergy Effects**: Consider testing the drugs in combination with other agents for potential synergistic effects, especially those that are already established in AML therapy.
+
+Before conducting the assays, thorough literature reviews should be undertaken to find the most recent and relevant studies to further refine concentration ranges and explore potential mechanisms of action and existing combinations that may enhance efficacy.

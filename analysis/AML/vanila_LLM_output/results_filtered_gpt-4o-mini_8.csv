@@ -1,0 +1,11 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Thalidomide,immunomodulatory drug,Modulates immune responses and inhibits angiogenesis,0.1,10.0,µM,,thalidomide,False,CHEMBL426123
+Sunitinib,tyrosine kinase inhibitor,"Inhibits multiple receptor tyrosine kinases, blocking tumor growth signals",0.1,5.0,µM,,sunitinib,False,CHEMBL597365
+Dasatinib,tyrosine kinase inhibitor,"Inhibits BCR-ABL and other tyrosine kinases, disrupting cell proliferation",0.1,10.0,µM,,dasatinib,False,CHEMBL1421
+Auranofin,gold compound,Inhibition of thioredoxin reductase leading to increased apoptosis in cancer cells,0.1,5.0,µM,,auranofin,False,CHEMBL1366
+Metformin,biguanide,"Activates AMPK, leading to reduced cancer cell proliferation",1.0,10.0,mM,,metformin,False,CHEMBL1431
+Panobinostat,histone deacetylase inhibitor,"Inhibits multiple HDACs, promoting apoptosis and cell cycle arrest in cancer cells",0.1,5.0,µM,,panobinostat,False,CHEMBL483254
+Resveratrol,natural polyphenol,Exhibits antioxidant properties and modulates signaling pathways,10.0,100.0,µM,,resveratrol,False,CHEMBL165
+Curcumin,natural polyphenol,"Anti-inflammatory and antioxidant properties, can induce apoptosis in cancer cells",10.0,50.0,µM,,curcumin,False,CHEMBL140
+Quercetin,flavonoid,Exhibits antioxidant properties and may inhibit tumor growth,1.0,10.0,µM,,quercetin,False,CHEMBL50
+Ruxolitinib,JAK1/JAK2 inhibitor,"Inhibits JAK1 and JAK2, blocking cytokine signaling pathways",0.1,5.0,µM,,ruxolitinib,False,CHEMBL1287854

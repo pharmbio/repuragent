@@ -1,0 +1,14 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Panobinostat,HDAC inhibitor,"Inhibits histone deacetylases, leading to cell cycle arrest and apoptosis",1.0,10.0,nM,Also known as Farydak.,panobinostat,False,CHEMBL483254
+Bortezomib,Proteasome inhibitor,"Inhibits proteasome activity, leading to accumulation of pro-apoptotic factors",5.0,20.0,nM,Also known as Velcade.,bortezomib,False,CHEMBL325041
+Gabapentin,Anticonvulsant,"Inhibits voltage-gated calcium channels, reducing excitatory neurotransmitter release",5.0,50.0,µM,,gabapentin,False,CHEMBL940
+Valproic Acid,HDAC inhibitor,"Inhibits histone deacetylases and promotes histone acetylation, leading to gene expression changes",0.5,5.0,mM,,valproic acid,False,CHEMBL109
+Sirolimus,mTOR inhibitor,Inhibits mTOR signaling pathway which regulates cell growth and proliferation,1.0,10.0,nM,Also known as Rapamycin.,sirolimus,False,CHEMBL263427
+Ruxolitinib,JAK inhibitor,"Inhibits JAK2 signaling pathway, reducing cytokine signaling and tumor growth",1.0,10.0,nM,Also known as Jakafi.,ruxolitinib,False,CHEMBL1287854
+Lomustine,Alkylating agent,"Causes DNA cross-linking, disrupting DNA replication and transcription",10.0,50.0,µM,Also known as CCNU.,lomustine,False,CHEMBL514
+Staurosporine,Protein kinase inhibitor,Inhibits a range of protein kinases leading to apoptosis,0.1,1.0,µM,,staurosporine,False,CHEMBL388978
+Milciclib,Cyclin-dependent kinase inhibitor,"Inhibits CDK activity, leading to cell cycle arrest",0.1,1.0,µM,,milciclib,False,CHEMBL564829
+Curcumin,Natural polyphenol,Exhibits anti-inflammatory and pro-apoptotic effects,10.0,20.0,µM,,curcumin,False,CHEMBL140
+Sunitinib,Tyrosine kinase inhibitor,Inhibits multiple receptor tyrosine kinases involved in tumor growth,1.0,5.0,µM,,sunitinib,False,CHEMBL597365
+Topotecan,Topoisomerase inhibitor,"Inhibits topoisomerase I, leading to DNA strand breaks",1.0,10.0,µM,,topotecan,False,CHEMBL84
+Nilotinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL tyrosine kinase activity,0.1,1.0,µM,Also known as Tasigna.,nilotinib,False,CHEMBL255863

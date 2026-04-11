@@ -1,0 +1,55 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) can be a promising approach due to their known safety profiles and mechanisms of action. Below is a selection of drugs that have been investigated or suggested for repurposing in AML treatment, particularly for inhibiting MOLM-13 cell line proliferation. Note that the experimentally testable concentrations for IC50 assays typically require empirical determination specific to the experimental conditions. Instead, I provide a general reference range often used in laboratory settings:
+
+1. **Venetoclax**: Originally for chronic lymphocytic leukemia, it targets BCL-2. Test concentration: 10-1000 nM.
+   
+2. **Sorafenib**: A multi-kinase inhibitor used in liver and kidney cancer. Test concentration: 0.01-10 μM.
+
+3. **Dasatinib**: A BCR-ABL inhibitor used in CML. Test concentration: 1-1000 nM.
+
+4. **Midostaurin**: FLT3 inhibitor, approved for AML with FLT3 mutation. Test concentration: 0.01-10 μM.
+
+5. **Ruxolitinib**: A JAK1/2 inhibitor for myelofibrosis. Test concentration: 0.1-10 μM.
+
+6. **Idelalisib**: PI3Kδ inhibitor for chronic lymphocytic leukemia. Test concentration: 0.01-10 μM.
+
+7. **Ibrutinib**: For B-cell malignancies, targeting BTK. Test concentration: 0.01-10 μM.
+
+8. **Arsenic trioxide**: Used for acute promyelocytic leukemia. Test concentration: 0.1-10 μM.
+
+9. **Auranofin**: An anti-rheumatic drug with potential to modulate redox status. Test concentration: 0.1-10 μM.
+
+10. **Thioridazine**: An antipsychotic shown to target leukemia stem cells. Test concentration: 1-20 μM.
+
+11. **Carfilzomib**: A proteasome inhibitor approved for multiple myeloma. Test concentration: 0.01-5 μM.
+
+12. **Everolimus**: mTOR inhibitor also used in cancer treatment. Test concentration: 1-1000 nM.
+
+13. **Clofarabine**: A purine nucleoside analog for pediatric ALL. Test concentration: 0.01-10 μM.
+
+14. **Statins (e.g., Simvastatin)**: Cholesterol-lowering drugs with antiproliferative effects. Test concentration: 0.01-10 μM.
+
+15. **Metformin**: A diabetes drug with potential anti-leukemic activity. Test concentration: 0.1-10 mM.
+
+16. **Gilteritinib**: FLT3 inhibitor for refractory AML. Test concentration: 0.01-10 μM.
+
+17. **Olaparib**: PARP inhibitor for BRCA-mutated cancer. Test concentration: 0.1-10 μM.
+
+18. **Pomalidomide**: Immunomodulatory drug for multiple myeloma. Test concentration: 0.01-10 μM.
+
+19. **Lapatinib**: HER2/EGFR inhibitor in breast cancer therapy. Test concentration: 0.1-10 μM.
+
+20. **Repurposed antibiotics (e.g., Doxycycline)**: Modulate mitochondrial function. Test concentration: 1-100 μM.
+
+These drugs were selected based on preliminary research or known mechanisms of action that might be relevant to AML treatment. When performing an IC50 assay, it's critical to optimize the assay conditions, such as cell density, incubation time, and assay type, to accurately determine drug efficacy. Always refer to the latest literature and guidelines for specific experimental protocols.

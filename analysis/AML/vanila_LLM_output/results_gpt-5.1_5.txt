@@ -1,0 +1,194 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a list of 20 clinically used / late-stage drugs with published or strong preclinical evidence of activity against AML cells (including MOLM13 or closely related FLT3-ITD+ lines such as MV4-11). For each, I include:
+
+- **Primary target / rationale**
+- **Reported potency vs AML (when available)**
+- **Suggested IC₅₀ assay concentration range** (a 7–10 point dose–response curve in log10 steps).  
+  These ranges are meant for **in vitro** assays on MOLM13 in 10% FBS, 72 h exposure (common for proliferation / viability) and should be refined using pilot experiments and literature.
+
+Concentration units are **µM**, unless otherwise specified. Always prepare stocks in DMSO and keep final DMSO ≤0.1%.
+
+---
+
+## 1. Midostaurin (PKC412)
+- **Type:** Multikinase inhibitor, approved for FLT3-mut+ AML.
+- **Rationale:** Inhibits FLT3, KIT, PDGFR; strong activity in FLT3-ITD AML lines including MOLM13.
+- **Reported potency:** FLT3-ITD AML cell IC₅₀ often ~5–50 nM.
+- **Test range:** **0.0003–3 µM** (0.3 nM–3 µM).
+
+---
+
+## 2. Gilteritinib (ASP2215)
+- **Type:** FLT3/AXL inhibitor; approved for relapsed/refractory FLT3+ AML.
+- **Rationale:** Potent vs FLT3-ITD and TKD mutations; robust data in MOLM13/MV4-11.
+- **Reported potency:** nM range in FLT3-mut cells (∼1–10 nM).
+- **Test range:** **0.0001–1 µM** (0.1 nM–1 µM).
+
+---
+
+## 3. Quizartinib (AC220)
+- **Type:** Highly selective FLT3 inhibitor.
+- **Rationale:** Very strong anti-proliferative effects in FLT3-ITD AML lines.
+- **Reported potency:** Often <1–5 nM in MV4-11/MOLM13.
+- **Test range:** **0.00003–0.3 µM** (0.03 nM–300 nM).
+
+---
+
+## 4. Sorafenib
+- **Type:** Multikinase inhibitor (RAF, VEGFR, PDGFR, FLT3).
+- **Rationale:** Known off-label activity in FLT3-ITD AML; widely used and available.
+- **Reported potency:** AML lines commonly 0.05–1 µM.
+- **Test range:** **0.01–10 µM**.
+
+---
+
+## 5. Dasatinib
+- **Type:** SRC/ABL family inhibitor (CML drug).
+- **Rationale:** Inhibits multiple kinases relevant in AML (SRC family, c-KIT); shown to reduce viability in some AML lines.
+- **Reported potency:** ∼10–100 nM in sensitive hematologic cells.
+- **Test range:** **0.001–3 µM**.
+
+---
+
+## 6. Imatinib
+- **Type:** BCR-ABL / KIT / PDGFR inhibitor.
+- **Rationale:** Some AML subsets with KIT or PDGFR rearrangements respond; generally less potent vs MOLM13 but useful as a comparator.
+- **Reported potency:** Often 1–10 µM in non-BCR-ABL AML.
+- **Test range:** **0.1–50 µM**.
+
+---
+
+## 7. Venetoclax (ABT‑199)
+- **Type:** BCL‑2 inhibitor; approved in AML (combo regimens).
+- **Rationale:** Strong apoptosis induction in many AML lines including FLT3-ITD; synergy with hypomethylating agents.
+- **Reported potency:** Frequently 1–100 nM in sensitive AML cells.
+- **Test range:** **0.0003–3 µM** (0.3 nM–3 µM).
+
+---
+
+## 8. Glasdegib
+- **Type:** SMO (Hedgehog pathway) inhibitor; approved with low-dose cytarabine in AML.
+- **Rationale:** Targets leukemia stem cell–related signaling; moderate direct anti-proliferative effects.
+- **Reported potency:** AML IC₅₀ often in low µM.
+- **Test range:** **0.1–30 µM**.
+
+---
+
+## 9. Ruxolitinib
+- **Type:** JAK1/2 inhibitor.
+- **Rationale:** JAK/STAT activation occurs in subsets of AML; reported activity in some AML models and in FLT3-ITD/JAK-activated contexts.
+- **Reported potency:** 0.1–1 µM in JAK-driven hematologic cells.
+- **Test range:** **0.01–10 µM**.
+
+---
+
+## 10. Tofacitinib
+- **Type:** JAK1/3 inhibitor (RA drug).
+- **Rationale:** JAK/STAT pathway contribution to AML survival/proliferation; tofacitinib has shown activity in some leukemia models.
+- **Reported potency:** Low–mid µM vs many non-JAK-addicted lines.
+- **Test range:** **0.3–30 µM**.
+
+---
+
+## 11. Baricitinib
+- **Type:** JAK1/2 inhibitor (RA drug).
+- **Rationale:** Similar to ruxolitinib; repurposing interest in hematologic malignancies with hyperactive JAK/STAT.
+- **Reported potency:** Typically low µM in non-JAK-addicted cells.
+- **Test range:** **0.1–30 µM**.
+
+---
+
+## 12. Palbociclib
+- **Type:** CDK4/6 inhibitor (breast cancer drug).
+- **Rationale:** AML often depends on cyclin D–CDK4/6–Rb axis; palbociclib shows anti-leukemic activity in subsets of AML and synergy with other agents.
+- **Reported potency:** Often 0.1–2 µM.
+- **Test range:** **0.01–10 µM**.
+
+---
+
+## 13. Ribociclib or Abemaciclib (choose one for initial screen)
+- **Type:** CDK4/6 inhibitors.
+- **Rationale:** Similar to palbociclib; some data in AML and other leukemias.
+- **Reported potency:** 0.05–5 µM depending on line.
+- **Test range:** **0.01–10 µM**.
+
+---
+
+## 14. Everolimus
+- **Type:** mTORC1 inhibitor.
+- **Rationale:** PI3K/AKT/mTOR pathway is active in AML; everolimus shows growth inhibition and differentiation in AML cells.
+- **Reported potency:** Typically low–mid µM.
+- **Test range:** **0.01–20 µM**.
+
+---
+
+## 15. Ibrutinib
+- **Type:** BTK inhibitor (CLL/MCL drug).
+- **Rationale:** Off-target activity on multiple kinases; BTK and related signaling implicated in some AML subsets; modest direct activity but potential repurposing interest.
+- **Reported potency:** Often 1–10 µM in AML-like contexts.
+- **Test range:** **0.1–30 µM**.
+
+---
+
+## 16. Nilotinib
+- **Type:** BCR-ABL / KIT inhibitor.
+- **Rationale:** More potent KIT inhibition than imatinib; shows antiproliferative effects in KIT+ AML and has some activity in FLT3-ITD models.
+- **Reported potency:** Often low µM in non-BCR-ABL AML lines.
+- **Test range:** **0.01–20 µM**.
+
+---
+
+## 17. Panobinostat
+- **Type:** Pan–HDAC inhibitor.
+- **Rationale:** Epigenetic dysregulation is central in AML; panobinostat has strong anti-proliferative and pro-apoptotic effects in AML lines, including FLT3-ITD.
+- **Reported potency:** Sub-µM (∼10–100 nM) in many AML cells.
+- **Test range:** **0.0003–3 µM**.
+
+---
+
+## 18. Vorinostat (SAHA)
+- **Type:** HDAC inhibitor (approved in CTCL).
+- **Rationale:** Broad AML activity and frequently used in preclinical AML combinations.
+- **Reported potency:** Typically 0.5–5 µM.
+- **Test range:** **0.1–20 µM**.
+
+---
+
+## 19. Bortezomib
+- **Type:** Proteasome inhibitor (multiple myeloma).
+- **Rationale:** Ubiquitin–proteasome pathway critical for AML survival; bortezomib shows strong apoptosis induction in AML lines.
+- **Reported potency:** 5–50 nM in many hematologic cells.
+- **Test range:** **0.00001–1 µM** (0.01 nM–1 µM).
+
+---
+
+## 20. Carfilzomib
+- **Type:** Irreversible proteasome inhibitor.
+- **Rationale:** Similar to bortezomib; potent activity in AML cell lines reported.
+- **Reported potency:** ∼1–20 nM.
+- **Test range:** **0.00001–0.3 µM**.
+
+---
+
+### Practical notes for IC₅₀ assays in MOLM13
+
+- **Assay duration:** 72 h is standard for proliferation/viability (CellTiter-Glo, MTS, resazurin), with 48 h as a secondary timepoint if you want more immediate effects.
+- **Seeding density:** Typically 0.5–1.5 × 10⁵ cells/mL in 96-well plates; ensure cells remain in log-phase and below overgrowth.
+- **Controls:**  
+  - Vehicle (0.1% DMSO).  
+  - Positive killing control (e.g., staurosporine 0.5–1 µM).
+- **Curve design:** 7–10 concentrations in 3–5-fold serial dilutions across suggested ranges; refine after first run to bracket the IC₅₀ tightly.
+- **Replicates:** At least triplicate wells per condition; perform ≥3 independent experiments for robust IC₅₀ estimation.
+
+If you tell me what you already have in your compound library and whether you plan single agents or combinations, I can narrow this down and give a more tailored short list plus specific plate layouts.

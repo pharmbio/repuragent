@@ -1,0 +1,18 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ponatinib,BCR-ABL/FLT3 tyrosine kinase inhibitor,Inhibits BCR-ABL and FLT3 kinases,0.015,300.0,nM,Approved for CML/Ph+ ALL; very potent in FLT3-ITD AML including MOLM-13,ponatinib,False,CHEMBL2105708
+Sunitinib,Multikinase inhibitor (incl. FLT3),Inhibits FLT3 and other RTKs (VEGFR/PDGFR),0.00015,3.0,µM,"Approved for RCC, GIST; active in FLT3-ITD AML",sunitinib,False,CHEMBL597365
+Cabozantinib,Multikinase inhibitor (incl. FLT3),Inhibits multiple RTKs including FLT3,5e-05,1.0,µM,"Approved for RCC, thyroid cancer; potent in FLT3-ITD AML including MOLM-13",cabozantinib,False,CHEMBL2105717
+Lenvatinib,VEGFR/RET/FGFR inhibitor (reported FLT3 activity),"Inhibits VEGFR, RET, FGFR; reported to inhibit FLT3",0.00025,5.0,µM,"Approved for thyroid, HCC, RCC; active in FLT3-ITD AML models",lenvatinib,False,CHEMBL1289601
+Nintedanib,VEGFR/FGFR/PDGFR inhibitor,Triple angiokinase inhibitor (VEGFR/FGFR/PDGFR),0.00025,5.0,µM,Approved for IPF; preclinical activity in FLT3-ITD AML including MOLM-13,nintedanib,False,CHEMBL502835
+Dasatinib,SRC/ABL tyrosine kinase inhibitor,Inhibits SRC-family kinases and ABL signaling,5e-05,1.0,µM,Approved for CML/Ph+ ALL; activity in MLL/FLT3 AML lines,dasatinib,False,CHEMBL1421
+Fostamatinib,SYK inhibitor,Prodrug of R406; inhibits SYK signaling,0.0015,30.0,µM,Approved for ITP; SYK dependency in MLL-rearranged AML; activity in MOLM-13; active metabolite R406,fostamatinib,False,CHEMBL2103830
+Ruxolitinib,JAK1/2 inhibitor,Blocks JAK-STAT signaling,0.0005,10.0,µM,Approved for myelofibrosis and PV; variable single-agent AML activity; consider cytokine-driven contexts,ruxolitinib,False,CHEMBL1287854
+Trametinib,MEK1/2 inhibitor,Inhibits MEK to block MAPK pathway,5e-05,1.0,µM,Approved for melanoma; MAPK pathway inhibition active in AML; test alone and in combinations,trametinib,False,CHEMBL2103875
+Selumetinib,MEK1/2 inhibitor,Inhibits MEK to suppress MAPK signaling,0.0005,10.0,µM,Approved for NF1-associated PN; MEK inhibition can suppress AML; test on MOLM-13,selumetinib,False,CHEMBL2105684
+Bortezomib,Proteasome inhibitor,"Inhibits 26S proteasome, inducing apoptosis",0.005,100.0,nM,Approved for multiple myeloma and MCL; potent cytotoxicity in AML including MOLM-13,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Irreversible 20S proteasome inhibition,0.005,100.0,nM,Approved for multiple myeloma; strong proteasome-dependent killing in AML lines,carfilzomib,False,CHEMBL451887
+Omacetaxine mepesuccinate,Protein synthesis inhibitor,Inhibits translation elongation (homoharringtonine derivative),0.005,100.0,nM,Approved for CML; broad antileukemic activity in AML cell lines,omacetaxine mepesuccinate,False,CHEMBL46286
+Panobinostat,HDAC inhibitor,Potent pan-HDAC inhibition leading to apoptosis,5e-05,1.0,µM,Approved for multiple myeloma; active in AML lines,panobinostat,False,CHEMBL483254
+Belinostat,HDAC inhibitor,Inhibits histone deacetylases to alter gene expression,0.001,20.0,µM,Approved for PTCL; cytotoxic to AML cell lines,belinostat,False,CHEMBL408513
+Tigecycline,Mitochondrial translation inhibitor (antibiotic),"Inhibits mitochondrial protein synthesis, impairing oxidative phosphorylation",0.0025,50.0,µM,Selective OxPhos impairment in AML including MOLM-13,tigecycline,False,CHEMBL376140
+Auranofin,Thioredoxin reductase inhibitor,Inhibits TrxR causing oxidative stress–mediated cell death,0.0005,10.0,µM,Approved for rheumatoid arthritis; induces oxidative stress in AML cell lines,auranofin,False,CHEMBL1366

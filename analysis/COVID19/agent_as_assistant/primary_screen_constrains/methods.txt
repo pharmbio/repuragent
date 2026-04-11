@@ -1,0 +1,41 @@
+Integrated ranking methodology (Data Agent)
+
+Inputs:
+- CP_AB_raw: morphology score (higher is better), infection rate % (lower is better). Mostly single concentration (10 µM).
+- CPE_raw: inhibition of cytopathicity % (higher is better) measured across multiple concentrations (nM→µM); plus non-infected cell viability % as a cytotoxicity proxy.
+- compound_annotations: compound_name ↔ chembl_id mapping.
+
+Preprocessing:
+- Removed non-data header rows embedded in the raw XLSX sheets.
+- Normalized compound names to lower-case/trim; merged CP/AB and CPE to annotations by normalized name; kept all annotated compounds (N=5159).
+- Converted CPE concentrations from nM to µM.
+
+Per-compound summarization:
+- CP: cp_best_score = max morphology score across rows (usually one row); ab_best_infection = min infection rate.
+- CPE: cpe_best_inhib = max inhibition of cytopathicity; cpe_min_viability = minimum non-infected viability observed across concentrations; cpe_viability_at_best = viability at concentration where cpe_best_inhib occurs.
+
+Normalization:
+- Used percentile ranks (0–1) for robustness to different scales and outliers:
+  * cp_norm = percentile rank of cp_best_score (higher better)
+  * ab_norm = percentile rank of -ab_best_infection (lower infection better)
+  * cpe_norm = percentile rank of cpe_best_inhib (higher better)
+
+Composite score:
+- composite_score = 0.25*cp_norm + 0.40*ab_norm + 0.35*cpe_norm - cytotoxicity_penalty
+- cytotoxicity_penalty: up to 0.2 if cpe_min_viability <80% (linear scaling); 0 otherwise.
+
+User priority flags:
+- flag_cpe_gt15: cpe_best_inhib > 15%
+- flag_ab_lt60: ab_best_infection < 60%
+- flag_cp_top150: cp_best_score within top 150 compounds (threshold = 0.47039).
+- priority_hits_count = number of these criteria met (0–3).
+
+Final ranking:
+- Sorted by priority_hits_count (desc) then composite_score (desc); includes all compounds (no exclusions).
+
+Confounder flags (heuristic):
+- flag_cytotox_strong: cpe_min_viability <70%
+- flag_cytotox_moderate: 70–80%
+- flag_ab_good_but_cytotox: AB hit with cpe_min_viability <80% (possible apparent antiviral via cell loss)
+- flag_cp_only / flag_ab_only / flag_cpe_only: single-assay ‘wins’ without support from the other two assays
+- flag_cpe_best_at_max_conc: CPE best effect observed at 10 µM (possible concentration artifact)

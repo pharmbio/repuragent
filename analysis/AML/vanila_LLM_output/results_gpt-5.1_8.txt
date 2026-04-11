@@ -1,0 +1,202 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below is a curated list of 20 clinically used or late‑stage drugs with published evidence of activity against AML (often including FLT3‑ITD+ lines like MOLM‑13). For each, I summarize key rationale and give a **reasonable starting test concentration range** for an in‑vitro IC50 assay on MOLM13 or similar AML cells.
+
+Use these as **screening ranges**, then refine around hits to get precise IC50 values. All concentrations refer to **final concentrations in culture medium** (DMSO ≤0.1%).
+
+---
+
+## General assay guidance (brief)
+
+- Cell model: MOLM13 (FLT3‑ITD+), 48–72 h proliferation/viability assay (e.g., CellTiter‑Glo, resazurin, MTT).
+- Plating: 5–10 × 10⁴ cells/well in 96‑well plates (suspension culture).
+- Dose range: 8–10‑point half‑log or log dilution series spanning from **sub‑nanomolar to tens of micromolar**.
+- Vehicle control: 0.1% DMSO.
+- At least three biological replicates per drug.
+
+---
+
+## 1. Sorafenib  
+**Type:** Multikinase inhibitor (RAF, VEGFR, PDGFR, FLT3).  
+**Rationale:** Strong activity in FLT3‑ITD AML; clinical reports in relapsed AML.  
+**Suggested range for IC50 assay:**  
+- 0.5 nM – 10 µM (e.g., 0.5, 1.5, 5, 15, 50, 150, 500, 1500, 5000, 10000 nM).  
+Published IC50 in FLT3‑ITD lines is typically in low‑nanomolar range.
+
+---
+
+## 2. Sunitinib  
+**Type:** Multikinase inhibitor (FLT3, KIT, VEGFR, PDGFR).  
+**Rationale:** Inhibits FLT3‑ITD AML lines including MOLM13.  
+**Suggested range:**  
+- 1 nM – 20 µM.
+
+---
+
+## 3. Midostaurin (PKC412)  
+**Type:** FLT3 and multi‑kinase inhibitor.  
+**Rationale:** Approved for FLT3‑mutated AML; nanomolar potency on FLT3‑ITD cell lines.  
+**Suggested range:**  
+- 0.5 nM – 10 µM.
+
+---
+
+## 4. Dasatinib  
+**Type:** SRC/ABL inhibitor.  
+**Rationale:** Shows antiproliferative effects in subsets of AML through SRC family and other kinases.  
+**Suggested range:**  
+- 1 nM – 20 µM.  
+
+---
+
+## 5. Nilotinib  
+**Type:** BCR‑ABL/ABL inhibitor.  
+**Rationale:** Off‑target activity in some AML models; can be tested as repurposing candidate.  
+**Suggested range:**  
+- 1 nM – 20 µM.
+
+---
+
+## 6. Imatinib  
+**Type:** BCR‑ABL/KIT/PDGFR inhibitor.  
+**Rationale:** Limited but measurable activity in AML with KIT or PDGFR dependence; often used as control TKI.  
+**Suggested range:**  
+- 10 nM – 30 µM.
+
+---
+
+## 7. Venetoclax (ABT‑199)  
+**Type:** BCL‑2 inhibitor.  
+**Rationale:** Approved for AML (with HMA or LDAC); robust activity in many AML lines including MOLM13.  
+**Suggested range:**  
+- 0.1 nM – 5 µM (fine spacing in 0.1–100 nM is useful).
+
+---
+
+## 8. Navitoclax (ABT‑263)  
+**Type:** BCL‑2/BCL‑XL inhibitor.  
+**Rationale:** Induces apoptosis in AML cell lines; often more toxic due to BCL‑XL but good in vitro tool.  
+**Suggested range:**  
+- 0.5 nM – 10 µM.
+
+---
+
+## 9. Ruxolitinib  
+**Type:** JAK1/2 inhibitor.  
+**Rationale:** JAK/STAT signaling contributes to some AML subtypes; synergy with other agents reported.  
+**Suggested range:**  
+- 10 nM – 20 µM.
+
+---
+
+## 10. Tofacitinib  
+**Type:** JAK1/3 inhibitor.  
+**Rationale:** Modulates cytokine‑dependent signaling; repurposing interest in hematologic malignancies.  
+**Suggested range:**  
+- 10 nM – 30 µM.
+
+---
+
+## 11. Panobinostat (LBH589)  
+**Type:** Pan‑HDAC inhibitor.  
+**Rationale:** Strong antiproliferative and pro‑apoptotic effects in AML cell lines, including FLT3‑ITD models.  
+**Suggested range:**  
+- 0.5 nM – 5 µM (many AML IC50 values are in low‑nanomolar range).
+
+---
+
+## 12. Vorinostat (SAHA)  
+**Type:** HDAC inhibitor.  
+**Rationale:** Broad antileukemic activity; tested in AML clinical trials and in combinations.  
+**Suggested range:**  
+- 50 nM – 20 µM.
+
+---
+
+## 13. Decitabine  
+**Type:** DNA hypomethylating agent.  
+**Rationale:** Approved for AML/MDS; in vitro, effects often seen at micromolar levels with longer exposure.  
+**Suggested range (for 72 h assay):**  
+- 0.1 µM – 20 µM.  
+
+---
+
+## 14. Azacitidine  
+**Type:** DNA/RNA hypomethylating agent.  
+**Rationale:** Standard therapy in older AML patients; in vitro cytostatic/cytotoxic effects.  
+**Suggested range:**  
+- 0.5 µM – 50 µM.
+
+---
+
+## 15. Bortezomib  
+**Type:** Proteasome inhibitor.  
+**Rationale:** Induces apoptosis in AML cell lines including FLT3‑ITD; strong preclinical evidence.  
+**Suggested range:**  
+- 0.5 nM – 1 µM.
+
+---
+
+## 16. Carfilzomib  
+**Type:** Irreversible proteasome inhibitor.  
+**Rationale:** Highly potent; induces apoptosis in AML preclinical models.  
+**Suggested range:**  
+- 0.1 nM – 1 µM.
+
+---
+
+## 17. Auranofin  
+**Type:** Gold compound; thioredoxin reductase inhibitor.  
+**Rationale:** Reported selective toxicity in AML (ROS and redox imbalance); repurposing candidate in leukemia.  
+**Suggested range:**  
+- 10 nM – 20 µM.
+
+---
+
+## 18. Disulfiram (± copper supplementation in vitro)  
+**Type:** ALDH inhibitor; forms Cu(DDC)₂ complex with proteasome/ROS effects.  
+**Rationale:** Shown to kill AML stem/progenitor cells in vitro; repurposing interest.  
+**Suggested range (drug alone):**  
+- 0.1 µM – 30 µM.  
+If adding Cu²⁺ (e.g., CuCl₂ 0.5–2 µM), keep copper low and constant across wells.
+
+---
+
+## 19. Metformin  
+**Type:** AMPK activator / complex I modulator.  
+**Rationale:** Anti‑leukemic effects via metabolic stress and mTOR inhibition; usually requires higher micromolar–millimolar levels in vitro.  
+**Suggested range:**  
+- 0.1 mM – 20 mM (100 µM – 20,000 µM).  
+Because of solubility and off‑target issues at very high doses, focus on 0.5–10 mM.
+
+---
+
+## 20. Chloroquine or Hydroxychloroquine  
+**Type:** Lysosomotropic autophagy inhibitor.  
+**Rationale:** Inhibits autophagy; sensitizes AML cells to other agents and has moderate single‑agent effects at higher µM.  
+**Suggested range:**  
+- 1 µM – 50 µM.
+
+---
+
+### Practical design for your IC50 screen on MOLM13
+
+For a single 96‑well plate per drug:
+
+- 10 concentrations in duplicate + vehicle control (DMSO) + positive cytotoxic control (e.g., 1 µM staurosporine or 1 µM bortezomib).
+- Use **log‑spaced dilutions** from the lower to the upper bound indicated above.
+- 48 h and 72 h readouts can reveal time‑dependent effects (especially for hypomethylating agents).
+
+If you’d like, I can next:  
+- Help you design exact dilution schemes (mg/mL stock → final µM) for one or more of these drugs.  
+- Narrow this to a smaller, more mechanistically focused panel (e.g., “top 6 for FLT3‑ITD MOLM13”).

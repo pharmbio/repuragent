@@ -1,0 +1,158 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 existing drugs (approved or well‑characterized investigational agents) that have either documented activity against AML cell lines or strong mechanistic rationale for activity in FLT3‑ITD / MLL‑rearranged AML models such as MOLM13. For each I give: short rationale, a practical IC50 testing plan (recommended top concentration and a simple 10‑point serial dilution scheme that will generally cover the expected potency), an expected IC50 range (from literature/typical cell‑line data or mechanism-based expectation), and short assay notes (solubility, cofactor requirements, caveats).
+
+General assay recommendations (apply to all compounds)
+- Cell line: MOLM13 (plate cells at exponential growth phase). Typical starting density for 72 h viability: 2–5 × 10^4 cells/mL (optimize for your assay).
+- Incubation: 72 hours is standard for proliferation/viability IC50. You can also run 48 and 96 h for time dependence.
+- Readout: CellTiter‑Glo (luminescence) or alamarBlue/MTT; include vehicle (DMSO) controls and no‑cell blanks.
+- Serial dilution: 10‑point 3‑fold serial dilution is recommended for most compounds (covers ~3 logs). Example: top concentration C0 then C0/3, C0/9 ... C0/6561. If compound potency/solubility requires, use 2‑fold dilution.
+- Vehicle: keep final DMSO ≤0.5% (ideally ≤0.1–0.2%).
+- Replicates: at least n = 3 biological replicates with technical duplicates.
+- Special reagents: some drugs need cofactors (e.g., disulfiram requires copper for robust activity); see notes for each.
+
+1) Venetoclax (BCL‑2 inhibitor; approved)
+- Rationale: potent BCL‑2 dependence in many AML lines; synergy with FLT3 inhibitors; MOLM13 is often sensitive.
+- Test plan: top conc 10 µM; 10‑point 3‑fold dilution (10 µM → 1.52 nM).
+- Expected IC50 (MOLM13): ~10–200 nM (often low‑ to mid‑nM).
+- Notes: DMSO soluble; avoid long preincubation at high DMSO.
+
+2) Gilteritinib (FLT3 inhibitor; approved for FLT3‑mutant AML)
+- Rationale: potent FLT3 kinase inhibition; MOLM13 (FLT3‑ITD) is very sensitive.
+- Test plan: top conc 1 µM; 10‑point 3‑fold dilution (1 µM → 0.152 nM).
+- Expected IC50: ~1–20 nM.
+- Notes: DMSO soluble; very potent—use low top conc to avoid hook effects.
+
+3) Quizartinib (FLT3 inhibitor)
+- Rationale: highly potent against FLT3‑ITD cells like MOLM13.
+- Test plan: top conc 1 µM; 10‑point 3‑fold dilution.
+- Expected IC50: sub‑ to low‑nM (0.1–10 nM).
+- Notes: potent; monitor for solubility at higher concentrations.
+
+4) Midostaurin (multikinase/FLT3 inhibitor)
+- Rationale: FLT3 inhibition and broader kinase targeting.
+- Test plan: top conc 1 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~10–200 nM.
+- Notes: DMSO soluble.
+
+5) Venetoclax + FLT3 inhibitor combo (simple test suggestion)
+- Rationale: clinical & preclinical synergy in FLT3‑mutant AML. Test single agents and fixed‑ratio combos.
+- Test plan: evaluate single‑agent curves as above, and combos at fixed ratio or matrix (e.g., venetoclax 100:1 gilteritinib).
+- Expected combination effect: left shift of IC50; test synergy metrics (Bliss/ZIP).
+
+6) JQ1 (BET bromodomain inhibitor; tool compound)
+- Rationale: BET proteins regulate MYC and other oncogenic transcription; MOLM13 often sensitive.
+- Test plan: top conc 10 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~100–1000 nM.
+- Notes: DMSO soluble; transient effects on transcription require 48–72 h readout.
+
+7) OTX015 / MK‑8628 (BET inhibitor; clinical candidate)
+- Rationale: BET inhibition similar to JQ1, clinically relevant agent.
+- Test plan: top conc 10 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~100–1000 nM.
+- Notes: DMSO soluble.
+
+8) Alvocidib (flavopiridol; CDK9/CDK inhibitor)
+- Rationale: transcriptional CDK inhibition reduces anti‑apoptotic transcripts; active in AML models.
+- Test plan: top conc 1 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~10–200 nM.
+- Notes: very potent; consider shorter exposures for mechanistic readouts.
+
+9) Bortezomib (proteasome inhibitor; approved)
+- Rationale: disrupts protein homeostasis, induces apoptosis in some AML lines.
+- Test plan: top conc 1 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~1–100 nM (line dependent).
+- Notes: water soluble in formulation; often tested pulsed exposures.
+
+10) 17‑AAG (tanespimycin; HSP90 inhibitor)
+- Rationale: degrades oncogenic kinases (e.g., FLT3), active in AML cell lines.
+- Test plan: top conc 1 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~10–500 nM.
+- Notes: DMSO soluble; monitor for stress response induction.
+
+11) Auranofin (anti‑rheumatic; thioredoxin reductase inhibitor)
+- Rationale: induces oxidative stress and cell death in AML; reported activity in AML lines.
+- Test plan: top conc 10 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~0.1–1 µM.
+- Notes: DMSO soluble; oxidative stress assays complement viability readout.
+
+12) Niclosamide (anthelmintic)
+- Rationale: pleiotropic effects (WNT/STAT/mTOR) and reported cytotoxicity in hematologic malignancies.
+- Test plan: top conc 10 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~0.5–5 µM (line dependent).
+- Notes: poor solubility—prepare concentrated DMSO stock and avoid precipitation.
+
+13) Disulfiram (alcohol‑aversion drug) ± Cu2+
+- Rationale: disulfiram forms copper complexes that inhibit proteasome/ALDH and induces apoptosis in cancer cells.
+- Test plan: top conc disulfiram 10 µM + 1 µM CuCl2; 10‑point 3‑fold dilution.
+- Expected IC50 (with copper): ~0.1–2 µM.
+- Notes: requires copper for maximal activity; test disulfiram alone and with equimolar low micromolar Cu.
+
+14) Mebendazole (anthelmintic)
+- Rationale: microtubule disruption and other effects; reported AML in vitro activity.
+- Test plan: top conc 10 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~0.5–5 µM.
+- Notes: limited aqueous solubility—use DMSO stocks.
+
+15) Artesunate / Dihydroartemisinin (antimalarial)
+- Rationale: generates ROS and induces apoptosis in leukemia cells.
+- Test plan: top conc 50 µM (or 100 µM if needed); 10‑point 3‑fold dilution.
+- Expected IC50: ~1–20 µM.
+- Notes: water soluble enough; short half‑life—72 h incubation OK, but monitor kinetics.
+
+16) Simvastatin (lipophilic statin)
+- Rationale: inhibits mevalonate pathway, can induce apoptosis in AML cells and sensitize to other agents.
+- Test plan: top conc 50 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~1–10 µM (often high micromolar in vitro).
+- Notes: prodrug hydrolysis may be needed (active hydroxy acid form); consider pravastatin for hydrophilic testing.
+
+17) Metformin (antidiabetic)
+- Rationale: metabolic stress and AMPK activation; reported anti‑leukemia effects but requires high in vitro concentrations.
+- Test plan: top conc 50 mM; 10‑point 2‑fold dilution (50 mM → ~0.1 mM). Alternatively test 0.1–50 mM range.
+- Expected IC50: ~1–20 mM (cell‑culture artifact vs clinically achievable).
+- Notes: effects observed at mM range—interpret cautiously.
+
+18) Itraconazole (antifungal)
+- Rationale: multiple off‑target effects (Hedgehog, angiogenesis, cholesterol trafficking) and anticancer activity reported.
+- Test plan: top conc 10 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~0.5–10 µM.
+- Notes: lipophilic—DMSO stocks recommended.
+
+19) Hydroxychloroquine / Chloroquine (autophagy inhibitors)
+- Rationale: block autophagy and lysosomal function, can sensitize AML to apoptosis.
+- Test plan: top conc 100 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~10–50 µM (often cytostatic at these levels).
+- Notes: high concentrations may be required; interpret autophagy assays in parallel.
+
+20) Clofazimine (antileprosy)
+- Rationale: accumulates in lysosomes, induces ROS and apoptosis in cancer cell models including leukemia.
+- Test plan: top conc 10 µM; 10‑point 3‑fold dilution.
+- Expected IC50: ~1–5 µM.
+- Notes: lipophilic—DMSO stocks; long intracellular retention may affect time course.
+
+Practical example dilution setups
+- For a compound with expected nM potency (e.g., gilteritinib): use top 1 µM; 10‑point 3‑fold dilution → 1 µM, 333 nM, 111 nM, 37 nM, 12 nM, 4 nM, 1.2 nM, 0.4 nM, 0.13 nM, 0.04 nM.
+- For µM‑potency compounds (e.g., niclosamide): top 10 µM; same 3‑fold scheme.
+- For high‑conc compounds (metformin): use 2‑fold 10‑point series if needed (50 mM top → 48 µM bottom).
+
+Notes and caveats
+- MOLM13 is FLT3‑ITD positive and often sensitive to FLT3 inhibitors and BCL‑2 inhibition, so include gilteritinib/quizartinib and venetoclax as positive controls.
+- For repurposed non‑oncology drugs, reported in vitro IC50s vary by assay and lab; the listed expected ranges are approximate and meant to guide top concentration selection.
+- Solubility and serum binding can shift apparent IC50s—monitor for precipitation and consider testing in both serum‑containing and low‑serum media if relevant.
+- When testing drugs like disulfiram, always test with and without required cofactors (e.g., copper).
+- For combination testing, use fixed‑ratio matrices or checkerboard designs and quantify synergy (Bliss, Loewe, ZIP).
+
+If you want, I can:
+- produce ready‑to‑print drug plates (concentration tables) for a 96‑well plate IC50 set up,
+- provide suggested cell seeding densities and timing for MOLM13 specifically,
+- or prioritize the list to the top 8–10 candidates (e.g., those most likely to work in MOLM13) and give a detailed experimental protocol.

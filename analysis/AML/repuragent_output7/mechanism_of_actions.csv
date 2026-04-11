@@ -1,0 +1,123 @@
+chembl_id,drug_name,mechanism_of_action
+CHEMBL1086218,VALSPODAR,P-glycoprotein 1 inhibitor
+CHEMBL1096882,FLUDARABINE PHOSPHATE,DNA polymerase (alpha/delta/epsilon) inhibitor
+CHEMBL1096882,FLUDARABINE PHOSPHATE,Ribonucleoside-diphosphate reductase RR1 inhibitor
+CHEMBL1200485,SORAFENIB TOSYLATE,Platelet-derived growth factor receptor beta inhibitor
+CHEMBL1200485,SORAFENIB TOSYLATE,Serine/threonine-protein kinase B-raf inhibitor
+CHEMBL1200485,SORAFENIB TOSYLATE,Serine/threonine-protein kinase RAF inhibitor
+CHEMBL1200485,SORAFENIB TOSYLATE,Stem cell growth factor receptor inhibitor
+CHEMBL1200485,SORAFENIB TOSYLATE,Tyrosine-protein kinase receptor FLT3 inhibitor
+CHEMBL1200485,SORAFENIB TOSYLATE,Tyrosine-protein kinase receptor RET inhibitor
+CHEMBL1200485,SORAFENIB TOSYLATE,Vascular endothelial growth factor receptor inhibitor
+CHEMBL1200751,MERCAPTOPURINE,Amidophosphoribosyltransferase inhibitor
+CHEMBL1200751,MERCAPTOPURINE,DNA inhibitor
+CHEMBL1200778,DEXRAZOXANE HYDROCHLORIDE,DNA topoisomerase II inhibitor
+CHEMBL1200778,DEXRAZOXANE HYDROCHLORIDE,Iron chelating agent
+CHEMBL1200976,IDARUBICIN HYDROCHLORIDE,DNA inhibitor
+CHEMBL1200976,IDARUBICIN HYDROCHLORIDE,DNA topoisomerase II alpha inhibitor
+CHEMBL1201081,METHYLPREDNISOLONE SODIUM SUCCINATE,Glucocorticoid receptor agonist
+CHEMBL1201129,DECITABINE,DNA (cytosine-5)-methyltransferase 1 inhibitor
+CHEMBL1201129,DECITABINE,DNA (cytosine-5)-methyltransferase 3A inhibitor
+CHEMBL1201129,DECITABINE,DNA inhibitor
+CHEMBL1201132,NALBUPHINE HYDROCHLORIDE,Opioid receptors; mu/kappa/delta agonist
+CHEMBL1201438,ALDESLEUKIN,Interleukin-2 receptor agonist
+CHEMBL1201506,GEMTUZUMAB OZOGAMICIN,DNA disrupting agent
+CHEMBL1201506,GEMTUZUMAB OZOGAMICIN,Myeloid cell surface antigen CD33 binding agent
+CHEMBL1201565,EPOETIN ALFA,Erythropoietin receptor agonist
+CHEMBL1201567,FILGRASTIM,Granulocyte colony stimulating factor receptor agonist
+CHEMBL1201587,ALEMTUZUMAB,CAMPATH-1 antigen inhibitor
+CHEMBL1201670,SARGRAMOSTIM,Granulocyte-macrophage colony-stimulating factor receptor agonist
+CHEMBL1231160,PEVONEDISTAT,NEDD8 activating enzyme inhibitor
+CHEMBL1233528,VOLASERTIB,Serine/threonine-protein kinase PLK1 inhibitor
+CHEMBL131,PREDNISOLONE,Glucocorticoid receptor agonist
+CHEMBL1417019,MITOXANTRONE HYDROCHLORIDE,DNA inhibitor
+CHEMBL1417019,MITOXANTRONE HYDROCHLORIDE,DNA topoisomerase II alpha inhibitor
+CHEMBL1421,DASATINIB ANHYDROUS,Bcr/Abl fusion protein inhibitor
+CHEMBL1421,DASATINIB ANHYDROUS,Ephrin type-A receptor 2 inhibitor
+CHEMBL1421,DASATINIB ANHYDROUS,Platelet-derived growth factor receptor beta inhibitor
+CHEMBL1421,DASATINIB ANHYDROUS,SRC inhibitor
+CHEMBL1421,DASATINIB ANHYDROUS,Stem cell growth factor receptor inhibitor
+CHEMBL1421,DASATINIB ANHYDROUS,Tyrosine-protein kinase ABL inhibitor
+CHEMBL1456,MYCOPHENOLATE MOFETIL,Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor
+CHEMBL1489,AZACITIDINE,DNA (cytosine-5)-methyltransferase 1 inhibitor
+CHEMBL1489,AZACITIDINE,DNA (cytosine-5)-methyltransferase 3A inhibitor
+CHEMBL1489,AZACITIDINE,DNA inhibitor
+CHEMBL1489,AZACITIDINE,RNA inhibitor
+CHEMBL1563,DAUNORUBICIN HYDROCHLORIDE,DNA inhibitor
+CHEMBL1563,DAUNORUBICIN HYDROCHLORIDE,DNA topoisomerase II alpha inhibitor
+CHEMBL160,CYCLOSPORINE,Cyclophilin A modulator
+CHEMBL1642,IMATINIB MESYLATE,Bcr/Abl fusion protein inhibitor
+CHEMBL1642,IMATINIB MESYLATE,Platelet-derived growth factor receptor beta inhibitor
+CHEMBL1642,IMATINIB MESYLATE,Stem cell growth factor receptor inhibitor
+CHEMBL1642,IMATINIB MESYLATE,Tyrosine-protein kinase ABL inhibitor
+CHEMBL1738,DEXRAZOXANE,DNA topoisomerase II inhibitor
+CHEMBL1738,DEXRAZOXANE,Iron sequestering agent
+CHEMBL1750,CLOFARABINE,DNA inhibitor
+CHEMBL1750,CLOFARABINE,DNA polymerase (alpha/delta/epsilon) inhibitor
+CHEMBL1750,CLOFARABINE,Ribonucleoside-diphosphate reductase RR1 inhibitor
+CHEMBL178,DAUNORUBICIN,DNA inhibitor
+CHEMBL178,DAUNORUBICIN,DNA topoisomerase II alpha inhibitor
+CHEMBL2043437,GLASDEGIB,Smoothened homolog antagonist
+CHEMBL2105728,CRENOLANIB,Platelet-derived growth factor receptor inhibitor
+CHEMBL2105728,CRENOLANIB,Tyrosine-protein kinase receptor FLT3 inhibitor
+CHEMBL2108342,GEMTUZUMAB,Myeloid cell surface antigen CD33 binding agent
+CHEMBL2108811,VISILIZUMAB,T-cell surface glycoprotein CD3 epsilon chain inhibitor
+CHEMBL2109128,LENOGRASTIM,Granulocyte colony stimulating factor receptor agonist
+CHEMBL2109229,OBLIMERSEN SODIUM,Bcl-2 mRNA antisense inhibitor
+CHEMBL2402737,IDASANUTLIN,Tumour suppressor p53/oncoprotein Mdm2 inhibitor
+CHEMBL289228,TIPIFARNIB,Protein farnesyltransferase inhibitor
+CHEMBL3137309,VENETOCLAX,Apoptosis regulator Bcl-2 inhibitor
+CHEMBL3265032,ENTOSPLETINIB,Tyrosine-protein kinase SYK inhibitor
+CHEMBL3301603,GILTERITINIB FUMARATE,Tyrosine-protein kinase receptor FLT3 inhibitor
+CHEMBL3301603,GILTERITINIB FUMARATE,Tyrosine-protein kinase receptor UFO inhibitor
+CHEMBL3301622,GILTERITINIB,Tyrosine-protein kinase receptor FLT3 inhibitor
+CHEMBL3301622,GILTERITINIB,Tyrosine-protein kinase receptor UFO inhibitor
+CHEMBL34259,METHOTREXATE,Dihydrofolate reductase inhibitor
+CHEMBL3545185,SELINEXOR,Exportin-1 inhibitor
+CHEMBL359744,DOXORUBICIN HYDROCHLORIDE,DNA inhibitor
+CHEMBL359744,DOXORUBICIN HYDROCHLORIDE,DNA topoisomerase II alpha inhibitor
+CHEMBL3678958,RUSERONTINIB,Epidermal growth factor receptor erbB1 inhibitor
+CHEMBL3678958,RUSERONTINIB,Tyrosine-protein kinase ABL inhibitor
+CHEMBL3678958,RUSERONTINIB,Tyrosine-protein kinase receptor FLT3 inhibitor
+CHEMBL38,TRETINOIN,Retinoic acid receptor agonist
+CHEMBL3833386,GALINPEPIMUT-S,Wilms tumor protein vaccine antigen
+CHEMBL384467,DEXAMETHASONE,Glucocorticoid receptor agonist
+CHEMBL389621,HYDROCORTISONE,Glucocorticoid receptor agonist
+CHEMBL3989931,ENASIDENIB MESYLATE,"Isocitrate dehydrogenase [NADP], mitochondrial inhibitor"
+CHEMBL3989958,IVOSIDENIB,Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor
+CHEMBL3989971,UPROLESELAN,Selectin E antagonist
+CHEMBL4297534,GLASDEGIB MALEATE,Smoothened homolog antagonist
+CHEMBL4297573,TAGRAXOFUSP,Elongation factor 2 inhibitor
+CHEMBL4297573,TAGRAXOFUSP,Interleukin-3 receptor subunit alpha binding agent
+CHEMBL4297610,OLUTASIDENIB,Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor
+CHEMBL4297985,MAGROLIMAB,Leukocyte surface antigen CD47 inhibitor
+CHEMBL43,AMSACRINE,DNA topoisomerase II inhibitor
+CHEMBL44657,ETOPOSIDE,DNA topoisomerase II inhibitor
+CHEMBL467,HYDROXYUREA,Ribonucleoside-diphosphate reductase RR1 inhibitor
+CHEMBL501867,VINCRISTINE SULFATE,Tubulin inhibitor
+CHEMBL576982,QUIZARTINIB,Macrophage colony stimulating factor receptor inhibitor
+CHEMBL576982,QUIZARTINIB,Platelet-derived growth factor receptor inhibitor
+CHEMBL576982,QUIZARTINIB,Stem cell growth factor receptor inhibitor
+CHEMBL576982,QUIZARTINIB,Tyrosine-protein kinase receptor FLT3 inhibitor
+CHEMBL576982,QUIZARTINIB,Tyrosine-protein kinase receptor RET inhibitor
+CHEMBL608533,MIDOSTAURIN,Platelet-derived growth factor receptor inhibitor
+CHEMBL608533,MIDOSTAURIN,Protein kinase C (PKC) inhibitor
+CHEMBL608533,MIDOSTAURIN,Stem cell growth factor receptor inhibitor
+CHEMBL608533,MIDOSTAURIN,Tyrosine-protein kinase receptor FLT3 inhibitor
+CHEMBL608533,MIDOSTAURIN,Vascular endothelial growth factor receptor 2 inhibitor
+CHEMBL635,PREDNISONE,Glucocorticoid receptor agonist
+CHEMBL650,METHYLPREDNISOLONE,Glucocorticoid receptor agonist
+CHEMBL68117,VOSAROXIN,DNA inhibitor
+CHEMBL68117,VOSAROXIN,DNA topoisomerase II inhibitor
+CHEMBL723,CARVEDILOL,Adrenergic receptor alpha-1 antagonist
+CHEMBL723,CARVEDILOL,Adrenergic receptor beta antagonist
+CHEMBL727,THIOGUANINE,DNA inhibitor
+CHEMBL727,THIOGUANINE,Inosine-5'-monophosphate dehydrogenase (IMPDH) inhibitor
+CHEMBL803,CYTARABINE,DNA inhibitor
+CHEMBL803,CYTARABINE,DNA polymerase (alpha/delta/epsilon) inhibitor
+CHEMBL803,CYTARABINE,RNA inhibitor
+CHEMBL848,LENALIDOMIDE,CRL4(CRBN) E3 ubiquitin ligase inhibitor
+CHEMBL98,VORINOSTAT,Histone deacetylase 1 inhibitor
+CHEMBL98,VORINOSTAT,Histone deacetylase 2 inhibitor
+CHEMBL98,VORINOSTAT,Histone deacetylase 3 inhibitor
+CHEMBL98,VORINOSTAT,Histone deacetylase 6 inhibitor

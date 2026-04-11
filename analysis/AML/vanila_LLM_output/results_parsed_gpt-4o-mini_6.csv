@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Azacitidine,DNA methyltransferase inhibitor,"Inhibits DNA methylation, leading to re-expression of tumor suppressor genes.",0.5,2.0,µM,Also known as Vidaza.
+Decitabine,DNA methyltransferase inhibitor,"Inhibits DNA methylation, causing demethylation of aberrantly methylated genes.",0.1,1.0,µM,Also known as Dacogen.
+Ara-C,Nucleoside analog,Inhibits DNA synthesis by incorporating into DNA as cytarabine triphosphate.,0.1,1.0,µM,Also known as Cytarabine.
+Venetoclax,BCL-2 inhibitor,"Inhibits BCL-2 protein, promoting apoptosis in cancer cells.",10.0,100.0,nM,Also known as Venclexta.
+Selinexor,Exportin 1 inhibitor,Inhibits nuclear export of tumor suppressors and pro-apoptotic proteins.,100.0,500.0,nM,Also known as XPOVIO.
+Midostaurin,Multi-kinase inhibitor,"Inhibits FLT3 and other kinases, altering signaling pathways preventing proliferation.",30.0,300.0,nM,Also known as Rydapt.
+Tasigna,Tyrosine kinase inhibitor,"Inhibits BCR-ABL and other tyrosine kinases, blocking cell division and survival.",100.0,600.0,nM,Also known as Nilotinib.
+Carfilzomib,Proteasome inhibitor,"Inhibits the proteasome, leading to apoptosis in neoplastic cells.",5.0,50.0,nM,Also known as Kyprolis.
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL and src kinases, impeding cancer cell growth.",1.0,100.0,nM,Also known as Sprycel.
+Imatinib,Tyrosine kinase inhibitor,"Inhibits BCR-ABL tyrosine kinase, preventing proliferation of leukemia cells.",100.0,500.0,nM,Also known as Gleevec.
+TGF-β Receptor Inhibitor,Receptor inhibitor,"Blocks TGF-β signaling pathway, potentially reducing cancer cell growth.",1.0,10.0,µM,Also known as LY364947.
+Bortezomib,Proteasome inhibitor,Induces apoptosis in neoplastic cells by inhibiting the proteasome pathway.,1.0,10.0,nM,Also known as Velcade.
+Osimertinib,EGFR inhibitor,"Inhibits mutated EGFR, leading to reduced cancer cell proliferation.",10.0,100.0,nM,Also known as Tagrisso.
+Sorafenib,Multi-kinase inhibitor,Inhibits multiple kinases involved in tumor growth and angiogenesis.,2.0,5.0,µM,Also known as Nexavar.
+Epothilone B,Microtubule stabilizer,"Stabilizes microtubules, preventing their depolymerization and inhibiting cell division.",10.0,100.0,nM,Also known as EpoB.
+Celecoxib,COX-2 inhibitor,"Inhibits COX-2 enzyme, exerting anti-inflammatory and potential anti-cancer effects.",10.0,50.0,µM,Also known as Celebrex.
+Rapamycin,mTOR inhibitor,"Inhibits mTOR pathway, leading to decreased cell growth and proliferation.",1.0,20.0,nM,Also known as Sirolimus.
+Lapatinib,Tyrosine kinase inhibitor,"Inhibits ErbB1 and ErbB2 (HER2) receptors, affecting cancer cell growth.",100.0,500.0,nM,Also known as Tykerb.
+Vorinostat,HDAC inhibitor,"Inhibits histone deacetylases, leading to changes in gene expression and apoptosis.",1.0,5.0,µM,Also known as Zolinza.
+Dexamethasone,Glucocorticoid,"Modulates gene expression and has anti-inflammatory effects, potentially inducing apoptosis.",0.1,1.0,µM,None.

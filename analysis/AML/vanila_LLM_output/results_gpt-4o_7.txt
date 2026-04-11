@@ -1,0 +1,55 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is a promising approach that can accelerate the development of new therapies. The following is a list of drugs that have shown potential in preclinical or clinical studies for AML, including the MOLM-13 cell line. The suggested concentrations for IC50 assays are based on available data from literature and might require further optimization:
+
+1. **Venetoclax**: Initially approved for chronic lymphocytic leukemia, this BCL-2 inhibitor shows activity in AML. Suggested concentration range for IC50: 10 nM - 1 µM.
+
+2. **Sorafenib**: A multi-kinase inhibitor initially approved for renal and liver cancer, has shown potential in AML, particularly FLT3-ITD mutated cases. IC50 range: 1 nM - 10 µM.
+
+3. **Quizartinib (AC220)**: A FLT3 inhibitor, used in relapsed/refractory AML with FLT3 mutations. IC50 range: 0.1 nM - 1 µM.
+
+4. **Midostaurin (PKC412)**: A broad-spectrum kinase inhibitor effective in FLT3-mutated AML. IC50 range: 100 nM - 1 µM.
+
+5. **Dasatinib**: A tyrosine kinase inhibitor initially used for CML, under investigation for AML. IC50 range: 1 nM - 10 µM.
+
+6. **Ibrutinib**: A Bruton's tyrosine kinase inhibitor used in B-cell malignancies, shows potential in AML. IC50 range: 10 nM - 2 µM.
+
+7. **Ruxolitinib**: A JAK1/JAK2 inhibitor, approved for myelofibrosis and polycythemia vera, investigated for AML. IC50 range: 100 nM - 10 µM.
+
+8. **Lenalidomide**: Approved for multiple myeloma, studied for its effects on AML blast differentiation. IC50 range: 0.1 µM - 10 µM.
+
+9. **Bortezomib**: A proteasome inhibitor used in multiple myeloma, studied in AML for cell cycle arrest. IC50 range: 1 nM - 100 nM.
+
+10. **Arsenic Trioxide**: Used primarily in APL, it can induce apoptosis in AML cell lines. IC50 range: 0.1 µM - 2 µM.
+
+11. **Metformin**: An antidiabetic agent with data suggesting anti-leukemic effects through AMPK activation. IC50 range: 1 mM - 5 mM.
+
+12. **Valproic Acid**: A histone deacetylase (HDAC) inhibitor with potential differentiation-inducing effects in AML. IC50 range: 0.5 mM - 5 mM.
+
+13. **Thalidomide**: Used for multiple myeloma, has immunomodulatory effects in AML. IC50 range: 1 µM - 10 µM.
+
+14. **Aprepitant**: Originally an antiemetic, acts as an NK-1 receptor antagonist, inhibiting AML cell proliferation. IC50 range: 1 µM - 10 µM.
+
+15. **Mosunetuzumab**: A bispecific antibody that engages T cells to kill AML cells. IC50 range (for cell-based assays, since it's an antibody): 0.1 nM - 1 µM.
+
+16. **Nicotinamide**: A form of vitamin B3, shows potential in inducing differentiation of AML cells. IC50 range: 1 mM - 10 mM.
+
+17. **Clofarabine**: A purine nucleoside analog for pediatric ALL, shows activity in AML. IC50 range: 10 nM - 1 µM.
+
+18. **Disulfiram**: An alcohol aversion agent with potential anti-cancer properties through inhibition of aldehyde dehydrogenase. IC50 range: 0.5 µM - 5 µM.
+
+19. **Clarithromycin**: Known for antibacterial activity, affecting AML cells through modulation of autophagy. IC50 range: 10 µM - 100 µM.
+
+20. **Simvastatin**: HMG-CoA reductase inhibitor, shows inhibition of AML cell lines via cholesterol synthesis disruption. IC50 range: 1 µM - 10 µM.
+
+For each drug, it is crucial to verify its effects on a specific AML cell line, such as MOLM13, and optimize the concentrations based on the type of assay and the cell line characteristics. Always consult peer-reviewed studies or conduct preliminary experiments to fine-tune the concentrations further.

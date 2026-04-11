@@ -1,0 +1,19 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Auranofin,Anti-rheumatic agent,Employs oxidative stress to exert anti-cancer effects,0.5,10.0,µM,Potential activity against cancer cells.,auranofin,False,CHEMBL1366
+Arsenic Trioxide,Chemotherapy agent,Induces apoptosis in leukemia cells,0.5,5.0,µM,"Used in acute promyelocytic leukemia, potential in AML.",arsenic trioxide,False,CHEMBL5483015
+Ibrutinib,BTK inhibitor,"Blocks BTK signaling, inhibiting growth of cancer cells",0.1,10.0,µM,Used in B-cell malignancies with some anti-AML activity.,ibrutinib,False,CHEMBL1873475
+Ixazomib,Proteasome inhibitor,"Inhibition of protein degradation, inducing apoptosis",0.1,10.0,µM,"Used in multiple myeloma, potential effectiveness against AML.",ixazomib,False,CHEMBL3545432
+Dasatinib,BCR-ABL inhibitor,Inhibits multiple kinases including BCR-ABL,0.1,5.0,µM,Potential broader kinase inhibition in AML.,dasatinib,False,CHEMBL1421
+Tamoxifen,Selective estrogen receptor modulator,"Blocks estrogen receptors, inhibiting cell proliferation",1.0,10.0,µM,Shown to inhibit various cancer cell lines.,tamoxifen,False,CHEMBL83
+Metformin,Anti-diabetic agent,Lowers blood glucose and has anti-cancer effects,0.1,10.0,mM,Indicated in studies for anti-cancer properties.,metformin,False,CHEMBL1431
+Ruxolitinib,JAK inhibitor,"Inhibits JAK signaling, reducing proliferation",0.1,10.0,µM,"Used in myeloproliferative neoplasms, investigated for AML.",ruxolitinib,False,CHEMBL1287854
+Simvastatin,Statin,"Inhibits cholesterol production, showing anti-leukemic effects",1.0,10.0,µM,Effects through cholesterol pathway inhibition.,simvastatin,False,CHEMBL1201391
+Chloroquine,Anti-malarial,"Alters lysosomal pH, affecting cancer proliferation",1.0,10.0,µM,Shown to enhance chemotherapy actions.,chloroquine,False,CHEMBL76
+Carfilzomib,Proteasome inhibitor,"Disrupts protein degradation, inducing apoptosis",0.1,5.0,µM,Effects on protein degradation pathways in AML.,carfilzomib,False,CHEMBL451887
+Rapamycin,mTOR inhibitor,"Blocks mTOR pathway, suppressing cell proliferation",1.0,10.0,nM,Known as Sirolimus; anti-leukemic potential shown in studies.,rapamycin,False,CHEMBL413
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, leading to apoptosis",0.1,10.0,µM,"Used in multiple myeloma, with AML potential.",bortezomib,False,CHEMBL325041
+Itraconazole,Antifungal,Inhibits Hedgehog signaling pathway,1.0,10.0,µM,Possible Hedgehog signaling pathway inhibition.,itraconazole,False,CHEMBL5483033
+Mebendazole,Anti-helminthic,"Interferes with cell division, exhibiting anti-cancer effects",0.1,10.0,µM,Documented off-target anti-cancer effects.,mebendazole,False,CHEMBL685
+Sulfasalazine,Anti-inflammatory,"Inhibits the glutamate antiporter (xCT), affecting tumor growth",1.0,50.0,µM,Used for inflammatory diseases.,sulfasalazine,False,CHEMBL421
+Disulfiram,Aldehyde dehydrogenase inhibitor,"Inhibits ALDH, inducing oxidative stress in cancer cells",0.1,10.0,µM,Used for alcohol dependency; interesting for ALDH inhibition.,disulfiram,False,CHEMBL964
+Celecoxib,COX-2 inhibitor,"Inhibits cyclooxygenase-2, reducing proliferation",1.0,10.0,µM,Shown anti-proliferative effects in cancer cells.,celecoxib,False,CHEMBL118

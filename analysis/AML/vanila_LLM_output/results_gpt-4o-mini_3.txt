@@ -1,0 +1,83 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for acute myeloid leukemia (AML) treatment is a promising area of research. Below is a list of 20 drugs that have been investigated for their potential anti-cancer effects and might show promise in treating AML, along with suggested concentrations based on existing literature. Note that the specific concentrations for IC50 assays can vary based on the assay conditions and the specific cellular context, so the values provided here are approximations based on available data.
+
+### 20 Existing Drugs for Repurposing in AML:
+
+1. **Azacitidine**
+   - Suggested Concentration: 0.1 - 10 µM
+
+2. **Decitabine**
+   - Suggested Concentration: 0.1 - 10 µM
+
+3. **Vorinostat (SAHA)**
+   - Suggested Concentration: 0.1 - 5 µM
+
+4. **Ruxolitinib**
+   - Suggested Concentration: 0.1 - 5 µM
+
+5. **Busulfan**
+   - Suggested Concentration: 10 - 200 µM
+
+6. **Dexamethasone**
+   - Suggested Concentration: 0.1 - 1 µM
+
+7. **Nitroxoline**
+   - Suggested Concentration: 1 - 50 µM
+
+8. **Metformin**
+   - Suggested Concentration: 0.5 - 10 mM
+
+9. **Quinacrine**
+   - Suggested Concentration: 1 - 20 µM
+
+10. **Thalidomide**
+   - Suggested Concentration: 1 - 30 µM
+
+11. **Bortezomib**
+   - Suggested Concentration: 1 - 20 nM
+
+12. **Olaparib**
+   - Suggested Concentration: 0.1 - 10 µM
+
+13. **Lapatinib**
+   - Suggested Concentration: 0.1 - 5 µM
+
+14. **Clofarabine**
+   - Suggested Concentration: 0.05 - 1 µM
+
+15. **Gemcitabine**
+   - Suggested Concentration: 0.1 - 10 µM
+
+16. **Pazopanib**
+   - Suggested Concentration: 1 - 10 µM
+
+17. **Citrulline**
+   - Suggested Concentration: 1 - 10 mM
+
+18. **Cyclosporine A**
+   - Suggested Concentration: 0.1 - 5 µM
+
+19. **Sunitinib**
+   - Suggested Concentration: 0.1 - 10 µM
+
+20. **Parthenolide**
+   - Suggested Concentration: 0.1 - 5 µM
+
+### Notes:
+- The concentrations listed should serve as starting points for in vitro assays.
+- For experimental validation, performing dose-response studies across a range of concentrations is essential for determining the exact IC50 values.
+- Always verify the pharmacological profiles and safety profiles of the drugs in specific contexts before proceeding with clinical implications.
+- Further studies would also be necessary to understand the mechanisms of action and potential synergies with existing AML therapies.
+
+It's important to conduct thorough literature searches and preclinical studies to validate the efficacy and safety of these drugs in AML models, particularly with the MOLM13 cell line.

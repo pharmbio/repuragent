@@ -1,0 +1,13 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Sunitinib,Multi-kinase inhibitor,Inhibits multiple receptor tyrosine kinases with reported FLT3 activity,1.0,10.0,µM,Includes FLT3 activity,sunitinib,False,CHEMBL597365
+Ponatinib,Multi-kinase inhibitor,Broad kinase inhibition; reported activity in some FLT3-driven contexts,0.3,3.0,µM,Activity noted in some FLT3-driven contexts,ponatinib,False,CHEMBL2105708
+Navitoclax,BCL-2/BCL-xL inhibitor (BH3 mimetic),Inhibits anti-apoptotic BCL-2 family proteins (BCL-2 and BCL-xL) to promote apoptosis,0.3,10.0,µM,Also referred to as ABT-263; thrombocytopenia limits clinical use but useful preclinically,navitoclax,False,CHEMBL2105690
+AT-101,BH3 mimetic-like apoptosis modulator,Gossypol-derived compound with BH3 mimetic-like pro-apoptotic activity and multiple targets,0.1,50.0,µM,Alternative name: gossypol; noted as multiple targets,at 101,False,CHEMBL4303347
+Trametinib,MEK inhibitor,Inhibits MEK1/2 in the MAPK pathway to suppress proliferation in MAPK-active AML subsets,0.3,3.0,µM,Described as effective in MAPK-active AML subsets,trametinib,False,CHEMBL2103875
+Panobinostat,HDAC inhibitor,Inhibits histone deacetylases to alter chromatin/transcription and reduce tumor cell viability,0.3,300.0,nM,Hematologic activity; potent in vitro,panobinostat,False,CHEMBL483254
+Romidepsin,HDAC inhibitor,Potent HDAC inhibition leading to transcriptional changes and apoptosis,0.03,30.0,nM,Noted as very potent,romidepsin,False,CHEMBL343448
+Valproic acid,HDAC inhibitor (weak),Weak HDAC inhibition with epigenetic effects; often requires high concentrations in vitro,0.1,10.0,mM,Weak potency; frequently requires mM concentrations in vitro,valproic acid,False,CHEMBL109
+Bortezomib,Proteasome inhibitor,Inhibits the proteasome to induce proteotoxic stress and apoptosis,0.1,100.0,nM,Cited with multiple AML studies; suggested positive control,bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor,Irreversibly inhibits the proteasome to trigger proteostasis stress and apoptosis,0.3,300.0,nM,Noted as potent,carfilzomib,False,CHEMBL451887
+Auranofin,Thioredoxin reductase inhibitor,Inhibits thioredoxin reductase to increase oxidative stress and promote cell death,10.0,10.0,µM,Induces oxidative stress; activity reported in AML models,auranofin,False,CHEMBL1366
+Chloroquine,Lysosomotropic/autophagy inhibitor,"Raises lysosomal pH and inhibits autophagy/lysosomal function, sometimes enhancing AML cell death",0.3,100.0,µM,Modest as single agent; sometimes enhances AML cell death,chloroquine,False,CHEMBL76

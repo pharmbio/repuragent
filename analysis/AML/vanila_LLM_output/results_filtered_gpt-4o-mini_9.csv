@@ -1,0 +1,13 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and other kinases involved in cell proliferation,0.01,0.1,µM,,dasatinib,False,CHEMBL1421
+Sunitinib,Multikinase inhibitor,"Inhibits VEGFR and PDGFR, blocking tumor growth and angiogenesis",0.1,5.0,µM,,sunitinib,False,CHEMBL597365
+Lenvatinib,Tyrosine kinase inhibitor,Inhibits several receptor tyrosine kinases involved in angiogenesis and tumor proliferation,0.1,5.0,µM,,lenvatinib,False,CHEMBL1289601
+Pomalidomide,Immunomodulatory drug,Enhances T cell-mediated immunity and induces apoptosis in myeloma cells,0.1,5.0,µM,,pomalidomide,False,CHEMBL43452
+Thalidomide,Immunomodulatory drug,Inhibits angiogenesis and enhances immune response against tumors,1.0,10.0,µM,,thalidomide,False,CHEMBL426123
+Topotecan,Topoisomerase inhibitor,"Inhibits topoisomerase I, leading to DNA damage and cancer cell death",0.01,0.1,µM,,topotecan,False,CHEMBL84
+Dacarbazine,Alkylating agent,Causes DNA damage leading to cell death,10.0,100.0,µM,,dacarbazine,False,CHEMBL476
+Carfilzomib,Proteasome inhibitor,"Inhibits proteasome, leading to accumulation of pro-apoptotic factors in malignant cells",0.1,1.0,µM,,carfilzomib,False,CHEMBL451887
+Bortezomib,Proteasome inhibitor,"Inhibits the proteasome, resulting in apoptosis of cancer cells",0.01,0.1,µM,,bortezomib,False,CHEMBL325041
+Gemcitabine,Nucleoside analog,Inhibits DNA synthesis leading to apoptosis in rapidly dividing cells,0.1,10.0,µM,,gemcitabine,False,CHEMBL3039516
+Auranofin,Gold compound,Exhibits anti-cancer properties through inhibition of thioredoxin reductase,1.0,10.0,µM,,auranofin,False,CHEMBL1366
+Cisplatin,Platinum-based chemotherapy,Forms DNA crosslinks leading to apoptosis,1.0,10.0,µM,,cisplatin,False,CHEMBL197201

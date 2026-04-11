@@ -1,0 +1,12 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Ruxolitinib,JAK Inhibitor,"Inhibits JAK1 and JAK2, leading to decreased proliferation and survival of malignancies",0.5,5.0,µM,Used in myelofibrosis.,ruxolitinib,False,CHEMBL1287854
+Dasatinib,Tyrosine Kinase Inhibitor,"Inhibits BCR-ABL and SRC family kinases, leading to reduced cell proliferation",0.5,5.0,µM,Originally used for chronic myeloid leukemia.,dasatinib,False,CHEMBL1421
+Sunitinib,Tyrosine Kinase Inhibitor,Inhibits multiple receptor kinases involved in tumor cell proliferation and angiogenesis,0.1,5.0,µM,Approved for renal cell carcinoma and gastrointestinal stromal tumors.,sunitinib,False,CHEMBL597365
+Arsenic trioxide,Chemotherapeutic Agent,Induces apoptosis and differentiation in acute promyelocytic leukemia cells,0.1,1.0,µM,Effective for acute promyelocytic leukemia.,arsenic trioxide,False,CHEMBL5483015
+Thalidomide,Immunomodulator,Modulates immune system with anti-angiogenic and anti-inflammatory properties,5.0,50.0,µM,Previously withdrawn from the market; now used in multiple myeloma.,thalidomide,False,CHEMBL426123
+Tocilizumab,Monoclonal Antibody,"IL-6 receptor antagonist, reduces inflammation and immune activation",1.0,10.0,µM,Used to treat rheumatoid arthritis; under investigation for various cancers.,tocilizumab,False,CHEMBL1237022
+Bortezomib,Proteasome Inhibitor,"Inhibits proteasome function, leading to accumulation of pro-apoptotic factors",0.1,10.0,nM,Used in multiple myeloma.,bortezomib,False,CHEMBL325041
+Pomalidomide,Immunomodulator,Enhances immune response and inhibits the growth of cancer cells,0.1,5.0,µM,Similar to Thalidomide and Lenalidomide.,pomalidomide,False,CHEMBL43452
+P53 reactivation compounds,P53 Activator,"Restores function to mutated p53 protein, promoting apoptosis in cancer cells",1.0,10.0,µM,Example includes PRIMA-1.,p53 reactivation compounds,False,CHEMBL3347606
+Metformin,Biguanide,Decreases hepatic glucose production and may affect cancer metabolism,1.0,10.0,mM,Commonly used for type 2 diabetes.,metformin,False,CHEMBL1431
+Cristine,Vinca Alkaloid,"Inhibits microtubule formation, disrupting cellular mitosis",0.1,10.0,µM,Used for various hematological malignancies.,cristine,False,

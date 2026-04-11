@@ -1,0 +1,82 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic indications, such as acute myeloid leukemia (AML), is an exciting area of research. For the specific context of targeting AML cell lines like MOLM-13, the following list includes 20 existing drugs that have shown potential in preclinical studies or have mechanisms of action that could inhibit AML cell proliferation. The concentrations listed are based on typical IC50 values where available, but actual experimental testing is crucial to validate these results.
+
+### Top 20 Existing Drugs for Potential Repurposing in AML
+
+1. **Azacitidine (Vidaza)**
+   - **IC50 Concentration:** 0.5 – 2 µM
+
+2. **Decitabine (Dacogen)**
+   - **IC50 Concentration:** 0.1 – 1 µM
+
+3. **Ara-C (Cytarabine)**
+   - **IC50 Concentration:** 0.1 – 1 µM
+
+4. **Venetoclax (Venclexta)**
+   - **IC50 Concentration:** 10 – 100 nM
+
+5. **Selinexor (XPOVIO)**
+   - **IC50 Concentration:** 100 – 500 nM
+
+6. **Midostaurin (Rydapt)**
+   - **IC50 Concentration:** 30 – 300 nM
+
+7. **Tasigna (Nilotinib)**
+   - **IC50 Concentration:** 100 – 600 nM
+
+8. **Carfilzomib (Kyprolis)**
+   - **IC50 Concentration:** 5 – 50 nM
+
+9. **Dasatinib (Sprycel)**
+   - **IC50 Concentration:** 1 – 100 nM
+
+10. **Imatinib (Gleevec)**
+    - **IC50 Concentration:** 100 – 500 nM
+
+11. **TGF-β Receptor Inhibitor (LY364947)**
+    - **IC50 Concentration:** 1 – 10 µM
+
+12. **Bortezomib (Velcade)**
+    - **IC50 Concentration:** 1 – 10 nM
+
+13. **Osimertinib (Tagrisso)**
+    - **IC50 Concentration:** 10 – 100 nM
+
+14. **Sorafenib (Nexavar)**
+    - **IC50 Concentration:** 2 – 5 µM
+
+15. **Epothilone B (EpoB)**
+    - **IC50 Concentration:** 10 - 100 nM
+
+16. **Celecoxib (Celebrex)**
+    - **IC50 Concentration:** 10 – 50 µM
+
+17. **Rapamycin (Sirolimus)**
+    - **IC50 Concentration:** 1 – 20 nM
+
+18. **Lapatinib (Tykerb)**
+    - **IC50 Concentration:** 100 – 500 nM
+
+19. **Vorinostat (Zolinza)**
+    - **IC50 Concentration:** 1 – 5 µM
+
+20. **Dexamethasone**
+    - **IC50 Concentration:** 100 nM – 1 µM
+
+### Note
+1. **Verification Required**: The actual IC50 values can vary based on experimental conditions, so it’s essential to perform proper assays using MOLM-13 and other relevant AML cell lines.
+2. **In Vitro Evaluation**: Conducting various in vitro tests and validating the effects in relevant preclinical models will be critical.
+3. **Mechanism of Action**: Understanding each drug's mechanism of action will help in selecting the right candidates for combination therapies or sequential treatments.
+
+This list is a starting point for further exploration and should be validated through experimental testing.

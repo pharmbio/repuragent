@@ -1,0 +1,25 @@
+Scoring formula (per-drug):
+
+Inputs:
+- KG evidence: prot_rows, prot_targets_n, path_ids_n, moa_rows
+- Clinical phase: clinical_phase (0-4)
+- ADMET: hERG, AMES, PAMPA, BBB, CYP1A2/2C9/2C19/2D6/3A4
+- Regression: logS (solubility), logP (lipophilicity)
+
+Preprocessing:
+- phase_norm = clinical_phase/4
+- kg_raw = prot_rows + 0.5*prot_targets_n + 0.05*path_ids_n + 0.2*moa_rows
+- kg_norm = log(1+kg_raw)/max(log(1+kg_raw))
+- admet_pen = 0.6*hERG + 0.4*AMES (1 indicates safety concern)
+- sol_score = clip((logS+6)/6,0,1)  # -6->0, 0->1
+- logP_score = clip(1-abs(logP-2)/3,0,1)
+- permeab_score = 0.5*PAMPA + 0.5*BBB
+- cyp_pen = clip((CYP3A4+CYP2C19+CYP2D6+CYP1A2+CYP2C9)/5,0,1)
+
+Final score:
+ranking_score = 0.5*kg_norm + 0.25*phase_norm + 0.1*sol_score + 0.05*logP_score + 0.05*permeab_score - 0.2*admet_pen - 0.05*cyp_pen
+
+IC50 dilution series rule applied (no ChEMBL potency values available in merged master):
+- If targets include a kinase/RTK/JAK (FLT3,KIT,KDR,PDGFRA,PDGFRB,JAK2,ABL1,RET,BRAF,RAF1,ALK,EGFR): top=10 µM
+- Else: top=50 µM
+- 8-point, 3-fold serial dilution: top, top/3, ..., top/3^7

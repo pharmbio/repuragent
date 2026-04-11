@@ -1,0 +1,105 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Below are 20 approved drugs with published antiproliferative activity in AML cell lines (many with specific data in FLT3-ITD models like MOLM-13). For each, I suggest an IC50 assay test range as a 10-point, 3-fold serial dilution starting from the “top” concentration given. The resulting bottom concentration is approximately top/19,683.
+
+Notes:
+- MOLM-13 is FLT3-ITD and MLL-rearranged; FLT3/multikinase and SYK inhibitors often show strong activity. 
+- Use DMSO vehicle controls; check solubility and protein binding (e.g., venetoclax is highly protein-bound).
+- Typical viability readouts at 72 h are common for AML cell lines; adjust as needed.
+
+1) Sorafenib (multikinase/FLT3; approved for HCC, RCC)
+- Strong activity in FLT3-ITD AML including MOLM-13.
+- IC50 assay range: top 1 μM (≈50 pM–1 μM).
+
+2) Ponatinib (BCR-ABL/FLT3; CML/Ph+ ALL)
+- Very potent vs FLT3-ITD AML lines, including MOLM-13.
+- IC50 assay range: top 300 nM (≈15 pM–300 nM).
+
+3) Sunitinib (multikinase/FLT3; RCC, GIST)
+- Inhibits FLT3-ITD AML proliferation.
+- IC50 assay range: top 3 μM (≈150 pM–3 μM).
+
+4) Cabozantinib (multikinase incl. FLT3; RCC, thyroid)
+- Potent in FLT3-ITD AML cell lines including MOLM-13.
+- IC50 assay range: top 1 μM (≈50 pM–1 μM).
+
+5) Lenvatinib (VEGFR/RET/FGFR; thyroid, HCC, RCC)
+- Reported FLT3 inhibition; active in FLT3-ITD AML models.
+- IC50 assay range: top 5 μM (≈250 pM–5 μM).
+
+6) Nintedanib (VEGFR/FGFR/PDGFR; IPF)
+- Preclinical activity in FLT3-ITD AML lines including MOLM-13.
+- IC50 assay range: top 5 μM (≈250 pM–5 μM).
+
+7) Dasatinib (SRC/ABL; CML/Ph+ ALL)
+- Inhibits SRC-family signaling; activity reported in MLL/FLT3 AML lines.
+- IC50 assay range: top 1 μM (≈50 pM–1 μM).
+
+8) Fostamatinib (SYK inhibitor; ITP; active metabolite R406)
+- SYK dependency noted in MLL-rearranged AML; activity in MOLM-13.
+- IC50 assay range: top 30 μM (≈1.5 nM–30 μM).
+
+9) Ruxolitinib (JAK1/2; myelofibrosis, PV)
+- Variable single-agent activity in AML; worth testing, esp. with cytokine-driven signaling.
+- IC50 assay range: top 10 μM (≈0.5 nM–10 μM).
+
+10) Trametinib (MEK1/2; melanoma)
+- MAPK pathway inhibition shows AML line activity; test alone and in combinations.
+- IC50 assay range: top 1 μM (≈50 pM–1 μM).
+
+11) Selumetinib (MEK1/2; NF1-associated PN)
+- MEK inhibition can suppress AML proliferation in subsets; test on MOLM-13.
+- IC50 assay range: top 10 μM (≈0.5 nM–10 μM).
+
+12) Venetoclax (BCL-2; CLL/SLL, AML)
+- Originally approved for CLL; many AML lines respond variably; include due to clinical relevance.
+- IC50 assay range: top 10 μM (≈0.5 nM–10 μM).
+
+13) Bortezomib (proteasome; multiple myeloma, MCL)
+- Potent AML cell line cytotoxicity including MOLM-13.
+- IC50 assay range: top 100 nM (≈5 pM–100 nM).
+
+14) Carfilzomib (proteasome; multiple myeloma)
+- Strong proteasome-dependent killing in AML lines.
+- IC50 assay range: top 100 nM (≈5 pM–100 nM).
+
+15) Omacetaxine mepesuccinate (protein synthesis inhibitor; CML)
+- Broad antileukemic activity; effective in AML cell lines.
+- IC50 assay range: top 100 nM (≈5 pM–100 nM).
+
+16) Vorinostat/SAHA (HDAC inhibitor; CTCL)
+- HDAC inhibition reduces AML proliferation; activity in MOLM-13 reported.
+- IC50 assay range: top 20 μM (≈1 nM–20 μM).
+
+17) Panobinostat (HDAC inhibitor; multiple myeloma)
+- Very potent pan-HDAC inhibitor; active in AML lines.
+- IC50 assay range: top 1 μM (≈50 pM–1 μM).
+
+18) Belinostat (HDAC inhibitor; PTCL)
+- Cytotoxic to AML cell lines; test alongside other epigenetic agents.
+- IC50 assay range: top 20 μM (≈1 nM–20 μM).
+
+19) Tigecycline (mitochondrial translation inhibitor; antibiotic)
+- Selectively impairs OxPhos in AML, including MOLM-13.
+- IC50 assay range: top 50 μM (≈2.5 nM–50 μM).
+
+20) Auranofin (thioredoxin reductase inhibitor; rheumatoid arthritis)
+- Induces oxidative stress–mediated killing in AML cell lines.
+- IC50 assay range: top 10 μM (≈0.5 nM–10 μM).
+
+Optional additions/substitutions if you want a broader panel:
+- Mefloquine (antimalarial; lysosomal cell death; test top 30 μM).
+- Niclosamide (anthelmintic; mitochondrial uncoupler/Wnt inhibition; test top 10 μM).
+- Clofazimine (antimycobacterial; mitochondrial/ion channel effects; test top 5 μM).
+
+If you need the exact literature support per compound for MOLM-13 specifically, say the word and I’ll attach representative references.

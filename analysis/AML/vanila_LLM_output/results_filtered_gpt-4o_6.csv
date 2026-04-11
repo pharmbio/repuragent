@@ -1,0 +1,16 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,BCR-ABL inhibitor,,1.0,1000.0,nM,Used in CML,dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK1/2 inhibitor,,0.1,10.0,μM,For myelofibrosis,ruxolitinib,False,CHEMBL1287854
+Idelalisib,PI3Kδ inhibitor,,0.01,10.0,μM,For chronic lymphocytic leukemia,idelalisib,False,CHEMBL4095008
+Ibrutinib,,Targets BTK,0.01,10.0,μM,For B-cell malignancies,ibrutinib,False,CHEMBL1873475
+Arsenic trioxide,,,0.1,10.0,μM,Used for acute promyelocytic leukemia,arsenic trioxide,False,CHEMBL5483015
+Auranofin,,Modulates redox status,0.1,10.0,μM,An anti-rheumatic drug,auranofin,False,CHEMBL1366
+Thioridazine,Antipsychotic,Targets leukemia stem cells,1.0,20.0,μM,,thioridazine,False,CHEMBL1200916
+Carfilzomib,Proteasome inhibitor,,0.01,5.0,μM,Approved for multiple myeloma,carfilzomib,False,CHEMBL451887
+Everolimus,mTOR inhibitor,,1.0,1000.0,nM,Used in cancer treatment,everolimus,False,CHEMBL1908360
+"Statins (e.g., Simvastatin)",Cholesterol-lowering drugs,Antiproliferative effects,0.01,10.0,μM,,statins,False,CHEMBL1201391
+Metformin,Diabetes drug,Potential anti-leukemic activity,0.1,10.0,mM,,metformin,False,CHEMBL1431
+Olaparib,PARP inhibitor,,0.1,10.0,μM,For BRCA-mutated cancer,olaparib,False,CHEMBL521686
+Pomalidomide,Immunomodulatory drug,,0.01,10.0,μM,For multiple myeloma,pomalidomide,False,CHEMBL43452
+Lapatinib,HER2/EGFR inhibitor,,0.1,10.0,μM,In breast cancer therapy,lapatinib,False,CHEMBL554
+"Repurposed antibiotics (e.g., Doxycycline)",,Modulates mitochondrial function,1.0,100.0,μM,,repurposed antibiotics,False,CHEMBL1256723

@@ -1,0 +1,13 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,BCR-ABL inhibitor,Inhibits BCR-ABL fusion protein,10.0,1000.0,nM,,dasatinib,False,CHEMBL1421
+Navitoclax,BCL-2 family inhibitor,Inhibits BCL-2 proteins to promote apoptosis,10.0,1000.0,nM,,navitoclax,False,CHEMBL2105690
+Pazopanib,"VEGFR, PDGFR, c-KIT inhibitor",Inhibits multiple receptor tyrosine kinases,1000.0,10000.0,µM,,pazopanib,False,CHEMBL477772
+Everolimus,mTOR inhibitor,Inhibits mTOR signaling pathway,1.0,1000.0,nM,,everolimus,False,CHEMBL1908360
+Chir-99021,GSK-3 inhibitor,Inhibits glycogen synthase kinase 3,100.0,1000.0,nM,,chir 99021,False,CHEMBL412142
+Metformin,AMPK activator,Activates AMPK pathway for metabolic regulation,1.0,5000.0,mM,,metformin,False,CHEMBL1431
+Thalidomide,immunomodulatory drug,Modulates immune response,1000.0,10000.0,µM,,thalidomide,False,CHEMBL426123
+Auranofin,gold compound,Inhibits thioredoxin reductase,50.0,500.0,nM,,auranofin,False,CHEMBL1366
+Quinacrine,antimalarial,Inhibits lysosomal function,1000.0,10000.0,µM,,quinacrine,False,CHEMBL2105615
+Phenformin,biguanide,Activates AMPK pathway,100.0,1000.0,nM,,phenformin,False,CHEMBL170988
+10-hydroxycamptothecin,topoisomerase I inhibitor,Inhibits topoisomerase I leading to DNA damage,1.0,10.0,nM,,10 hydroxycamptothecin,False,CHEMBL3353749
+Resveratrol,polyphenolic compound,Exhibits antioxidant effects and modulates signaling pathways,10000.0,100000.0,µM,,resveratrol,False,CHEMBL165

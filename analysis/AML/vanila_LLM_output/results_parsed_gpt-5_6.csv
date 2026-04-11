@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Sorafenib,Multi-kinase inhibitor,Inhibits FLT3-ITD and other kinases to block AML cell proliferation,0.0,0.0,nM,Published activity in FLT3-ITD AML lines including MOLM-13/MV4-11; consult cited studies for specific IC50 values and dose ranges
+Ponatinib,Pan-tyrosine kinase inhibitor,Potent inhibition of FLT3-ITD and other TKs leading to growth inhibition in AML lines,0.0,0.0,nM,Active in FLT3-ITD AML models; consult references for exact assay concentrations
+Sunitinib,Multi-kinase inhibitor,Inhibits FLT3 signaling and reduces proliferation in FLT3-activated AML cells,0.0,0.0,nM,Evidence in FLT3-driven AML lines; specific concentration ranges not provided in text
+Dasatinib,SRC/ABL tyrosine kinase inhibitor,Targets SRC/ABL family kinases with off-target FLT3 inhibition affecting AML subsets,0.0,0.0,nM,Activity reported in subsets including FLT3-ITD models
+Pimozide,Antipsychotic,Inhibits STAT5 signaling leading to viability loss in FLT3-ITD AML cells,0.0,0.0,nM,Tested in MOLM/MV4-11-style FLT3-ITD AML contexts
+Tigecycline,Antibiotic,Mitochondrial translation inhibitor impairing leukemia cell metabolism,0.0,0.0,nM,Selective effects on leukemia cells including stem cells; AML lines sensitive
+Ciclopirox,Antifungal,Iron chelation and inhibition of eIF5A hypusination leading to antileukemic effects,0.0,0.0,nM,Broad in vitro and in vivo antileukemic activity
+Auranofin,Anti-rheumatic agent,Inhibits thioredoxin reductase causing oxidative stress–mediated apoptosis,0.0,0.0,nM,Active in AML cell lines and primary blasts
+Disulfiram,Alcohol aversion agent,ALDH and NPL4 pathway inhibition (enhanced with copper) causing cytotoxicity,0.0,0.0,nM,AML lines sensitive under Cu-supplemented conditions
+Thioridazine,Antipsychotic,DRD2 antagonism with selective activity against leukemia stem/progenitor cells,0.0,0.0,nM,Affects AML blasts/lines and LSC populations
+Simvastatin,Statin (HMG-CoA reductase inhibitor),"Blocks HMG‑CoA reductase, inducing apoptosis and sensitizing AML cells",0.0,0.0,nM,Activity reported across AML lines
+Vorinostat,HDAC inhibitor,Histone deacetylase inhibition reduces viability and promotes apoptosis/differentiation,0.0,0.0,nM,Also known as SAHA; approved for CTCL; synergy with other agents noted in AML models
+Panobinostat,HDAC inhibitor,Potent pan-HDAC inhibition yielding strong antileukemic activity,0.0,0.0,nM,Approved for multiple myeloma; active in FLT3-ITD AML models
+Selinexor,XPO1 inhibitor,"Blocks nuclear export (XPO1), leading to growth inhibition and apoptosis in AML cells",0.0,0.0,nM,Also known as KPT-330; approved in MM/DLBCL; activity in FLT3-ITD AML lines
+Leflunomide,Immunomodulator; DHODH inhibitor,Inhibits DHODH to drive AML differentiation and growth arrest,0.0,0.0,nM,Active metabolite teriflunomide; DHODH validated as AML target
+Atovaquone,Antimalarial,Inhibits mitochondrial ETC complex III and OXPHOS to suppress AML proliferation,0.0,0.0,nM,Activity in AML lines and primary samples
+Nelfinavir,HIV protease inhibitor,Induces ER stress/UPR leading to cytotoxicity; enhances effects of proteasome inhibition,0.0,0.0,nM,AML line activity reported
+Vismodegib,Hedgehog pathway inhibitor,Blocks Hedgehog signaling implicated in AML stem/progenitor maintenance,0.0,0.0,nM,Approved for basal cell carcinoma; suppresses growth in AML models
+Trametinib,MEK inhibitor,Inhibits MEK in the RAS/MAPK pathway to suppress proliferation; synergy with FLT3 inhibitors,0.0,0.0,nM,Approved for melanoma; activity in RAS/MAPK-driven AML
+Niclosamide,Anthelmintic,Inhibits Wnt/STAT3 signaling and acts as a mitochondrial uncoupler to reduce AML cell viability,0.0,0.0,nM,Broad anticancer activity including AML lines

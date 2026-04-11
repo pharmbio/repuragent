@@ -1,0 +1,17 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Metformin,Biguanide,Activates AMP-activated protein kinase,0.1,10.0,mM,"Commonly used in diabetes, with reported anti-cancer properties",metformin,False,CHEMBL1431
+Arsenic Trioxide,Chemotherapeutic Agent,Induces apoptosis through ROS generation,0.01,10.0,μM,Used in acute promyelocytic leukemia,arsenic trioxide,False,CHEMBL5483015
+Auranofin,Gold Compound,Inhibits thioredoxin reductase,0.01,10.0,μM,An anti-rheumatic drug reported to have anti-leukemic activity,auranofin,False,CHEMBL1366
+Dasatinib,Tyrosine Kinase Inhibitor,Inhibits multiple tyrosine kinases including BCR-ABL,0.01,10.0,μM,Also used for CML,dasatinib,False,CHEMBL1421
+Nivolumab,Immune Checkpoint Inhibitor,Inhibits PD-1 to enhance immune response,0.0,0.0,nM,"Not typically used in IC50 assays, as it is an antibody",nivolumab,False,CHEMBL2108738
+Ruxolitinib,JAK1/2 Inhibitor,"Inhibits Janus kinases, reducing cytokine signaling",0.01,10.0,μM,Used in myelofibrosis and polycythemia vera,ruxolitinib,False,CHEMBL1287854
+Ibrutinib,BTK Inhibitor,Inhibits Bruton's tyrosine kinase,1.0,10000.0,nM,Used primarily in chronic lymphocytic leukemia (CLL),ibrutinib,False,CHEMBL1873475
+Simvastatin,Statin,Inhibits HMG-CoA reductase,0.1,10.0,μM,Used for cholesterol regulation with potential anti-cancer effects,simvastatin,False,CHEMBL1201391
+Disulfiram,Aldehyde Dehydrogenase Inhibitor,"Inhibits aldehyde dehydrogenase, possibly affecting cancer stem cells",0.01,10.0,μM,"Known for treating chronic alcoholism, repurposed for various cancers",disulfiram,False,CHEMBL964
+Chloroquine,Antimalarial,Inhibits autophagy,0.1,100.0,μM,Anti-malarial drug with potential anti-cancer properties,chloroquine,False,CHEMBL76
+Bedaquiline,ATP Synthase Inhibitor,"Disrupts ATP synthesis, leading to cell death",0.001,10.0,μM,"Used in multidrug-resistant tuberculosis, with emerging anti-cancer evidence",bedaquiline,False,CHEMBL2105700
+Baricitinib,JAK Inhibitor,"Inhibits Janus kinases, impacting cytokine-driven diseases",0.01,10.0,μM,"Used in rheumatoid arthritis, with potential in leukemia",baricitinib,False,CHEMBL2105759
+Everolimus,mTOR Inhibitor,"Inhibits mTOR, blocking cell growth and proliferation",0.1,10000.0,nM,Used in renal cell carcinoma and other cancers,everolimus,False,CHEMBL1908360
+Itraconazole,Antifungal,Inhibits angiogenesis and Hedgehog pathway,0.1,10.0,μM,Antifungal with anti-cancer properties,itraconazole,False,CHEMBL5483033
+Thalidomide,Immunomodulatory Drug,Modulates immune response and inhibits angiogenesis,0.1,10.0,μM,Used in multiple myeloma with potential in other hematologic malignancies,thalidomide,False,CHEMBL426123
+Plerixafor,CXCR4 Antagonist,Mobilizes hematopoietic stem cells and disrupts chemokine signaling,0.01,10.0,μM,"Used for mobilizing stem cells, with potential in AML treatment",plerixafor,False,CHEMBL5402188

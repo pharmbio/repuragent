@@ -1,0 +1,15 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,Tyrosine kinase inhibitor,Inhibits BCR-ABL and other kinases.,1.0,10000.0,nM,Initially used for chronic myeloid leukemia.,dasatinib,False,CHEMBL1421
+Ibrutinib,Bruton's tyrosine kinase inhibitor,"Inhibits BTK, affecting B-cell receptor signaling.",10.0,2000.0,nM,Approved for B-cell malignancies.,ibrutinib,False,CHEMBL1873475
+Ruxolitinib,JAK1/JAK2 inhibitor,"Inhibits JAK1 and JAK2, modulating cytokine signaling.",100.0,10000.0,nM,Approved for myelofibrosis and polycythemia vera.,ruxolitinib,False,CHEMBL1287854
+Bortezomib,Proteasome inhibitor,Disrupts protein degradation and induces apoptosis.,1.0,100.0,nM,Approved for multiple myeloma.,bortezomib,False,CHEMBL325041
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis and partially affects cell cycle.,0.1,2.0,µM,Primarily used in acute promyelocytic leukemia (APL).,arsenic trioxide,False,CHEMBL5483015
+Metformin,Antidiabetic agent,"Activates AMPK pathway, affecting cell proliferation.",1.0,5.0,mM,Shows anti-leukemic effects.,metformin,False,CHEMBL1431
+Valproic Acid,HDAC inhibitor,"Inhibits histone deacetylases, altering gene expression.",0.5,5.0,mM,Potential differentiation-inducing effects.,valproic acid,False,CHEMBL109
+Thalidomide,Immunomodulatory agent,Modulates cytokine release and immune response.,1.0,10.0,µM,Used for multiple myeloma.,thalidomide,False,CHEMBL426123
+Aprepitant,NK-1 receptor antagonist,"Inhibits the neurokinin 1 (NK-1) receptor, affecting cell proliferation.",1.0,10.0,µM,Originally an antiemetic agent.,aprepitant,False,CHEMBL4303169
+Mosunetuzumab,Bispecific antibody,"Targets CD20 and CD3, engaging T cells to kill AML cells.",0.1,1.0,nM,Used in cell-based assays.,mosunetuzumab,False,CHEMBL4297788
+Nicotinamide,Vitamin B derivative,Induces differentiation of leukemia cells.,1.0,10.0,mM,Form of vitamin B3.,nicotinamide,False,CHEMBL1140
+Disulfiram,Aldehyde dehydrogenase inhibitor,"Inhibits aldehyde dehydrogenase, affecting cancer cell metabolism.",0.5,5.0,µM,Original use as alcohol aversion therapy.,disulfiram,False,CHEMBL964
+Clarithromycin,Macrolide antibiotic,Modulates autophagy pathways.,10.0,100.0,µM,Typically used as an antibiotic.,clarithromycin,False,CHEMBL3937847
+Simvastatin,HMG-CoA reductase inhibitor,"Disrupts cholesterol biosynthesis, affecting cancer cell survival.",1.0,10.0,µM,Commonly used as a cholesterol-lowering agent.,simvastatin,False,CHEMBL1201391

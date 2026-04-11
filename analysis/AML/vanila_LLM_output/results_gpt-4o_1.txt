@@ -1,0 +1,38 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for the treatment of acute myeloid leukemia (AML) is a strategy that can expedite the availability of new therapies by leveraging known pharmacological profiles. Below is a list of 20 existing drugs that have been reported in various studies for potential repurposing against AML, particularly targeting cell lines like MOLM13. I've also provided estimated concentrations that could be tested in IC50 assays based on literature, existing data, or preclinical studies, but these should be experimentally verified.
+
+1. **Arsenic trioxide (ATO)**: Test around 0.1-2 µM.
+2. **Vorinostat (SAHA)**: Test around 0.5-5 µM.
+3. **Imatinib**: Test around 0.1-1 µM.
+4. **Dasatinib**: Test around 0.5-5 nM.
+5. **Ruxolitinib**: Test around 1-10 µM.
+6. **Sunitinib**: Test around 0.1-1 µM.
+7. **Bortezomib**: Test around 1-10 nM.
+8. **Venetoclax**: Test around 0.1-1 µM.
+9. **Sorafenib**: Test around 0.1-10 µM.
+10. **Metformin**: Test around 1-20 mM.
+11. **Statins (e.g., Simvastatin, Lovastatin)**: Test around 0.1-10 µM.
+12. **Chloroquine**: Test around 1-10 µM.
+13. **Auranofin**: Test around 0.5-2 µM.
+14. **Itraconazole**: Test around 1-5 µM.
+15. **Ritonavir**: Test around 1-10 µM.
+16. **Quinacrine**: Test around 0.5-5 µM.
+17. **Niclosamide**: Test around 0.5-5 µM.
+18. **Decitabine**: Test around 0.1-1 µM.
+19. **Sirolimus (Rapamycin)**: Test around 1-100 nM.
+20. **Hydroxychloroquine**: Test around 5-20 µM.
+
+These drugs fall into various categories such as tyrosine kinase inhibitors, proteasome inhibitors, epigenetic modulators, and metabolic disruptors, which have shown potential in impacting the viability of AML cell lines. Each concentration range is a starting point for assays, considering the variability of conditions and cellular contexts across different studies. 
+
+Please note that while these concentrations are a good starting point, pharmacodynamic and pharmacokinetic parameters need to be considered, and any experimental protocols should be validated and conducted in controlled laboratory settings. Always ensure compliance with all relevant safety guidelines and regulations.

@@ -1,0 +1,95 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs can be an efficient strategy in drug development, particularly for treating complex diseases like acute myeloid leukemia (AML). Here’s a list of drugs that have shown potential in various studies for repurposing in AML treatment, including their approximate IC50 concentrations where available. However, it is important to conduct further experimentation to validate their efficacy in specific cell lines such as MOLM13.
+
+1. **Venetoclax**  
+   Target: BCL-2  
+   IC50: ~30-100 nM
+
+2. **Sorafenib**  
+   Target: RAF kinase, VEGFR  
+   IC50: ~2 μM
+
+3. **Ruxolitinib**  
+   Target: JAK1/2  
+   IC50: ~200-450 nM
+
+4. **Idelalisib**  
+   Target: PI3K delta  
+   IC50: ~15 nM
+
+5. **Dasatinib**  
+   Target: BCR-ABL, SRC family kinases  
+   IC50: ~2-5 nM
+
+6. **Ibrutinib**  
+   Target: BTK  
+   IC50: ~10-100 nM
+
+7. **Tofacitinib**  
+   Target: JAK1/3  
+   IC50: ~5-100 nM
+
+8. **Clofarabine**  
+   Target: DNA synthesis  
+   IC50: ~50-500 nM
+
+9. **Dactinomycin**  
+   Target: DNA/RNA synthesis  
+   IC50: ~1-10 nM
+
+10. **Auranofin**  
+    Target: Thioredoxin reductase  
+    IC50: ~1-2 μM
+
+11. **Bortezomib**  
+    Target: Proteasome  
+    IC50: ~7-10 nM
+
+12. **Selinexor**  
+    Target: XPO1/CRM1  
+    IC50: ~100 nM
+
+13. **Hydroxyurea**  
+    Target: Ribonucleotide reductase  
+    IC50: ~20-200 μM
+
+14. **Disulfiram**  
+    Target: ALDH  
+    IC50: ~500 nM - 1 μM
+
+15. **Metformin**  
+    Target: AMP kinase  
+    IC50: ~5-10 mM
+
+16. **Doxycycline**  
+    Target: Mitochondrial processes  
+    IC50: ~50 μM
+
+17. **Simvastatin**  
+    Target: HMG-CoA reductase  
+    IC50: ~0.1-10 μM
+
+18. **Quinacrine**  
+    Target: NF-kB pathway  
+    IC50: ~2-5 μM
+
+19. **Arsenic Trioxide**  
+    Target: PML-RARA, apoptosis pathways  
+    IC50: ~0.5-2 μM
+
+20. **Chloroquine**  
+    Target: Autophagy pathways  
+    IC50: ~8-15 μM
+
+When considering these drugs for repurposing, it's critical to perform comprehensive in vitro and in vivo studies to confirm their efficacy and safety profiles in AML, and specifically in MOLM13 cells. It’s also vital to consider potential combination therapies, as the efficacy of some of these agents might be synergistically increased when used together.

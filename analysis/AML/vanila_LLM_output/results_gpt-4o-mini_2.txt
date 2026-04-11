@@ -1,0 +1,80 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new indications, such as acute myeloid leukemia (AML), is an exciting area of research. While I can suggest potential candidates based on existing literature and mechanisms of action, I must clarify that concentration ranges for IC50 assays should be empirically determined in the laboratory, as they may vary based on factors such as specific cell lines, treatment duration, and assay conditions. Below is a list of potential drugs that have been investigated for their anti-cancer activity and could be tested against AML cell lines like MOLM13:
+
+1. **Dasatinib** (BCR-ABL inhibitor)
+   - Concentration range: 10 nM - 1 µM
+
+2. **Imatinib** (BCR-ABL inhibitor)
+   - Concentration range: 1 µM - 10 µM
+
+3. **Navitoclax** (BCL-2 family inhibitor)
+   - Concentration range: 10 nM - 1 µM
+
+4. **Venetoclax** (BCL-2 inhibitor)
+   - Concentration range: 10 nM - 1 µM
+
+5. **Sorafenib** (RAF kinase inhibitor)
+   - Concentration range: 1 µM - 10 µM
+
+6. **Pazopanib** (VEGFR, PDGFR, c-KIT inhibitor)
+   - Concentration range: 1 µM - 10 µM
+
+7. **Selinexor** (XPO1 inhibitor)
+   - Concentration range: 10 nM - 100 nM
+
+8. **Everolimus** (mTOR inhibitor)
+   - Concentration range: 1 nM - 1 µM
+
+9. **Chir-99021** (GSK-3 inhibitor)
+   - Concentration range: 100 nM - 1 µM
+
+10. **Metformin** (AMPK activator)
+    - Concentration range: 1 mM - 5 mM
+
+11. **Thalidomide** (immunomodulatory drug)
+    - Concentration range: 1 µM - 10 µM
+
+12. **Lenalidomide** (immunomodulatory drug)
+    - Concentration range: 100 nM - 1 µM
+
+13. **Dexamethasone** (glucocorticoid)
+    - Concentration range: 1 µM - 10 µM
+
+14. **Etoposide** (DNA topoisomerase II inhibitor)
+    - Concentration range: 10 µM - 50 µM
+
+15. **Clofarabine** (nucleoside analog)
+    - Concentration range: 10 nM - 1 µM
+
+16. **Auranofin** (gold compound)
+    - Concentration range: 50 nM - 500 nM
+
+17. **Quinacrine** (antimalarial)
+    - Concentration range: 1 µM - 10 µM
+
+18. **Phenformin** (biguanide)
+    - Concentration range: 100 nM - 1 µM
+
+19. **10-hydroxycamptothecin** (topoisomerase I inhibitor)
+    - Concentration range: 1 nM - 10 nM
+
+20. **Resveratrol** (polyphenolic compound)
+    - Concentration range: 10 µM - 100 µM
+
+### Important Considerations
+- **Validation:** It is essential to validate these concentrations empirically as they might not represent the actual IC50 in AML cell lines.
+- **Ethics and Regulation:** Testing these drugs for new indications should comply with regulatory and ethical standards.
+- **Mechanistic Studies:** Further studies should be performed to understand the mechanism of action for each repurposed drug in the context of AML. 
+
+Conducting a preliminary screening of these drugs, followed by dose-response studies, will be fundamental steps in evaluating their potential for AML treatment.

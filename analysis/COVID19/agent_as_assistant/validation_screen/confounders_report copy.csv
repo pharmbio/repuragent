@@ -1,0 +1,14 @@
+level,issue,details,chembl_id
+dataset,validation_missing_plate_id,validation file has no plate/batch column; normalization done globally; DMSO n=1,
+dataset,validation_single_rep_per_concentration,Most compound-concentration pairs have n=1; reproducibility metrics limited,
+dataset,pl_no_explicit_dmso_controls,PL file lacks DMSO wells; baseline set to per-batch median; robust z relative to that baseline,
+compound,missing_chembl_mapping,compound annotations missing,UNKNOWN_CATHEPSIN_INHIB_1
+compound,morphology_rescue_without_infection_reduction,"best_morph=0.61, best_infect=83.0",CHEMBL4065616
+compound,morphology_rescue_without_infection_reduction,"best_morph=0.53, best_infect=81.0",CHEMBL1256415
+compound,morphology_rescue_without_infection_reduction,"best_morph=0.55, best_infect=85.0",CHEMBL1254945
+compound,morphology_rescue_without_infection_reduction,"best_morph=0.55, best_infect=81.0",CHEMBL941
+compound,morphology_rescue_without_infection_reduction,"best_morph=0.51, best_infect=83.0",CHEMBL450786
+compound,morphology_rescue_without_infection_reduction,"best_morph=0.6, best_infect=85.0",CHEMBL2436978
+compound,morphology_rescue_without_infection_reduction,"best_morph=0.57, best_infect=89.0",CHEMBL277535
+compound,morphology_rescue_without_infection_reduction,"best_morph=0.52, best_infect=81.0",CHEMBL4303620
+compound,morphology_rescue_without_infection_reduction,"best_morph=0.52, best_infect=85.0",CHEMBL465226

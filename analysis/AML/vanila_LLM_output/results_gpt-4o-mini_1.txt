@@ -1,0 +1,85 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Repurposing existing drugs for new therapeutic purposes, such as treating acute myeloid leukemia (AML), has become an increasingly important approach in cancer research. Below is a list of 20 existing drugs that have been investigated for potential use in AML treatment, specifically focusing on their ability to inhibit cell proliferation in AML cell lines, particularly MOLM13. 
+
+Given the diverse nature of these compounds, experimental concentrations for IC50 assays can vary based on specific experimental setups, but the following concentrations are generally considered for initial screening and should be validated in specific assays. 
+
+### Top 20 Existing Drugs for Repurposing in AML:
+
+1. **Azacitidine (Vidaza)**
+   - IC50: 0.5-2 µM
+
+2. **Decitabine (Dacogen)**
+   - IC50: 1-5 µM
+
+3. **Dexamethasone**
+   - IC50: 0.01-1 µM
+
+4. **Panobinostat (Farydak)**
+   - IC50: 1-10 nM
+
+5. **Bortezomib (Velcade)**
+   - IC50: 5-20 nM
+
+6. **Gabapentin**
+   - IC50: 5-50 µM
+
+7. **Valproic Acid**
+   - IC50: 0.5-5 mM
+
+8. **Sirolimus (Rapamycin)**
+   - IC50: 1-10 nM
+
+9. **Clofarabine**
+   - IC50: 0.01-0.1 µM
+
+10. **Methotrexate**
+    - IC50: 0.1-1 µM
+
+11. **Ruxolitinib (Jakafi)**
+    - IC50: 1-10 nM
+
+12. **Lomustine (CCNU)**
+    - IC50: 10-50 µM
+
+13. **Staurosporine**
+    - IC50: 0.1-1 µM
+
+14. **Sorafenib**
+    - IC50: 1-5 µM
+
+15. **Milciclib**
+    - IC50: 0.1-1 µM
+
+16. **Curcumin**
+    - IC50: 10-20 µM
+
+17. **Sunitinib**
+    - IC50: 1-5 µM
+
+18. **Topotecan**
+    - IC50: 1-10 µM
+
+19. **Nilotinib (Tasigna)**
+    - IC50: 0.1-1 µM
+
+20. **Etoposide**
+    - IC50: 0.5-10 µM
+
+### Notes on Assay Design:
+- **Testing Conditions:** The aforementioned concentrations are baseline suggestions and should be optimized based on specific assay conditions, such as the duration of exposure and cell density. 
+- **Validation Required:** Always conduct dose-response studies to accurately determine the IC50 for MOLM13 cells and other relevant AML cell lines.
+- **Mechanism of Action:** Understanding the mechanisms by which these drugs may inhibit AML cell proliferation is critical, as it can guide combination therapy approaches and improve overall efficacy.
+
+### Final Thoughts:
+This list is not exhaustive, and further studies are necessary to validate the effectiveness and safety of these drugs in the context of AML. Collaborations with oncologists, pharmacologists, and other specialists would provide better insights and prospective avenues for clinical trials in AML treatment.

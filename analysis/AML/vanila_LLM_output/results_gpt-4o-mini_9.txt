@@ -1,0 +1,82 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+Identifying existing drugs for repurposing in the treatment of acute myeloid leukemia (AML) involves considering compounds that may have mechanisms of action relevant to AML's pathobiology. Below is a list of potential drugs that have shown promise in cancer treatment and could be experimentally investigated for their effects on AML cell lines like MOLM-13. The suggested concentrations for IC50 assays are based on data from research studies and might need further experimentation for optimization.
+
+### Potential Repurposed Drugs for AML Treatment:
+
+1. **Azacitidine**
+   - **IC50 concentration**: 0.1 - 1 µM
+
+2. **Decitabine**
+   - **IC50 concentration**: 0.1 - 5 µM
+
+3. **Clofarabine**
+   - **IC50 concentration**: 0.01 - 0.1 µM
+
+4. **Venetoclax (ABT-199)**
+   - **IC50 concentration**: 0.01 - 1 µM
+
+5. **Dasatinib**
+   - **IC50 concentration**: 0.01 - 0.1 µM
+
+6. **Imatinib**
+   - **IC50 concentration**: 1 - 10 µM
+
+7. **Sorafenib**
+   - **IC50 concentration**: 0.5 - 5 µM
+
+8. **Sunitinib**
+   - **IC50 concentration**: 0.1 - 5 µM
+
+9. **Lenvatinib**
+   - **IC50 concentration**: 0.1 - 5 µM
+
+10. **Pomalidomide**
+    - **IC50 concentration**: 0.1 - 5 µM
+
+11. **Thalidomide**
+    - **IC50 concentration**: 1 - 10 µM
+
+12. **Lenalidomide**
+    - **IC50 concentration**: 0.1 - 5 µM
+
+13. **Topotecan**
+    - **IC50 concentration**: 0.01 - 0.1 µM
+
+14. **Dacarbazine**
+    - **IC50 concentration**: 10 - 100 µM
+
+15. **Carfilzomib**
+    - **IC50 concentration**: 0.1 - 1 µM
+
+16. **Bortezomib**
+    - **IC50 concentration**: 0.01 - 0.1 µM
+
+17. **Selinexor**
+    - **IC50 concentration**: 0.1 - 2 µM
+
+18. **Gemcitabine**
+    - **IC50 concentration**: 0.1 - 10 µM
+
+19. **Auranofin**
+    - **IC50 concentration**: 1 - 10 µM
+
+20. **Cisplatin**
+    - **IC50 concentration**: 1 - 10 µM
+
+### Notes:
+- Before experimentation, it is essential to validate that these drugs have low toxicity in normal hematopoietic cells.
+- The concentrations listed are approximations. Actual IC50 values need to be determined experimentally as they may vary significantly between different cell lines and experimental conditions.
+- Always carry out careful dose-response experiments and include control groups to assess drug effects accurately. 
+
+The potential for drug repurposing hinges on comprehensive in vitro studies to ascertain specific effects on viability, proliferation, and apoptosis in AML cell lines, especially MOLM-13.

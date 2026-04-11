@@ -1,0 +1,86 @@
+=== AML Drug Repurposing Suggestions ===
+
+Prompt:
+Suggest top 20 existing drugs that could be repurposed for acute myeloid leukemia (AML) treatment 
+and provide experimentally testable concentrations for an IC50 assay. 
+The drug should inhibit the proliferation of AML cell lines, particularly MOLM13.
+
+
+==================================================
+
+Results:
+
+I can suggest candidates and **experimentally testable starting concentration ranges** for an in‑vitro IC₅₀ assay in AML (including **MOLM‑13**), but I can’t responsibly provide **precise potency claims** (“this will inhibit MOLM‑13”) or imply these drugs are proven effective in AML without qualifying the evidence. What I *can* do is: (1) list **repurposing candidates with published AML/cancer mechanistic rationale and/or prior activity reports**, and (2) give **practical screening ranges** you can run immediately to generate MOLM‑13 dose–response curves.
+
+Below are **20 existing (approved or clinically used) drugs** commonly explored for AML/hematologic cancer repurposing, plus **testable concentration ranges** appropriate for first‑pass IC₅₀ fitting. Concentrations are **final well concentrations (µM)** for a standard 72‑hour viability assay (CellTiter‑Glo/Resazurin). Start with a **10‑point, 3‑fold** or **8‑point, 5‑fold** serial dilution spanning the suggested range.
+
+---
+
+## 20 repurposing candidates + IC₅₀ assay ranges (MOLM‑13‑appropriate starting windows)
+
+| Drug (existing use) | Primary rationale/target relevant to AML | Suggested IC₅₀ assay range (µM) |
+|---|---|---|
+| **1. Venetoclax** (BCL‑2 inhibitor; CLL/AML combo use) | Mitochondrial apoptosis priming in AML | **0.001–1** |
+| **2. Midostaurin** (FLT3/multikinase; FLT3+ AML) | MOLM‑13 is FLT3‑ITD driven; FLT3 pathway dependence | **0.001–1** |
+| **3. Gilteritinib** (FLT3/AXL; FLT3+ AML) | Potent FLT3 inhibition | **0.001–1** |
+| **4. Sorafenib** (multikinase) | FLT3/Raf pathway effects in FLT3‑ITD AML | **0.01–10** |
+| **5. Ponatinib** (BCR‑ABL/FLT3) | Broad kinase inhibition incl. FLT3; explored in AML | **0.001–1** |
+| **6. Dasatinib** (SRC/ABL) | SRC-family signaling implicated in AML survival | **0.01–10** |
+| **7. Ruxolitinib** (JAK1/2; myelofibrosis) | JAK/STAT signaling in subsets; combinations | **0.05–20** |
+| **8. Trametinib** (MEK1/2) | RAS/MAPK axis; can suppress proliferation in AML contexts | **0.001–1** |
+| **9. Everolimus** (mTORC1) | PI3K/AKT/mTOR pathway in AML | **0.01–10** |
+| **10. Idelalisib** (PI3Kδ) | PI3K signaling in hematologic malignancies | **0.05–20** |
+| **11. Bortezomib** (proteasome inhibitor) | Proteostasis stress; synergy reported with chemo in AML | **0.001–0.5** |
+| **12. Panobinostat** (HDAC inhibitor) | Epigenetic dysregulation in AML | **0.001–1** |
+| **13. Vorinostat (SAHA)** (HDAC inhibitor) | Differentiation/apoptosis programs | **0.05–20** |
+| **14. Valproic acid** (HDAC activity at high conc.) | Differentiation/epigenetic modulation (weak potency) | **100–3000** |
+| **15. Decitabine** (DNA hypomethylating agent; AML/MDS) | Epigenetic reprogramming; time‑dependent effects | **0.001–10** |
+| **16. Azacitidine** (hypomethylating agent; AML/MDS) | Similar class; schedule sensitive | **0.01–30** |
+| **17. Hydroxychloroquine** (autophagy/lysosomal) | Autophagy dependence; combo rationale | **1–100** |
+| **18. Disulfiram** (ALDH/ROS; alcoholism) | ALDH/oxidative stress vulnerabilities in AML (often with Cu²⁺) | **0.05–20** *(± copper: 0.1–1 µM CuCl₂)* |
+| **19. Metformin** (complex I; diabetes) | Energetic stress; can impair AML metabolism in vitro | **100–10,000** |
+| **20. Niclosamide** (antihelminthic) | WNT/STAT3/mitochondrial uncoupling reported in cancer | **0.05–20** |
+
+---
+
+## Notes to make these ranges actually “IC₅₀-testable” in MOLM‑13
+
+**Assay timing**
+- Many targeted inhibitors show clearer separation at **72 h** in MOLM‑13.
+- Hypomethylating agents (azacitidine/decitabine) may require **96–120 h** or repeated dosing for maximal effect; still usable at 72 h but expect flatter curves.
+
+**Solubility / vehicle constraints**
+- Keep **DMSO ≤0.1%** (ideally ≤0.05%) across the plate.
+- **Niclosamide** and some HDAC inhibitors can precipitate—confirm visually and/or via nephelometry.
+
+**Practical plate design**
+- Use a **top concentration** that’s high enough to reach a plateau but not so high it creates nonspecific toxicity:
+  - For “strong” kinase/HDAC/proteasome inhibitors: top at **0.5–10 µM** is usually plenty.
+  - For weak metabolic drugs (metformin, valproate): you need **mM** windows.
+
+**Controls**
+- Positive kill control: e.g., **staurosporine (0.01–1 µM)** or **doxorubicin (0.001–1 µM)**.
+- Include **cell-free wells** for background subtraction.
+
+---
+
+## Suggested ready-to-run dilution schemes (examples)
+
+1) **Potent targeted set (most kinase/HDAC/proteasome)**
+- 10 points, 3‑fold: **1 µM → 0.00005 µM** (1, 0.333, 0.111 …)
+- If you expect weaker: shift to **10 µM → 0.0005 µM**
+
+2) **Metabolic/lysosomal weak set**
+- 10 points, 3‑fold: **10,000 µM → 0.5 µM** (metformin)
+- 10 points, 3‑fold: **3,000 µM → 0.15 µM** (valproate)
+
+---
+
+## If you want, I can tailor this to your exact experiment
+If you tell me:
+- **assay duration** (48/72/96 h),
+- **readout** (CTG vs annexin/PI vs cell count),
+- **media** (RPMI + %FBS, ± cytokines),
+- **compound handling constraints** (max DMSO, stock concentration, plate format),
+
+…I can output a **single consolidated plate map** (drug-by-column), with **exact serial dilutions** and recommended **top doses** per compound for MOLM‑13.

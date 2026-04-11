@@ -1,0 +1,2 @@
+n_master_unfiltered,n_master_filtered_novel,n_known_drugs_kg,missing_smiles_unfiltered,missing_smiles_filtered,missing_drug_name_unfiltered,n_in_protein_list,n_in_pathway_list,n_in_moa_list,n_in_all_three
+854,781,80,153,144,0,734,738,282,167

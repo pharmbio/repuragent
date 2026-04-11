@@ -1,0 +1,16 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis through the generation of reactive oxygen species,1.0,2.0,µM,,arsenic trioxide,False,CHEMBL5483015
+Vitamin C,Vitamin/ Antioxidant,Works as a pro-oxidant in pharmacological doses to induce cell death,100.0,500.0,µM,,vitamin c,False,CHEMBL196
+Auranofin,Gold salt,Inhibits thioredoxin reductase leading to oxidative stress,0.5,5.0,µM,,auranofin,False,CHEMBL1366
+Disulfiram,Aldehyde dehydrogenase inhibitor,Induces apoptosis through oxidative stress and proteasome inhibition,0.5,5.0,µM,,disulfiram,False,CHEMBL964
+Chloroquine,Antimalarial/Autophagy inhibitor,Inhibits autophagosome formation leading to cell death,5.0,15.0,µM,,chloroquine,False,CHEMBL76
+Metformin,Biguanide/Antihyperglycemic agent,"Reduces mitochondrial ATP production, affecting cell growth",1.0,10.0,mM,,metformin,False,CHEMBL1431
+Simvastatin,HMG-CoA reductase inhibitor,Inhibits cholesterol biosynthesis pathway,1.0,5.0,µM,,simvastatin,False,CHEMBL1201391
+Ibrutinib,Bruton tyrosine kinase (BTK) inhibitor,Blocks B-cell receptor signaling,1.0,5.0,µM,,ibrutinib,False,CHEMBL1873475
+Sunitinib,TKI (Tyrosine Kinase Inhibitor),Inhibits multiple receptor tyrosine kinases,0.1,1.0,µM,,sunitinib,False,CHEMBL597365
+Zileuton,5-Lipoxygenase inhibitor,Blocks leukotriene biosynthesis,5.0,20.0,µM,,zileuton,False,CHEMBL93
+Nifuroxazide,Nitrofuran antibacterial,Inhibits STAT3 signaling pathway,5.0,15.0,µM,,nifuroxazide,False,CHEMBL244888
+Niclosamide,Anthelmintic,Inhibits mTORC1 pathway and activates apoptosis,0.1,1.0,µM,,niclosamide,False,CHEMBL1448
+Thioridazine,Antipsychotic,Inhibits dopamine receptor and induces cancer cell death,1.0,10.0,µM,,thioridazine,False,CHEMBL1200916
+Ruxolitinib,Janus kinase (JAK) inhibitor,Inhibits JAK1 and JAK2 pathways,0.1,1.0,µM,,ruxolitinib,False,CHEMBL1287854
+Bendamustine,Alkylating agent,Inhibits DNA replication and induces cell death,1.0,10.0,µM,,bendamustine,False,CHEMBL487253

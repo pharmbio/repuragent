@@ -1,0 +1,14 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Dasatinib,BCR-ABL tyrosine kinase inhibitor,"Targets the BCR-ABL oncoprotein, inhibiting its tyrosine kinase activity",0.1,5.0,µM,Used in CML,dasatinib,False,CHEMBL1421
+Ruxolitinib,JAK1/2 inhibitor,"Blocks the JAK1/2 pathway, reducing cytokine receptor signaling",0.1,10.0,µM,Used in myelofibrosis,ruxolitinib,False,CHEMBL1287854
+Idelalisib,PI3Kδ inhibitor,"Inhibits the PI3Kδ, disrupting growth signals in malignant B cells",0.01,10.0,µM,Used in CLL and follicular lymphoma,idelalisib,False,CHEMBL4095008
+Ibrutinib,Bruton's Tyrosine Kinase (BTK) inhibitor,"Blocks BTK, impairing B-cell receptor signaling",0.01,10.0,µM,Used in CLL,ibrutinib,False,CHEMBL1873475
+Olaparib,PARP inhibitor,"Inhibits PARP enzymes, preventing DNA repair in cancer cells",0.1,10.0,µM,Used in ovarian cancer,olaparib,False,CHEMBL521686
+Bortezomib,Proteasome inhibitor,"Disrupts protein degradation, leading to cancer cell apoptosis",0.01,10.0,µM,Used in multiple myeloma,bortezomib,False,CHEMBL325041
+Palbociclib,CDK4/6 inhibitor,"Inhibits cyclin-dependent kinases, interrupting cell cycle progression",0.01,10.0,µM,Used in breast cancer,palbociclib,False,CHEMBL2364621
+Celecoxib,COX-2 inhibitor,"Reduces prostaglandin synthesis, exhibiting anti-inflammatory effects",0.1,10.0,µM,Used in arthritis and as an anti-inflammatory,celecoxib,False,CHEMBL118
+Disulfiram,Aldehyde dehydrogenase inhibitor,"Inhibits ALDH, disrupting cancer cell metabolism",0.1,10.0,µM,"Used for alcohol dependence, potential anti-cancer properties",disulfiram,False,CHEMBL964
+Metformin,Anti-diabetic drug,"Activates AMPK, altering cellular energy balance and growth",0.1,10.0,mM,Investigated for anti-cancer properties,metformin,False,CHEMBL1431
+Arsenic Trioxide,Chemotherapeutic agent,Induces apoptosis through reactive oxygen species generation,0.1,10.0,µM,"Used in APL, broader anti-cancer properties investigated",arsenic trioxide,False,CHEMBL5483015
+Doxycycline,Tetracycline antibiotic,"Inhibits protein synthesis, potential impact on mitochondrial function",1.0,100.0,µM,Shown anti-cancer properties at high doses,doxycycline,False,CHEMBL1256723
+Statins,Cholesterol-lowering drugs,"Inhibits HMG-CoA reductase, impacting cholesterol synthesis and cell growth",0.1,10.0,µM,"Simvastatin example, investigated for anti-cancer properties",statins,False,CHEMBL286958

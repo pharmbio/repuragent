@@ -1,0 +1,697 @@
+phase,status,disease_id,disease_name,chembl_id,drug_name,gene_symbol,smiles
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,FLT3,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL3301603,GILTERITINIB FUMARATE,FLT3,CCc1nc(C(N)=O)c(Nc2ccc(N3CCC(N4CCN(C)CC4)CC3)c(OC)c2)nc1NC1CCOCC1.CCc1nc(C(N)=O)c(Nc2ccc(N3CCC(N4CCN(C)CC4)CC3)c(OC)c2)nc1NC1CCOCC1.O=C(O)/C=C/C(=O)O
+4.0,,EFO_0000616,neoplasm,CHEMBL3301622,GILTERITINIB,FLT3,CCc1nc(C(N)=O)c(Nc2ccc(N3CCC(N4CCN(C)CC4)CC3)c(OC)c2)nc1NC1CCOCC1
+4.0,,EFO_0000616,neoplasm,CHEMBL1287853,FEDRATINIB,FLT3,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1
+4.0,,EFO_0000616,neoplasm,CHEMBL2035187,PACRITINIB,FLT3,C1=N/C2=N/c3ccc(OCCN4CCCC4)c(c3)COC/C=C/COCc3cccc(c3)C(=C1)N2
+4.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL535,SUNITINIB,FLT3,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C
+4.0,,EFO_0000616,neoplasm,CHEMBL3813873,PEXIDARTINIB,FLT3,FC(F)(F)c1ccc(CNc2ccc(Cc3c[nH]c4ncc(Cl)cc34)cn2)cn1
+4.0,,EFO_0002430,primary myelofibrosis,CHEMBL4297216,FEDRATINIB HYDROCHLORIDE,FLT3,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1.Cl.Cl.O
+4.0,,EFO_0002430,primary myelofibrosis,CHEMBL5095049,PACRITINIB CITRATE,FLT3,C1=C/COCc2cc(ccc2OCCN2CCCC2)Nc2nccc(n2)-c2cccc(c2)COC/1.O=C(O)CC(O)(CC(=O)O)C(=O)O
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1200485,SORAFENIB TOSYLATE,FLT3,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1567,SUNITINIB MALATE,FLT3,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C.O=C(O)C[C@H](O)C(=O)O
+4.0,,EFO_1000562,Tenosynovial Giant Cell Tumor,CHEMBL3989973,PEXIDARTINIB HYDROCHLORIDE,FLT3,Cl.FC(F)(F)c1ccc(CNc2ccc(Cc3c[nH]c4ncc(Cl)cc34)cn2)cn1
+3.0,Completed,EFO_0000182,hepatocellular carcinoma,CHEMBL1336,SORAFENIB,FLT3,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1
+3.0,Terminated,EFO_0000182,hepatocellular carcinoma,CHEMBL223360,LINIFANIB,FLT3,Cc1ccc(F)c(NC(=O)Nc2ccc(-c3cccc4[nH]nc(N)c34)cc2)c1
+3.0,"Active, not recruiting",EFO_0000220,acute lymphoblastic leukemia,CHEMBL603469,LESTAURTINIB,FLT3,C[C@]12O[C@H](C[C@]1(O)CO)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)CNC4=O
+3.0,Recruiting,EFO_0000222,acute myeloid leukemia,CHEMBL3678958,RUSERONTINIB,FLT3,CC(C)n1c(Nc2cccnc2)nc2cnc(Nc3ccc(N4CCN(C)CC4)cc3)nc21
+3.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL576982,QUIZARTINIB,FLT3,CC(C)(C)c1cc(NC(=O)Nc2ccc(-c3cn4c(n3)sc3cc(OCCN5CCOCC5)ccc34)cc2)no1
+3.0,Recruiting,EFO_0000222,acute myeloid leukemia,CHEMBL2105728,CRENOLANIB,FLT3,CC1(COc2ccc3c(c2)ncn3-c2ccc3cccc(N4CCC(N)CC4)c3n2)COC1
+3.0,Completed,EFO_0000365,colorectal adenocarcinoma,CHEMBL1278146,FAMITINIB,FLT3,CCN(CC)CCN1CCc2[nH]c(/C=C3\C(=O)Nc4ccc(F)cc43)c(C)c2C1=O
+3.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL522892,DOVITINIB,FLT3,CN1CCN(c2ccc3nc(-c4c(N)c5c(F)cccc5[nH]c4=O)[nH]c3c2)CC1
+3.0,Unknown status,EFO_0000681,renal cell carcinoma,CHEMBL3545427,CM-082,FLT3,
+2.0,Completed,EFO_0000182,hepatocellular carcinoma,CHEMBL482968,ENMD-2076,FLT3,Cc1cc(Nc2cc(N3CCN(C)CC3)nc(/C=C/c3ccccc3)n2)n[nH]1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL5314391,XL-999,FLT3,CCN1CCC(Nc2ccc3c(c2)/C(=C(\c2cccc(F)c2)c2nc(C)c[nH]2)C(=O)N3)CC1
+2.0,Completed,EFO_0000349,clear cell renal carcinoma,CHEMBL124660,TANDUTINIB,FLT3,COc1cc2c(N3CCN(C(=O)Nc4ccc(OC(C)C)cc4)CC3)ncnc2cc1OCCCN1CCCCC1
+2.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL1230609,FORETINIB,FLT3,COc1cc2c(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3F)ccnc2cc1OCCCN1CCOCC1
+2.0,Completed,EFO_0000702,small cell lung carcinoma,CHEMBL2103851,AMUVATINIB,FLT3,S=C(NCc1ccc2c(c1)OCO2)N1CCN(c2ncnc3c2oc2ccccc23)CC1
+2.0,Terminated,EFO_0000756,melanoma,CHEMBL4650387,CDX-301,FLT3,
+2.0,Completed,EFO_0001378,multiple myeloma,CHEMBL495727,AT-9283,FLT3,O=C(Nc1c[nH]nc1-c1nc2ccc(CN3CCOCC3)cc2[nH]1)NC1CC1
+2.0,Terminated,EFO_0003060,non-small cell lung carcinoma,CHEMBL3984441,NINGETINIB,FLT3,Cc1c(C(=O)Nc2ccc(Oc3ccnc4cc(OCC(C)(C)O)ccc34)c(F)c2)c(=O)n(-c2ccccc2)n1C
+2.0,Completed,EFO_0003869,breast neoplasm,CHEMBL1721885,SU-014813,FLT3,Cc1[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c(C)c1C(=O)NC[C@H](O)CN1CCOCC1
+2.0,Completed,EFO_0002618,pancreatic carcinoma,CHEMBL52885,ENMD-981693,FLT3,Cn1cc(C2=C(c3cn(C)c4cc([N+](=O)[O-])ccc34)C(=O)NC2=O)c2ccccc21
+1.0,Withdrawn,EFO_0000182,hepatocellular carcinoma,CHEMBL1944698,ZOTIRACICLIB,FLT3,CN1C/C=C/CCOc2cccc(c2)-c2ccnc(n2)Nc2cccc(c2)C1
+1.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4650283,FF-10101,FLT3,CCCNc1nc(Nc2ccc(C#N)cc2)ncc1C#CCCCNC(=O)[C@H](C)N(C)C(=O)/C=C/CN(C)C
+1.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4650288,FLYSYN,FLT3,
+1.0,Withdrawn,EFO_0000222,acute myeloid leukemia,CHEMBL4650295,AMG553,FLT3,
+1.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL4790100,AKN-028,FLT3,Nc1ncc(-c2ccncc2)nc1Nc1ccc2[nH]ccc2c1
+1.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL5314406,4SC-203,FLT3,COc1ccc(C)cc1NC(=O)Nc1nc2ccc(Nc3ncnc4cc(OCCCN5CCN(C)CC5)c(OC)cc34)cc2s1
+1.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL1908397,KW-2449,FLT3,O=C(c1ccc(/C=C/c2n[nH]c3ccccc23)cc1)N1CCNCC1
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL1980391,RG-1530,FLT3,COc1cc2c(cc1F)C(c1ccccc1Cl)=Nc1c(n[nH]c1C)N2
+1.0,Terminated,MONDO_0004643,myeloid leukemia,CHEMBL2109328,IMC-EB10,FLT3,
+4.0,Unknown status,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1421,DASATINIB ANHYDROUS,KIT,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,KIT,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+4.0,Completed,EFO_0000339,chronic myelogenous leukemia,CHEMBL1642,IMATINIB MESYLATE,KIT,CS(=O)(=O)O.Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL1908391,MASITINIB,KIT,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1
+4.0,,EFO_0000616,neoplasm,CHEMBL1946170,REGORAFENIB,KIT,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL535,SUNITINIB,KIT,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C
+4.0,,EFO_0000691,sarcoma,CHEMBL1201733,PAZOPANIB HYDROCHLORIDE,KIT,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O.Cl
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1200485,SORAFENIB TOSYLATE,KIT,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1567,SUNITINIB MALATE,KIT,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C.O=C(O)C[C@H](O)C(=O)O
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL2105756,TIVOZANIB HYDROCHLORIDE,KIT,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC.Cl.O
+4.0,,EFO_0000616,neoplasm,CHEMBL3813873,PEXIDARTINIB,KIT,FC(F)(F)c1ccc(CNc2ccc(Cc3c[nH]c4ncc(Cl)cc34)cn2)cn1
+4.0,,EFO_0000616,neoplasm,CHEMBL4204794,AVAPRITINIB,KIT,Cn1cc(-c2cc3c(N4CCN(c5ncc([C@@](C)(N)c6ccc(F)cc6)cn5)CC4)ncnn3c2)cn1
+4.0,,EFO_0000616,neoplasm,CHEMBL4216467,RIPRETINIB,KIT,CCn1c(=O)c(-c2cc(NC(=O)Nc3ccccc3)c(F)cc2Br)cc2cnc(NC)cc21
+4.0,,EFO_1000562,Tenosynovial Giant Cell Tumor,CHEMBL3989973,PEXIDARTINIB HYDROCHLORIDE,KIT,Cl.FC(F)(F)c1ccc(CNc2ccc(Cc3c[nH]c4ncc(Cl)cc34)cn2)cn1
+3.0,"Active, not recruiting",EFO_0000182,hepatocellular carcinoma,CHEMBL1336,SORAFENIB,KIT,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1
+3.0,Recruiting,EFO_0000209,T-cell acute lymphoblastic leukemia,CHEMBL941,IMATINIB,KIT,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+3.0,Not yet recruiting,EFO_0000182,hepatocellular carcinoma,CHEMBL4303201,CATEQUENTINIB,KIT,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ccnc2cc1OCC1(N)CC1
+3.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL576982,QUIZARTINIB,KIT,CC(C)(C)c1cc(NC(=O)Nc2ccc(-c3cn4c(n3)sc3cc(OCCN5CCOCC5)ccc34)cc2)no1
+3.0,Completed,EFO_0000365,colorectal adenocarcinoma,CHEMBL1278146,FAMITINIB,KIT,CCN(CC)CCN1CCc2[nH]c(/C=C3\C(=O)Nc4ccc(F)cc43)c(C)c2C1=O
+3.0,Completed,EFO_0000519,glioblastoma multiforme,CHEMBL491473,CEDIRANIB,KIT,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ncnc2cc1OCCCN1CCCC1
+3.0,"Active, not recruiting",EFO_0000349,clear cell renal carcinoma,CHEMBL477772,PAZOPANIB,KIT,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O
+3.0,Unknown status,EFO_0000681,renal cell carcinoma,CHEMBL3545427,CM-082,KIT,
+3.0,,EFO_0000616,neoplasm,CHEMBL1289494,TIVOZANIB,KIT,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC
+3.0,Recruiting,EFO_0001361,pulmonary arterial hypertension,CHEMBL4650333,SERALUTINIB,KIT,COc1ccc(-c2cncc(N[C@@H](C)c3cccc(NC(=O)c4cncc(C)c4)c3)n2)cc1OC
+3.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL522892,DOVITINIB,KIT,CN1CCN(c2ccc3nc(-c4c(N)c5c(F)cccc5[nH]c4=O)[nH]c3c2)CC1
+3.0,Terminated,EFO_0003060,non-small cell lung carcinoma,CHEMBL572881,MOTESANIB,KIT,CC1(C)CNc2cc(NC(=O)c3cccnc3NCc3ccncc3)ccc21
+3.0,Completed,EFO_0004288,colonic neoplasm,CHEMBL101253,VATALANIB,KIT,Clc1ccc(Nc2nnc(Cc3ccncc3)c3ccccc23)cc1
+3.0,Completed,MONDO_0005575,colorectal cancer,CHEMBL276711,SEMAXANIB,KIT,Cc1cc(C)c(/C=C2\C(=O)Nc3ccccc32)[nH]1
+2.0,Completed,EFO_0000182,hepatocellular carcinoma,CHEMBL482968,ENMD-2076,KIT,Cc1cc(Nc2cc(N3CCN(C)CC3)nc(/C=C/c3ccccc3)n2)n[nH]1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL5314391,XL-999,KIT,CCN1CCC(Nc2ccc3c(c2)/C(=C(\c2cccc(F)c2)c2nc(C)c[nH]2)C(=O)N3)CC1
+2.0,Completed,EFO_0000349,clear cell renal carcinoma,CHEMBL124660,TANDUTINIB,KIT,COc1cc2c(N3CCN(C(=O)Nc4ccc(OC(C)C)cc4)CC3)ncnc2cc1OCCCN1CCCCC1
+2.0,Completed,EFO_0000616,neoplasm,CHEMBL1230609,FORETINIB,KIT,COc1cc2c(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3F)ccnc2cc1OCCCN1CCOCC1
+2.0,Completed,EFO_0000702,small cell lung carcinoma,CHEMBL2103851,AMUVATINIB,KIT,S=C(NCc1ccc2c(c1)OCO2)N1CCN(c2ncnc3c2oc2ccccc23)CC1
+2.0,Completed,EFO_0003869,breast neoplasm,CHEMBL1721885,SU-014813,KIT,Cc1[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c(C)c1C(=O)NC[C@H](O)CN1CCOCC1
+2.0,Completed,MONDO_0001056,gastric cancer,CHEMBL2079588,TELATINIB,KIT,CNC(=O)c1cc(COc2nnc(Nc3ccc(Cl)cc3)c3ccoc23)ccn1
+2.0,Completed,MONDO_0011719,gastrointestinal stromal tumor,CHEMBL3545402,XL-820,KIT,
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL1614710,OSI-930,KIT,O=C(Nc1ccc(OC(F)(F)F)cc1)c1sccc1NCc1ccnc2ccccc12
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1421,DASATINIB ANHYDROUS,PDGFRB,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PDGFRB,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+4.0,Completed,EFO_0000339,chronic myelogenous leukemia,CHEMBL1642,IMATINIB MESYLATE,PDGFRB,CS(=O)(=O)O.Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL1908391,MASITINIB,PDGFRB,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1
+4.0,Terminated,EFO_0000681,renal cell carcinoma,CHEMBL535,SUNITINIB,PDGFRB,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1201733,PAZOPANIB HYDROCHLORIDE,PDGFRB,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O.Cl
+4.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL1567,SUNITINIB MALATE,PDGFRB,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C.O=C(O)C[C@H](O)C(=O)O
+4.0,,EFO_0000717,systemic scleroderma,CHEMBL3039504,NINTEDANIB ESYLATE,PDGFRB,CCS(=O)(=O)O.COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1
+4.0,,EFO_0000616,neoplasm,CHEMBL1946170,REGORAFENIB,PDGFRB,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1200485,SORAFENIB TOSYLATE,PDGFRB,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL2105756,TIVOZANIB HYDROCHLORIDE,PDGFRB,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC.Cl.O
+4.0,,HP_0200042,Skin ulcer,CHEMBL1201556,BECAPLERMIN,PDGFRB,
+3.0,"Active, not recruiting",EFO_0000182,hepatocellular carcinoma,CHEMBL1336,SORAFENIB,PDGFRB,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1
+3.0,Terminated,EFO_0000182,hepatocellular carcinoma,CHEMBL223360,LINIFANIB,PDGFRB,Cc1ccc(F)c(NC(=O)Nc2ccc(-c3cccc4[nH]nc(N)c34)cc2)c1
+3.0,Not yet recruiting,EFO_0000182,hepatocellular carcinoma,CHEMBL4303201,CATEQUENTINIB,PDGFRB,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ccnc2cc1OCC1(N)CC1
+3.0,Terminated,EFO_0000182,hepatocellular carcinoma,CHEMBL274654,ORANTINIB,PDGFRB,Cc1[nH]c(/C=C2\C(=O)Nc3ccccc32)c(C)c1CCC(=O)O
+3.0,Recruiting,EFO_0000209,T-cell acute lymphoblastic leukemia,CHEMBL941,IMATINIB,PDGFRB,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+3.0,Recruiting,EFO_0000222,acute myeloid leukemia,CHEMBL2105728,CRENOLANIB,PDGFRB,CC1(COc2ccc3c(c2)ncn3-c2ccc3cccc(N4CCC(N)CC4)c3n2)COC1
+3.0,Withdrawn,EFO_0000222,acute myeloid leukemia,CHEMBL576982,QUIZARTINIB,PDGFRB,CC(C)(C)c1cc(NC(=O)Nc2ccc(-c3cn4c(n3)sc3cc(OCCN5CCOCC5)ccc34)cc2)no1
+3.0,"Active, not recruiting",EFO_0000349,clear cell renal carcinoma,CHEMBL477772,PAZOPANIB,PDGFRB,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O
+3.0,Completed,EFO_0000365,colorectal adenocarcinoma,CHEMBL1278146,FAMITINIB,PDGFRB,CCN(CC)CCN1CCc2[nH]c(/C=C3\C(=O)Nc4ccc(F)cc43)c(C)c2C1=O
+3.0,,EFO_0000616,neoplasm,CHEMBL491473,CEDIRANIB,PDGFRB,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ncnc2cc1OCCCN1CCCC1
+3.0,,EFO_0000616,neoplasm,CHEMBL502835,NINTEDANIB,PDGFRB,COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1
+3.0,Unknown status,EFO_0000681,renal cell carcinoma,CHEMBL3545427,CM-082,PDGFRB,
+3.0,,EFO_0000616,neoplasm,CHEMBL1289494,TIVOZANIB,PDGFRB,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC
+3.0,Recruiting,EFO_0001361,pulmonary arterial hypertension,CHEMBL4650333,SERALUTINIB,PDGFRB,COc1ccc(-c2cncc(N[C@@H](C)c3cccc(NC(=O)c4cncc(C)c4)c3)n2)cc1OC
+3.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL522892,DOVITINIB,PDGFRB,CN1CCN(c2ccc3nc(-c4c(N)c5c(F)cccc5[nH]c4=O)[nH]c3c2)CC1
+3.0,Terminated,EFO_0003060,non-small cell lung carcinoma,CHEMBL572881,MOTESANIB,PDGFRB,CC1(C)CNc2cc(NC(=O)c3cccnc3NCc3ccncc3)ccc21
+3.0,Completed,EFO_0004288,colonic neoplasm,CHEMBL101253,VATALANIB,PDGFRB,Clc1ccc(Nc2nnc(Cc3ccncc3)c3ccccc23)cc1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL5314391,XL-999,PDGFRB,CCN1CCC(Nc2ccc3c(c2)/C(=C(\c2cccc(F)c2)c2nc(C)c[nH]2)C(=O)N3)CC1
+2.0,Completed,EFO_0000349,clear cell renal carcinoma,CHEMBL124660,TANDUTINIB,PDGFRB,COc1cc2c(N3CCN(C(=O)Nc4ccc(OC(C)C)cc4)CC3)ncnc2cc1OCCCN1CCCCC1
+2.0,Completed,EFO_0000616,neoplasm,CHEMBL1230609,FORETINIB,PDGFRB,COc1cc2c(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3F)ccnc2cc1OCCCN1CCOCC1
+2.0,Terminated,EFO_0001365,age-related macular degeneration,CHEMBL3545316,RINUCUMAB,PDGFRB,
+2.0,Completed,EFO_0002618,pancreatic carcinoma,CHEMBL52885,ENMD-981693,PDGFRB,Cn1cc(C2=C(c3cn(C)c4cc([N+](=O)[O-])ccc34)C(=O)NC2=O)c2ccccc21
+2.0,Terminated,EFO_0003839,retinopathy,CHEMBL3545401,X-82,PDGFRB,
+2.0,Terminated,EFO_0009606,macular degeneration,CHEMBL403989,TG100-801,PDGFRB,Cc1cc(-c2cc(OC(=O)c3ccccc3)ccc2Cl)cc2nnc(Nc3ccc(OCCN4CCCC4)cc3)nc12
+2.0,Completed,EFO_0003869,breast neoplasm,CHEMBL1721885,SU-014813,PDGFRB,Cc1[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c(C)c1C(=O)NC[C@H](O)CN1CCOCC1
+2.0,Terminated,MONDO_0004992,cancer,CHEMBL1980297,ILORASERTIB,PDGFRB,Nc1ncc(-c2cnn(CCO)c2)c2scc(-c3ccc(NC(=O)Nc4cccc(F)c4)cc3)c12
+2.0,Completed,MONDO_0001056,gastric cancer,CHEMBL2079588,TELATINIB,PDGFRB,CNC(=O)c1cc(COc2nnc(Nc3ccc(Cl)cc3)c3ccoc23)ccn1
+2.0,Completed,MONDO_0011719,gastrointestinal stromal tumor,CHEMBL3545402,XL-820,PDGFRB,
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL2180604,TAK-593,PDGFRB,Cc1cc(C(=O)Nc2cc(Oc3ccc4nc(NC(=O)C5CC5)cn4n3)ccc2C)n(C)n1
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL3545155,JI-101,PDGFRB,COc1ccc(Br)cc1NC(=O)Nc1cccc2c1ccn2Cc1ccnc(N)c1
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL1980391,RG-1530,PDGFRB,COc1cc2c(cc1F)C(c1ccccc1Cl)=Nc1c(n[nH]c1C)N2
+4.0,,EFO_0000616,neoplasm,CHEMBL24828,VANDETANIB,RET,COc1cc2/c(=N/c3ccc(Br)cc3F)nc[nH]c2cc1OCC1CCN(C)CC1
+4.0,,EFO_0000616,neoplasm,CHEMBL1738797,ALECTINIB,RET,CCc1cc2c(cc1N1CCC(N3CCOCC3)CC1)C(C)(C)c1[nH]c3cc(C#N)ccc3c1C2=O
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL535,SUNITINIB,RET,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1200485,SORAFENIB TOSYLATE,RET,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1567,SUNITINIB MALATE,RET,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C.O=C(O)C[C@H](O)C(=O)O
+4.0,,EFO_0000616,neoplasm,CHEMBL1946170,REGORAFENIB,RET,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+4.0,,EFO_0000616,neoplasm,CHEMBL4559134,SELPERCATINIB,RET,COc1ccc(CN2C3CC2CN(c2ccc(-c4cc(OCC(C)(C)O)cn5ncc(C#N)c45)cn2)C3)cn1
+4.0,,EFO_0000616,neoplasm,CHEMBL4582651,PRALSETINIB,RET,CO[C@]1(C(=O)N[C@@H](C)c2ccc(-n3cc(F)cn3)nc2)CC[C@H](c2nc(C)cc(Nc3cc(C)[nH]n3)n2)CC1
+4.0,,EFO_0003060,non-small cell lung carcinoma,CHEMBL3707320,ALECTINIB HYDROCHLORIDE,RET,CCc1cc2c(cc1N1CCC(N3CCOCC3)CC1)C(C)(C)c1[nH]c3cc(C#N)ccc3c1C2=O.Cl
+3.0,"Active, not recruiting",EFO_0000182,hepatocellular carcinoma,CHEMBL1336,SORAFENIB,RET,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1
+3.0,"Active, not recruiting",EFO_0000220,acute lymphoblastic leukemia,CHEMBL603469,LESTAURTINIB,RET,C[C@]12O[C@H](C[C@]1(O)CO)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)CNC4=O
+3.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL576982,QUIZARTINIB,RET,CC(C)(C)c1cc(NC(=O)Nc2ccc(-c3cn4c(n3)sc3cc(OCCN5CCOCC5)ccc34)cc2)no1
+3.0,Terminated,EFO_0003060,non-small cell lung carcinoma,CHEMBL572881,MOTESANIB,RET,CC1(C)CNc2cc(NC(=O)c3cccnc3NCc3ccncc3)ccc21
+2.0,Completed,EFO_0000555,irritable bowel syndrome,CHEMBL4650296,BOS-589,RET,
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL2029988,CEP-32496,RET,COc1cc2ncnc(Oc3cccc(NC(=O)Nc4cc(C(C)(C)C(F)(F)F)on4)c3)c2cc1OC
+4.0,,EFO_0000224,acute promyelocytic leukemia,CHEMBL38,TRETINOIN,RARG,CC1=C(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)C(C)(C)CCC1
+4.0,,EFO_0000616,neoplasm,CHEMBL705,ALITRETINOIN,RARG,CC1=C(/C=C/C(C)=C\C=C\C(C)=C\C(=O)O)C(C)(C)CCC1
+4.0,"Active, not recruiting",EFO_0000676,psoriasis,CHEMBL1131,ACITRETIN,RARG,COc1cc(C)c(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)c(C)c1C
+4.0,Completed,EFO_0000676,psoriasis,CHEMBL1657,TAZAROTENE,RARG,CCOC(=O)c1ccc(C#Cc2ccc3c(c2)C(C)(C)CCS3)nc1
+4.0,,EFO_0000676,psoriasis,CHEMBL464,ETRETINATE,RARG,CCOC(=O)/C=C(C)/C=C/C=C(C)/C=C/c1c(C)cc(OC)c(C)c1C
+4.0,,EFO_0003894,acne,CHEMBL1265,ADAPALENE,RARG,COc1ccc(-c2ccc3cc(C(=O)O)ccc3c2)cc1C12CC3CC(CC(C3)C1)C2
+4.0,,EFO_0003894,acne,CHEMBL3707313,TRIFAROTENE,RARG,CC(C)(C)c1cc(-c2cc(-c3ccc(C(=O)O)cc3)ccc2OCCO)ccc1N1CCCC1
+4.0,,EFO_0003894,acne,CHEMBL547,ISOTRETINOIN,RARG,CC1=C(/C=C/C(C)=C/C=C/C(C)=C\C(=O)O)C(C)(C)CCC1
+4.0,,MONDO_0007606,fibrodysplasia ossificans progressiva,CHEMBL2105648,PALOVAROTENE,RARG,CC1(C)CCC(C)(C)c2cc(Cn3cccn3)c(/C=C/c3ccc(C(=O)O)cc3)cc21
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1421,DASATINIB ANHYDROUS,ABL1,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL2105708,PONATINIB HYDROCHLORIDE,ABL1,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2cccnn12.Cl
+4.0,,EFO_0000339,chronic myelogenous leukemia,CHEMBL2095206,BOSUTINIB MONOHYDRATE,ABL1,COc1cc(Nc2c(C#N)cnc3cc(OCCCN4CCN(C)CC4)c(OC)cc23)c(Cl)cc1Cl.O
+4.0,,EFO_0000339,chronic myelogenous leukemia,CHEMBL4297220,ASCIMINIB HYDROCHLORIDE,ABL1,Cl.O=C(Nc1ccc(OC(F)(F)Cl)cc1)c1cnc(N2CC[C@@H](O)C2)c(-c2cc[nH]n2)c1
+4.0,,EFO_0000339,chronic myelogenous leukemia,CHEMBL1201740,NILOTINIB HYDROCHLORIDE MONOHYDRATE,ABL1,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1.Cl.O
+4.0,,EFO_0000339,chronic myelogenous leukemia,CHEMBL1642,IMATINIB MESYLATE,ABL1,CS(=O)(=O)O.Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL4208229,ASCIMINIB,ABL1,O=C(Nc1ccc(OC(F)(F)Cl)cc1)c1cnc(N2CC[C@@H](O)C2)c(-c2cc[nH]n2)c1
+4.0,,EFO_0000616,neoplasm,CHEMBL1946170,REGORAFENIB,ABL1,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+4.0,,EFO_0000616,neoplasm,CHEMBL3948730,UMBRALISIB,ABL1,CC(C)Oc1ccc(-c2nn([C@@H](C)c3oc4ccc(F)cc4c(=O)c3-c3cccc(F)c3)c3ncnc(N)c23)cc1F
+4.0,,EFO_1000630,marginal zone B-cell lymphoma,CHEMBL3989869,UMBRALISIB TOSYLATE,ABL1,CC(C)Oc1ccc(-c2nn([C@@H](C)c3oc4ccc(F)cc4c(=O)c3-c3cccc(F)c3)c3ncnc(N)c23)cc1F.Cc1ccc(S(=O)(=O)O)cc1
+3.0,"Active, not recruiting",EFO_0000220,acute lymphoblastic leukemia,CHEMBL1171837,PONATINIB,ABL1,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2cccnn12
+3.0,Recruiting,EFO_0000209,T-cell acute lymphoblastic leukemia,CHEMBL941,IMATINIB,ABL1,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+3.0,Recruiting,EFO_0000220,acute lymphoblastic leukemia,CHEMBL2316582,OLVEREMBATINIB,ABL1,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2[nH]ncc2c1
+3.0,Recruiting,EFO_0000220,acute lymphoblastic leukemia,CHEMBL3545413,FLUMATINIB,ABL1,Cc1ncc(NC(=O)c2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1Nc1nccc(-c2cccnc2)n1
+3.0,Recruiting,EFO_0000222,acute myeloid leukemia,CHEMBL3678958,RUSERONTINIB,ABL1,CC(C)n1c(Nc2cccnc2)nc2cnc(Nc3ccc(N4CCN(C)CC4)cc3)nc21
+3.0,Completed,EFO_0000339,chronic myelogenous leukemia,CHEMBL255863,NILOTINIB,ABL1,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1
+3.0,Not yet recruiting,EFO_0000339,chronic myelogenous leukemia,CHEMBL288441,BOSUTINIB,ABL1,COc1cc(Nc2c(C#N)cnc3cc(OCCCN4CCN(C)CC4)c(OC)cc23)c(Cl)cc1Cl
+3.0,"Active, not recruiting",EFO_0000339,chronic myelogenous leukemia,CHEMBL4297524,RADOTINIB,ABL1,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cnccn5)n4)c3)cc(C(F)(F)F)c2)cn1
+2.0,Completed,EFO_0000095,chronic lymphocytic leukemia,CHEMBL206834,BAFETINIB,ABL1,Cc1ccc(NC(=O)c2ccc(CN3CC[C@H](N(C)C)C3)c(C(F)(F)F)c2)cc1Nc1nccc(-c2cncnc2)n1
+2.0,Terminated,EFO_0000365,colorectal adenocarcinoma,CHEMBL217092,SARACATINIB,ABL1,CN1CCN(CCOc2cc(OC3CCOCC3)c3c(Nc4c(Cl)ccc5c4OCO5)ncnc3c2)CC1
+2.0,Completed,EFO_0001378,multiple myeloma,CHEMBL495727,AT-9283,ABL1,O=C(Nc1c[nH]nc1-c1nc2ccc(CN3CCOCC3)cc2[nH]1)NC1CC1
+2.0,"Active, not recruiting",MONDO_0005180,Parkinson disease,CHEMBL4130229,VODOBATINIB,ABL1,Cc1ccc(C(=O)NNC(=O)c2c(C)cccc2Cl)cc1C#Cc1cnc2ccccc2c1
+1.0,Terminated,EFO_0000220,acute lymphoblastic leukemia,CHEMBL3545085,XL-228,ABL1,CC(C)c1cc(CNc2nc(Nc3cc(C4CC4)[nH]n3)cc(N3CCN(C)CC3)n2)on1
+1.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL1908397,KW-2449,ABL1,O=C(c1ccc(/C=C/c2n[nH]c3ccccc23)cc1)N1CCNCC1
+1.0,Terminated,EFO_0000304,breast adenocarcinoma,CHEMBL1738757,REBASTINIB,ABL1,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3cc(C(C)(C)C)nn3-c3ccc4ncccc4c3)c(F)c2)ccn1
+1.0,Terminated,EFO_0000616,neoplasm,CHEMBL5314408,AZD-0424,ABL1,CC(=O)N1CCN(CCOc2cc(OC(C)C)c3c(Nc4c(Cl)cnc5c4OCO5)ncnc3c2)CC1
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL3301603,GILTERITINIB FUMARATE,AXL,CCc1nc(C(N)=O)c(Nc2ccc(N3CCC(N4CCN(C)CC4)CC3)c(OC)c2)nc1NC1CCOCC1.CCc1nc(C(N)=O)c(Nc2ccc(N3CCC(N4CCN(C)CC4)CC3)c(OC)c2)nc1NC1CCOCC1.O=C(O)/C=C/C(=O)O
+4.0,,EFO_0000616,neoplasm,CHEMBL3301622,GILTERITINIB,AXL,CCc1nc(C(N)=O)c(Nc2ccc(N3CCC(N4CCN(C)CC4)CC3)c(OC)c2)nc1NC1CCOCC1
+2.0,Completed,EFO_0000571,lung adenocarcinoma,CHEMBL3809489,BEMCENTINIB,AXL,Nc1nc(Nc2ccc3c(c2)CC[C@@H](N2CCCC2)CC3)nn1-c1cc2c(nn1)-c1ccccc1CCC2
+2.0,Terminated,EFO_0003060,non-small cell lung carcinoma,CHEMBL3984441,NINGETINIB,AXL,Cc1c(C(=O)Nc2ccc(Oc3ccnc4cc(OCC(C)(C)O)ccc34)c(F)c2)c(=O)n(-c2ccccc2)n1C
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL3545236,BPI-9016,AXL,
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL3989958,IVOSIDENIB,IDH1,N#Cc1ccnc(N2C(=O)CC[C@H]2C(=O)N(c2cncc(F)c2)[C@H](C(=O)NC2CC(F)(F)C2)c2ccccc2Cl)c1
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL4297610,OLUTASIDENIB,IDH1,C[C@H](Nc1ccc(C#N)n(C)c1=O)c1cc2cc(Cl)ccc2[nH]c1=O
+3.0,"Active, not recruiting",EFO_1000453,Paraganglioma,CHEMBL4279047,VORASIDENIB,IDH1,C[C@@H](Nc1nc(N[C@H](C)C(F)(F)F)nc(-c2cccc(Cl)n2)n1)C(F)(F)F
+2.0,Withdrawn,EFO_1000453,Paraganglioma,CHEMBL4167360,IDH305,IDH1,Cc1cc([C@H](C)Nc2nccc(N3C(=O)OC[C@@H]3[C@@H](C)F)n2)ncc1-c1ccnc(C(F)(F)F)c1
+2.0,Recruiting,EFO_1000453,Paraganglioma,CHEMBL4651002,SAFUSIDENIB,IDH1,Cc1cn(C(=O)c2c(-c3c(Cl)cc(Cl)cc3Cl)noc2C(C)(C)F)c2cccc(/C=C/C(=O)O)c12
+2.0,"Active, not recruiting",MONDO_0021639,grade II glioma,CHEMBL4650282,DS-1001B,IDH1,CC(C)(C)N.Cc1cn(C(=O)c2c(-c3c(Cl)cc(Cl)cc3Cl)noc2C(C)(C)F)c2cccc(/C=C/C(=O)O)c12
+1.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4206033,BAY1436032,IDH1,C[C@H]1C[C@@H](n2c(Nc3ccc(OC(F)(F)F)cc3)nc3cc(CCC(=O)O)ccc32)CC(C)(C)C1
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,POLA1,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,POLA1,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,POLA1,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,POLA1,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,POLA1,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,POLA1,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,POLA1,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,EFO_0000616,neoplasm,CHEMBL1946170,REGORAFENIB,RAF1,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+4.0,,EFO_0002892,thyroid carcinoma,CHEMBL1200485,SORAFENIB TOSYLATE,RAF1,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1
+3.0,"Active, not recruiting",EFO_0000182,hepatocellular carcinoma,CHEMBL1336,SORAFENIB,RAF1,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1
+3.0,Recruiting,EFO_0000756,melanoma,CHEMBL4583691,NAPORAFENIB,RAF1,Cc1ccc(NC(=O)c2ccnc(C(F)(F)F)c2)cc1-c1cc(OCCO)nc(N2CCOCC2)c1
+3.0,Recruiting,MONDO_0021637,low grade glioma,CHEMBL3348923,TOVORAFENIB,RAF1,C[C@@H](NC(=O)c1ncnc(N)c1Cl)c1ncc(C(=O)Nc2cc(C(F)(F)F)c(Cl)cn2)s1
+2.0,Recruiting,EFO_0000616,neoplasm,CHEMBL3977543,BELVARAFENIB,RAF1,Cc1ccc2c(Nc3cccc(Cl)c3F)nccc2c1NC(=O)c1csc2c(N)ncnc12
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL5314407,ARQ-736,RAF1,Cn1ccc(S(=O)(=O)N2CCC[C@@H](Nc3nccc(-c4c(-c5cccc(OCOP(=O)([O-])[O-])c5)nc5occn45)n3)C2)n1.[Na+].[Na+]
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL5316167,ARQ-736 FREE ACID,RAF1,Cn1ccc(S(=O)(=O)N2CCC[C@@H](Nc3nccc(-c4c(-c5cccc(OCOP(=O)(O)O)c5)nc5occn45)n3)C2)n1
+1.0,Completed,EFO_0000641,papillary thyroid carcinoma,CHEMBL3545027,XL-281,RAF1,COC(=O)Nc1nc2cc(C3(O)c4ccccc4C(=O)N3c3cc(Cl)ccc3C)ccc2[nH]1
+1.0,Terminated,EFO_0000756,melanoma,CHEMBL3577124,LY-3009120,RAF1,CNc1ncc2cc(-c3cc(NC(=O)NCCC(C)(C)C)c(F)cc3C)c(C)nc2n1
+4.0,,EFO_0000616,neoplasm,CHEMBL3301612,ENCORAFENIB,BRAF,COC(=O)N[C@@H](C)CNc1nccc(-c2cn(C(C)C)nc2-c2cc(Cl)cc(NS(C)(=O)=O)c2F)n1
+4.0,Completed,EFO_0000616,neoplasm,CHEMBL1229517,VEMURAFENIB,BRAF,CCCS(=O)(=O)Nc1ccc(F)c(C(=O)c2c[nH]c3ncc(-c4ccc(Cl)cc4)cc23)c1F
+4.0,,EFO_0000616,neoplasm,CHEMBL1946170,REGORAFENIB,BRAF,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+4.0,,EFO_0000756,melanoma,CHEMBL2105729,DABRAFENIB MESYLATE,BRAF,CC(C)(C)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1.CS(=O)(=O)O
+4.0,,EFO_0000616,neoplasm,CHEMBL2028663,DABRAFENIB,BRAF,CC(C)(C)c1nc(-c2cccc(NS(=O)(=O)c3c(F)cccc3F)c2F)c(-c2ccnc(N)n2)s1
+4.0,,EFO_0002892,thyroid carcinoma,CHEMBL1200485,SORAFENIB TOSYLATE,BRAF,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1
+3.0,"Active, not recruiting",EFO_0000182,hepatocellular carcinoma,CHEMBL1336,SORAFENIB,BRAF,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1
+3.0,Recruiting,EFO_0000756,melanoma,CHEMBL4583691,NAPORAFENIB,BRAF,Cc1ccc(NC(=O)c2ccnc(C(F)(F)F)c2)cc1-c1cc(OCCO)nc(N2CCOCC2)c1
+3.0,Recruiting,MONDO_0021637,low grade glioma,CHEMBL3348923,TOVORAFENIB,BRAF,C[C@@H](NC(=O)c1ncnc(N)c1Cl)c1ncc(C(=O)Nc2cc(C(F)(F)F)c(Cl)cn2)s1
+2.0,Recruiting,EFO_0000616,neoplasm,CHEMBL3977543,BELVARAFENIB,BRAF,Cc1ccc2c(Nc3cccc(Cl)c3F)nccc2c1NC(=O)c1csc2c(N)ncnc12
+2.0,Recruiting,MONDO_0004992,cancer,CHEMBL4303729,PLIXORAFENIB,BRAF,O=C(c1c(F)ccc(NS(=O)(=O)N2CC[C@@H](F)C2)c1F)c1c[nH]c2ncc(-c3cnc(C4CC4)nc3)cc12
+1.0,Recruiting,EFO_0000616,neoplasm,CHEMBL4209157,LIFIRAFENIB,BRAF,O=C1CCc2c(Oc3ccc4c(c3)[C@@H]3[C@H](O4)[C@H]3c3nc4cc(C(F)(F)F)ccc4[nH]3)ccnc2N1
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL5314407,ARQ-736,BRAF,Cn1ccc(S(=O)(=O)N2CCC[C@@H](Nc3nccc(-c4c(-c5cccc(OCOP(=O)([O-])[O-])c5)nc5occn45)n3)C2)n1.[Na+].[Na+]
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL5316167,ARQ-736 FREE ACID,BRAF,Cn1ccc(S(=O)(=O)N2CCC[C@@H](Nc3nccc(-c4c(-c5cccc(OCOP(=O)(O)O)c5)nc5occn45)n3)C2)n1
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL2029988,CEP-32496,BRAF,COc1cc2ncnc(Oc3cccc(NC(=O)Nc4cc(C(C)(C)C(F)(F)F)on4)c3)c2cc1OC
+1.0,Completed,EFO_0000641,papillary thyroid carcinoma,CHEMBL3545027,XL-281,BRAF,COC(=O)Nc1nc2cc(C3(O)c4ccccc4C(=O)N3c3cc(Cl)ccc3C)ccc2[nH]1
+1.0,Terminated,EFO_0000756,melanoma,CHEMBL3577124,LY-3009120,BRAF,CNc1ncc2cc(-c3cc(NC(=O)NCCC(C)(C)C)c(F)cc3C)c(C)nc2n1
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL558752,RAF-265,BRAF,Cn1c(Nc2ccc(C(F)(F)F)cc2)nc2cc(Oc3ccnc(-c4ncc(C(F)(F)F)[nH]4)c3)ccc21
+4.0,,EFO_0000544,infection,CHEMBL1201567,FILGRASTIM,CSF3R,
+4.0,,EFO_0000544,infection,CHEMBL1201568,PEGFILGRASTIM,CSF3R,
+4.0,,EFO_0000616,neoplasm,CHEMBL2109128,LENOGRASTIM,CSF3R,
+4.0,,EFO_0000616,neoplasm,CHEMBL3833384,EFLAPEGRASTIM,CSF3R,
+4.0,,EFO_0000616,neoplasm,CHEMBL4297950,EFBEMALENOGRASTIM ALFA,CSF3R,
+4.0,,EFO_0000616,neoplasm,CHEMBL4594230,LIPEGFILGRASTIM,CSF3R,
+3.0,Completed,EFO_0000756,melanoma,CHEMBL2107881,REGRAMOSTIM,CSF3R,
+2.0,,EFO_0000616,neoplasm,CHEMBL4297800,PEGTEOGRASTIM,CSF3R,
+2.0,,EFO_0000616,neoplasm,CHEMBL2108572,BALUGRASTIM,CSF3R,
+2.0,Withdrawn,MONDO_0100096,COVID-19,CHEMBL4650461,ANUMIGILIMAB,CSF3R,
+4.0,,EFO_0000183,Hodgkins lymphoma,CHEMBL359744,DOXORUBICIN HYDROCHLORIDE,TOP2A,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1.Cl
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL1200976,IDARUBICIN HYDROCHLORIDE,TOP2A,CC(=O)[C@]1(O)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](N)[C@H](O)[C@H](C)O2)C1)C(=O)c1ccccc1C3=O.Cl
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL178,DAUNORUBICIN,TOP2A,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(C)=O)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1
+4.0,,EFO_0000313,carcinoma,CHEMBL1096885,VALRUBICIN,TOP2A,CCCCC(=O)OCC(=O)[C@]1(O)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](NC(=O)C(F)(F)F)[C@H](O)[C@H](C)O2)C1)C(=O)c1c(OC)cccc1C3=O
+4.0,,EFO_0000318,cardiomyopathy,CHEMBL1200778,DEXRAZOXANE HYDROCHLORIDE,TOP2A,C[C@@H](CN1CC(=O)NC(=O)C1)N1CC(=O)NC(=O)C1.Cl
+4.0,,EFO_0000616,neoplasm,CHEMBL1117,IDARUBICIN,TOP2A,CC(=O)[C@]1(O)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](N)[C@H](O)[C@H](C)O2)C1)C(=O)c1ccccc1C3=O
+4.0,,EFO_0000616,neoplasm,CHEMBL44657,ETOPOSIDE,TOP2A,COc1cc([C@@H]2c3cc4c(cc3[C@@H](O[C@@H]3O[C@@H]5CO[C@@H](C)O[C@H]5[C@H](O)[C@H]3O)[C@H]3COC(=O)[C@H]23)OCO4)cc(OC)c1O
+4.0,,EFO_0000616,neoplasm,CHEMBL58,MITOXANTRONE,TOP2A,O=C1c2c(O)ccc(O)c2C(=O)c2c(NCCNCCO)ccc(NCCNCCO)c21
+4.0,,EFO_0000616,neoplasm,CHEMBL43,AMSACRINE,TOP2A,COc1cc(NS(C)(=O)=O)ccc1Nc1c2ccccc2nc2ccccc12
+4.0,,EFO_0000616,neoplasm,CHEMBL452231,TENIPOSIDE,TOP2A,COc1cc([C@@H]2c3cc4c(cc3[C@@H](O[C@@H]3O[C@@H]5CO[C@@H](c6cccs6)O[C@H]5[C@H](O)[C@H]3O)[C@H]3COC(=O)[C@H]23)OCO4)cc(OC)c1O
+4.0,,EFO_0000616,neoplasm,CHEMBL53463,DOXORUBICIN,TOP2A,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1
+4.0,,EFO_0004289,lymphoid leukemia,CHEMBL1563,DAUNORUBICIN HYDROCHLORIDE,TOP2A,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(C)=O)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1.Cl
+4.0,,MONDO_0008315,prostate cancer,CHEMBL1417019,MITOXANTRONE HYDROCHLORIDE,TOP2A,Cl.Cl.O=C1c2c(O)ccc(O)c2C(=O)c2c(NCCNCCO)ccc(NCCNCCO)c21
+3.0,Recruiting,EFO_0000209,T-cell acute lymphoblastic leukemia,CHEMBL1738,DEXRAZOXANE,TOP2A,C[C@@H](CN1CC(=O)NC(=O)C1)N1CC(=O)NC(=O)C1
+3.0,Unknown status,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1200645,ETOPOSIDE PHOSPHATE,TOP2A,COc1cc([C@@H]2c3cc4c(cc3[C@@H](O[C@@H]3O[C@@H]5CO[C@@H](C)O[C@H]5[C@H](O)[C@H]3O)[C@H]3COC(=O)[C@H]23)OCO4)cc(OC)c1OP(=O)(O)O
+3.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL68117,VOSAROXIN,TOP2A,CN[C@H]1CN(c2ccc3c(=O)c(C(=O)O)cn(-c4nccs4)c3n2)C[C@@H]1OC
+3.0,,EFO_0000616,neoplasm,CHEMBL1186894,AMRUBICIN,TOP2A,CC(=O)[C@]1(N)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](O)[C@H](O)CO2)C1)C(=O)c1ccccc1C3=O
+3.0,Terminated,EFO_0000702,small cell lung carcinoma,CHEMBL481958,AMRUBICIN HYDROCHLORIDE,TOP2A,CC(=O)[C@]1(N)Cc2c(O)c3c(c(O)c2[C@@H](O[C@H]2C[C@H](O)[C@H](O)CO2)C1)C(=O)c1ccccc1C3=O.Cl
+3.0,,EFO_0000771,bacterial disease,CHEMBL240163,PAZUFLOXACIN,TOP2A,C[C@H]1COc2c(C3(N)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+3.0,Completed,EFO_1001968,soft tissue sarcoma,CHEMBL2107818,ALDOXORUBICIN,TOP2A,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(/C(CO)=N/NC(=O)CCCCCN1C(=O)C=CC1=O)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1
+3.0,Terminated,MONDO_0003060,biliary tract cancer,CHEMBL2107313,BECATECARIN,TOP2A,CCN(CC)CCN1C(=O)c2c(c3c4cccc(Cl)c4n([C@@H]4O[C@H](CO)[C@@H](OC)[C@H](O)[C@H]4O)c3c3[nH]c4c(Cl)cccc4c23)C1=O
+2.0,"Active, not recruiting",EFO_0000519,glioblastoma multiforme,CHEMBL2110580,BERUBICIN,TOP2A,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@H](OCc2ccccc2)[C@H](C)O1
+2.0,Completed,EFO_0000565,leukemia,CHEMBL1200475,DAUNORUBICIN CITRATE,TOP2A,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(C)=O)C[C@@H]3O[C@H]1C[C@H](N)[C@H](O)[C@H](C)O1.O=C(O)CC(O)(CC(=O)O)C(=O)O
+2.0,Terminated,MONDO_0007254,breast cancer,CHEMBL3833344,GANCOTAMAB,TOP2A,
+1.0,Terminated,EFO_0000313,carcinoma,CHEMBL2103796,BERUBICIN HYDROCHLORIDE,TOP2A,COc1cccc2c1C(=O)c1c(O)c3c(c(O)c1C2=O)C[C@@](O)(C(=O)CO)C[C@@H]3O[C@H]1C[C@H](N)[C@H](OCc2ccccc2)[C@H](C)O1.Cl
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL4297534,GLASDEGIB MALEATE,SMO,CN1CC[C@@H](NC(=O)Nc2ccc(C#N)cc2)C[C@@H]1c1nc2ccccc2[nH]1.O=C(O)/C=C\C(=O)O
+4.0,,EFO_0000616,neoplasm,CHEMBL2043437,GLASDEGIB,SMO,CN1CC[C@@H](NC(=O)Nc2ccc(C#N)cc2)C[C@@H]1c1nc2ccccc2[nH]1
+4.0,,EFO_0000616,neoplasm,CHEMBL2105737,SONIDEGIB,SMO,Cc1c(C(=O)Nc2ccc(N3C[C@@H](C)O[C@@H](C)C3)nc2)cccc1-c1ccc(OC(F)(F)F)cc1
+4.0,,EFO_0000616,neoplasm,CHEMBL473417,VISMODEGIB,SMO,CS(=O)(=O)c1ccc(C(=O)Nc2ccc(Cl)c(-c3ccccn3)c2)c(Cl)c1
+4.0,,EFO_0004193,basal cell carcinoma,CHEMBL3137317,SONIDEGIB PHOSPHATE,SMO,Cc1c(C(=O)Nc2ccc(N3C[C@@H](C)O[C@@H](C)C3)nc2)cccc1-c1ccc(OC(F)(F)F)cc1.O=P(O)(O)O.O=P(O)(O)O
+3.0,Terminated,MONDO_0007187,nevoid basal cell carcinoma syndrome,CHEMBL538867,PATIDEGIB,SMO,CC1=C2C[C@H]3[C@@H](CC[C@@H]4C[C@H](NS(C)(=O)=O)CC[C@@]43C)[C@@H]2CC[C@@]2(C1)O[C@@H]1C[C@H](C)CN[C@H]1[C@H]2C
+2.0,Terminated,EFO_0000565,leukemia,CHEMBL3545403,BMS-833923,SMO,CNCc1ccc(C)c(NC(=O)c2ccc(Nc3nc(-c4ccccc4)c4ccccc4n3)cc2)c1
+2.0,"Active, not recruiting",EFO_0000616,neoplasm,CHEMBL2142592,TALADEGIB,SMO,CN(C(=O)c1ccc(F)cc1C(F)(F)F)C1CCN(c2nnc(-c3ccnn3C)c3ccccc23)CC1
+1.0,Completed,EFO_0004193,basal cell carcinoma,CHEMBL2205230,TAK-441,SMO,CCc1cc2c(c(OCC(F)(F)F)c(C(=O)NC3CCN(C(=O)CO)CC3)n2C)c(=O)n1CC(=O)c1ccccc1
+1.0,Completed,EFO_0002939,medulloblastoma,CHEMBL3133037,LEQ506,SMO,Cc1c(Cc2ccccc2)nnc(N2CCN(c3cnc(C(C)(C)O)cn3)[C@H](C)C2)c1C
+3.0,Completed,EFO_0000198,myelodysplastic syndrome,CHEMBL3186011,EPRENETAPOPT,TP53,COCC1(CO)C(=O)C2CCN1CC2
+3.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL2402737,IDASANUTLIN,TP53,COc1cc(C(=O)O)ccc1NC(=O)[C@@H]1N[C@@H](CC(C)(C)C)[C@](C#N)(c2ccc(Cl)cc2F)[C@H]1c1cccc(Cl)c1F
+2.0,Terminated,EFO_0000095,chronic lymphocytic leukemia,CHEMBL2219776,CENERSEN SODIUM,TP53,
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL2108280,CENERSEN,TP53,
+2.0,Recruiting,EFO_0000479,essential thrombocythemia,CHEMBL3125702,NAVTEMADLIN,TP53,CC(C)[C@@H](CS(=O)(=O)C(C)C)N1C(=O)[C@@](C)(CC(=O)O)C[C@H](c2cccc(Cl)c2)[C@H]1c1ccc(Cl)cc1
+2.0,Recruiting,EFO_0000616,neoplasm,CHEMBL3653256,SIREMADLIN,TP53,COc1ncc(-c2nc3c(n2C(C)C)[C@H](c2ccc(Cl)cc2)N(c2cc(Cl)cn(C)c2=O)C3=O)c(OC)n1
+2.0,Unknown status,EFO_0003060,non-small cell lung carcinoma,CHEMBL2108585,CONTUSUGENE LADENOVEC,TP53,
+2.0,Recruiting,EFO_0004289,lymphoid leukemia,CHEMBL4091801,ALRIZOMADLIN,TP53,CCN1[C@@H](C(=O)NC23CCC(C(=O)O)(CC2)CC3)[C@H](c2cccc(Cl)c2F)[C@]2(C(=O)Nc3cc(Cl)ccc32)C12CCCCC2
+2.0,Completed,HP_0001919,Acute kidney injury,CHEMBL4297574,TEPRASIRAN,TP53,
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKD3,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKD3,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+2.0,Completed,EFO_0000729,ulcerative colitis,CHEMBL565612,SOTRASTAURIN,PRKD3,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+1.0,Withdrawn,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKD3,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,EFO_0000182,hepatocellular carcinoma,CHEMBL2103868,CABOZANTINIB S-MALATE,KDR,COc1cc2nccc(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3)c2cc1OC.O=C(O)C[C@H](O)C(=O)O
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,KDR,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+4.0,,EFO_0000616,neoplasm,CHEMBL24828,VANDETANIB,KDR,COc1cc2/c(=N/c3ccc(Br)cc3F)nc[nH]c2cc1OCC1CCN(C)CC1
+4.0,,EFO_0000616,neoplasm,CHEMBL1946170,REGORAFENIB,KDR,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+4.0,,EFO_0000616,neoplasm,CHEMBL2105717,CABOZANTINIB,KDR,COc1cc2nccc(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3)c2cc1OC
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL535,SUNITINIB,KDR,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C
+4.0,,EFO_0000691,sarcoma,CHEMBL1201733,PAZOPANIB HYDROCHLORIDE,KDR,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O.Cl
+4.0,,EFO_0000717,systemic scleroderma,CHEMBL3039504,NINTEDANIB ESYLATE,KDR,CCS(=O)(=O)O.COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1
+4.0,,EFO_0000616,neoplasm,CHEMBL1743062,RAMUCIRUMAB,KDR,
+4.0,,EFO_0000616,neoplasm,CHEMBL1289601,LENVATINIB,KDR,COc1cc2nccc(Oc3ccc(NC(=O)NC4CC4)c(Cl)c3)c2cc1C(N)=O
+4.0,,EFO_0000616,neoplasm,CHEMBL1289926,AXITINIB,KDR,CNC(=O)c1ccccc1Sc1ccc2c(/C=C/c3ccccn3)n[nH]c2c1
+4.0,,EFO_0002892,thyroid carcinoma,CHEMBL1200485,SORAFENIB TOSYLATE,KDR,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1567,SUNITINIB MALATE,KDR,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C.O=C(O)C[C@H](O)C(=O)O
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL2105704,LENVATINIB MESYLATE,KDR,COc1cc2nccc(Oc3ccc(NC(=O)NC4CC4)c(Cl)c3)c2cc1C(N)=O.CS(=O)(=O)O
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL2105756,TIVOZANIB HYDROCHLORIDE,KDR,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC.Cl.O
+4.0,,EFO_0004142,colorectal neoplasm,CHEMBL4303214,FRUQUINTINIB,KDR,CNC(=O)c1c(C)oc2cc(Oc3ncnc4cc(OC)c(OC)cc34)ccc12
+3.0,"Active, not recruiting",EFO_0000182,hepatocellular carcinoma,CHEMBL1336,SORAFENIB,KDR,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1
+3.0,Terminated,EFO_0000182,hepatocellular carcinoma,CHEMBL223360,LINIFANIB,KDR,Cc1ccc(F)c(NC(=O)Nc2ccc(-c3cccc4[nH]nc(N)c34)cc2)c1
+3.0,"Active, not recruiting",EFO_0000182,hepatocellular carcinoma,CHEMBL3186534,RIVOCERANIB,KDR,N#CC1(c2ccc(NC(=O)c3cccnc3NCc3ccncc3)cc2)CCCC1
+3.0,Recruiting,EFO_0000182,hepatocellular carcinoma,CHEMBL4303201,CATEQUENTINIB,KDR,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ccnc2cc1OCC1(N)CC1
+3.0,Recruiting,EFO_0000178,gastric carcinoma,CHEMBL3545414,RIVOCERANIB MESYLATE,KDR,CS(=O)(=O)O.N#CC1(c2ccc(NC(=O)c3cccnc3NCc3ccncc3)cc2)CCCC1
+3.0,Terminated,EFO_0000182,hepatocellular carcinoma,CHEMBL274654,ORANTINIB,KDR,Cc1[nH]c(/C=C2\C(=O)Nc3ccccc32)c(C)c1CCC(=O)O
+3.0,Completed,EFO_0000182,hepatocellular carcinoma,CHEMBL377300,BRIVANIB,KDR,Cc1cc2c(F)c(Oc3ncnn4cc(OC[C@@H](C)O)c(C)c34)ccc2[nH]1
+3.0,Completed,EFO_0000519,glioblastoma multiforme,CHEMBL491473,CEDIRANIB,KDR,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ncnc2cc1OCCCN1CCCC1
+3.0,Completed,EFO_0000365,colorectal adenocarcinoma,CHEMBL1278146,FAMITINIB,KDR,CCN(CC)CCN1CCc2[nH]c(/C=C3\C(=O)Nc4ccc(F)cc43)c(C)c2C1=O
+3.0,"Active, not recruiting",EFO_0000349,clear cell renal carcinoma,CHEMBL477772,PAZOPANIB,KDR,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O
+3.0,,EFO_0000616,neoplasm,CHEMBL4297190,SURUFATINIB,KDR,Cc1cc2cc(Oc3ccnc(Nc4cccc(CS(=O)(=O)NCCN(C)C)c4)n3)ccc2[nH]1
+3.0,,EFO_0000616,neoplasm,CHEMBL502835,NINTEDANIB,KDR,COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1
+3.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL1289494,TIVOZANIB,KDR,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC
+3.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL522892,DOVITINIB,KDR,CN1CCN(c2ccc3nc(-c4c(N)c5c(F)cccc5[nH]c4=O)[nH]c3c2)CC1
+3.0,Unknown status,EFO_0000681,renal cell carcinoma,CHEMBL3545427,CM-082,KDR,
+3.0,Recruiting,EFO_0000702,small cell lung carcinoma,CHEMBL5095033,IBCASERTIB,KDR,COc1ccc2c(Oc3ccc4c(C(=O)Nc5ccccc5N)cccc4c3)ccnc2c1
+3.0,Completed,EFO_0004288,colonic neoplasm,CHEMBL101253,VATALANIB,KDR,Clc1ccc(Nc2nnc(Cc3ccncc3)c3ccccc23)cc1
+3.0,Terminated,EFO_0003060,non-small cell lung carcinoma,CHEMBL572881,MOTESANIB,KDR,CC1(C)CNc2cc(NC(=O)c3cccnc3NCc3ccncc3)ccc21
+3.0,Completed,MONDO_0005575,colorectal cancer,CHEMBL270995,BRIVANIB ALANINATE,KDR,Cc1cc2c(F)c(Oc3ncnn4cc(OC[C@@H](C)OC(=O)[C@H](C)N)c(C)c34)ccc2[nH]1
+3.0,Completed,MONDO_0005575,colorectal cancer,CHEMBL276711,SEMAXANIB,KDR,Cc1cc(C)c(/C=C2\C(=O)Nc3ccccc32)[nH]1
+2.0,Completed,EFO_0000182,hepatocellular carcinoma,CHEMBL482968,ENMD-2076,KDR,Cc1cc(Nc2cc(N3CCN(C)CC3)nc(/C=C/c3ccccc3)n2)n[nH]1
+2.0,Recruiting,EFO_0000196,metastatic prostate cancer,CHEMBL2010872,CEP-11981,KDR,CC(C)Cn1c2ccc(Nc3ncccn3)cc2c2c3c(c4c(c21)CCc1nn(C)cc1-4)C(=O)NC3
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL5314391,XL-999,KDR,CCN1CCC(Nc2ccc3c(c2)/C(=C(\c2cccc(F)c2)c2nc(C)c[nH]2)C(=O)N3)CC1
+2.0,Completed,EFO_0000365,colorectal adenocarcinoma,CHEMBL2108356,PEGDINETANIB,KDR,
+2.0,Completed,EFO_0000616,neoplasm,CHEMBL1230609,FORETINIB,KDR,COc1cc2c(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3F)ccnc2cc1OCCCN1CCOCC1
+2.0,Completed,EFO_0000519,glioblastoma multiforme,CHEMBL4298119,OLINVACIMAB,KDR,
+2.0,Completed,EFO_0002618,pancreatic carcinoma,CHEMBL52885,ENMD-981693,KDR,Cn1cc(C2=C(c3cn(C)c4cc([N+](=O)[O-])ccc34)C(=O)NC2=O)c2ccccc21
+2.0,Completed,EFO_0003060,non-small cell lung carcinoma,CHEMBL3989914,GLESATINIB,KDR,COCCNCc1ccc(-c2cc3nccc(Oc4ccc(NC(=S)NC(=O)Cc5ccc(F)cc5)cc4F)c3s2)nc1
+2.0,Terminated,EFO_0003839,retinopathy,CHEMBL3545401,X-82,KDR,
+2.0,Terminated,EFO_0000702,small cell lung carcinoma,CHEMBL2220486,LUCITANIB,KDR,CNC(=O)c1cccc2cc(Oc3ccnc4cc(OCC5(N)CC5)c(OC)cc34)ccc12
+2.0,Completed,EFO_0003869,breast neoplasm,CHEMBL1721885,SU-014813,KDR,Cc1[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c(C)c1C(=O)NC[C@H](O)CN1CCOCC1
+2.0,Completed,EFO_0001645,coronary artery disease,CHEMBL2108557,TELBERMIN,KDR,
+2.0,Terminated,EFO_0009606,macular degeneration,CHEMBL403989,TG100-801,KDR,Cc1cc(-c2cc(OC(=O)c3ccccc3)ccc2Cl)cc2nnc(Nc3ccc(OCCN4CCCC4)cc3)nc12
+2.0,Completed,EFO_0003060,non-small cell lung carcinoma,CHEMBL3545396,BMS-690514,KDR,COc1cccc(Nc2ncnn3ccc(CN4CC[C@@H](N)[C@H](O)C4)c23)c1
+2.0,Terminated,EFO_0003060,non-small cell lung carcinoma,CHEMBL3984441,NINGETINIB,KDR,Cc1c(C(=O)Nc2ccc(Oc3ccnc4cc(OCC(C)(C)O)ccc34)c(F)c2)c(=O)n(-c2ccccc2)n1C
+2.0,Completed,EFO_1000760,rosacea,CHEMBL4080062,BFH-772,KDR,O=C(Nc1cccc(C(F)(F)F)c1)c1cccc2cc(Oc3cc(CO)ncn3)ccc12
+2.0,Completed,MONDO_0002158,fallopian tube cancer,CHEMBL253969,OSI-632,KDR,NC(=O)c1c(OCc2c(F)cc(Br)cc2F)nsc1NC(=O)NCCCCN1CCCC1
+2.0,Terminated,MONDO_0004992,cancer,CHEMBL1980297,ILORASERTIB,KDR,Nc1ncc(-c2cnn(CCO)c2)c2scc(-c3ccc(NC(=O)Nc4cccc(F)c4)cc3)c12
+2.0,Completed,MONDO_0001056,gastric cancer,CHEMBL2079588,TELATINIB,KDR,CNC(=O)c1cc(COc2nnc(Nc3ccc(Cl)cc3)c3ccoc23)ccn1
+2.0,Completed,MONDO_0011719,gastrointestinal stromal tumor,CHEMBL3545402,XL-820,KDR,
+1.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL5314406,4SC-203,KDR,COc1ccc(C)cc1NC(=O)Nc1nc2ccc(Nc3ncnc4cc(OCCCN5CCN(C)CC5)c(OC)cc34)cc2s1
+1.0,Completed,EFO_0000519,glioblastoma multiforme,CHEMBL587723,AEE-788,KDR,CCN1CCN(Cc2ccc(-c3cc4c(N[C@H](C)c5ccccc5)ncnc4[nH]3)cc2)CC1
+1.0,Withdrawn,EFO_0000616,neoplasm,CHEMBL3545050,BMS-817378,KDR,
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL1980391,RG-1530,KDR,COc1cc2c(cc1F)C(c1ccccc1Cl)=Nc1c(n[nH]c1C)N2
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL558752,RAF-265,KDR,Cn1c(Nc2ccc(C(F)(F)F)cc2)nc2cc(Oc3ccnc(-c4ncc(C(F)(F)F)[nH]4)c3)ccc21
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL1738697,PF-00337210,KDR,CNC(=O)c1c(C)oc2cc(Oc3ccnc4cc(OCCN5CCOCC5)ccc34)ccc12
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL2180604,TAK-593,KDR,Cc1cc(C(=O)Nc2cc(Oc3ccc4nc(NC(=O)C5CC5)cn4n3)ccc2C)n(C)n1
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL3039525,GOLVATINIB,KDR,CN1CCN(C2CCN(C(=O)Nc3cc(Oc4ccc(NC(=O)C5(C(=O)Nc6ccc(F)cc6)CC5)c(F)c4)ccn3)CC2)CC1
+1.0,Terminated,EFO_0000616,neoplasm,CHEMBL482967,CYC-116,KDR,Cc1nc(N)sc1-c1ccnc(Nc2ccc(N3CCOCC3)cc2)n1
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL1614710,OSI-930,KDR,O=C(Nc1ccc(OC(F)(F)F)cc1)c1sccc1NCc1ccnc2ccccc12
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL3545155,JI-101,KDR,COc1ccc(Br)cc1NC(=O)Nc1cccc2c1ccn2Cc1ccnc(N)c1
+1.0,Terminated,EFO_0000616,neoplasm,CHEMBL3545365,ALTIRATINIB,KDR,O=C(Nc1cc(Oc2cc(F)c(NC(=O)C3(C(=O)Nc4ccc(F)cc4)CC3)cc2F)ccn1)C1CC1
+1.0,Terminated,MONDO_0004992,cancer,CHEMBL1277072,HENATINIB,KDR,Cc1c(/C=C2\C(=O)Nc3ccc(F)cc32)[nH]c2c1C(=O)N(C[C@H](O)CN1CCOCC1)CCC2
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL3989931,ENASIDENIB MESYLATE,IDH2,CC(C)(O)CNc1nc(Nc2ccnc(C(F)(F)F)c2)nc(-c2cccc(C(F)(F)F)n2)n1.CS(=O)(=O)O
+3.0,Completed,EFO_0000565,leukemia,CHEMBL3989908,ENASIDENIB,IDH2,CC(C)(O)CNc1nc(Nc2ccnc(C(F)(F)F)c2)nc(-c2cccc(C(F)(F)F)n2)n1
+3.0,"Active, not recruiting",EFO_1000453,Paraganglioma,CHEMBL4279047,VORASIDENIB,IDH2,C[C@@H](Nc1nc(N[C@H](C)C(F)(F)F)nc(-c2cccc(Cl)n2)n1)C(F)(F)F
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL3137309,VENETOCLAX,BCL2,CC1(C)CCC(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(NCC5CCOCC5)c([N+](=O)[O-])c4)c(Oc4cnc5[nH]ccc5c4)c3)CC2)=C(c2ccc(Cl)cc2)C1
+3.0,Completed,EFO_0000389,cutaneous melanoma,CHEMBL2109229,OBLIMERSEN SODIUM,BCL2,
+3.0,Withdrawn,EFO_0000702,small cell lung carcinoma,CHEMBL408194,OBATOCLAX,BCL2,COC1=CC(c2cc3ccccc3[nH]2)=N/C1=C\c1[nH]c(C)cc1C
+3.0,"Active, not recruiting",EFO_0002430,primary myelofibrosis,CHEMBL443684,NAVITOCLAX,BCL2,CC1(C)CCC(c2ccc(Cl)cc2)=C(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(N[C@H](CCN5CCOCC5)CSc5ccccc5)c(S(=O)(=O)C(F)(F)F)c4)cc3)CC2)C1
+3.0,Withdrawn,EFO_0000702,small cell lung carcinoma,CHEMBL2107358,OBATOCLAX MESYLATE,BCL2,COC1=CC(c2cc3ccccc3[nH]2)=N/C1=C\c1[nH]c(C)cc1C.CS(=O)(=O)O
+2.0,Recruiting,EFO_0000095,chronic lymphocytic leukemia,CHEMBL4650374,APG-2575,BCL2,
+2.0,,EFO_0000616,neoplasm,CHEMBL2108324,OBLIMERSEN,BCL2,
+4.0,,EFO_0000198,myelodysplastic syndrome,CHEMBL1201129,DECITABINE,DNMT3A,Nc1ncn([C@H]2C[C@H](O)[C@@H](CO)O2)c(=O)n1
+4.0,,EFO_0000198,myelodysplastic syndrome,CHEMBL1489,AZACITIDINE,DNMT3A,Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c(=O)n1
+4.0,Unknown status,EFO_0000198,myelodysplastic syndrome,CHEMBL1201129,DECITABINE,DNMT1,Nc1ncn([C@H]2C[C@H](O)[C@@H](CO)O2)c(=O)n1
+4.0,,EFO_0000198,myelodysplastic syndrome,CHEMBL1489,AZACITIDINE,DNMT1,Nc1ncn([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c(=O)n1
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL1201670,SARGRAMOSTIM,CSF2RA,
+2.0,Terminated,EFO_0000685,rheumatoid arthritis,CHEMBL1743039,MAVRILIMUMAB,CSF2RA,
+4.0,,EFO_0000616,neoplasm,CHEMBL24828,VANDETANIB,FLT4,COc1cc2/c(=N/c3ccc(Br)cc3F)nc[nH]c2cc1OCC1CCN(C)CC1
+4.0,,EFO_0000616,neoplasm,CHEMBL1289926,AXITINIB,FLT4,CNC(=O)c1ccccc1Sc1ccc2c(/C=C/c3ccccn3)n[nH]c2c1
+4.0,,EFO_0000616,neoplasm,CHEMBL1946170,REGORAFENIB,FLT4,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+4.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL535,SUNITINIB,FLT4,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C
+4.0,,EFO_0000691,sarcoma,CHEMBL1201733,PAZOPANIB HYDROCHLORIDE,FLT4,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O.Cl
+4.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL1567,SUNITINIB MALATE,FLT4,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C.O=C(O)C[C@H](O)C(=O)O
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL2105704,LENVATINIB MESYLATE,FLT4,COc1cc2nccc(Oc3ccc(NC(=O)NC4CC4)c(Cl)c3)c2cc1C(N)=O.CS(=O)(=O)O
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL2105756,TIVOZANIB HYDROCHLORIDE,FLT4,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC.Cl.O
+4.0,,EFO_0000717,systemic scleroderma,CHEMBL3039504,NINTEDANIB ESYLATE,FLT4,CCS(=O)(=O)O.COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1
+4.0,,EFO_0000616,neoplasm,CHEMBL1289601,LENVATINIB,FLT4,COc1cc2nccc(Oc3ccc(NC(=O)NC4CC4)c(Cl)c3)c2cc1C(N)=O
+4.0,,EFO_0002892,thyroid carcinoma,CHEMBL1200485,SORAFENIB TOSYLATE,FLT4,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1.Cc1ccc(S(=O)(=O)O)cc1
+4.0,,EFO_0004142,colorectal neoplasm,CHEMBL4303214,FRUQUINTINIB,FLT4,CNC(=O)c1c(C)oc2cc(Oc3ncnc4cc(OC)c(OC)cc34)ccc12
+3.0,Completed,EFO_0000182,hepatocellular carcinoma,CHEMBL1336,SORAFENIB,FLT4,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)cc2)ccn1
+3.0,Completed,EFO_0000182,hepatocellular carcinoma,CHEMBL377300,BRIVANIB,FLT4,Cc1cc2c(F)c(Oc3ncnn4cc(OC[C@@H](C)O)c(C)c34)ccc2[nH]1
+3.0,Recruiting,EFO_0000182,hepatocellular carcinoma,CHEMBL4303201,CATEQUENTINIB,FLT4,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ccnc2cc1OCC1(N)CC1
+3.0,Terminated,EFO_0000182,hepatocellular carcinoma,CHEMBL223360,LINIFANIB,FLT4,Cc1ccc(F)c(NC(=O)Nc2ccc(-c3cccc4[nH]nc(N)c34)cc2)c1
+3.0,Completed,EFO_0000365,colorectal adenocarcinoma,CHEMBL1278146,FAMITINIB,FLT4,CCN(CC)CCN1CCc2[nH]c(/C=C3\C(=O)Nc4ccc(F)cc43)c(C)c2C1=O
+3.0,"Active, not recruiting",EFO_0000349,clear cell renal carcinoma,CHEMBL477772,PAZOPANIB,FLT4,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O
+3.0,,EFO_0000616,neoplasm,CHEMBL1289494,TIVOZANIB,FLT4,COc1cc2nccc(Oc3ccc(NC(=O)Nc4cc(C)on4)c(Cl)c3)c2cc1OC
+3.0,Completed,EFO_0000519,glioblastoma multiforme,CHEMBL491473,CEDIRANIB,FLT4,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ncnc2cc1OCCCN1CCCC1
+3.0,Recruiting,EFO_0000702,small cell lung carcinoma,CHEMBL5095033,IBCASERTIB,FLT4,COc1ccc2c(Oc3ccc4c(C(=O)Nc5ccccc5N)cccc4c3)ccnc2c1
+3.0,Completed,EFO_0000768,idiopathic pulmonary fibrosis,CHEMBL502835,NINTEDANIB,FLT4,COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1
+3.0,,EFO_0000616,neoplasm,CHEMBL4297190,SURUFATINIB,FLT4,Cc1cc2cc(Oc3ccnc(Nc4cccc(CS(=O)(=O)NCCN(C)C)c4)n3)ccc2[nH]1
+3.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL522892,DOVITINIB,FLT4,CN1CCN(c2ccc3nc(-c4c(N)c5c(F)cccc5[nH]c4=O)[nH]c3c2)CC1
+3.0,Terminated,EFO_0003060,non-small cell lung carcinoma,CHEMBL572881,MOTESANIB,FLT4,CC1(C)CNc2cc(NC(=O)c3cccnc3NCc3ccncc3)ccc21
+3.0,Completed,EFO_1000657,rectum cancer,CHEMBL101253,VATALANIB,FLT4,Clc1ccc(Nc2nnc(Cc3ccncc3)c3ccccc23)cc1
+3.0,Completed,MONDO_0005575,colorectal cancer,CHEMBL276711,SEMAXANIB,FLT4,Cc1cc(C)c(/C=C2\C(=O)Nc3ccccc32)[nH]1
+3.0,Completed,MONDO_0005575,colorectal cancer,CHEMBL270995,BRIVANIB ALANINATE,FLT4,Cc1cc2c(F)c(Oc3ncnn4cc(OC[C@@H](C)OC(=O)[C@H](C)N)c(C)c34)ccc2[nH]1
+2.0,Recruiting,EFO_0000196,metastatic prostate cancer,CHEMBL2010872,CEP-11981,FLT4,CC(C)Cn1c2ccc(Nc3ncccn3)cc2c2c3c(c4c(c21)CCc1nn(C)cc1-4)C(=O)NC3
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL5314391,XL-999,FLT4,CCN1CCC(Nc2ccc3c(c2)/C(=C(\c2cccc(F)c2)c2nc(C)c[nH]2)C(=O)N3)CC1
+2.0,Terminated,EFO_0000702,small cell lung carcinoma,CHEMBL2220486,LUCITANIB,FLT4,CNC(=O)c1cccc2cc(Oc3ccnc4cc(OCC5(N)CC5)c(OC)cc34)ccc12
+2.0,Completed,EFO_0000616,neoplasm,CHEMBL1230609,FORETINIB,FLT4,COc1cc2c(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3F)ccnc2cc1OCCCN1CCOCC1
+2.0,Completed,EFO_0003060,non-small cell lung carcinoma,CHEMBL3989914,GLESATINIB,FLT4,COCCNCc1ccc(-c2cc3nccc(Oc4ccc(NC(=S)NC(=O)Cc5ccc(F)cc5)cc4F)c3s2)nc1
+2.0,Completed,EFO_0003869,breast neoplasm,CHEMBL1721885,SU-014813,FLT4,Cc1[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c(C)c1C(=O)NC[C@H](O)CN1CCOCC1
+2.0,Terminated,EFO_0001365,age-related macular degeneration,CHEMBL3545401,X-82,FLT4,
+2.0,Completed,EFO_0003060,non-small cell lung carcinoma,CHEMBL3545396,BMS-690514,FLT4,COc1cccc(Nc2ncnn3ccc(CN4CC[C@@H](N)[C@H](O)C4)c23)c1
+2.0,Completed,MONDO_0001056,gastric cancer,CHEMBL2079588,TELATINIB,FLT4,CNC(=O)c1cc(COc2nnc(Nc3ccc(Cl)cc3)c3ccoc23)ccn1
+2.0,Terminated,MONDO_0004992,cancer,CHEMBL1980297,ILORASERTIB,FLT4,Nc1ncc(-c2cnn(CCO)c2)c2scc(-c3ccc(NC(=O)Nc4cccc(F)c4)cc3)c12
+2.0,Completed,MONDO_0011719,gastrointestinal stromal tumor,CHEMBL3545402,XL-820,FLT4,
+1.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL5314406,4SC-203,FLT4,COc1ccc(C)cc1NC(=O)Nc1nc2ccc(Nc3ncnc4cc(OCCCN5CCN(C)CC5)c(OC)cc34)cc2s1
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL1614710,OSI-930,FLT4,O=C(Nc1ccc(OC(F)(F)F)cc1)c1sccc1NCc1ccnc2ccccc12
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL1980391,RG-1530,FLT4,COc1cc2c(cc1F)C(c1ccccc1Cl)=Nc1c(n[nH]c1C)N2
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL2109602,IMC-3C5,FLT4,
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL2180604,TAK-593,FLT4,Cc1cc(C(=O)Nc2cc(Oc3ccc4nc(NC(=O)C5CC5)cn4n3)ccc2C)n(C)n1
+1.0,Completed,MONDO_0004992,cancer,CHEMBL3109738,JNJ-26483327,FLT4,COc1cc2ncnc3c2cc1OCCCCCN(C)Cc1ccc(Br)cc1N3
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PDGFRA,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+4.0,,EFO_0000616,neoplasm,CHEMBL4204794,AVAPRITINIB,PDGFRA,Cn1cc(-c2cc3c(N4CCN(c5ncc([C@@](C)(N)c6ccc(F)cc6)cn5)CC4)ncnn3c2)cn1
+4.0,,EFO_0000616,neoplasm,CHEMBL4216467,RIPRETINIB,PDGFRA,CCn1c(=O)c(-c2cc(NC(=O)Nc3ccccc3)c(F)cc2Br)cc2cnc(NC)cc21
+4.0,,EFO_0000616,neoplasm,CHEMBL1743049,OLARATUMAB,PDGFRA,
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL535,SUNITINIB,PDGFRA,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C
+4.0,,EFO_0000691,sarcoma,CHEMBL1201733,PAZOPANIB HYDROCHLORIDE,PDGFRA,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O.Cl
+4.0,,EFO_0000768,idiopathic pulmonary fibrosis,CHEMBL3039504,NINTEDANIB ESYLATE,PDGFRA,CCS(=O)(=O)O.COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1
+4.0,,EFO_0000616,neoplasm,CHEMBL1908391,MASITINIB,PDGFRA,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1
+4.0,,EFO_0000616,neoplasm,CHEMBL1946170,REGORAFENIB,PDGFRA,CNC(=O)c1cc(Oc2ccc(NC(=O)Nc3ccc(Cl)c(C(F)(F)F)c3)c(F)c2)ccn1
+4.0,,EFO_0000681,renal cell carcinoma,CHEMBL1567,SUNITINIB MALATE,PDGFRA,CCN(CC)CCNC(=O)c1c(C)[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c1C.O=C(O)C[C@H](O)C(=O)O
+4.0,,HP_0200042,Skin ulcer,CHEMBL1201556,BECAPLERMIN,PDGFRA,
+3.0,Terminated,EFO_0000182,hepatocellular carcinoma,CHEMBL223360,LINIFANIB,PDGFRA,Cc1ccc(F)c(NC(=O)Nc2ccc(-c3cccc4[nH]nc(N)c34)cc2)c1
+3.0,Terminated,EFO_0000182,hepatocellular carcinoma,CHEMBL274654,ORANTINIB,PDGFRA,Cc1[nH]c(/C=C2\C(=O)Nc3ccccc32)c(C)c1CCC(=O)O
+3.0,Recruiting,EFO_0000222,acute myeloid leukemia,CHEMBL2105728,CRENOLANIB,PDGFRA,CC1(COc2ccc3c(c2)ncn3-c2ccc3cccc(N4CCC(N)CC4)c3n2)COC1
+3.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL576982,QUIZARTINIB,PDGFRA,CC(C)(C)c1cc(NC(=O)Nc2ccc(-c3cn4c(n3)sc3cc(OCCN5CCOCC5)ccc34)cc2)no1
+3.0,"Active, not recruiting",EFO_0000349,clear cell renal carcinoma,CHEMBL477772,PAZOPANIB,PDGFRA,Cc1ccc(Nc2nccc(N(C)c3ccc4c(C)n(C)nc4c3)n2)cc1S(N)(=O)=O
+3.0,Completed,EFO_0000365,colorectal adenocarcinoma,CHEMBL1278146,FAMITINIB,PDGFRA,CCN(CC)CCN1CCc2[nH]c(/C=C3\C(=O)Nc4ccc(F)cc43)c(C)c2C1=O
+3.0,,EFO_0000616,neoplasm,CHEMBL502835,NINTEDANIB,PDGFRA,COC(=O)c1ccc2c(c1)NC(=O)/C2=C(\Nc1ccc(N(C)C(=O)CN2CCN(C)CC2)cc1)c1ccccc1
+3.0,Completed,EFO_0000519,glioblastoma multiforme,CHEMBL491473,CEDIRANIB,PDGFRA,COc1cc2c(Oc3ccc4[nH]c(C)cc4c3F)ncnc2cc1OCCCN1CCCC1
+3.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL522892,DOVITINIB,PDGFRA,CN1CCN(c2ccc3nc(-c4c(N)c5c(F)cccc5[nH]c4=O)[nH]c3c2)CC1
+3.0,Terminated,EFO_0003060,non-small cell lung carcinoma,CHEMBL572881,MOTESANIB,PDGFRA,CC1(C)CNc2cc(NC(=O)c3cccnc3NCc3ccncc3)ccc21
+3.0,Not yet recruiting,EFO_0001361,pulmonary arterial hypertension,CHEMBL4650333,SERALUTINIB,PDGFRA,COc1ccc(-c2cncc(N[C@@H](C)c3cccc(NC(=O)c4cncc(C)c4)c3)n2)cc1OC
+3.0,Completed,EFO_0004288,colonic neoplasm,CHEMBL101253,VATALANIB,PDGFRA,Clc1ccc(Nc2nnc(Cc3ccncc3)c3ccccc23)cc1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL5314391,XL-999,PDGFRA,CCN1CCC(Nc2ccc3c(c2)/C(=C(\c2cccc(F)c2)c2nc(C)c[nH]2)C(=O)N3)CC1
+2.0,Completed,EFO_0000519,glioblastoma multiforme,CHEMBL2364651,TOVETUMAB,PDGFRA,
+2.0,Completed,EFO_0000681,renal cell carcinoma,CHEMBL1230609,FORETINIB,PDGFRA,COc1cc2c(Oc3ccc(NC(=O)C4(C(=O)Nc5ccc(F)cc5)CC4)cc3F)ccnc2cc1OCCCN1CCOCC1
+2.0,Completed,EFO_0000702,small cell lung carcinoma,CHEMBL2103851,AMUVATINIB,PDGFRA,S=C(NCc1ccc2c(c1)OCO2)N1CCN(c2ncnc3c2oc2ccccc23)CC1
+2.0,Terminated,EFO_0001365,age-related macular degeneration,CHEMBL3545401,X-82,PDGFRA,
+2.0,Completed,EFO_0003869,breast neoplasm,CHEMBL1721885,SU-014813,PDGFRA,Cc1[nH]c(/C=C2\C(=O)Nc3ccc(F)cc32)c(C)c1C(=O)NC[C@H](O)CN1CCOCC1
+2.0,Completed,EFO_0002618,pancreatic carcinoma,CHEMBL52885,ENMD-981693,PDGFRA,Cn1cc(C2=C(c3cn(C)c4cc([N+](=O)[O-])ccc34)C(=O)NC2=O)c2ccccc21
+2.0,Terminated,MONDO_0004992,cancer,CHEMBL1980297,ILORASERTIB,PDGFRA,Nc1ncc(-c2cnn(CCO)c2)c2scc(-c3ccc(NC(=O)Nc4cccc(F)c4)cc3)c12
+2.0,Completed,MONDO_0011719,gastrointestinal stromal tumor,CHEMBL3545402,XL-820,PDGFRA,
+1.0,Completed,EFO_0000616,neoplasm,CHEMBL2180604,TAK-593,PDGFRA,Cc1cc(C(=O)Nc2cc(Oc3ccc4nc(NC(=O)C5CC5)cn4n3)ccc2C)n(C)n1
+4.0,Completed,EFO_0000224,acute promyelocytic leukemia,CHEMBL38,TRETINOIN,RARA,CC1=C(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)C(C)(C)CCC1
+4.0,Unknown status,EFO_0000676,psoriasis,CHEMBL1131,ACITRETIN,RARA,COc1cc(C)c(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)c(C)c1C
+4.0,,EFO_0000676,psoriasis,CHEMBL1657,TAZAROTENE,RARA,CCOC(=O)c1ccc(C#Cc2ccc3c(c2)C(C)(C)CCS3)nc1
+4.0,,EFO_0000558,Kaposi's sarcoma,CHEMBL705,ALITRETINOIN,RARA,CC1=C(/C=C/C(C)=C\C=C\C(C)=C\C(=O)O)C(C)(C)CCC1
+4.0,,EFO_0000676,psoriasis,CHEMBL464,ETRETINATE,RARA,CCOC(=O)/C=C(C)/C=C/C=C(C)/C=C/c1c(C)cc(OC)c(C)c1C
+4.0,,EFO_0003894,acne,CHEMBL1265,ADAPALENE,RARA,COc1ccc(-c2ccc3cc(C(=O)O)ccc3c2)cc1C12CC3CC(CC(C3)C1)C2
+4.0,,EFO_0003894,acne,CHEMBL547,ISOTRETINOIN,RARA,CC1=C(/C=C/C(C)=C/C=C/C(C)=C\C(=O)O)C(C)(C)CCC1
+3.0,Recruiting,EFO_0000198,myelodysplastic syndrome,CHEMBL25202,TAMIBAROTENE,RARA,CC1(C)CCC(C)(C)c2cc(NC(=O)c3ccc(C(=O)O)cc3)ccc21
+2.0,Withdrawn,EFO_0000224,acute promyelocytic leukemia,CHEMBL107430,NRX195183,RARA,CC1(C)CCC(C)(C)c2c1cc(C(=O)Nc1cc(F)c(C(=O)O)c(F)c1)c(O)c2Cl
+4.0,Unknown status,EFO_0000224,acute promyelocytic leukemia,CHEMBL38,TRETINOIN,RARB,CC1=C(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)C(C)(C)CCC1
+4.0,,EFO_0000616,neoplasm,CHEMBL705,ALITRETINOIN,RARB,CC1=C(/C=C/C(C)=C\C=C\C(C)=C\C(=O)O)C(C)(C)CCC1
+4.0,Completed,EFO_0000676,psoriasis,CHEMBL1131,ACITRETIN,RARB,COc1cc(C)c(/C=C/C(C)=C/C=C/C(C)=C/C(=O)O)c(C)c1C
+4.0,,EFO_0000676,psoriasis,CHEMBL464,ETRETINATE,RARB,CCOC(=O)/C=C(C)/C=C/C=C(C)/C=C/c1c(C)cc(OC)c(C)c1C
+4.0,,EFO_0000676,psoriasis,CHEMBL1657,TAZAROTENE,RARB,CCOC(=O)c1ccc(C#Cc2ccc3c(c2)C(C)(C)CCS3)nc1
+4.0,"Active, not recruiting",EFO_0003894,acne,CHEMBL1265,ADAPALENE,RARB,COc1ccc(-c2ccc3cc(C(=O)O)ccc3c2)cc1C12CC3CC(CC(C3)C1)C2
+4.0,,EFO_0003894,acne,CHEMBL547,ISOTRETINOIN,RARB,CC1=C(/C=C/C(C)=C/C=C/C(C)=C\C(=O)O)C(C)(C)CCC1
+3.0,Recruiting,EFO_0000198,myelodysplastic syndrome,CHEMBL25202,TAMIBAROTENE,RARB,CC1(C)CCC(C)(C)c2cc(NC(=O)c3ccc(C(=O)O)cc3)ccc21
+4.0,,EFO_0000616,neoplasm,CHEMBL1287853,FEDRATINIB,JAK2,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1
+4.0,,EFO_0000685,rheumatoid arthritis,CHEMBL2105759,BARICITINIB,JAK2,CCS(=O)(=O)N1CC(CC#N)(n2cc(-c3ncnc4[nH]ccc34)cn2)C1
+4.0,,EFO_0000685,rheumatoid arthritis,CHEMBL5315119,UPADACITINIB HEMIHYDRATE,JAK2,CC[C@@H]1CN(C(=O)NCC(F)(F)F)C[C@@H]1c1cnc2cnc3[nH]ccc3n12.CC[C@@H]1CN(C(=O)NCC(F)(F)F)C[C@@H]1c1cnc2cnc3[nH]ccc3n12.O
+4.0,,EFO_0000616,neoplasm,CHEMBL1789941,RUXOLITINIB,JAK2,N#CC[C@H](C1CCCC1)n1cc(-c2ncnc3[nH]ccc23)cn1
+4.0,,EFO_0000616,neoplasm,CHEMBL2035187,PACRITINIB,JAK2,C1=N/C2=N/c3ccc(OCCN4CCCC4)c(c3)COC/C=C/COCc3cccc(c3)C(=C1)N2
+4.0,,EFO_0002429,polycythemia vera,CHEMBL1795071,RUXOLITINIB PHOSPHATE,JAK2,N#CC[C@H](C1CCCC1)n1cc(-c2ncnc3[nH]ccc23)cn1.O=P(O)(O)O
+4.0,,EFO_0002429,polycythemia vera,CHEMBL5095049,PACRITINIB CITRATE,JAK2,C1=C/COCc2cc(ccc2OCCN2CCCC2)Nc2nccc(n2)-c2cccc(c2)COC/1.O=C(O)CC(O)(CC(=O)O)C(=O)O
+4.0,,EFO_0002430,primary myelofibrosis,CHEMBL4297216,FEDRATINIB HYDROCHLORIDE,JAK2,Cc1cnc(Nc2ccc(OCCN3CCCC3)cc2)nc1Nc1cccc(S(=O)(=O)NC(C)(C)C)c1.Cl.Cl.O
+4.0,,EFO_0000685,rheumatoid arthritis,CHEMBL2103743,TOFACITINIB CITRATE,JAK2,C[C@@H]1CCN(C(=O)CC#N)C[C@@H]1N(C)c1ncnc2[nH]ccc12.O=C(O)CC(O)(CC(=O)O)C(=O)O
+4.0,,EFO_0000685,rheumatoid arthritis,CHEMBL4298167,FILGOTINIB MALEATE,JAK2,O=C(Nc1nc2cccc(-c3ccc(CN4CCS(=O)(=O)CC4)cc3)n2n1)C1CC1.O=C(O)/C=C\C(=O)O
+3.0,"Active, not recruiting",EFO_0000220,acute lymphoblastic leukemia,CHEMBL603469,LESTAURTINIB,JAK2,C[C@]12O[C@H](C[C@]1(O)CO)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)CNC4=O
+3.0,"Active, not recruiting",EFO_0000274,atopic eczema,CHEMBL3622821,UPADACITINIB,JAK2,CC[C@@H]1CN(C(=O)NCC(F)(F)F)C[C@@H]1c1cnc2cnc3[nH]ccc3n12
+3.0,Completed,EFO_0000384,Crohn's disease,CHEMBL3301607,FILGOTINIB,JAK2,O=C(Nc1nc2cccc(-c3ccc(CN4CCS(=O)(=O)CC4)cc3)n2n1)C1CC1
+3.0,,EFO_0000540,immune system disease,CHEMBL221959,TOFACITINIB,JAK2,C[C@@H]1CCN(C(=O)CC#N)C[C@@H]1N(C)c1ncnc2[nH]ccc12
+3.0,,EFO_0000540,immune system disease,CHEMBL3137308,PEFICITINIB,JAK2,NC(=O)c1cnc2[nH]ccc2c1N[C@@H]1[C@@H]2CC3C[C@H]1C[C@@](O)(C3)C2
+3.0,Completed,EFO_0002430,primary myelofibrosis,CHEMBL1078178,MOMELOTINIB,JAK2,N#CCNC(=O)c1ccc(-c2ccnc(Nc3ccc(N4CCOCC4)cc3)n2)cc1
+3.0,Recruiting,HP_0000964,Eczematoid dermatitis,CHEMBL4297507,DELGOCITINIB,JAK2,C[C@H]1CN(C(=O)CC#N)[C@]12CCN(c1ncnc3[nH]ccc13)C2
+2.0,Terminated,EFO_0000274,atopic eczema,CHEMBL4594275,GUSACITINIB,JAK2,N#CCC1CCN(c2nc(Nc3ccc(N4CCC(O)CC4)cc3)c3c(=O)[nH]ncc3n2)CC1
+2.0,Terminated,EFO_0000384,Crohn's disease,CHEMBL4650343,IZENCITINIB,JAK2,Cc1cc(Nc2cc3ncccc3c(N[C@@H]3C[C@H]4CC[C@@H](C3)N4CCC#N)n2)n[nH]1
+2.0,"Active, not recruiting",EFO_0000616,neoplasm,CHEMBL2107823,GANDOTINIB,JAK2,Cc1cc(Nc2cc(CN3CCOCC3)c3nc(C)c(Cc4ccc(Cl)cc4F)n3n2)n[nH]1
+2.0,Completed,EFO_0001378,multiple myeloma,CHEMBL495727,AT-9283,JAK2,O=C(Nc1c[nH]nc1-c1nc2ccc(CN3CCOCC3)cc2[nH]1)NC1CC1
+1.0,Withdrawn,EFO_0000182,hepatocellular carcinoma,CHEMBL1944698,ZOTIRACICLIB,JAK2,CN1C/C=C/CCOc2cccc(c2)-c2ccnc(n2)Nc2cccc(c2)C1
+1.0,Terminated,EFO_0000182,hepatocellular carcinoma,CHEMBL1231124,AZD-1480,JAK2,Cc1cc(Nc2nc(N[C@@H](C)c3ncc(F)cn3)ncc2Cl)[nH]n1
+1.0,Completed,EFO_0000685,rheumatoid arthritis,CHEMBL3545241,AC-430,JAK2,Cc1cc(Nc2nc(C(O)c3ccc(F)cc3)nc3ccccc23)n[nH]1
+1.0,Terminated,EFO_0000479,essential thrombocythemia,CHEMBL3545328,XL-019,JAK2,O=C(Nc1ccc(-c2ccnc(Nc3ccc(N4CCOCC4)cc3)n2)cc1)C1CCCN1
+1.0,Completed,EFO_0004610,acute lung injury,CHEMBL4802163,NEZULCITINIB,JAK2,CCc1cc(O)ccc1-c1ccc2c(-c3nc4c([nH]3)C[C@@H](C(=O)N3CC(N(C)C)C3)N(C(C)C)C4)n[nH]c2c1
+1.0,Completed,EFO_0002430,primary myelofibrosis,CHEMBL4303389,NS-018,JAK2,C[C@H](Nc1cc(-c2cnn(C)c2)cc(Nc2cnccn2)n1)c1ccc(F)cc1
+1.0,Terminated,MONDO_0004992,cancer,CHEMBL3545215,BMS-911543,JAK2,CCn1c(C(=O)N(C2CC2)C2CC2)cc2c3c(ncn3C)c(Nc3cc(C)n(C)n3)nc21
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKCD,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+2.0,Completed,EFO_0000612,myocardial infarction,CHEMBL2107872,DELCASERTIB,PRKCD,
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKCD,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+2.0,Completed,EFO_0000676,psoriasis,CHEMBL565612,SOTRASTAURIN,PRKCD,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+1.0,Terminated,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKCD,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKCE,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKCE,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+2.0,Completed,EFO_0000729,ulcerative colitis,CHEMBL565612,SOTRASTAURIN,PRKCE,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+2.0,Completed,HP_0012531,Pain,CHEMBL4297775,KAI-1678,PRKCE,
+1.0,Terminated,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKCE,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKCH,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKCH,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+2.0,Completed,EFO_0000729,ulcerative colitis,CHEMBL565612,SOTRASTAURIN,PRKCH,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+1.0,Terminated,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKCH,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKCQ,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+2.0,Completed,EFO_0000676,psoriasis,CHEMBL565612,SOTRASTAURIN,PRKCQ,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKCQ,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+1.0,Terminated,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKCQ,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKCA,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+3.0,Completed,EFO_0003060,non-small cell lung carcinoma,CHEMBL2108287,APRINOCARSEN,PRKCA,
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKCA,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+2.0,Completed,EFO_0000729,ulcerative colitis,CHEMBL565612,SOTRASTAURIN,PRKCA,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+1.0,Withdrawn,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKCA,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL1201506,GEMTUZUMAB OZOGAMICIN,CD33,
+3.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL2108342,GEMTUZUMAB,CD33,
+3.0,Unknown status,EFO_0000565,leukemia,CHEMBL2109150,LINTUZUMAB,CD33,
+1.0,Completed,EFO_0000198,myelodysplastic syndrome,CHEMBL2109267,M195,CD33,
+1.0,Terminated,MONDO_0004643,myeloid leukemia,CHEMBL2109266,AVE-9633,CD33,
+3.0,"Active, not recruiting",EFO_0000222,acute myeloid leukemia,CHEMBL3833386,GALINPEPIMUT-S,WT1,
+3.0,Completed,EFO_0000519,glioblastoma multiforme,CHEMBL4297235,OMBIPEPIMUT-S,WT1,
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS29,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS29,
+2.0,Completed,MONDO_0009061,cystic fibrosis,CHEMBL4297744,ELX-02,RPS29,
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPL35A,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPL35A,
+2.0,Completed,MONDO_0009061,cystic fibrosis,CHEMBL4297744,ELX-02,RPL35A,
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKCB,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+3.0,Completed,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL300138,ENZASTAURIN,PRKCB,Cn1cc(C2=C(c3cn(C4CCN(Cc5ccccn5)CC4)c4ccccc34)C(=O)NC2=O)c2ccccc21
+3.0,Completed,EFO_0003770,diabetic retinopathy,CHEMBL91829,RUBOXISTAURIN,PRKCB,CN(C)C[C@@H]1CCn2cc(c3ccccc32)C2=C(C(=O)NC2=O)c2cn(c3ccccc23)CCO1
+2.0,Completed,EFO_0000676,psoriasis,CHEMBL565612,SOTRASTAURIN,PRKCB,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKCB,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+1.0,Withdrawn,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKCB,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+3.0,Recruiting,MONDO_0044903,myelofibrosis,CHEMBL2107856,IMETELSTAT,TERT,
+2.0,Completed,MONDO_0007254,breast cancer,CHEMBL2108702,IMETELSTAT SODIUM,TERT,
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPL36,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPL36,
+2.0,Completed,MONDO_0009061,cystic fibrosis,CHEMBL4297744,ELX-02,RPL36,
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPL23,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPL23,
+2.0,Recruiting,MONDO_0018965,Alport syndrome,CHEMBL4297744,ELX-02,RPL23,
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,POLE,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,POLE,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,"Active, not recruiting",EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,POLE,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,POLE,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,POLE,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,POLE,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,POLE,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKCZ,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKCZ,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+2.0,Completed,EFO_0000729,ulcerative colitis,CHEMBL565612,SOTRASTAURIN,PRKCZ,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+1.0,Terminated,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKCZ,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPL5,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPL5,
+2.0,Terminated,MONDO_0016239,cystinosis,CHEMBL4297744,ELX-02,RPL5,
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,POLA2,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,POLA2,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,POLA2,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,POLA2,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,POLA2,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,POLA2,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,POLA2,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKD1,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKD1,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+2.0,Completed,EFO_0000676,psoriasis,CHEMBL565612,SOTRASTAURIN,PRKD1,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+1.0,Withdrawn,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKD1,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPL11,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPL11,
+2.0,Terminated,MONDO_0016239,cystinosis,CHEMBL4297744,ELX-02,RPL11,
+4.0,,EFO_0000508,genetic disorder,CHEMBL4297879,.ALPHA.1-PROTEINASE INHIBITOR HUMAN,ELANE,
+3.0,Not yet recruiting,EFO_0003777,heart disease,CHEMBL76688,SIVELESTAT,ELANE,CC(C)(C)C(=O)Oc1ccc(S(=O)(=O)Nc2ccccc2C(=O)NCC(=O)O)cc1
+2.0,Completed,EFO_0000341,chronic obstructive pulmonary disease,CHEMBL3617964,ALVELESTAT,ELANE,Cc1c(-c2ccnn2C)cc(C(=O)NCc2ccc(S(C)(=O)=O)cn2)c(=O)n1-c1cccc(C(F)(F)F)c1
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS27,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS27,
+2.0,Recruiting,MONDO_0018965,Alport syndrome,CHEMBL4297744,ELX-02,RPS27,
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,PRIM1,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,PRIM1,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,PRIM1,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,PRIM1,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,PRIM1,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,PRIM1,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,PRIM1,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,POLE2,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,POLE2,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,POLE2,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,POLE2,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,POLE2,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,POLE2,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,POLE2,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKCI,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKCI,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+2.0,Completed,EFO_0000676,psoriasis,CHEMBL565612,SOTRASTAURIN,PRKCI,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+1.0,Terminated,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKCI,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS26,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS26,
+2.0,Completed,MONDO_0009061,cystic fibrosis,CHEMBL4297744,ELX-02,RPS26,
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,POLD4,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,POLD4,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,POLD4,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,POLD4,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,POLD4,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,POLD4,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,POLD4,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPL31,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPL31,
+2.0,Recruiting,MONDO_0018965,Alport syndrome,CHEMBL4297744,ELX-02,RPL31,
+4.0,,EFO_0001421,liver disease,CHEMBL2105758,AVATROMBOPAG MALEATE,MPL,O=C(Nc1nc(-c2cc(Cl)cs2)c(N2CCN(C3CCCCC3)CC2)s1)c1cnc(N2CCC(C(=O)O)CC2)c(Cl)c1.O=C(O)/C=C\C(=O)O
+4.0,,EFO_0004220,chronic hepatitis C virus infection,CHEMBL3989691,ELTROMBOPAG OLAMINE,MPL,CC1=NN(c2ccc(C)c(C)c2)C(=O)/C1=N\Nc1cccc(-c2cccc(C(=O)O)c2)c1O.NCCO.NCCO
+4.0,Completed,EFO_0007160,autoimmune thrombocytopenic purpura,CHEMBL1201832,ROMIPLOSTIM,MPL,
+4.0,,HP_0001873,Thrombocytopenia,CHEMBL2107831,LUSUTROMBOPAG,MPL,CCCCCCO[C@@H](C)c1cccc(-c2csc(NC(=O)c3cc(Cl)c(/C=C(\C)C(=O)O)c(Cl)c3)n2)c1OC
+4.0,,MP_0001914,hemorrhage,CHEMBL2103883,AVATROMBOPAG,MPL,O=C(Nc1nc(-c2cc(Cl)cs2)c(N2CCN(C3CCCCC3)CC2)s1)c1cnc(N2CCC(C(=O)O)CC2)c(Cl)c1
+3.0,Unknown status,EFO_0000616,neoplasm,CHEMBL461101,ELTROMBOPAG,MPL,CC1=NN(c2ccc(C)c(C)c2)C(=O)/C1=N\Nc1cccc(-c2cccc(C(=O)O)c2)c1O
+3.0,Completed,EFO_0007160,autoimmune thrombocytopenic purpura,CHEMBL4297764,HETROMBOPAG OLAMINE,MPL,
+3.0,Not yet recruiting,HP_0001873,Thrombocytopenia,CHEMBL4594401,RAFUTROMBOPAG,MPL,CC1=NN(c2ccc3c(c2)CCCC3)C(=O)/C1=N\Nc1cccc(-c2ccc(C(=O)O)o2)c1O
+4.0,,EFO_0000616,neoplasm,CHEMBL601719,CRIZOTINIB,NPM1,C[C@@H](Oc1cc(-c2cnn(C3CCNCC3)c2)cnc1N)c1c(Cl)ccc(F)c1Cl
+4.0,,EFO_0000616,neoplasm,CHEMBL2403108,CERITINIB,NPM1,Cc1cc(Nc2ncc(Cl)c(Nc3ccccc3S(=O)(=O)C(C)C)n2)c(OC(C)C)cc1C1CCNCC1
+2.0,Not yet recruiting,EFO_0000222,acute myeloid leukemia,CHEMBL4650827,REVUMENIB,KMT2A,CCN(C(=O)c1cc(F)ccc1Oc1cncnc1N1CC2(CCN(C[C@H]3CC[C@H](NS(=O)(=O)CC)CC3)CC2)C1)C(C)C
+1.0,Recruiting,EFO_0000222,acute myeloid leukemia,CHEMBL4650278,REVUMENIB SESQUIFUMARATE,KMT2A,CCN(C(=O)c1cc(F)ccc1Oc1cncnc1N1CC2(CCN(C[C@H]3CC[C@H](NS(=O)(=O)CC)CC3)CC2)C1)C(C)C.CCN(C(=O)c1cc(F)ccc1Oc1cncnc1N1CC2(CCN(C[C@H]3CC[C@H](NS(=O)(=O)CC)CC3)CC2)C1)C(C)C.O=C(O)/C=C/C(=O)O.O=C(O)/C=C/C(=O)O.O=C(O)/C=C/C(=O)O
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS7,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS7,
+2.0,Recruiting,MONDO_0018965,Alport syndrome,CHEMBL4297744,ELX-02,RPS7,
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS10,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS10,
+2.0,Completed,MONDO_0009061,cystic fibrosis,CHEMBL4297744,ELX-02,RPS10,
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS19,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS19,
+2.0,Terminated,MONDO_0016239,cystinosis,CHEMBL4297744,ELX-02,RPS19,
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS17,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS17,
+2.0,Completed,MONDO_0009061,cystic fibrosis,CHEMBL4297744,ELX-02,RPS17,
+4.0,Completed,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,PRIM2,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,PRIM2,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,PRIM2,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,PRIM2,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,PRIM2,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,PRIM2,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,PRIM2,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS28,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS28,
+2.0,Terminated,MONDO_0016239,cystinosis,CHEMBL4297744,ELX-02,RPS28,
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS27A,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS27A,
+2.0,Terminated,MONDO_0016239,cystinosis,CHEMBL4297744,ELX-02,RPS27A,
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,POLD3,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,POLD3,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,"Active, not recruiting",EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,POLD3,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,POLD3,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,POLD3,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,POLD3,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,POLD3,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPL15,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPL15,
+2.0,Completed,MONDO_0009061,cystic fibrosis,CHEMBL4297744,ELX-02,RPL15,
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPL26,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPL26,
+2.0,Completed,MONDO_0009061,cystic fibrosis,CHEMBL4297744,ELX-02,RPL26,
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,POLD1,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,POLD1,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,"Active, not recruiting",EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,POLD1,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,POLD1,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,POLD1,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,POLD1,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,POLD1,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,EFO_0000616,neoplasm,CHEMBL4535757,SOTORASIB,KRAS,C=CC(=O)N1CCN(c2nc(=O)n(-c3c(C)ccnc3C(C)C)c3nc(-c4c(O)cccc4F)c(F)cc23)[C@@H](C)C1
+4.0,,EFO_0000616,neoplasm,CHEMBL4594350,ADAGRASIB,KRAS,C=C(F)C(=O)N1CCN(c2nc(OC[C@@H]3CCCN3C)nc3c2CCN(c2cccc4cccc(Cl)c24)C3)C[C@@H]1CC#N
+1.0,Recruiting,EFO_0000616,neoplasm,CHEMBL4650521,BATOPROTAFIB,PTPN11,C[C@@H]1OCC2(CCN(c3cnc(Sc4ccnc(N)c4Cl)c(N)n3)CC2)[C@@H]1N
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1421,DASATINIB ANHYDROUS,BCR,Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL2105708,PONATINIB HYDROCHLORIDE,BCR,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2cccnn12.Cl
+4.0,,EFO_0000339,chronic myelogenous leukemia,CHEMBL1201740,NILOTINIB HYDROCHLORIDE MONOHYDRATE,BCR,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1.Cl.O
+4.0,,EFO_0000339,chronic myelogenous leukemia,CHEMBL4297220,ASCIMINIB HYDROCHLORIDE,BCR,Cl.O=C(Nc1ccc(OC(F)(F)Cl)cc1)c1cnc(N2CC[C@@H](O)C2)c(-c2cc[nH]n2)c1
+4.0,,EFO_0000339,chronic myelogenous leukemia,CHEMBL1642,IMATINIB MESYLATE,BCR,CS(=O)(=O)O.Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+4.0,,EFO_0000339,chronic myelogenous leukemia,CHEMBL2095206,BOSUTINIB MONOHYDRATE,BCR,COc1cc(Nc2c(C#N)cnc3cc(OCCCN4CCN(C)CC4)c(OC)cc23)c(Cl)cc1Cl.O
+4.0,,EFO_0000616,neoplasm,CHEMBL4208229,ASCIMINIB,BCR,O=C(Nc1ccc(OC(F)(F)Cl)cc1)c1cnc(N2CC[C@@H](O)C2)c(-c2cc[nH]n2)c1
+3.0,Recruiting,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1171837,PONATINIB,BCR,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2cccnn12
+3.0,Recruiting,EFO_0000209,T-cell acute lymphoblastic leukemia,CHEMBL941,IMATINIB,BCR,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1
+3.0,Recruiting,EFO_0000220,acute lymphoblastic leukemia,CHEMBL2316582,OLVEREMBATINIB,BCR,Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(C(F)(F)F)c2)cc1C#Cc1cnc2[nH]ncc2c1
+3.0,"Active, not recruiting",EFO_0000339,chronic myelogenous leukemia,CHEMBL255863,NILOTINIB,BCR,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1
+3.0,Completed,EFO_0000339,chronic myelogenous leukemia,CHEMBL288441,BOSUTINIB,BCR,COc1cc(Nc2c(C#N)cnc3cc(OCCCN4CCN(C)CC4)c(OC)cc23)c(Cl)cc1Cl
+3.0,Recruiting,EFO_0000339,chronic myelogenous leukemia,CHEMBL4297524,RADOTINIB,BCR,Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cnccn5)n4)c3)cc(C(F)(F)F)c2)cn1
+2.0,Recruiting,HP_0000726,Dementia,CHEMBL4130229,VODOBATINIB,BCR,Cc1ccc(C(=O)NNC(=O)c2c(C)cccc2Cl)cc1C#Cc1cnc2ccccc2c1
+4.0,,EFO_0000691,sarcoma,CHEMBL4594260,TAZEMETOSTAT HYDROBROMIDE,EZH2,Br.CCN(c1cc(-c2ccc(CN3CCOCC3)cc2)cc(C(=O)NCc2c(C)cc(C)[nH]c2=O)c1C)C1CCOCC1
+4.0,,EFO_0000616,neoplasm,CHEMBL3414621,TAZEMETOSTAT,EZH2,CCN(c1cc(-c2ccc(CN3CCOCC3)cc2)cc(C(=O)NCc2c(C)cc(C)[nH]c2=O)c1C)C1CCOCC1
+1.0,Terminated,EFO_0000616,neoplasm,CHEMBL3287735,GSK2816126,EZH2,CC[C@H](C)n1cc(C)c2c(C(=O)NCc3c(C)cc(C)[nH]c3=O)cc(-c3ccc(N4CCNCC4)nc3)cc21
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL608533,MIDOSTAURIN,PRKCG,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4
+2.0,Terminated,EFO_0000574,lymphoma,CHEMBL574737,UCN-01,PRKCG,CN[C@@H]1C[C@H]2O[C@@](C)([C@@H]1OC)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)N[C@H]4O
+2.0,Completed,EFO_0000729,ulcerative colitis,CHEMBL565612,SOTRASTAURIN,PRKCG,CN1CCN(c2nc(C3=C(c4c[nH]c5ccccc45)C(=O)NC3=O)c3ccccc3n2)CC1
+1.0,Terminated,MONDO_0004992,cancer,CHEMBL494089,GSK-690693,PRKCG,CCn1c(-c2nonc2N)nc2c(C#CC(C)(C)O)ncc(OC[C@H]3CCCNC3)c21
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,POLE3,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,POLE3,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,POLE3,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,POLE3,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,POLE3,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,POLE3,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,POLE3,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,EFO_0000095,chronic lymphocytic leukemia,CHEMBL1096882,FLUDARABINE PHOSPHATE,POLD2,Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@@H]1O
+4.0,,EFO_0000220,acute lymphoblastic leukemia,CHEMBL1750,CLOFARABINE,POLD2,Nc1nc(Cl)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1F
+4.0,,EFO_0000222,acute myeloid leukemia,CHEMBL803,CYTARABINE,POLD2,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1
+4.0,,EFO_0000305,breast carcinoma,CHEMBL1637,GEMCITABINE HYDROCHLORIDE,POLD2,Cl.Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+4.0,,EFO_0000616,neoplasm,CHEMBL888,GEMCITABINE,POLD2,Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)C2(F)F)c(=O)n1
+2.0,Terminated,EFO_0000222,acute myeloid leukemia,CHEMBL359164,TROXACITABINE,POLD2,Nc1ccn([C@@H]2CO[C@H](CO)O2)c(=O)n1
+2.0,Completed,EFO_0000222,acute myeloid leukemia,CHEMBL4297599,ASPACYTARABINE,POLD2,N[C@@H](CC(=O)Nc1ccn([C@@H]2O[C@H](CO)[C@@H](O)[C@@H]2O)c(=O)n1)C(=O)O
+4.0,,MONDO_0010679,Duchenne muscular dystrophy,CHEMBL256997,ATALUREN,RPS24,O=C(O)c1cccc(-c2noc(-c3ccccc3F)n2)c1
+2.0,Terminated,EFO_0000403,diffuse large B-cell lymphoma,CHEMBL4297789,MT-3724,RPS24,
+2.0,Completed,MONDO_0009061,cystic fibrosis,CHEMBL4297744,ELX-02,RPS24,

@@ -1,0 +1,18 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes,_name_norm,_in_known,chembl_id
+Sunitinib,Multi-kinase TKI,Inhibits FLT3 and related RTKs (VEGFR/PDGFR/KIT) reducing downstream signaling,10.0,100.0,nM,FLT3-active; active in FLT3-ITD AML,sunitinib,False,CHEMBL597365
+Ponatinib,Multitargeted TKI (ABL/FLT3/VEGFR),Potently inhibits FLT3 (WT and mutants) and ABL family kinases,5.0,30.0,nM,Active in MOLM-13 and other FLT3-ITD lines,ponatinib,False,CHEMBL2105708
+Cabozantinib,Multi-kinase TKI (MET/VEGFR/FLT3),Inhibits MET/VEGFR and FLT3 signaling pathways,10.0,200.0,nM,Preclinical FLT3 activity in FLT3-ITD AML models,cabozantinib,False,CHEMBL2105717
+Regorafenib,Multi-kinase TKI (VEGFR/RAF/FLT3),Blocks RAF/VEGFR and reported FLT3 signaling to reduce AML cell viability,0.1,1.0,µM,Submicromolar activity reported in FLT3-ITD AML assays,regorafenib,False,CHEMBL1946170
+Dasatinib,SRC/ABL/KIT TKI,"Inhibits SRC family kinases, ABL, and KIT to suppress oncogenic signaling",0.05,0.5,µM,Anti-AML activity; sensitivity varies by genotype,dasatinib,False,CHEMBL1421
+Nilotinib,ABL/KIT TKI,Inhibits BCR-ABL and KIT signaling relevant to some AML subsets,0.1,1.0,µM,Preclinical anti-AML effects; activity context-dependent,nilotinib,False,CHEMBL255863
+Pazopanib,Multi-kinase TKI (VEGFR/PDGFR; FLT3-active),Inhibits VEGFR/PDGFR and reported FLT3 signaling,0.1,1.0,µM,Submicromolar activity in some FLT3-ITD AML studies,pazopanib,False,CHEMBL477772
+Trametinib,MEK inhibitor (MEK1/2),Blocks MEK1/2 to inhibit RAS/MAPK signaling downstream of FLT3,5.0,100.0,nM,Reported low- to mid-nanomolar activity in AML lines,trametinib,False,CHEMBL2103875
+Cobimetinib,MEK inhibitor (MEK1),Inhibits MEK1 to reduce MAPK pathway signaling,20.0,300.0,nM,Tens to hundreds of nM potency in AML lines,cobimetinib,False,CHEMBL4538425
+Everolimus,mTORC1 inhibitor,"Inhibits mTORC1 signaling, suppressing AML growth and survival pathways",0.1,1.0,µM,Cell viability effects often submicromolar; Temsirolimus is an alternative agent in the same class,everolimus,False,CHEMBL1908360
+Ruxolitinib,JAK1/2 inhibitor,Blocks JAK/STAT signaling implicated in AML survival,0.1,3.0,µM,Activity is context-specific; can synergize with FLT3/BCL2 inhibitors,ruxolitinib,False,CHEMBL1287854
+Panobinostat,HDAC inhibitor (pan-HDAC),Inhibits histone deacetylases to induce apoptosis/differentiation,10.0,50.0,nM,Low-nanomolar viability effects in AML including FLT3-ITD,panobinostat,False,CHEMBL483254
+Romidepsin,HDAC inhibitor (class I),Inhibits class I HDACs to trigger apoptosis in AML,10.0,100.0,nM,Tens of nM potency in AML viability assays,romidepsin,False,CHEMBL343448
+Bortezomib,26S proteasome inhibitor,"Inhibits proteasomal degradation, inducing apoptosis in AML cells",5.0,20.0,nM,Strong activity in FLT3-ITD AML (MOLM-13/MV4-11),bortezomib,False,CHEMBL325041
+Carfilzomib,Proteasome inhibitor (irreversible),Irreversibly inhibits the 20S proteasome catalytic activity,5.0,50.0,nM,Low-nanomolar activity in AML lines,carfilzomib,False,CHEMBL451887
+Tigecycline,Antibiotic; mitochondrial translation inhibitor,"Inhibits mitochondrial protein synthesis, impairing OXPHOS-dependent AML cells",0.1,1.0,µM,Targets leukemic stem/progenitor mitochondrial translation; submicromolar activity,tigecycline,False,CHEMBL376140
+Auranofin,Antirheumatic; thioredoxin reductase inhibitor,"Inhibits thioredoxin reductase, increasing oxidative stress and inducing apoptosis",0.2,3.0,µM,Activity reported in FLT3-ITD models; submicromolar to low micromolar effects,auranofin,False,CHEMBL1366

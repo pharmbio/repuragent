@@ -1,0 +1,21 @@
+drug_name,category,mechanism,test_range_start,test_range_end,unit,additional_notes
+Arsenic Trioxide,Inducer of apoptosis and angiogenesis inhibitor,Induces apoptosis and inhibits angiogenesis,0.5,5.0,µM,Used in acute promyelocytic leukemia
+Imatinib,Tyrosine kinase inhibitor,"Effective against BCR-ABL, c-KIT, and PDGFR",1.0,10.0,µM,Commonly used in chronic myeloid leukemia
+Sorafenib,Multi-kinase inhibitor,"Targets Raf kinase, VEGFR, and PDGFR",1.0,10.0,µM,
+Dasatinib,Tyrosine kinase inhibitor,"Inhibits Src family kinases, BCR-ABL, and c-KIT",1.0,10.0,nM,
+Sunitinib,Multiple receptor tyrosine kinase inhibitor,"Inhibitor of VEGFR, PDGFR, and c-KIT",10.0,100.0,nM,
+Repurposed ritonavir,Protease inhibitor,Inhibits CYP enzymes affecting AML cell signaling,1.0,10.0,µM,Primarily used as an HIV protease inhibitor
+Tamoxifen,Estrogen receptor modulator,Shows off-target effects in cancer pathways,1.0,10.0,µM,
+Metformin,Diabetes medication,Affects AMPK/mTOR pathways influencing cancer cell metabolism,10.0,50.0,mM,
+Auranofin,Antirheumatic agent,Affects thioredoxin reductase and may induce AML cell apoptosis,1.0,5.0,µM,
+Thalidomide,Immunomodulator,Functions in immunomodulation and antiangiogenic pathways,10.0,50.0,µM,
+Roflumilast,PDE4 inhibitor,Possible effects in cyclic AMP related pathways in AML,100.0,500.0,nM,
+Disulfiram,Proteasome inhibitor,Potential metabolic and proteasome inhibition in cancer cells,0.5,5.0,µM,Used primarily as an alcohol-aversion drug
+Itraconazole,Antifungal,Inhibits Hedgehog pathway,0.1,1.0,µM,
+Simvastatin,Statin,Inhibits hydroxymethylglutaryl-CoA reductase,1.0,20.0,µM,Shows anti-tumor effects
+Ponatinib,Tyrosine kinase inhibitor,Multi-target activity against BCR-ABL,1.0,10.0,nM,
+Ruxolitinib,JAK inhibitor,JAK2 inhibition,0.1,1.0,µM,Used in myeloproliferative disorders
+Vorinostat,HDAC inhibitor,Histone deacetylase inhibition,0.5,5.0,µM,
+Chloroquine,Antimalarial,Inhibition of autophagy,10.0,50.0,µM,
+Everolimus,mTOR inhibitor,Affects cell proliferation through mTOR pathways,1.0,10.0,nM,Used in anti-cancer treatments
+Carvedilol,Beta-blocker,Shows antioxidant and potential off-target cancer pathways,1.0,10.0,µM,

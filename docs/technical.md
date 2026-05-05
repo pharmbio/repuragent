@@ -54,7 +54,6 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
   - `getDrugsforProteins` – pulls Open Targets `knownDrugs` rows given proteins.
   - `getDrugsforMechanisms` – queries ChEMBL’s mechanism/molecule endpoints for the supplied MoA strings, filters by phase/type, and returns the matching drug set with SMILES.
   - `getDrugsforPathways` – resolves pathway names to Reactome IDs, maps associated proteins to Ensembl IDs, and reuses Open Targets `knownDrugs` + ChEMBL SMILES to list pathway-linked drugs.
-  - `prompt_with_file_path` – resolves natural-language file references into concrete repo paths.
 
 ---
 
@@ -64,7 +63,6 @@ Each agent is defined in `core/agents/` and built with LangGraph’s `create_rea
 - **Tools:**
   - `python_executor` – sandboxed Python REPL (pandas, NumPy, RDKit, scikit-learn, etc.) that preserves state between calls.
   - `reset_python_state` – nukes the Python namespace to recover from errors or keep memory low.
-  - `prompt_with_file_path` – turns human-friendly file descriptions into absolute paths inside the thread sandbox.
 
 ---
 

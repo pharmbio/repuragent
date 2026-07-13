@@ -1,0 +1,5 @@
+metric,value
+master_candidates_rows,607
+excluded_for_AML_repurposing_known_AML_drugs_in_KG,80
+repurposing_candidates_remaining,527
+missing_SMILES,113

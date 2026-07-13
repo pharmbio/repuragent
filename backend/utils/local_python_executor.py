@@ -16,12 +16,14 @@
 # limitations under the License.
 
 import ast
+import asyncio
 import builtins
 import difflib
 import inspect
 import logging
 import math
 import re
+import threading
 from collections.abc import Mapping
 from functools import wraps
 from importlib import import_module
@@ -209,6 +211,111 @@ DANGEROUS_FUNCTIONS = [
     "posix.system",
 ]
 
+# Builtins we never resolve by bare name (dangerous, or intentionally replaced by
+# an injected/scoped equivalent such as `open`). Everything else in `builtins`
+# is fair game — see `resolve_builtin`.
+_BUILTIN_DENYLIST = {
+    "eval",
+    "exec",
+    "compile",
+    "__import__",
+    "globals",
+    "locals",
+    "input",
+    "help",
+    "exit",
+    "quit",
+    "breakpoint",
+    "memoryview",
+}
+
+
+def resolve_builtin(name: str):
+    """Return the Python builtin for `name`, or None if it's absent or denylisted.
+
+    This is the flexibility escape hatch: any safe builtin (``repr``, ``bytes``,
+    ``hex``, ``frozenset``, ``format``, ``vars``, …) resolves instead of raising
+    "it is not permitted to evaluate other functions". Dangerous builtins stay
+    unreachable because they are denylisted here (and blocked again by
+    ``safer_eval`` / ``is_dangerous_callable``).
+    """
+    if name in _BUILTIN_DENYLIST:
+        return None
+    return getattr(builtins, name, None)
+
+
+def is_dangerous_callable(func: Any) -> bool:
+    """True when `func` is one of the explicitly forbidden functions."""
+    for qualified in DANGEROUS_FUNCTIONS:
+        module_name, function_name = qualified.rsplit(".", 1)
+        if getattr(func, "__name__", None) == function_name and getattr(func, "__module__", None) == module_name:
+            return True
+    return False
+
+
+# ---------------------------------------------------------------------------
+# Async support
+# ---------------------------------------------------------------------------
+# The interpreter is a synchronous tree-walker, so it cannot itself suspend on
+# `await`. Instead we keep ONE event loop running on a background thread for the
+# whole process and drive every awaitable to completion on it. Two payoffs:
+#   1. `async def` / `await` / `asyncio.run(...)` written by the model just work.
+#   2. Every coroutine runs on the *same* loop across separate executor cells,
+#      so connection pools bound to that loop (e.g. the ECHA httpx client) stay
+#      valid — no "Event loop is closed" errors between calls.
+
+_ASYNC_LOOP: Optional[asyncio.AbstractEventLoop] = None
+_ASYNC_LOOP_LOCK = threading.Lock()
+
+
+def _get_async_loop() -> asyncio.AbstractEventLoop:
+    global _ASYNC_LOOP
+    with _ASYNC_LOOP_LOCK:
+        if _ASYNC_LOOP is None or _ASYNC_LOOP.is_closed():
+            _ASYNC_LOOP = asyncio.new_event_loop()
+            thread = threading.Thread(
+                target=_ASYNC_LOOP.run_forever,
+                name="local-executor-async-loop",
+                daemon=True,
+            )
+            thread.start()
+        return _ASYNC_LOOP
+
+
+async def _await_value(awaitable: Any) -> Any:
+    return await awaitable
+
+
+def drive_awaitable(value: Any) -> Any:
+    """Run an awaitable to completion on the shared background loop and return its
+    result. Non-awaitables are returned unchanged, which makes ``asyncio.run``
+    tolerant of code that passes an already-resolved value."""
+    if not inspect.isawaitable(value):
+        return value
+    loop = _get_async_loop()
+    future = asyncio.run_coroutine_threadsafe(_await_value(value), loop)
+    return future.result()
+
+
+def drive_gather(*awaitables: Any, return_exceptions: bool = False) -> list:
+    """`asyncio.gather` replacement. Interpreter-defined ``async def``s resolve
+    eagerly to plain values, so `gather` may receive a mix of values and real
+    coroutines — drive each to a result. Runs sequentially (no concurrency),
+    which is acceptable and matches how these tools are meant to be called."""
+    results = []
+    for awaitable in awaitables:
+        if inspect.isawaitable(awaitable):
+            if return_exceptions:
+                try:
+                    results.append(drive_awaitable(awaitable))
+                except Exception as exc:  # noqa: BLE001 - mirror gather semantics
+                    results.append(exc)
+            else:
+                results.append(drive_awaitable(awaitable))
+        else:
+            results.append(awaitable)
+    return results
+
 
 class PrintContainer:
     def __init__(self):
@@ -247,43 +354,6 @@ class ContinueException(Exception):
 class ReturnException(Exception):
     def __init__(self, value):
         self.value = value
-
-
-def get_iterable(obj):
-    if isinstance(obj, list):
-        return obj
-    elif hasattr(obj, "__iter__"):
-        return list(obj)
-    else:
-        raise InterpreterError("Object is not iterable")
-
-
-def fix_final_answer_code(code: str) -> str:
-    """
-    Sometimes an LLM can try to assign a variable to final_answer, which would break the final_answer() tool.
-    This function fixes this behaviour by replacing variable assignments to final_answer with final_answer_variable,
-    while preserving function calls to final_answer().
-    """
-    # First, find if there's a direct assignment to final_answer
-    # Use word boundary and negative lookbehind to ensure it's not an object attribute
-    assignment_pattern = r"(?<!\.)(?<!\w)\bfinal_answer\s*="
-    if "final_answer(" not in code or not re.search(assignment_pattern, code):
-        # If final_answer tool is not called in this blob, then doing the replacement is hazardous because it could false the model's memory for next steps.
-        # Let's not modify the code and leave the subsequent assignment error happen.
-        return code
-
-    # Pattern for replacing variable assignments
-    # Looks for 'final_answer' followed by '=' with optional whitespace
-    # Negative lookbehind ensures we don't match object attributes
-    assignment_regex = r"(?<!\.)(?<!\w)(\bfinal_answer)(\s*=)"
-    code = re.sub(assignment_regex, r"final_answer_variable\2", code)
-
-    # Pattern for replacing variable usage but not function calls
-    # Negative lookahead (?!\s*\() ensures we don't match function calls
-    # Negative lookbehind (?<!\.|\w) ensures we don't match object methods or other variables
-    variable_regex = r"(?<!\.)(?<!\w)(\bfinal_answer\b)(?!\s*\()"
-    code = re.sub(variable_regex, "final_answer_variable", code)
-    return code
 
 
 def safer_eval(func: Callable):
@@ -334,6 +404,26 @@ def safer_eval(func: Callable):
     return _check_return
 
 
+# Only these dunder attributes are blocked — they are the introspection vectors
+# used to break out of the sandbox (e.g. ``().__class__.__bases__[0].__subclasses__()``).
+# Benign dunders like ``__name__``, ``__class__``, ``__doc__``, ``__dict__`` are
+# allowed so ordinary generated code (``type(e).__name__``) is not rejected.
+_FORBIDDEN_DUNDERS = {
+    "__globals__",
+    "__builtins__",
+    "__subclasses__",
+    "__bases__",
+    "__mro__",
+    "__base__",
+    "__code__",
+    "__closure__",
+    "__getattribute__",
+    "__reduce__",
+    "__reduce_ex__",
+    "__import__",
+}
+
+
 def evaluate_attribute(
     expression: ast.Attribute,
     state: Dict[str, Any],
@@ -341,7 +431,7 @@ def evaluate_attribute(
     custom_tools: Dict[str, Callable],
     authorized_imports: List[str],
 ) -> Any:
-    if expression.attr.startswith("__") and expression.attr.endswith("__"):
+    if expression.attr in _FORBIDDEN_DUNDERS:
         raise InterpreterError(f"Forbidden access to dunder attribute: {expression.attr}")
     value = evaluate_ast(expression.value, state, static_tools, custom_tools, authorized_imports)
     return getattr(value, expression.attr)
@@ -503,7 +593,7 @@ def evaluate_class_def(
     class_dict = {}
 
     for stmt in class_def.body:
-        if isinstance(stmt, ast.FunctionDef):
+        if isinstance(stmt, (ast.FunctionDef, ast.AsyncFunctionDef)):
             class_dict[stmt.name] = evaluate_ast(stmt, state, static_tools, custom_tools, authorized_imports)
         elif isinstance(stmt, ast.Assign):
             for target in stmt.targets:
@@ -523,6 +613,15 @@ def evaluate_class_def(
                         custom_tools,
                         authorized_imports,
                     )
+        elif isinstance(stmt, ast.AnnAssign):
+            # `x: int = 1` in a class body — bind only when a value is present.
+            if isinstance(stmt.target, ast.Name) and stmt.value is not None:
+                class_dict[stmt.target.id] = evaluate_ast(
+                    stmt.value, state, static_tools, custom_tools, authorized_imports
+                )
+        elif isinstance(stmt, (ast.Pass, ast.Expr)):
+            # Bare `pass` or a docstring / expression statement — nothing to bind.
+            continue
         else:
             raise InterpreterError(f"Unsupported statement in class body: {stmt.__class__.__name__}")
 
@@ -750,9 +849,13 @@ def evaluate_call(
         elif func_name in ERRORS:
             func = ERRORS[func_name]
         else:
-            raise InterpreterError(
-                f"It is not permitted to evaluate other functions than the provided tools or functions defined/imported in previous code (tried to execute {call.func.id})."
-            )
+            builtin = resolve_builtin(func_name)
+            if builtin is not None:
+                func = builtin
+            else:
+                raise InterpreterError(
+                    f"It is not permitted to evaluate other functions than the provided tools or functions defined/imported in previous code (tried to execute {call.func.id})."
+                )
     elif isinstance(call.func, ast.Subscript):
         func = evaluate_ast(call.func, state, static_tools, custom_tools, authorized_imports)
         if not callable(func):
@@ -791,10 +894,8 @@ def evaluate_call(
         state["_print_outputs"] += " ".join(map(str, args)) + "\n"
         return None
     else:  # Assume it's a callable object
-        if (inspect.getmodule(func) == builtins) and inspect.isbuiltin(func) and (func not in static_tools.values()):
-            raise InterpreterError(
-                f"Invoking a builtin function that has not been explicitly added as a tool is not allowed ({func_name})."
-            )
+        if is_dangerous_callable(func):
+            raise InterpreterError(f"Forbidden access to function: {func_name}")
         return func(*args, **kwargs)
 
 
@@ -833,6 +934,9 @@ def evaluate_name(
         return custom_tools[name.id]
     elif name.id in ERRORS:
         return ERRORS[name.id]
+    builtin = resolve_builtin(name.id)
+    if builtin is not None:
+        return builtin
     close_matches = difflib.get_close_matches(name.id, list(state.keys()))
     if len(close_matches) > 0:
         return state[close_matches[0]]
@@ -1137,24 +1241,36 @@ def get_safe_module(raw_module, authorized_imports, visited=None):
 
     visited.add(module_id)
 
-    # Create new module for actual modules
-    safe_module = ModuleType(raw_module.__name__)
+    # Create new module for actual modules. Some lazily-loaded modules (e.g.
+    # TensorFlow's LazyLoader when Keras 3 is present) raise on ``.__name__``,
+    # so fall back to a placeholder rather than letting that abort the import.
+    module_name = getattr(raw_module, "__name__", "module")
+    safe_module = ModuleType(module_name)
 
     # Copy all attributes by reference, recursively checking modules
     for attr_name in dir(raw_module):
         try:
             attr_value = getattr(raw_module, attr_name)
-        except (ImportError, AttributeError) as e:
+            # Recursively process nested modules, passing visited set. Kept
+            # inside the try so a submodule that errors while being copied
+            # (lazy loaders, optional deps) is skipped, not fatal to the whole
+            # import.
+            if isinstance(attr_value, ModuleType):
+                attr_value = get_safe_module(attr_value, authorized_imports, visited=visited)
+        except Exception as e:
             # lazy / dynamic loading module -> INFO log and skip
             logger.info(
-                f"Skipping import error while copying {raw_module.__name__}.{attr_name}: {type(e).__name__} - {e}"
+                f"Skipping error while copying {module_name}.{attr_name}: {type(e).__name__} - {e}"
             )
             continue
-        # Recursively process nested modules, passing visited set
-        if isinstance(attr_value, ModuleType):
-            attr_value = get_safe_module(attr_value, authorized_imports, visited=visited)
 
         setattr(safe_module, attr_name, attr_value)
+
+    if module_name == "asyncio":
+        # Route asyncio.run/gather through the shared background loop so they work
+        # from the interpreter thread and reuse one loop across executor cells.
+        safe_module.run = drive_awaitable
+        safe_module.gather = drive_gather
 
     return safe_module
 
@@ -1283,6 +1399,108 @@ def evaluate_delete(
             raise InterpreterError(f"Deletion of {type(target).__name__} targets is not supported")
 
 
+def evaluate_annassign(
+    node: ast.AnnAssign,
+    state: Dict[str, Any],
+    static_tools: Dict[str, Callable],
+    custom_tools: Dict[str, Callable],
+    authorized_imports: List[str],
+) -> Any:
+    """Annotated assignment: `x: int = 5` (or a bare annotation `x: int`)."""
+    if node.value is None:
+        # Pure annotation with no value — nothing to bind.
+        return None
+    result = evaluate_ast(node.value, state, static_tools, custom_tools, authorized_imports)
+    set_value(node.target, result, state, static_tools, custom_tools, authorized_imports)
+    return result
+
+
+def evaluate_namedexpr(
+    node: ast.NamedExpr,
+    state: Dict[str, Any],
+    static_tools: Dict[str, Callable],
+    custom_tools: Dict[str, Callable],
+    authorized_imports: List[str],
+) -> Any:
+    """Walrus operator: `(y := f(x))`."""
+    value = evaluate_ast(node.value, state, static_tools, custom_tools, authorized_imports)
+    set_value(node.target, value, state, static_tools, custom_tools, authorized_imports)
+    return value
+
+
+def evaluate_await(
+    node: ast.Await,
+    state: Dict[str, Any],
+    static_tools: Dict[str, Callable],
+    custom_tools: Dict[str, Callable],
+    authorized_imports: List[str],
+) -> Any:
+    """`await expr` — resolve the awaitable on the shared background loop."""
+    value = evaluate_ast(node.value, state, static_tools, custom_tools, authorized_imports)
+    return drive_awaitable(value)
+
+
+def evaluate_async_for(
+    for_loop: ast.AsyncFor,
+    state: Dict[str, Any],
+    static_tools: Dict[str, Callable],
+    custom_tools: Dict[str, Callable],
+    authorized_imports: List[str],
+) -> Any:
+    """`async for x in aiter: ...` driven synchronously via the background loop."""
+    result = None
+    iterable = evaluate_ast(for_loop.iter, state, static_tools, custom_tools, authorized_imports)
+    async_iter = iterable.__aiter__()
+    while True:
+        try:
+            item = drive_awaitable(async_iter.__anext__())
+        except StopAsyncIteration:
+            break
+        set_value(for_loop.target, item, state, static_tools, custom_tools, authorized_imports)
+        broke = False
+        for node in for_loop.body:
+            try:
+                line_result = evaluate_ast(node, state, static_tools, custom_tools, authorized_imports)
+                if line_result is not None:
+                    result = line_result
+            except BreakException:
+                broke = True
+                break
+            except ContinueException:
+                break
+        if broke:
+            break
+    return result
+
+
+def evaluate_async_with(
+    with_node: ast.AsyncWith,
+    state: Dict[str, Any],
+    static_tools: Dict[str, Callable],
+    custom_tools: Dict[str, Callable],
+    authorized_imports: List[str],
+) -> None:
+    """`async with ctx as x: ...` driven synchronously via the background loop."""
+    contexts = []
+    for item in with_node.items:
+        context_expr = evaluate_ast(item.context_expr, state, static_tools, custom_tools, authorized_imports)
+        entered = drive_awaitable(context_expr.__aenter__())
+        if item.optional_vars:
+            set_value(item.optional_vars, entered, state, static_tools, custom_tools, authorized_imports)
+        contexts.append(context_expr)
+
+    try:
+        for stmt in with_node.body:
+            evaluate_ast(stmt, state, static_tools, custom_tools, authorized_imports)
+    except Exception as e:
+        for context in reversed(contexts):
+            drive_awaitable(context.__aexit__(type(e), e, e.__traceback__))
+        raise
+    else:
+        for context in reversed(contexts):
+            drive_awaitable(context.__aexit__(None, None, None))
+
+
 @safer_eval
 def evaluate_ast(
     expression: ast.AST,
@@ -1323,6 +1541,14 @@ def evaluate_ast(
         return evaluate_assign(expression, *common_params)
     elif isinstance(expression, ast.AugAssign):
         return evaluate_augassign(expression, *common_params)
+    elif isinstance(expression, ast.AnnAssign):
+        # Annotated assignment: `x: int = 5`
+        return evaluate_annassign(expression, *common_params)
+    elif isinstance(expression, ast.NamedExpr):
+        # Walrus: `(y := f(x))`
+        return evaluate_namedexpr(expression, *common_params)
+    elif isinstance(expression, ast.Await):
+        return evaluate_await(expression, *common_params)
     elif isinstance(expression, ast.Call):
         # Function call -> we return the value of the function call
         return evaluate_call(expression, *common_params)
@@ -1356,7 +1582,9 @@ def evaluate_ast(
         return evaluate_condition(expression, *common_params)
     elif isinstance(expression, ast.Lambda):
         return evaluate_lambda(expression, *common_params)
-    elif isinstance(expression, ast.FunctionDef):
+    elif isinstance(expression, (ast.FunctionDef, ast.AsyncFunctionDef)):
+        # Async functions are defined exactly like sync ones; their `await`
+        # nodes resolve on the shared background loop when the body runs.
         return evaluate_function_def(expression, *common_params)
     elif isinstance(expression, ast.Dict):
         # Dict -> evaluate all keys and values
@@ -1369,6 +1597,8 @@ def evaluate_ast(
     elif isinstance(expression, ast.For):
         # For loop -> execute the loop
         return evaluate_for(expression, *common_params)
+    elif isinstance(expression, ast.AsyncFor):
+        return evaluate_async_for(expression, *common_params)
     elif isinstance(expression, ast.FormattedValue):
         # Formatted value (part of f-string) -> evaluate the content and format it
         value = evaluate_ast(expression.value, *common_params)
@@ -1422,6 +1652,12 @@ def evaluate_ast(
         return evaluate_assert(expression, *common_params)
     elif isinstance(expression, ast.With):
         return evaluate_with(expression, *common_params)
+    elif isinstance(expression, ast.AsyncWith):
+        return evaluate_async_with(expression, *common_params)
+    elif isinstance(expression, (ast.Global, ast.Nonlocal)):
+        # The interpreter uses a shared state dict, so scope declarations are a
+        # no-op rather than an error — this keeps generated code running.
+        return None
     elif isinstance(expression, ast.Set):
         return set((evaluate_ast(elt, *common_params) for elt in expression.elts))
     elif isinstance(expression, ast.Return):
@@ -1578,7 +1814,11 @@ def reset_executor_state():
     _global_executor = None
 
 
-def local_python_executor(code: str, authorized_imports: List[str]):
+def local_python_executor(
+    code: str,
+    authorized_imports: List[str],
+    variables: Optional[Dict[str, Any]] = None,
+):
     """
     Executes Python code in a sandboxed environment with restricted imports for security.
     Uses a global persistent executor to maintain variable state across executions.
@@ -1599,6 +1839,9 @@ def local_python_executor(code: str, authorized_imports: List[str]):
             A list of module names that are allowed to be imported by the code.
             These are in addition to the base built-in modules defined in BASE_BUILTIN_MODULES.
             For unrestricted imports (use with caution), include "*" in the list.
+        variables (Optional[Dict[str, Any]]):
+            Optional variables to inject into the persistent execution state before
+            the code runs. Existing names will be updated for the current execution.
     
     Returns:
         Any: The result of the last statement in the executed code. If the code raises
@@ -1653,6 +1896,9 @@ def local_python_executor(code: str, authorized_imports: List[str]):
         if set(_global_executor.authorized_imports) != set(new_authorized_imports):
             _global_executor.authorized_imports = new_authorized_imports
     
+    if variables:
+        _global_executor.send_variables(variables)
+
     # Execute using the persistent global executor
     output, logs, is_final_answer = _global_executor(code_action=code)
     

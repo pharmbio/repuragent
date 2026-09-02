@@ -1,5 +1,4 @@
-"""
-pubchem_utils.py
+'''pubchem_utils.py
 
 Utility functions for retrieving and processing data from the PubChem database.
 
@@ -10,26 +9,26 @@ Contact: flavio.ballante@ki.se, flavioballante@gmail.com
 Institution: CBCS-SciLifeLab-Karolinska Institutet
 
 Year: 2025
-"""
+'''
+
+from functools import lru_cache
 
 import pubchempy as pcp 
 
+@lru_cache(maxsize=50_000)
 def pubchem_get_cid(query, identifier):
-    """
-    Get the PubChem CID for a query structure.
+    '''Get the PubChem CID for a query structure.
 
-    Parameters
+    Parameters:
+    ---------
+    query (str): compound's structure (SMILES, InChI, or InChIKey).
+    identifier (str): type of identifier (SMILES, InChI, or InChIKey).
+
+    Returns:
     ----------
-    query: string
-        compound's structure (SMILES, InChI, or InChIKey).
-    identifier: string
-        type of identifier (SMILES, InChI, or InChIKey).
+    cids (list): PubChem CID.
+    '''
 
-    Returns
-    -------
-    list
-        PubChem CID.
-    """
     try:
         PubChem_cid = pcp.get_properties(['MolecularFormula'],query, identifier.lower(),as_dataframe=False)[0]['CID']
     except IndexError:

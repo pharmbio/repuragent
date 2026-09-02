@@ -1,57 +1,54 @@
-# Core dependencies for Repuragent - exact versions from conda environment
-langchain==0.3.24
-langchain-openai==0.3.33
-langchain-core==0.3.76
-langchain-community==0.3.23
-langgraph==0.6.3
-langgraph-checkpoint==2.1.0
-langgraph-checkpoint-sqlite==2.0.11
-langgraph-prebuilt==0.6.3
-langgraph-sdk==0.2.0
-langgraph-supervisor==0.0.29
-langmem==0.0.29
-pandas==2.2.3
-numpy==2.2.6
-requests==2.32.3
-python-dotenv==1.1.1
-pydantic==2.11.4
-tqdm==4.67.1
-rapidfuzz==3.13.0
-fuzzywuzzy==0.18.0
+langchain==1.3.15
+langchain-core==1.5.6
+langchain-classic==1.0.8
+langchain-openai==1.5.2
+langchain-community==0.4.2
+langgraph==1.2.11
+langgraph-checkpoint==4.2.0
+langgraph-checkpoint-sqlite==3.1.1
+langgraph-prebuilt==1.1.0
+openai>=2.14,<4
 gradio==5.49.1
-aiosqlite==0.20.0
-fastapi==0.115.5
-uvicorn==0.32.0
+fastapi>=0.115,<1
+uvicorn>=0.32,<1
+python-multipart>=0.0.20
+markdown-it-py>=3,<5
+Pillow>=10,<14
+pydantic>=2.11,<2.12
+setuptools<81
+requests>=2.32
+httpx>=0.28,<1
+python-dotenv>=1.0
+PyYAML>=6.0
+tqdm>=4.66
+rapidfuzz>=3.9
+fuzzywuzzy>=0.18
+click>=8.1
+typing-extensions>=4.13
+huggingface-hub>=0.34
 
-# Chemistry and bioinformatics - exact versions
-chembl-webresource-client==0.10.9
-pybel==0.15.5
-pandasgwas==1.2.2
-networkx==3.4.2
-rdkit==2025.9.1
-pubchempy==1.0.4
+# Database
+aiosqlite>=0.20
+SQLAlchemy>=2.0,<3
 
-# Document processing - exact versions
-unstructured==0.18.14
+# Specilise packages
+chembl-webresource-client>=0.10.9
+pubchempy>=1.0.4
+pybel>=0.15.5,<0.16
+pandasgwas>=1.2
+networkx>=3.2,<4
+pandas>=2.2
+numpy>=1.26,<3
+scipy>=1.13
+scikit-learn>=1.5
+matplotlib>=3.9
+seaborn>=0.13
+plotly>=6,<7
+openpyxl>=3.1
+rdkit>=2024.3
 
-# AI and vector database - exact versions
+# for RAG
 chromadb==0.6.3
-anthropic==0.58.2
-langchain-anthropic==0.3.16
-langchain-neo4j==0.4.0
-langchain-tavily==0.2.5
-tavily-python==0.7.8
-
-# Machine learning and visualization - exact versions
-scikit-learn==1.6.1
-plotly==6.0.1
-matplotlib==3.10.3
-seaborn==0.13.2
-
-# Additional utilities - exact versions
-scipy==1.15.3
-PyYAML==6.0.2
-click==8.2.0
-typing-extensions==4.13.2
-huggingface-hub==0.34.3
-setuptools<=75
+unstructured>=0.18
+rank-bm25>=0.2.2
+pytesseract>=0.3.13

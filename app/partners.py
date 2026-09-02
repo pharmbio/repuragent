@@ -1,4 +1,4 @@
-"""Partner metadata shared across the UI."""
+'''Partner metadata shared across the UI.'''
 
 from __future__ import annotations
 
@@ -63,5 +63,11 @@ PARTNER_ORGANIZATIONS: List[Dict[str, str]] = [
 
 
 def get_partner_organizations() -> List[Dict[str, str]]:
-    """Return a shallow copy of partner metadata."""
+    '''Return a shallow copy of partner metadata.
+
+    Returns:
+    ----------
+    organizations (list): a shallow copy of the partner metadata, so a caller cannot mutate the module's own.
+    '''
+
     return [dict(partner) for partner in PARTNER_ORGANIZATIONS]

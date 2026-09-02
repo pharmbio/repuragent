@@ -1,0 +1,194 @@
+{
+  "child_splitter": {
+    "chunk_overlap": 50,
+    "chunk_size": 200
+  },
+  "collection_name": "sop_rag_text-embedding-3-large_c200_o50",
+  "embedding_model": "text-embedding-3-large",
+  "manifest_version": 6,
+  "sources": {
+    "ANNEX2_R4ALL_SOG_DetectingManagingNuisanceCompounds.pdf": {
+      "bytes": 473487,
+      "children": 75,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:24:17+00:00",
+      "parent_ids": [
+        "a0801dbd-eddc-4b00-8983-4447440a2557",
+        "cb7a448e-4426-4104-af66-940e7722cc48",
+        "e2ca5e20-de41-4d9a-ac36-1701a9a6d91b"
+      ],
+      "parents": 3,
+      "sha256": "b705847b9738a1399a5a801999970725cdd698f675c5cfe3caa6bf6b7f5f8396",
+      "strategy": "hi_res"
+    },
+    "ANNEX3_R4ALL_SOP_DIPL-phospholipidosis.pdf": {
+      "bytes": 1379652,
+      "children": 88,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:25:35+00:00",
+      "parent_ids": [
+        "0cfa8a9c-5f8c-4e3b-ae08-2541fda6d4c4",
+        "9185c43d-f77a-45a7-aebb-3fb43e4dfc15",
+        "9f11aad7-555e-4670-a48d-2807e288443c"
+      ],
+      "parents": 3,
+      "sha256": "006c2b3ffcb8c227b6f18de0e707df276717871f75e24f48479af871e77f162d",
+      "strategy": "hi_res"
+    },
+    "R4ALL_SOP_FairDataAssessment.pdf": {
+      "bytes": 780852,
+      "children": 134,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:26:54+00:00",
+      "parent_ids": [
+        "430a1613-8c9f-470d-bd4b-9b09b21d7240",
+        "d7633643-0dc9-4a47-9179-87e6d22b5514",
+        "7dee68e5-da66-48aa-b16f-5ca6a12af4ca",
+        "70e82f37-cc55-47dd-affc-c2bd3abe9156"
+      ],
+      "parents": 4,
+      "sha256": "ac41d28d7052d79f9141a3f48be8c8b8fdb3959e2657b84d81d0aa80be836ede",
+      "strategy": "hi_res"
+    },
+    "REMEDI4ALL_D4.1_Report-on-AI-tools_v2.pdf": {
+      "bytes": 1825031,
+      "children": 456,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:29:55+00:00",
+      "parent_ids": [
+        "8ac25ff6-4b05-4c45-8971-ea0ae9dcdf4a",
+        "a12d4134-7bad-463f-82f8-7143ed735037",
+        "243a8c00-51c6-4226-95a3-951da051929f",
+        "1a28db1c-b831-4a78-be93-810690d95a14",
+        "085db520-9bcd-4cdc-99fa-c389ee3896aa",
+        "725213cf-c1d8-4dd8-be65-2e7c526bdce3",
+        "46b27ded-91ad-4382-8efc-1b41e0f645b9",
+        "271950fc-240d-4dd5-aafd-fa46d8c01607",
+        "a777641f-742b-45f9-b1c4-d789203feec0",
+        "881f1e6e-f890-4761-b103-662c0953b1e0",
+        "fea13479-cb76-4694-87a6-3172c7bed102",
+        "71a13a78-8ba5-4f14-a256-d323189c6ab6",
+        "6a963620-a10e-4e05-a39f-bbd205cdbda0"
+      ],
+      "parents": 13,
+      "sha256": "ecbf00931d43997bfb919f0e2ce4753d9a75792944b971e32aa1783c23ef3c0a",
+      "strategy": "hi_res"
+    },
+    "REMEDI4All_SOGs_ChemProt_TD_MoA_Drug-Target Char_v01 20251209.pdf": {
+      "bytes": 832910,
+      "children": 298,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:31:50+00:00",
+      "parent_ids": [
+        "f516c0cd-375d-48a2-adbe-10ad7b71cb38",
+        "c872ae44-34c6-404b-8a10-6f3c58c8445b",
+        "cdcebde8-330d-470f-8b96-fc10ced80c7f",
+        "982c8dc1-cbf8-4635-92c4-9bd8849611e0",
+        "61fe5d5b-b519-4a63-8f16-8118db3a8964",
+        "df381463-6915-4fcf-a2b8-97a613129f90",
+        "4cd8c08f-4b2e-4ce9-9362-319d0f553bfc",
+        "f311e301-9ef7-4b33-b77d-0153812a02c7",
+        "8ed6417f-28c2-4c8b-a32f-1750c49c1aaf",
+        "e0f8addc-ac08-40e1-87d5-85489da370e1",
+        "14b62040-6713-4b8c-ae53-aac81973f5d8"
+      ],
+      "parents": 11,
+      "sha256": "c3b50e5a0d43ddd7761bf16eb0c8e16400bf8617fe5f18a79807cff595daa3b1",
+      "strategy": "hi_res"
+    },
+    "REMEDI4All_SOP_Two drug combination test detection of synergetic anti-proliferative effect in cancer cell lines_KI.pdf": {
+      "bytes": 885439,
+      "children": 162,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:34:00+00:00",
+      "parent_ids": [
+        "3415071b-e00c-438b-a3e4-b4c5194401e9",
+        "e82855ce-0fd2-403f-86a3-63013462d7e9",
+        "426b48ba-6220-40e2-bd9d-1a7241cfa6d8",
+        "ca1643ca-b7ca-47a2-8af5-b2007f99c62c",
+        "b0f99685-4834-47ca-a774-7a0fef05c1b5"
+      ],
+      "parents": 5,
+      "sha256": "8a565a566a8e5af17007cdeffbad39b271e427f450fea11b188c37d84f0d0f04",
+      "strategy": "hi_res"
+    },
+    "REMEDI4All_SOPs_Cell_Painting_SOP_final.pdf": {
+      "bytes": 612560,
+      "children": 110,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:35:02+00:00",
+      "parent_ids": [
+        "fa184267-ce07-4a19-b786-8d4c6da11ae2",
+        "2b2b7af9-06b0-4a7c-b6e6-1c1dff761111",
+        "d1e300ea-e12e-44af-a492-6111bd4f2010",
+        "964ccfbc-5be0-4c8f-a46e-6a5199f2c9b5"
+      ],
+      "parents": 4,
+      "sha256": "872d1d739982953e528c600eacc729b9ec8f01b1daabb0114cf4e1ff4dd46960",
+      "strategy": "hi_res"
+    },
+    "REMEDI4All_SOPs_HCS_phospholipidosis_KQ_250210.pdf": {
+      "bytes": 881378,
+      "children": 59,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:36:01+00:00",
+      "parent_ids": [
+        "fde44a46-23be-4b72-b445-84508426fff3",
+        "19ec4b83-e78e-435d-93d4-d17cf2a4825a",
+        "c95debdb-bf38-479a-a467-ff59974d3ccb"
+      ],
+      "parents": 3,
+      "sha256": "051f504f84b62201c923f24f7b0f5c9e29e380138551a926fdd81288fb28df56",
+      "strategy": "hi_res"
+    },
+    "REMEDI4All_SOPs_In_Silico_Repurposing.pdf": {
+      "bytes": 872392,
+      "children": 133,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:37:04+00:00",
+      "parent_ids": [
+        "c4ee4dfa-499c-4ec4-9ff5-f6144e5a3eba",
+        "a132b00b-304b-4c8f-9db4-8b6d532364b2",
+        "72c940c6-fcf7-43bd-8cf8-44e81c2cf87b",
+        "a47a7e66-ce43-4c02-9e59-d7ea361268b6",
+        "e4121ce8-e535-4213-bd5f-f942924a80a6",
+        "babdd78c-4b60-4686-b30c-f6dfe27b7ae6"
+      ],
+      "parents": 6,
+      "sha256": "4dc974c507e599e56e1bf6fb2ad08f4b63f1f460e9057abd464a26d5ba2c2bc5",
+      "strategy": "hi_res"
+    },
+    "REMEDi4ALL_SOPs_CETSA.pdf": {
+      "bytes": 618478,
+      "children": 93,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:37:51+00:00",
+      "parent_ids": [
+        "d95625df-11bc-4de9-8467-b11afbad9052",
+        "3f5b7a88-1ffc-4fae-9d43-a6b4c2544ce9",
+        "27509421-f764-4c3c-94c0-43c73a4de456",
+        "1298466f-56dd-4472-b3c5-035e0f6f7411"
+      ],
+      "parents": 4,
+      "sha256": "2db75799567f6bf06fc9e1f0eed5344baa9b7abac1cf64af896ae803249fffd0",
+      "strategy": "hi_res"
+    },
+    "SOP-INT-NA-1_3_Drug_combination_screening.pdf": {
+      "bytes": 722426,
+      "children": 91,
+      "described_images": true,
+      "indexed_at": "2026-08-25T14:38:35+00:00",
+      "parent_ids": [
+        "891e1188-a71c-4840-859d-f83952697ffb",
+        "526cd26c-2724-43b6-9105-e0c85948d4f4",
+        "df74f2de-0f21-4a07-872b-25419381e913",
+        "4176d990-1402-4e5b-82a3-acf4d3ffe524",
+        "31acb9e5-d59b-4b7d-8a22-1d0766560be5"
+      ],
+      "parents": 5,
+      "sha256": "884e1568e83b930b401d9555ff87fe2ddd98365087c13a52b63c7fcd6cb8a5e4",
+      "strategy": "hi_res"
+    }
+  },
+  "updated_at": "2026-08-25T14:38:35+00:00"
+}

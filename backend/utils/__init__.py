@@ -1,1 +1,1 @@
-"""Backend utilities."""
+'''Backend utilities.'''

@@ -1,5 +1,4 @@
-"""
-misc_utils.py
+'''misc_utils.py
 
 Miscellaneous helper functions used throughout the Chemical Annotator tool.
 
@@ -10,27 +9,30 @@ Contact: flavio.ballante@ki.se, flavioballante@gmail.com
 Institution: CBCS-SciLifeLab-Karolinska Institutet
 
 Year: 2025
-"""
+'''
 
-import pandas as pd
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from functools import lru_cache
 import re
 import time
-import requests
-import pubchempy as pcp
-from functools import lru_cache
 from urllib.parse import quote
+
+import pandas as pd
+import pubchempy as pcp
+import requests
 from chembl_webresource_client.new_client import new_client
 from tqdm import tqdm
-from .chembl_utils import chembl_get_id
+
+from .chembl_utils import chembl_assay_information
 from .chembl_utils import chembl_drug_annotations
 from .chembl_utils import chembl_drug_indications
-from .chembl_utils import chembl_assay_information
+from .chembl_utils import chembl_get_id
 from .chembl_utils import chembl_mechanism_of_action
 from .chembl_utils import surechembl_get_id
 from .pubchem_utils import pubchem_get_cid
 
-molecule = new_client.molecule
 CACTUS_BASE = "https://cactus.nci.nih.gov/chemical/structure"
+molecule = new_client.molecule
 
 # %%
 def _normalize_header(value) -> str:
@@ -38,9 +40,17 @@ def _normalize_header(value) -> str:
 
 
 def _infer_identifier_type(value: str) -> str | None:
-    """
-    Infer the identifier type ('smiles', 'inchi', 'inchikey') from a column-like string.
-    """
+    '''Infer the identifier type ('smiles', 'inchi', 'inchikey') from a column-like string.
+
+    Parameters:
+    ---------
+    value (str): a column name, or a value from it.
+
+    Returns:
+    ----------
+    identifier_type (str): `smiles`, `inchi` or `inchikey`, or None when it looks like none of them.
+    '''
+
     normalized = _normalize_header(value)
     if not normalized:
         return None
@@ -53,19 +63,59 @@ def _infer_identifier_type(value: str) -> str | None:
     return None
 
 
+def find_smiles_column(compounds_list: pd.DataFrame) -> str | None:
+    '''Return the first column name that contains 'smiles' (case-insensitive).
+
+    Parameters:
+    ---------
+    compounds_list (Pandas DataFrame): the table to inspect.
+
+    Returns:
+    ----------
+    column (str): the first column whose name contains 'smiles', case-insensitively, or None.
+    '''
+
+    for col in compounds_list.columns:
+        if "smiles" in str(col).strip().lower():
+            return col
+    return None
+
+
 def resolve_identifier_column(compounds_list: pd.DataFrame, identifier: str) -> tuple[str, str]:
-    """
-    Resolve which DataFrame column contains the requested compound identifiers.
+    '''Resolve which DataFrame column contains the requested compound identifiers.
 
     - Case-insensitive for common identifier types ('SMILES', 'InChI', 'InChIKey').
     - Flexible for SMILES-like columns (e.g., 'SMILES', 'canonical_smiles').
     - Returns (column_name, identifier_type) where identifier_type is one of:
       'smiles', 'inchi', 'inchikey'.
-    """
+
+    Parameters:
+    ---------
+    compounds_list (Pandas DataFrame): the table to inspect.
+    identifier (str): the identifier type the caller asked for.
+
+    Returns:
+    ----------
+    resolved (tuple): `(column name, identifier type)` for the requested identifiers.
+    '''
+
     if not isinstance(identifier, str) or not identifier.strip():
         raise ValueError("identifier must be a non-empty string")
 
     requested = identifier.strip()
+    columns = list(compounds_list.columns)
+
+    # If identifier matches a column name exactly (case-insensitive), use it directly.
+    exact_column_matches = [col for col in columns if str(col).strip().lower() == requested.lower()]
+    if exact_column_matches:
+        column_name = exact_column_matches[0]
+        inferred = _infer_identifier_type(column_name)
+        if inferred is None:
+            raise ValueError(
+                f"Column '{column_name}' does not look like a SMILES/InChI/InChIKey identifier."
+            )
+        return column_name, inferred
+
     requested_type = requested.lower()
     if requested_type not in {"smiles", "inchi", "inchikey"}:
         inferred = _infer_identifier_type(requested)
@@ -75,8 +125,6 @@ def resolve_identifier_column(compounds_list: pd.DataFrame, identifier: str) -> 
                 f"(or a column name containing one of those)."
             )
         requested_type = inferred
-
-    columns = list(compounds_list.columns)
 
     # Prefer exact case-insensitive match first.
     exact_matches = [col for col in columns if str(col).strip().lower() == requested_type]
@@ -134,11 +182,69 @@ def resolve_identifier_column(compounds_list: pd.DataFrame, identifier: str) -> 
     return best, requested_type
 
 
+def auto_detect_identifier_column(compounds_list: pd.DataFrame) -> tuple[str, str]:
+    '''Try to detect a single identifier column, preferring SMILES, then InChIKey, then InChI.
+    Returns (column_name, identifier_type).
+
+    Parameters:
+    ---------
+    compounds_list (Pandas DataFrame): the table to inspect.
+
+    Returns:
+    ----------
+    resolved (tuple): `(column name, identifier type)`, preferring SMILES, then InChIKey, then InChI.
+    '''
+
+    for candidate in ("smiles", "inchikey", "inchi"):
+        try:
+            return resolve_identifier_column(compounds_list, candidate)
+        except ValueError:
+            continue
+    # Fallback: detect other identifier-like columns by name (e.g., chembl, pubchem, cas, cid)
+    def looks_like_alt_identifier(col) -> bool:
+        normalized = _normalize_header(col)
+        if not normalized:
+            return False
+        if "chembl" in normalized:
+            return True
+        if "pubchem" in normalized:
+            return True
+        if normalized in {"cid", "cas"}:
+            return True
+        if "casrn" in normalized or "casnumber" in normalized or "casid" in normalized:
+            return True
+        if "pubchemcid" in normalized or "pubchemcid" in normalized:
+            return True
+        if "chemblid" in normalized:
+            return True
+        return False
+
+    alt_candidates = [col for col in compounds_list.columns if looks_like_alt_identifier(col)]
+    if len(alt_candidates) == 1:
+        col = alt_candidates[0]
+        normalized = _normalize_header(col)
+        if "chembl" in normalized:
+            return col, "chembl"
+        return col, "any"
+    if len(alt_candidates) > 1:
+        alt_list = ", ".join([str(c) for c in alt_candidates])
+        raise ValueError(
+            "Multiple possible identifier columns found: "
+            f"{alt_list}. Please keep only one identifier column in the input."
+        )
+    available = ", ".join([str(c) for c in compounds_list.columns])
+    raise ValueError(
+        "Could not auto-detect an identifier column. "
+        "Expected a column containing SMILES, InChIKey, or InChI. "
+        f"Available columns: {available}"
+    )
+
+
 def _clean_identifier(value):
-    if value is None:
+    if value is None or pd.isna(value):
         return None
-    s = str(value).strip()
-    return s if s else None
+    text = str(value).strip()
+    return text if text else None
 
 
 def _is_chembl_id(value: str) -> bool:
@@ -150,188 +256,232 @@ def _looks_like_inchikey(value: str) -> bool:
 
 
 @lru_cache(maxsize=50_000)
-def resolve_smiles_any(identifier: str, *, pause_s: float = 0.0, timeout_s: float = 15.0) -> str | None:
-    """
-    Resolve many identifier types to canonical SMILES.
+def resolve_smiles_any(
+    identifier: str,
+    *,
+    identifier_type: str | None = None,
+    pause_s: float = 0.0,
+    timeout_s: float = 15.0,
+) -> str | None:
+    '''Resolve many identifier types to canonical SMILES.
     Order:
       1) ChEMBL IDs via ChEMBL API
       2) CACTUS resolver
       3) PubChem (CID / InChIKey / name)
-    """
+
+    Parameters:
+    ---------
+    identifier (str): the value to resolve.
+    identifier_type (str): its type, or None to infer it.
+    pause_s (float): seconds to wait between calls, to stay inside the service's rate limit.
+    timeout_s (float): how long to wait for one lookup.
+
+    Returns:
+    ----------
+    smiles (str): the canonical SMILES, or None when nothing resolved it.
+    '''
+
     ident = _clean_identifier(identifier)
     if not ident:
         return None
 
     ident_u = ident.upper()
 
-    # 1) ChEMBL
-    if _is_chembl_id(ident_u):
+    if identifier_type == "chembl" or _is_chembl_id(ident_u):
         try:
             mol = molecule.get(ident_u)
-            s = mol.get("molecule_structures", {}).get("canonical_smiles")
-            if s:
+            smiles = mol.get("molecule_structures", {}).get("canonical_smiles")
+            if smiles:
                 if pause_s:
                     time.sleep(pause_s)
-                return s
+                return smiles
         except Exception:
             pass
 
-    # 2) CACTUS
     try:
         url = f"{CACTUS_BASE}/{quote(ident)}/smiles"
-        r = requests.get(url, timeout=timeout_s, headers={"User-Agent": "smiles-resolver/1.0"})
-        if r.ok:
-            txt = r.text.strip()
-            if txt and "not found" not in txt.lower() and "<html" not in txt.lower():
+        response = requests.get(url, timeout=timeout_s, headers={"User-Agent": "smiles-resolver/1.0"})
+        if response.ok:
+            text = response.text.strip()
+            if text and "not found" not in text.lower() and "<html" not in text.lower():
                 if pause_s:
                     time.sleep(pause_s)
-                return txt
+                return text
     except requests.RequestException:
         pass
 
-    # 3) PubChem fallback
     try:
         if ident.isdigit():
-            c = pcp.Compound.from_cid(int(ident))
-            return getattr(c, "canonical_smiles", None)
+            compound = pcp.Compound.from_cid(int(ident))
+            return getattr(compound, "canonical_smiles", None)
 
         if _looks_like_inchikey(ident_u):
-            comps = pcp.get_compounds(ident_u, namespace="inchikey")
+            compounds = pcp.get_compounds(ident_u, namespace="inchikey")
         else:
-            comps = pcp.get_compounds(ident, namespace="name")
+            compounds = pcp.get_compounds(ident, namespace="name")
 
-        if comps:
-            return getattr(comps[0], "canonical_smiles", None)
+        if compounds:
+            return getattr(compounds[0], "canonical_smiles", None)
     except Exception:
         pass
 
     return None
 
 
-def _select_any_identifier_column(compounds_list: pd.DataFrame) -> str:
-    for key in ("smiles", "inchi", "inchikey"):
-        try:
-            col, _ = resolve_identifier_column(compounds_list, key)
-            return col
-        except ValueError:
-            continue
-    return str(compounds_list.columns[0])
+def _normalize_merge_key(dataframe: pd.DataFrame, column_name: str) -> pd.DataFrame:
+    normalized = dataframe.copy()
+    if column_name in normalized.columns:
+        normalized[column_name] = normalized[column_name].astype(object)
+    return normalized
 
 
-def _match_column_case_insensitive(compounds_list: pd.DataFrame, name: str) -> str | None:
-    target = str(name).strip().lower()
-    if not target:
-        return None
-    for col in compounds_list.columns:
-        if str(col).strip().lower() == target:
-            return col
-    return None
+def _merge_compound_row(row: dict, dataframe: pd.DataFrame) -> pd.DataFrame:
+    base_rows = pd.DataFrame([row] * len(dataframe)).reset_index(drop=True)
+    return pd.concat([base_rows, dataframe.reset_index(drop=True)], axis=1)
+
+
+def _compound_result_key(value) -> str | None:
+    cleaned = _clean_identifier(value)
+    return cleaned if cleaned is not None else None
+
+
+def _fetch_compound_bundle(
+    compound,
+    identifier_type,
+    confidence_threshold,
+    assay_type_in,
+    pchembl_value_gte,
+):
+    compound_key = _compound_result_key(compound)
+    if compound_key is None:
+        empty = pd.DataFrame()
+        return {"drug_info": empty, "drug_assay": empty, "drug_moa": empty}
+
+    chembl_id = chembl_get_id(compound_key, identifier_type)
+    drug_cid = pubchem_get_cid(compound_key, identifier_type)
+    drug_schembl = surechembl_get_id(compound_key, identifier_type)
+
+    drug_annot = _normalize_merge_key(chembl_drug_annotations(chembl_id), "molecule_chembl_id")
+    drug_annot_selected = drug_annot[
+        ["molecule_chembl_id", "canonical_smiles", "standard_inchi", "standard_inchi_key"]
+    ]
+    drug_indic = _normalize_merge_key(chembl_drug_indications(chembl_id), "molecule_chembl_id")
+    drug_assay = _normalize_merge_key(
+        chembl_assay_information(
+            chembl_id,
+            confidence_threshold=confidence_threshold,
+            assay_type_in=assay_type_in,
+            pchembl_value_gte=pchembl_value_gte,
+        ),
+        "molecule_chembl_id",
+    )
+    drug_moa = _normalize_merge_key(
+        chembl_mechanism_of_action(chembl_id),
+        "molecule_chembl_id",
+    )
+
+    if pd.isna(chembl_id):
+        for dataframe in (drug_indic, drug_assay, drug_moa):
+            if "molecule_chembl_id" in dataframe.columns:
+                dataframe["molecule_chembl_id"] = dataframe["molecule_chembl_id"].astype(str)
+
+    drug_info = drug_annot.merge(drug_indic, on="molecule_chembl_id", how="left")
+    drug_assay = drug_annot_selected.merge(drug_assay, on="molecule_chembl_id", how="left")
+    drug_moa = drug_annot_selected.merge(drug_moa, on="molecule_chembl_id", how="left")
+
+    drug_info["drug_cid"] = drug_cid
+    drug_info["drug_schembl"] = drug_schembl
+    drug_assay["drug_cid"] = drug_cid
+    drug_assay["drug_schembl"] = drug_schembl
+
+    return {
+        "drug_info": drug_info,
+        "drug_assay": drug_assay,
+        "drug_moa": drug_moa,
+    }
 
 
 def process_compounds(compounds_list, identifier, confidence_threshold=8, assay_type_in=['B', 'F'], pchembl_value_gte=6):
-    """
-    Process a list of compounds by retrieving drug annotations, indications, assay information,
+    '''Process a list of compounds by retrieving drug annotations, indications, assay information,
     and mechanisms of action from ChEMBL and other databases.
 
-    Parameters
-    ----------
-    compounds_list : DataFrame
-        DataFrame containing a list of compounds.
-    identifier : str
-        Identifier type ('SMILES', 'InChI', 'InChIKey') or a column name containing one of those.
-        Matching is case-insensitive and will also accept SMILES-like columns such as 'canonical_smiles'.
-    confidence_threshol : int, optional
-        Minimum confidence threshold for assay data. Defaults to 8.
-    assay_type_in : list, optional
-        List of assay types to include. Defaults to ['B', 'F'].
-    pchembl_value_gte : int, optional
-        Minimum pChEMBL value for assay data. Defaults to 6.
+    Parameters:
+    ---------
+    compounds_list (Pandas DataFrame): DataFrame containing a list of compounds.
+    identifier (str): Identifier type ('SMILES', 'InChI', 'InChIKey') or a column name containing one of those. Matching is case-insensitive and will also accept SMILES-like columns such as 'canonical_smiles'.
+    confidence_threshol (int, optional): Minimum confidence threshold for assay data. Defaults to 8.
+    assay_type_in (list, optional): List of assay types to include. Defaults to ['B', 'F'].
+    pchembl_value_gte (int, optional): Minimum pChEMBL value for assay data. Defaults to 6.
 
-    Returns
-    -------
-        Three DataFrames containing:
-            - all_drug_info: Merged drug annotations and indications
-            - all_drug_assay: Merged assay information
-            - all_MoA: Merged mechanisms of action
-    """
-    if isinstance(identifier, str) and identifier.strip().lower() in {"any", "auto"}:
-        source_column = _select_any_identifier_column(compounds_list)
-        compounds_list = compounds_list.copy()
-        compounds_list["resolved_smiles"] = compounds_list[source_column].apply(resolve_smiles_any)
-        identifier_column, identifier_type = "resolved_smiles", "smiles"
-    else:
-        explicit_column = _match_column_case_insensitive(compounds_list, identifier)
-        if explicit_column is not None and identifier.strip().lower() not in {"smiles", "inchi", "inchikey"}:
-            compounds_list = compounds_list.copy()
-            compounds_list["resolved_smiles"] = compounds_list[explicit_column].apply(resolve_smiles_any)
-            identifier_column, identifier_type = "resolved_smiles", "smiles"
-        else:
+    Returns:
+    ----------
+    frames (tuple): Three DataFrames containing:
+    - all_drug_info: Merged drug annotations and indications
+    - all_drug_assay: Merged assay information
+    - all_MoA: Merged mechanisms of action
+    '''
+
+    identifier_column, identifier_type = resolve_identifier_column(compounds_list, identifier)
+    assay_type_in = tuple(assay_type_in)
+    rows = compounds_list.to_dict("records")
+
+    unique_compounds = {}
+    for row in rows:
+        compound = row.get(identifier_column)
+        compound_key = _compound_result_key(compound)
+        if compound_key not in unique_compounds:
+            unique_compounds[compound_key] = compound
+
+    pbar = tqdm(
+        total=len(unique_compounds),
+        desc="Processing compounds",
+        position=0,
+        bar_format="{percentage:3.0f}%|{bar}|{desc}",
+    )
+
+    compound_results = {}
+    max_workers = min(8, len(unique_compounds)) if unique_compounds else 1
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_key = {
+            executor.submit(
+                _fetch_compound_bundle,
+                compound,
+                identifier_type,
+                confidence_threshold,
+                assay_type_in,
+                pchembl_value_gte,
+            ): compound_key
+            for compound_key, compound in unique_compounds.items()
+        }
+
+        for index, future in enumerate(as_completed(future_to_key), start=1):
+            compound_key = future_to_key[future]
+            pbar.set_description(f"Processing compound n.: {index}")
             try:
-                identifier_column, identifier_type = resolve_identifier_column(compounds_list, identifier)
-            except ValueError:
-                source_column = _select_any_identifier_column(compounds_list)
-                compounds_list = compounds_list.copy()
-                compounds_list["resolved_smiles"] = compounds_list[source_column].apply(resolve_smiles_any)
-                identifier_column, identifier_type = "resolved_smiles", "smiles"
-    # Define an empty DataFrame to store all drug information
-    all_drug_info = pd.DataFrame()
-    all_drug_assay = pd.DataFrame()
-    all_MoA = pd.DataFrame()
-    # Get the total number of compounds
-    total_compounds = len(compounds_list[identifier_column])
-    # Initialize progress bar for tracking compound processing
-    pbar = tqdm(total=total_compounds, desc="Processing compounds", position=0, bar_format="{percentage:3.0f}%|{bar}|{desc}")
-    # Iterate through each compound in the list with a progress bar
-    for i, (index, row) in enumerate (compounds_list.iterrows(), start=1):
-        try:
-            compound = row[identifier_column]
-            if pd.isna(compound):
-                print(f"Warning: compound {i} is empty after identifier resolution")
-                pbar.update(1)
-                continue
-            chembl_id = chembl_get_id(compound, identifier_type)
-            drug_cid = pubchem_get_cid(compound, identifier_type)
-            drug_schembl = surechembl_get_id(compound, identifier_type)
-            #print(drug_cid,drug_schembl)
-            pbar.set_description(f"Processing compound n.: {i}")
-            # Get drug annotations and indications
-            drug_annot = chembl_drug_annotations(chembl_id)
-            drug_annot_selected = drug_annot[['molecule_chembl_id', 'canonical_smiles','standard_inchi', 'standard_inchi_key']] # Select specific columns from drug_annot
-            drug_indic = chembl_drug_indications(chembl_id)
-            drug_assay = chembl_assay_information(chembl_id, confidence_threshold, assay_type_in, pchembl_value_gte)
-            drug_MoA = chembl_mechanism_of_action(chembl_id)
-            # If no ChEMBL ID is found, ensure molecule_chembl_id is treated as a string to avoid type issues in merges
-            # Merge the annotations and indications on 'molecule_chembl_id'
-            if pd.isnull(chembl_id) == True: #if no chembl id is found convert NaN (float) to type string
-                drug_indic['molecule_chembl_id'] = drug_indic['molecule_chembl_id'].astype(str)
-                drug_assay['molecule_chembl_id'] = drug_assay['molecule_chembl_id'].astype(str)
-                drug_MoA['molecule_chembl_id'] = drug_MoA['molecule_chembl_id'].astype(str)
-            # Merge annotations and indications on molecule_chembl_id
-            drug_info = drug_annot.merge(drug_indic, on='molecule_chembl_id', how='left')
-            # Merge assay information with selected annotations
-            drug_assay = drug_annot_selected.merge(drug_assay, on='molecule_chembl_id', how='left')
-            # Merge mechanism of action with selected annotations
-            drug_MoA = drug_annot_selected.merge(drug_MoA, on='molecule_chembl_id', how='left')
-            # Add the drug_cid and drug_schembl to drug_info DataFrame
-            drug_info['drug_cid'] = drug_cid
-            drug_info['drug_schembl'] = drug_schembl
-            drug_assay['drug_cid'] = drug_cid
-            drug_assay['drug_schembl'] = drug_schembl
-            # Merge with the current compound's row data
-            merged_info = pd.concat([row.to_frame().T] * len(drug_info), ignore_index=True)
-            merged_info = pd.concat([merged_info.reset_index(drop=True), drug_info.reset_index(drop=True)], axis=1)
-            merged_assay = pd.concat([row.to_frame().T] * len(drug_assay), ignore_index=True)
-            merged_assay = pd.concat([merged_assay.reset_index(drop=True), drug_assay.reset_index(drop=True)], axis=1)  
-            merged_MoA = pd.concat([row.to_frame().T] * len(drug_MoA), ignore_index=True)
-            merged_MoA = pd.concat([merged_MoA.reset_index(drop=True), drug_MoA.reset_index(drop=True)], axis=1)
-            # Append the processed data to the result DataFrames
-            all_drug_info = pd.concat([all_drug_info, merged_info], ignore_index=True)
-            all_drug_assay = pd.concat([all_drug_assay, merged_assay], ignore_index=True)
-            all_MoA = pd.concat([all_MoA, drug_MoA], ignore_index=True)
-        
-        except Exception as e:
-            print(f"Warning: while processing compound {i}: {e}")
-        # Update the progress bar
-        pbar.update(1)  
-    # Return the three DataFrames containing processed information
-    return all_drug_info, all_drug_assay, all_MoA
+                compound_results[compound_key] = future.result()
+            except Exception as exc:
+                print(f"Warning: while processing compound {index}: {exc}")
+                compound_results[compound_key] = {
+                    "drug_info": pd.DataFrame(),
+                    "drug_assay": pd.DataFrame(),
+                    "drug_moa": pd.DataFrame(),
+                }
+            pbar.update(1)
+
+    all_drug_info = []
+    all_drug_assay = []
+    all_moa = []
+    for row in rows:
+        result = compound_results[_compound_result_key(row.get(identifier_column))]
+        if not result["drug_info"].empty:
+            all_drug_info.append(_merge_compound_row(row, result["drug_info"]))
+        if not result["drug_assay"].empty:
+            all_drug_assay.append(_merge_compound_row(row, result["drug_assay"]))
+        if not result["drug_moa"].empty:
+            all_moa.append(result["drug_moa"].copy())
+
+    return (
+        pd.concat(all_drug_info, ignore_index=True) if all_drug_info else pd.DataFrame(),
+        pd.concat(all_drug_assay, ignore_index=True) if all_drug_assay else pd.DataFrame(),
+        pd.concat(all_moa, ignore_index=True) if all_moa else pd.DataFrame(),
+    )

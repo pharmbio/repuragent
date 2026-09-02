@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   repuragent:
     build:
@@ -8,10 +6,8 @@ services:
     ports:
       - "7860:7860"
     volumes:
-      - ./data:/app/data
-      - ./results:/app/results
+      - ./persistence:/app/persistence
       - ./.env:/app/.env
-      - ./backend/memory:/app/backend/memory
     environment:
       - PYTHONPATH=/app
     restart: unless-stopped

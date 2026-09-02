@@ -24,6 +24,8 @@ import logging
 import math
 import re
 import threading
+import time
+from collections import OrderedDict
 from collections.abc import Mapping
 from functools import wraps
 from importlib import import_module
@@ -115,13 +117,12 @@ def truncate_content(content: str, max_length: int = MAX_LENGTH_TRUNCATE_CONTENT
             + f"\n..._This content has been truncated to stay below {max_length} characters_...\n"
             + content[-max_length // 2 :]
         )
-    
+
 
 class InterpreterError(ValueError):
-    """
-    An error raised when the interpreter cannot evaluate a Python expression, due to syntax error or unsupported
+    '''An error raised when the interpreter cannot evaluate a Python expression, due to syntax error or unsupported
     operations.
-    """
+    '''
 
     pass
 
@@ -132,12 +133,13 @@ ERRORS = {
     if isinstance(getattr(builtins, name), type) and issubclass(getattr(builtins, name), BaseException)
 }
 
-DEFAULT_MAX_LEN_OUTPUT = 5000000
+# Print output is transcript content: it is replayed to the model on every
+# later call in the run, so the old 5,000,000-char ceiling was no ceiling at
+# all. Callers may still override it per executor.
+DEFAULT_MAX_LEN_OUTPUT = 20000
 MAX_OPERATIONS = 1000000000
 MAX_WHILE_ITERATIONS = 100000000
 
-# Global persistent executor instance for maintaining namespace across executions
-_global_executor = None
 
 
 def custom_print(*args):
@@ -231,21 +233,40 @@ _BUILTIN_DENYLIST = {
 
 
 def resolve_builtin(name: str):
-    """Return the Python builtin for `name`, or None if it's absent or denylisted.
+    '''Return the Python builtin for `name`, or None if it's absent or denylisted.
 
     This is the flexibility escape hatch: any safe builtin (``repr``, ``bytes``,
     ``hex``, ``frozenset``, ``format``, ``vars``, …) resolves instead of raising
     "it is not permitted to evaluate other functions". Dangerous builtins stay
     unreachable because they are denylisted here (and blocked again by
     ``safer_eval`` / ``is_dangerous_callable``).
-    """
+
+    Parameters:
+    ---------
+    name (str): the builtin the interpreted code referred to.
+
+    Returns:
+    ----------
+    builtin (callable): the builtin, or None when it is absent or on the denylist.
+    '''
+
     if name in _BUILTIN_DENYLIST:
         return None
     return getattr(builtins, name, None)
 
 
 def is_dangerous_callable(func: Any) -> bool:
-    """True when `func` is one of the explicitly forbidden functions."""
+    '''True when `func` is one of the explicitly forbidden functions.
+
+    Parameters:
+    ---------
+    func (Any): the callable the interpreted code is about to invoke.
+
+    Returns:
+    ----------
+    dangerous (boolean): True when it is one of the explicitly forbidden functions.
+    '''
+
     for qualified in DANGEROUS_FUNCTIONS:
         module_name, function_name = qualified.rsplit(".", 1)
         if getattr(func, "__name__", None) == function_name and getattr(func, "__module__", None) == module_name:
@@ -287,9 +308,19 @@ async def _await_value(awaitable: Any) -> Any:
 
 
 def drive_awaitable(value: Any) -> Any:
-    """Run an awaitable to completion on the shared background loop and return its
+    '''Run an awaitable to completion on the shared background loop and return its
     result. Non-awaitables are returned unchanged, which makes ``asyncio.run``
-    tolerant of code that passes an already-resolved value."""
+    tolerant of code that passes an already-resolved value.
+
+    Parameters:
+    ---------
+    value (Any): the awaitable produced inside the interpreter.
+
+    Returns:
+    ----------
+    result (any): what it resolved to on the shared background loop.
+    '''
+
     if not inspect.isawaitable(value):
         return value
     loop = _get_async_loop()
@@ -298,10 +329,21 @@ def drive_awaitable(value: Any) -> Any:
 
 
 def drive_gather(*awaitables: Any, return_exceptions: bool = False) -> list:
-    """`asyncio.gather` replacement. Interpreter-defined ``async def``s resolve
+    '''`asyncio.gather` replacement. Interpreter-defined ``async def``s resolve
     eagerly to plain values, so `gather` may receive a mix of values and real
     coroutines — drive each to a result. Runs sequentially (no concurrency),
-    which is acceptable and matches how these tools are meant to be called."""
+    which is acceptable and matches how these tools are meant to be called.
+
+    Parameters:
+    ---------
+    *awaitables (awaitable): the awaitables to run concurrently.
+    return_exceptions (boolean): return a raised exception in place of a result rather than propagating it.
+
+    Returns:
+    ----------
+    results (list): one entry per awaitable, in the order given.
+    '''
+
     results = []
     for awaitable in awaitables:
         if inspect.isawaitable(awaitable):
@@ -326,20 +368,48 @@ class PrintContainer:
         return self
 
     def __iadd__(self, other):
-        """Implements the += operator"""
+        '''Implements the += operator
+
+        Parameters:
+        ---------
+        other (str): text to append to the captured output.
+
+        Returns:
+        ----------
+        self (PrintContainer): the same container, as `+=` requires.
+        '''
+
         self.value += str(other)
         return self
 
     def __str__(self):
-        """String representation"""
+        '''String representation
+
+        Returns:
+        ----------
+        text (str): everything printed so far.
+        '''
+
         return self.value
 
     def __repr__(self):
-        """Representation for debugging"""
+        '''Representation for debugging
+
+        Returns:
+        ----------
+        text (str): everything printed so far, for debugging.
+        '''
+
         return f"PrintContainer({self.value})"
 
     def __len__(self):
-        """Implements len() function support"""
+        '''Implements len() function support
+
+        Returns:
+        ----------
+        length (int): the number of characters captured.
+        '''
+
         return len(self.value)
 
 
@@ -357,15 +427,16 @@ class ReturnException(Exception):
 
 
 def safer_eval(func: Callable):
-    """
-    Decorator to make the evaluation of a function safer by checking its return value.
+    '''Decorator to make the evaluation of a function safer by checking its return value.
 
-    Args:
-        func: Function to make safer.
+    Parameters:
+    ---------
+    func (Callable): Function to make safer.
 
     Returns:
-        Callable: Safer function with return value check.
-    """
+    ----------
+    wrapped (callable): Safer function with return value check.
+    '''
 
     @wraps(func)
     def _check_return(expression, state, static_tools, custom_tools,
@@ -937,9 +1008,17 @@ def evaluate_name(
     builtin = resolve_builtin(name.id)
     if builtin is not None:
         return builtin
-    close_matches = difflib.get_close_matches(name.id, list(state.keys()))
-    if len(close_matches) > 0:
-        return state[close_matches[0]]
+    # Suggest, never substitute. Silently returning the nearest-named variable
+    # turns a typo into a wrong number with no error: `herg_scores` would quietly
+    # evaluate to `hergs_scores`. The caller must name the variable it means.
+    close_matches = difflib.get_close_matches(
+        name.id, [key for key in state if not key.startswith("_")]
+    )
+    if close_matches:
+        raise InterpreterError(
+            f"The variable `{name.id}` is not defined. Did you mean one of these? "
+            f"{close_matches}"
+        )
     raise InterpreterError(f"The variable `{name.id}` is not defined.")
 
 
@@ -1226,7 +1305,19 @@ def evaluate_with(
 
 
 def get_safe_module(raw_module, authorized_imports, visited=None):
-    """Creates a safe copy of a module or returns the original if it's a function"""
+    '''Creates a safe copy of a module or returns the original if it's a function
+
+    Parameters:
+    ---------
+    raw_module (module): the module the interpreted code imported.
+    authorized_imports (list): the import allowlist this session runs under.
+    visited (set): modules already wrapped, to terminate on circular references.
+
+    Returns:
+    ----------
+    module (module): a safe copy, or the original when it is a function or class rather than a module.
+    '''
+
     # If it's a function or non-module object, return it directly
     if not isinstance(raw_module, ModuleType):
         return raw_module
@@ -1370,16 +1461,17 @@ def evaluate_delete(
     custom_tools: Dict[str, Callable],
     authorized_imports: List[str],
 ) -> None:
-    """
-    Evaluate a delete statement (del x, del x[y]).
+    '''Evaluate a delete statement (del x, del x[y]).
 
-    Args:
-        delete_node: The AST Delete node to evaluate
-        state: The current state dictionary
-        static_tools: Dictionary of static tools
-        custom_tools: Dictionary of custom tools
-        authorized_imports: List of authorized imports
-    """
+    Parameters:
+    ---------
+    delete_node (ast.Delete): The AST Delete node to evaluate
+    state (dict): The current state dictionary
+    static_tools (dict): Dictionary of static tools
+    custom_tools (dict): Dictionary of custom tools
+    authorized_imports (list): List of authorized imports
+    '''
+
     for target in delete_node.targets:
         if isinstance(target, ast.Name):
             # Handle simple variable deletion (del x)
@@ -1406,7 +1498,21 @@ def evaluate_annassign(
     custom_tools: Dict[str, Callable],
     authorized_imports: List[str],
 ) -> Any:
-    """Annotated assignment: `x: int = 5` (or a bare annotation `x: int`)."""
+    '''Annotated assignment: `x: int = 5` (or a bare annotation `x: int`).
+
+    Parameters:
+    ---------
+    node (ast.AnnAssign): the `x: int = 5` node, or a bare `x: int` annotation.
+    state (dict): the interpreter namespace.
+    static_tools (dict): tools the interpreted code may call but not rebind.
+    custom_tools (dict): tools defined for this session.
+    authorized_imports (list): the import allowlist this session runs under.
+
+    Returns:
+    ----------
+    value (any): the assigned value, or None for a bare annotation.
+    '''
+
     if node.value is None:
         # Pure annotation with no value — nothing to bind.
         return None
@@ -1422,7 +1528,21 @@ def evaluate_namedexpr(
     custom_tools: Dict[str, Callable],
     authorized_imports: List[str],
 ) -> Any:
-    """Walrus operator: `(y := f(x))`."""
+    '''Walrus operator: `(y := f(x))`.
+
+    Parameters:
+    ---------
+    node (ast.NamedExpr): the `(y := f(x))` node.
+    state (dict): the interpreter namespace.
+    static_tools (dict): tools the interpreted code may call but not rebind.
+    custom_tools (dict): tools defined for this session.
+    authorized_imports (list): the import allowlist this session runs under.
+
+    Returns:
+    ----------
+    value (any): the value bound by the walrus, which is also the expression's value.
+    '''
+
     value = evaluate_ast(node.value, state, static_tools, custom_tools, authorized_imports)
     set_value(node.target, value, state, static_tools, custom_tools, authorized_imports)
     return value
@@ -1435,7 +1555,21 @@ def evaluate_await(
     custom_tools: Dict[str, Callable],
     authorized_imports: List[str],
 ) -> Any:
-    """`await expr` — resolve the awaitable on the shared background loop."""
+    '''`await expr` — resolve the awaitable on the shared background loop.
+
+    Parameters:
+    ---------
+    node (ast.Await): the `await expr` node.
+    state (dict): the interpreter namespace.
+    static_tools (dict): tools the interpreted code may call but not rebind.
+    custom_tools (dict): tools defined for this session.
+    authorized_imports (list): the import allowlist this session runs under.
+
+    Returns:
+    ----------
+    value (any): what the awaitable resolved to on the shared background loop.
+    '''
+
     value = evaluate_ast(node.value, state, static_tools, custom_tools, authorized_imports)
     return drive_awaitable(value)
 
@@ -1447,7 +1581,21 @@ def evaluate_async_for(
     custom_tools: Dict[str, Callable],
     authorized_imports: List[str],
 ) -> Any:
-    """`async for x in aiter: ...` driven synchronously via the background loop."""
+    '''`async for x in aiter: ...` driven synchronously via the background loop.
+
+    Parameters:
+    ---------
+    for_loop (ast.AsyncFor): the `async for x in aiter: ...` node.
+    state (dict): the interpreter namespace.
+    static_tools (dict): tools the interpreted code may call but not rebind.
+    custom_tools (dict): tools defined for this session.
+    authorized_imports (list): the import allowlist this session runs under.
+
+    Returns:
+    ----------
+    value (any): whatever a `break` or `return` inside the loop produced, otherwise None.
+    '''
+
     result = None
     iterable = evaluate_ast(for_loop.iter, state, static_tools, custom_tools, authorized_imports)
     async_iter = iterable.__aiter__()
@@ -1480,7 +1628,17 @@ def evaluate_async_with(
     custom_tools: Dict[str, Callable],
     authorized_imports: List[str],
 ) -> None:
-    """`async with ctx as x: ...` driven synchronously via the background loop."""
+    '''`async with ctx as x: ...` driven synchronously via the background loop.
+
+    Parameters:
+    ---------
+    with_node (ast.AsyncWith): the `async with ctx as x: ...` node.
+    state (dict): the interpreter namespace.
+    static_tools (dict): tools the interpreted code may call but not rebind.
+    custom_tools (dict): tools defined for this session.
+    authorized_imports (list): the import allowlist this session runs under.
+    '''
+
     contexts = []
     for item in with_node.items:
         context_expr = evaluate_ast(item.context_expr, state, static_tools, custom_tools, authorized_imports)
@@ -1509,26 +1667,24 @@ def evaluate_ast(
     custom_tools: Dict[str, Callable],
     authorized_imports: List[str] = BASE_BUILTIN_MODULES,
 ):
-    """
-    Evaluate an abstract syntax tree using the content of the variables stored in a state and only evaluating a given
+    '''Evaluate an abstract syntax tree using the content of the variables stored in a state and only evaluating a given
     set of functions.
 
     This function will recurse through the nodes of the tree provided.
 
-    Args:
-        expression (`ast.AST`):
-            The code to evaluate, as an abstract syntax tree.
-        state (`Dict[str, Any]`):
-            A dictionary mapping variable names to values. The `state` is updated if need be when the evaluation
-            encounters assignments.
-        static_tools (`Dict[str, Callable]`):
-            Functions that may be called during the evaluation. Trying to change one of these static_tools will raise an error.
-        custom_tools (`Dict[str, Callable]`):
-            Functions that may be called during the evaluation. These static_tools can be overwritten.
-        authorized_imports (`List[str]`):
-            The list of modules that can be imported by the code. By default, only a few safe modules are allowed.
-            If it contains "*", it will authorize any import. Use this at your own risk!
-    """
+    Parameters:
+    ---------
+    expression (`ast.AST`): The code to evaluate, as an abstract syntax tree.
+    state (`Dict[str, Any]`): A dictionary mapping variable names to values. The `state` is updated if need be when the evaluation encounters assignments.
+    static_tools (`Dict[str, Callable]`): Functions that may be called during the evaluation. Trying to change one of these static_tools will raise an error.
+    custom_tools (`Dict[str, Callable]`): Functions that may be called during the evaluation. These static_tools can be overwritten.
+    authorized_imports (`List[str]`): The list of modules that can be imported by the code. By default, only a few safe modules are allowed. If it contains "*", it will authorize any import. Use this at your own risk!
+
+    Returns:
+    ----------
+    value (any): the value of the evaluated node.
+    '''
+
     if state.setdefault("_operations_count", {"counter": 0})["counter"] >= MAX_OPERATIONS:
         raise InterpreterError(
             f"Reached the max number of operations of {MAX_OPERATIONS}. Maybe there is an infinite loop somewhere in the code, or you're just asking too many calculations."
@@ -1684,29 +1840,24 @@ def evaluate_python_code(
     authorized_imports: List[str] = BASE_BUILTIN_MODULES,
     max_print_outputs_length: int = DEFAULT_MAX_LEN_OUTPUT,
 ):
-    """
-    Evaluate a python expression using the content of the variables stored in a state and only evaluating a given set
+    '''Evaluate a python expression using the content of the variables stored in a state and only evaluating a given set
     of functions.
 
     This function will recurse through the nodes of the tree provided.
 
-    Args:
-        code (`str`):
-            The code to evaluate.
-        static_tools (`Dict[str, Callable]`):
-            The functions that may be called during the evaluation. These can also be agents in a multiagent setting.
-            These tools cannot be overwritten in the code: any assignment to their name will raise an error.
-        custom_tools (`Dict[str, Callable]`):
-            The functions that may be called during the evaluation.
-            These tools can be overwritten in the code: any assignment to their name will overwrite them.
-        state (`Dict[str, Any]`):
-            A dictionary mapping variable names to values. The `state` should contain the initial inputs but will be
-            updated by this function to contain all variables as they are evaluated.
-            The print outputs will be stored in the state under the key "_print_outputs".
-        authorized_imports (`List[str]`):
-            The list of modules that can be imported by the code. By default, only a few safe modules are allowed.
-            If it contains "*", it will authorize any import. Use this at your own risk!
-    """
+    Parameters:
+    ---------
+    code (`str`): The code to evaluate.
+    static_tools (`Dict[str, Callable]`): The functions that may be called during the evaluation. These can also be agents in a multiagent setting. These tools cannot be overwritten in the code: any assignment to their name will raise an error.
+    custom_tools (`Dict[str, Callable]`): The functions that may be called during the evaluation. These tools can be overwritten in the code: any assignment to their name will overwrite them.
+    state (`Dict[str, Any]`): A dictionary mapping variable names to values. The `state` should contain the initial inputs but will be updated by this function to contain all variables as they are evaluated. The print outputs will be stored in the state under the key "_print_outputs".
+    authorized_imports (`List[str]`): The list of modules that can be imported by the code. By default, only a few safe modules are allowed. If it contains "*", it will authorize any import. Use this at your own risk!
+
+    Returns:
+    ----------
+    result (tuple): the value of the final expression together with whatever the code printed.
+    '''
+
     try:
         expression = ast.parse(code)
     except SyntaxError as e:
@@ -1796,117 +1947,260 @@ class LocalPythonExecutor(PythonExecutor):
     #     self.static_tools = {**tools, **BASE_PYTHON_TOOLS.copy()}
 
 
-def reset_executor_state():
-    """
-    Reset the global persistent executor state.
-    
-    This function clears all variables and functions defined in previous executions,
-    providing a clean slate for new code execution. Useful for starting fresh
-    computational contexts or clearing accumulated state.
-    
+class ExecutionTimeout(InterpreterError):
+    '''Raised when a single execution exceeds its wall-clock budget.'''
+
+class ExecutionCancelled(InterpreterError):
+    '''Raised when the user stopped the run while this execution was in flight.'''
+
+DEFAULT_SESSION_KEY = "default"
+DEFAULT_EXECUTION_TIMEOUT_SECONDS = 900
+# How long a call waits for a sibling execution in the same conversation before
+# giving up. Only reachable when a previous call is still running.
+SESSION_ACQUIRE_TIMEOUT_SECONDS = 60
+_MAX_SESSIONS = 32
+# One interpreter per (user, conversation) rather than one per process. The
+# previous single global was shared by every user and every conversation:
+# concurrent runs interleaved in one namespace, and one conversation's
+# `reset_python_state` wiped everybody else's variables.
+_executors: "OrderedDict[str, LocalPythonExecutor]" = OrderedDict()
+_registry_lock = threading.RLock()
+_session_locks: Dict[str, threading.RLock] = {}
+
+
+def set_max_executor_sessions(size: int) -> None:
+    '''How many interpreter sessions stay resident before LRU eviction.
+
+    Parameters:
+    ---------
+    size (int): how many interpreter sessions stay resident before LRU eviction.
+    '''
+
+    global _MAX_SESSIONS
+    _MAX_SESSIONS = max(1, int(size))
+
+
+def _session_lock(session_key: str) -> threading.RLock:
+    with _registry_lock:
+        lock = _session_locks.get(session_key)
+        if lock is None:
+            lock = threading.RLock()
+            _session_locks[session_key] = lock
+        return lock
+
+
+def _get_executor(session_key: str, authorized_imports: List[str]) -> "LocalPythonExecutor":
+    with _registry_lock:
+        executor = _executors.get(session_key)
+        if executor is None:
+            executor = LocalPythonExecutor(additional_authorized_imports=authorized_imports)
+            _executors[session_key] = executor
+            while len(_executors) > _MAX_SESSIONS:
+                evicted, _ = _executors.popitem(last=False)
+                _session_locks.pop(evicted, None)
+        else:
+            _executors.move_to_end(session_key)
+            merged = list(set(BASE_BUILTIN_MODULES) | set(authorized_imports))
+            if set(executor.authorized_imports) != set(merged):
+                executor.authorized_imports = merged
+        return executor
+
+
+def _drop_session(session_key: str) -> None:
+    '''Forget one session's interpreter and lock, leaving other sessions alone.
+
+    Parameters:
+    ---------
+    session_key (str): the `<user>::<conversation>` session to forget, leaving every other session alone.
+    '''
+
+    with _registry_lock:
+        _executors.pop(session_key, None)
+        _session_locks.pop(session_key, None)
+
+
+def active_session_keys() -> List[str]:
+    with _registry_lock:
+        return list(_executors)
+
+
+def _interrupt_thread(thread: threading.Thread) -> None:
+    '''Best-effort attempt to unwind a worker that overran its budget.
+
+    Only fires between bytecodes, so it recovers a runaway pure-Python loop but
+    cannot interrupt a blocking socket read. Nothing may depend on it — the
+    session is dropped either way so the conversation stays usable.
+
+    Parameters:
+    ---------
+    thread (threading.Thread): the worker that overran its wall-clock budget.
+    '''
+
+    thread_id = getattr(thread, "ident", None)
+    if thread_id is None:
+        return
+    try:
+        import ctypes
+
+        ctypes.pythonapi.PyThreadState_SetAsyncExc(
+            ctypes.c_ulong(thread_id), ctypes.py_object(SystemExit)
+        )
+    except Exception:  # pragma: no cover - platform dependent
+        logger.debug("Could not signal runaway execution thread %s", thread_id)
+
+
+def _call_with_timeout(func, timeout: Optional[float], cancel_event=None):
+    '''Run `func` in a worker thread, giving up after `timeout` seconds.
+
+    `cancel_event` lets the user's Stop abandon the wait promptly instead of
+    sitting out the full budget; the worker itself cannot be killed, so the
+    session is dropped and the thread is left to finish into nothing.
+
+    Parameters:
+    ---------
+    func (callable): the work to run in a worker thread.
+    timeout (float): seconds to allow before giving up.
+    cancel_event (threading.Event): set when the user stops the run, so a long call ends early.
+
+    Returns:
+    ----------
+    result (any): what `func` returned, or a raised timeout — LangChain runs sync tools in a thread pool, so cancelling a run does not kill the thread and the session is dropped instead.
+    '''
+
+    if (not timeout or timeout <= 0) and cancel_event is None:
+        return func()
+
+    box: Dict[str, Any] = {}
+
+    def target():
+        try:
+            box["value"] = func()
+        except BaseException as exc:  # noqa: BLE001 - handed back to the caller
+            box["error"] = exc
+
+    worker = threading.Thread(target=target, daemon=True, name="repuragent-python-exec")
+    worker.start()
+
+    deadline = None if not timeout or timeout <= 0 else time.monotonic() + timeout
+    poll = 0.1
+    while worker.is_alive():
+        if cancel_event is not None and cancel_event.is_set():
+            _interrupt_thread(worker)
+            raise ExecutionCancelled("Execution abandoned because the run was stopped.")
+        if deadline is not None and time.monotonic() >= deadline:
+            _interrupt_thread(worker)
+            raise ExecutionTimeout(
+                f"Execution exceeded the {timeout:.0f}s limit and was abandoned."
+            )
+        worker.join(poll)
+
+    if "error" in box:
+        raise box["error"]
+    return box.get("value")
+
+
+def reset_executor_state(session_key: Optional[str] = None):
+    '''Reset persistent executor state.
+
+    Clears variables and functions defined in previous executions. With a session
+    key only that conversation's interpreter is cleared; without one, every
+    session is cleared.
+
     Example:
-        >>> local_python_executor("x = 42", [])
-        42
-        >>> reset_executor_state()
-        >>> local_python_executor("print(x)", [])  # This would raise NameError
-    """
-    global _global_executor
-    _global_executor = None
+    ----------
+    >>> local_python_executor("x = 42", [], session_key="s1")
+    42
+    >>> reset_executor_state("s1")
+    >>> local_python_executor("print(x)", [], session_key="s1")  # NameError
+
+    Parameters:
+    ---------
+    session_key (str): the session to clear, or None for every session.
+    '''
+
+    with _registry_lock:
+        if session_key is None:
+            _executors.clear()
+            _session_locks.clear()
+            return
+        _executors.pop(session_key, None)
+        _session_locks.pop(session_key, None)
 
 
 def local_python_executor(
     code: str,
     authorized_imports: List[str],
     variables: Optional[Dict[str, Any]] = None,
+    session_key: str = DEFAULT_SESSION_KEY,
+    timeout: Optional[float] = DEFAULT_EXECUTION_TIMEOUT_SECONDS,
+    cancel_event=None,
 ):
-    """
-    Executes Python code in a sandboxed environment with restricted imports for security.
-    Uses a global persistent executor to maintain variable state across executions.
-    
-    This function provides a simplified interface to the LocalPythonExecutor class, allowing
-    for safe execution of Python code with controlled access to imports. It evaluates the 
-    provided code string and returns the result of the execution.
-    
-    Variables defined in previous executions are preserved and available in subsequent
-    executions within the same session, providing REPL-like behavior for stateful
-    code execution.
-    
-    Args:
-        code (str): 
-            The Python code to execute as a string. This can be any valid Python code,
-            including multiple statements, function definitions, class definitions, etc.
-        authorized_imports (List[str]): 
-            A list of module names that are allowed to be imported by the code.
-            These are in addition to the base built-in modules defined in BASE_BUILTIN_MODULES.
-            For unrestricted imports (use with caution), include "*" in the list.
-        variables (Optional[Dict[str, Any]]):
-            Optional variables to inject into the persistent execution state before
-            the code runs. Existing names will be updated for the current execution.
-    
-    Returns:
-        Any: The result of the last statement in the executed code. If the code raises
-             an exception, an InterpreterError will be raised with details about the error.
-    
-    Raises:
-        InterpreterError: When the code execution fails due to syntax errors, unauthorized
-                          imports, or other runtime errors.
-    
-    Examples:
-        Basic arithmetic:
-        >>> local_python_executor("2 + 2", [])
-        4
-        
-        Using built-in modules:
-        >>> local_python_executor("import math; math.sqrt(16)", [])
-        4.0
-        
-        Using additional authorized imports:
-        >>> local_python_executor("import numpy as np; np.array([1, 2, 3]).mean()", ["numpy"])
-        2.0
-        
-        Persistent variables across executions:
-        >>> local_python_executor("x = 10", [])
-        10
-        >>> local_python_executor("y = 20", [])  
-        20
-        >>> local_python_executor("x + y", [])
-        30
-        
-        Function definition and execution:
-        >>> code = '''
-        ... def factorial(n):
-        ...     return 1 if n <= 1 else n * factorial(n-1)
-        ... factorial(5)
-        ... '''
-        >>> local_python_executor(code, [])
-        120
-        
-        Working with data structures:
-        >>> local_python_executor("data = {'a': 1, 'b': 2}; data['a'] + data['b']", [])
-        3
-    """
-    global _global_executor
-    
-    # Initialize or validate the global executor
-    if _global_executor is None:
-        _global_executor = LocalPythonExecutor(additional_authorized_imports=authorized_imports)
-    else:
-        # Update authorized imports if they've changed
-        new_authorized_imports = list(set(BASE_BUILTIN_MODULES) | set(authorized_imports))
-        if set(_global_executor.authorized_imports) != set(new_authorized_imports):
-            _global_executor.authorized_imports = new_authorized_imports
-    
-    if variables:
-        _global_executor.send_variables(variables)
+    '''Execute Python in a sandboxed interpreter with restricted imports.
 
-    # Execute using the persistent global executor
-    output, logs, is_final_answer = _global_executor(code_action=code)
-    
-    # If output is None but we have print logs, return the logs instead
+    Variables defined in previous executions of the same session are preserved,
+    giving REPL-like behaviour within one conversation.
+
+    Parameters:
+    ---------
+    code (str): The Python code to execute.
+    authorized_imports (list): Modules importable in addition to `BASE_BUILTIN_MODULES`. Include `"*"` for unrestricted imports.
+    variables (dict): Values injected into the session before the code runs.
+    session_key (str): Identifies the interpreter session. Callers must scope this to a (user, conversation) pair so state never leaks between them.
+    timeout (float): Wall-clock budget in seconds. On expiry the session is dropped and `ExecutionTimeout` is raised. Pass None to disable.
+    cancel_event: Optional `threading.Event`; when set, the call raises `ExecutionCancelled` instead of waiting out the budget.
+
+    Returns:
+    ----------
+    result (any): The value of the last statement, or the captured print output when the
+    last statement produced nothing.
+
+    Raises:
+    ----------
+    InterpreterError: syntax errors, unauthorized imports, runtime errors. ExecutionTimeout / ExecutionCancelled: as described above.
+    '''
+
+    executor = _get_executor(session_key, authorized_imports)
+
+    # Serialize calls within a session: LangChain runs sync tools in a thread
+    # pool, so two calls of the same conversation could otherwise mutate one
+    # interpreter namespace concurrently.
+    lock = _session_lock(session_key)
+    if not lock.acquire(timeout=SESSION_ACQUIRE_TIMEOUT_SECONDS):
+        raise ExecutionTimeout(
+            "A previous execution in this conversation is still running. Wait for "
+            "it to finish, or call reset_python_state to start a clean session."
+        )
+    try:
+        if variables:
+            executor.send_variables(variables)
+        output, logs, is_final_answer = _call_with_timeout(
+            lambda: executor(code_action=code), timeout, cancel_event
+        )
+    except (ExecutionTimeout, ExecutionCancelled):
+        # The worker may still be stuck in a blocking call holding this
+        # interpreter. Drop the session so the next call gets a clean one instead
+        # of queueing behind a thread that may never return.
+        _drop_session(session_key)
+        raise
+    finally:
+        lock.release()
+
+    # A statement that only printed still has something to report.
     if output is None and logs.strip():
         return logs.strip()
-    
     return output
 
 
-__all__ = ["evaluate_python_code", "LocalPythonExecutor", "local_python_executor", "reset_executor_state"]
+__all__ = [
+    "DEFAULT_EXECUTION_TIMEOUT_SECONDS",
+    "DEFAULT_SESSION_KEY",
+    "ExecutionCancelled",
+    "ExecutionTimeout",
+    "LocalPythonExecutor",
+    "active_session_keys",
+    "evaluate_python_code",
+    "local_python_executor",
+    "reset_executor_state",
+    "set_max_executor_sessions",
+    "truncate_content",
+]

@@ -32,6 +32,6 @@ architecture at its core, where the supervisor agent drives a team of five speci
 | --- | --- | --- |
 | Distribution | GitHub source; run it with Docker | Hosted service |
 | Authentication | None (single-user) | Email + password |
-| Short-term memory | Local SQLite | Supabase PostgreSQL |
+| Short-term memory | Local SQLite (one file, no server) | PostgreSQL |
 | Long-term/episodic memory | Chroma DB | Chroma DB |
 | Extra dependencies | Docker Desktop, `OPENAI_API_KEY`, optional LangSmith keys | NO |

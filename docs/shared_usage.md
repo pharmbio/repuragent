@@ -65,7 +65,7 @@ with open(kg_path, 'wb') as f:
 ## 4.3 Episodic Learning
 
 - **What it is**  
-  LangMem + Chroma captures successful planning decompositions so the next run can reuse proven strategies.
+  A Chroma store captures successful planning decompositions so the next run can reuse proven strategies.
 - **How it works**  
   Every conversation can be extracted into an “episode” with *Task* and *Decomposition* patterns. When enabled, the planning agent automatically pulls the two most relevant examples into its system prompt.
 - **Extraction trigger**  

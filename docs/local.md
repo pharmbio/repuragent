@@ -52,17 +52,23 @@ The full script for local version is available on [github.com/pharmbio/repuragen
 
 The local version lets you inject your own SOP documents into the system.
 
-1. **Drop source files** into `data/SOP/ (create SOP directory if needed). The SOP indexer accepts PDF and DOCX; keep filenames descriptive (they appear in citations).
+1. **Drop source files** into `persistence/data/SOP/`. Keep filenames descriptive: the
+   filename is written into the indexed text, so a document is findable by the number a
+   person would cite even when that number appears nowhere in its body.
 2. **Index or re-index** with the provided script:
    ```bash
-   cd backend/sop_rag
-   python sop_indexer.py
+   cd persistence/data/SOP
+   python reindex.py               # index whatever is new, edited or deleted
+   python reindex.py --dry-run     # say what would change, write nothing
+   python reindex.py --rebuild     # discard the index and start again
    ```
-   - The script chunks documents, stores summaries in ChromaDB (`backend/memory/sop_documents/chromadb/sop_rag`), and saves original pages in a docstore folder (`backend/memory/sop_documents/docstore`).
+   - The indexer parses each PDF into sections, embeds ~200-character children of them into ChromaDB (`persistence/memory/sop_documents/ensemble/chroma_db`), keeps the whole sections in a docstore (`.../ensemble/docstore`), and writes the keyword arm's corpus to `.../ensemble/bm25_corpus.json`. It is incremental: a SHA-256 per file in `manifest.json` means only what is new or edited is re-parsed.
 
 3. **How it becomes available**  
-   On app startup, `SOPRetriever` loads the persisted vector store. When an agent calls
-   `protocol_search_sop` automatically retrieves your newest snippets.
+   The retriever is built on first use and cached, loading the persisted vector store, the
+   parent docstore and the keyword corpus. An agent calling `protocol_search_sop` then
+   searches your newest documents alongside the shipped ones. Re-index while the app is
+   running and restart it, or the cached retriever will still hold the previous corpus.
 
 ## 2.5 Local Data Handling
 

@@ -5,9 +5,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "7860:7860"
+    # keep generated files when resume app
     volumes:
-      - ./persistence:/app/persistence
-      - ./.env:/app/.env
+      - ./persistence:/home/repuragent/app/persistence
+      - ./.env:/home/repuragent/app/.env
     environment:
       - PYTHONPATH=/app
     restart: unless-stopped

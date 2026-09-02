@@ -7,6 +7,12 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     DEBIAN_FRONTEND=noninteractive \
     JAVA_HOME=/usr/lib/jvm/default-java
 
+ENV USER=repuragent
+ENV HOME=/home/$USER
+ENV PERSIST_ROOT=/home/$USER/app/persistence
+
+
+RUN useradd -m -u 1000 $USER
 
 # Install system dependencies including Java 11
 RUN apt-get update && apt-get install -y \
@@ -30,10 +36,7 @@ RUN apt-get update && apt-get install -y \
 RUN java -version
 
 # Set working directory
-WORKDIR /app
-
-# Create necessary directories
-RUN mkdir -p /app/data /app/results /app/models /app/temp
+WORKDIR $HOME/app
 
 # Copy requirements first for better caching
 COPY requirements.txt ./
@@ -53,11 +56,11 @@ COPY . .
 
 # Set proper permissions
 RUN chmod +x models/CPSign/cpsign-2.0.0-fatjar.jar 2>/dev/null || true
-RUN chmod -R 755 /app
-RUN chown -R $USER:$USER /app
+RUN chmod -R 755 $HOME/app
+RUN chown -R $USER:$USER $HOME
 
 # Create volumes for persistent data and memory stores
-VOLUME ["/app/data", "/app/results", "/app/backend/memory"]
+VOLUME ["/home/repuragent/app/persistence"]
 
 # Expose Gradio port
 EXPOSE 7860

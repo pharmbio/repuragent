@@ -82,7 +82,7 @@ PREDICTION_TOOLS = [
     predict_repurposedrugs,
 ]
 
-DATA_TOOLS = [python_executor, reset_python_state, read_files]
+DATA_TOOLS = [python_executor, reset_python_state, read_files, protocol_search_sop]
 
 REPORT_TOOLS = [read_files, python_executor]
 

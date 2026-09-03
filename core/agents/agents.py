@@ -1,18 +1,3 @@
-'''The five agents, each a thin `create_agent` call.
-
-Every agent is built with `state_schema=AgentGraphState` and a context middleware.
-Both are required, for different reasons:
-
-* without the state schema LangGraph filters the parent state down to the plain
-  `AgentState`, so `conversation_id` and the plan pointer never reach
-  the middleware;
-* the middleware is what supplies the output scope, the artifact ledger, the plan
-  progress and the compressed history — without it an agent sees the raw message
-  list and no idea where it is allowed to write.
-
-Model choice per role lives in `app/config.py`, not here.
-'''
-
 from __future__ import annotations
 
 from typing import Any, Callable, Dict, List, Optional
@@ -116,7 +101,6 @@ SUPERVISOR_POSTURES: Dict[str, str] = {
     "follow_up": SUPERVISOR_POSTURE_FREE,
 }
 
-
 def _supervisor_posture(state: Dict[str, Any]) -> str:
     category = str(state.get("task_category") or "complex")
     if category == "follow_up":
@@ -146,9 +130,6 @@ def _build(
         name=name,
         state_schema=AgentGraphState,
         middleware=[
-            # Ordered deliberately: the recorded-size ceiling wraps every tool call,
-            # the context middleware shapes what the model is shown. One bounds the
-            # record, the other the view.
             bound_tool_result,
             build_context_middleware(
                 role=name,
@@ -167,11 +148,6 @@ def _build(
 
 def _build_specialist(model, *, name: str, prompt: str, tools: List[Any], compress: bool):
     '''A context-isolated specialist.
-
-    It sees the brief the supervisor wrote for it, its own working messages, and its
-    operating scope — not the conversation, not the plan, not another specialist's
-    work. The plan is excluded on purpose: tracking is the supervisor's job, and a
-    specialist that can read the plan starts working ahead of its brief.
 
     Parameters:
     ---------
@@ -192,7 +168,7 @@ def _build_specialist(model, *, name: str, prompt: str, tools: List[Any], compre
         prompt=prompt,
         tools=tools,
         compress=compress,
-        isolated=True,
+        isolated=True,  # only recieving brief
         include_goal=False,
         include_plan=False,
         include_artifacts=True,
@@ -201,11 +177,6 @@ def _build_specialist(model, *, name: str, prompt: str, tools: List[Any], compre
 
 def build_planning_agent(model, *, compress: bool = True):
     '''The planner: no tools, and precedent from episodic memory.
-
-    Tool-free by design — it reasons from the request and the conversation, and the
-    specialists do the retrieving. It is the only agent given episodic examples,
-    and it is not told about the plan file: on this route the file does not exist
-    yet, because `plan_init` writes it only once the user has approved.
 
     Parameters:
     ---------
@@ -271,8 +242,7 @@ def build_data_agent(model, *, compress: bool = True):
 
 
 def build_report_agent(model, *, name: str, prompt: str, compress: bool = True):
-    '''A report variant. Three exist because the required format genuinely differs,
-    and because the UI styles the deliverable by node name.
+    '''
 
     Parameters:
     ---------

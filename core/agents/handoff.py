@@ -1,45 +1,3 @@
-'''Delegation: how the supervisor briefs a specialist.
-
-A handoff is a tool the supervisor calls. It returns a `Command` that jumps to the
-specialist's node in the **execution subgraph** (`graph=Command.PARENT`, relative to the
-supervisor's own agent graph).
-
-**The specialist sees only what the brief carries** — no conversation, no plan, no other
-specialist's work (`core/agents/context.py::build_specialist_input_messages`). So the
-brief is the entire input, and the tool's shape is what makes it complete:
-
-* `objective` — the outcome, not the procedure.
-* `inputs` — the values to start from.
-* `artifacts` — files from earlier steps, **each with what it contains**. The specialist
-  does receive a raw list of paths in its context, but that list is a directory listing:
-  ten files with byte counts and nothing saying which is the candidate table, which is
-  the pathway extract, or how they join. Naming the relevant ones and what they hold is
-  the difference between a specialist working and a specialist guessing.
-* `constraints` — the non-negotiables of this step.
-* `expected_output` — what to hand back.
-* `context` — why, and what earlier steps established.
-
-The level to pitch it at is a real design constraint in both directions. Prescribe the
-method and the specialist becomes a typist: its domain knowledge goes unused and a
-mistake in the supervisor's method goes uncorrected. Leave it too thin and the specialist
-guesses, which is where wrong results come from. `validate_brief` catches the mechanical
-half of that — dangling references, undescribed files, paths that do not exist — and the
-supervisor prompt's calibration section teaches the rest.
-
-The rendered brief is the handoff `ToolMessage`'s content, so it needs no extra state
-channel, survives two handoffs in one step, and is visible in the transcript for free.
-
-Why the supervisor node has no outgoing edge: a static edge from `supervisor` would fire
-*in parallel* with the handoff, running the next node before the specialist had done
-anything. The subgraph instead ends when the supervisor stops delegating.
-
-The same `Command` has a second consequence that `handoff_messages` exists for:
-`graph=Command.PARENT` abandons the supervisor's own agent graph, so the parent gets the
-`update` and nothing else — the `AIMessage` carrying the `transfer_to_<agent>` `tool_call`
-included. Propagating the brief alone leaves the parent holding a `tool` message that
-answers a call it cannot see, and every later request is rejected outright.
-'''
-
 from __future__ import annotations
 
 import re
@@ -78,13 +36,7 @@ SPECIALISTS: dict[str, str] = {
     ),
 }
 
-# --- Validation ---------------------------------------------------------------
-
-# Phrases that only mean something to someone who watched the earlier steps. In
-# `inputs` or `artifacts` — the two fields whose whole job is to carry concrete values —
-# they are unresolvable, and they are the single most likely way an isolated delegation
-# fails. Checked only in those fields: "the previous step established X" is legitimate
-# prose in `context`.
+# Validation 
 _DANGLING_REFERENCES = re.compile(
     r"\b("
     r"the (previous|prior|last|earlier|preceding) (step|run|result|output|analysis|one)"
@@ -138,10 +90,6 @@ def validate_brief(
     constraints: Sequence[str] = (),
 ) -> Optional[str]:
     '''The reason this brief cannot be delivered, or None.
-
-    Returned to the supervisor as the tool result so it can rewrite and retry — the same
-    mechanism `plan_update` uses for an invalid step number. Every check here is for a
-    defect the specialist could not recover from on its own.
 
     Parameters:
     ---------
@@ -218,8 +166,7 @@ def validate_brief(
     )
 
 
-# --- Rendering ----------------------------------------------------------------
-
+# Rendering task brief
 
 def render_brief(
     *,
@@ -270,8 +217,7 @@ def render_brief(
     return "\n".join(lines)
 
 
-# --- Carrying the delegation up to the parent graph ---------------------------
-
+# Carrying the delegation up to the parent graph 
 
 def handoff_messages(
     messages: Sequence[BaseMessage],
@@ -279,24 +225,6 @@ def handoff_messages(
     tool_call_id: str,
 ) -> List[BaseMessage]:
     '''The parent's message list, with the delegating `AIMessage` carried up beside the brief.
-
-    **This is what stops the run 400-ing on the supervisor's next model call.** The
-    handoff returns `Command(graph=Command.PARENT)`, which abandons the supervisor's
-    own agent graph mid-run: the parent receives the `Command`'s `update` and nothing
-    else. So an update of only the brief leaves the parent holding a `ToolMessage`
-    whose `AIMessage` — the one carrying the `transfer_to_<agent>` `tool_call` — was
-    never written anywhere the parent can see. Every later model call then ships a
-    `tool` message answering a call that is not in the list, and OpenAI rejects the
-    request outright:
-
-        Invalid parameter: messages with role 'tool' must be a response to a
-        preceeding message with 'tool_calls'.
-
-    The whole inner list is returned rather than just the tail. `add_messages` keys on
-    id, so the messages the parent already holds are replaced by themselves, and only
-    what the supervisor actually added this turn is appended — in order. Sending the
-    tail instead would mean guessing where the parent's copy ended, and guessing short
-    drops a tool pair.
 
     Parameters:
     ---------
@@ -315,11 +243,6 @@ def handoff_messages(
 
     last = history[-1]
     calls = list(getattr(last, "tool_calls", None) or [])
-    # A parallel call — `plan_update` alongside the handoff, or two handoffs at once —
-    # is the mirror-image failure: the sibling `ToolMessage`s are written into the
-    # abandoned inner graph, so propagating the `AIMessage` whole would leave *their*
-    # `tool_call`s unanswered and OpenAI would reject that instead. Only the call this
-    # brief answers survives; the supervisor can make the others again.
     if isinstance(last, AIMessage) and len(calls) > 1:
         kept = [call for call in calls if call.get("id") == tool_call_id]
         if kept:
@@ -343,19 +266,6 @@ def superseded_handoff(
     messages: Sequence[BaseMessage], tool_call_id: str
 ) -> Optional[str]:
     '''Why this handoff must stand down, when the same turn asked for two of them.
-
-    Two `transfer_to_*` calls in one `AIMessage` cannot both be delivered. Each returns
-    its own `Command(graph=Command.PARENT)` carrying its own copy of that `AIMessage`,
-    and both copies share its id — so `add_messages` keeps whichever lands last and the
-    other specialist's brief is left answering a call that is no longer there. Two
-    specialists also cannot execute at once here: they share the message list and the
-    plan file, and concurrent writes to `plan_progress` are what LangGraph rejects with
-    `InvalidUpdateError`.
-
-    So the first handoff in the turn proceeds and the rest stand down. "First" is the
-    order the model wrote the calls in, not the order the tool node happens to run them,
-    which keeps the choice deterministic. The step the supervisor stood down on is still
-    unresolved in `plan.md`, so it delegates it again on its next turn.
 
     Parameters:
     ---------
@@ -389,8 +299,7 @@ def superseded_handoff(
     )
 
 
-# --- The tool -----------------------------------------------------------------
-
+# The tool
 
 def make_handoff_tool(agent_name: str, description: str) -> BaseTool:
     '''A `transfer_to_<agent>` tool that briefs and routes to that specialist.
@@ -407,13 +316,6 @@ def make_handoff_tool(agent_name: str, description: str) -> BaseTool:
 
     tool_name = f"transfer_to_{agent_name}"
 
-    # `parse_docstring=True` is load-bearing: with `description=` alone LangChain
-    # leaves every argument description empty, so the calibration guidance below —
-    # the whole reason the brief has separate fields — never reaches the model.
-    # It also fixes the section header: `_parse_google_docstring` looks for a block
-    # starting with the literal `Args:` and raises on anything else, so this one
-    # docstring says `Args:` where the rest of the codebase says `Parameters:`.
-    # The dashed underline and the `name (type):` entries are both tolerated.
     @tool(tool_name, description=description, parse_docstring=True)
     def handoff(
         objective: str,
@@ -463,9 +365,6 @@ def make_handoff_tool(agent_name: str, description: str) -> BaseTool:
             constraints=constraints,
         )
         if problem:
-            # Returning a plain string rather than a Command keeps the supervisor in
-            # control: it gets the reason as a tool result and can rewrite the brief,
-            # instead of a specialist being handed something it cannot execute.
             return problem
 
         brief = ToolMessage(
@@ -483,9 +382,6 @@ def make_handoff_tool(agent_name: str, description: str) -> BaseTool:
         )
         return Command(
             goto=agent_name,
-            # The brief alone is not enough: `graph=Command.PARENT` abandons the
-            # supervisor's own graph, so the `AIMessage` holding this `tool_call` has to
-            # travel up with it or the parent is left with an unanswerable `tool` message.
             update={"messages": handoff_messages(history, brief, tool_call_id)},
             graph=Command.PARENT,
         )

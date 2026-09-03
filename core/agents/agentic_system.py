@@ -1,36 +1,3 @@
-'''The graph. This is the shape of the whole system.
-
-```
-START → task_classifier
-  ├ complex   → planning_agent → human_chat ⇄ planning_agent
-  │                                   └(approved)→ approval_ack → plan_init
-  ├ simple    → plan_init
-  ├ follow_up → plan_init
-  └ meta_query→ report_agent_meta → context_summary_meta → END
-
-plan_init → execution → plan_finalize → report_agent_{complex|simple}
-          → context_summary_{complex|simple} → END
-
-execution (nested subgraph):
-  START → supervisor ⇄ {research_agent, prediction_agent, data_agent}
-```
-
-Two structural decisions are worth knowing before editing this file.
-
-**The supervisor and its specialists live in a nested subgraph.** A handoff tool
-returns `Command(goto=<specialist>, graph=Command.PARENT)`, which *adds* a task
-rather than replacing the node's own edges — so a static `supervisor → plan_finalize`
-edge fires alongside the handoff and `plan_finalize` runs before any specialist has
-done anything (observably: two nodes writing `plan_progress` in one superstep, which
-LangGraph rejects). Giving the supervisor no outgoing edge makes the subgraph end
-when it stops delegating, and the parent's single `execution → plan_finalize` edge
-picks up from there.
-
-**`plan_init` and `plan_finalize` contain no LLM call.** They parse, write and
-reconcile `plan.md` in code. That is the point: progress is a file, not prose the
-model reproduces.
-'''
-
 from __future__ import annotations
 
 from typing import Any, Dict, List, Literal, Optional
@@ -89,34 +56,26 @@ from core.tools.plan_tools import render_ledger
 TaskCategory = Literal["simple", "complex", "meta_query", "follow_up"]
 
 
-# --- Structured outputs for the two decision-only model calls ------------------
-
-
+# Structured outputs for the two decision-only model calls 
 class TaskClassification(BaseModel):
     category: TaskCategory = Field(description="Classification of the user's latest request.")
 
 
 class PlanFeedbackVerdict(BaseModel):
     decision: Literal["approve", "revise"] = Field(
-        description=(
-            "approve = the user authorizes execution now, even if they attach "
-            "conditions. revise = they want the plan changed first, are asking a "
-            "question, or are uncertain."
-        )
+        description=("approve = the user authorizes execution now, even if they attach conditions. revise = they want the plan changed first, are asking a question, or are uncertain.")
     )
     constraints: List[str] = Field(
         default_factory=list,
         description=(
-            "Conditions the user attached to an approval, each as one imperative "
-            "instruction for the executor. Empty for an unconditional approval."
+            "Conditions the user attached to an approval, each as one imperative instruction for the executor. Empty for an unconditional approval."
         ),
     )
 
-
+# For the context compress node
 class ContextOutputRecord(BaseModel):
     path: str = Field(default="", description="Full path of a produced artifact.")
     description: str = Field(default="", description="What the artifact contains.")
-
 
 class ContextMemory(BaseModel):
     facts: List[str] = Field(
@@ -129,22 +88,21 @@ class ContextMemory(BaseModel):
         default_factory=list, description="Unverified, blocked, assumed or unresolved items."
     )
 
-
 class ContextDigest(BaseModel):
     summary: str = Field(description="Evidence-first record of the work so far.")
     memory: ContextMemory = Field(default_factory=ContextMemory)
 
 
-# --- Lazily built helper models ------------------------------------------------
+# Helper models
 
 _approval_judge = None
 _context_summarizer = None
 _task_classifier = None
 
 
+# If we would like to change models, or model's providers, chaneg it from here only
 def _chat(model_name: str):
     return init_chat_model(model_name, model_provider="openai", api_key=OPENAI_API_KEY)
-
 
 def _get_approval_judge():
     global _approval_judge
@@ -152,13 +110,11 @@ def _get_approval_judge():
         _approval_judge = _chat(APPROVAL_JUDGE_MODEL).with_structured_output(PlanFeedbackVerdict)
     return _approval_judge
 
-
 def _get_context_summarizer():
     global _context_summarizer
     if _context_summarizer is None:
         _context_summarizer = _chat(CONTEXT_SUMMARY_MODEL).with_structured_output(ContextDigest)
     return _context_summarizer
-
 
 def _get_task_classifier():
     global _task_classifier
@@ -166,13 +122,11 @@ def _get_task_classifier():
         _task_classifier = _chat(TASK_CLASSIFIER_MODEL).with_structured_output(TaskClassification)
     return _task_classifier
 
-
 def reset_model_cache() -> None:
     '''Drop the cached helper models.'''
 
     global _approval_judge, _context_summarizer, _task_classifier
     _approval_judge = _context_summarizer = _task_classifier = None
-
 
 def install_helper_models(
     *,
@@ -181,10 +135,6 @@ def install_helper_models(
     context_summarizer=None,
 ) -> None:
     '''Substitute the three decision-only models.
-
-    These are structured-output runnables rather than agents, so they are not part
-    of `build_graph(models=...)`. The test suite installs scripted ones; nothing in
-    production calls this.
 
     Parameters:
     ---------
@@ -202,9 +152,7 @@ def install_helper_models(
         _context_summarizer = context_summarizer
 
 
-# --- Nodes --------------------------------------------------------------------
-
-
+# Nodes 
 def _latest_human_text(messages: List[BaseMessage]) -> str:
     for message in reversed(messages):
         if isinstance(message, HumanMessage):
@@ -229,8 +177,7 @@ async def task_classifier_node(state: AgentGraphState) -> Dict[str, Any]:
     if not user_text:
         return {"task_category": "complex"}
 
-    # A follow-up cannot be recognised from the bare message ("now rank those by
-    # hERG risk"), so the classifier is given the goal and the last exchange.
+    # A follow-up cannot be recognised from the bare message ("now rank those by hERG risk"), so the classifier is given the goal and the last exchange.
     prior = describe_prior_context(messages)
     can_follow_up = has_completed_turn(messages)
     if prior:
@@ -277,11 +224,6 @@ def _latest_plan(messages: List[BaseMessage]) -> str:
 def _judge_plan_feedback(feedback: str, plan: str = "") -> tuple[str, List[str]]:
     '''Map free-text plan feedback to a decision plus any attached conditions.
 
-    The judge sees the plan it is judging, not just the reply, so "approved, but
-    only phase-3 drugs" is recognised as an approval that carries a constraint
-    rather than as a bare yes. It defaults to `revise` on any failure: never
-    starting execution the user did not ask for is the safe direction.
-
     Parameters:
     ---------
     feedback (str): what the user replied to the proposed plan.
@@ -322,10 +264,6 @@ def _judge_plan_feedback(feedback: str, plan: str = "") -> tuple[str, List[str]]
 def human_chat_node(state: AgentGraphState) -> Dict[str, Any]:
     '''Pause for plan review.
 
-    The payload is structured because the UI builds the approval gate from it:
-    reading only "the graph paused" told the user *that* it had stopped and
-    discarded *why*, which made a paused run indistinguishable from a finished one.
-
     Parameters:
     ---------
     state (AgentGraphState): graph state, holding the plan awaiting review.
@@ -352,8 +290,7 @@ def human_chat_node(state: AgentGraphState) -> Dict[str, Any]:
 
     decision, constraints = _judge_plan_feedback(feedback, plan)
 
-    # The user's words go on the record either way. A conditional approval used to
-    # be reduced to a status flag, and the condition never reached the executor.
+    # The user's words go on the record either way. A conditional approval used to be reduced to a status flag, and the condition never reached the executor.
     messages: List[BaseMessage] = [HumanMessage(content=feedback)] if feedback else []
 
     if decision == "approved":
@@ -391,13 +328,6 @@ def _plan_title(request: str) -> str:
 
 def plan_init_node(state: AgentGraphState) -> Dict[str, Any]:
     '''Write this run's section of `plan.md`, then display it.
-
-    Deterministic: the steps are parsed from the approved plan (or seeded from the
-    request on the routes that have none), the file is written by code, and the
-    ledger below is generated from the file rather than by a model.
-
-    It runs **after** approval, so revising a plan several times never leaves
-    spurious runs behind in the document.
 
     Parameters:
     ---------
@@ -446,8 +376,6 @@ def plan_init_node(state: AgentGraphState) -> Dict[str, Any]:
 
 def plan_finalize_node(state: AgentGraphState) -> Dict[str, Any]:
     '''Reconcile the plan file after execution and record the run's outcome.
-
-    Reads back what actually happened instead of asking the model to report it.
 
     Parameters:
     ---------
@@ -533,9 +461,7 @@ async def compress_context_node(state: AgentGraphState) -> Dict[str, Any]:
     return {"messages": [make_summary_message(summary_text, memory)]}
 
 
-# --- Routers ------------------------------------------------------------------
-
-
+# Routers 
 def _route_after_classifier(state: AgentGraphState) -> str:
     category = str(state.get("task_category") or "complex")
     if category == "meta_query":
@@ -543,7 +469,6 @@ def _route_after_classifier(state: AgentGraphState) -> str:
     if category in ("simple", "follow_up"):
         return "plan_init"
     return "planning_agent"
-
 
 def _route_after_human(state: AgentGraphState) -> str:
     return "approval_ack" if state.get("plan_status") == "approved" else "planning_agent"
@@ -554,9 +479,7 @@ def _route_after_plan_finalize(state: AgentGraphState) -> str:
     return "report_agent_simple" if category in ("simple", "follow_up") else "report_agent_complex"
 
 
-# --- Assembly -----------------------------------------------------------------
-
-
+# Build graph
 def build_execution_subgraph(
     *,
     supervisor,
@@ -564,10 +487,7 @@ def build_execution_subgraph(
     prediction_agent,
     data_agent,
 ):
-    '''Supervisor plus specialists, as one node from the outside.
-
-    `supervisor` deliberately has **no outgoing edge**: it ends the subgraph when
-    it stops delegating. See the module docstring for what a static edge does here.
+    '''Execution graph has supervisor and its sub-agents, as one node from the outside.
 
     Parameters:
     ---------
@@ -582,14 +502,16 @@ def build_execution_subgraph(
     '''
 
     graph = StateGraph(AgentGraphState)
+
     graph.add_node("supervisor", supervisor)
     graph.add_node("research_agent", research_agent)
     graph.add_node("prediction_agent", prediction_agent)
     graph.add_node("data_agent", data_agent)
 
     graph.add_edge(START, "supervisor")
-    for specialist in ("research_agent", "prediction_agent", "data_agent"):
-        graph.add_edge(specialist, "supervisor")
+    graph.add_edge("research_agent", "supervisor")
+    graph.add_edge("prediction_agent", "supervisor")
+    graph.add_edge("data_agent", "supervisor")
 
     return graph.compile()
 
@@ -601,9 +523,6 @@ def build_graph(
     use_context_compression: bool = CONTEXT_COMPRESSION,
 ):
     '''Compile the whole system.
-
-    `models` lets a caller (the test suite) substitute chat models without
-    touching config; by default each role uses the model named in `app/config.py`.
 
     Parameters:
     ---------
@@ -629,9 +548,7 @@ def build_graph(
     execution = build_execution_subgraph(
         supervisor=supervisor,
         research_agent=build_research_agent(model_for("research", RESEARCH_MODEL), compress=compress),
-        prediction_agent=build_prediction_agent(
-            model_for("prediction", PREDICTION_MODEL), compress=compress
-        ),
+        prediction_agent=build_prediction_agent(model_for("prediction", PREDICTION_MODEL), compress=compress),
         data_agent=build_data_agent(model_for("data", DATA_MODEL), compress=compress),
     )
 
@@ -655,8 +572,7 @@ def build_graph(
         graph.add_node(name, build_report_agent(report_model, name=name, prompt=prompt, compress=compress))
 
     if compress:
-        # One compression node per terminal branch, so the graph stays acyclic and
-        # the streamed label stays meaningful.
+        # One compression node per terminal branch, so the graph stays acyclic and the streamed label stays meaningful.
         for suffix in ("complex", "simple", "meta"):
             graph.add_node(f"context_summary_{suffix}", compress_context_node)
 
@@ -666,8 +582,6 @@ def build_graph(
         _route_after_classifier,
         {
             "planning_agent": "planning_agent",
-            # Execution routes go through plan_init, so every run is recorded in
-            # plan.md before any work starts, whichever route it took.
             "plan_init": "plan_init",
             "report_agent_meta": "report_agent_meta",
         },
@@ -706,18 +620,6 @@ def build_graph(
 
 
 async def create_app(checkpointer, *, use_context_compression: bool = CONTEXT_COMPRESSION):
-    '''Async entry point used by the runner.
-
-    Parameters:
-    ---------
-    checkpointer (AsyncSqliteSaver): the checkpointer to persist conversation state with.
-    use_context_compression (boolean): whether older turns are folded into the carried summary.
-
-    Returns:
-    ----------
-    app (CompiledGraph): the compiled system the runner streams from.
-    '''
-
     return build_graph(checkpointer, use_context_compression=use_context_compression)
 
 

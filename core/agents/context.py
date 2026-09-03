@@ -1,30 +1,3 @@
-'''Shared graph state, and what each agent actually sees before a model call.
-
-Two things live here.
-
-**`AgentGraphState`** is the state every node and every agent shares. It must be
-passed to `create_agent(..., state_schema=AgentGraphState)`: without it LangGraph
-filters the parent state down to the plain `AgentState`, and
-`conversation_id`, `approved_plan` and the plan pointer never reach the middleware
-that needs them.
-
-**The context middleware** rewrites each model call. It is turn-anchored rather
-than summary-anchored, and assembles four things:
-
-1. a pinned block compression can never remove — the output scope, the
-   conversation goal, the plan pointer and progress, the approval conditions, and
-   an artifact ledger read from the filesystem rather than from a list the model
-   maintains;
-2. the compressed summary of older turns, explicitly marked as less reliable than
-   what follows;
-3. the last few completed exchanges **verbatim** — a follow-up like "now rank
-   those by hERG risk" refers to exactly these, and they are small;
-4. the live turn, with tool traffic bounded in place.
-
-Tool results are shortened, never dropped: removing a `ToolMessage` would orphan
-its `tool_call` and fail the agent's own history validation.
-'''
-
 from __future__ import annotations
 
 import time
@@ -67,8 +40,6 @@ SUPERVISOR_AGENT_NAME = "supervisor"
 SUMMARY_MEMORY_KEY = "summary_memory"
 PLANNING_AGENT_NAME = "planning_agent"
 REPORT_AGENT_PREFIX = "report_agent"
-# Stamped on the HumanMessage that opens a user turn, so turn boundaries stay
-# unambiguous next to the HumanMessages plan review writes into the same transcript.
 TURN_ROLE_KEY = "repuragent_turn_role"
 TURN_ROLE_REQUEST = "user_request"
 
@@ -77,23 +48,17 @@ class AgentGraphState(AgentState, total=False):
     '''State shared by the top-level graph and every agent inside it.'''
 
     conversation_id: str
-    # Routing: simple | complex | follow_up | meta_query
-    task_category: str
+    task_category: str # Routing: simple | complex | follow_up | meta_query
     plan_status: str
-    # The approved plan text, pinned so the executor sees one authoritative plan
-    # instead of every draft the planner produced.
     approved_plan: str
     approval_constraints: List[str]
-    # The plan itself lives on disk; state carries a pointer and a progress line.
     plan_path: str
     plan_run_id: int
     plan_progress: str
-    # Per-conversation UI toggle, read by the planning agent's middleware.
     use_episodic_learning: bool
 
 
-# --- Text helpers -------------------------------------------------------------
-
+# Text helpers 
 
 def coerce_text(content: Any) -> str:
     if content is None:
@@ -136,7 +101,7 @@ def _shorten(text: str, limit: int) -> str:
     return f"{text[:head]}\n… [{omitted:,} characters omitted] …\n{text[-tail:]}"
 
 
-# --- Summary records ----------------------------------------------------------
+# Summary records
 
 
 def is_summary_message(message: BaseMessage) -> bool:
@@ -175,8 +140,7 @@ def make_summary_message(summary_text: str, memory: Dict[str, Any]) -> AIMessage
     )
 
 
-# --- Turn boundaries ----------------------------------------------------------
-
+# Turn boundaries 
 
 def mark_user_request(message: BaseMessage) -> BaseMessage:
     '''Tag a HumanMessage as opening a user turn.
@@ -278,9 +242,6 @@ def _turn_final_report(body: Sequence[BaseMessage]) -> str:
 def describe_prior_context(messages: Sequence[BaseMessage], *, max_chars: int = 1500) -> str:
     '''Goal plus the most recent completed exchange, for the routing decision.
 
-    A request like "now rank them by hERG risk" cannot be classified from the bare
-    text; the classifier needs to know what "them" refers to.
-
     Parameters:
     ---------
     messages (list): the whole transcript.
@@ -318,11 +279,6 @@ def build_turn_anchors(
 ) -> List[BaseMessage]:
     '''Verbatim (request, answer) pairs for completed turns before `upto_index`.
 
-    This is what stops a follow-up from starting cold. Everything else in the
-    compressed region really is disposable — tool traffic, superseded plan drafts,
-    delegation chatter — but the user's own words and the answer they were given
-    are exactly what the next request points at.
-
     Parameters:
     ---------
     messages (list): the whole transcript.
@@ -359,14 +315,10 @@ def build_turn_anchors(
     return anchors
 
 
-# --- Bounding the live turn ---------------------------------------------------
-
+# Bounding the live turn 
 
 def prune_tool_traffic(messages: Sequence[BaseMessage]) -> List[BaseMessage]:
     '''Bound tool-result size without breaking tool_call pairing.
-
-    Contents are shortened in place; dropping a ToolMessage would orphan its
-    AIMessage tool_call and the agent's history validation would reject it.
 
     Parameters:
     ---------
@@ -411,21 +363,6 @@ def prune_tool_traffic(messages: Sequence[BaseMessage]) -> List[BaseMessage]:
 def repair_tool_pairing(messages: Sequence[BaseMessage]) -> List[BaseMessage]:
     '''Drop tool traffic that no longer pairs, so no view can be rejected by the API.
 
-    Every view here is a *slice* of the transcript — spans collapsed, turns anchored,
-    a specialist's window opened after its brief — and a slice can cut a tool pair in
-    half. Both halves are fatal, and the message names the index rather than the
-    cause, so it is worth making structurally impossible:
-
-    * a `ToolMessage` whose `AIMessage` is not in the view — *"messages with role
-      'tool' must be a response to a preceeding message with 'tool_calls'"*;
-    * an `AIMessage` whose `tool_call` is never answered — the same rejection from
-      the other side.
-
-    `prune_tool_traffic` keeps a pair intact once it is in the list; this is the pass
-    that decides what is a pair at all. It is deliberately the last thing every
-    builder does, and it repairs rather than raises: a trimmed-away tool call is
-    worth losing, a failed run is not.
-
     Parameters:
     ---------
     messages (list): an assembled view, possibly holding half a tool pair.
@@ -435,8 +372,7 @@ def repair_tool_pairing(messages: Sequence[BaseMessage]) -> List[BaseMessage]:
     repaired (list): the same view with orphaned `ToolMessage`s dropped and unanswered `tool_call`s stripped from the `AIMessage`s that declared them.
     '''
 
-    # Which call ids were declared, and where. A ToolMessage answers a call only if
-    # the AIMessage declaring it comes earlier, and only once.
+    # Which call ids were declared, and where. A ToolMessage answers a call only if the AIMessage declaring it comes earlier, and only once.
     declared: Dict[str, int] = {}
     for index, message in enumerate(messages):
         for call in getattr(message, "tool_calls", None) or []:
@@ -517,9 +453,6 @@ def should_summarize(messages: Sequence[BaseMessage]) -> bool:
 def clipped_messages_for_summary(messages: Sequence[BaseMessage]) -> List[BaseMessage]:
     '''Bound what the compressor reads: newest first, by message count and chars.
 
-    One repurposing run can hold megabytes of knowledge-graph output; handing all
-    of it to the summarizer was slow and could exceed its own context.
-
     Parameters:
     ---------
     messages (list): the messages available to summarize.
@@ -552,10 +485,6 @@ def clipped_messages_for_summary(messages: Sequence[BaseMessage]) -> List[BaseMe
 
 def render_transcript(messages: Sequence[BaseMessage]) -> str:
     '''Flatten messages into a labelled transcript for the compressor.
-
-    Passing raw message objects risks sending an orphaned ToolMessage once the
-    window is clipped, which the API rejects. The compressor only has to read the
-    exchange, not participate in it.
 
     Parameters:
     ---------
@@ -591,7 +520,7 @@ def render_transcript(messages: Sequence[BaseMessage]) -> str:
     return "\n\n".join(lines)
 
 
-# --- Structured memory --------------------------------------------------------
+# Structured memory 
 
 
 def _coerce_str_list(value, fallback) -> List[str]:
@@ -706,22 +635,14 @@ def _format_memory_for_prompt(memory: Optional[Dict[str, Any]]) -> str:
     return "\n".join(lines).strip()
 
 
-# --- Episodic memory (planning agent only) ------------------------------------
+# Episodic memory (planning agent only) 
 
 _episodic_cache: Dict[str, Tuple[float, str]] = {}
-# Set once the store proves unavailable (no API key, no vector store). Constructing
-# the orchestrator opens ChromaDB and a chat model, so retrying it before every
-# planning call would cost more than the examples are worth.
 _episodic_unavailable = False
 
 
 def episodic_examples_block(user_request: str) -> str:
     '''Similar past tasks and how they were decomposed.
-
-    Injected here rather than baked into the planner's static prompt. That is what
-    lets the compiled graph be cached: the previous build rebuilt the entire app —
-    five chat models and five agents — on every user message purely so this text
-    could change.
 
     Parameters:
     ---------
@@ -787,7 +708,7 @@ def clear_episodic_cache() -> None:
     _episodic_unavailable = False
 
 
-# --- The pinned block ---------------------------------------------------------
+# The pinned block 
 
 
 def _conversation_goal(messages: Sequence[BaseMessage]) -> str:
@@ -870,22 +791,7 @@ def build_pinned_context_block(
     return "\n\n".join(sections)
 
 
-# --- Per-role views of the transcript ------------------------------------------
-#
-# The specialists are **context-isolated**: a specialist sees the brief the supervisor
-# wrote for it and its own working messages, and nothing else. Only the supervisor
-# holds the conversation.
-#
-# Why: a specialist given the whole transcript spends its context on work it is not
-# doing, and picks up other agents' half-finished reasoning as if it were input — a
-# prediction agent that has read the planner's draft starts second-guessing which
-# endpoints to run. Isolation also makes each delegation reproducible: the brief is
-# the entire input, so a bad result is a bad brief, which is a thing that can be fixed.
-#
-# The cost is that a thin brief now fails visibly instead of being silently rescued by
-# ambient context, which is why the handoff tool asks for objective, inputs and
-# expected output separately.
-
+# Sub-Agent's views of the context
 
 def _specialist_span_start(messages: Sequence[BaseMessage], agent_name: str) -> int:
     '''Index of the handoff `ToolMessage` that most recently briefed this agent.
@@ -913,15 +819,8 @@ def build_specialist_input_messages(
     *,
     agent_name: str,
 ) -> List[BaseMessage]:
-    '''The brief, then this specialist's own working messages. Nothing else.
-
-    The working window starts *after* the handoff `ToolMessage`, which also means the
-    supervisor's `AIMessage` carrying the handoff `tool_call` is excluded — so the
-    window never opens with an orphaned tool call.
-
-    Falls back to the shared view when there is no brief, which happens if a
-    specialist is ever invoked outside a handoff; degrading to more context is safer
-    than handing a model an empty prompt.
+    '''The brief, then this specialist's own working messages. The working window starts *after* the handoff `ToolMessage`,
+    Falls back to the shared view when there is no brief.
 
     Parameters:
     ---------
@@ -949,15 +848,6 @@ def build_specialist_input_messages(
 
 def collapse_specialist_spans(messages: Sequence[BaseMessage]) -> List[BaseMessage]:
     '''Replace each specialist's working span with the result it reported.
-
-    The supervisor reasons about outcomes, not about how a specialist got there. Its
-    tool traffic — a knowledge-graph traversal returns tens of thousands of characters
-    — would otherwise dominate the one context that has to hold the whole workflow.
-
-    A span runs from a handoff `ToolMessage` until the supervisor speaks again. Only
-    the specialist's final message survives it, which is exactly what its prompt asks
-    it to make self-contained. A span with no such message is kept intact rather than
-    silently emptied.
 
     Parameters:
     ---------
@@ -1065,35 +955,29 @@ def build_llm_input_messages(
     return prefix + anchors + repair_tool_pairing(prune_tool_traffic(recent))
 
 
-# --- The middleware -----------------------------------------------------------
-
+# The middleware 
 
 ISOLATION_NOTICE = """# WHAT YOU CAN SEE, AND WHAT IS YOURS TO DECIDE
 
-You have been given one task brief and nothing else — not the conversation, not the plan,
-not what any other agent has done. That is deliberate: the brief is your whole input, and
-the supervisor is responsible for making it complete.
+You have been given one task brief and nothing else. That is deliberate: 
+the brief is your whole input.
 
-**The method is yours.** The brief states the outcome, the inputs and the constraints, not
-the tool calls to make. You know these tools, their argument shapes and how they fail;
-choose the approach, and change it if the first attempt tells you something new. If the
-brief does prescribe a method that you can see is wrong for the data in front of you, do
-the thing that achieves the stated outcome and say in your reply what you did instead.
-
-- Work from the brief. Do not infer a wider goal from it and do not expand the scope.
-- The brief's file list is the step; the artifact list in your context is background — it
-  shows what exists in this conversation, which is useful for avoiding work that has
-  already been done, but it says nothing about what any of those files contain.
-- If the brief is missing something you need — an identifier, a file path, a threshold —
-  say so plainly in your reply and do what you can without it. Never invent the missing
-  value and never substitute a plausible-looking one.
-- Make your reply self-contained. It is the only thing the supervisor will read back: what
-  you did, the values and counts that matter, the full path of every file you produced,
-  and anything that failed or is uncertain."""
+- **Method is yours.** The brief gives outcome, inputs and constraints
+  only. Choose the approach; change it as you learn. If the brief
+  prescribes a method that's wrong for the data in front of you,
+  achieve the stated outcome another way and say what you did instead.
+- **Don't expand scope.** Work from the brief; don't infer a wider goal.
+- **Files.** The brief's file list is the task. The artifact list in
+  your context is background only — it shows what exists (useful for
+  avoiding work already done), not what any file contains.
+- **Missing inputs** (path, identifier, threshold): say so plainly, do
+  what you can without it, and never invent or substitute a value.
+- **Your reply is self-contained** — it's all the supervisor reads.
+  Cover: what you did, the values and counts that matter, the full path
+  of every file you produced, and anything that failed or is uncertain."""
 
 
-# --- Bounding what a tool writes into the conversation -------------------------
-
+# Bounding what a tool writes into the conversation 
 
 def _bound_recorded_text(text: str) -> str:
     '''Cut an oversized tool result down to what may be *stored*.
@@ -1125,24 +1009,6 @@ def _bound_recorded_text(text: str) -> str:
 @wrap_tool_call(name="bound_tool_result")
 async def bound_tool_result(request, handler):
     '''Cap every tool result at the point it becomes conversation state.
-
-    The compression above bounds what a model is *shown*; this bounds what is
-    *kept*. The distinction is not academic. A view is rebuilt per model call and
-    costs nothing to discard, while a `ToolMessage` joins the `messages` channel —
-    and LangGraph's SQLite checkpointer serialises the entire state into one blob
-    per superstep, with no per-channel table like its PostgreSQL counterpart. So a
-    single oversized result is not stored once, it is stored once *per step*: one
-    run that ended a `python_executor` cell on a 95 798-row DataFrame produced two
-    143 MB results and cost **20.6 GB** across 126 checkpoints.
-
-    Every tool goes through here, which is the point — `python_executor` guards its
-    own output too, but a per-tool cap is one a new tool can be written without.
-
-    It **must** be async, for the same reason `build_context_middleware` is: a
-    sync-only hook raises `NotImplementedError: Asynchronous implementation of
-    awrap_tool_call is not available` the moment the agent is driven by `astream`,
-    and every run here is streamed. The failure surfaces as a tool error inside the
-    run, not as an import-time mistake.
 
     Parameters:
     ---------
@@ -1182,14 +1048,6 @@ def build_context_middleware(
     collapse_delegations: bool = False,
 ):
     '''Async `wrap_model_call` middleware for one agent role.
-
-    Overrides the system message (role prompt + posture + pinned block) and the message
-    list. Must be async: `astream` refuses a sync-only `wrap_model_call`, and every run
-    here is streamed.
-
-    `isolated=True` gives a specialist only the brief it was handed plus its own working
-    messages. `collapse_delegations=True` gives the supervisor each specialist's
-    reported result in place of its tool traffic.
 
     Parameters:
     ---------

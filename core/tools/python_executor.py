@@ -67,11 +67,12 @@ if FIGURE_AUTOSAVE:
     figure_capture.install()
 
 
+# Deliberately absent: the application's own packages (`app`, `backend`, `core`),
+# which would expose the interpreter internals and the credentials `app.config`
+# loads, and the host-access modules `os` and `sys`. Paths go through `pathlib`
+# and the injected `prepare_output_path` / `output_root_path`. A module re-exported
+# by an allowed one (`pathlib.os`) is stripped by `get_safe_module` for the same reason.
 DEFAULT_AUTHORIZED_IMPORTS = [
-    # the repository itself, so the agent can reuse project code
-    "app",
-    "backend",
-    "core",
     "pandas",
     "numpy",
     "scipy",
@@ -92,12 +93,10 @@ DEFAULT_AUTHORIZED_IMPORTS = [
     "httpx",
     "json",
     "ntpath",
-    "os",
     "pathlib",
     "posixpath",
     "requests",
     "sqlalchemy",
-    "sys",
     "textwrap",
     "pickle",
     "inspect",

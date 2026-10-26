@@ -23,6 +23,7 @@ import inspect
 import logging
 import math
 import re
+import string
 import threading
 import time
 from collections import OrderedDict
@@ -229,6 +230,16 @@ _BUILTIN_DENYLIST = {
     "quit",
     "breakpoint",
     "memoryview",
+    # The python tool injects a scoped `open`; the raw one must never be the fallback.
+    "open",
+    # Attribute access goes through the guarded wrappers in BASE_PYTHON_TOOLS, never
+    # the raw builtin. `vars()` with no argument returns the *interpreter's* frame
+    # locals, which is the whole executor state.
+    "getattr",
+    "setattr",
+    "hasattr",
+    "delattr",
+    "vars",
 }
 
 
@@ -236,10 +247,12 @@ def resolve_builtin(name: str):
     '''Return the Python builtin for `name`, or None if it's absent or denylisted.
 
     This is the flexibility escape hatch: any safe builtin (``repr``, ``bytes``,
-    ``hex``, ``frozenset``, ``format``, ``vars``, …) resolves instead of raising
+    ``hex``, ``frozenset``, ``format``, …) resolves instead of raising
     "it is not permitted to evaluate other functions". Dangerous builtins stay
     unreachable because they are denylisted here (and blocked again by
-    ``safer_eval`` / ``is_dangerous_callable``).
+    ``safer_eval`` / ``is_dangerous_callable``). Underscore-prefixed names
+    (``__import__``, ``__build_class__``, ``__loader__`` …) never resolve: none is
+    needed and several are a way out.
 
     Parameters:
     ---------
@@ -250,7 +263,7 @@ def resolve_builtin(name: str):
     builtin (callable): the builtin, or None when it is absent or on the denylist.
     '''
 
-    if name in _BUILTIN_DENYLIST:
+    if name in _BUILTIN_DENYLIST or name.startswith("_"):
         return None
     return getattr(builtins, name, None)
 
@@ -475,24 +488,168 @@ def safer_eval(func: Callable):
     return _check_return
 
 
-# Only these dunder attributes are blocked — they are the introspection vectors
-# used to break out of the sandbox (e.g. ``().__class__.__bases__[0].__subclasses__()``).
-# Benign dunders like ``__name__``, ``__class__``, ``__doc__``, ``__dict__`` are
-# allowed so ordinary generated code (``type(e).__name__``) is not rejected.
-_FORBIDDEN_DUNDERS = {
-    "__globals__",
-    "__builtins__",
-    "__subclasses__",
-    "__bases__",
-    "__mro__",
-    "__base__",
-    "__code__",
-    "__closure__",
-    "__getattribute__",
-    "__reduce__",
-    "__reduce_ex__",
-    "__import__",
-}
+# Dunder attributes are gated by an ALLOWLIST. A blocklist has to anticipate every
+# escape vector (``__globals__``, ``__subclasses__``, ``__reduce__``, …) and fails
+# open the moment a new one turns up; an allowlist fails closed. The names allowed
+# are the ones ordinary generated code reaches for: metadata (``type(e).__name__``,
+# ``pd.__version__``), ``super().__init__(...)`` in a subclass, ``obj.__class__``
+# (which `type()` already hands out) and an instance's ``__dict__``. A *module's*
+# ``__dict__`` is still refused, see `_is_forbidden_attribute`.
+_ALLOWED_DUNDERS = frozenset(
+    {
+        "__name__",
+        "__qualname__",
+        "__doc__",
+        "__module__",
+        "__version__",
+        "__init__",
+        "__class__",
+        "__dict__",
+    }
+)
+
+# ``str.format`` / ``str.format_map`` resolve their fields with Python's own
+# machinery, after the AST walker has finished checking — ``"{0.__globals__}"``
+# reaches a dunder the walker never sees. They are checked separately.
+_STR_FORMAT_METHODS = frozenset({"format", "format_map"})
+
+
+def _is_forbidden_dunder(name: str) -> bool:
+    '''True for any dunder-looking attribute name not on the allowlist.
+
+    Parameters:
+    ---------
+    name (str): the attribute name the interpreted code asked for.
+
+    Returns:
+    ----------
+    forbidden (boolean): True when it starts with ``__`` and is not in `_ALLOWED_DUNDERS`.
+    '''
+
+    return name.startswith("__") and name not in _ALLOWED_DUNDERS
+
+
+def _is_forbidden_attribute(obj: Any, name: str) -> bool:
+    '''The attribute policy, for one object and one name.
+
+    A module's ``__dict__`` is refused even though an instance's is allowed: a real
+    module's namespace carries ``__builtins__``, so reading it by key would walk
+    straight past the dunder check that reading it by attribute is subject to.
+
+    Parameters:
+    ---------
+    obj (Any): the object the attribute is read from or written to.
+    name (str): the attribute name.
+
+    Returns:
+    ----------
+    forbidden (boolean): True when the sandbox must refuse the access.
+    '''
+
+    if _is_forbidden_dunder(name):
+        return True
+    return name == "__dict__" and isinstance(obj, ModuleType)
+
+
+def _check_format_fields(fmt: str) -> None:
+    '''Refuse a format string whose replacement fields reach a forbidden dunder.
+
+    Parameters:
+    ---------
+    fmt (str): the string `format` / `format_map` is about to be called on. Nested
+    specs (``{0:{1.__dict__}}``) are checked too.
+    '''
+
+    try:
+        parsed = list(string.Formatter().parse(fmt))
+    except Exception:
+        # Malformed: let str.format raise its own error.
+        return
+    for _literal, field_name, format_spec, _conversion in parsed:
+        if field_name:
+            # '.' introduces an attribute and '[' an index, so split the indices off
+            # first — a key like data['a__b'] is not an attribute access.
+            for segment in field_name.replace("[", ".").split(".")[1:]:
+                attr = segment.split("]")[0]
+                if _is_forbidden_dunder(attr):
+                    raise InterpreterError(f"Forbidden access to dunder attribute in format field: {attr}")
+        if format_spec and "{" in format_spec:
+            _check_format_fields(format_spec)
+
+
+_NO_DEFAULT = object()
+
+
+def guarded_getattr(obj: Any, attr: str, default: Any = _NO_DEFAULT) -> Any:
+    '''`getattr` with the sandbox's attribute policy applied.
+
+    The single choke point for every attribute read in interpreted code — ``x.y``,
+    ``x.y()``, the target of ``x.y += z``, and the ``getattr`` builtin itself — so
+    no path can forget the check.
+
+    Parameters:
+    ---------
+    obj (Any): the object to read from.
+    attr (str): the attribute name.
+    default (Any): returned when the attribute is absent, as with the builtin.
+
+    Returns:
+    ----------
+    value (any): the attribute, or `default` when it is absent and one was given.
+    '''
+
+    if not isinstance(attr, str):
+        raise InterpreterError("getattr(): attribute name must be a string")
+    if _is_forbidden_attribute(obj, attr):
+        raise InterpreterError(f"Forbidden access to dunder attribute: {attr}")
+    if attr in _STR_FORMAT_METHODS and isinstance(obj, str):
+        _check_format_fields(obj)
+    if default is _NO_DEFAULT:
+        return getattr(obj, attr)
+    return getattr(obj, attr, default)
+
+
+def guarded_hasattr(obj: Any, attr: str) -> bool:
+    '''`hasattr` that reports a forbidden attribute as absent rather than probing it.
+
+    Parameters:
+    ---------
+    obj (Any): the object to probe.
+    attr (str): the attribute name.
+
+    Returns:
+    ----------
+    present (boolean): False for a forbidden attribute, otherwise as the builtin.
+    '''
+
+    if not isinstance(attr, str) or _is_forbidden_attribute(obj, attr):
+        return False
+    return hasattr(obj, attr)
+
+
+def guarded_setattr(obj: Any, attr: str, value: Any) -> None:
+    '''`setattr` that refuses to write a forbidden attribute.
+
+    Parameters:
+    ---------
+    obj (Any): the object to write to.
+    attr (str): the attribute name.
+    value (Any): the value to set.
+    '''
+
+    if not isinstance(attr, str):
+        raise InterpreterError("setattr(): attribute name must be a string")
+    if _is_forbidden_attribute(obj, attr):
+        raise InterpreterError(f"Forbidden access to dunder attribute: {attr}")
+    setattr(obj, attr, value)
+
+
+# Interpreted code gets the guarded versions, never the raw builtins. Patched here
+# because BASE_PYTHON_TOOLS is defined before the guards exist; every executor
+# copies the table when it is built, so the patch is always in effect.
+BASE_PYTHON_TOOLS["getattr"] = guarded_getattr
+BASE_PYTHON_TOOLS["hasattr"] = guarded_hasattr
+BASE_PYTHON_TOOLS["setattr"] = guarded_setattr
 
 
 def evaluate_attribute(
@@ -502,10 +659,10 @@ def evaluate_attribute(
     custom_tools: Dict[str, Callable],
     authorized_imports: List[str],
 ) -> Any:
-    if expression.attr in _FORBIDDEN_DUNDERS:
+    if _is_forbidden_dunder(expression.attr):
         raise InterpreterError(f"Forbidden access to dunder attribute: {expression.attr}")
     value = evaluate_ast(expression.value, state, static_tools, custom_tools, authorized_imports)
-    return getattr(value, expression.attr)
+    return guarded_getattr(value, expression.attr)
 
 
 def evaluate_unaryop(
@@ -717,7 +874,7 @@ def evaluate_augassign(
             return obj[key]
         elif isinstance(target, ast.Attribute):
             obj = evaluate_ast(target.value, state, static_tools, custom_tools, authorized_imports)
-            return getattr(obj, target.attr)
+            return guarded_getattr(obj, target.attr)
         elif isinstance(target, ast.Tuple):
             return tuple(get_current_value(elt) for elt in target.elts)
         elif isinstance(target, ast.List):
@@ -884,7 +1041,8 @@ def set_value(
         obj[key] = value
     elif isinstance(target, ast.Attribute):
         obj = evaluate_ast(target.value, state, static_tools, custom_tools, authorized_imports)
-        setattr(obj, target.attr, value)
+        # Writing a dunder is an escape vector too, so writes follow the read policy.
+        guarded_setattr(obj, target.attr, value)
 
 
 def evaluate_call(
@@ -906,9 +1064,13 @@ def evaluate_call(
     elif isinstance(call.func, ast.Attribute):
         obj = evaluate_ast(call.func.value, state, static_tools, custom_tools, authorized_imports)
         func_name = call.func.attr
+        # A method fetch is an attribute read: a bare `getattr` here would let
+        # `obj.__subclasses__()` and `"{0.__globals__}".format(x)` past the policy.
+        if _is_forbidden_attribute(obj, func_name):
+            raise InterpreterError(f"Forbidden access to dunder attribute: {func_name}")
         if not hasattr(obj, func_name):
             raise InterpreterError(f"Object {obj} has no attribute {func_name}")
-        func = getattr(obj, func_name)
+        func = guarded_getattr(obj, func_name)
     elif isinstance(call.func, ast.Name):
         func_name = call.func.id
         if func_name in state:
@@ -1340,6 +1502,10 @@ def get_safe_module(raw_module, authorized_imports, visited=None):
 
     # Copy all attributes by reference, recursively checking modules
     for attr_name in dir(raw_module):
+        # `__builtins__`, `__loader__`, `__spec__` … would hand back the real
+        # builtins or the live module. Allowed metadata (`__version__`) still copies.
+        if _is_forbidden_dunder(attr_name):
+            continue
         try:
             attr_value = getattr(raw_module, attr_name)
             # Recursively process nested modules, passing visited set. Kept
@@ -1347,6 +1513,11 @@ def get_safe_module(raw_module, authorized_imports, visited=None):
             # (lazy loaders, optional deps) is skipped, not fatal to the whole
             # import.
             if isinstance(attr_value, ModuleType):
+                # A re-exported module is only exposed if it could have been
+                # imported directly — otherwise `pathlib.os` is `import os` by
+                # another name, and `numpy.os.environ` holds the API key.
+                if not check_module_authorized(getattr(attr_value, "__name__", ""), authorized_imports):
+                    continue
                 attr_value = get_safe_module(attr_value, authorized_imports, visited=visited)
         except Exception as e:
             # lazy / dynamic loading module -> INFO log and skip
@@ -1362,6 +1533,16 @@ def get_safe_module(raw_module, authorized_imports, visited=None):
         # from the interpreter thread and reuse one loop across executor cells.
         safe_module.run = drive_awaitable
         safe_module.gather = drive_gather
+
+        # asyncio can spawn OS processes; the interpreter only needs run/gather/await.
+        def _blocked_subprocess(*_args, **_kwargs):
+            raise InterpreterError("Spawning subprocesses is not permitted in the sandbox.")
+
+        for spawner in ("create_subprocess_exec", "create_subprocess_shell"):
+            if hasattr(safe_module, spawner):
+                setattr(safe_module, spawner, _blocked_subprocess)
+        if hasattr(safe_module, "subprocess"):
+            delattr(safe_module, "subprocess")
 
     return safe_module
 
@@ -1401,6 +1582,8 @@ def evaluate_import(expression, state, authorized_imports):
                             state[name] = getattr(module, name)
             else:  # regular from imports
                 for alias in expression.names:
+                    if _is_forbidden_dunder(alias.name):
+                        raise InterpreterError(f"Forbidden access to dunder attribute: {alias.name}")
                     if hasattr(module, alias.name):
                         state[alias.asname or alias.name] = getattr(module, alias.name)
                     else:

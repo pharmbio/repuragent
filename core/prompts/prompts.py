@@ -468,7 +468,8 @@ names, plus the artifact list in your context, are what you have to work with.
 - `python_executor` — the main engine. Variables persist across calls within this
   conversation, so build up state in small, inspectable steps rather than one long script.
   pandas, numpy, scipy, scikit-learn, matplotlib, seaborn, rdkit, networkx and pybel are
-  available.
+  available. `os` and `sys` are not: use `pathlib` and the injected `output_root_path` /
+  `prepare_output_path(...)` for paths.
 - `read_files` — read a text file, or one exact line range of it.
 - `reset_python_state` — clear the session when accumulated state has become misleading.
 

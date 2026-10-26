@@ -110,7 +110,8 @@ APP_CSS = """
     .gradio-container *, .gradio-container *::before, .gradio-container *::after { box-sizing: border-box; }
     .gradio-container {
         max-width: none;
-        width: 100vw;
+        /* 100%, not 100vw: vw counts a visible scrollbar and pushes the right edge under it. */
+        width: 100%;
         margin: 0 auto !important;
         padding: 1.5rem 1.25rem 2rem;
     }
@@ -137,7 +138,8 @@ APP_CSS = """
     }
     #app-logo { display: flex; align-items: center; justify-content: center; padding: 0 !important; }
     #app-logo .app-logo-img { width: 84px; height: 84px; object-fit: contain; display: block; }
-    #app-title { margin: 0 !important; padding: 0 !important; display: flex; align-items: center; }
+    /* The title's glyphs overrun its 0.95 line-height; Gradio would add a scrollbar. */
+    #app-title { margin: 0 !important; padding: 0 !important; display: flex; align-items: center; overflow: visible !important; }
     #app-title .app-title-text {
         font-family: var(--font-editorial);
         font-size: var(--fs-display);
@@ -165,6 +167,7 @@ APP_CSS = """
     }
     #header-links {
         display: flex;
+        justify-content: flex-end;
         gap: 0.5rem;
         align-items: center;
         font-weight: 600;
@@ -175,8 +178,12 @@ APP_CSS = """
         white-space: nowrap;
     }
     #header-links .header-link { color: var(--text-main); text-decoration: none; transition: color 0.2s ease; }
-    #header-links .header-link-divider { color: var(--border-strong); font-weight: 400; padding: 0 0.9rem; user-select: none; }
+    #header-links .header-link-divider { color: var(--text-soft); font-weight: 400; padding: 0 1.25rem; user-select: none; }
     #header-links .header-link:hover, #header-links .header-link:focus { color: var(--brand); text-decoration: underline; }
+    #header-links .header-link[aria-current="page"] {
+        color: var(--brand); text-decoration: underline;
+        text-decoration-thickness: 2px; text-underline-offset: 0.4em;
+    }
 
     /* ---- Partner strip ----------------------------------------------------- */
     #partner-logos-panel {
@@ -720,13 +727,18 @@ APP_CSS = """
     }
 
     @media (max-width: 900px) {
-        .gradio-container { width: 100vw; padding: 1rem; }
+        .gradio-container { width: 100%; padding: 1rem; }
         #app-header { gap: 0.75rem; }
         #header-links { font-size: var(--fs-meta); letter-spacing: 0.05em; }
         #layout-row { gap: 1rem; }
         #sidebar-column { position: static; min-width: 0; width: 100% !important; flex: 1 1 auto !important; max-width: none; }
         #conversation-column { padding: 0.8rem; }
         #chatbot-panel { font-size: var(--fs-body); line-height: var(--lh-copy); }
+    }
+    @media (max-width: 640px) {
+        /* Three header links must fit a phone's width. */
+        #header-links { justify-content: flex-start; }
+        #header-links .header-link-divider { padding: 0 0.6rem; }
     }
     """
 

@@ -16,8 +16,12 @@ INTRO_IMAGE_ALT = "How Repuragent works: plan, approve, execute, report"
 
 TAGLINE = "An AI scientist for drug repurposing"
 
+# Workspace | GitHub | User guide. Workspace is the page being viewed, so it is
+# marked current; the other two leave the app and open in a new tab.
 HEADER_LINKS_HTML = (
     "<div class='header-links-content'>"
+    "<a class='header-link' href='/' target='_self' aria-current='page'>Workspace</a>"
+    "<span class='header-link-divider' aria-hidden='true'>|</span>"
     f"<a class='header-link' href='{escape(GITHUB_URL, quote=True)}' target='_blank' "
     "rel='noopener noreferrer'>GitHub</a>"
     "<span class='header-link-divider' aria-hidden='true'>|</span>"

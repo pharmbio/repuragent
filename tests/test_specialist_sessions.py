@@ -1,12 +1,19 @@
 from __future__ import annotations
 
+import asyncio
+from types import SimpleNamespace
 from typing import List, Optional
 
 import pytest
-from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, ToolMessage
+from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage, ToolMessage
 
 import core.agents.context as context
-from core.agents.context import build_specialist_input_messages, make_summary_message
+from core.agents.context import (
+    ISOLATION_NOTICE,
+    build_context_middleware,
+    build_specialist_input_messages,
+    make_summary_message,
+)
 from core.agents.handoff import build_handoff_tools, render_brief, validate_brief
 from core.agents.sessions import SESSION_KEY, mint_session_id
 
@@ -402,3 +409,44 @@ def test_single_oversized_span_keeps_only_its_brief_and_final_report(monkeypatch
     assert view[2].content == "final report one"
     assert "huge" not in _text(view)
     _assert_pairs_intact(view)
+
+
+# The continuation note in the specialist's system prompt
+
+
+class _Request(SimpleNamespace):
+    def override(self, **changes):
+        return _Request(**{**vars(self), **changes})
+
+
+def _system_prompt(middleware, messages: List[BaseMessage]) -> str:
+    request = _Request(state={"messages": messages}, system_message=SystemMessage(content="BASE"))
+
+    async def handler(final):
+        return final
+
+    return asyncio.run(middleware.awrap_model_call(request, handler)).system_message.content
+
+
+def _specialist_middleware():
+    return build_context_middleware(
+        role="data_agent", isolated=True, include_goal=False, include_plan=False, include_artifacts=True
+    )
+
+
+def test_continuation_note_follows_the_isolation_notice():
+    continued = [*_delegation("t1", "data-1", report="done"), *_delegation("t2", "data-1", "continue")]
+
+    prompt = _system_prompt(_specialist_middleware(), continued)
+
+    assert ISOLATION_NOTICE + "\n\nYou are continuing session data-1." in prompt
+
+
+def test_fresh_specialist_prompt_has_no_continuation_note():
+    middleware = _specialist_middleware()
+    prompt = _system_prompt(middleware, [*_delegation("t1", "data-1")])
+
+    assert ISOLATION_NOTICE in prompt
+    assert "continuing session" not in prompt
+    # Byte-identical to the prompt for a legacy brief, which predates sessions.
+    assert prompt == _system_prompt(middleware, [*_delegation("t1", None)])

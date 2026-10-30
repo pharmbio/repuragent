@@ -1093,6 +1093,34 @@ the brief is your whole input.
   Cover: what you did, the values and counts that matter, the full path
   of every file you produced, and anything that failed or is uncertain."""
 
+CONTINUATION_NOTICE = (
+    "You are continuing session {session_id}. The messages before the current brief are "
+    "your own earlier work in this session; the current brief is your task. Python "
+    "variables may no longer exist; check files before relying on them."
+)
+
+
+def continuation_notice(messages: Sequence[BaseMessage], agent_name: str) -> str:
+    '''The note telling a specialist it is continuing a session.
+
+    Parameters:
+    ---------
+    messages (list): the whole transcript.
+    agent_name (str): the specialist being run.
+
+    Returns:
+    ----------
+    notice (str): `CONTINUATION_NOTICE` for the session its current brief continues, or an empty string for a fresh or legacy brief.
+    '''
+
+    start = _specialist_span_start(messages, agent_name)
+    if start < 0:
+        return ""
+    meta = session_meta(messages[start])
+    if not meta or meta.get("mode") != "continue" or meta["role"] != agent_name:
+        return ""
+    return CONTINUATION_NOTICE.format(session_id=meta["id"])
+
 
 # Bounding what a tool writes into the conversation 
 
@@ -1205,6 +1233,11 @@ def build_context_middleware(
 
         if isolated:
             sections.append(ISOLATION_NOTICE)
+            # The interpreter is shared per conversation and can be reset, which is why
+            # the note warns about variables.
+            continuing = continuation_notice(messages, role)
+            if continuing:
+                sections.append(continuing)
 
         # A specialist still needs its operating scope and the artifact ledger: it has
         # to know where to write, and the brief refers to files by path. It does not

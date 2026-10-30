@@ -22,7 +22,7 @@ This chapter presents technical details under the hood of Repuragent. It provide
 2. **Routing** (`task_classifier`) decides between a full plan, a direct execution, a follow-up, and a question about the conversation itself. It routes on *dependence*, not size, so a follow-up like “now rank those by hERG risk” is recognised as one.
 3. **Planning agent** produces the breakdown and the run stops at a human-approval interrupt. Approval may carry conditions, which become constraints on the execution.
 4. **`plan_init`** parses the approved plan into `plan.md` in the conversation's output folder. That file is the contract the supervisor executes and the progress the task-monitor panel renders.
-5. **Supervisor** writes a brief per step and delegates it to a specialist, recording each outcome with `plan_update`. Specialists are context-isolated: each sees its brief and its own work, not the conversation.
+5. **Supervisor** writes a brief per step and delegates it to a specialist, recording each outcome with `plan_update`. Specialists are context-isolated: by default each sees its brief and its own work, not the conversation. A delegation that continues one of the specialist's sessions also shows it its own earlier work in that session (see *Specialist sessions*).
 6. **Specialist agents** (research, prediction, data) are LangGraph nodes bound to tool suites. Tool calls persist artifacts via `backend/utils/output_paths.py` inside the active conversation's directory.
 7. **Report agent** writes the final answer against the evidence the run produced.
 8. **Downloads** are gated by HMAC-signed tokens (`FILE_DOWNLOAD_SECRET`) that embed the path, the conversation and an expiry, and the route re-checks that the path is inside that conversation's own directories before serving it.
@@ -106,7 +106,17 @@ is therefore the complete inventory of what the system can do.
 
 - **Main role:** executes the approved plan by delegating one step at a time, and keeps `plan.md` current.
 - **Tools:**
-  - `transfer_to_research_agent` / `transfer_to_prediction_agent` / `transfer_to_data_agent` – hand one step to a specialist. The brief is asked for in parts (`objective`, `inputs`, `artifacts`, `constraints`, `expected_output`, `context`) rather than as free text, because the specialist is context-isolated and the brief is its entire input. A brief with a dangling reference, an unexplained artifact or no expected output is refused and comes back to be rewritten.
+  - `transfer_to_research_agent` / `transfer_to_prediction_agent` / `transfer_to_data_agent` – hand one step to a specialist. The brief is asked for in parts (`objective`, `inputs`, `artifacts`, `constraints`, `expected_output`, `context`) rather than as free text, because the specialist is context-isolated and the brief is its entire input. An optional `session_id` continues one of that specialist's earlier sessions instead of starting a fresh one. A brief with a dangling reference, an unexplained artifact or no expected output is refused and comes back to be rewritten, and so is an unknown `session_id`.
   - `plan_status` / `plan_update` – read and advance the on-disk plan. `plan_update` validates the step number and status against the file, timestamps it, and returns the refreshed ledger; that ledger *is* the progress display.
 - **Notes:** The report agent is a graph node rather than a delegation target, so there is no `transfer_to_report_agent`. 
 
+### Specialist sessions (`core/agents/sessions.py`)
+
+Every delegation opens a session, recorded on the handoff brief itself (`specialist_session` in the brief's `additional_kwargs`), so it survives the checkpoint and a reload without a new state field. Ids are `<short role>-<n>` (`data-1`, `research-2`) and are chosen by the handoff tool, never by the model.
+
+- **Fresh by default.** Without `session_id` the specialist's input is exactly as before: its brief and its own work on it.
+- **Continuing.** With `session_id`, the specialist also sees its own earlier work in that session, and only that: its earlier briefs, tool calls and reports, not the conversation or other sessions. Its system prompt says it is continuing, and warns that Python variables may be gone. The brief must still stand alone.
+- **Session list.** The supervisor's context lists the sessions it can continue, most recently used first, with each brief's objective. It is built from the stored briefs, so sessions delegated before a context summary stay listed.
+- **Limits.** Continued history is bounded: at most `SPECIALIST_SESSION_MAX_SPANS` earlier delegations (default 3) within `SPECIALIST_SESSION_HISTORY_MAX_CHARS` (default 40000). Older delegations are dropped whole; a single oversized one keeps only its brief and final report; a short note says what was left out. The list shows `SPECIALIST_SESSION_LIST_MAX_ITEMS` sessions in detail (default 10) and only the ids of older ones.
+- **Shared, as before.** The Python interpreter and the conversation's files are shared by all sessions; a session does not get its own interpreter.
+- **Stopped turns.** Stopping a run still discards that turn's specialist work, so a stopped delegation leaves no session to continue, and its id may be used again.

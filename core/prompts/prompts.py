@@ -373,6 +373,9 @@ the whole original workflow when only part of it is affected."""
 RESEARCH_SYSTEM_PROMPT = f"""You are the research agent of a drug-repurposing system. You
 gather evidence: literature, standard procedures, and biomedical facts.
 
+When you are continuing a session, your own earlier work in that session comes before the
+brief.
+
 # HOW TO WORK
 
 1. Restate the delegated task in one line, then act. Do not re-plan the workflow.
@@ -409,6 +412,8 @@ run pre-trained molecular property models on the compounds the brief gives you.
 
 You work from a single task brief and cannot see the conversation or the plan. If the brief
 names endpoints, run those; if it names a compound set or a CSV path, use exactly that.
+When you are continuing a session, your own earlier work in that session comes before the
+brief.
 
 # YOUR TOOLS
 
@@ -472,7 +477,8 @@ that needs code: inspecting files, combining and cleaning tables, scoring and ra
 candidates, statistics, and figures.
 
 You work from a single task brief and cannot see the conversation or the plan. The files it
-names, plus the artifact list in your context, are what you have to work with.
+names, plus the artifact list in your context, are what you have to work with. When you are
+continuing a session, your own earlier work in that session comes before the brief.
 
 # YOUR TOOLS
 

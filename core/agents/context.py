@@ -21,6 +21,8 @@ from app.config import (
     EPISODIC_CACHE_TTL_SECONDS,
     MEMORY_MAX_ITEMS,
     MEMORY_OUTPUTS_MAX_ITEMS,
+    SPECIALIST_SESSION_HISTORY_MAX_CHARS,
+    SPECIALIST_SESSION_MAX_SPANS,
     SUMMARY_MAX_MESSAGES,
     SUMMARY_SOURCE_MAX_CHARS,
     SUMMARY_SOURCE_MESSAGE_MAX_CHARS,
@@ -34,6 +36,7 @@ from app.config import (
     logger,
 )
 from backend.utils.output_paths import describe_output_artifacts, describe_output_scope
+from core.agents.sessions import render_session_list, session_meta
 
 SUMMARY_AGENT_NAME = "context_summary"
 SUPERVISOR_AGENT_NAME = "supervisor"
@@ -725,6 +728,7 @@ def build_pinned_context_block(
     include_goal: bool = True,
     include_plan: bool = True,
     include_artifacts: bool = True,
+    include_sessions: bool = False,
 ) -> str:
     '''The part of context that must never be summarized away.
 
@@ -735,6 +739,7 @@ def build_pinned_context_block(
     include_goal (boolean): whether the conversation goal belongs in this role's block.
     include_plan (boolean): whether the plan path and progress line belong in it.
     include_artifacts (boolean): whether the output scope and artifact ledger belong in it.
+    include_sessions (boolean): whether the list of specialist sessions belongs in it, which only the supervisor needs.
 
     Returns:
     ----------
@@ -787,6 +792,11 @@ def build_pinned_context_block(
                 "regenerating equivalent work, and read them when you need their "
                 "contents:\n" + artifacts
             )
+
+    if include_sessions:
+        sessions = render_session_list(messages)
+        if sessions:
+            sections.append(sessions)
 
     return "\n\n".join(sections)
 
@@ -843,7 +853,121 @@ def build_specialist_input_messages(
 
     brief = coerce_text(getattr(messages[start], "content", None))
     working = prune_tool_traffic(messages[start + 1 :])
+    meta = session_meta(messages[start])
+    if meta and meta.get("mode") == "continue" and meta["role"] == agent_name:
+        earlier = _earlier_session_messages(messages, start, agent_name, meta["id"])
+        return repair_tool_pairing([*earlier, HumanMessage(content=brief), *working])
     return repair_tool_pairing([HumanMessage(content=brief), *working])
+
+
+def _owned_span(messages: Sequence[BaseMessage], start: int, agent_name: str) -> List[BaseMessage]:
+    '''The brief at `start` and the messages that belong to that specialist.
+
+    Parameters:
+    ---------
+    messages (list): the whole transcript.
+    start (int): position of the handoff brief that opened the span.
+    agent_name (str): the specialist the brief was addressed to.
+
+    Returns:
+    ----------
+    span (list): the brief, then only `AIMessage`s named after the specialist and the `ToolMessage`s answering their own tool calls. It ends at the first message that is neither — the supervisor, the user, plan_init or plan_finalize, a report, a summary, another agent, or the next brief.
+    '''
+
+    span: List[BaseMessage] = [messages[start]]
+    own_calls: set = set()
+    for message in messages[start + 1 :]:
+        if isinstance(message, AIMessage) and getattr(message, "name", None) == agent_name:
+            own_calls |= {call.get("id") for call in message.tool_calls or [] if call.get("id")}
+        elif not (
+            isinstance(message, ToolMessage)
+            and getattr(message, "tool_call_id", None) in own_calls
+        ):
+            break
+        span.append(message)
+    return span
+
+
+def _final_report(span: Sequence[BaseMessage], agent_name: str) -> List[BaseMessage]:
+    '''The span's last message from the specialist that calls no tool, as a list of zero or one.'''
+
+    for message in reversed(span[1:]):
+        if (
+            isinstance(message, AIMessage)
+            and getattr(message, "name", None) == agent_name
+            and not message.tool_calls
+        ):
+            return [message]
+    return []
+
+
+def _history_chars(messages: Sequence[BaseMessage]) -> int:
+    # Tool-call arguments are counted too: for the data agent they hold the code it ran.
+    total = 0
+    for message in messages:
+        total += _estimate_message_chars(message)
+        for call in getattr(message, "tool_calls", None) or []:
+            total += len(str(call.get("args") or ""))
+    return total
+
+
+def _earlier_session_messages(
+    messages: Sequence[BaseMessage],
+    current_start: int,
+    agent_name: str,
+    session_id: str,
+) -> List[BaseMessage]:
+    '''Earlier work of one specialist session, bounded, as model input.
+
+    Parameters:
+    ---------
+    messages (list): the whole stored transcript.
+    current_start (int): position of the current brief, which is not part of the earlier work.
+    agent_name (str): the specialist being run.
+    session_id (str): the session it is continuing.
+
+    Returns:
+    ----------
+    history (list): at most `SPECIALIST_SESSION_MAX_SPANS` earlier spans of this session within `SPECIALIST_SESSION_HISTORY_MAX_CHARS`, oldest first, each as its brief (a `HumanMessage`) and its pruned working messages. Whole spans are dropped oldest first; a single span still too large keeps only its brief and final report. When anything is left out, a short note says so first.
+    '''
+
+    spans: List[List[BaseMessage]] = []
+    for index in range(current_start):
+        meta = session_meta(messages[index])
+        if not meta or meta["id"] != session_id or meta["role"] != agent_name:
+            continue
+        span = _owned_span(messages, index, agent_name)
+        brief = HumanMessage(content=coerce_text(getattr(span[0], "content", None)))
+        spans.append([brief, *prune_tool_traffic(span[1:])])
+
+    omitted = max(0, len(spans) - max(SPECIALIST_SESSION_MAX_SPANS, 0))
+    spans = spans[omitted:]
+    while len(spans) > 1 and (
+        _history_chars([message for span in spans for message in span])
+        > SPECIALIST_SESSION_HISTORY_MAX_CHARS
+    ):
+        spans.pop(0)
+        omitted += 1
+
+    shortened = False
+    if spans and _history_chars(spans[0]) > SPECIALIST_SESSION_HISTORY_MAX_CHARS:
+        # Cutting inside the span could split a tool pair, so its working steps go as a whole.
+        spans[0] = [spans[0][0], *_final_report(spans[0], agent_name)]
+        shortened = True
+
+    history = [message for span in spans for message in span]
+    if omitted or shortened:
+        parts = []
+        if omitted:
+            parts.append(f"{omitted} earlier part(s) omitted")
+        if shortened:
+            parts.append(
+                "the working steps of the oldest part shown are omitted; its brief and final "
+                "report are kept"
+            )
+        note = f"(Session {session_id}: {'; '.join(parts)}, to keep the context short.)"
+        history.insert(0, HumanMessage(content=note))
+    return history
 
 
 def collapse_specialist_spans(messages: Sequence[BaseMessage]) -> List[BaseMessage]:
@@ -976,6 +1100,34 @@ the brief is your whole input.
   Cover: what you did, the values and counts that matter, the full path
   of every file you produced, and anything that failed or is uncertain."""
 
+CONTINUATION_NOTICE = (
+    "You are continuing session {session_id}. The messages before the current brief are "
+    "your own earlier work in this session; the current brief is your task. Python "
+    "variables may no longer exist; check files before relying on them."
+)
+
+
+def continuation_notice(messages: Sequence[BaseMessage], agent_name: str) -> str:
+    '''The note telling a specialist it is continuing a session.
+
+    Parameters:
+    ---------
+    messages (list): the whole transcript.
+    agent_name (str): the specialist being run.
+
+    Returns:
+    ----------
+    notice (str): `CONTINUATION_NOTICE` for the session its current brief continues, or an empty string for a fresh or legacy brief.
+    '''
+
+    start = _specialist_span_start(messages, agent_name)
+    if start < 0:
+        return ""
+    meta = session_meta(messages[start])
+    if not meta or meta.get("mode") != "continue" or meta["role"] != agent_name:
+        return ""
+    return CONTINUATION_NOTICE.format(session_id=meta["id"])
+
 
 # Bounding what a tool writes into the conversation 
 
@@ -1088,6 +1240,11 @@ def build_context_middleware(
 
         if isolated:
             sections.append(ISOLATION_NOTICE)
+            # The interpreter is shared per conversation and can be reset, which is why
+            # the note warns about variables.
+            continuing = continuation_notice(messages, role)
+            if continuing:
+                sections.append(continuing)
 
         # A specialist still needs its operating scope and the artifact ledger: it has
         # to know where to write, and the brief refers to files by path. It does not
@@ -1099,6 +1256,7 @@ def build_context_middleware(
             include_goal=include_goal,
             include_plan=include_plan,
             include_artifacts=include_artifacts,
+            include_sessions=collapse_delegations,
         )
         if pinned:
             sections.append(pinned)

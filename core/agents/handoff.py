@@ -9,6 +9,13 @@ from langchain_core.tools import BaseTool, InjectedToolCallId, tool
 from langgraph.prebuilt import InjectedState
 from langgraph.types import Command
 
+from core.agents.sessions import (
+    SESSION_KEY,
+    check_session_reference,
+    clip_objective,
+    mint_session_id,
+)
+
 BRIEF_HEADING = "TASK BRIEF"
 
 # Each specialist, as the supervisor sees it. These are the supervisor's only basis for
@@ -88,6 +95,7 @@ def validate_brief(
     expected_output: str,
     artifacts: Sequence[str] = (),
     constraints: Sequence[str] = (),
+    continuing: bool = False,
 ) -> Optional[str]:
     '''The reason this brief cannot be delivered, or None.
 
@@ -99,6 +107,7 @@ def validate_brief(
     expected_output (str): what the specialist should hand back.
     artifacts (list): files from earlier steps, each of which must say what it holds and must exist on disk.
     constraints (list): the non-negotiables of this step.
+    continuing (boolean): whether the brief continues an earlier session, which changes only how a vague reference is explained.
 
     Returns:
     ----------
@@ -127,7 +136,15 @@ def validate_brief(
     checked += [("artifacts", _artifact_path(entry)) for entry in artifacts if entry]
     for field_name, value in checked:
         match = _DANGLING_REFERENCES.search(value or "")
-        if match:
+        if match and continuing:
+            # A continued session does see its own earlier work, but the brief still has
+            # to stand alone: the earlier work may have been shortened for length.
+            problems.append(
+                f"`{field_name}` refers to {match.group(0)!r}. {agent_name} will see its own "
+                "earlier work in this session, but the brief must still give the actual "
+                "value, identifier or full file path."
+            )
+        elif match:
             problems.append(
                 f"`{field_name}` refers to {match.group(0)!r}. {agent_name} cannot see any "
                 "earlier step, so that resolves to nothing — substitute the actual value, "
@@ -326,6 +343,7 @@ def make_handoff_tool(agent_name: str, description: str) -> BaseTool:
         artifacts: Optional[List[str]] = None,
         constraints: Optional[List[str]] = None,
         context: str = "",
+        session_id: str = "",
     ):
         '''Brief the specialist and hand the step to it.
 
@@ -350,23 +368,33 @@ def make_handoff_tool(agent_name: str, description: str) -> BaseTool:
 
         artifacts = list(artifacts or [])
         constraints = list(constraints or [])
+        session_id = (session_id or "").strip()
 
         history = (state or {}).get("messages") or []
         superseded = superseded_handoff(history, tool_call_id)
         if superseded:
             return superseded
 
-        problem = validate_brief(
+        problem = check_session_reference(history, agent_name, session_id) if session_id else None
+        problem = problem or validate_brief(
             agent_name=agent_name,
             objective=objective,
             inputs=inputs,
             expected_output=expected_output,
             artifacts=artifacts,
             constraints=constraints,
+            continuing=bool(session_id),
         )
         if problem:
             return problem
 
+        # Chosen only now, so a refused or superseded handoff never uses up an id.
+        session = {
+            "id": session_id or mint_session_id(history, agent_name, tool_call_id),
+            "role": agent_name,
+            "mode": "continue" if session_id else "fresh",
+            "objective": clip_objective(objective),
+        }
         brief = ToolMessage(
             content=render_brief(
                 agent_name=agent_name,
@@ -379,6 +407,7 @@ def make_handoff_tool(agent_name: str, description: str) -> BaseTool:
             ),
             name=tool_name,
             tool_call_id=tool_call_id,
+            additional_kwargs={SESSION_KEY: session},
         )
         return Command(
             goto=agent_name,

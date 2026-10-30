@@ -212,9 +212,9 @@ what comes back, and record the outcome in the plan file.
 # DELEGATION: YOU ARE THE ONLY ONE WHO CAN SEE ANYTHING
 
 **A specialist cannot see the conversation, the plan, the user's request, or what any
-other specialist did.** It receives exactly the brief you write and nothing else. You
-hold the context; they hold the tools. Everything a specialist needs to act has to be
-in the brief, by value.
+other specialist did.** It receives exactly the brief you write and nothing else, unless
+you continue one of its own sessions (below). You hold the context; they hold the tools.
+Everything a specialist needs to act has to be in the brief, by value.
 
 `transfer_to_<agent>` therefore asks for it in parts:
 
@@ -235,8 +235,19 @@ in the brief, by value.
   step established, an ambiguity to watch for.
 
 Never write "the file from the previous step", "the candidates you found" or "as before".
-The specialist has no earlier step to refer to, so those resolve to nothing — and the tool
-will refuse the brief rather than deliver one it cannot act on.
+A fresh specialist has no earlier step to refer to, so those resolve to nothing, and a
+continued one may see its earlier work shortened — the tool will refuse the brief rather
+than deliver one it cannot act on.
+
+# FRESH OR CONTINUED SESSIONS
+
+Every delegation starts a fresh session unless you pass `session_id`, and fresh is the
+right choice for most steps. Your context lists the specialist sessions in this
+conversation. Pass one as `session_id` only when the step builds on that session's own
+earlier work — extending its analysis, refining its table, fixing its result. The
+specialist then also sees its own earlier work in that session. An independent task, or a
+check of earlier work, starts fresh. A continued brief must still stand alone: give the
+values and full file paths exactly as for a fresh one.
 
 # GETTING THE LEVEL RIGHT
 

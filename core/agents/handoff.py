@@ -360,6 +360,7 @@ def make_handoff_tool(agent_name: str, description: str) -> BaseTool:
         artifacts (list): Files from earlier steps this step should use, one per entry, as `<full path> — <what it contains>`. The specialist can see a bare list of paths but nothing about what any of them holds, so this is what tells it which file is the candidate table and which is the pathway extract. Take the paths from the artifact list in your context.
         constraints (list): The non-negotiables of this step, one per entry: which endpoint matters, a threshold to apply, a category to exclude. Conditions the user attached when approving the plan already reach every agent, so put only step-specific requirements here.
         context (str): Optional background it cannot see and would otherwise guess: why this step matters, what an earlier step established, an ambiguity to watch for.
+        session_id (str): Optional. A session of this specialist from the session list in your context, to continue it: the specialist then also sees its own earlier work in that session. Use it only when this step builds on that session's work; omit it for an independent task or a check, which starts a fresh session. The brief must still stand alone.
 
         Returns:
         ----------

@@ -36,7 +36,7 @@ from app.config import (
     logger,
 )
 from backend.utils.output_paths import describe_output_artifacts, describe_output_scope
-from core.agents.sessions import session_meta
+from core.agents.sessions import render_session_list, session_meta
 
 SUMMARY_AGENT_NAME = "context_summary"
 SUPERVISOR_AGENT_NAME = "supervisor"
@@ -728,6 +728,7 @@ def build_pinned_context_block(
     include_goal: bool = True,
     include_plan: bool = True,
     include_artifacts: bool = True,
+    include_sessions: bool = False,
 ) -> str:
     '''The part of context that must never be summarized away.
 
@@ -738,6 +739,7 @@ def build_pinned_context_block(
     include_goal (boolean): whether the conversation goal belongs in this role's block.
     include_plan (boolean): whether the plan path and progress line belong in it.
     include_artifacts (boolean): whether the output scope and artifact ledger belong in it.
+    include_sessions (boolean): whether the list of specialist sessions belongs in it, which only the supervisor needs.
 
     Returns:
     ----------
@@ -790,6 +792,11 @@ def build_pinned_context_block(
                 "regenerating equivalent work, and read them when you need their "
                 "contents:\n" + artifacts
             )
+
+    if include_sessions:
+        sessions = render_session_list(messages)
+        if sessions:
+            sections.append(sessions)
 
     return "\n\n".join(sections)
 
@@ -1249,6 +1256,7 @@ def build_context_middleware(
             include_goal=include_goal,
             include_plan=include_plan,
             include_artifacts=include_artifacts,
+            include_sessions=collapse_delegations,
         )
         if pinned:
             sections.append(pinned)

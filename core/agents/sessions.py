@@ -1,4 +1,4 @@
-'''Specialist sessions: which session a handoff brief belongs to.
+'''Specialist sessions: which session a handoff brief belongs to, and the list the supervisor sees.
 
 Everything is derived from the briefs stored in the transcript, so there is no state of its own.
 Nothing here imports from `core`, which is what lets both `handoff` and `context` use it.
@@ -11,11 +11,16 @@ from typing import Any, Dict, List, Optional, Sequence
 
 from langchain_core.messages import BaseMessage, ToolMessage
 
+from app.config import SPECIALIST_SESSION_LIST_MAX_ITEMS
+
 # The session a brief belongs to is stored on the brief `ToolMessage` itself, under this
 # key in `additional_kwargs`. It survives `Command.PARENT`, the checkpoint and a reload,
 # and is never sent to the model provider, so a fresh brief reads exactly as before.
 SESSION_KEY = "specialist_session"
 OBJECTIVE_MAX_CHARS = 120
+
+# The whole supervisor session list, header included.
+SESSION_LIST_MAX_CHARS = 2000
 
 
 # Session identity
@@ -140,12 +145,74 @@ def clip_objective(objective: str) -> str:
     return flat[: OBJECTIVE_MAX_CHARS - 1].rstrip() + "…"
 
 
+# The supervisor's session list
+
+def render_session_list(messages: Sequence[BaseMessage]) -> str:
+    '''The specialist sessions the supervisor can continue.
+
+    Parameters:
+    ---------
+    messages (list): the whole stored transcript. Compaction only changes the supervisor's view, so sessions delegated before a summary are still listed.
+
+    Returns:
+    ----------
+    block (str): the sessions, most recently used first, or an empty string when there are none. Only the supervisor's own clipped objective is shown, never text a specialist wrote, and the block stays within `SESSION_LIST_MAX_CHARS`: ids that do not fit are counted, not dropped silently.
+    '''
+
+    latest: Dict[str, Dict[str, Any]] = {}
+    for message in messages:
+        meta = session_meta(message)
+        if meta:
+            # Re-inserting moves a continued session to the end, so its last use orders it.
+            latest.pop(meta["id"], None)
+            latest[meta["id"]] = meta
+    if not latest:
+        return ""
+
+    ordered = list(reversed(latest.values()))
+    header = (
+        "Specialist sessions in this conversation, most recently used first. Pass one as "
+        "`session_id` to continue it; omit `session_id` to start a fresh session:"
+    )
+    lines = [header]
+    used = len(header)
+    # Room kept for the line that counts what did not fit.
+    reserve = len("\n- older: ") + len(f" +{len(ordered)} more")
+
+    detailed = 0
+    for meta in ordered[: max(SPECIALIST_SESSION_LIST_MAX_ITEMS, 0)]:
+        objective = clip_objective(str(meta.get("objective") or ""))
+        line = f"- {meta['id']} · {meta['role']} · {objective}"
+        if used + 1 + len(line) + reserve > SESSION_LIST_MAX_CHARS:
+            break
+        lines.append(line)
+        used += 1 + len(line)
+        detailed += 1
+
+    older = [meta["id"] for meta in ordered[detailed:]]
+    if older:
+        budget = SESSION_LIST_MAX_CHARS - used - reserve
+        shown: List[str] = []
+        for session_id in older:
+            if len(", ".join([*shown, session_id])) > budget:
+                break
+            shown.append(session_id)
+        remaining = len(older) - len(shown)
+        parts = [", ".join(shown)] if shown else []
+        if remaining:
+            parts.append(f"+{remaining} more")
+        lines.append("- older: " + " ".join(parts))
+    return "\n".join(lines)
+
+
 __all__ = [
     "OBJECTIVE_MAX_CHARS",
     "SESSION_KEY",
+    "SESSION_LIST_MAX_CHARS",
     "check_session_reference",
     "clip_objective",
     "known_sessions",
     "mint_session_id",
+    "render_session_list",
     "session_meta",
 ]

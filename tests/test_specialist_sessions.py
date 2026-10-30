@@ -14,8 +14,14 @@ from core.agents.context import (
     build_specialist_input_messages,
     make_summary_message,
 )
+import core.agents.sessions as sessions
 from core.agents.handoff import build_handoff_tools, render_brief, validate_brief
-from core.agents.sessions import SESSION_KEY, mint_session_id
+from core.agents.sessions import (
+    SESSION_KEY,
+    SESSION_LIST_MAX_CHARS,
+    mint_session_id,
+    render_session_list,
+)
 
 BRIEF_TEXT = (
     "TASK BRIEF for data_agent\n\n"
@@ -450,3 +456,69 @@ def test_fresh_specialist_prompt_has_no_continuation_note():
     assert "continuing session" not in prompt
     # Byte-identical to the prompt for a legacy brief, which predates sessions.
     assert prompt == _system_prompt(middleware, [*_delegation("t1", None)])
+
+
+# The supervisor's session list
+
+
+def _session_lines(block: str) -> List[str]:
+    return [line for line in block.splitlines() if line.startswith("- ") and not line.startswith("- older:")]
+
+
+def test_session_list_is_ordered_by_most_recent_use():
+    messages = [
+        *_delegation("t1", "data-1", report="data report text"),
+        *_delegation("r1", "research-1", agent_name="research_agent", report="done"),
+        *_delegation("t2", "data-2", report="done"),
+        *_delegation("t3", "data-1", "continue", report="done"),
+    ]
+
+    block = render_session_list(messages)
+
+    assert [line.split(" · ")[0] for line in _session_lines(block)] == ["- data-1", "- data-2", "- research-1"]
+    assert f"- research-1 · research_agent · {OBJECTIVE}" in block
+    assert "data report text" not in block
+
+
+def test_session_list_details_the_newest_sessions_and_lists_older_ids(monkeypatch):
+    monkeypatch.setattr(sessions, "SPECIALIST_SESSION_LIST_MAX_ITEMS", 4)
+    messages = []
+    for number in range(1, 7):
+        messages += _delegation(f"t{number}", f"data-{number}")
+
+    block = render_session_list(messages)
+
+    assert len(_session_lines(block)) == 4
+    assert _session_lines(block)[0].startswith("- data-6 ·")
+    assert block.splitlines()[-1] == "- older: data-2, data-1"
+
+
+def test_session_list_stays_within_its_total_and_counts_what_does_not_fit():
+    messages = []
+    for number in range(1, 401):
+        messages += _delegation(f"t{number}", f"data-{number}", objective="o" * 300)
+
+    block = render_session_list(messages)
+    older = block.splitlines()[-1]
+    shown = older.removeprefix("- older: ").split(" +")[0].split(", ")
+    more = int(older.rsplit("+", 1)[1].removesuffix(" more"))
+
+    assert len(block) <= SESSION_LIST_MAX_CHARS
+    assert all(len(line.split(" · ")[2]) <= 120 for line in _session_lines(block))
+    assert len(_session_lines(block)) + len(shown) + more == 400
+
+
+def test_session_list_is_empty_without_sessions():
+    assert render_session_list([*_delegation("t1", None), HumanMessage(content="hi")]) == ""
+
+
+def test_only_the_supervisor_gets_the_session_list():
+    messages = [HumanMessage(content="go"), *_delegation("t1", "data-1", report="done")]
+    supervisor = build_context_middleware(role="supervisor", collapse_delegations=True)
+    report = build_context_middleware(role="report_agent")
+    planner = build_context_middleware(role="planning_agent", include_plan=False, include_episodes=False)
+
+    assert "data-1 · data_agent" in _system_prompt(supervisor, messages)
+    assert "data-1" not in _system_prompt(report, messages)
+    assert "data-1" not in _system_prompt(planner, messages)
+    assert "data-1" not in _system_prompt(_specialist_middleware(), messages)

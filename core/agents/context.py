@@ -1107,8 +1107,9 @@ the brief is your whole input.
 
 CONTINUATION_NOTICE = (
     "You are continuing session {session_id}. The messages before the current brief are "
-    "your own earlier work in this session; the current brief is your task. Python "
-    "variables may no longer exist; check files before relying on them."
+    "your own earlier work in this session; the current brief is your task. Don't rely on "
+    "Python variables from earlier delegations; they may be gone or changed. Reload what you "
+    "need from the saved files. The earlier code is a record, not live state."
 )
 
 

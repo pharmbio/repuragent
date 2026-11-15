@@ -83,7 +83,7 @@ def _now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 
-def _clip(text: str, limit: int) -> str:
+def clip_text(text: str, limit: int) -> str:
     text = " ".join((text or "").split())
     return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
 
@@ -197,7 +197,7 @@ def parse_plan_steps(plan_text: str) -> List[PlanStep]:
 
     if not steps:
         summary = next((line.strip() for line in lines if line.strip()), "Execute the approved plan")
-        steps = [PlanStep(number=1, title=_clip(summary, 120), details=_clip(plan_text or "", 600))]
+        steps = [PlanStep(number=1, title=clip_text(summary, 120), details=clip_text(plan_text or "", 600))]
 
     # Renumber densely so step ids are always 1..N and therefore addressable.
     for index, step in enumerate(steps, start=1):
@@ -232,7 +232,7 @@ def _normalize_agent(value: str) -> str:
     ):
         if key in text:
             return canonical
-    return _clip(text.replace(" ", "_"), 40)
+    return clip_text(text.replace(" ", "_"), 40)
 
 
 def parse_plan_goal(plan_text: str) -> str:
@@ -254,11 +254,11 @@ def parse_plan_goal(plan_text: str) -> str:
             continue
         marker = re.match(r"^.*?\*\*PLAN:\*\*\s*(.+)$", stripped)
         if marker:
-            return _clip(marker.group(1).strip(), 200)
+            return clip_text(marker.group(1).strip(), 200)
     for line in lines:
         stripped = line.strip()
         if stripped and not stripped.startswith(("#", "-", "*", "[", "_")):
-            return _clip(stripped, 200)
+            return clip_text(stripped, 200)
     return ""
 
 
@@ -447,7 +447,7 @@ def start_run(
             run_id=(document.runs[-1].run_id + 1) if document.runs else 1,
             kind=kind,
             started_at=_now(),
-            goal=_clip(goal, 200),
+            goal=clip_text(goal, 200),
             constraints=[item for item in (constraints or []) if str(item).strip()],
             steps=steps,
         )
@@ -505,7 +505,7 @@ def update_step(
         step.status = normalized
         step.updated_at = _now()
         if note:
-            step.note = _clip(note, 300)
+            step.note = clip_text(note, 300)
         _write_atomic(path, render_document(document))
         return True, f"Step {step_number} set to {normalized}.", run
 
@@ -522,7 +522,7 @@ def set_outcome(
         run = document.run(run_id) if run_id is not None else document.active
         if run is None:
             return None
-        run.outcome = _clip(outcome, 300)
+        run.outcome = clip_text(outcome, 300)
         _write_atomic(path, render_document(document))
         return run
 

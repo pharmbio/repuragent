@@ -12,6 +12,7 @@ from typing import Any, Dict, List, Optional, Sequence
 from langchain_core.messages import BaseMessage, ToolMessage
 
 from app.config import SPECIALIST_SESSION_LIST_MAX_ITEMS
+from backend.utils.plan_store import clip_text
 
 # The session a brief belongs to is stored on the brief `ToolMessage` itself, under this
 # key in `additional_kwargs`. It survives `Command.PARENT`, the checkpoint and a reload,
@@ -139,10 +140,7 @@ def check_session_reference(
 def clip_objective(objective: str) -> str:
     '''The objective as recorded on a brief: whitespace collapsed, at most `OBJECTIVE_MAX_CHARS`.'''
 
-    flat = " ".join((objective or "").split())
-    if len(flat) <= OBJECTIVE_MAX_CHARS:
-        return flat
-    return flat[: OBJECTIVE_MAX_CHARS - 1].rstrip() + "…"
+    return clip_text(objective, OBJECTIVE_MAX_CHARS)
 
 
 # The supervisor's session list

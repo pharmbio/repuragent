@@ -3,14 +3,11 @@
 from __future__ import annotations
 
 import asyncio
-import re
-import uuid
-from typing import Dict, List
+import tempfile
+from pathlib import Path
+from typing import Dict, List, Optional, Sequence, Tuple
 
-import pytest
-from langchain_core.language_models.chat_models import BaseChatModel
-from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
-from langchain_core.outputs import ChatGeneration, ChatResult
+from langchain_core.messages import AIMessage, SystemMessage
 from langchain_core.runnables import RunnableLambda
 from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
 
@@ -18,73 +15,45 @@ import core.agents.agentic_system as asys
 import core.agents.context as context
 from app.langgraph_runner import build_stream_input
 from core.agents.sessions import session_meta
+from tests.fakes import ScriptedChatModel, scripted, tool_call
 
 ROLES = ("supervisor", "research", "prediction", "data", "planning", "report")
 
-
-class Script:
-    '''What the supervisor delegates in each turn, and what every model received.'''
-
-    def __init__(self, turns: Dict[int, List[Dict[str, str]]]):
-        self.turns = turns
-        self.turn = 0
-        self.done = 0
-        self.data_inputs: List[List[str]] = []
-        self.supervisor_prompts: List[str] = []
+# What the supervisor delegates in each turn: (table marker, session_id to continue or None).
+Turns = Sequence[Sequence[Tuple[str, Optional[str]]]]
 
 
-class ScriptModel(BaseChatModel):
-    role: str
-    script: Script
+def _models(turns: Turns) -> Dict[str, ScriptedChatModel]:
+    '''Scripted models: the supervisor delegates each step, the data agent runs one tool and reports.'''
 
-    @property
-    def _llm_type(self) -> str:
-        return "script"
-
-    def bind_tools(self, tools, **kwargs):
-        return self
-
-    def _generate(self, *args, **kwargs):
-        raise NotImplementedError
-
-    async def _agenerate(self, messages, stop=None, run_manager=None, **kwargs):
-        return ChatResult(generations=[ChatGeneration(message=self._reply(messages))])
-
-    def _reply(self, messages) -> AIMessage:
-        script = self.script
-        if self.role == "supervisor":
-            script.supervisor_prompts.append(str(messages[0].content))
-            todo = script.turns[script.turn]
-            if script.done >= len(todo):
-                return AIMessage(content="supervisor: done")
-            step = todo[script.done]
+    supervisor: List[AIMessage] = []
+    data: List[AIMessage] = []
+    for steps in turns:
+        for marker, session_id in steps:
             args = {
-                "objective": f"Profile table {step['marker']} and report its row count",
-                "inputs": f"table {step['marker']}",
+                "objective": f"Profile table {marker} and report its row count",
+                "inputs": f"table {marker}",
                 "expected_output": "One line with the table name and its row count",
             }
-            if step.get("session_id"):
-                args["session_id"] = step["session_id"]
-            call = {"name": "transfer_to_data_agent", "id": f"call_{uuid.uuid4().hex[:8]}", "args": args}
-            return AIMessage(content="", tool_calls=[call])
-
-        if self.role == "data":
-            if isinstance(messages[-1], ToolMessage):
-                script.done += 1
-                brief = [m for m in messages if isinstance(m, HumanMessage)][-1]
-                marker = re.search(r"Profile table (\w+)", str(brief.content)).group(1)
-                return AIMessage(content=f"data report: finished {marker}")
-            script.data_inputs.append(
-                [str(m.content) for m in messages if not isinstance(m, SystemMessage)]
-            )
-            call = {"name": "reset_python_state", "args": {}, "id": f"w_{uuid.uuid4().hex[:8]}"}
-            return AIMessage(content="", tool_calls=[call])
-
-        return AIMessage(content=f"{self.role}: final")
+            if session_id:
+                args["session_id"] = session_id
+            supervisor.append(AIMessage(content="", tool_calls=[tool_call("transfer_to_data_agent", args, f"call_{marker}")]))
+            data.append(AIMessage(content="", tool_calls=[tool_call("reset_python_state", {}, f"work_{marker}")]))
+            data.append(AIMessage(content=f"data report: finished {marker}"))
+        supervisor.append(AIMessage(content="supervisor: done"))
+    models = {role: scripted(label=role) for role in ROLES}
+    models["supervisor"] = scripted(*supervisor, label="supervisor")
+    models["data"] = scripted(*data, label="data")
+    return models
 
 
-async def _run_turn(app, config, script: Script, turn: int) -> None:
-    script.turn, script.done = turn, 0
+def _data_inputs(models: Dict[str, ScriptedChatModel]) -> List[List[str]]:
+    '''What the data agent was given at the start of each delegation (it makes two calls per delegation).'''
+
+    return [[str(m.content) for m in call if not isinstance(m, SystemMessage)] for call in models["data"].calls[::2]]
+
+
+async def _run_turn(app, config, turn: int) -> None:
     stream_input = build_stream_input(
         f"turn {turn}", conversation_id=config["configurable"]["thread_id"], use_episodic_learning=False
     )
@@ -92,43 +61,48 @@ async def _run_turn(app, config, script: Script, turn: int) -> None:
         pass
 
 
-async def _run(db: str, script: Script, turns_before_reload: List[int], turns_after_reload: List[int],
-               compression: bool):
-    models = {role: ScriptModel(role=role, script=script) for role in ROLES}
-    config = {"configurable": {"thread_id": f"conv-{uuid.uuid4().hex[:6]}"}, "recursion_limit": 100}
+async def _run(db: str, models, turns_before_reload: List[int], turns_after_reload: List[int], compression: bool):
+    config = {"configurable": {"thread_id": "conv-sessions"}, "recursion_limit": 100}
     async with AsyncSqliteSaver.from_conn_string(db) as saver:
         app = asys.build_graph(saver, models=models, use_context_compression=compression)
         for turn in turns_before_reload:
-            await _run_turn(app, config, script, turn)
+            await _run_turn(app, config, turn)
     # A new connection and a newly compiled graph: everything must come from the checkpoint.
     async with AsyncSqliteSaver.from_conn_string(db) as saver:
         app = asys.build_graph(saver, models=models, use_context_compression=compression)
         for turn in turns_after_reload:
-            await _run_turn(app, config, script, turn)
+            await _run_turn(app, config, turn)
         return (await app.aget_state(config)).values["messages"]
 
 
-@pytest.fixture(autouse=True)
-def _offline_helpers(monkeypatch):
-    monkeypatch.setattr(
-        asys, "_task_classifier", RunnableLambda(lambda _: asys.TaskClassification(category="simple"))
+def _run_offline(models, turns_before_reload, turns_after_reload, compression, summaries=()):
+    '''Run the graph against a temporary checkpoint with the helper models replaced, then restore them.'''
+
+    summaries = iter(summaries)
+    asys.reset_model_cache()
+    asys.install_helper_models(
+        task_classifier=RunnableLambda(lambda _: asys.TaskClassification(category="simple")),
+        context_summarizer=RunnableLambda(lambda _: asys.ContextDigest(summary=next(summaries))),
     )
+    try:
+        with tempfile.TemporaryDirectory() as workdir:
+            db = str(Path(workdir) / "cp.db")
+            return asyncio.run(_run(db, models, turns_before_reload, turns_after_reload, compression))
+    finally:
+        asys.reset_model_cache()
 
 
 def _sessions(messages):
     return [(meta["id"], meta["mode"]) for meta in map(session_meta, messages) if meta]
 
 
-def test_continued_session_after_reload_sees_only_its_own_work(tmp_path):
-    script = Script({
-        1: [{"marker": "ALPHA"}, {"marker": "BETA"}],
-        2: [{"marker": "GAMMA", "session_id": "data-1"}],
-    })
+def test_continued_session_after_reload_sees_only_its_own_work():
+    models = _models([[("ALPHA", None), ("BETA", None)], [("GAMMA", "data-1")]])
 
-    messages = asyncio.run(_run(str(tmp_path / "cp.db"), script, [1], [2], compression=False))
+    messages = _run_offline(models, [1], [2], compression=False)
 
     assert _sessions(messages) == [("data-1", "fresh"), ("data-2", "fresh"), ("data-1", "continue")]
-    fresh_alpha, fresh_beta, continued = script.data_inputs
+    fresh_alpha, fresh_beta, continued = _data_inputs(models)
     assert len(fresh_alpha) == 1 and "Profile table ALPHA" in fresh_alpha[0]
     assert len(fresh_beta) == 1 and "Profile table BETA" in fresh_beta[0]
 
@@ -139,21 +113,15 @@ def test_continued_session_after_reload_sees_only_its_own_work(tmp_path):
     assert seen.count("Profile table GAMMA") == 1
 
 
-def test_session_list_and_continuation_survive_compaction(tmp_path, monkeypatch):
-    summaries = iter(["first summary", "second summary"])
-    monkeypatch.setattr(
-        asys, "_context_summarizer",
-        RunnableLambda(lambda _: asys.ContextDigest(summary=next(summaries))),
-    )
-    monkeypatch.setattr(context, "SUMMARY_TRIGGER_MIN_MESSAGES_FIRST", 1)
-    monkeypatch.setattr(context, "SUMMARY_TRIGGER_MIN_MESSAGES", 1)
-    script = Script({
-        1: [{"marker": "ALPHA"}, {"marker": "BETA"}],
-        2: [{"marker": "DELTA"}],
-        3: [{"marker": "GAMMA", "session_id": "data-1"}],
-    })
-
-    messages = asyncio.run(_run(str(tmp_path / "cp.db"), script, [1, 2], [3], compression=True))
+def test_session_list_and_continuation_survive_compaction():
+    models = _models([[("ALPHA", None), ("BETA", None)], [("DELTA", None)], [("GAMMA", "data-1")]])
+    triggers = (context.SUMMARY_TRIGGER_MIN_MESSAGES_FIRST, context.SUMMARY_TRIGGER_MIN_MESSAGES)
+    context.SUMMARY_TRIGGER_MIN_MESSAGES_FIRST = context.SUMMARY_TRIGGER_MIN_MESSAGES = 1
+    try:
+        messages = _run_offline(models, [1, 2], [3], compression=True,
+                                summaries=["first summary", "second summary", "third summary"])
+    finally:
+        context.SUMMARY_TRIGGER_MIN_MESSAGES_FIRST, context.SUMMARY_TRIGGER_MIN_MESSAGES = triggers
 
     summaries_written = [m for m in messages if (m.response_metadata or {}).get("is_summary")]
     assert len(summaries_written) >= 2
@@ -162,10 +130,10 @@ def test_session_list_and_continuation_survive_compaction(tmp_path, monkeypatch)
     ]
 
     # The supervisor's first call in turn 3 comes after both summaries.
-    turn_three_prompt = script.supervisor_prompts[-2]
+    turn_three_prompt = str(models["supervisor"].calls[-2][0].content)
     for session_id in ("data-1", "data-2", "data-3"):
         assert f"- {session_id} · data_agent ·" in turn_three_prompt
 
-    seen = "\n".join(script.data_inputs[-1])
+    seen = "\n".join(_data_inputs(models)[-1])
     assert "data report: finished ALPHA" in seen
     assert "BETA" not in seen and "DELTA" not in seen

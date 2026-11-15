@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 import asyncio
+from contextlib import contextmanager
 from types import SimpleNamespace
-from typing import List, Optional
+from typing import Iterator, List, Optional
 
-import pytest
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage, ToolMessage
 
 import core.agents.context as context
@@ -29,6 +29,18 @@ BRIEF_TEXT = (
     "Inputs: none\n"
     "Expected output: the cleaned CSV path and its row count"
 )
+
+@contextmanager
+def _patched(module, **values) -> Iterator[None]:
+    originals = {name: getattr(module, name) for name in values}
+    for name, value in values.items():
+        setattr(module, name, value)
+    try:
+        yield
+    finally:
+        for name, value in originals.items():
+            setattr(module, name, value)
+
 
 OBJECTIVE = "Inspect the uploaded table and standardize its units"
 EXPECTED = "the cleaned CSV path and the row count"
@@ -246,8 +258,7 @@ def test_continue_records_the_session_it_continues():
     assert (meta["id"], meta["role"], meta["mode"]) == ("data-1", "data_agent", "continue")
 
 
-@pytest.mark.parametrize("session_id", ["data-9", "research-1"])
-def test_unknown_or_wrong_role_session_is_refused_with_the_valid_ids(session_id):
+def test_unknown_or_wrong_role_session_is_refused_with_the_valid_ids():
     history = [
         *_delegation("r1", "research-1", agent_name="research_agent", report="done"),
         *_delegation("t1", "data-1", report="done"),
@@ -255,11 +266,12 @@ def test_unknown_or_wrong_role_session_is_refused_with_the_valid_ids(session_id)
         _supervisor_turn("t3"),
     ]
 
-    refused = _call_handoff(history, "t3", session_id=session_id)
+    for session_id in ("data-9", "research-1"):
+        refused = _call_handoff(history, "t3", session_id=session_id)
 
-    assert isinstance(refused, str)
-    assert f"{session_id!r} is not a data_agent session" in refused
-    assert "Valid data_agent sessions: data-1, data-2." in refused
+        assert isinstance(refused, str), session_id
+        assert f"{session_id!r} is not a data_agent session" in refused
+        assert "Valid data_agent sessions: data-1, data-2." in refused
 
 
 def test_vague_reference_wording_depends_on_mode():
@@ -329,39 +341,35 @@ def test_continue_includes_earlier_continuations_of_the_same_session():
     assert text.index("first part") < text.index("second part") < text.index("brief t3")
 
 
-@pytest.mark.parametrize(
-    "terminator",
-    [
-        AIMessage(content="TERMINATOR", name="supervisor"),
-        HumanMessage(content="TERMINATOR"),
-        AIMessage(content="TERMINATOR", name="plan_init"),
-        AIMessage(content="TERMINATOR", name="plan_finalize"),
-        AIMessage(content="TERMINATOR", name="report_agent"),
-        make_summary_message("TERMINATOR", {}),
-        AIMessage(content="TERMINATOR", name="research_agent"),
-        ToolMessage(content="TERMINATOR", name="transfer_to_data_agent", tool_call_id="other"),
-        ToolMessage(content="TERMINATOR", tool_call_id="not-declared-by-data-agent"),
-    ],
-    ids=["supervisor", "human", "plan_init", "plan_finalize", "report", "summary",
-         "other_agent", "next_brief", "foreign_tool_result"],
-)
-def test_earlier_span_ends_at_the_first_message_that_is_not_the_specialists(terminator):
-    messages = [
-        *_delegation("t1", "data-1", work=["work one"]),
-        terminator,
-        AIMessage(content="LEAKED", name="data_agent"),
-        *_delegation("t2", "data-1", "continue"),
-    ]
+def test_earlier_span_ends_at_the_first_message_that_is_not_the_specialists():
+    terminators = {
+        "supervisor": AIMessage(content="TERMINATOR", name="supervisor"),
+        "human": HumanMessage(content="TERMINATOR"),
+        "plan_init": AIMessage(content="TERMINATOR", name="plan_init"),
+        "plan_finalize": AIMessage(content="TERMINATOR", name="plan_finalize"),
+        "report": AIMessage(content="TERMINATOR", name="report_agent"),
+        "summary": make_summary_message("TERMINATOR", {}),
+        "other_agent": AIMessage(content="TERMINATOR", name="research_agent"),
+        "next_brief": ToolMessage(content="TERMINATOR", name="transfer_to_data_agent", tool_call_id="other"),
+        "foreign_tool_result": ToolMessage(content="TERMINATOR", tool_call_id="not-declared-by-data-agent"),
+    }
+    for case, terminator in terminators.items():
+        messages = [
+            *_delegation("t1", "data-1", work=["work one"]),
+            terminator,
+            AIMessage(content="LEAKED", name="data_agent"),
+            *_delegation("t2", "data-1", "continue"),
+        ]
 
-    text = _text(_specialist_view(messages))
+        text = _text(_specialist_view(messages))
 
-    assert "work one" in text
-    assert "TERMINATOR" not in text
-    assert "LEAKED" not in text
+        assert "work one" in text, case
+        assert "TERMINATOR" not in text, case
+        assert "LEAKED" not in text, case
 
 
-def test_only_the_most_recent_earlier_spans_are_kept(monkeypatch):
-    monkeypatch.setattr(context, "SPECIALIST_SESSION_MAX_SPANS", 2)
+@_patched(context, SPECIALIST_SESSION_MAX_SPANS=2)
+def test_only_the_most_recent_earlier_spans_are_kept():
     messages = []
     for number in range(1, 6):
         messages += _delegation(f"t{number}", "data-1", "fresh" if number == 1 else "continue",
@@ -378,8 +386,8 @@ def test_only_the_most_recent_earlier_spans_are_kept(monkeypatch):
     _assert_pairs_intact(view)
 
 
-def test_character_budget_drops_the_oldest_whole_spans(monkeypatch):
-    monkeypatch.setattr(context, "SPECIALIST_SESSION_HISTORY_MAX_CHARS", 700)
+@_patched(context, SPECIALIST_SESSION_HISTORY_MAX_CHARS=700)
+def test_character_budget_drops_the_oldest_whole_spans():
     messages = []
     for number in range(1, 4):
         messages += _delegation(f"t{number}", "data-1", "fresh" if number == 1 else "continue",
@@ -396,8 +404,8 @@ def test_character_budget_drops_the_oldest_whole_spans(monkeypatch):
     _assert_pairs_intact(view)
 
 
-def test_single_oversized_span_keeps_only_its_brief_and_final_report(monkeypatch):
-    monkeypatch.setattr(context, "SPECIALIST_SESSION_HISTORY_MAX_CHARS", 300)
+@_patched(context, SPECIALIST_SESSION_HISTORY_MAX_CHARS=300)
+def test_single_oversized_span_keeps_only_its_brief_and_final_report():
     messages = [
         *_delegation("t1", "data-1", work=["huge " + "y" * 1000], report="final report one"),
         *_delegation("t2", "data-1", "continue", work=["current"]),
@@ -504,8 +512,8 @@ def test_session_list_is_ordered_by_most_recent_use():
     assert "data report text" not in block
 
 
-def test_session_list_details_the_newest_sessions_and_lists_older_ids(monkeypatch):
-    monkeypatch.setattr(sessions, "SPECIALIST_SESSION_LIST_MAX_ITEMS", 4)
+@_patched(sessions, SPECIALIST_SESSION_LIST_MAX_ITEMS=4)
+def test_session_list_details_the_newest_sessions_and_lists_older_ids():
     messages = []
     for number in range(1, 7):
         messages += _delegation(f"t{number}", f"data-{number}")

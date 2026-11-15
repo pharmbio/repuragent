@@ -194,6 +194,14 @@ def test_fresh_handoff_records_a_new_session_without_changing_the_brief():
     assert meta["objective"].startswith("Inspect the uploaded table")
 
 
+def test_recorded_objective_is_one_line_and_clipped():
+    assert sessions.clip_objective("  Profile\n the   table ") == "Profile the table"
+
+    clipped = sessions.clip_objective("x" * 200)
+
+    assert len(clipped) == 120 and clipped.endswith("…")
+
+
 def test_replayed_handoff_reuses_its_session_id():
     history = [*_delegation("t1", "data-1"), *_delegation("t2", "data-2")]
 

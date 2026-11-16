@@ -28,6 +28,8 @@ MODULES: List[str] = [
     "tests.test_isolation",
     "tests.test_tool_pairing",
     "tests.test_graph",
+    "tests.test_specialist_sessions",
+    "tests.test_specialist_sessions_graph",
 ]
 
 

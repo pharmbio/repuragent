@@ -241,6 +241,14 @@ TOOL_RESULT_PERSIST_MAX_CHARS = _int_env("TOOL_RESULT_PERSIST_MAX_CHARS", 200000
 TOOL_RESULT_RECENT_FULL = _int_env("TOOL_RESULT_RECENT_FULL", 6)
 TOOL_RESULT_ELIDED_CHARS = _int_env("TOOL_RESULT_ELIDED_CHARS", 800)
 
+# Continuing a specialist session replays that session's earlier work, and compaction
+# never shortens it, so the replay has its own ceiling: the most recent spans, then a
+# character budget. The supervisor's list of sessions is bounded the same way. A fresh
+# delegation is unaffected by all three.
+SPECIALIST_SESSION_MAX_SPANS = _int_env("SPECIALIST_SESSION_MAX_SPANS", 3)
+SPECIALIST_SESSION_HISTORY_MAX_CHARS = _int_env("SPECIALIST_SESSION_HISTORY_MAX_CHARS", 40000)
+SPECIALIST_SESSION_LIST_MAX_ITEMS = _int_env("SPECIALIST_SESSION_LIST_MAX_ITEMS", 10)
+
 # --- Episodic memory ----------------------------------------------------------
 
 EPISODIC_MAX_EXAMPLES = _int_env("EPISODIC_MAX_EXAMPLES", 2)

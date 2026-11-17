@@ -30,6 +30,7 @@ MODULES: List[str] = [
     "tests.test_graph",
     "tests.test_specialist_sessions",
     "tests.test_specialist_sessions_graph",
+    "tests.test_kg_phase",
 ]
 
 

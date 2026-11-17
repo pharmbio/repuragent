@@ -50,7 +50,7 @@ def _clinical_stage_to_phase(value):
     stage = str(value).strip().upper()
     if not stage:
         return None
-    if "APPROVED" in stage:
+    if stage in {"APPROVAL", "APPROVED"}:
         return 4
     matches = [int(match) for match in re.findall(r"PHASE[_ ]?(\d)", stage)]
     if not matches:

@@ -16,7 +16,7 @@ from pybel.dsl import Abundance, BiologicalProcess
 from backend.utils.cancellation import cancellable_tqdm as tqdm  # every tqdm loop is a Stop checkpoint
 
 from app.config import logger
-from backend.kgg.api_utils import createKG, searchDisease
+from backend.kgg.api_utils import _clinical_stage_to_phase, createKG, searchDisease
 from backend.utils.output_paths import (
     resolve_output_folder,
     task_file_path,
@@ -1031,20 +1031,6 @@ def _opentargets_graphql(query: str, variables: Dict[str, Any]) -> Dict[str, Any
     if data is None:
         raise ValueError("Open Targets GraphQL response did not include data")
     return data
-
-
-def _clinical_stage_to_phase(value: Any) -> Optional[int]:
-    if value is None:
-        return None
-    stage = str(value).strip().upper()
-    if not stage:
-        return None
-    if "APPROVED" in stage:
-        return 4
-    matches = [int(match) for match in re.findall(r"PHASE[_ ]?(\d)", stage)]
-    if not matches:
-        return None
-    return max(matches)
 
 
 def _normalize_drug_and_clinical_candidate_rows(rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
